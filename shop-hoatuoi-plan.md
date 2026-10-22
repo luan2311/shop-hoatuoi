@@ -1,96 +1,96 @@
-# Shop Hoa Tươi – Laravel Project Plan
+# Shop Hoa Tươi – Laravel & MongoDB Project Plan
 
 ## Goal
-Xây dựng website bán hoa tươi bằng **Laravel 12** chạy trên **Laragon**, dựa theo giao diện [gochoaxinh.com](https://gochoaxinh.com) và port lại từ codebase C# ASP MVC 5 tại [luan2311/Shop-Flower](https://github.com/luan2311/Shop-Flower), đáp ứng đầy đủ tiêu chí chấm điểm (10đ).
+Xây dựng website bán hoa tươi bằng **Laravel 12** kết nối **MongoDB** (chạy trên Laragon/Docker/Local MongoDB/Atlas), dựa theo giao diện [gochoaxinh.com](https://gochoaxinh.com) và port lại từ codebase C# ASP MVC 5 tại [luan2311/Shop-Flower](https://github.com/luan2311/Shop-Flower), đáp ứng đầy đủ tiêu chí chấm điểm (10đ).
 
 ---
 
-## Database (MySQL – từ QL_SHOPFLOWER_final.sql)
+## Database (MongoDB Document Model – Chuyển đổi từ QL_SHOPFLOWER_final.sql)
 
-| Bảng gốc (SQL Server) | Bảng Laravel (MySQL) | Ghi chú |
-|---|---|---|
-| `LOAIHANG` | `categories` | MaLoai → id |
-| `SANPHAM` | `products` | MaSP → id |
-| `TAIKHOAN` + `VAITRO` | `users` + `roles` | Laravel Auth chuẩn |
-| `HOADON` | `orders` | Hóa đơn |
-| `CTHD` | `order_details` | Chi tiết hóa đơn |
-| `CART` + `CART_ITEM` | `carts` + `cart_items` | Giỏ hàng DB |
-| `WISHLIST` | `wishlists` | Yêu thích |
-| `LIENHE` | `contacts` | Form liên hệ |
-| `TINTUC` | `posts` | Tin tức/Blog |
+Toàn bộ dữ liệu từ `QL_SHOPFLOWER_final.sql` đã được chuyển đổi thành file script MongoDB chuẩn: `database/mongodb_init.js` (gồm 80 sản phẩm, 5 danh mục, 3 bài viết tin tức, vai trò, tài khoản quản trị và mẫu đơn hàng, giỏ hàng, liên hệ).
+
+| Bảng gốc (SQL Server) | Collection MongoDB | Mô hình lưu trữ (Document Model) | Ghi chú chuyển đổi |
+|---|---|---|---|
+| `LOAIHANG` | `categories` | Standalone Collection | `code` (LH001..), `name`, `slug`, `description` |
+| `SANPHAM` | `products` | Standalone + Embedded Category | `code` (PVN297..), `name`, `slug`, `price`, `image`, `description` (HTML), `status`, `brand`, `stock`, `category: { code, name, slug }`. Có Text Index hỗ trợ Live Search debounce. |
+| `TAIKHOAN` + `VAITRO` + `TAIKHOAN_VAITRO` | `users` & `roles` | Standalone + Array of Roles | `username`, `name`, `email`, `password` (bcrypt), `roles: ['Admin', 'User']`, `is_active` |
+| `HOADON` + `CTHD` | `orders` | **Embedded Document** (Mô hình NoSQL chuẩn) | `order_code`, `customer: { name, phone, email, address, note }`, `items: [ { product_code, product_name, price, quantity, subtotal, image } ]`, `total_amount`, `payment_method`, `status` |
+| `CART` + `CART_ITEM` | `carts` | **Embedded Document** | `user_id`, `items: [ { product_code, name, price, quantity, image, added_at } ]`, `updated_at` |
+| `WISHLIST` | `wishlists` | Standalone Collection | `user_id`, `product_code`, `created_at` (hỗ trợ Index kép `{ user_id: 1, product_code: 1 }`) |
+| `LIENHE` | `contacts` | Standalone Collection | `code` (LH001..), `full_name`, `email`, `phone`, `message`, `status` |
+| `TINTUC` | `posts` | Standalone Collection | `code` (TT001..), `title`, `slug`, `thumbnail`, `summary`, `content`, `published_at` |
 
 ---
 
 ## Tasks
 
-- [ ] **T1: Khởi tạo project** – Chạy `composer create-project laravel/laravel shop-hoatuoi`, cấu hình `.env` MySQL (Laragon port 3306, DB: `shop_hoatuoi`) → Verify: `php artisan serve` trả về trang welcome
+- [ ] **T1: Cấu hình môi trường & MongoDB** – Cài đặt package `mongodb/laravel-mongodb` (hoặc cấu hình MongoDB client), thiết lập `.env` (`DB_CONNECTION=mongodb`, `MONGODB_URI=mongodb://127.0.0.1:27017`, `MONGODB_DATABASE=shop_hoatuoi`) → Verify: Chạy test kết nối MongoDB thành công qua command `php artisan db:monitor` hoặc `php artisan tinker`.
 
-- [ ] **T2: Migration + Seeder** – Tạo 9 migration files cho `categories`, `products`, `users`, `roles`, `user_roles`, `orders`, `order_details`, `carts`, `cart_items`, `wishlists`, `contacts`, `posts`; chạy `php artisan migrate --seed` với dữ liệu từ SQL file → Verify: DB có đủ bảng và data sản phẩm mẫu
+- [ ] **T2: Khởi tạo dữ liệu MongoDB từ `mongodb_init.js`** – Thực thi file script `database/mongodb_init.js` qua `mongosh` để tạo đủ 8 collections, thiết lập JSON Schema Validation, tạo Text Index cho sản phẩm và nạp toàn bộ 80 sản phẩm + danh mục + tin tức + tài khoản mẫu → Verify: `mongosh "mongodb://localhost:27017/shop_hoatuoi" database/mongodb_init.js` in ra thống kê đầy đủ 80 sản phẩm, 5 danh mục, 3 bài viết.
 
-- [ ] **T3: Authentication (2 role)** – Dùng Laravel Breeze, thêm middleware `role:admin` / `role:user`; Admin route group `/admin/*`, User route `/account/*` → Verify: Login admin vào `/admin/dashboard`, login user vào `/account/profile`
+- [ ] **T3: Authentication & Phân quyền trên MongoDB (2 Role)** – Sử dụng MongoDB Model cho `User` kế thừa `MongoDB\Laravel\Eloquent\Model` (hoặc Custom Mongo Provider), middleware `role:admin` / `role:user`; Admin route group `/admin/*`, User route `/account/*` → Verify: Đăng nhập admin `admin@shophoatuoi.com` (mật khẩu `Admin@123`) chuyển hướng `/admin/dashboard`, đăng nhập user chuyển hướng `/account/profile`.
 
-- [ ] **T4: Module Sản phẩm (CRUD + Search + Paginate)** – Controller `ProductController` (8 methods), Blade views cho danh sách/chi tiết; Admin CRUD với upload ảnh `storage/products`; User: tìm kiếm theo tên/loại, phân trang 12 sp/trang → Verify: Admin thêm/sửa/xóa sp; User search "hồng" ra kết quả đúng
+- [ ] **T4: Module Sản phẩm (CRUD + Search + Paginate)** – `ProductController` (8 methods), Blade views danh sách/chi tiết; Admin CRUD với upload ảnh `storage/products`; User: tìm kiếm theo tên/mô tả sử dụng MongoDB Full-text Index (`$text`) hoặc Regex search, lọc theo danh mục, phân trang 12 sp/trang → Verify: Admin thêm/sửa/xóa sản phẩm cập nhật ngay trên MongoDB; User search "hồng" ra kết quả chính xác theo debounce.
 
-- [ ] **T5: Module Danh mục + Tin tức (CRUD)** – `CategoryController` CRUD cho admin; `PostController` CRUD cho admin; Frontend hiển thị tin tức có ảnh bìa, ngày đăng → Verify: Admin tạo loại hàng mới; bài tin tức hiển thị đúng ngoài trang
+- [ ] **T5: Module Danh mục + Tin tức (CRUD)** – `CategoryController` CRUD danh mục hoa; `PostController` CRUD tin tức cho admin; Frontend hiển thị tin tức có ảnh bìa, ngày đăng chuẩn ISO Date → Verify: Admin thêm loại hoa mới; bài tin tức TT001, TT002, TT003 hiển thị đầy đủ ngoài trang chủ và trang blog.
 
-- [ ] **T6: Giỏ hàng + Đặt hàng** – `CartController` (add/update/remove/clear) lưu DB theo session user; `OrderController` tạo hóa đơn từ cart (fields: TenNguoiNhan, DiaChiNhan, SDTNhan, GhiChu, PhuongThucThanhToan); Admin cập nhật trạng thái `Pending → Processing → Shipped → Completed / Cancelled` → Verify: Thêm sp vào giỏ → checkout → đơn hàng xuất hiện ở admin
+- [ ] **T6: Giỏ hàng + Đặt hàng (NoSQL Embedded Model)** – `CartController` (add/update/remove/clear) thao tác trên mảng `items` của document giỏ hàng bằng toán tử `$push`, `$pull`, `$set`; `OrderController` tạo đơn hàng nhúng toàn bộ thông tin sản phẩm và thông tin người nhận vào 1 document duy nhất; cập nhật trạng thái `Pending → Processing → Shipped → Completed / Cancelled` → Verify: Thêm sp vào giỏ → checkout → document đơn hàng mới xuất hiện trong collection `orders` với danh sách items đầy đủ.
 
-- [ ] **T7: Wishlist + Liên hệ (AJAX + Upload)** – Wishlist dùng AJAX (fetch/axios) add/remove không reload trang; Form liên hệ validate server-side (FormRequest); upload ảnh sản phẩm qua `Storage::disk('public')` → Verify: Click tim ❤ không reload; submit form liên hệ lưu DB; ảnh upload hiển thị đúng
+- [ ] **T7: Wishlist + Liên hệ (AJAX + Upload)** – Wishlist dùng AJAX (Fetch API) thêm/bớt hoa yêu thích không reload trang; Form liên hệ validate server-side (FormRequest) và lưu vào collection `contacts`; upload ảnh sản phẩm qua `Storage::disk('public')` → Verify: Click icon tim ❤ không reload; submit form liên hệ lưu vào MongoDB; ảnh upload hiển thị chính xác.
 
-- [ ] **T8: Giao diện Bootstrap + Responsive** – Layout master Blade (`layouts/app.blade.php`, `layouts/admin.blade.php`) dùng Bootstrap 5; màu chủ đạo hồng-xanh theo phong cách gochoaxinh.com; mobile responsive kiểm tra 375px → Verify: Open DevTools, chọn iPhone SE, giao diện không bị vỡ layout
+- [ ] **T8: Giao diện Bootstrap + Responsive** – Layout master Blade (`layouts/app.blade.php`, `layouts/admin.blade.php`) dùng Bootstrap 5; phong cách màu hồng-xanh gochoaxinh.com; mobile responsive kiểm tra 375px → Verify: Giao diện chuẩn mobile/desktop, hiển thị danh mục, banner, sản phẩm nổi bật và tin tức hài hòa.
 
-- [ ] **T9: Validation + Tối ưu** – Validation đầy đủ tất cả Form (FormRequest classes); AJAX search sản phẩm realtime (debounce 300ms); Tích hợp Google Maps iframe trang Liên hệ (API bên ngoài) → Verify: Submit form trống báo lỗi đúng field; search realtime gõ chữ không reload trang
+- [ ] **T9: Validation + Tối ưu hóa NoSQL** – Validation FormRequest; AJAX live search realtime (debounce 300ms) truy vấn MongoDB Text Index; tích hợp Google Maps iframe trang Liên hệ → Verify: Submit form rỗng báo lỗi đúng field; gõ tìm kiếm phản hồi nhanh dưới 100ms nhờ MongoDB Index.
 
-- [ ] **T10: Kiểm tra cuối + Tài liệu** – Chạy `php artisan test`; screenshot tất cả trang; viết báo cáo ERD + UML Use Case (PlantUML) → Verify: Tất cả route hoạt động, ảnh chụp đủ trang User + Admin
+- [ ] **T10: Kiểm tra cuối + Tài liệu NoSQL Schema** – Chạy `php artisan test`; xuất sơ đồ cấu trúc dữ liệu NoSQL (Document Model & Collections Diagram); hoàn thiện hướng dẫn import MongoDB `database/mongodb_init.js` → Verify: Toàn bộ route hoạt động, dữ liệu đồng bộ và tài liệu đồ án đạt chuẩn 10đ.
 
 ---
 
 ## Done When
 
-- [ ] CRUD hoàn chỉnh ít nhất 2 bảng có quan hệ (products ↔ categories, orders ↔ order_details)
-- [ ] Login/Logout hoạt động với 2 role Admin + User, phân quyền đúng
-- [ ] Tìm kiếm và phân trang sản phẩm hoạt động
-- [ ] Validation đầy đủ tất cả form
-- [ ] Eloquent ORM được sử dụng (không raw SQL)
-- [ ] Có đủ Migration + Seeder
-- [ ] Blade Template + Controller + Middleware đúng chuẩn Laravel
-- [ ] Giao diện Bootstrap responsive, màu hài hòa
-- [ ] Upload file ảnh hoạt động
-- [ ] AJAX wishlist/search hoạt động không reload
-- [ ] Tích hợp ít nhất 1 API bên ngoài (Google Maps)
+- [ ] Khởi tạo thành công CSDL MongoDB với 8 collections và nạp đủ 80 sản phẩm từ `mongodb_init.js`
+- [ ] CRUD hoàn chỉnh sản phẩm và danh mục trên MongoDB
+- [ ] Login/Logout hoạt động với 2 role Admin + User dựa trên Document Model của MongoDB
+- [ ] Tìm kiếm full-text và phân trang sản phẩm mượt mà
+- [ ] Đơn hàng và giỏ hàng áp dụng đúng tư duy NoSQL Embedded Document (không phụ thuộc JOIN quan hệ truyền thống)
+- [ ] Validation đầy đủ tất cả Form (FormRequest)
+- [ ] Blade Template + Controller + Middleware đúng chuẩn kiến trúc MVC
+- [ ] Giao diện Bootstrap 5 responsive chuẩn gochoaxinh.com
+- [ ] Upload file ảnh và lưu trữ `storage/app/public` hoạt động
+- [ ] AJAX wishlist/search hoạt động không reload trang
+- [ ] Tích hợp API bản đồ Google Maps
 
 ---
 
 ## Ghi chú quan trọng
 
 > [!NOTE]
-> **Tiêu chí điểm từ bảng rubric:**
+> **Tiêu chí điểm từ bảng rubric (Áp dụng cho MongoDB):**
 > - Tiêu chí 1 (4đ): CRUD + Auth 2 role + Search/Paginate + Validation
-> - Tiêu chí 2 (2.5đ): Eloquent ORM + Migration/Seeder + Controller/Middleware/Blade
-> - Tiêu chí 3 (1.5đ): Bootstrap/Tailwind + Responsive
-> - Tiêu chí 4 (1đ): Báo cáo ERD/UML + thuyết trình
-> - Tiêu chí 5 (1đ): Upload + AJAX + API ngoài
+> - Tiêu chí 2 (2.5đ): MongoDB Eloquent Model / Driver + Schema Validation/Seeder JS + Controller/Middleware/Blade
+> - Tiêu chí 3 (1.5đ): Bootstrap 5 + Responsive Mobile First
+> - Tiêu chí 4 (1đ): Báo cáo NoSQL Document Schema + Use Case UML + Thuyết trình
+> - Tiêu chí 5 (1đ): Upload + AJAX + API ngoài (Google Maps)
 
 > [!TIP]
-> **Cấu trúc thư mục đề nghị:**
-> ```
-> app/
->   Http/Controllers/
->     Admin/       ← ProductController, CategoryController, OrderController, PostController
->     Auth/        ← Laravel Breeze
->     CartController.php
->     WishlistController.php
->     ContactController.php
->   Models/        ← Product, Category, Order, OrderDetail, Post, Contact, Cart, Wishlist
->   Http/Requests/ ← ProductRequest, OrderRequest, ContactRequest
->   Http/Middleware/ ← RoleMiddleware.php
-> resources/views/
->   layouts/       ← app.blade.php, admin.blade.php
->   user/          ← home, products, product-detail, cart, checkout, orders, wishlist, contact
->   admin/         ← dashboard, products/*, categories/*, orders/*, posts/*, users/*
+> **Cách chạy file nạp CSDL MongoDB:**
+> ```bash
+> # Sử dụng MongoDB Shell (mongosh):
+> mongosh "mongodb://localhost:27017/shop_hoatuoi" database/mongodb_init.js
+> 
+> # Hoặc mở mongosh rồi gõ:
+> > load("database/mongodb_init.js")
 > ```
 
 > [!IMPORTANT]
-> Project chạy trên **Laragon** → MySQL host: `127.0.0.1`, port `3306`, user `root`, pass rỗng.
-> Virtual host Laragon: `http://shop-hoatuoi.test`
-> Chạy `php artisan storage:link` để ảnh upload hiển thị đúng.
+> **Kết nối Laravel với MongoDB:**
+> Thêm cấu hình trong `config/database.php`:
+> ```php
+> 'mongodb' => [
+>     'driver' => 'mongodb',
+>     'dsn' => env('MONGODB_URI', 'mongodb://127.0.0.1:27017'),
+>     'database' => env('MONGODB_DATABASE', 'shop_hoatuoi'),
+> ],
+> ```
+> Cài đặt thư viện: `composer require mongodb/laravel-mongodb`
+> Đảm bảo máy tính đã cài đặt MongoDB Community Server hoặc dùng MongoDB Atlas connection string.

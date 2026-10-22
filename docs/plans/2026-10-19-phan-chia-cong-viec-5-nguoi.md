@@ -14,11 +14,11 @@
 
 | Thành viên | Vai trò chính | Module phụ trách | Tiêu chí chấm điểm liên quan |
 |---|---|---|---|
-| **Member 1 (Lead)** | Core Architecture & Phân quyền | Role Middleware, Layout Admin, Danh mục (Category CRUD), Dashboard Admin | Tiêu chí 1 (Auth, CRUD) & Tiêu chí 2 (Architecture, Middleware) |
-| **Member 2** | Backend & UI Sản phẩm | Sản phẩm (Product CRUD, Image Upload), Bộ lọc danh mục, Live Search AJAX (debounce) | Tiêu chí 1 (CRUD, Search, Paginate) & Tiêu chí 5 (Upload, AJAX) |
-| **Member 3** | Backend & UI Bán hàng | Giỏ hàng DB (Cart), Đặt hàng (Checkout), Quản lý đơn hàng (Admin/User Order) | Tiêu chí 1 (CRUD bảng quan hệ, Validation) & Tiêu chí 2 (Eloquent) |
-| **Member 4** | Frontend Master UI & Tương tác | Layout User (gochoaxinh style), Wishlist AJAX, Liên hệ + Google Maps API, Tin tức (Post) | Tiêu chí 3 (UI/Responsive), Tiêu chí 5 (AJAX Wishlist, API ngoài) |
-| **Member 5** | QA Testing, Seeder & Báo cáo | Test Suite (PHPUnit Feature Tests), Chuẩn hóa dữ liệu ảnh mẫu, Báo cáo ERD/UML, Slide | Tiêu chí 2 (Test, Seeder), Tiêu chí 4 (Báo cáo, UML, ERD) |
+| **Member 1 (Lead)** | Core Architecture, MongoDB & Phân quyền | Cấu hình kết nối MongoDB (mongodb/laravel-mongodb), Role Middleware, Layout Admin, Danh mục (Category CRUD), Dashboard Admin | Tiêu chí 1 (Auth, CRUD) & Tiêu chí 2 (Architecture, NoSQL Setup) |
+| **Member 2** | Backend & UI Sản phẩm NoSQL | Sản phẩm CRUD trên MongoDB Collection, Image Upload, Bộ lọc danh mục, Live Search AJAX debounce truy vấn MongoDB Full-text Index | Tiêu chí 1 (CRUD, Search, Paginate) & Tiêu chí 5 (Upload, AJAX) |
+| **Member 3** | Backend & UI Bán hàng (Embedded Model) | Giỏ hàng MongoDB (Embedded items), Đặt hàng NoSQL Checkout (Embedded Order Items, Atomic Operations $push/$inc), Quản lý đơn hàng | Tiêu chí 1 (CRUD Document nhúng, Validation) & Tiêu chí 2 (NoSQL Model) |
+| **Member 4** | Frontend Master UI & Tương tác | Layout User (gochoaxinh style), Wishlist AJAX trên MongoDB, Liên hệ + Google Maps API, Tin tức (Posts Collection) | Tiêu chí 3 (UI/Responsive), Tiêu chí 5 (AJAX Wishlist, API ngoài) |
+| **Member 5** | QA Testing, Seeder MongoDB & Báo cáo | Test Suite (PHPUnit Feature Tests), Khởi tạo dữ liệu MongoDB từ mongodb_init.js (80 SP, 5 danh mục), Thiết kế sơ đồ NoSQL Document Schema Model, Slide | Tiêu chí 2 (Test, Seeder NoSQL), Tiêu chí 4 (Báo cáo, UML, NoSQL Schema) |
 
 ---
 
@@ -1043,7 +1043,7 @@ Admin --> UC13
 **Step 2: Viết Báo cáo cấu trúc 10 điểm**
 Biên soạn báo cáo chi tiết bao gồm:
 1. Giới thiệu đề tài & Công nghệ sử dụng.
-2. Thiết kế Cơ sở dữ liệu (Chi tiết 11 bảng MySQL và khóa ngoại).
+2. Thiết kế Cơ sở dữ liệu (Chi tiết 8 Collections MongoDB, cấu trúc Embedded Documents và Text Indexes).
 3. Kiến trúc mã nguồn Laravel 12 (Middleware, FormRequest, Service/Controller).
 4. Minh chứng đáp ứng từng tiêu chí trong Rubric chấm điểm.
 
@@ -1092,7 +1092,7 @@ git commit -m "docs: finalize project report, database ERD and PlantUML use-case
 - [ ] Bổ sung Seeder dữ liệu mẫu phong phú (tối thiểu 15-20 sản phẩm, đủ 5 danh mục).
 - [ ] Chạy `php artisan storage:link` và kiểm tra hiển thị toàn bộ ảnh sản phẩm.
 - [ ] Chạy kiểm thử toàn trình `FullCustomerJourneyTest` và toàn bộ test suite: `php artisan test`.
-- [ ] Thiết kế sơ đồ quan hệ thực thể ERD database đầy đủ 11 bảng.
+- [ ] Thiết kế sơ đồ mô hình dữ liệu NoSQL Document Schema (Collections & Embedded Structure).
 - [ ] Thiết kế sơ đồ Use Case UML bằng PlantUML.
 - [ ] Soạn thảo file báo cáo đồ án và outline slide thuyết trình đáp ứng đầy đủ thang 10 điểm.
 
@@ -1105,6 +1105,6 @@ git commit -m "docs: finalize project report, database ERD and PlantUML use-case
 | **Tiêu chí 1: Chức năng nghiệp vụ & Auth** | **4.0đ** | - CRUD ít nhất 2 bảng quan hệ (`products ↔ categories`, `orders ↔ order_details`)<br>- Phân quyền 2 role: Admin & User<br>- Tìm kiếm & Phân trang sản phẩm (12 sp/trang)<br>- Form validation đầy đủ tất cả các trường | Thành viên 1, 2, 3 |
 | **Tiêu chí 2: Kiến trúc kỹ thuật & CSDL** | **2.5đ** | - Sử dụng Eloquent ORM 100% (không dùng raw SQL)<br>- Có đủ Migration + DatabaseSeeder dữ liệu mẫu<br>- Chuẩn cấu trúc MVC, Middleware, FormRequest, Blade Template | Cả nhóm (Lead Member 1 & QA Member 5) |
 | **Tiêu chí 3: Giao diện & Trải nghiệm (UI/UX)** | **1.5đ** | - Giao diện Bootstrap 5 hài hòa phong cách gochoaxinh.com<br>- Đảm bảo Responsive hoàn toàn trên mobile 375px, tablet, desktop | Thành viên 4 & Thành viên 1 |
-| **Tiêu chí 4: Báo cáo kỹ thuật & Thuyết trình** | **1.0đ** | - Báo cáo đồ án chi tiết, sơ đồ ERD chuẩn CSDL<br>- Sơ đồ Use Case UML trực quan | Thành viên 5 |
+| **Tiêu chí 4: Báo cáo kỹ thuật & Thuyết trình** | **1.0đ** | - Báo cáo đồ án chi tiết, sơ đồ mô hình NoSQL Document Schema chuẩn mực<br>- Sơ đồ Use Case UML trực quan | Thành viên 5 |
 | **Tiêu chí 5: Kỹ thuật nâng cao & Tích hợp** | **1.0đ** | - Upload file ảnh vào Storage Public an toàn<br>- AJAX Wishlist & AJAX Live Search Realtime<br>- Tích hợp Google Maps Embed API | Thành viên 2 & Thành viên 4 |
 | **TỔNG CỘNG** | **10.0đ** | **ĐẠT ĐIỂM TỐI ĐA** | **CẢ NHÓM (5 THÀNH VIÊN)** |
