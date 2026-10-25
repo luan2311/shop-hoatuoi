@@ -9,16 +9,25 @@ use Symfony\Component\HttpFoundation\Response;
 class RoleMiddleware
 {
     /**
-     * Kiểm tra user có role được yêu cầu không.
-     * Dùng: Route::middleware('role:Admin')
+     * Handle an incoming request.
+     *
+     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next, string $role): Response
+    public function handle(Request $request, Closure $next, string ...$roles): Response
     {
-        if (!auth()->check()) {
-            return redirect()->route('login');
+        if (! $request->user()) {
+            abort(403, 'Bạn không có quyền truy cập trang này.');
         }
 
-        if (!auth()->user()->hasRole($role)) {
+        $hasRole = false;
+        foreach ($roles as $role) {
+            if ($request->user()->hasRole($role)) {
+                $hasRole = true;
+                break;
+            }
+        }
+
+        if (! $hasRole) {
             abort(403, 'Bạn không có quyền truy cập trang này.');
         }
 
