@@ -1058,11 +1058,11 @@ git commit -m "docs: finalize project report, database ERD and PlantUML use-case
 ## 4. Bảng Checklist Tiến Độ Nghiệm Thu 5 Người
 
 ### Checklist Thành Viên 1 (Lead & Auth/Category)
-- [ ] Khởi tạo Git repo và phân quyền branch cho các thành viên.
-- [ ] Viết `RoleMiddleware` kiểm tra role `Admin`/`User` và chặn 403 khi truy cập trái phép.
-- [ ] Xây dựng Admin Layout base chuẩn Bootstrap 5 responsive.
-- [ ] Hoàn thiện Admin Category CRUD (Validate tên, slug, thông báo toast).
-- [ ] Viết xong `RoleMiddlewareTest` và `CategoryCrudTest` (100% PASS).
+- [x] Khởi tạo Git repo và phân quyền branch cho các thành viên.
+- [x] Viết `RoleMiddleware` kiểm tra role `Admin`/`User` và chặn 403 khi truy cập trái phép.
+- [x] Xây dựng Admin Layout base chuẩn Bootstrap 5 responsive.
+- [x] Hoàn thiện Admin Category CRUD (Validate tên, slug, thông báo toast).
+- [x] Viết xong `RoleMiddlewareTest` và `CategoryCrudTest` (100% PASS).
 
 ### Checklist Thành Viên 2 (Product & Search)
 - [ ] Xây dựng Admin Product CRUD kèm upload ảnh vào `storage/app/public/products/`.
