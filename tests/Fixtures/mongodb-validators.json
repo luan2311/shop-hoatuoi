@@ -1,0 +1,329 @@
+{
+  "categories": {
+    "validator": {
+      "$jsonSchema": {
+        "bsonType": "object",
+        "required": [
+          "code",
+          "name",
+          "slug"
+        ],
+        "properties": {
+          "code": {
+            "bsonType": "string",
+            "description": "Mã loại hàng (LH001, ...) - Bắt buộc"
+          },
+          "name": {
+            "bsonType": "string",
+            "description": "Tên loại hàng - Bắt buộc"
+          },
+          "slug": {
+            "bsonType": "string",
+            "description": "Slug đường dẫn - Bắt buộc"
+          },
+          "description": {
+            "bsonType": [
+              "string",
+              "null"
+            ]
+          },
+          "created_at": {
+            "bsonType": "date"
+          },
+          "updated_at": {
+            "bsonType": "date"
+          }
+        }
+      }
+    }
+  },
+  "products": {
+    "validator": {
+      "$jsonSchema": {
+        "bsonType": "object",
+        "required": [
+          "code",
+          "name",
+          "slug",
+          "price",
+          "category"
+        ],
+        "properties": {
+          "code": {
+            "bsonType": "string",
+            "description": "Mã sản phẩm (PVN297, ...) - Bắt buộc"
+          },
+          "name": {
+            "bsonType": "string",
+            "description": "Tên sản phẩm - Bắt buộc"
+          },
+          "slug": {
+            "bsonType": "string",
+            "description": "Slug chuẩn SEO - Bắt buộc"
+          },
+          "price": {
+            "bsonType": [
+              "int",
+              "double",
+              "long",
+              "decimal"
+            ],
+            "description": "Giá bán - Bắt buộc"
+          },
+          "original_price": {
+            "bsonType": [
+              "int",
+              "double",
+              "long",
+              "decimal",
+              "null"
+            ]
+          },
+          "image": {
+            "bsonType": "string",
+            "description": "Tên file ảnh trong storage"
+          },
+          "description": {
+            "bsonType": "string",
+            "description": "Mô tả chi tiết dạng HTML"
+          },
+          "status": {
+            "bsonType": "string",
+            "description": "Tình trạng (Còn hàng, Hết hàng)"
+          },
+          "brand": {
+            "bsonType": "string",
+            "description": "Thương hiệu sản phẩm"
+          },
+          "stock": {
+            "bsonType": [
+              "int",
+              "long"
+            ],
+            "description": "Số lượng tồn kho"
+          },
+          "category": {
+            "bsonType": "object",
+            "required": [
+              "code",
+              "name",
+              "slug"
+            ],
+            "properties": {
+              "code": {
+                "bsonType": "string"
+              },
+              "name": {
+                "bsonType": "string"
+              },
+              "slug": {
+                "bsonType": "string"
+              }
+            }
+          },
+          "created_at": {
+            "bsonType": "date"
+          },
+          "updated_at": {
+            "bsonType": "date"
+          }
+        }
+      }
+    }
+  },
+  "users": {
+    "validator": {
+      "$jsonSchema": {
+        "bsonType": "object",
+        "required": [
+          "username",
+          "email",
+          "password",
+          "roles"
+        ],
+        "properties": {
+          "username": {
+            "bsonType": "string"
+          },
+          "name": {
+            "bsonType": "string"
+          },
+          "email": {
+            "bsonType": "string",
+            "pattern": "^.+@.+$"
+          },
+          "password": {
+            "bsonType": "string"
+          },
+          "phone": {
+            "bsonType": [
+              "string",
+              "null"
+            ]
+          },
+          "address": {
+            "bsonType": [
+              "string",
+              "null"
+            ]
+          },
+          "roles": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "string"
+            },
+            "description": "Danh sách quyền (Admin, User)"
+          },
+          "is_active": {
+            "bsonType": "bool"
+          },
+          "created_at": {
+            "bsonType": "date"
+          },
+          "updated_at": {
+            "bsonType": "date"
+          }
+        }
+      }
+    }
+  },
+  "orders": {
+    "validator": {
+      "$jsonSchema": {
+        "bsonType": "object",
+        "required": [
+          "order_code",
+          "customer",
+          "items",
+          "total_amount",
+          "status"
+        ],
+        "properties": {
+          "order_code": {
+            "bsonType": "string"
+          },
+          "user_id": {
+            "bsonType": [
+              "objectId",
+              "null",
+              "string"
+            ]
+          },
+          "customer": {
+            "bsonType": "object",
+            "required": [
+              "name",
+              "phone",
+              "address"
+            ],
+            "properties": {
+              "name": {
+                "bsonType": "string"
+              },
+              "phone": {
+                "bsonType": "string"
+              },
+              "email": {
+                "bsonType": [
+                  "string",
+                  "null"
+                ]
+              },
+              "address": {
+                "bsonType": "string"
+              },
+              "note": {
+                "bsonType": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "items": {
+            "bsonType": "array",
+            "items": {
+              "bsonType": "object",
+              "required": [
+                "product_code",
+                "product_name",
+                "price",
+                "quantity",
+                "subtotal"
+              ],
+              "properties": {
+                "product_code": {
+                  "bsonType": "string"
+                },
+                "product_name": {
+                  "bsonType": "string"
+                },
+                "product_slug": {
+                  "bsonType": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "image": {
+                  "bsonType": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "price": {
+                  "bsonType": [
+                    "int",
+                    "double",
+                    "long",
+                    "decimal"
+                  ]
+                },
+                "quantity": {
+                  "bsonType": "int"
+                },
+                "subtotal": {
+                  "bsonType": [
+                    "int",
+                    "double",
+                    "long",
+                    "decimal"
+                  ]
+                }
+              }
+            }
+          },
+          "total_amount": {
+            "bsonType": [
+              "int",
+              "double",
+              "long",
+              "decimal"
+            ]
+          },
+          "payment_method": {
+            "bsonType": "string"
+          },
+          "status": {
+            "bsonType": "string",
+            "enum": [
+              "Pending",
+              "Processing",
+              "Shipped",
+              "Completed",
+              "Cancelled"
+            ]
+          },
+          "order_date": {
+            "bsonType": "date"
+          },
+          "created_at": {
+            "bsonType": "date"
+          },
+          "updated_at": {
+            "bsonType": "date"
+          }
+        }
+      }
+    }
+  }
+}
