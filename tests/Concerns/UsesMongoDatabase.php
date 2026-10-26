@@ -22,5 +22,6 @@ trait UsesMongoDatabase
 
         // Các index unique giống database/mongodb_init.js
         $db->selectCollection('wishlists')->createIndex(['user_id' => 1, 'product_code' => 1], ['unique' => true]);
+        $db->selectCollection('contacts')->createIndex(['code' => 1], ['unique' => true, 'partialFilterExpression' => ['code' => ['$type' => 'string']]]);
     }
 }

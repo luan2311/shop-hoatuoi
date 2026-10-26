@@ -158,6 +158,17 @@
         justify-content: flex-start !important;
     }
 
+    /* Tab "Kệ Hoa Khai Trương / Giỏ hoa mừng": thu khoảng đệm để vừa màn 375px
+       (bản cũ bị cắt chữ "Giỏ hoa mừng" vì thanh cuộn ngang bị ẩn) */
+    .section-index.section_product_tab .tab_big .tab_ul {
+        padding: 0 5px;
+    }
+
+        .section-index.section_product_tab .tab_big .tab_ul ul li {
+            padding: 0 8px;
+            font-size: 1.5rem;
+        }
+
     .hero-carousel .hero-line {
         border-bottom-width: 2px;
     }

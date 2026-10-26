@@ -617,11 +617,11 @@
                     <div class="col-lg-4 col-md-4 col-12">
                         <div class="news-item duration-300">
                             <a class="news-thumb" href="/posts/{{ $post->slug }}" title="{{ $post->title }}">
-                                <img src="{{ $post->thumbnail ? asset('storage/posts/' . $post->thumbnail) : asset('images/slide-giao-hoa-2h.jpg') }}"
+                                <img src="{{ $post->thumbnail_url }}"
                                      alt="{{ $post->title }}">
                             </a>
                             <div class="news-info">
-                                <p class="time-post">{{ optional($post->published_at)->format('d/m/Y') }}</p>
+                                <p class="time-post">{{ $post->display_date }}</p>
                                 <h3 class="line-clamp line-clamp-2">
                                     <a href="/posts/{{ $post->slug }}" title="{{ $post->title }}">{{ $post->title }}</a>
                                 </h3>
