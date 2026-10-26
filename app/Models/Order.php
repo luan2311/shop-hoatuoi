@@ -2,36 +2,46 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use MongoDB\Laravel\Eloquent\Model;
 
 class Order extends Model
 {
+    protected $connection = 'mongodb';
+
     protected $fillable = [
-        'user_id', 'total', 'receiver_name', 'receiver_address',
-        'receiver_phone', 'email', 'note', 'status', 'payment_method',
+        'order_code', 'checkout_key', 'user_id', 'customer', 'items', 'total_amount',
+        'status', 'payment_method', 'order_date',
     ];
 
     const STATUSES = ['Pending', 'Processing', 'Shipped', 'Completed', 'Cancelled'];
+
+    public const TRANSITIONS = [
+        'Pending' => ['Processing', 'Cancelled'],
+        'Processing' => ['Shipped', 'Cancelled'],
+        'Shipped' => ['Completed'],
+        'Completed' => [],
+        'Cancelled' => [],
+    ];
+
+    protected function casts(): array
+    {
+        return ['order_date' => 'datetime'];
+    }
 
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function details()
-    {
-        return $this->hasMany(OrderDetail::class);
-    }
-
     public function getStatusBadgeAttribute(): string
     {
-        return match($this->status) {
-            'Pending'    => 'warning',
+        return match ($this->status) {
+            'Pending' => 'warning',
             'Processing' => 'info',
-            'Shipped'    => 'primary',
-            'Completed'  => 'success',
-            'Cancelled'  => 'danger',
-            default      => 'secondary',
+            'Shipped' => 'primary',
+            'Completed' => 'success',
+            'Cancelled' => 'danger',
+            default => 'secondary',
         };
     }
 }

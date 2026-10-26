@@ -2,21 +2,23 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use MongoDB\Laravel\Eloquent\Model;
 
 class Product extends Model
 {
+    protected $connection = 'mongodb';
+
     protected $fillable = [
         'code', 'name', 'price', 'image', 'description',
-        'status', 'brand', 'stock', 'slug', 'category_id',
+        'status', 'brand', 'stock', 'slug', 'category_id', 'category',
     ];
 
     protected static function boot()
     {
         parent::boot();
         static::creating(function ($product) {
-            $product->slug = Str::slug($product->name) . '-' . strtolower($product->code);
+            $product->slug ??= Str::slug($product->name).'-'.strtolower($product->code);
         });
     }
 
@@ -43,14 +45,14 @@ class Product extends Model
     // Accessor: format giá tiền VND
     public function getFormattedPriceAttribute(): string
     {
-        return number_format($this->price, 0, ',', '.') . ' đ';
+        return number_format($this->price, 0, ',', '.').' đ';
     }
 
     // Scopes
     public function scopeSearch($query, string $keyword)
     {
         return $query->where('name', 'like', "%{$keyword}%")
-                     ->orWhereHas('category', fn($q) => $q->where('name', 'like', "%{$keyword}%"));
+            ->orWhereHas('category', fn ($q) => $q->where('name', 'like', "%{$keyword}%"));
     }
 
     public function scopeInStock($query)
