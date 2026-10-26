@@ -1,0 +1,30 @@
+{
+  "branch": "feature/cart-checkout-orders",
+  "head": "3ffe4cb0a09be7b7372dee98bf5b0580c83d350f",
+  "candidate_count": 74,
+  "excluded_old_snapshots": 3,
+  "php_lint_failure_count": 0,
+  "duplicate_route_names": 0,
+  "runtime_password_match_count": 0,
+  "tracked_secret_paths": [],
+  "staged_paths": [],
+  "outside_scope_changes": [],
+  "group_counts": [
+    {
+      "Name": "documentation",
+      "Count": 3
+    },
+    {
+      "Name": "required shared dependency/configuration",
+      "Count": 13
+    },
+    {
+      "Name": "tests/evidence",
+      "Count": 35
+    },
+    {
+      "Name": "Tien code",
+      "Count": 23
+    }
+  ]
+}
