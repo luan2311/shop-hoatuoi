@@ -1,0 +1,34 @@
+TAP version 13
+# Subtest: debounces 300 ms, aborts old request, and ignores a late response
+ok 1 - debounces 300 ms, aborts old request, and ignores a late response
+  ---
+  duration_ms: 7.1723
+  type: 'test'
+  ...
+# Subtest: renders untrusted names as text and URL-encodes slugs
+ok 2 - renders untrusted names as text and URL-encodes slugs
+  ---
+  duration_ms: 3.3895
+  type: 'test'
+  ...
+# Subtest: empty query, Escape and outside clicks cancel pending results
+ok 3 - empty query, Escape and outside clicks cancel pending results
+  ---
+  duration_ms: 5.0445
+  type: 'test'
+  ...
+# Subtest: shows empty and failure states without injecting server content
+ok 4 - shows empty and failure states without injecting server content
+  ---
+  duration_ms: 4.048
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 4
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 167.6114

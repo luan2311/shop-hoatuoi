@@ -1,0 +1,33 @@
+
+ GET|HEAD admin/products .. admin.products.index › Admin\ProductController@index
+ ⇂ web
+ ⇂ auth
+ ⇂ role:Admin
+ POST admin/products .. admin.products.store › Admin\ProductController@store
+ ⇂ web
+ ⇂ auth
+ ⇂ role:Admin
+ GET|HEAD admin/products/create .. admin.products.create › Admin\ProductController@create
+ ⇂ web
+ ⇂ auth
+ ⇂ role:Admin
+ PUT|PATCH admin/products/{product} .. admin.products.update › Admin\ProductController@update
+ ⇂ web
+ ⇂ auth
+ ⇂ role:Admin
+ DELETE admin/products/{product} .. admin.products.destroy › Admin\ProductController@destroy
+ ⇂ web
+ ⇂ auth
+ ⇂ role:Admin
+ GET|HEAD admin/products/{product}/edit .. admin.products.edit › Admin\ProductController@edit
+ ⇂ web
+ ⇂ auth
+ ⇂ role:Admin
+ GET|HEAD api/products/search .. products.search › ProductController@searchAjax
+ ⇂ web
+ GET|HEAD products .. products.index › ProductController@index
+ ⇂ web
+ GET|HEAD products/{slug} .. products.show › ProductController@show
+ ⇂ web
+
+ Showing [9] routes

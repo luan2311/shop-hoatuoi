@@ -1,0 +1,21 @@
+{
+  "baseline_count": 22,
+  "baseline_hash": "6c974b8f2191b6eded634d28950bb3bbdfc6748901b140ba07eb6978d7e9d64b",
+  "fixtures": [
+    {
+      "id": "6adfa4d2415af8284706e5e4",
+      "code": "AN07QA20261027",
+      "name": "AN07 Demo Hoa browser",
+      "slug": "an07-qa-20261027",
+      "price": 123456.75,
+      "price_type": "float",
+      "stock": 7,
+      "stock_type": "int",
+      "image": "products/kUpU2BUYPMOXEl2yRznGzhdbtgWKphIA2XFLmq2P.jpg",
+      "image_exists": true
+    }
+  ],
+  "files": [
+    "kUpU2BUYPMOXEl2yRznGzhdbtgWKphIA2XFLmq2P.jpg"
+  ]
+}
