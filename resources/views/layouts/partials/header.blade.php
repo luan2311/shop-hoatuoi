@@ -1,7 +1,7 @@
 @php
-    // Số trên icon giỏ hàng (Member 3) và yêu thích (Task 4.2) sẽ nối với MongoDB sau
+    // Số trên icon giỏ hàng (Member 3) sẽ nối với MongoDB sau
     $cartCount = 0;
-    $wishlistCount = 0;
+    $wishlistCount = count(\App\Models\Wishlist::productCodesFor(auth()->user()));
 @endphp
 <header class="header">
     <div class="main-header">

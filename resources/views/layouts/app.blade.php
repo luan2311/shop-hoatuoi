@@ -28,6 +28,7 @@
 
     <!-- JS -->
     <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/wishlist-ajax.js') }}"></script>
 
     <title>@yield('title', 'Shop Hoa Tươi Góc Hoa Xinh - Những Bó Hoa Tươi xinh xắn')</title>
 </head>

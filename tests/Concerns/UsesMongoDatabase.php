@@ -19,5 +19,8 @@ trait UsesMongoDatabase
         foreach ($db->listCollectionNames() as $collection) {
             $db->dropCollection($collection);
         }
+
+        // Các index unique giống database/mongodb_init.js
+        $db->selectCollection('wishlists')->createIndex(['user_id' => 1, 'product_code' => 1], ['unique' => true]);
     }
 }

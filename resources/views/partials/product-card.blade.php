@@ -20,11 +20,16 @@
                         </div>
                     @endif
                 </a>
+                @php
+                    $liked = in_array($product->code, \App\Models\Wishlist::productCodesFor(auth()->user()));
+                @endphp
                 <div class="action-button">
-                    <a href="/wishlist" class="setWishlist btn-views btn-circle"
+                    {{-- url() tuyệt đối để main.js không bật loading overlay khi bấm tim --}}
+                    <a href="{{ url('/wishlist') }}" class="setWishlist btn-views btn-circle {{ $liked ? 'active' : '' }}"
                        data-product-code="{{ $product->code }}"
-                       tabindex="0" title="Thêm vào yêu thích">
-                        <img width="25" height="25" src="{{ asset('images/heart.png') }}"
+                       tabindex="0" title="{{ $liked ? 'Bỏ yêu thích' : 'Thêm vào yêu thích' }}">
+                        <img width="25" height="25" src="{{ asset($liked ? 'images/heart-red.svg' : 'images/heart.png') }}"
+                             class="{{ $liked ? 'img-unlike' : '' }}"
                              alt="Thêm vào yêu thích">
                     </a>
                 </div>

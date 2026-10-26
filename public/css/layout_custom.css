@@ -86,6 +86,14 @@
         background-size: 55%;
     }
 
+/* Nút tim wishlist đã thích: luôn hiện (không cần hover) và giữ tim đỏ */
+.item_product_main .product-action .product-thumbnail .action-button .btn-circle.setWishlist.active {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    border-color: #e53935;
+}
+
 /* Khối tin tức mới trang chủ */
 .section_news {
     margin-bottom: 40px;
