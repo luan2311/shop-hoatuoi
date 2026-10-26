@@ -1,0 +1,6 @@
+{
+  "result": "PASS",
+  "case": "Unknown existing TCP listener is refused before starting/initializing mongod",
+  "exit_code": 1,
+  "foreign_listener_blocked": true
+}

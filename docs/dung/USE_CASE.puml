@@ -1,0 +1,49 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+actor "Khách vãng lai" as Guest
+actor "Khách hàng" as Customer
+actor "Quản trị viên" as Admin
+Guest <|-- Customer
+
+rectangle "Có code trên checkout sales/auth 89242cd" {
+  usecase "Đăng ký / đăng nhập / logout" as Auth
+  usecase "Cập nhật hồ sơ và mật khẩu" as Profile
+  usecase "Thêm / sửa / xóa / clear giỏ" as Cart
+  usecase "Checkout với token chống lặp" as Checkout
+  usecase "Xem đơn của tài khoản" as History
+  usecase "Lọc / tìm / xem đơn Admin" as Orders
+  usecase "Chuyển trạng thái / hủy hoàn kho" as Status
+}
+Guest --> Auth
+Customer --> Profile
+Customer --> Cart
+Customer --> Checkout
+Customer --> History
+Admin --> Orders
+Admin --> Status
+
+rectangle "Có code ở nhánh Luân, chưa tích hợp MongoDB chung" #FFF3CD {
+  usecase "Dashboard quản trị" as Dashboard
+  usecase "CRUD danh mục" as Category
+}
+Admin --> Dashboard
+Admin --> Category
+
+rectangle "Theo kế hoạch, chưa có code tích hợp để nghiệm thu" #EEEEEE {
+  usecase "Catalog / tìm kiếm / chi tiết" as Catalog
+  usecase "Product CRUD và upload ảnh" as Product
+  usecase "Wishlist AJAX" as Wishlist
+  usecase "Liên hệ và Maps" as Contact
+  usecase "Đọc / quản trị tin tức" as Posts
+}
+Guest --> Catalog
+Guest --> Contact
+Guest --> Posts
+Customer --> Wishlist
+Admin --> Product
+note bottom
+  Sơ đồ phân biệt hiện trạng với chức năng dự kiến.
+  Không xác nhận UI, ảnh thật hoặc luồng toàn website đã PASS.
+end note
+@enduml

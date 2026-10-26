@@ -1,0 +1,17 @@
+{
+  "files": [
+    {
+      "label": "Downloads/mongodb_init.js",
+      "bytes": 201137,
+      "sha256_raw": "bf54986396db094dbdce065a4b536dc461d38f1915fd419ecd0aee5bc9ae6313",
+      "sha256_lf": "fbdc44b7d5fc8f3976494d998a777b51c0022ec65e804599c791fbb589c590d1"
+    },
+    {
+      "label": "database/mongodb_init.js",
+      "bytes": 200718,
+      "sha256_raw": "fbdc44b7d5fc8f3976494d998a777b51c0022ec65e804599c791fbb589c590d1",
+      "sha256_lf": "fbdc44b7d5fc8f3976494d998a777b51c0022ec65e804599c791fbb589c590d1"
+    }
+  ],
+  "same_normalized_content": true
+}

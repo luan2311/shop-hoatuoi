@@ -1,0 +1,16 @@
+{
+    "result":  {
+                   "status":  "PASS",
+                   "action":  {
+                                  "installed":  0,
+                                  "skipped":  6,
+                                  "missing":  71,
+                                  "rejected":  0
+                              },
+                   "counts":  {
+                                  "placeholder":  71,
+                                  "illustration":  6
+                              }
+               },
+    "scope":  "Current local runtime. The six licensed repo assets are already installed; 71 non-licensed placeholder runtime files have no tracked source asset."
+}

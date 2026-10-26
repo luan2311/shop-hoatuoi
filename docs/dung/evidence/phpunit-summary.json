@@ -1,0 +1,56 @@
+{
+  "checked_at_utc7": "2026-10-26T23:04:39.025618+07:00",
+  "head": "89242cd898d716094f1b026dd8dc591399d27f59",
+  "environment": {
+    "php": "8.3.30 ZTS x64",
+    "extension_mongodb": "2.5.5",
+    "mongodb_server": "8.3.8",
+    "replica_set": "dungQA",
+    "port": 27028,
+    "laravel": "13.37.0",
+    "laravel_mongodb": "5.7.0",
+    "php_library_mongodb": "2.5.0"
+  },
+  "all_existing_and_added_tests": {
+    "tests": 94,
+    "assertions": 2009,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "dung_tests": {
+    "tests": 43,
+    "assertions": 1654,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "dung_suites": [
+    {
+      "name": "Tests\\Unit\\FlowerDatasetTest",
+      "tests": "21",
+      "assertions": "586",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "Tests\\Feature\\SeededSalesIntegrationTest",
+      "tests": "1",
+      "assertions": "71",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "Tests\\Feature\\SeederIntegrityTest",
+      "tests": "21",
+      "assertions": "997",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0"
+    }
+  ],
+  "duration_seconds": 29.94514,
+  "scope": "Available auth/profile/sales plus Dung dataset tests; not whole-website UI/catalog acceptance."
+}

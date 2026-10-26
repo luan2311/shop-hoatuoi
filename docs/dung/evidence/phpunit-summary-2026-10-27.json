@@ -1,0 +1,37 @@
+{
+    "result":  "PASS",
+    "generated_at":  "2026-10-27 01:25:15 +07:00",
+    "full_suite":  {
+                       "tests":  110,
+                       "assertions":  2132,
+                       "passed":  110,
+                       "failures":  0,
+                       "errors":  0,
+                       "skipped":  0,
+                       "junit":  "phpunit-full-2026-10-27.xml"
+                   },
+    "dung_scope":  {
+                       "tests":  59,
+                       "assertions":  1777,
+                       "passed":  59,
+                       "failures":  0,
+                       "errors":  0,
+                       "skipped":  0,
+                       "junit":  "phpunit-dung-2026-10-27.xml"
+                   },
+    "existing_regression_scope":  {
+                                      "tests":  51,
+                                      "assertions":  355,
+                                      "failures":  0,
+                                      "errors":  0,
+                                      "skipped":  0
+                                  },
+    "browser":  {
+                    "result":  "FAIL",
+                    "measurements":  24,
+                    "desktop_overflow":  0,
+                    "mobile_success_page_overflow":  2,
+                    "details":  "Order success layout width 396px at 390px and 375px viewports.",
+                    "evidence":  "browser-2026-10-27/browser-qa-2026-10-27.json"
+                }
+}

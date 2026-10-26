@@ -1,0 +1,80 @@
+{
+    "first_apply":  {
+                        "status":  "PASS",
+                        "database":  "shop_hoatuoi_test_dung_cli_20261026225448",
+                        "mode":  "apply",
+                        "source_sha256_lf":  "fbdc44b7d5fc8f3976494d998a777b51c0022ec65e804599c791fbb589c590d1",
+                        "collections":  {
+                                            "categories":  {
+                                                               "inserted":  5,
+                                                               "skipped":  0,
+                                                               "updated":  0,
+                                                               "would_insert":  0
+                                                           },
+                                            "products":  {
+                                                             "inserted":  80,
+                                                             "skipped":  0,
+                                                             "updated":  0,
+                                                             "would_insert":  0
+                                                         },
+                                            "posts":  {
+                                                          "inserted":  3,
+                                                          "skipped":  0,
+                                                          "updated":  0,
+                                                          "would_insert":  0
+                                                      }
+                                        }
+                    },
+    "preview":  {
+                    "status":  "PREVIEW",
+                    "database":  "shop_hoatuoi_test_dung_cli_20261026225448",
+                    "mode":  "dry-run",
+                    "source_sha256_lf":  "fbdc44b7d5fc8f3976494d998a777b51c0022ec65e804599c791fbb589c590d1",
+                    "collections":  {
+                                        "categories":  {
+                                                           "inserted":  0,
+                                                           "skipped":  0,
+                                                           "updated":  0,
+                                                           "would_insert":  5
+                                                       },
+                                        "products":  {
+                                                         "inserted":  0,
+                                                         "skipped":  0,
+                                                         "updated":  0,
+                                                         "would_insert":  80
+                                                     },
+                                        "posts":  {
+                                                      "inserted":  0,
+                                                      "skipped":  0,
+                                                      "updated":  0,
+                                                      "would_insert":  3
+                                                  }
+                                    }
+                },
+    "second_apply":  {
+                         "status":  "PASS",
+                         "database":  "shop_hoatuoi_test_dung_cli_20261026225448",
+                         "mode":  "apply",
+                         "source_sha256_lf":  "fbdc44b7d5fc8f3976494d998a777b51c0022ec65e804599c791fbb589c590d1",
+                         "collections":  {
+                                             "categories":  {
+                                                                "inserted":  0,
+                                                                "skipped":  5,
+                                                                "updated":  0,
+                                                                "would_insert":  0
+                                                            },
+                                             "products":  {
+                                                              "inserted":  0,
+                                                              "skipped":  80,
+                                                              "updated":  0,
+                                                              "would_insert":  0
+                                                          },
+                                             "posts":  {
+                                                           "inserted":  0,
+                                                           "skipped":  3,
+                                                           "updated":  0,
+                                                           "would_insert":  0
+                                                       }
+                                         }
+                     }
+}
