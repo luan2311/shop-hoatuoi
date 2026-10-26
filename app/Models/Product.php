@@ -2,27 +2,54 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use MongoDB\BSON\Regex;
+use MongoDB\Laravel\Eloquent\Model;
 
 class Product extends Model
 {
+    protected $connection = 'mongodb';
+
     protected $fillable = [
         'code', 'name', 'price', 'image', 'description',
-        'status', 'brand', 'stock', 'slug', 'category_id',
+        'status', 'brand', 'stock', 'slug', 'category_id', 'category', 'original_price',
     ];
+
+    protected function casts(): array
+    {
+        return ['price' => 'float', 'original_price' => 'float', 'stock' => 'integer'];
+    }
 
     protected static function boot()
     {
         parent::boot();
         static::creating(function ($product) {
-            $product->slug = Str::slug($product->name) . '-' . strtolower($product->code);
+            $product->slug ??= Str::slug($product->name).'-'.strtolower($product->code);
         });
     }
 
-    public function category()
+    // category is an embedded snapshot; use this relation for the live category.
+    public function categoryRecord()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsTo(Category::class, 'category_id');
+    }
+
+    public function getImageUrlAttribute(): ?string
+    {
+        $image = (string) $this->image;
+        if (preg_match('~^products/[a-zA-Z0-9_-]+\.(?:jpg|jpeg|png|webp)$~i', $image)) {
+            return Storage::disk('public')->url($image);
+        }
+        if ($image !== '' && basename($image) === $image && preg_match('/\.(jpg|jpeg|png|webp)$/i', $image)) {
+            foreach (['images/products/', 'Images/'] as $directory) {
+                if (is_file(public_path($directory.$image))) {
+                    return asset($directory.$image);
+                }
+            }
+        }
+
+        return null;
     }
 
     public function cartItems()
@@ -43,14 +70,19 @@ class Product extends Model
     // Accessor: format giá tiền VND
     public function getFormattedPriceAttribute(): string
     {
-        return number_format($this->price, 0, ',', '.') . ' đ';
+        return number_format($this->price, 0, ',', '.').' đ';
     }
 
     // Scopes
-    public function scopeSearch($query, string $keyword)
+    public function scopeMatchingKeyword($query, string $keyword)
     {
-        return $query->where('name', 'like', "%{$keyword}%")
-                     ->orWhereHas('category', fn($q) => $q->where('name', 'like', "%{$keyword}%"));
+        $literal = new Regex(preg_quote($keyword), 'i');
+
+        return $query->where(function ($query) use ($literal) {
+            $query->where('name', 'regex', $literal)
+                ->orWhere('description', 'regex', $literal)
+                ->orWhere('category.name', 'regex', $literal);
+        });
     }
 
     public function scopeInStock($query)

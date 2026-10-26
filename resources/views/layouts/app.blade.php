@@ -16,7 +16,9 @@
     </head>
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+            @auth
+                @include('layouts.navigation')
+            @endauth
 
             <!-- Page Heading -->
             @isset($header)
@@ -29,6 +31,9 @@
 
             <!-- Page Content -->
             <main>
+                <div class="mx-auto max-w-7xl px-4 pt-4 sm:px-6 sm:pt-6">
+                    @include('products.partials.search')
+                </div>
                 {{ $slot }}
             </main>
         </div>

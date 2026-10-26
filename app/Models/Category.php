@@ -2,18 +2,20 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use MongoDB\Laravel\Eloquent\Model;
 
 class Category extends Model
 {
-    protected $fillable = ['name', 'slug'];
+    protected $connection = 'mongodb';
+
+    protected $fillable = ['code', 'name', 'slug', 'description'];
 
     protected static function boot()
     {
         parent::boot();
         static::creating(function ($category) {
-            $category->slug = Str::slug($category->name);
+            $category->slug ??= Str::slug($category->name);
         });
     }
 
