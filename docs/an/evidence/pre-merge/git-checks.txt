@@ -1,0 +1,59 @@
+Branch: feat/an-laravel-mongodb
+HEAD: 3ffe4cb0a09be7b7372dee98bf5b0580c83d350f
+origin/dev: 3ffe4cb0a09be7b7372dee98bf5b0580c83d350f
+git diff --check exit: 0
+
+git status --short --untracked-files=all:
+ M .env.example
+ M app/Models/Category.php
+ M app/Models/Product.php
+ M bootstrap/app.php
+ M composer.json
+ M composer.lock
+ M config/database.php
+ M database/seeders/DatabaseSeeder.php
+ M resources/views/layouts/app.blade.php
+ M routes/web.php
+?? app/Exceptions/ProductDatabaseErrors.php
+?? app/Http/Controllers/Admin/ProductController.php
+?? app/Http/Controllers/ProductController.php
+?? app/Http/Requests/ProductBrowseRequest.php
+?? app/Http/Requests/ProductRequest.php
+?? database/migrations/mongodb/2026_10_26_000001_create_product_catalog.php
+?? database/seeders/ProductDemoSeeder.php
+?? docs/an/AN-01-scope-and-mapping.md
+?? docs/an/AN-02-implementation.md
+?? docs/an/AN-03-test-evidence.md
+?? docs/an/AN-04-pre-merge-review.md
+?? docs/an/evidence/all-tests-final.txt
+?? docs/an/evidence/catalog-search.png
+?? docs/an/evidence/js-tests-final.txt
+?? docs/an/evidence/pre-merge/build.txt
+?? docs/an/evidence/pre-merge/composer-validate.txt
+?? docs/an/evidence/pre-merge/javascript-tests.txt
+?? docs/an/evidence/pre-merge/migration-seed.txt
+?? docs/an/evidence/pre-merge/php-tests.txt
+?? docs/an/evidence/pre-merge/platform.txt
+?? docs/an/evidence/pre-merge/routes.txt
+?? docs/an/evidence/routes-final.txt
+?? phpunit.products.xml
+?? public/js/search-realtime.js
+?? resources/views/admin/products/create.blade.php
+?? resources/views/admin/products/edit.blade.php
+?? resources/views/admin/products/index.blade.php
+?? resources/views/admin/products/partials/form.blade.php
+?? resources/views/errors/product-database.blade.php
+?? resources/views/products/index.blade.php
+?? resources/views/products/partials/card.blade.php
+?? resources/views/products/partials/search.blade.php
+?? resources/views/products/show.blade.php
+?? routes/products.php
+?? tests/Feature/Products/AdminProductTest.php
+?? tests/Feature/Products/FrontendProductTest.php
+?? tests/Feature/Products/PreMergeReviewTest.php
+?? tests/Feature/Products/ProductAuthIntegrationTest.php
+?? tests/Feature/Products/ProductFailureTest.php
+?? tests/Feature/Products/ProductSchemaTest.php
+?? tests/Feature/Products/ProductSearchAjaxTest.php
+?? tests/Feature/Products/ProductTestCase.php
+?? tests/JavaScript/search-realtime.test.cjs

@@ -36,19 +36,19 @@ class DatabaseSeeder extends Seeder
 
         // 4. Seed Categories (từ LOAIHANG trong SQL)
         $categories = [
-            ['name' => 'Bó Hoa Tươi',          'slug' => 'bo-hoa-tuoi'],
-            ['name' => 'Kệ Chúc Mừng',          'slug' => 'ke-chuc-mung'],
-            ['name' => 'Giỏ Hoa Chúc Mừng',     'slug' => 'gio-hoa-chuc-mung'],
-            ['name' => 'Hoa Cưới',               'slug' => 'hoa-cuoi'],
-            ['name' => 'Hoa Sáp',                'slug' => 'hoa-sap'],
+            ['code' => 'LH001', 'name' => 'Bó Hoa Tươi',          'slug' => 'bo-hoa-tuoi'],
+            ['code' => 'LH002', 'name' => 'Kệ Chúc Mừng',          'slug' => 'ke-chuc-mung'],
+            ['code' => 'LH003', 'name' => 'Giỏ Hoa Chúc Mừng',     'slug' => 'gio-hoa-chuc-mung'],
+            ['code' => 'LH004', 'name' => 'Hoa Cưới',               'slug' => 'hoa-cuoi'],
+            ['code' => 'LH005', 'name' => 'Hoa Sáp',                'slug' => 'hoa-sap'],
         ];
         foreach ($categories as $cat) {
-            Category::create($cat);
+            Category::firstOrCreate(['code' => $cat['code']], $cat);
         }
 
         // 5. Seed sản phẩm mẫu (10 sp đại diện từ SQL)
-        $boHoa = Category::where('slug', 'bo-hoa-tuoi')->first();
-        $ke    = Category::where('slug', 'ke-chuc-mung')->first();
+        $boHoa = Category::where('code', 'LH001')->firstOrFail();
+        $ke    = Category::where('code', 'LH002')->firstOrFail();
 
         $products = [
             [
@@ -138,7 +138,8 @@ class DatabaseSeeder extends Seeder
         ];
 
         foreach ($products as $product) {
-            Product::create($product);
+            $product['category'] = Category::findOrFail($product['category_id'])->only(['code', 'name', 'slug']);
+            Product::firstOrCreate(['code' => $product['code']], $product);
         }
 
         // 6. Seed Posts mẫu

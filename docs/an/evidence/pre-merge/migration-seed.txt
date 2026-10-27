@@ -1,0 +1,14 @@
+
+ INFO Nothing to migrate.
+
+
+ INFO Seeding database.
+
+ Database\Seeders\ProductDemoSeeder .. RUNNING
+ Database\Seeders\ProductDemoSeeder .. 85 ms DONE
+
+
+ INFO Seeding database.
+
+ Database\Seeders\ProductDemoSeeder .. RUNNING
+ Database\Seeders\ProductDemoSeeder .. 86 ms DONE
