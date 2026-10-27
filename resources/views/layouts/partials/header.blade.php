@@ -1,7 +1,17 @@
 @php
-    // Số trên icon giỏ hàng (Member 3) sẽ nối với MongoDB sau
     $cartCount = 0;
-    $wishlistCount = count(\App\Models\Wishlist::productCodesFor(auth()->user()));
+    if (auth()->check()) {
+        try {
+            $userCart = \App\Models\Cart::where('user_id', auth()->id())->first();
+            if ($userCart && is_array($userCart->items)) {
+                $cartCount = array_sum(array_column($userCart->items, 'quantity'));
+            }
+        } catch (\Throwable $e) {}
+    }
+    $wishlistCount = 0;
+    try {
+        $wishlistCount = count(\App\Models\Wishlist::productCodesFor(auth()->user()));
+    } catch (\Throwable $e) {}
 @endphp
 <header class="header">
     <div class="main-header">
