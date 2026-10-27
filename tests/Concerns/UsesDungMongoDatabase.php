@@ -22,6 +22,15 @@ trait UsesDungMongoDatabase
         $database = 'shop_hoatuoi_test_dung_'.getmypid().'_'.bin2hex(random_bytes(6));
         config(['database.connections.mongodb.database' => $database]);
         DB::purge('mongodb');
+
+        $this->beforeApplicationDestroyed(function () use ($database): void {
+            if (! env('KEEP_TEST_DB', false) && str_starts_with($database, 'shop_hoatuoi_test_dung_')) {
+                try {
+                    DB::connection('mongodb')->getDatabase()->drop();
+                } catch (Throwable) {
+                }
+            }
+        });
         try {
             $db = DB::connection('mongodb')->getDatabase();
             $hello = $db->command(['hello' => 1])->toArray()[0];

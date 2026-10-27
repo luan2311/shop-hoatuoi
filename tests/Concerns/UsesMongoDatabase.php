@@ -32,11 +32,20 @@ trait UsesMongoDatabase
             throw new RuntimeException('Tests require an isolated shop_hoatuoi_test* database.');
         }
 
-        // Each test gets a new database. Retain it for audit; never drop a database.
+        // Each test gets a new isolated database and automatically drops it after completion.
         $testDb = $database.'_'.getmypid().'_'.bin2hex(random_bytes(4));
         config(['database.connections.mongodb.database' => $testDb]);
         DB::purge('mongodb');
         $connection = DB::connection('mongodb');
+
+        $this->beforeApplicationDestroyed(function () use ($connection, $testDb): void {
+            if (! env('KEEP_TEST_DB', false) && str_starts_with($testDb, 'shop_hoatuoi_test')) {
+                try {
+                    $connection->getDatabase()->drop();
+                } catch (\Throwable) {
+                }
+            }
+        });
 
         $fixturePath = base_path('tests/Fixtures/mongodb-validators.json');
         if (file_exists($fixturePath)) {
