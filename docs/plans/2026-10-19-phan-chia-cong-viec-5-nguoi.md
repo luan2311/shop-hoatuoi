@@ -850,6 +850,8 @@ git commit -m "feat(contact-post): add contact form with google maps embed and b
 
 ### PHẦN 5: MEMBER 5 – QA TESTING, SEEDER DATA & BÁO CÁO ERD/UML
 
+> Các ví dụ triển khai trong phần này là bản phác thảo ban đầu theo SQL/pivot. Nhánh QA hiện dùng Laravel 13/MongoDB; xem trạng thái thực tế ở checklist cuối phần này và hợp đồng trong docs/dung/MONGODB_SCHEMA.md. Không chạy ví dụ seeder hoặc FullCustomerJourneyTest cũ như test của nhánh hiện tại.
+
 #### Task 5.1: Chuẩn hóa Seeder Dữ liệu Mẫu & File Ảnh Sản Phẩm
 **Files:**
 - Modify: `database/seeders/DatabaseSeeder.php`
@@ -988,9 +990,11 @@ git commit -m "test(e2e): add complete end-to-end customer journey and admin ful
 
 #### Task 5.3: Tài liệu Đồ án (Sơ đồ ERD, Use Case UML & Báo cáo Thuyết trình)
 **Files:**
-- Create: `docs/ERD_DATABASE.md`
-- Create: `docs/USECASE_UML.puml`
+- Existing schema and ERD: `docs/dung/MONGODB_SCHEMA.md` and `docs/dung/SO_DO.md`
+- Existing Use Case: `docs/dung/USE_CASE.puml`
 - Create: `docs/BAO_CAO_DO_AN_10_DIEM.md`
+
+Tài liệu schema, ERD, Activity, Sequence và Use Case được giữ tập trung trong `docs/dung/` để tránh tạo bản trùng. Task này dùng chúng làm nguồn cho báo cáo.
 
 **Step 1: Thiết kế Sơ đồ Use Case (PlantUML)**
 ```plantuml
@@ -1091,12 +1095,22 @@ git commit -m "docs: finalize project report, database ERD and PlantUML use-case
 - [ ] Viết xong `HomePageTest`, `WishlistAjaxTest`, `ContactAndPostTest` (100% PASS).
 
 ### Checklist Thành Viên 5 (QA Testing, Seeder & Báo cáo)
-- [ ] Bổ sung Seeder dữ liệu mẫu phong phú (tối thiểu 15-20 sản phẩm, đủ 5 danh mục).
-- [ ] Chạy `php artisan storage:link` và kiểm tra hiển thị toàn bộ ảnh sản phẩm.
-- [ ] Chạy kiểm thử toàn trình `FullCustomerJourneyTest` và toàn bộ test suite: `php artisan test`.
-- [ ] Thiết kế sơ đồ mô hình dữ liệu NoSQL Document Schema (Collections & Embedded Structure).
-- [ ] Thiết kế sơ đồ Use Case UML bằng PlantUML.
-- [ ] Soạn thảo file báo cáo đồ án và outline slide thuyết trình đáp ứng đầy đủ thang 10 điểm.
+> Trạng thái dưới đây phản ánh code và bằng chứng trên nhánh QA ngày 27/10/2026. Các ví dụ Task 5.1–5.2 phía trên là bản phác thảo ban đầu theo SQL/pivot; chúng không phải lệnh nghiệm thu cho MongoDB hiện tại. Không dùng `DatabaseSeeder` cũ hoặc ví dụ `RefreshDatabase`/`roles()->attach()` để kết luận nhánh này đã tích hợp.
+
+| Hạng mục | Trạng thái | Bằng chứng và giới hạn |
+|---|---|---|
+| Dataset seeder, tối thiểu 15–20 sản phẩm và 5 danh mục | DONE | 80 sản phẩm, 5 danh mục, 3 bài viết; checksum khớp initializer và dữ liệu được kiểm tra trong [flowers.json](../../database/seeders/data/flowers.json). Importer MongoDB riêng, không thay DatabaseSeeder SQL. |
+| Storage public và kiểm kê ảnh sản phẩm | PARTIAL | 6 file minh họa có giấy phép/7 SKU tham chiếu; 0 ảnh khớp SKU; còn 68 tên file sản phẩm thiếu. Đã cài 3/3 thumbnail bài viết có provenance; browser route blog chưa có trên nhánh này. Template placeholder được lưu trong Git và không tính là ảnh hoàn chỉnh. |
+| Toàn bộ PHPUnit hiện có | DONE | Full suite 110/110 tests / 2.132 assertions / 0 failure-error-skip lúc 11:36 +07 trên replica set QA riêng `dungQA` (`127.0.0.1:27028`), qua launcher nạp MongoDB extension trong scope process. Evidence: [QA_KET_QUA](../dung/QA_KET_QUA.md) và [runtime JSON](../dung/evidence/phpunit-runtime-2026-10-27.json). |
+| Kiểm thử tích hợp chọn lọc Auth + Sales trên nhánh hiện tại | DONE | Lượt mới nhất: 37/37 tests, 315 assertions, 0 failure/error/skip; JUnit và summary tại [evidence](../dung/evidence/member5-integration-2026-10-27.xml) và [summary](../dung/evidence/member5-integration-summary-2026-10-27.json). Tạo 37 DB riêng trên `dungQA`, giữ nguyên, không cleanup. |
+| `FullCustomerJourneyTest` và nghiệm thu xuyên Catalog → Checkout → Admin | BLOCKED | Các HTTP Feature test Auth/Sales hiện có PASS riêng; vẫn chưa thể chạy xuyên Catalog vì controller/route Catalog chỉ có trên `origin/feat/an-laravel-mongodb`, chưa tích hợp. Browser E2E lượt này NOT RUN. |
+| Ba thumbnail bài viết và kiểm tra hiển thị | PARTIAL | Đã tái sử dụng và cài JPEG minh họa CC BY/CC BY-SA cho TT001–TT003, có ledger và runtime readback; route Posts chỉ có ở ref nhánh Huy, chưa browser-verify trên checkout này. |
+| Hai lỗi mobile ở `/orders/success` (390×844, 375×812) | PARTIAL | Snapshot cũ xác nhận email dài tràn và bảng min-width cắt nội dung. `git apply --check` patch đề xuất PASS nhưng chưa áp dụng vì view thuộc Thành viên 3; không có Playwright/Puppeteer và chưa xác minh sau sửa bằng browser. |
+| Schema NoSQL, collection và embedded documents | DONE | [MONGODB_SCHEMA](../dung/MONGODB_SCHEMA.md) và phần ERD trong [SO_DO](../dung/SO_DO.md). |
+| Sơ đồ Use Case UML | DONE | [USE_CASE.puml](../dung/USE_CASE.puml) tách code hiện có khỏi chức năng theo kế hoạch. |
+| Sơ đồ Activity và Sequence | DONE | Activity đặt hàng và Sequence checkout ở [SO_DO](../dung/SO_DO.md). |
+| Báo cáo đồ án và nội dung outline slide | DONE | [Báo cáo](../BAO_CAO_DO_AN_10_DIEM.md) và [nội dung slide](../dung/NOI_DUNG_SLIDE.md) mô tả chức năng, kết quả, giới hạn và hướng phát triển thực tế. |
+| File trình chiếu PowerPoint | NOT STARTED | Chưa có file .pptx; nội dung Markdown đã chuẩn bị theo yêu cầu thay thế khi chưa tạo được PowerPoint. |
 
 ---
 

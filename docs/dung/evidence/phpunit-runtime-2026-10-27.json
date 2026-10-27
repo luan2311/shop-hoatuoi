@@ -1,0 +1,90 @@
+{
+  "captured_at": "2026-10-27 11:36:43 +07:00",
+  "php_cli": {
+    "path": "C:/Laragon/laragon/bin/php/php-8.3.30-Win32-vs16-x64/php.exe",
+    "version": "8.3.30",
+    "ini": "C:/Laragon/laragon/bin/php/php-8.3.30-Win32-vs16-x64/php.ini",
+    "path_resolution": [
+      "C:/Laragon/laragon/bin/php/php-8.3.30-Win32-vs16-x64/php.exe",
+      "C:/Users/dongv/.config/herd-lite/bin/php.exe"
+    ]
+  },
+  "mongodb_extension": {
+    "default_cli_loaded": false,
+    "available_in_repository": ".runtime/php/php_mongodb.dll",
+    "scan_ini": ".runtime/php/mongodb.ini",
+    "version": "2.5.5",
+    "qa_runner_loaded": true,
+    "loading_scope": "PHP_INI_SCAN_DIR is set only for the test process and restored by scripts/test-dung-data.ps1; no global PHP configuration was changed."
+  },
+  "default_phpunit_configuration": {
+    "environment": "testing",
+    "database_prefix": "shop_hoatuoi_test_",
+    "uri_host": "127.0.0.1:27018",
+    "replica_set": "tienRS",
+    "used_for_recovery": false
+  },
+  "initial_full_suite_attempt": {
+    "captured_at": "2026-10-27 11:20:22 +07:00",
+    "command": "php artisan test --compact",
+    "tests_discovered": 110,
+    "passed": 37,
+    "assertions": 700,
+    "failures": 0,
+    "errors": 50,
+    "skipped": 23,
+    "result": "BLOCKED",
+    "error": "Class MongoDB\\Driver\\Manager not found",
+    "database_access": "The driver class was unavailable before a MongoDB connection; no database writes occurred."
+  },
+  "unit_suite": {
+    "command": "php artisan test --testsuite=Unit --compact",
+    "tests": 37,
+    "passed": 37,
+    "assertions": 700,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "PASS"
+  },
+  "recovered_full_suite": {
+    "captured_at": "2026-10-27 11:36:43 +07:00",
+    "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\test-dung-data.ps1 -Filter '.*' -EvidencePath '.runtime/dung-qa/phpunit-recovery-full.xml'",
+    "target": "mongodb://127.0.0.1:27028/?replicaSet=dungQA",
+    "test_database_prefix": "shop_hoatuoi_test_",
+    "tests": 110,
+    "passed": 110,
+    "assertions": 2132,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_ms": 31162,
+    "result": "PASS",
+    "junit_artifact": ".runtime/dung-qa/phpunit-recovery-full.xml (ignored runtime artifact)",
+    "junit_sha256": "84e4eaa9cf7e7f56ebf95b15e1c4cff539f334970cf25f1a12ba0de50fdc3c96",
+    "database_count_before": 603,
+    "database_count_after": 675,
+    "database_handling": "Count increased by 72 during the isolated QA run. Test databases are retained by the test traits; no existing database was deleted.",
+    "qa_launcher_restored_process_environment": true,
+    "configuration_file": ".runtime/dung-qa/phpunit-config.xml",
+    "app_env": "testing",
+    "configured_mongodb_database": "shop_hoatuoi_test_dung_suite"
+  },
+  "previous_full_pass_evidence": {
+    "file": "phpunit-summary-2026-10-27.json",
+    "verified_at": "2026-10-27 10:24:42 +07:00",
+    "tests": 110,
+    "assertions": 2132,
+    "result": "PASS",
+    "note": "Preserved as the earlier successful full-suite evidence; a newer isolated QA run also passed."
+  },
+  "other_php_installations": [
+    {
+      "path": "C:/Users/dongv/.config/herd-lite/bin/php.exe",
+      "version": "8.5.0",
+      "ini": "C:/Users/dongv/.config/herd-lite/bin/php.ini",
+      "mongodb_extension_loaded_by_default": false,
+      "used_for_test_run": false
+    }
+  ]
+}
