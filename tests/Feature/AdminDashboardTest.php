@@ -37,4 +37,30 @@ class AdminDashboardTest extends TestCase
         $response->assertStatus(200);
         $response->assertViewHas(['totalCategories', 'totalProducts', 'totalOrders', 'totalUsers']);
     }
+
+    public function test_admin_can_fetch_revenue_chart_data(): void
+    {
+        $adminRole = Role::create(['name' => 'Admin', 'description' => 'Quản trị']);
+        $admin = User::factory()->create();
+        $admin->roles()->attach($adminRole->id);
+
+        $response = $this->actingAs($admin)->get('/admin/dashboard/revenue-data');
+        $response->assertStatus(200);
+        $response->assertJsonStructure([
+            'success',
+            'data' => [
+                '*' => ['date', 'revenue']
+            ]
+        ]);
+    }
+
+    public function test_non_admin_cannot_fetch_revenue_chart_data(): void
+    {
+        $userRole = Role::create(['name' => 'User', 'description' => 'Khách hàng']);
+        $user = User::factory()->create();
+        $user->roles()->attach($userRole->id);
+
+        $response = $this->actingAs($user)->get('/admin/dashboard/revenue-data');
+        $response->assertStatus(403);
+    }
 }
