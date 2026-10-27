@@ -1,0 +1,15 @@
+{
+  "result": "failed",
+  "tests": 2,
+  "failed": 2,
+  "failures": [
+    {
+      "test": "Tests\\Feature\\SalesFinalAuditTest::test_mongodb_decimal_product_prices_render_and_checkout_correctly",
+      "message": "Expected response status code [200] but received 500.\nFailed asserting that 500 is identical to 200.\r\n\r\nThe following exception occurred during the last request:\n\nErrorException: Object of class MongoDB\\BSON\\Decimal128 could not be converted to float"
+    },
+    {
+      "test": "Tests\\Feature\\SalesFinalAuditTest::test_legacy_decimal_order_amounts_render_without_changing_stored_data",
+      "message": "Expected response status code [200] but received 500.\nFailed asserting that 500 is identical to 200.\r\n\r\nThe following exception occurred during the last request:\n\nErrorException: Object of class MongoDB\\BSON\\Decimal128 could not be converted to float"
+    }
+  ]
+}

@@ -1,0 +1,405 @@
+{
+  "branch": "feature/cart-checkout-orders",
+  "base_commit": "3ffe4cb0a09be7b7372dee98bf5b0580c83d350f",
+  "files": [
+    {
+      "path": ".env.example",
+      "category": "required shared dependency/configuration",
+      "include_in_commit": true
+    },
+    {
+      "path": ".gitignore",
+      "category": "required shared dependency/configuration",
+      "include_in_commit": true
+    },
+    {
+      "path": "app/Http/Controllers/Admin/OrderController.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "app/Http/Controllers/CartController.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "app/Http/Controllers/OrderController.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "app/Http/Requests/CartRequest.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "app/Http/Requests/OrderRequest.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "app/Http/Requests/OrderStatusRequest.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "app/Models/Cart.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "app/Models/Order.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "app/Models/Product.php",
+      "category": "required shared dependency/configuration",
+      "include_in_commit": true
+    },
+    {
+      "path": "app/Models/User.php",
+      "category": "required shared dependency/configuration",
+      "include_in_commit": true
+    },
+    {
+      "path": "app/Services/SalesService.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "bootstrap/app.php",
+      "category": "required shared dependency/configuration",
+      "include_in_commit": true
+    },
+    {
+      "path": "composer.json",
+      "category": "required shared dependency/configuration",
+      "include_in_commit": true
+    },
+    {
+      "path": "composer.lock",
+      "category": "required shared dependency/configuration",
+      "include_in_commit": true
+    },
+    {
+      "path": "config/database.php",
+      "category": "required shared dependency/configuration",
+      "include_in_commit": true
+    },
+    {
+      "path": "database/migrations/mongodb/2026_10_26_000001_create_sales_indexes.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "database/migrations/mongodb/2026_10_26_000002_create_sales_lookup_indexes.php",
+      "category": "required shared dependency/configuration",
+      "include_in_commit": true
+    },
+    {
+      "path": "database/migrations/mongodb/2026_10_26_000003_add_checkout_idempotency_index.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "database/seeders/SalesDemoSeeder.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/2026-10-26-tien-laravel-mongodb-handover.md",
+      "category": "documentation",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/evidence/2026-10-26-tien-files.txt",
+      "category": "historical evidence: keep local, superseded",
+      "include_in_commit": false
+    },
+    {
+      "path": "docs/evidence/2026-10-26-tien-http.json",
+      "category": "historical evidence: keep local, superseded",
+      "include_in_commit": false
+    },
+    {
+      "path": "docs/evidence/2026-10-26-tien-tests.json",
+      "category": "historical evidence: keep local, superseded",
+      "include_in_commit": false
+    },
+    {
+      "path": "docs/evidence/tien02/admin-desktop.png",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/evidence/tien02/browser-audit.json",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/evidence/tien02/cart-desktop.png",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/evidence/tien02/cart-mobile.png",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/evidence/tien02/checkout-desktop.png",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/evidence/tien02/checkout-mobile-validation.png",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/evidence/tien02/commit-files.txt",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/evidence/tien02/decimal-regression-before.json",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/evidence/tien02/file-classification.json",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/evidence/tien02/git-checks.json",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/evidence/tien02/history-mobile.png",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/evidence/tien02/http-audit.json",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/evidence/tien02/mongodb-readback.json",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/evidence/tien02/order-completed-mobile.png",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/evidence/tien02/phpunit.json",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/evidence/tien02/regression-before.json",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/evidence/tien02/restart-check.json",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/TIEN-02-final-audit.md",
+      "category": "documentation",
+      "include_in_commit": true
+    },
+    {
+      "path": "docs/TIEN-02-integration-contract.md",
+      "category": "documentation",
+      "include_in_commit": true
+    },
+    {
+      "path": "phpunit.xml",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "resources/views/admin/orders/index.blade.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "resources/views/admin/orders/show.blade.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "resources/views/cart/checkout.blade.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "resources/views/cart/index.blade.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "resources/views/components/add-to-cart.blade.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "resources/views/components/sales-panel.blade.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "resources/views/orders/index.blade.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "resources/views/orders/partials/detail.blade.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "resources/views/orders/show.blade.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "resources/views/orders/success.blade.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "routes/sales.php",
+      "category": "Tien code",
+      "include_in_commit": true
+    },
+    {
+      "path": "routes/web.php",
+      "category": "required shared dependency/configuration",
+      "include_in_commit": true
+    },
+    {
+      "path": "scripts/sales-preflight.php",
+      "category": "required shared dependency/configuration",
+      "include_in_commit": true
+    },
+    {
+      "path": "scripts/start-tien-mongodb.ps1",
+      "category": "required shared dependency/configuration",
+      "include_in_commit": true
+    },
+    {
+      "path": "scripts/start-tien-sales.ps1",
+      "category": "required shared dependency/configuration",
+      "include_in_commit": true
+    },
+    {
+      "path": "tests/Concerns/SalesFixtures.php",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "tests/Concerns/UsesMongoDatabase.php",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "tests/Feature/AdminOrderManagementTest.php",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "tests/Feature/Auth/AuthenticationTest.php",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "tests/Feature/Auth/EmailVerificationTest.php",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "tests/Feature/Auth/PasswordConfirmationTest.php",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "tests/Feature/Auth/PasswordResetTest.php",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "tests/Feature/Auth/PasswordUpdateTest.php",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "tests/Feature/Auth/RegistrationTest.php",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "tests/Feature/CartOperationsTest.php",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "tests/Feature/OrderCheckoutTest.php",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "tests/Feature/ProfileTest.php",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "tests/Feature/SalesConcurrencyTest.php",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "tests/Feature/SalesFinalAuditTest.php",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "tests/Feature/SalesSetupTest.php",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "tests/Fixtures/mongodb-validators.json",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    },
+    {
+      "path": "tests/Fixtures/sales-worker.php",
+      "category": "tests/evidence",
+      "include_in_commit": true
+    }
+  ],
+  "outside_scope_changes": [],
+  "shared_remote_overlap": [
+    "routes/web.php"
+  ],
+  "ignored_non_commit_paths": [
+    ".env",
+    ".env.testing",
+    ".runtime/**",
+    "vendor/**",
+    "node_modules/**",
+    "public/build/**",
+    "public/storage",
+    "storage/logs/**"
+  ]
+}

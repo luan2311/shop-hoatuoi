@@ -4,11 +4,15 @@ namespace App\Models;
 
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Str;
+use MongoDB\BSON\ObjectId;
+use MongoDB\Laravel\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+    protected $connection = 'mongodb';
+
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
 
@@ -16,28 +20,39 @@ class User extends Authenticatable
 
     protected $hidden = ['password', 'remember_token'];
 
+    protected static function booted(): void
+    {
+        static::creating(function (User $user): void {
+            $user->username ??= 'user_'.strtolower((string) Str::ulid());
+            if (! array_key_exists('roles', $user->getAttributes())) {
+                $user->setAttribute('roles', ['User']);
+            }
+            $user->is_active ??= true;
+        });
+    }
+
     protected function casts(): array
     {
         return [
             'email_verified_at' => 'datetime',
-            'password'          => 'hashed',
+            'password' => 'hashed',
         ];
     }
 
     // Relationships
-    public function roles()
+    public function getOwnerObjectIdAttribute(): ?ObjectId
     {
-        return $this->belongsToMany(Role::class, 'user_roles');
+        return $this->id ? new ObjectId($this->id) : null;
     }
 
     public function cart()
     {
-        return $this->hasOne(Cart::class);
+        return $this->hasOne(Cart::class, 'user_id', 'owner_object_id');
     }
 
     public function orders()
     {
-        return $this->hasMany(Order::class);
+        return $this->hasMany(Order::class, 'user_id', 'owner_object_id');
     }
 
     public function wishlists()
@@ -48,7 +63,7 @@ class User extends Authenticatable
     // Helpers
     public function hasRole(string $role): bool
     {
-        return $this->roles()->where('name', $role)->exists();
+        return in_array($role, $this->getAttributes()['roles'] ?? [], true);
     }
 
     public function isAdmin(): bool

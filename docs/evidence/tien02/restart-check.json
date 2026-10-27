@@ -1,0 +1,9 @@
+{
+  "result": "PASS",
+  "method": "graceful shutdown then scripts/start-tien-mongodb.ps1",
+  "before_sha256": "F647C3004B808190074CB0160DBCA037D8771D9D3709BA351B6F232302617412",
+  "after_sha256": "F647C3004B808190074CB0160DBCA037D8771D9D3709BA351B6F232302617412",
+  "data_unchanged": true,
+  "database_dropped": false,
+  "port_27017_changed": false
+}

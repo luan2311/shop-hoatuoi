@@ -1,0 +1,44 @@
+{
+  "browser": "Codex in-app Chromium",
+  "database": "shop_hoatuoi_test_tien02_20261026140353",
+  "desktop": {
+    "width": 1280,
+    "height": 900
+  },
+  "mobile": {
+    "width": 375,
+    "height": 812
+  },
+  "cases": [
+    {
+      "route": "/cart",
+      "desktop": "PASS: quantity 1 to 2; total 700000",
+      "mobile": "PASS: plus and update to 3; total 1050000; table scroll; document width 375"
+    },
+    {
+      "route": "/checkout",
+      "desktop": "PASS: submitted one item, order HD-01M5VH2NB97TBCMZ78JT1VDWYV, total 350000",
+      "mobile": "PASS: invalid phone prevented submission; valid submission created HD-01M5VGMSHW6W11CST1XKG64TV5, total 1050000"
+    },
+    {
+      "route": "/account/orders",
+      "desktop": "PASS: own desktop order present",
+      "mobile": "PASS: own mobile order present; detail opens"
+    },
+    {
+      "route": "/admin/orders",
+      "desktop": "PASS: User gets 403; Admin search/filter, Processing and Cancelled actions work",
+      "mobile": "PASS: Completed filter excludes Cancelled order; Shipped and Completed actions work"
+    }
+  ],
+  "fixes": [
+    "Table minimum width with positioned overflow container prevents crushed text and screen overflow",
+    "Order date explicitly displays UTC+7"
+  ],
+  "limitations": [
+    "Only Chromium emulation at 375px, not physical Safari/Android devices",
+    "No An catalog route available; starting cart supplied as fixture",
+    "Shared admin/shop branding layout not integrated"
+  ],
+  "result": "PASS"
+}
