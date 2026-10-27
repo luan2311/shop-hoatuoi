@@ -45,18 +45,55 @@ Các Feature HTTP test gọi Laravel trong test process và dùng MongoDB thật
 
 Chưa tạo test toàn trình giả định route Catalog để rồi ghi PASS. `FullCustomerJourneyTest.php` chỉ nên triển khai khi nhóm chốt các route/model tích hợp. Không dùng ví dụ cũ với pivot roles, thiếu checkout_token hoặc Pending → Completed trực tiếp.
 
+## Trạng thái module theo nhánh đã kiểm tra
+
+Checkout hiện tại là HEAD `d9239c741239ea73310ebebced8fd05e5a9b621d`; các ref dưới đây được fetch an toàn, chưa merge vào checkout này.
+
+| Thành viên | Có trên nhánh hiện tại | Chỉ có trên ref khác | Trạng thái |
+|---|---|---|---|
+| Luân — Auth, Category, Admin | Breeze Auth routes/controllers/views, Profile, RoleMiddleware và Admin Order route | CategoryController/CRUD, DashboardController, routes/admin.php và views ở `origin/feature/auth-category-admin` (`c370d6f`) | Auth/profile Feature tests và Admin Order role tests PASS; Category/Admin Dashboard chưa tích hợp |
+| An — Catalog, Product CRUD, Search, Filter, Upload | Product model dùng chung với Sales; không có ProductController, catalog/admin product routes hoặc product views | Product controllers, routes/products.php, views, tests và browser evidence ở `origin/feat/an-laravel-mongodb` (`9a081ba`) | Có implementation/test evidence trên ref riêng; chưa hợp nhất contract với Cart/Checkout tại checkout hiện tại |
+| Tiến — Cart, Checkout, Orders | Routes, controllers, service, models, Mongo migrations, Blade views và Feature tests đều có | Ref gốc `origin/feature/cart-checkout-orders` (`89242cd`) đã có trong lịch sử checkout | 26 test lớp Sales PASS trong lượt hiện tại |
+| Huy — Layout, Wishlist, Contact, Blog | Breeze app/guest layout cơ bản; không có HomeController, Wishlist/Contact/Post controllers, routes hoặc views tương ứng | Controllers/routes/views/test files ở `origin/feature/user-ui-wishlist-contact` (`8d8d700`) | Module và test source còn ở ref riêng; chưa nghiệm thu trên checkout này |
+
+Các test/evidence trên ref riêng chỉ chứng minh trạng thái của ref đó, không được tính là PASS tích hợp trên HEAD hiện tại. `routes/web.php` là file chia sẻ bị các module cùng thay đổi; khi tích hợp cần ghép `auth.php`, `sales.php`, `products.php`, admin/user routes có kiểm tra trùng route name và middleware.
+
 | Mã | Luồng cần kiểm tra | Điều kiện | Trạng thái hiện tại |
 |---|---|---|---|
-| WEB-01 | Đăng ký, login/logout, hồ sơ, hai role | Auth Mongo tích hợp vào nền chung | Có code/test trên nhánh Tiến; nghiệm thu nền chung BLOCKED |
+| WEB-01 | Đăng ký, login/logout, hồ sơ, hai role | Auth Mongo tích hợp vào nền chung | Feature tests hiện có PASS (11 Auth/Profile tests; role được kiểm tra trong AdminOrderManagementTest); browser E2E NOT RUN |
 | WEB-02 | Xem danh mục, catalog, lọc, search, paginate12 | ProductController/routes/views của An | BLOCKED |
 | WEB-03 | Chi tiết sản phẩm → component thêm giỏ | Catalog dùng ObjectId, code/status/image đúng contract | BLOCKED |
-| WEB-04 | Cập nhật quantity, vượt kho, xóa/clear giỏ | Sales + Catalog tích hợp | Sales độc lập đã có test; luồng toàn website BLOCKED |
-| WEB-05 | Checkout form, validation, CSRF, retry | Lấy token qua GET checkout; không tin giá client | Có Feature tests; browser tích hợp BLOCKED |
-| WEB-06 | Lịch sử và owner access | Auth/User Mongo + routes orders | Có Feature tests; nền chung BLOCKED |
-| WEB-07 | Admin xử lý/hủy, hoàn kho, filter/search | Layout Admin + schema mới đã hợp nhất | Sales độc lập có test; dashboard/category chung BLOCKED |
+| WEB-04 | Cập nhật quantity, vượt kho, xóa/clear giỏ | Sales + Catalog tích hợp | Cart HTTP tests PASS; nối từ trang Catalog BLOCKED |
+| WEB-05 | Checkout form, validation, CSRF, retry | Lấy token qua GET checkout; không tin giá client | Checkout, rollback, CSRF và idempotency Feature tests PASS; browser E2E NOT RUN |
+| WEB-06 | Lịch sử và owner access | Auth/User Mongo + routes orders | Feature tests lịch sử, phân trang và owner access PASS; browser E2E NOT RUN |
+| WEB-07 | Admin xử lý/hủy, hoàn kho, filter/search | Layout Admin + schema mới đã hợp nhất | Admin orders, role, chuyển trạng thái và hoàn kho Feature tests PASS; dashboard/category UI BLOCKED |
 | WEB-08 | Wishlist, contact/Maps, blog | Code Huy, schema các module được chốt | BLOCKED |
 | WEB-09 | Ảnh sau upload hiện đúng ở catalog/cart | Ảnh có quyền sử dụng, Product CRUD/upload, storage link | BLOCKED |
-| WEB-10 | Desktop/mobile các route hiện có; full site | Browser Chrome, server loopback và 4 viewport; Catalog/UI/ảnh thật vẫn thiếu | Đã đo 24 route/viewport; desktop PASS, mobile có 2 overflow ở trang success; full site chưa tích hợp |
+| WEB-10 | Desktop/mobile các route hiện có; full site | Browser Chrome, server loopback và 4 viewport; Catalog/UI/ảnh thật vẫn thiếu | NOT RUN lượt này; evidence cũ cho thấy 2 overflow ở success; patch đề xuất chưa áp dụng |
+
+## Lượt kiểm thử tích hợp hiện tại
+
+Ngày 27/10/2026, chạy filter Auth/Sales qua `scripts/test-dung-data.ps1` trên `dungQA` loopback, HEAD `d9239c741239ea73310ebebced8fd05e5a9b621d`. Kết quả mới: **37 tests, 315 assertions, 0 failures, 0 errors, 0 skipped**, PASS. JUnit chi tiết và summary nằm tại [member5-integration-2026-10-27.xml](evidence/member5-integration-2026-10-27.xml) và [member5-integration-summary-2026-10-27.json](evidence/member5-integration-summary-2026-10-27.json). Test run sinh 37 database QA riêng; chúng được giữ nguyên, không cleanup. Kết quả này chỉ xác nhận các Feature test HTTP trong tiến trình PHPUnit; không xác nhận browser hoặc luồng xuyên Catalog.
+
+| Lớp test | Số test | Kết quả |
+|---|---:|---|
+| `RegistrationTest`, `AuthenticationTest`, `ProfileTest` | 11 | PASS |
+| `CartOperationsTest`, `OrderCheckoutTest`, `SalesFinalAuditTest`, `SalesConcurrencyTest`, `SalesSetupTest`, `AdminOrderManagementTest` | 26 | PASS |
+
+## Fixture và case chuẩn bị cho module chưa tích hợp
+
+Fixture hiện có `SalesFixtures::customer()` tạo User test riêng, gán role bằng mảng `roles`; `SalesFixtures::product()` tạo product test với `code` duy nhất, `price` nguyên VND, `stock`, `status = Còn hàng` và category snapshot. Khi Catalog của An được tích hợp, bổ sung đúng contract đã chốt: `slug`, `category_id` dạng ObjectId, image path hợp lệ và dữ liệu Category; trong test upload dùng file giả lập, không lấy ảnh thật không có quyền. POST giỏ phải dùng `$product->id` (ObjectId), còn cart item được định danh theo `code`.
+
+Các case dưới đây đã chuẩn bị về expected/fixture nhưng **chưa chạy** vì route/controller chưa có trên nhánh hiện tại:
+
+| Case | Fixture/luồng | Expected | Trạng thái |
+|---|---|---|---|
+| CAT-01 | Category + 13 products, phân bố 2 category | Catalog có 12/trang, filter giữ query và paginate đúng | BLOCKED: Catalog branch-only |
+| CAT-02 | Product slug và category snapshot hợp lệ | Trang detail tải đúng Product, route không dùng SQL relation | BLOCKED |
+| CAT-03 | Product ObjectId + User `User` | Thêm giỏ dùng ObjectId, cart lưu `code`, stock chưa giảm trước checkout | BLOCKED |
+| CAT-04 | Product có ảnh file giả JPEG/PNG/WebP và ảnh sai định dạng | Upload hợp lệ tạo path mới; invalid file bị từ chối; ảnh cũ chỉ xóa khi không còn document tham chiếu | BLOCKED |
+| TEAM-01 | Admin/User + route Catalog/Product/Admin | User bị chặn CRUD; Admin được phép; validation và lỗi MongoDB không lộ nội bộ | BLOCKED: cần hợp nhất Auth/An |
+| TEAM-02 | Huy Home/Wishlist/Contact/Post routes với seed `posts` | Public pages trả đúng dữ liệu; wishlist theo user; contact validate; post detail theo slug | BLOCKED: Huy branch-only |
 
 ## Quy trình nghiệm thu khi đủ dependency
 
