@@ -35,18 +35,18 @@ Source thực tế: PHP `^8.3`, Laravel lock `13.37.0`, `mongodb/laravel-mongodb
 
 ### Tình trạng ảnh
 
-Manifest sản phẩm có 80 dòng/74 tên file duy nhất: **0 ảnh xác minh đúng SKU; 6 file minh họa có giấy phép gắn với 7 dòng sản phẩm; 68 tên file ảnh sản phẩm còn thiếu** (73 dòng SKU tham chiếu các tên thiếu). Sáu ảnh được đóng dấu “ILLUSTRATION – PRODUCT MATCH NOT VERIFIED”; không được tính là ảnh sản phẩm đúng mẫu. Ba thumbnail bài viết hiện có file JPEG minh họa có giấy phép và provenance riêng, đã cài vào runtime. Danh sách filename/SKU sản phẩm nằm trong [product-images.json](product-images.json); ledger nguồn ảnh gồm cả bài viết tại [`image-provenance.json`](../../database/seeders/data/image-provenance.json).
+Manifest sản phẩm có 80 dòng/74 tên file duy nhất: **0 ảnh xác minh đúng SKU; 43 file minh họa có giấy phép gắn với 44 dòng sản phẩm; 31 filename chưa có ảnh sản phẩm** (36 dòng SKU). Trong 68 filename thiếu ban đầu, đã bổ sung 37 ảnh: 24 ảnh Commons ở lượt trước được giữ nguyên và 13 ảnh Pexels ở lượt tiếp theo. Tất cả chỉ là `ILLUSTRATIVE`. Ba thumbnail bài viết có provenance riêng. Manifest ghi riêng `file_status` (file vật lý, kể cả placeholder), `product_photo_status`, `fit_status`, URL nguồn, tác giả, giấy phép và ghi chú cho từng SKU. Xem [evidence lượt bổ sung 13 ảnh](evidence/product-images-followup-2026-10-27.json) và [provenance ledger](../../database/seeders/data/image-provenance.json).
 
-Git cũng lưu template placeholder chung tại `database/seeders/assets/placeholder.jpg`. Sau khi cài thumbnail, runtime còn 68 placeholder từ template cho các tên ảnh sản phẩm thiếu; ba ảnh bài viết không còn placeholder. Template không phải ảnh hoa hoặc ảnh sản phẩm và không được tính vào 6 ảnh minh họa sản phẩm.
+Git cũng lưu template placeholder chung tại `database/seeders/assets/placeholder.jpg`. Runtime hiện còn 31 placeholder cho 31 filename chưa có ảnh sản phẩm; ba ảnh bài viết không còn placeholder. Trường `file_status=EXISTS` chỉ xác nhận file vật lý có mặt, còn `product_photo_status=MISSING` phân biệt placeholder với ảnh hoa. Các filename dùng chung nhưng khác loại sản phẩm/màu sắc tiếp tục thiếu nếu chưa có ảnh phù hợp mọi SKU.
 
-Nguồn ảnh là Wikimedia Commons: [Ninix8 – hoa hồng đỏ](https://commons.wikimedia.org/wiki/File:Bouquet_of_Red_Roses.jpg), [Astari28 – bó hồng hồng](https://commons.wikimedia.org/wiki/File:Buket_bunga_mawar_pink_1.jpg), [PattayaPatrol – hồng và hướng dương](https://commons.wikimedia.org/wiki/File:DFC_0794_Bright_bouquet_of_pink_roses_and_a_cheerful_sunflower_arranged_with_greenery_on_a_golden_surface.jpg), [Salicyna – tulip](https://commons.wikimedia.org/wiki/File:Tulipa_2019-02-09_5461.jpg), [WikipediaNeko – mẫu đơn](https://commons.wikimedia.org/wiki/File:Picture_of_a_Peony.jpg), và [Missvain/Sarah Stierch – gerbera](https://commons.wikimedia.org/wiki/File:Birthday_flower_bouquet_-_2021-08-26_-_Sarah_Stierch.jpg). Các asset dùng CC BY 4.0 hoặc CC BY-SA 4.0; attribution và ghi chú chỉnh kích thước/đóng dấu được lưu cùng manifest.
+Nguồn ảnh gồm Wikimedia Commons và Pexels. Ảnh Commons giữ giấy phép CC đã ghi trước đó; 13 ảnh Pexels dùng [Pexels License](https://www.pexels.com/license/), cho phép dùng trên website thương mại và chỉnh sửa. Giấy phép này được ghi `PEXELS-LICENSE`, không gán thành CC0/CC BY. Attribution Pexels không bắt buộc nhưng vẫn được lưu đầy đủ. Công cụ ảnh chỉ chấp nhận Pexels ở vai trò minh họa, với URL trang ảnh và URL giấy phép chính thức; ghi chú nêu rõ những thành phần, kiểu dáng hoặc bối cảnh chưa đối chiếu được.
 
 ## Phần cần tiếp tục phối hợp
 
 | Phạm vi | Trạng thái | Người phối hợp |
 |---|---|---|
 | Dữ liệu và importer trên database test riêng | Có code và kiểm thử; xem kết quả thực tế | Dũng |
-| Ảnh đúng mẫu sản phẩm | 6 file minh họa có nguồn mở, giấy phép và nhãn trên ảnh; chưa có ảnh nào được xác minh là đúng SKU; 68 tên file còn thiếu ảnh sản phẩm | Dũng chuẩn bị nguồn hợp lệ, An xác nhận contract ảnh |
+| Ảnh sản phẩm | 43 file minh họa có nguồn/giấy phép, 0 ảnh xác minh đúng SKU; lượt này thêm 13 filename, còn 31 filename thiếu ảnh | Dũng ghi provenance; An xác nhận contract hiển thị ảnh |
 | Category/Role và quan hệ SQL → MongoDB | Chưa tự chuyển; nhánh Luân chưa tương thích toàn bộ | Luân |
 | Catalog, Product CRUD/upload, search/filter | Chưa có trên nền kiểm chứng | An |
 | Layout cuối, wishlist, liên hệ/Maps, blog | Chưa có trên nền kiểm chứng | Huy |
@@ -57,7 +57,7 @@ Nguồn ảnh là Wikimedia Commons: [Ninix8 – hoa hồng đỏ](https://commo
 
 | Hạng mục | Trạng thái | Kết quả và dependency |
 |---|---|---|
-| Ảnh sản phẩm đúng SKU | PARTIAL | 0/80 ảnh được xác minh; 68 tên file còn thiếu; ảnh tải thêm bị chặn bởi không có kênh tải asset vào workspace và chưa có nguồn exact-SKU kèm quyền sử dụng. |
+| Ảnh sản phẩm | PARTIAL | Giữ nguyên 24 ảnh Commons đã thêm, bổ sung 13 ảnh Pexels có provenance; 0 ảnh xác minh đúng SKU, còn 31 filename thiếu. Không thử lại tải Wikimedia sau HTTP 429; StockSnap/Public Domain Pictures chặn truy cập nên đã dừng. Các ảnh không phù hợp kiểu dáng, chất liệu hoặc SKU dùng chung giữ `MISSING`. |
 | 3 thumbnail bài viết | PARTIAL | Đã tái sử dụng và cài 3 ảnh CC có ghi attribution; module Posts chỉ có trong ref nhánh Huy, chưa hiển thị được trên checkout hiện tại. |
 | Luồng tích hợp Catalog → Product → Cart → Checkout → History → Admin | BLOCKED | Catalog/Product route chưa có; ref product-search không có trong clone nên chưa thể kiểm thử xuyên suốt. PHPUnit backend riêng đã chạy PASS trên `dungQA`; điều đó không xác nhận Catalog/Admin UI đã tích hợp. |
 | Hai lỗi mobile trang success | PARTIAL | Đã xác định email và bảng sản phẩm; patch đề xuất riêng cho view của Tiến. Chưa áp dụng/chưa chụp lại trên browser. |

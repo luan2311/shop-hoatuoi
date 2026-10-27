@@ -112,6 +112,42 @@ class ProductImageLibraryTest extends TestCase
         }
     }
 
+    public function test_pexels_illustrations_keep_the_provider_license_and_install_on_a_fresh_checkout(): void
+    {
+        $library = new ProductImageLibrary($this->root);
+        $rights = $this->rights();
+        $rights['license'] = 'PEXELS-LICENSE';
+        $rights['source_url'] = 'https://www.pexels.com/photo/flowers-in-basket-18476492/';
+        $rights['license_url'] = 'https://www.pexels.com/license/';
+        $dataset = $this->dataset(['P1']);
+        $library->replace($dataset, 'products/flower.jpg', $this->makeJpeg('input.jpg', 120, 80), $rights, true);
+        unlink($this->root.'/storage/app/public/products/flower.jpg');
+
+        $this->assertSame(1, $library->installAssets($dataset)['installed']);
+        $image = $library->audit($dataset)['files'][0];
+        $this->assertSame('illustration', $image['role']);
+        $this->assertSame('PEXELS-LICENSE', $image['provenance']['license']);
+        $this->assertSame([], $image['provenance']['verified_product_codes']);
+    }
+
+    public function test_pexels_does_not_allow_product_verification_or_an_unrelated_source_or_license_url(): void
+    {
+        $library = new ProductImageLibrary($this->root);
+        $input = $this->makeJpeg('input.jpg', 120, 80);
+        foreach (['role' => 'product', 'source_url' => 'https://example.com/photo/flowers-123/', 'license_url' => 'https://example.com/license/'] as $field => $value) {
+            $rights = array_replace($this->rights(), ['license' => 'PEXELS-LICENSE',
+                'source_url' => 'https://www.pexels.com/photo/flowers-in-basket-18476492/',
+                'license_url' => 'https://www.pexels.com/license/']);
+            $rights[$field] = $value;
+            try {
+                $library->replace($this->dataset(['P1']), 'products/flower.jpg', $input, $rights);
+                $this->fail('Invalid Pexels rights must be rejected.');
+            } catch (InvalidArgumentException $exception) {
+                $this->assertStringContainsString('giấy phép', $exception->getMessage());
+            }
+        }
+    }
+
     private function dataset(array $codes): array
     {
         return ['products' => array_map(fn (string $code) => ['code' => $code, 'image' => 'flower.jpg'], $codes), 'posts' => []];

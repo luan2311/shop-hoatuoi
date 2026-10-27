@@ -2,16 +2,20 @@
     "version": 1,
     "files": {
         "products/kt2a5767-1748932933010.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Caroline Attwood carolineattwood",
+            "license": "CC0-1.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Pink_rose_bouquet_(Unsplash).jpg",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attribution": "Caroline Attwood carolineattwood, Wikimedia Commons, CC0-1.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN297"
-            ]
+            ],
+            "source_title": "File:Pink rose bouquet (Unsplash).jpg",
+            "source_description": "Caroline Attwood 2017-03-21",
+            "sha256": "3caa42e1d483527a53f2c9f3932847a012cd5f904a56bf45093a498fe6f706c1",
+            "asset_sha256": "3caa42e1d483527a53f2c9f3932847a012cd5f904a56bf45093a498fe6f706c1"
         },
         "products/kt2a5725-1748932784453.jpg": {
             "author": "PattayaPatrol",
@@ -42,40 +46,52 @@
             "asset_sha256": "367f99f67a45e8dada06ba61cd0cdb01f489b19e9027459e253af43acdfd1b87"
         },
         "products/gochoaxinh-com-564-1747907308008.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Scott Webb scottwebb",
+            "license": "CC0-1.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Bride_stands_with_daisies_(Unsplash).jpg",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attribution": "Scott Webb scottwebb, Wikimedia Commons, CC0-1.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN294"
-            ]
+            ],
+            "source_title": "File:Bride stands with daisies (Unsplash).jpg",
+            "source_description": "Scott Webb 2015-05-20",
+            "sha256": "86ad60f3d7800d5061368b32fb3166e31fba0bf3ba113ed8cc84daf5f2dc8777",
+            "asset_sha256": "86ad60f3d7800d5061368b32fb3166e31fba0bf3ba113ed8cc84daf5f2dc8777"
         },
         "products/gochoaxinh-com-290-1747907186021.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "পাপৰি বৰা",
+            "license": "CC-BY-SA-4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Bouquet_of_red_roses.jpg",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attribution": "পাপৰি বৰা, Wikimedia Commons, CC-BY-SA-4.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN293"
-            ]
+            ],
+            "source_title": "File:Bouquet of red roses.jpg",
+            "source_description": "Bouquet of red roses",
+            "sha256": "714604583305f15c1a9339bedada183abb5972e31b486118e17a4d83bc936cf2",
+            "asset_sha256": "714604583305f15c1a9339bedada183abb5972e31b486118e17a4d83bc936cf2"
         },
         "products/gochoaxinh-com-064-1747906819351.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Rohini",
+            "license": "CC-BY-SA-4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Bouquet_of_roses_of_various_colours.jpg",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attribution": "Rohini, Wikimedia Commons, CC-BY-SA-4.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN292"
-            ]
+            ],
+            "source_title": "File:Bouquet of roses of various colours.jpg",
+            "source_description": "A bouquet of white, red, yellow, and pink roses.",
+            "sha256": "eeb461a2e1529d2e61ad0bc0d3ce37ac6cf7b8b6b788cdc6660d0ab743197ea3",
+            "asset_sha256": "eeb461a2e1529d2e61ad0bc0d3ce37ac6cf7b8b6b788cdc6660d0ab743197ea3"
         },
         "products/z6627827948270-77c577f191bca0887273fd45355e5fd5-1747906523997.jpg": {
             "author": "Missvain (Sarah Stierch)",
@@ -133,16 +149,20 @@
             "asset_sha256": "c2bcd4fe4c4de19db1c8862dbf50fea0210130b0ddd1e61a7e879a9a2559bbd3"
         },
         "products/fb1-1747886608385.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Pittigrilli",
+            "license": "CC-BY-SA-4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Bouquet_of_roses_in_front_of_painting.jpg",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attribution": "Pittigrilli, Wikimedia Commons, CC-BY-SA-4.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN284"
-            ]
+            ],
+            "source_title": "File:Bouquet of roses in front of painting.jpg",
+            "source_description": "Bouquet of white and a few pink roses in front of painting",
+            "sha256": "7990f7cb69e0e12684f6b35bade6e97de840d6d052d436b07c347cf10c47da69",
+            "asset_sha256": "7990f7cb69e0e12684f6b35bade6e97de840d6d052d436b07c347cf10c47da69"
         },
         "products/dsc06013-1747886590835.jpg": {
             "author": "Astari28",
@@ -159,16 +179,20 @@
             "asset_sha256": "43a7b5d84c75b15b8977b756f5fbcc0915be806cd06981950a296bbb7dd838d4"
         },
         "products/dsc06003-1747886582937.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "BEST Bud's for Life",
+            "license": "CC-BY-SA-4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:RED_ROSES_AND_BABY%27S_BREATH.jpg",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attribution": "BEST Bud's for Life, Wikimedia Commons, CC-BY-SA-4.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN280"
-            ]
+            ],
+            "source_title": "File:RED ROSES AND BABY'S BREATH.jpg",
+            "source_description": "A vase with mini bouquet of red roses with BABY'S breath.",
+            "sha256": "8658f2ee40cc782fcba78e77a12210ef3bcd9b924805c88a6626bdd80d91235e",
+            "asset_sha256": "8658f2ee40cc782fcba78e77a12210ef3bcd9b924805c88a6626bdd80d91235e"
         },
         "products/dsc05950-1747886536759.jpg": {
             "role": "placeholder",
@@ -196,40 +220,52 @@
             ]
         },
         "products/1800-2-1722653563019.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Konoha77",
+            "license": "CC0-1.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Flower_stand_for_Liberty_Island_at_Tokyo_Racecourse.jpg",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attribution": "Konoha77, Wikimedia Commons, CC0-1.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H53"
-            ]
+            ],
+            "source_title": "File:Flower stand for Liberty Island at Tokyo Racecourse.jpg",
+            "source_description": "A memorial flower stand at Tokyo Racecourse in honor of Liberty Island.",
+            "sha256": "f1dde60118dab6672830c1c644aaebab6dbd1ad4e06d84fdcde27297486a81d1",
+            "asset_sha256": "f1dde60118dab6672830c1c644aaebab6dbd1ad4e06d84fdcde27297486a81d1"
         },
         "products/1800-1722653849972.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "印度孔雀",
+            "license": "CC-BY-4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Flower_stand_for_Taiki_Shuttle_2022.jpg",
+            "license_url": "https://creativecommons.org/licenses/by/4.0/",
+            "attribution": "印度孔雀, Wikimedia Commons, CC-BY-4.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H49"
-            ]
+            ],
+            "source_title": "File:Flower stand for Taiki Shuttle 2022.jpg",
+            "source_description": "タイキシャトル 号が2022年8月17日に死亡したのち、競馬場に設置された献花・記帳台/福島競馬場",
+            "sha256": "1987a42454ac6ab09b11ae97d1d2e0e4acc26341f7620622c69d8b77ea90c0a0",
+            "asset_sha256": "1987a42454ac6ab09b11ae97d1d2e0e4acc26341f7620622c69d8b77ea90c0a0"
         },
         "products/2000-4-1722653843954.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "印度孔雀",
+            "license": "CC-BY-SA-4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Flower_stand_for_Yoshio_at_Fukushima_Racecourse.jpg",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attribution": "印度孔雀, Wikimedia Commons, CC-BY-SA-4.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H45"
-            ]
+            ],
+            "source_title": "File:Flower stand for Yoshio at Fukushima Racecourse.jpg",
+            "source_description": "誘導馬ヨシオ号を悼む献花・記帳台",
+            "sha256": "0e24d8619aa0404b1fc6691cf775e559e8ffed8df71df12c59673b137afdc717",
+            "asset_sha256": "0e24d8619aa0404b1fc6691cf775e559e8ffed8df71df12c59673b137afdc717"
         },
         "products/ea3d5ac32f1f48929e21de1702ffe5-jpeg-1722654141569.jpg": {
             "role": "placeholder",
@@ -356,28 +392,48 @@
             ]
         },
         "products/dsc05924-1747883847164.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Andy Lee",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-pink-and-white-floral-arrangement-basket-36431077/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Andy Lee on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN275"
-            ]
+            ],
+            "source_title": "elegant-pink-and-white-floral-arrangement-basket",
+            "source_download_url": "https://images.pexels.com/photos/36431077/pexels-photo-36431077.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "ecf5b21b86614db1027fbcdee5ed8b11259f13c0248627287314094edfd68935",
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:00:30.2153418Z",
+            "license_use_note": "Pexels permits website/e-commerce use and modification. No endorsement claimed; not for resale as a stock photo or use as a trademark.",
+            "visual_review": "Reviewed source photograph for subject, arrangement type, palette and source watermarks; no source watermark observed.",
+            "fit_notes": "Giỏ hoa hồng nhạt–trắng, phù hợp bảng màu và loại giỏ; dáng bán nguyệt và thành phần chính xác của SKU chưa được xác minh.",
+            "sha256": "b688dd87f663e3ca26497b84f1c996cd2731109813744437df68183b2c2ddb14",
+            "asset_sha256": "b688dd87f663e3ca26497b84f1c996cd2731109813744437df68183b2c2ddb14"
         },
         "products/d81ff475-f43e-4410-8d94-67dfa42eed26.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "griffin shy",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/flowers-in-basket-18476492/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by griffin shy on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H246"
-            ]
+            ],
+            "source_title": "flowers-in-basket",
+            "source_download_url": "https://images.pexels.com/photos/18476492/pexels-photo-18476492.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "508412954a0cd9f33fdff483627cd893dfc0573187c7e01c1fce419d93cc1f28",
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:00:30.2304609Z",
+            "license_use_note": "Pexels permits website/e-commerce use and modification. No endorsement claimed; not for resale as a stock photo or use as a trademark.",
+            "visual_review": "Reviewed source photograph for subject, arrangement type, palette and source watermarks; no source watermark observed.",
+            "fit_notes": "Giỏ hoa có hồng cam/kem và hoa trắng; phù hợp chủ đề cam–trắng. Loài cúc mẫu đơn, số lượng và thiết kế SKU chưa được xác minh.",
+            "sha256": "8790ff3af7270647050cbce0edc1d3ee07797b8b90554ffb7e0fc9fbf83acbb0",
+            "asset_sha256": "8790ff3af7270647050cbce0edc1d3ee07797b8b90554ffb7e0fc9fbf83acbb0"
         },
         "products/bbd87433-2175-413f-bc06-9f9f0d69a1f4-0769bbe2-5681-4978-af04-54803a4cb567.jpg": {
             "role": "placeholder",
@@ -392,64 +448,108 @@
             ]
         },
         "products/506fec83-7c0c-4c95-934c-380b7c3fe0ff-25ffd02a-9702-46a4-9df9-8539b0fb8268.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Agung Pandit Wiguna",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/selective-focus-photography-of-white-and-pink-rose-flowers-in-basket-2085525/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Agung Pandit Wiguna on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN205"
-            ]
+            ],
+            "source_title": "selective-focus-photography-of-white-and-pink-rose-flowers-in-basket",
+            "source_download_url": "https://images.pexels.com/photos/2085525/pexels-photo-2085525.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "7d26ee0edff41965f88c13ca3f995247d6e8d1b15c9a3f4b0e117607ebb20a92",
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:00:30.2343588Z",
+            "license_use_note": "Pexels permits website/e-commerce use and modification. No endorsement claimed; not for resale as a stock photo or use as a trademark.",
+            "visual_review": "Reviewed source photograph for subject, arrangement type, palette and source watermarks; no source watermark observed.",
+            "fit_notes": "Giỏ hồng hồng–trắng với lá xanh; phù hợp loại hoa và bảng màu trong tên sản phẩm, chưa xác minh đúng mẫu/SKU.",
+            "sha256": "460ab598048ab9fdc64954a10be84f5793ba3b080d922f58972a8232473dfb77",
+            "asset_sha256": "460ab598048ab9fdc64954a10be84f5793ba3b080d922f58972a8232473dfb77"
         },
         "products/17e29066-6ba1-46c8-aa2f-7d8902971f88-cb06fb46-a261-46c7-b5e5-fba5f3f90535.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Andy Lee",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-floral-arrangement-in-woven-basket-36106445/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Andy Lee on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN203"
-            ]
+            ],
+            "source_title": "elegant-floral-arrangement-in-woven-basket",
+            "source_download_url": "https://images.pexels.com/photos/36106445/pexels-photo-36106445.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "5e3a041271b794ba0d4bb55851a218c03dda2916abb98b8840c323cd2f788af5",
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:00:30.2394104Z",
+            "license_use_note": "Pexels permits website/e-commerce use and modification. No endorsement claimed; not for resale as a stock photo or use as a trademark.",
+            "visual_review": "Reviewed source photograph for subject, arrangement type, palette and source watermarks; no source watermark observed.",
+            "fit_notes": "Giỏ hoa tươi phối nhiều màu dùng minh họa cho giỏ chúc mừng; dataset không mô tả thành phần cụ thể nên chưa xác minh thiết kế SKU.",
+            "sha256": "42e5e223a44305b6d2505460dc7b77ee59b04b022f0e7b95314132e677ecd720",
+            "asset_sha256": "42e5e223a44305b6d2505460dc7b77ee59b04b022f0e7b95314132e677ecd720"
         },
         "products/93b2da08-4c24-4af1-80b2-1469b8fbebad-2988918b-9fb3-4d7e-82e4-1ac979d8db6c.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "George E. Koronaios",
+            "license": "CC-BY-SA-4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:A_bouquet_of_white_and_red_two-tone_tulips_in_a_basket.jpg",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attribution": "George E. Koronaios, Wikimedia Commons, CC-BY-SA-4.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN196"
-            ]
+            ],
+            "source_title": "File:A bouquet of white and red two-tone tulips in a basket.jpg",
+            "source_description": "A bouquet of white and red two-tone tulips in a basket.",
+            "sha256": "26d7b3691f7f11b6934ac662b62e82f06e773c1d276022d4cb8e80cc438c22bf",
+            "asset_sha256": "26d7b3691f7f11b6934ac662b62e82f06e773c1d276022d4cb8e80cc438c22bf"
         },
         "products/5844d8a8-b333-4d61-a857-4d57b922292b-614db907-6248-40c8-89d4-d63d64d35dfe.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "bishenova",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-arrangement-of-delicate-pink-roses-in-basket-31057686/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by bishenova on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN184"
-            ]
+            ],
+            "source_title": "elegant-arrangement-of-delicate-pink-roses-in-basket",
+            "source_download_url": "https://images.pexels.com/photos/31057686/pexels-photo-31057686.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "840d43eb6d8154b4b239d537c2c05ffb38dcf577f9228aef9419e32f590b7d21",
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:00:30.2443658Z",
+            "license_use_note": "Pexels permits website/e-commerce use and modification. No endorsement claimed; not for resale as a stock photo or use as a trademark.",
+            "visual_review": "Reviewed source photograph for subject, arrangement type, palette and source watermarks; no source watermark observed.",
+            "fit_notes": "Giỏ hoa hồng pastel; phù hợp loại giỏ và hoa hồng trong tên, chưa xác minh thiết kế hoặc số lượng hoa của SKU.",
+            "sha256": "4603ff90e7744233ac2692381b1a6f1018d4cd26ebf1887b8d8110660feb9c90",
+            "asset_sha256": "4603ff90e7744233ac2692381b1a6f1018d4cd26ebf1887b8d8110660feb9c90"
         },
         "products/z5674686162213-eb1ab140741362a141e2c291f9c7fbe0-1722653232530-adc6ea3d-94cb-4223-b008-6f1392d5936e.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "David Bartus",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/blue-rose-bouquet-collections-714531/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by David Bartus on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H01"
-            ]
+            ],
+            "source_title": "blue-rose-bouquet-collections",
+            "source_download_url": "https://images.pexels.com/photos/714531/pexels-photo-714531.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "5257c8b8eec11c16b6c929b5590480531976607bef66ebc15eb291d4f8cfef71",
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:00:30.2483657Z",
+            "license_use_note": "Pexels permits website/e-commerce use and modification. No endorsement claimed; not for resale as a stock photo or use as a trademark.",
+            "visual_review": "Reviewed source photograph for subject, arrangement type, palette and source watermarks; no source watermark observed.",
+            "fit_notes": "Hộp hoa hồng xanh minh họa đúng chủ đề hoa hồng xanh/hộp; không thể hiện phăng, đồng tiền và cát tường của sản phẩm mix. Chưa xác minh SKU.",
+            "sha256": "b3c884ed2a11dfeefa4a19eb8591fa86d2723a72a0d2f7b4bce0d583a5f36943",
+            "asset_sha256": "b3c884ed2a11dfeefa4a19eb8591fa86d2723a72a0d2f7b4bce0d583a5f36943"
         },
         "products/b6d8c5f2-6953-461c-9586-e4620db6920a-357cc108-cd54-4cdb-93e3-4fa5f9e9ded2.jpg": {
             "role": "placeholder",
@@ -464,52 +564,92 @@
             ]
         },
         "products/5f956891d7cc47ad8b55520889bf75-1722653587944.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Teona Swift",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-bouquet-of-flowers-in-wicker-basket-6913150/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Teona Swift on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H67"
-            ]
+            ],
+            "source_title": "elegant-bouquet-of-flowers-in-wicker-basket",
+            "source_download_url": "https://images.pexels.com/photos/6913150/pexels-photo-6913150.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "f9ea6b8f810798dce0a3505e4c7564dcafd493cdc4bde348e06cbb04c02afd08",
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:00:30.2533601Z",
+            "license_use_note": "Pexels permits website/e-commerce use and modification. No endorsement claimed; not for resale as a stock photo or use as a trademark.",
+            "visual_review": "Reviewed source photograph for subject, arrangement type, palette and source watermarks; no source watermark observed.",
+            "fit_notes": "Giỏ hoa tươi hồng trắng, cẩm chướng hồng và baby dùng minh họa giỏ khai trương; chưa xác minh thành phần/thiết kế SKU vì mô tả dataset không nêu chi tiết.",
+            "sha256": "d7ac728a843c3adf5b617d00138b81b7b1764310cbcc3fa345058f3a75cb73d7",
+            "asset_sha256": "d7ac728a843c3adf5b617d00138b81b7b1764310cbcc3fa345058f3a75cb73d7"
         },
         "products/2d18e2cd34754ef9a0c4ac9a85b02e-1722653677419.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "aboodi vesakaran",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/roses-in-a-box-18294717/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by aboodi vesakaran on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H94"
-            ]
+            ],
+            "source_title": "roses-in-a-box",
+            "source_download_url": "https://images.pexels.com/photos/18294717/pexels-photo-18294717.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "8252c5a03ee388aa8bb857067c3705a7174d351ade2e40f4ae8d4ac3093ae9fd",
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:00:30.2583599Z",
+            "license_use_note": "Pexels permits website/e-commerce use and modification. No endorsement claimed; not for resale as a stock photo or use as a trademark.",
+            "visual_review": "Reviewed source photograph for subject, arrangement type, palette and source watermarks; no source watermark observed.",
+            "fit_notes": "Hộp hoa hồng đỏ hình trái tim; phù hợp kiểu hộp và loài hoa trong tên, chưa xác minh đúng mẫu/SKU.",
+            "sha256": "679879d1894bac7a5c929c43399303e68d3fd7b2f5c94ff8ab37a58a823a7d68",
+            "asset_sha256": "679879d1894bac7a5c929c43399303e68d3fd7b2f5c94ff8ab37a58a823a7d68"
         },
         "products/85b4538030374625842be6d944fb91-jpeg-1722654065530.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Melike B",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/bouquet-of-roses-10080396/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Melike B on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H148"
-            ]
+            ],
+            "source_title": "bouquet-of-roses",
+            "source_download_url": "https://images.pexels.com/photos/10080396/pexels-photo-10080396.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "2ab98d39abe87eab0f4f41003d9a17dd025313c5271b1bc83ba68e3830506c76",
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:00:30.2644414Z",
+            "license_use_note": "Pexels permits website/e-commerce use and modification. No endorsement claimed; not for resale as a stock photo or use as a trademark.",
+            "visual_review": "Reviewed source photograph for subject, arrangement type, palette and source watermarks; no source watermark observed.",
+            "fit_notes": "Giỏ hoa hồng hồng/kem dùng minh họa giỏ chúc mừng; chưa xác minh thiết kế SKU vì dataset không nêu thành phần cụ thể.",
+            "sha256": "94789798a59330e9db445e7421d669dd059e5b05a892ac0df57915cfa4961443",
+            "asset_sha256": "94789798a59330e9db445e7421d669dd059e5b05a892ac0df57915cfa4961443"
         },
         "products/075264983fc24d8a83908f79bda4a8-jpeg-1722654096584.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Marcelo Joaquim",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/a-bouquet-of-flowers-5852537/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Marcelo Joaquim on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H155"
-            ]
+            ],
+            "source_title": "a-bouquet-of-flowers",
+            "source_download_url": "https://images.pexels.com/photos/5852537/pexels-photo-5852537.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "cafa08c072417bd6984e4b767a1b262a56b8e1f6e987baa85a67522b849abaa9",
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:00:30.2688834Z",
+            "license_use_note": "Pexels permits website/e-commerce use and modification. No endorsement claimed; not for resale as a stock photo or use as a trademark.",
+            "visual_review": "Reviewed source photograph for subject, arrangement type, palette and source watermarks; no source watermark observed.",
+            "fit_notes": "Giỏ hoa ly hồng và hoa đỏ dùng minh họa giỏ hoa tặng; chưa xác minh thiết kế SKU vì dataset không nêu thành phần cụ thể.",
+            "sha256": "1a3dedd95e9a2f453fb5a2936cd87ead079dff4f30c9942dc87ad6738e6bf5cc",
+            "asset_sha256": "1a3dedd95e9a2f453fb5a2936cd87ead079dff4f30c9942dc87ad6738e6bf5cc"
         },
         "products/1b8594947c8b4fec91d72681aa350a-jpeg-1722654110593.jpg": {
             "role": "placeholder",
@@ -524,100 +664,132 @@
             ]
         },
         "products/dsc05989-1747886576924.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "EdenDeiFiori",
+            "license": "CC-BY-SA-4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Tulipani-bianchi.jpg",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attribution": "EdenDeiFiori, Wikimedia Commons, CC-BY-SA-4.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN279"
-            ]
+            ],
+            "source_title": "File:Tulipani-bianchi.jpg",
+            "source_description": "White Tulips",
+            "sha256": "c91472b64b020a8b9a7180dfc2c73d6a46d964205c41ee4ed9eb801eb339ecb9",
+            "asset_sha256": "c91472b64b020a8b9a7180dfc2c73d6a46d964205c41ee4ed9eb801eb339ecb9"
         },
         "products/0f4259b7-0ca8-4281-9dde-4fc2d0d9021a-df3108d7-dac6-44ad-a854-34b0815bd0be.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "rawpixel.com rawpixel",
+            "license": "CC0-1.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Woman_holding_a_bouquet_of_tulips_(Rawpixel.com_2017-04-27_Unsplash_pgi0LPOM_FI).jpg",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attribution": "rawpixel.com rawpixel, Wikimedia Commons, CC0-1.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN210"
-            ]
+            ],
+            "source_title": "File:Woman holding a bouquet of tulips (Rawpixel.com 2017-04-27 Unsplash pgi0LPOM FI).jpg",
+            "source_description": "A Woman holding a bouquet of tulips in photographic studio",
+            "sha256": "6dfb0a7a8fc8f86ac80bade938cb047fae67c95929426bf9e44a201d7134841b",
+            "asset_sha256": "6dfb0a7a8fc8f86ac80bade938cb047fae67c95929426bf9e44a201d7134841b"
         },
         "products/60051864-4b91-41b3-a4f5-bfcc4336e869-172a385b-3c75-40cf-82cf-ae00160bb6c8.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Tamara Menzi itstamaramenzi",
+            "license": "CC0-1.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Bridal_bouquet_(Unsplash).jpg",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attribution": "Tamara Menzi itstamaramenzi, Wikimedia Commons, CC0-1.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN201"
-            ]
+            ],
+            "source_title": "File:Bridal bouquet (Unsplash).jpg",
+            "source_description": "Tamara Menzi 2017",
+            "sha256": "b66f5babe7e7b03eb2fb625d4c8c9c9df20816cbe8a989c50aaa927a01023892",
+            "asset_sha256": "b66f5babe7e7b03eb2fb625d4c8c9c9df20816cbe8a989c50aaa927a01023892"
         },
         "products/f22755b7-3dc1-4675-8628-08e077ea524b-db327258-936b-487a-9dbe-781257cb5208.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Christoph Braun",
+            "license": "CC0-1.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Brautstrau%C3%9F_IMG_7868_edit.jpg",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attribution": "Christoph Braun, Wikimedia Commons, CC0-1.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN200"
-            ]
+            ],
+            "source_title": "File:Brautstrauß IMG 7868 edit.jpg",
+            "source_description": "Brautstrauß aus Rosen auf einem Tisch.",
+            "sha256": "b5f5c7bb1272ce60b0d87dac959fa32dc781637a98da48cc3e560c98e3b26615",
+            "asset_sha256": "b5f5c7bb1272ce60b0d87dac959fa32dc781637a98da48cc3e560c98e3b26615"
         },
         "products/a51d8e91-e013-4774-b9f4-660b4f098e78-30dae6c3-08ea-4df3-a893-76140e0bafde.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Genet (Diskussion)",
+            "license": "CC-BY-SA-4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Brautstrauss_-_rosa_Rosen_Fresien_Paeonien.jpg",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attribution": "Genet (Diskussion), Wikimedia Commons, CC-BY-SA-4.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN199"
-            ]
+            ],
+            "source_title": "File:Brautstrauss - rosa Rosen Fresien Paeonien.jpg",
+            "source_description": "Brautstrauss_-_rosa_Rosen_Fresien_Paeonien",
+            "sha256": "8167af997fd8c1d7e6fdaac908b5a0a7dd58c1a35e8cc4dcc4b8acf46d124c6c",
+            "asset_sha256": "8167af997fd8c1d7e6fdaac908b5a0a7dd58c1a35e8cc4dcc4b8acf46d124c6c"
         },
         "products/65f6c2a120134df2ace75655b6a4b7-1722653591040.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Beni Krausz beni",
+            "license": "CC0-1.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:White_tulip_bouquet.jpg",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attribution": "Beni Krausz beni, Wikimedia Commons, CC0-1.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H70"
-            ]
+            ],
+            "source_title": "File:White tulip bouquet.jpg",
+            "source_description": "Brooklyn, New York, United States",
+            "sha256": "87a98a27d9fb15739655d109620cc9c63950133ca5922b42e4ef430f2c812aff",
+            "asset_sha256": "87a98a27d9fb15739655d109620cc9c63950133ca5922b42e4ef430f2c812aff"
         },
         "products/906f51f663204f91b3e9eb49162489-1722653593495.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Midimancop",
+            "license": "CC-BY-SA-4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Irina_Eugen_32.jpg",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attribution": "Midimancop, Wikimedia Commons, CC-BY-SA-4.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H72"
-            ]
+            ],
+            "source_title": "File:Irina Eugen 32.jpg",
+            "source_description": "Hochzeitsstrauß auf dem Tisch der Hochzeit.",
+            "sha256": "6f7cea218690b4d826a97b7ec056a489fa6824d6c194d1042efa920ff1293c0d",
+            "asset_sha256": "6f7cea218690b4d826a97b7ec056a489fa6824d6c194d1042efa920ff1293c0d"
         },
         "products/9eeedfe0-f320-4ade-b798-d6f8a6420cf3-87094deb-18d5-4900-a1b2-4c3a1cdfc4b5.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Daria Sukhorukova dariasukhorukova",
+            "license": "CC0-1.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:White_and_red_tulip_bouquet_(Unsplash).jpg",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attribution": "Daria Sukhorukova dariasukhorukova, Wikimedia Commons, CC0-1.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H78"
-            ]
+            ],
+            "source_title": "File:White and red tulip bouquet (Unsplash).jpg",
+            "source_description": "Daria Sukhorukova",
+            "sha256": "9664ebf7e357290cf8b12d72ff1301062d616cc8ee06f87d1be31819a765a593",
+            "asset_sha256": "9664ebf7e357290cf8b12d72ff1301062d616cc8ee06f87d1be31819a765a593"
         },
         "products/433091b3480b44fe9a14366dd4c80f-1722653618377.jpg": {
             "role": "placeholder",
@@ -632,64 +804,96 @@
             ]
         },
         "products/4ddb74ef20284b879bf639141e7bfe-1722653682470.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Gábor Juhász juhg",
+            "license": "CC0-1.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Tulip-bouquet-vienna_(Unsplash).jpg",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attribution": "Gábor Juhász juhg, Wikimedia Commons, CC0-1.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H98"
-            ]
+            ],
+            "source_title": "File:Tulip-bouquet-vienna (Unsplash).jpg",
+            "source_description": "Vienna, Austria",
+            "sha256": "2300fc9c0bbc94dc947eee3132b025cdbd610504c58c60aa079ab1a1e5ab347e",
+            "asset_sha256": "2300fc9c0bbc94dc947eee3132b025cdbd610504c58c60aa079ab1a1e5ab347e"
         },
         "products/43c6ef7068f2467e9cc74c2dcb2eb8-1722653683116.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Zeynep M.",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/close-up-of-a-bouquet-with-sunflowers-15724338/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Zeynep M. on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H99"
-            ]
+            ],
+            "source_title": "close-up-of-a-bouquet-with-sunflowers",
+            "source_download_url": "https://images.pexels.com/photos/15724338/pexels-photo-15724338.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "49150226092f2bf309ea094f91de730bc61972c0c6d773bdda9b06edcaedd189",
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:00:30.2748930Z",
+            "license_use_note": "Pexels permits website/e-commerce use and modification. No endorsement claimed; not for resale as a stock photo or use as a trademark.",
+            "visual_review": "Reviewed source photograph for subject, arrangement type, palette and source watermarks; no source watermark observed.",
+            "fit_notes": "Bó hướng dương phối hoa cúc trắng; phù hợp chủ đề hướng dương–tana, nhưng loài cúc Tana chính xác, bối cảnh cưới và thiết kế SKU chưa được xác minh.",
+            "sha256": "63b4c10b6790578ebec3dda18e07b966731435a834d75e92f805297a2568029d",
+            "asset_sha256": "63b4c10b6790578ebec3dda18e07b966731435a834d75e92f805297a2568029d"
         },
         "products/344e46dadb8545d5963bf538886c36-1722653684094.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Joshua Ruanes",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-bridal-bouquet-with-green-and-white-flowers-30442161/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Joshua Ruanes on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H100"
-            ]
+            ],
+            "source_title": "elegant-bridal-bouquet-with-green-and-white-flowers",
+            "source_download_url": "https://images.pexels.com/photos/30442161/pexels-photo-30442161.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "3dcd2bfb1946d50692c2c1a9e01932fdd18346bce8d1eab176a99a65864c4015",
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:00:30.2790039Z",
+            "license_use_note": "Pexels permits website/e-commerce use and modification. No endorsement claimed; not for resale as a stock photo or use as a trademark.",
+            "visual_review": "Reviewed source photograph for subject, arrangement type, palette and source watermarks; no source watermark observed.",
+            "fit_notes": "Bó cưới có sen đá xanh và hoa hồng kem; phù hợp loại sen đá và bối cảnh hoa cưới, chưa xác minh đúng thiết kế/SKU.",
+            "sha256": "c298a283a24576b51ed5a0c1f3555f76ad06c69ea6f769f0b116fe47d6e2da1e",
+            "asset_sha256": "c298a283a24576b51ed5a0c1f3555f76ad06c69ea6f769f0b116fe47d6e2da1e"
         },
         "products/db26e8f53bfa400eb65f55de9e5095-1722654026836.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "George E. Koronaios",
+            "license": "CC-BY-SA-4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:White_tulips_on_a_black_table.jpg",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attribution": "George E. Koronaios, Wikimedia Commons, CC-BY-SA-4.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H110"
-            ]
+            ],
+            "source_title": "File:White tulips on a black table.jpg",
+            "source_description": "White tulips on a black table.",
+            "sha256": "575f8e1b27b545da0457d4defa385f382461c40a4620fb763342497e6b80cd27",
+            "asset_sha256": "575f8e1b27b545da0457d4defa385f382461c40a4620fb763342497e6b80cd27"
         },
         "products/74ecbbb888e0459e8e2551098b6ffb-1722654027924.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Svabuk",
+            "license": "CC-BY-SA-4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Bridal_bouquet.jpg",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attribution": "Svabuk, Wikimedia Commons, CC-BY-SA-4.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H111"
-            ]
+            ],
+            "source_title": "File:Bridal bouquet.jpg",
+            "source_description": "bridal bouquet russia",
+            "sha256": "b84f31f85e0894c5f288ce48f9502b85d7e6e6fa742d43e4818bddf7af3566fb",
+            "asset_sha256": "b84f31f85e0894c5f288ce48f9502b85d7e6e6fa742d43e4818bddf7af3566fb"
         },
         "products/930b0ba7ba0e4314bad0ad58c624c0-1722654030131.jpg": {
             "role": "placeholder",
@@ -752,16 +956,20 @@
             ]
         },
         "products/baa89f99-77ee-4e14-93f3-b44c8ce4e239.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Mostafameraji",
+            "license": "CC-BY-SA-4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Artificial_flower-Iran_09.jpg",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attribution": "Mostafameraji, Wikimedia Commons, CC-BY-SA-4.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H225"
-            ]
+            ],
+            "source_title": "File:Artificial flower-Iran 09.jpg",
+            "source_description": "Artificial flowers are imitations of natural flowering plants used for commercial or residential decoration. They are sometimes made for scientific purposes (the collection of glass flowers at Harvard University, for example, illustrates the flora of the United States).",
+            "sha256": "31bb401854ea40cd6e4a5d1cdbadfceccedc439ab4cbd0dc704e25845114a16d",
+            "asset_sha256": "31bb401854ea40cd6e4a5d1cdbadfceccedc439ab4cbd0dc704e25845114a16d"
         },
         "products/d08a4678-d17f-4282-b3ec-d49a89df7a6b-815ce74d-dafe-47f3-acdf-bcc347d4a3b8.jpg": {
             "role": "placeholder",
@@ -776,16 +984,26 @@
             ]
         },
         "products/7fd0929e-bf94-41a9-bb82-650c9b33ba9f-acb9e454-4c9d-4829-a72d-0a9dbf6cd728.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Nur Yilmaz",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/beautiful-bouquet-of-soap-flowers-in-basket-32434555/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Nur Yilmaz on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN217"
-            ]
+            ],
+            "source_title": "beautiful-bouquet-of-soap-flowers-in-basket",
+            "source_download_url": "https://images.pexels.com/photos/32434555/pexels-photo-32434555.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "bc5a7f8ae66e11929bd93eedeea2e38ca9d37693a757152be667347521cfc2fd",
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:00:30.2839976Z",
+            "license_use_note": "Pexels permits website/e-commerce use and modification. No endorsement claimed; not for resale as a stock photo or use as a trademark.",
+            "visual_review": "Reviewed source photograph for subject, arrangement type, palette and source watermarks; no source watermark observed.",
+            "fit_notes": "Nguồn xác nhận hoa xà phòng/soap flowers, có hoa hồng và baby khô trong giấy gói đặt trong giỏ; dùng minh họa hoa sáp mix baby, chưa xác minh chất liệu/thành phần và thiết kế chính xác của SKU.",
+            "sha256": "07dcd93a14e73005925486724b68b48d7efb0fc6ca95ef03ce82fe63997d9f0d",
+            "asset_sha256": "07dcd93a14e73005925486724b68b48d7efb0fc6ca95ef03ce82fe63997d9f0d"
         },
         "products/a14f549b-3383-4cf2-b11d-9494f8a78588-e2279fa4-2996-4b49-a40d-9b81a5bfe86e.jpg": {
             "role": "placeholder",
@@ -800,28 +1018,36 @@
             ]
         },
         "products/2e19fd6b-d03c-4f86-b590-e50cd6999bce-75c718d3-cd05-476b-a135-ca73ac3c8167.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Mostafameraji",
+            "license": "CC-BY-SA-4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Artificial_flower-Iran_01.jpg",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attribution": "Mostafameraji, Wikimedia Commons, CC-BY-SA-4.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN214"
-            ]
+            ],
+            "source_title": "File:Artificial flower-Iran 01.jpg",
+            "source_description": "Artificial flowers are imitations of natural flowering plants used for commercial or residential decoration. They are sometimes made for scientific purposes (the collection of glass flowers at Harvard University, for example, illustrates the flora of the United States).",
+            "sha256": "68feec62d97c166b2345165b4c84c7310fb4d20cc9849123954e54cc7e32af60",
+            "asset_sha256": "68feec62d97c166b2345165b4c84c7310fb4d20cc9849123954e54cc7e32af60"
         },
         "products/f57d07a4-2646-414a-803d-b156974e2603-97f4024c-bd67-491f-8a1e-e6207a9e2b30.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Mostafameraji",
+            "license": "CC-BY-SA-4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Artificial_flower-Iran_03.jpg",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attribution": "Mostafameraji, Wikimedia Commons, CC-BY-SA-4.0; resized to 800px and labeled as an illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN213"
-            ]
+            ],
+            "source_title": "File:Artificial flower-Iran 03.jpg",
+            "source_description": "Artificial flowers are imitations of natural flowering plants used for commercial or residential decoration. They are sometimes made for scientific purposes (the collection of glass flowers at Harvard University, for example, illustrates the flora of the United States).",
+            "sha256": "e3eba30c544461819c3f0587cccdbb8dfde8ac0866a4a6f5e50c5aa6ddb2b8bf",
+            "asset_sha256": "e3eba30c544461819c3f0587cccdbb8dfde8ac0866a4a6f5e50c5aa6ddb2b8bf"
         },
         "products/4fbabb86-9ff3-4abf-9671-3a9c449928dc-994fab37-c370-4307-bc0c-7d8deb42ca37.jpg": {
             "role": "placeholder",

@@ -189,7 +189,11 @@ def build():
         file_hash = hashlib.sha256(asset_path.read_bytes()).hexdigest() if asset_path.is_file() and valid else None
         registered = bool(file_hash and entry.get("asset_sha256") == file_hash and entry.get("expected_codes") == image_codes[image])
         role = entry.get("role") if registered else ("unverified" if header else "missing")
-        rights_ok = entry.get("license") in allowed_licenses and entry.get("author") and entry.get("source_url")
+        pexels_illustration = (entry.get("license") == "PEXELS-LICENSE" and role == "illustration"
+                               and isinstance(entry.get("source_url"), str)
+                               and re.fullmatch(r"https://www\.pexels\.com/photo/[a-z0-9-]+-[0-9]+/", entry["source_url"])
+                               and entry.get("license_url") == "https://www.pexels.com/license/")
+        rights_ok = (entry.get("license") in allowed_licenses or pexels_illustration) and entry.get("author") and entry.get("source_url")
         if not header:
             status = "missing"
         elif not signature:

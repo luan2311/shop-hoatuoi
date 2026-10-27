@@ -1,0 +1,685 @@
+{
+    "recorded_at":  "2026-10-27T07:07:41.9142493Z",
+    "branch":  "feature/testing-docs-seeder",
+    "products":  80,
+    "unique_product_filenames":  74,
+    "missing_at_start_of_followup":  44,
+    "candidate_downloads":  16,
+    "new_images_installed":  13,
+    "all_product_illustration_filenames":  43,
+    "illustrative_product_rows":  44,
+    "verified_product_photos":  0,
+    "remaining_missing_filenames":  31,
+    "remaining_missing_product_rows":  36,
+    "runtime_product_paths":  74,
+    "runtime_all_image_paths":  77,
+    "runtime_image_decode_errors":  0,
+    "output_format":  "image/jpeg",
+    "width":  800,
+    "height":  800,
+    "new_image_min_bytes":  49482,
+    "new_image_max_bytes":  117055,
+    "storage_link":  "Existing Junction public/storage -\u003e storage/app/public; preserved",
+    "license":  "PEXELS-LICENSE",
+    "license_url":  "https://www.pexels.com/license/",
+    "all_new_source_urls_unique":  true,
+    "protection":  {
+                       "matched_file_hashes":  55,
+                       "protected_cleanup_files":  5,
+                       "previous_24_asset_and_runtime_files":  48,
+                       "dataset_and_initializer_files":  2,
+                       "previous_illustration_paths_preserved":  33,
+                       "previous_ledger_entries_preserved":  64,
+                       "previous_photo_manifest_rows_preserved":  31
+                   },
+    "checks":  {
+                   "unit_tests":  38,
+                   "passed":  38,
+                   "assertions":  706,
+                   "full_phpunit_run":  false,
+                   "php_lint":  "PASS",
+                   "pint":  "PASS",
+                   "python_syntax":  "PASS",
+                   "mongodb_operations":  0
+               },
+    "source_limits":  [
+                          {
+                              "provider":  "Wikimedia Commons",
+                              "action":  "No image download requests in this follow-up; prior HTTP 429 respected"
+                          },
+                          {
+                              "provider":  "StockSnap",
+                              "action":  "Access challenge received; stopped without bypass"
+                          },
+                          {
+                              "provider":  "Public Domain Pictures",
+                              "action":  "HTTP 403 on image download; stopped without bypass"
+                          }
+                      ],
+    "unused_candidates":  [
+                              {
+                                  "pexels_id":  13205236,
+                                  "reason":  "Hydrangea basket differs from target hydrangea box H167"
+                              },
+                              {
+                                  "pexels_id":  34252755,
+                                  "reason":  "Prominent brand on box; hydrangea not confirmed, rejected for H167"
+                              },
+                              {
+                                  "pexels_id":  5706654,
+                                  "reason":  "White rose basket candidate not assigned; retained only in ignored research directory"
+                              }
+                          ],
+    "imported":  [
+                     {
+                         "code":  "PVN275",
+                         "name":  "Giỏ hoa tone hồng pastel – trắng, dáng bán nguyệt, mang nét ngọt ngào – thanh lịch",
+                         "image":  "dsc05924-1747883847164.jpg",
+                         "source_url":  "https://www.pexels.com/photo/elegant-pink-and-white-floral-arrangement-basket-36431077/",
+                         "author":  "Andy Lee",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Andy Lee on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "fit_notes":  "Giỏ hoa hồng nhạt–trắng, phù hợp bảng màu và loại giỏ; dáng bán nguyệt và thành phần chính xác của SKU chưa được xác minh.",
+                         "bytes":  49482,
+                         "sha256":  "b688dd87f663e3ca26497b84f1c996cd2731109813744437df68183b2c2ddb14",
+                         "source_sha256":  "ecf5b21b86614db1027fbcdee5ed8b11259f13c0248627287314094edfd68935"
+                     },
+                     {
+                         "code":  "H246",
+                         "name":  "Giỏ Hoa Cam – Trắng – Lời Tri Ân Tươi Sáng \u0026 Ấm Áp",
+                         "image":  "d81ff475-f43e-4410-8d94-67dfa42eed26.jpg",
+                         "source_url":  "https://www.pexels.com/photo/flowers-in-basket-18476492/",
+                         "author":  "griffin shy",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by griffin shy on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "fit_notes":  "Giỏ hoa có hồng cam/kem và hoa trắng; phù hợp chủ đề cam–trắng. Loài cúc mẫu đơn, số lượng và thiết kế SKU chưa được xác minh.",
+                         "bytes":  94735,
+                         "sha256":  "8790ff3af7270647050cbce0edc1d3ee07797b8b90554ffb7e0fc9fbf83acbb0",
+                         "source_sha256":  "508412954a0cd9f33fdff483627cd893dfc0573187c7e01c1fce419d93cc1f28"
+                     },
+                     {
+                         "code":  "PVN205",
+                         "name":  "Giỏ hoa hồng mix hồng trắng",
+                         "image":  "506fec83-7c0c-4c95-934c-380b7c3fe0ff-25ffd02a-9702-46a4-9df9-8539b0fb8268.jpg",
+                         "source_url":  "https://www.pexels.com/photo/selective-focus-photography-of-white-and-pink-rose-flowers-in-basket-2085525/",
+                         "author":  "Agung Pandit Wiguna",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Agung Pandit Wiguna on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "fit_notes":  "Giỏ hồng hồng–trắng với lá xanh; phù hợp loại hoa và bảng màu trong tên sản phẩm, chưa xác minh đúng mẫu/SKU.",
+                         "bytes":  75565,
+                         "sha256":  "460ab598048ab9fdc64954a10be84f5793ba3b080d922f58972a8232473dfb77",
+                         "source_sha256":  "7d26ee0edff41965f88c13ca3f995247d6e8d1b15c9a3f4b0e117607ebb20a92"
+                     },
+                     {
+                         "code":  "PVN203",
+                         "name":  "Giỏ hoa khai trương,chúc mừng",
+                         "image":  "17e29066-6ba1-46c8-aa2f-7d8902971f88-cb06fb46-a261-46c7-b5e5-fba5f3f90535.jpg",
+                         "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-in-woven-basket-36106445/",
+                         "author":  "Andy Lee",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Andy Lee on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "fit_notes":  "Giỏ hoa tươi phối nhiều màu dùng minh họa cho giỏ chúc mừng; dataset không mô tả thành phần cụ thể nên chưa xác minh thiết kế SKU.",
+                         "bytes":  61778,
+                         "sha256":  "42e5e223a44305b6d2505460dc7b77ee59b04b022f0e7b95314132e677ecd720",
+                         "source_sha256":  "5e3a041271b794ba0d4bb55851a218c03dda2916abb98b8840c323cd2f788af5"
+                     },
+                     {
+                         "code":  "PVN184",
+                         "name":  "Giỏ hoa hồng chúc mừng",
+                         "image":  "5844d8a8-b333-4d61-a857-4d57b922292b-614db907-6248-40c8-89d4-d63d64d35dfe.jpg",
+                         "source_url":  "https://www.pexels.com/photo/elegant-arrangement-of-delicate-pink-roses-in-basket-31057686/",
+                         "author":  "bishenova",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by bishenova on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "fit_notes":  "Giỏ hoa hồng pastel; phù hợp loại giỏ và hoa hồng trong tên, chưa xác minh thiết kế hoặc số lượng hoa của SKU.",
+                         "bytes":  95292,
+                         "sha256":  "4603ff90e7744233ac2692381b1a6f1018d4cd26ebf1887b8d8110660feb9c90",
+                         "source_sha256":  "840d43eb6d8154b4b239d537c2c05ffb38dcf577f9228aef9419e32f590b7d21"
+                     },
+                     {
+                         "code":  "H01",
+                         "name":  "Hộp hoa hồng xanh mix phăng,đồng tiền,cát tường",
+                         "image":  "z5674686162213-eb1ab140741362a141e2c291f9c7fbe0-1722653232530-adc6ea3d-94cb-4223-b008-6f1392d5936e.jpg",
+                         "source_url":  "https://www.pexels.com/photo/blue-rose-bouquet-collections-714531/",
+                         "author":  "David Bartus",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by David Bartus on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "fit_notes":  "Hộp hoa hồng xanh minh họa đúng chủ đề hoa hồng xanh/hộp; không thể hiện phăng, đồng tiền và cát tường của sản phẩm mix. Chưa xác minh SKU.",
+                         "bytes":  57932,
+                         "sha256":  "b3c884ed2a11dfeefa4a19eb8591fa86d2723a72a0d2f7b4bce0d583a5f36943",
+                         "source_sha256":  "5257c8b8eec11c16b6c929b5590480531976607bef66ebc15eb291d4f8cfef71"
+                     },
+                     {
+                         "code":  "H67",
+                         "name":  "Giỏ hoa khai trương SP000004",
+                         "image":  "5f956891d7cc47ad8b55520889bf75-1722653587944.jpg",
+                         "source_url":  "https://www.pexels.com/photo/elegant-bouquet-of-flowers-in-wicker-basket-6913150/",
+                         "author":  "Teona Swift",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Teona Swift on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "fit_notes":  "Giỏ hoa tươi hồng trắng, cẩm chướng hồng và baby dùng minh họa giỏ khai trương; chưa xác minh thành phần/thiết kế SKU vì mô tả dataset không nêu chi tiết.",
+                         "bytes":  73512,
+                         "sha256":  "d7ac728a843c3adf5b617d00138b81b7b1764310cbcc3fa345058f3a75cb73d7",
+                         "source_sha256":  "f9ea6b8f810798dce0a3505e4c7564dcafd493cdc4bde348e06cbb04c02afd08"
+                     },
+                     {
+                         "code":  "H94",
+                         "name":  "Hộp Hoa Hồng trái tim SP000031",
+                         "image":  "2d18e2cd34754ef9a0c4ac9a85b02e-1722653677419.jpg",
+                         "source_url":  "https://www.pexels.com/photo/roses-in-a-box-18294717/",
+                         "author":  "aboodi vesakaran",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by aboodi vesakaran on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "fit_notes":  "Hộp hoa hồng đỏ hình trái tim; phù hợp kiểu hộp và loài hoa trong tên, chưa xác minh đúng mẫu/SKU.",
+                         "bytes":  55782,
+                         "sha256":  "679879d1894bac7a5c929c43399303e68d3fd7b2f5c94ff8ab37a58a823a7d68",
+                         "source_sha256":  "8252c5a03ee388aa8bb857067c3705a7174d351ade2e40f4ae8d4ac3093ae9fd"
+                     },
+                     {
+                         "code":  "H148",
+                         "name":  "Giỏ hoa chúc mừng",
+                         "image":  "85b4538030374625842be6d944fb91-jpeg-1722654065530.jpg",
+                         "source_url":  "https://www.pexels.com/photo/bouquet-of-roses-10080396/",
+                         "author":  "Melike B",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Melike B on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "fit_notes":  "Giỏ hoa hồng hồng/kem dùng minh họa giỏ chúc mừng; chưa xác minh thiết kế SKU vì dataset không nêu thành phần cụ thể.",
+                         "bytes":  50612,
+                         "sha256":  "94789798a59330e9db445e7421d669dd059e5b05a892ac0df57915cfa4961443",
+                         "source_sha256":  "2ab98d39abe87eab0f4f41003d9a17dd025313c5271b1bc83ba68e3830506c76"
+                     },
+                     {
+                         "code":  "H155",
+                         "name":  "Giỏ hoa tặng",
+                         "image":  "075264983fc24d8a83908f79bda4a8-jpeg-1722654096584.jpg",
+                         "source_url":  "https://www.pexels.com/photo/a-bouquet-of-flowers-5852537/",
+                         "author":  "Marcelo Joaquim",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Marcelo Joaquim on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "fit_notes":  "Giỏ hoa ly hồng và hoa đỏ dùng minh họa giỏ hoa tặng; chưa xác minh thiết kế SKU vì dataset không nêu thành phần cụ thể.",
+                         "bytes":  63178,
+                         "sha256":  "1a3dedd95e9a2f453fb5a2936cd87ead079dff4f30c9942dc87ad6738e6bf5cc",
+                         "source_sha256":  "cafa08c072417bd6984e4b767a1b262a56b8e1f6e987baa85a67522b849abaa9"
+                     },
+                     {
+                         "code":  "H99",
+                         "name":  "Hoa cưới hướng dương mix tana SP000037",
+                         "image":  "43c6ef7068f2467e9cc74c2dcb2eb8-1722653683116.jpg",
+                         "source_url":  "https://www.pexels.com/photo/close-up-of-a-bouquet-with-sunflowers-15724338/",
+                         "author":  "Zeynep M.",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Zeynep M. on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "fit_notes":  "Bó hướng dương phối hoa cúc trắng; phù hợp chủ đề hướng dương–tana, nhưng loài cúc Tana chính xác, bối cảnh cưới và thiết kế SKU chưa được xác minh.",
+                         "bytes":  92866,
+                         "sha256":  "63b4c10b6790578ebec3dda18e07b966731435a834d75e92f805297a2568029d",
+                         "source_sha256":  "49150226092f2bf309ea094f91de730bc61972c0c6d773bdda9b06edcaedd189"
+                     },
+                     {
+                         "code":  "H100",
+                         "name":  "Hoa cưới sen đá SP000038",
+                         "image":  "344e46dadb8545d5963bf538886c36-1722653684094.jpg",
+                         "source_url":  "https://www.pexels.com/photo/elegant-bridal-bouquet-with-green-and-white-flowers-30442161/",
+                         "author":  "Joshua Ruanes",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Joshua Ruanes on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "fit_notes":  "Bó cưới có sen đá xanh và hoa hồng kem; phù hợp loại sen đá và bối cảnh hoa cưới, chưa xác minh đúng thiết kế/SKU.",
+                         "bytes":  74534,
+                         "sha256":  "c298a283a24576b51ed5a0c1f3555f76ad06c69ea6f769f0b116fe47d6e2da1e",
+                         "source_sha256":  "3dcd2bfb1946d50692c2c1a9e01932fdd18346bce8d1eab176a99a65864c4015"
+                     },
+                     {
+                         "code":  "PVN217",
+                         "name":  "Bó hoa sáp mix baby",
+                         "image":  "7fd0929e-bf94-41a9-bb82-650c9b33ba9f-acb9e454-4c9d-4829-a72d-0a9dbf6cd728.jpg",
+                         "source_url":  "https://www.pexels.com/photo/beautiful-bouquet-of-soap-flowers-in-basket-32434555/",
+                         "author":  "Nur Yilmaz",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Nur Yilmaz on Pexels; Pexels License. Resized/letterboxed to 800x800 and labeled as an illustration. SKU match not verified.",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "fit_notes":  "Nguồn xác nhận hoa xà phòng/soap flowers, có hoa hồng và baby khô trong giấy gói đặt trong giỏ; dùng minh họa hoa sáp mix baby, chưa xác minh chất liệu/thành phần và thiết kế chính xác của SKU.",
+                         "bytes":  117055,
+                         "sha256":  "07dcd93a14e73005925486724b68b48d7efb0fc6ca95ef03ce82fe63997d9f0d",
+                         "source_sha256":  "bc5a7f8ae66e11929bd93eedeea2e38ca9d37693a757152be667347521cfc2fd"
+                     }
+                 ],
+    "remaining_missing":  [
+                              {
+                                  "filename":  "dsc05510-1747888898698.jpg",
+                                  "skus":  [
+                                               "PVN290"
+                                           ],
+                                  "names":  [
+                                                "Bó Hoa “Lời Chúc Bình An” – Cẩm chướng xanh trắng \u0026 hồng môn"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa có ảnh có giấy phép khớp tổ hợp cẩm chướng xanh–trắng và hồng môn vàng chanh; không gắn ảnh khác loại hoa. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "dsc05950-1747886536759.jpg",
+                                  "skus":  [
+                                               "PVN276",
+                                               "PVN244"
+                                           ],
+                                  "names":  [
+                                                "Bó Hoa Tulip Trắng – Thanh Khiết Tinh Khôi",
+                                                "💖 Bó Hoa Pastel Hồng – Ngọt Ngào Như Lời Tỏ Tình"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Filename dùng chung giữa các sản phẩm khác loại/khác bảng màu (PVN276, PVN244); cần ảnh phù hợp mọi SKU, không tự đổi dataset hoặc chọn ảnh cho riêng một SKU. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "9f919d1b-c620-44eb-8a81-9ede8e0ece25-d158250d-fb63-4621-9dfa-3f935779ad36.jpg",
+                                  "skus":  [
+                                               "H63"
+                                           ],
+                                  "names":  [
+                                                "Kệ hoa Khai Trương/Chúc Mừng mini SP000091"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa có ảnh kệ khai trương/chúc mừng có quyền sử dụng và nội dung phù hợp; không dùng ảnh tang lễ/tưởng niệm để lấp filename. Không thử lại tải Wikimedia đã bị HTTP 429. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "ea3d5ac32f1f48929e21de1702ffe5-jpeg-1722654141569.jpg",
+                                  "skus":  [
+                                               "H194"
+                                           ],
+                                  "names":  [
+                                                "Kệ hoa chúc mừng"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa có ảnh kệ khai trương/chúc mừng có quyền sử dụng và nội dung phù hợp; không dùng ảnh tang lễ/tưởng niệm để lấp filename. Không thử lại tải Wikimedia đã bị HTTP 429. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "74f67376-3ef8-4846-8b7d-6645cede93cc-bce2fad8-7ad4-4d5e-b3a5-77b5e409b459.jpg",
+                                  "skus":  [
+                                               "PVN209",
+                                               "H129"
+                                           ],
+                                  "names":  [
+                                                "Kệ hoa chúc mừng,lẳng hoa khai tương",
+                                                "Kệ hoa khai trương vàng phối giấy xanh SP000070"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa có ảnh kệ khai trương/chúc mừng có quyền sử dụng và nội dung phù hợp; không dùng ảnh tang lễ/tưởng niệm để lấp filename. Không thử lại tải Wikimedia đã bị HTTP 429. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "kt2a5650-1747887004846.jpg",
+                                  "skus":  [
+                                               "PVN285"
+                                           ],
+                                  "names":  [
+                                                "Kệ Hoa Khai Trương đỏ – hồng pastel Hồng Phát Rực Rỡ"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa có ảnh kệ khai trương/chúc mừng có quyền sử dụng và nội dung phù hợp; không dùng ảnh tang lễ/tưởng niệm để lấp filename. Không thử lại tải Wikimedia đã bị HTTP 429. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "74286e4d90904bac802010454bc6aa-1722654044948.jpg",
+                                  "skus":  [
+                                               "H130"
+                                           ],
+                                  "names":  [
+                                                "Kệ hoa khai trương SP000071"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa có ảnh kệ khai trương/chúc mừng có quyền sử dụng và nội dung phù hợp; không dùng ảnh tang lễ/tưởng niệm để lấp filename. Không thử lại tải Wikimedia đã bị HTTP 429. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "0545951168fa4ff79b779abbc65e74-jpeg-1722654059820.jpg",
+                                  "skus":  [
+                                               "H143"
+                                           ],
+                                  "names":  [
+                                                "Kệ hoa khai trương,chúc mừng"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa có ảnh kệ khai trương/chúc mừng có quyền sử dụng và nội dung phù hợp; không dùng ảnh tang lễ/tưởng niệm để lấp filename. Không thử lại tải Wikimedia đã bị HTTP 429. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "318c355a-9602-499d-8a1d-df5ca6b419e2-6c459fe6-7e15-45ad-ba7b-feaa00621f1f.jpg",
+                                  "skus":  [
+                                               "PVN207",
+                                               "H86"
+                                           ],
+                                  "names":  [
+                                                "Kệ hoa khai trương,lẳng hoa chúc mừng",
+                                                "Giỏ hoa khai trương SP000023"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Filename dùng chung giữa các sản phẩm khác loại/khác bảng màu (PVN207, H86); cần ảnh phù hợp mọi SKU, không tự đổi dataset hoặc chọn ảnh cho riêng một SKU. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "41fb9b0c-94c4-448b-9934-0550c78e818a-c0598f5b-22f8-4316-8da5-9243db90f0ea.jpg",
+                                  "skus":  [
+                                               "PVN188"
+                                           ],
+                                  "names":  [
+                                                "Kệ hoa khai trương,lẳng hoa chúc mừng"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa có ảnh kệ khai trương/chúc mừng có quyền sử dụng và nội dung phù hợp; không dùng ảnh tang lễ/tưởng niệm để lấp filename. Không thử lại tải Wikimedia đã bị HTTP 429. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "66268d10bd3748599235ea425d9059-1722653592009.jpg",
+                                  "skus":  [
+                                               "H71",
+                                               "H101"
+                                           ],
+                                  "names":  [
+                                                "Kệ hoa khai trương/chúc mừng SP000008",
+                                                "Hộp hoa Hồng SP000039"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Filename dùng chung giữa các sản phẩm khác loại/khác bảng màu (H71, H101); cần ảnh phù hợp mọi SKU, không tự đổi dataset hoặc chọn ảnh cho riêng một SKU. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "1100-1722653577560.jpg",
+                                  "skus":  [
+                                               "H61",
+                                               "H58"
+                                           ],
+                                  "names":  [
+                                                "Kệ hoa khai trương/chúc mừng sp000093",
+                                                "Kệ hoa khai trương/chúc mừng SP000097"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa có ảnh kệ khai trương/chúc mừng có quyền sử dụng và nội dung phù hợp; không dùng ảnh tang lễ/tưởng niệm để lấp filename. Không thử lại tải Wikimedia đã bị HTTP 429. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "1800-5-1722653851361.jpg",
+                                  "skus":  [
+                                               "H50"
+                                           ],
+                                  "names":  [
+                                                "Kệ hoa tươi khai trương/chúc mừng SP000105"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa có ảnh kệ khai trương/chúc mừng có quyền sử dụng và nội dung phù hợp; không dùng ảnh tang lễ/tưởng niệm để lấp filename. Không thử lại tải Wikimedia đã bị HTTP 429. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "bbd87433-2175-413f-bc06-9f9f0d69a1f4-0769bbe2-5681-4978-af04-54803a4cb567.jpg",
+                                  "skus":  [
+                                               "PVN222"
+                                           ],
+                                  "names":  [
+                                                "Giỏ Hoa Sáp Hồng – Xanh Dương: Chúc Mừng Trọng Thị \u0026 Sang Trọng Lịch Lãm"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa có ảnh giỏ hoa sáp hồng–xanh dương phù hợp; không thay bằng hoa tươi hoặc giỏ khác bảng màu. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "b6d8c5f2-6953-461c-9586-e4620db6920a-357cc108-cd54-4cdb-93e3-4fa5f9e9ded2.jpg",
+                                  "skus":  [
+                                               "H03"
+                                           ],
+                                  "names":  [
+                                                "Giỏ hoa Phăng/Cát Tường mix hoa ly,hồng kem tú cầu"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa có ảnh giỏ phối phăng/cát tường, ly, hồng kem và tú cầu có giấy phép và nội dung phù hợp. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "1b8594947c8b4fec91d72681aa350a-jpeg-1722654110593.jpg",
+                                  "skus":  [
+                                               "H167"
+                                           ],
+                                  "names":  [
+                                                "Hộp hoa tú cầu"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Ảnh tú cầu ứng viên là giỏ, không phải hộp; ảnh hộp khác có thương hiệu và không xác nhận tú cầu. Đã loại các ứng viên này. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "433091b3480b44fe9a14366dd4c80f-1722653618377.jpg",
+                                  "skus":  [
+                                               "H81"
+                                           ],
+                                  "names":  [
+                                                "Hoa cưới cally mix tulip SP000018"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa có nguồn ảnh bó cưới phối đồng thời tulip và calla phù hợp; không dùng ảnh bình hoa hoặc chỉ có một loài để tự nhận khớp sản phẩm. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "930b0ba7ba0e4314bad0ad58c624c0-1722654030131.jpg",
+                                  "skus":  [
+                                               "H114"
+                                           ],
+                                  "names":  [
+                                                "Hoa cưới tulip mix cally hồng SP000052"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa có nguồn ảnh bó cưới phối đồng thời tulip và calla phù hợp; không dùng ảnh bình hoa hoặc chỉ có một loài để tự nhận khớp sản phẩm. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "18daf2561f4e4786a69b02ea7acf90-1722654032459.jpg",
+                                  "skus":  [
+                                               "H116"
+                                           ],
+                                  "names":  [
+                                                "Hoa cưới tulip mix cally SP000054"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa có nguồn ảnh bó cưới phối đồng thời tulip và calla phù hợp; không dùng ảnh bình hoa hoặc chỉ có một loài để tự nhận khớp sản phẩm. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "182c9b79-e156-4073-bea2-8d7e33be6e0b.jpg",
+                                  "skus":  [
+                                               "H229"
+                                           ],
+                                  "names":  [
+                                                "Bó Hoa Sáp Xanh Pastel 20 Bông – Tươi Mát \u0026 Ấn Tượng Lâu Dài"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa xác nhận được đồng thời chất liệu hoa sáp/soap flowers, kiểu bó/hộp và màu/thiết kế cần thiết từ nguồn cho phép dùng lại; không thay bằng hoa tươi hoặc hoa nhân tạo không rõ chất liệu. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "910bfaa5-64d4-4545-b039-dcafda3a3bde.jpg",
+                                  "skus":  [
+                                               "H228"
+                                           ],
+                                  "names":  [
+                                                "Bó Hoa Sáp Xanh Pastel – Đẳng Cấp \u0026 Trường Tồn Như Tình Yêu Lâu Dài"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa xác nhận được đồng thời chất liệu hoa sáp/soap flowers, kiểu bó/hộp và màu/thiết kế cần thiết từ nguồn cho phép dùng lại; không thay bằng hoa tươi hoặc hoa nhân tạo không rõ chất liệu. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "7d977015-f660-468e-aa92-6d1e55b2b6f6-8b98c7f4-cb5d-41a7-a080-a33a20c779d2.jpg",
+                                  "skus":  [
+                                               "PVN227"
+                                           ],
+                                  "names":  [
+                                                "Bó Hoa Bi Khô Đỏ – Cá Tính \u0026 Ấn Tượng Khó Phai"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa xác nhận được đồng thời chất liệu hoa sáp/soap flowers, kiểu bó/hộp và màu/thiết kế cần thiết từ nguồn cho phép dùng lại; không thay bằng hoa tươi hoặc hoa nhân tạo không rõ chất liệu. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "d08a4678-d17f-4282-b3ec-d49a89df7a6b-815ce74d-dafe-47f3-acdf-bcc347d4a3b8.jpg",
+                                  "skus":  [
+                                               "PVN226"
+                                           ],
+                                  "names":  [
+                                                "Bó Hoa Sáp Hồng Đậm – “Every Love You” – Đậm Đà \u0026 Lâu Bền Như Tình Yêu"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa xác nhận được đồng thời chất liệu hoa sáp/soap flowers, kiểu bó/hộp và màu/thiết kế cần thiết từ nguồn cho phép dùng lại; không thay bằng hoa tươi hoặc hoa nhân tạo không rõ chất liệu. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "a14f549b-3383-4cf2-b11d-9494f8a78588-e2279fa4-2996-4b49-a40d-9b81a5bfe86e.jpg",
+                                  "skus":  [
+                                               "PVN215"
+                                           ],
+                                  "names":  [
+                                                "Bó hoa sáp xanh ngọc"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa xác nhận được đồng thời chất liệu hoa sáp/soap flowers, kiểu bó/hộp và màu/thiết kế cần thiết từ nguồn cho phép dùng lại; không thay bằng hoa tươi hoặc hoa nhân tạo không rõ chất liệu. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "4fbabb86-9ff3-4abf-9671-3a9c449928dc-994fab37-c370-4307-bc0c-7d8deb42ca37.jpg",
+                                  "skus":  [
+                                               "PVN212"
+                                           ],
+                                  "names":  [
+                                                "Bó hoa sáp mix màu"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa xác nhận được đồng thời chất liệu hoa sáp/soap flowers, kiểu bó/hộp và màu/thiết kế cần thiết từ nguồn cho phép dùng lại; không thay bằng hoa tươi hoặc hoa nhân tạo không rõ chất liệu. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "f905f2b0-e982-4ad8-b463-392acda6ac1b-997fe73e-8e0e-4463-80ea-4c840a4c688f.jpg",
+                                  "skus":  [
+                                               "H105"
+                                           ],
+                                  "names":  [
+                                                "Bó hoa Hồng sáp bông SP000043"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa xác nhận được đồng thời chất liệu hoa sáp/soap flowers, kiểu bó/hộp và màu/thiết kế cần thiết từ nguồn cho phép dùng lại; không thay bằng hoa tươi hoặc hoa nhân tạo không rõ chất liệu. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "a8eeb848-6697-4162-a6e8-d3d8e3222338-d93f4830-a55b-4878-ba5b-8ee192a138ef.jpg",
+                                  "skus":  [
+                                               "H106"
+                                           ],
+                                  "names":  [
+                                                "Hoa Hồng sáp 19 bông"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa xác nhận được đồng thời chất liệu hoa sáp/soap flowers, kiểu bó/hộp và màu/thiết kế cần thiết từ nguồn cho phép dùng lại; không thay bằng hoa tươi hoặc hoa nhân tạo không rõ chất liệu. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "ff575cda-55bd-4183-96dc-b896b7b763d8-57150620-e2b1-41ef-8e3b-535e0d85a80f.jpg",
+                                  "skus":  [
+                                               "H119"
+                                           ],
+                                  "names":  [
+                                                "Hoa Hồng sáp công chúa SP000057"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa xác nhận được đồng thời chất liệu hoa sáp/soap flowers, kiểu bó/hộp và màu/thiết kế cần thiết từ nguồn cho phép dùng lại; không thay bằng hoa tươi hoặc hoa nhân tạo không rõ chất liệu. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "41de3033-7340-4b5d-9bc7-347f9534fabb-e5821c08-239e-4277-ba39-1761943d284f.jpg",
+                                  "skus":  [
+                                               "H142"
+                                           ],
+                                  "names":  [
+                                                "Hoa sáp công chúa"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa xác nhận được đồng thời chất liệu hoa sáp/soap flowers, kiểu bó/hộp và màu/thiết kế cần thiết từ nguồn cho phép dùng lại; không thay bằng hoa tươi hoặc hoa nhân tạo không rõ chất liệu. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "e55e643a-4900-4b4c-bbbd-f66406162f32-e2865c77-224d-42fc-a4bf-eb3795c6a163.jpg",
+                                  "skus":  [
+                                               "H169"
+                                           ],
+                                  "names":  [
+                                                "Bó hoa sáp"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa xác nhận được đồng thời chất liệu hoa sáp/soap flowers, kiểu bó/hộp và màu/thiết kế cần thiết từ nguồn cho phép dùng lại; không thay bằng hoa tươi hoặc hoa nhân tạo không rõ chất liệu. Runtime chỉ có placeholder dự án."
+                              },
+                              {
+                                  "filename":  "0cca8e59-9a9c-4ab2-84ac-d6eb6e70e9a9-0b68cd02-0a34-4152-9b30-271bc2383a04.jpg",
+                                  "skus":  [
+                                               "H170"
+                                           ],
+                                  "names":  [
+                                                "Hộp hoa sáp"
+                                            ],
+                                  "product_photo_status":  "MISSING",
+                                  "physical_file_status":  "EXISTS",
+                                  "image_kind":  "PLACEHOLDER",
+                                  "reason":  "MISSING: Chưa xác nhận được đồng thời chất liệu hoa sáp/soap flowers, kiểu bó/hộp và màu/thiết kế cần thiết từ nguồn cho phép dùng lại; không thay bằng hoa tươi hoặc hoa nhân tạo không rõ chất liệu. Runtime chỉ có placeholder dự án."
+                              }
+                          ]
+}

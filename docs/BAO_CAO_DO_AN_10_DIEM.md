@@ -87,13 +87,13 @@ DatabaseSeeder.php là seeder SQL/pivot cũ, không phải seeder MongoDB an to�
 
 Manifest có 80 sản phẩm và 74 tên file ảnh duy nhất:
 
-- **6** file ảnh hoa có license và attribution, đã đóng dấu là minh họa.
-- **0** ảnh được xác minh là đúng SKU.
-- **68** tên ảnh sản phẩm thiếu asset đúng mẫu.
+- **43** filename ảnh minh họa có giấy phép/attribution, được 44 dòng SKU tham chiếu; gồm 24 ảnh Commons đã bổ sung trước và 13 ảnh Pexels bổ sung tiếp theo ngày 27/10, tất cả dùng đúng filename dataset.
+- **0** ảnh được xác minh là đúng SKU; các ảnh bổ sung đều được đánh dấu `ILLUSTRATIVE`.
+- **31** filename vẫn chưa có ảnh sản phẩm (36 dòng SKU); ban đầu có 68 filename thiếu ảnh.
 - **3/3** thumbnail bài viết đã có file JPEG minh họa có giấy phép, attribution và provenance; Posts chưa tích hợp trên nhánh này nên chưa browser-verify.
-- Git có thêm một template placeholder chung tại `database/seeders/assets/placeholder.jpg`. Template không phải ảnh sản phẩm; runtime còn 68 placeholder sản phẩm. Thumbnails không còn dùng placeholder.
+- Git có thêm một template placeholder chung tại `database/seeders/assets/placeholder.jpg`. Template không phải ảnh sản phẩm; runtime còn 31 placeholder sản phẩm. Thumbnails không còn dùng placeholder.
 
-Các số liệu tách biệt trong [product-images.json](dung/product-images.json), [image-audit.json](dung/image-audit.json) và [provenance ledger](../database/seeders/data/image-provenance.json). Tài liệu không xem placeholder hoặc ảnh minh họa là ảnh sản phẩm hoàn chỉnh.
+Các số liệu tách biệt trong [product-images.json](dung/product-images.json), [image-audit.json](dung/image-audit.json), [provenance ledger](../database/seeders/data/image-provenance.json) và [evidence lượt bổ sung 13 ảnh](dung/evidence/product-images-followup-2026-10-27.json). Ảnh Pexels giữ `PEXELS-LICENSE` cùng tác giả/trang nguồn, không được gán thành CC0. Kiểm thử ảnh/dataset chọn lọc: 38/38 PASS, 706 assertions; không chạy lại full suite hoặc tạo MongoDB QA. Tài liệu không xem placeholder hoặc ảnh minh họa là ảnh sản phẩm hoàn chỉnh.
 
 ## 8. Kiểm thử và QA
 
@@ -119,7 +119,7 @@ Browser evidence hiện có bao gồm 24 phép đo ở desktop/mobile. Các thao
 | Hợp nhất route/schema sales và xử lý lỗi mobile đã ghi nhận | Thành viên 3, thành viên sở hữu view và nhóm trưởng |
 | Database QA chung, nhánh tích hợp và quy trình release | Nhóm trưởng |
 
-Ngoài các phụ thuộc trên, còn thiếu 68 tên file ảnh sản phẩm; 0 ảnh xác minh đúng SKU. Ba thumbnail bài viết đã có asset minh họa nhưng chưa browser-verify. Phương thức thanh toán mới ghi nhận lựa chọn COD/Banking, chưa có tích hợp cổng thanh toán. DatabaseSeeder và một số ví dụ trong kế hoạch còn theo SQL/pivot, cần giữ tách biệt khỏi MongoDB importer.
+Ngoài các phụ thuộc trên, còn thiếu ảnh cho 31 filename sản phẩm; 0 ảnh xác minh đúng SKU. Lượt tiếp theo giữ nguyên 24 ảnh Commons, bổ sung 13 ảnh Pexels và không thử lại tải Wikimedia sau HTTP 429. Các filename dùng chung giữa sản phẩm khác loại/màu sắc, ảnh sai kiểu giỏ/hộp hoặc chưa xác nhận chất liệu/thành phần giữ `MISSING`. Ba thumbnail bài viết đã có asset minh họa nhưng chưa browser-verify. Phương thức thanh toán mới ghi nhận lựa chọn COD/Banking, chưa có tích hợp cổng thanh toán. DatabaseSeeder và một số ví dụ trong kế hoạch còn theo SQL/pivot, cần giữ tách biệt khỏi MongoDB importer.
 
 ## 10. Đối chiếu tiêu chí đồ án
 
@@ -137,7 +137,7 @@ Bảng này ghi trạng thái kỹ thuật, không quy đổi thành điểm ho�
 
 1. Nhóm thống nhất nhánh tích hợp và contract MongoDB/Auth/Category trước khi ghép module.
 2. Hoàn thành Catalog, Product CRUD, upload và liên kết danh mục; viết test trên database QA riêng.
-3. Tìm ảnh exact-SKU có quyền sử dụng cho 68 tên file còn thiếu; tích hợp và kiểm tra hiển thị ba thumbnail đã có provenance khi Posts được nhập vào nhánh.
+3. Tìm ảnh đúng SKU có quyền sử dụng cho 31 filename còn thiếu và xác nhận contract hiển thị ảnh; kiểm tra ba thumbnail đã có provenance khi Posts được nhập vào nhánh.
 4. Tích hợp wishlist, contact/Maps, blog và dashboard theo schema đã thống nhất.
 5. Sửa hai lỗi mobile đã ghi nhận, chạy lại browser trên các viewport và viết full journey test dựa trên route/model thật.
 6. Rà soát lại DatabaseSeeder, migration và tài liệu hướng dẫn trước khi chọn quy trình triển khai chung.

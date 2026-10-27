@@ -108,7 +108,7 @@ final class ProductImageLibrary
         }
         $role = $rights['role'] ?? '';
         if (! in_array($role, ['illustration', 'product'], true)
-            || ! in_array($rights['license'] ?? '', ['CC0-1.0', 'CC-BY-4.0', 'CC-BY-SA-4.0', 'PROJECT-OWNED'], true)
+            || ! $this->licenseAllowed($rights)
             || ! is_string($rights['author'] ?? null) || trim($rights['author']) === ''
             || ! is_string($rights['attribution'] ?? null)) {
             throw new InvalidArgumentException('Thiếu vai trò ảnh, tác giả, giấy phép hoặc ghi công.');
@@ -234,13 +234,12 @@ final class ProductImageLibrary
                 continue;
             }
             $info = $this->inspect($asset);
-            $license = $entry['license'] ?? '';
             $role = $entry['role'] ?? '';
             $registered = ($info['valid'] ?? false)
                 && ($entry['asset_sha256'] ?? '') === ($info['sha256'] ?? null)
                 && ($entry['expected_codes'] ?? []) === $codes
                 && in_array($role, ['product', 'illustration'], true)
-                && in_array($license, ['CC0-1.0', 'CC-BY-4.0', 'CC-BY-SA-4.0', 'PROJECT-OWNED'], true)
+                && $this->licenseAllowed($entry)
                 && is_string($entry['author'] ?? null) && trim($entry['author']) !== ''
                 && is_string($entry['source_url'] ?? null) && filter_var($entry['source_url'], FILTER_VALIDATE_URL)
                 && is_string($entry['license_url'] ?? null) && filter_var($entry['license_url'], FILTER_VALIDATE_URL);
@@ -286,6 +285,20 @@ final class ProductImageLibrary
         }
 
         return $result;
+    }
+
+    private function licenseAllowed(array $rights): bool
+    {
+        if (in_array($rights['license'] ?? '', ['CC0-1.0', 'CC-BY-4.0', 'CC-BY-SA-4.0', 'PROJECT-OWNED'], true)) {
+            return true;
+        }
+
+        // Stock photos remain illustrations; the source page and provider license are recorded separately from CC licenses.
+        return ($rights['license'] ?? '') === 'PEXELS-LICENSE'
+            && ($rights['role'] ?? '') === 'illustration'
+            && is_string($rights['source_url'] ?? null)
+            && preg_match('~^https://www\.pexels\.com/photo/[a-z0-9-]+-[0-9]+/$~D', $rights['source_url']) === 1
+            && ($rights['license_url'] ?? '') === 'https://www.pexels.com/license/';
     }
 
     public function ledger(): array
