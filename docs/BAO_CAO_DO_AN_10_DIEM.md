@@ -87,13 +87,13 @@ DatabaseSeeder.php là seeder SQL/pivot cũ, không phải seeder MongoDB an to�
 
 Manifest có 80 sản phẩm và 74 tên file ảnh duy nhất:
 
-- **43** filename ảnh minh họa có giấy phép/attribution, được 44 dòng SKU tham chiếu; gồm 24 ảnh Commons đã bổ sung trước và 13 ảnh Pexels bổ sung tiếp theo ngày 27/10, tất cả dùng đúng filename dataset.
+- **74/74** filename có ảnh minh họa hợp lệ, phục vụ 80 dòng SKU. Lượt này chỉ bổ sung 31 filename thiếu; bảo toàn byte ảnh, nguồn, tác giả, giấy phép và trạng thái của 43 filename cũ.
 - **0** ảnh được xác minh là đúng SKU; các ảnh bổ sung đều được đánh dấu `ILLUSTRATIVE`.
-- **31** filename vẫn chưa có ảnh sản phẩm (36 dòng SKU); ban đầu có 68 filename thiếu ảnh.
+- **0** filename còn thiếu. 31 filename mới dùng 12 ảnh nguồn, có các nhóm tái sử dụng cho sản phẩm demo cùng loại và ghi rõ lý do trong provenance.
 - **3/3** thumbnail bài viết đã có file JPEG minh họa có giấy phép, attribution và provenance; Posts chưa tích hợp trên nhánh này nên chưa browser-verify.
-- Git có thêm một template placeholder chung tại `database/seeders/assets/placeholder.jpg`. Template không phải ảnh sản phẩm; runtime còn 31 placeholder sản phẩm. Thumbnails không còn dùng placeholder.
+- Template placeholder chung tại `database/seeders/assets/placeholder.jpg` được giữ; không còn placeholder trong 74 đường dẫn sản phẩm. Thumbnails không dùng placeholder.
 
-Các số liệu tách biệt trong [product-images.json](dung/product-images.json), [image-audit.json](dung/image-audit.json), [provenance ledger](../database/seeders/data/image-provenance.json) và [evidence lượt bổ sung 13 ảnh](dung/evidence/product-images-followup-2026-10-27.json). Ảnh Pexels giữ `PEXELS-LICENSE` cùng tác giả/trang nguồn, không được gán thành CC0. Kiểm thử ảnh/dataset chọn lọc: 38/38 PASS, 706 assertions; không chạy lại full suite hoặc tạo MongoDB QA. Tài liệu không xem placeholder hoặc ảnh minh họa là ảnh sản phẩm hoàn chỉnh.
+Các số liệu và giới hạn nằm trong [manifest](dung/product-images.json), [audit](dung/image-audit.json), [provenance](../database/seeders/data/image-provenance.json), [evidence hash trước/sau](dung/evidence/product-images-main-type-2026-10-27.json) và [bản xem nhanh](dung/evidence/product-images-main-type-contact-2026-10-27.jpg). Tiêu chí demo chỉ đối chiếu loài hoa chính hoặc loại sản phẩm; không yêu cầu màu, số bông, kiểu bó/giỏ/hộp hay SKU. Filename chung PVN276/PVN244 dùng ảnh có cả tulip và hồng theo quyết định người dùng. Giấy phép Pexels được ghi riêng, không gán CC0; các nhóm tái sử dụng có lý do và attribution. Kiểm thử ảnh/dataset: 38/38 PASS, 706 assertions; 93 hash bảo vệ khớp, không tạo MongoDB QA hoặc chạy full suite. Ảnh minh họa không được đánh đồng với ảnh xác minh đúng SKU.
 
 ## 8. Kiểm thử và QA
 
@@ -119,7 +119,7 @@ Browser evidence hiện có bao gồm 24 phép đo ở desktop/mobile. Các thao
 | Hợp nhất route/schema sales và xử lý lỗi mobile đã ghi nhận | Thành viên 3, thành viên sở hữu view và nhóm trưởng |
 | Database QA chung, nhánh tích hợp và quy trình release | Nhóm trưởng |
 
-Ngoài các phụ thuộc trên, còn thiếu ảnh cho 31 filename sản phẩm; 0 ảnh xác minh đúng SKU. Lượt tiếp theo giữ nguyên 24 ảnh Commons, bổ sung 13 ảnh Pexels và không thử lại tải Wikimedia sau HTTP 429. Các filename dùng chung giữa sản phẩm khác loại/màu sắc, ảnh sai kiểu giỏ/hộp hoặc chưa xác nhận chất liệu/thành phần giữ `MISSING`. Ba thumbnail bài viết đã có asset minh họa nhưng chưa browser-verify. Phương thức thanh toán mới ghi nhận lựa chọn COD/Banking, chưa có tích hợp cổng thanh toán. DatabaseSeeder và một số ví dụ trong kế hoạch còn theo SQL/pivot, cần giữ tách biệt khỏi MongoDB importer.
+Ảnh demo đã đủ 74/74 filename theo tiêu chí loại hoa/sản phẩm; 43 filename cũ giữ nguyên và 31 filename mới chỉ được ghi `ILLUSTRATIVE`, không xác minh SKU. Một số SKU cùng loại dùng chung ảnh nguồn có ghi lý do, vì vậy số filename không phải số ảnh nguồn phân biệt. Ba thumbnail đã có asset minh họa nhưng chưa browser-verify; Catalog và UI vẫn cần kiểm tra tích hợp đường dẫn/ghi công. Phương thức thanh toán mới ghi nhận lựa chọn COD/Banking, chưa có tích hợp cổng thanh toán. DatabaseSeeder và một số ví dụ trong kế hoạch còn theo SQL/pivot, cần giữ tách biệt khỏi MongoDB importer.
 
 ## 10. Đối chiếu tiêu chí đồ án
 
@@ -137,7 +137,7 @@ Bảng này ghi trạng thái kỹ thuật, không quy đổi thành điểm ho�
 
 1. Nhóm thống nhất nhánh tích hợp và contract MongoDB/Auth/Category trước khi ghép module.
 2. Hoàn thành Catalog, Product CRUD, upload và liên kết danh mục; viết test trên database QA riêng.
-3. Tìm ảnh đúng SKU có quyền sử dụng cho 31 filename còn thiếu và xác nhận contract hiển thị ảnh; kiểm tra ba thumbnail đã có provenance khi Posts được nhập vào nhánh.
+3. Tích hợp và kiểm tra đường dẫn Storage cùng thông tin ghi công cho 74 filename minh họa; kiểm tra ba thumbnail khi Posts được nhập vào nhánh. Ảnh chụp đúng SKU là mục tiêu riêng nếu sau này nhóm yêu cầu.
 4. Tích hợp wishlist, contact/Maps, blog và dashboard theo schema đã thống nhất.
 5. Sửa hai lỗi mobile đã ghi nhận, chạy lại browser trên các viewport và viết full journey test dựa trên route/model thật.
 6. Rà soát lại DatabaseSeeder, migration và tài liệu hướng dẫn trước khi chọn quy trình triển khai chung.

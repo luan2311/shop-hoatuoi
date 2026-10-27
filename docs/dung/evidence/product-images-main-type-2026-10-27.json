@@ -1,0 +1,1526 @@
+{
+    "recorded_at":  "2026-10-27T08:12:15.4179815Z",
+    "branch":  "feature/testing-docs-seeder",
+    "git_head":  "e068d40979a239cee349dee28289ac98cf2d4a6f",
+    "commit_or_push_performed":  false,
+    "products":  80,
+    "unique_product_filenames":  74,
+    "preserved_existing_image_filenames":  43,
+    "preserved_existing_image_manifest_rows":  44,
+    "new_image_filenames":  31,
+    "new_image_product_rows":  36,
+    "illustrative_filenames":  74,
+    "verified_sku_photos":  0,
+    "remaining_missing_filenames":  0,
+    "selection_policy":  "Main flower or product type; colors, counts, wrapping/arrangement and exact SKU are outside scope.",
+    "user_decisions":  [
+                           "Generic congratulatory-stand names use an actual floral stand image.",
+                           "Generic soap-flower names use source-confirmed soap flowers.",
+                           "PVN276/PVN244 shared filename may use an image containing both roses and tulips."
+                       ],
+    "distinct_source_images_used_for_new_filenames":  12,
+    "new_filenames_commons":  4,
+    "new_filenames_pexels":  27,
+    "source_reuse_groups":  [
+                                {
+                                    "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+                                    "filenames":  [
+                                                      "9f919d1b-c620-44eb-8a81-9ede8e0ece25-d158250d-fb63-4621-9dfa-3f935779ad36.jpg",
+                                                      "ea3d5ac32f1f48929e21de1702ffe5-jpeg-1722654141569.jpg",
+                                                      "74f67376-3ef8-4846-8b7d-6645cede93cc-bce2fad8-7ad4-4d5e-b3a5-77b5e409b459.jpg",
+                                                      "kt2a5650-1747887004846.jpg",
+                                                      "74286e4d90904bac802010454bc6aa-1722654044948.jpg",
+                                                      "0545951168fa4ff79b779abbc65e74-jpeg-1722654059820.jpg",
+                                                      "318c355a-9602-499d-8a1d-df5ca6b419e2-6c459fe6-7e15-45ad-ba7b-feaa00621f1f.jpg",
+                                                      "41fb9b0c-94c4-448b-9934-0550c78e818a-c0598f5b-22f8-4316-8da5-9243db90f0ea.jpg",
+                                                      "66268d10bd3748599235ea425d9059-1722653592009.jpg",
+                                                      "1100-1722653577560.jpg",
+                                                      "1800-5-1722653851361.jpg"
+                                                  ],
+                                    "new_filenames":  [
+                                                          "9f919d1b-c620-44eb-8a81-9ede8e0ece25-d158250d-fb63-4621-9dfa-3f935779ad36.jpg",
+                                                          "ea3d5ac32f1f48929e21de1702ffe5-jpeg-1722654141569.jpg",
+                                                          "74f67376-3ef8-4846-8b7d-6645cede93cc-bce2fad8-7ad4-4d5e-b3a5-77b5e409b459.jpg",
+                                                          "kt2a5650-1747887004846.jpg",
+                                                          "74286e4d90904bac802010454bc6aa-1722654044948.jpg",
+                                                          "0545951168fa4ff79b779abbc65e74-jpeg-1722654059820.jpg",
+                                                          "318c355a-9602-499d-8a1d-df5ca6b419e2-6c459fe6-7e15-45ad-ba7b-feaa00621f1f.jpg",
+                                                          "41fb9b0c-94c4-448b-9934-0550c78e818a-c0598f5b-22f8-4316-8da5-9243db90f0ea.jpg",
+                                                          "66268d10bd3748599235ea425d9059-1722653592009.jpg",
+                                                          "1100-1722653577560.jpg",
+                                                          "1800-5-1722653851361.jpg"
+                                                      ],
+                                    "product_codes":  [
+                                                          "H63",
+                                                          "H194",
+                                                          "PVN209",
+                                                          "H129",
+                                                          "PVN285",
+                                                          "H130",
+                                                          "H143",
+                                                          "PVN207",
+                                                          "PVN188",
+                                                          "H71",
+                                                          "H61",
+                                                          "H58",
+                                                          "H50",
+                                                          "H86",
+                                                          "H101"
+                                                      ],
+                                    "reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU."
+                                },
+                                {
+                                    "source_url":  "https://www.pexels.com/photo/beautiful-bouquet-of-soap-flowers-in-basket-32434555/",
+                                    "filenames":  [
+                                                      "bbd87433-2175-413f-bc06-9f9f0d69a1f4-0769bbe2-5681-4978-af04-54803a4cb567.jpg",
+                                                      "7fd0929e-bf94-41a9-bb82-650c9b33ba9f-acb9e454-4c9d-4829-a72d-0a9dbf6cd728.jpg"
+                                                  ],
+                                    "new_filenames":  [
+                                                          "bbd87433-2175-413f-bc06-9f9f0d69a1f4-0769bbe2-5681-4978-af04-54803a4cb567.jpg"
+                                                      ],
+                                    "product_codes":  [
+                                                          "PVN222",
+                                                          "PVN217"
+                                                      ],
+                                    "reuse_reason":  "Intentional demo reuse of the licensed soap-flower basket source already used by PVN217. PVN222 has the same soap/rose product family; colors and exact design are outside the matching criteria. The existing PVN217 asset and metadata are preserved."
+                                },
+                                {
+                                    "source_url":  "https://www.pexels.com/photo/colorful-handmade-soap-flowers-on-wooden-table-34241268/",
+                                    "filenames":  [
+                                                      "182c9b79-e156-4073-bea2-8d7e33be6e0b.jpg",
+                                                      "910bfaa5-64d4-4545-b039-dcafda3a3bde.jpg",
+                                                      "a14f549b-3383-4cf2-b11d-9494f8a78588-e2279fa4-2996-4b49-a40d-9b81a5bfe86e.jpg",
+                                                      "4fbabb86-9ff3-4abf-9671-3a9c449928dc-994fab37-c370-4307-bc0c-7d8deb42ca37.jpg",
+                                                      "e55e643a-4900-4b4c-bbbd-f66406162f32-e2865c77-224d-42fc-a4bf-eb3795c6a163.jpg"
+                                                  ],
+                                    "new_filenames":  [
+                                                          "182c9b79-e156-4073-bea2-8d7e33be6e0b.jpg",
+                                                          "910bfaa5-64d4-4545-b039-dcafda3a3bde.jpg",
+                                                          "a14f549b-3383-4cf2-b11d-9494f8a78588-e2279fa4-2996-4b49-a40d-9b81a5bfe86e.jpg",
+                                                          "4fbabb86-9ff3-4abf-9671-3a9c449928dc-994fab37-c370-4307-bc0c-7d8deb42ca37.jpg",
+                                                          "e55e643a-4900-4b4c-bbbd-f66406162f32-e2865c77-224d-42fc-a4bf-eb3795c6a163.jpg"
+                                                      ],
+                                    "product_codes":  [
+                                                          "H229",
+                                                          "H228",
+                                                          "PVN215",
+                                                          "PVN212",
+                                                          "H169"
+                                                      ],
+                                    "reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU."
+                                },
+                                {
+                                    "source_url":  "https://www.pexels.com/photo/elegant-bouquet-with-soap-flowers-and-dried-accents-37048655/",
+                                    "filenames":  [
+                                                      "d08a4678-d17f-4282-b3ec-d49a89df7a6b-815ce74d-dafe-47f3-acdf-bcc347d4a3b8.jpg",
+                                                      "f905f2b0-e982-4ad8-b463-392acda6ac1b-997fe73e-8e0e-4463-80ea-4c840a4c688f.jpg",
+                                                      "a8eeb848-6697-4162-a6e8-d3d8e3222338-d93f4830-a55b-4878-ba5b-8ee192a138ef.jpg",
+                                                      "ff575cda-55bd-4183-96dc-b896b7b763d8-57150620-e2b1-41ef-8e3b-535e0d85a80f.jpg",
+                                                      "41de3033-7340-4b5d-9bc7-347f9534fabb-e5821c08-239e-4277-ba39-1761943d284f.jpg",
+                                                      "0cca8e59-9a9c-4ab2-84ac-d6eb6e70e9a9-0b68cd02-0a34-4152-9b30-271bc2383a04.jpg"
+                                                  ],
+                                    "new_filenames":  [
+                                                          "d08a4678-d17f-4282-b3ec-d49a89df7a6b-815ce74d-dafe-47f3-acdf-bcc347d4a3b8.jpg",
+                                                          "f905f2b0-e982-4ad8-b463-392acda6ac1b-997fe73e-8e0e-4463-80ea-4c840a4c688f.jpg",
+                                                          "a8eeb848-6697-4162-a6e8-d3d8e3222338-d93f4830-a55b-4878-ba5b-8ee192a138ef.jpg",
+                                                          "ff575cda-55bd-4183-96dc-b896b7b763d8-57150620-e2b1-41ef-8e3b-535e0d85a80f.jpg",
+                                                          "41de3033-7340-4b5d-9bc7-347f9534fabb-e5821c08-239e-4277-ba39-1761943d284f.jpg",
+                                                          "0cca8e59-9a9c-4ab2-84ac-d6eb6e70e9a9-0b68cd02-0a34-4152-9b30-271bc2383a04.jpg"
+                                                      ],
+                                    "product_codes":  [
+                                                          "PVN226",
+                                                          "H105",
+                                                          "H106",
+                                                          "H119",
+                                                          "H142",
+                                                          "H170"
+                                                      ],
+                                    "reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU."
+                                }
+                            ],
+    "old_metadata_unchanged":  true,
+    "unchanged_old_provenance_entries":  46,
+    "protected_hash_count":  93,
+    "protected_hashes":  [
+                             {
+                                 "path":  "database/seeders/assets/products/kt2a5767-1748932933010.jpg",
+                                 "sha256_before":  "3caa42e1d483527a53f2c9f3932847a012cd5f904a56bf45093a498fe6f706c1",
+                                 "sha256_after":  "3caa42e1d483527a53f2c9f3932847a012cd5f904a56bf45093a498fe6f706c1",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/kt2a5767-1748932933010.jpg",
+                                 "sha256_before":  "3caa42e1d483527a53f2c9f3932847a012cd5f904a56bf45093a498fe6f706c1",
+                                 "sha256_after":  "3caa42e1d483527a53f2c9f3932847a012cd5f904a56bf45093a498fe6f706c1",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/kt2a5725-1748932784453.jpg",
+                                 "sha256_before":  "d8ea6797edad95cf67b67ee815a97cc7a08cf2994a87920d610c24d7a258aff2",
+                                 "sha256_after":  "d8ea6797edad95cf67b67ee815a97cc7a08cf2994a87920d610c24d7a258aff2",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/kt2a5725-1748932784453.jpg",
+                                 "sha256_before":  "d8ea6797edad95cf67b67ee815a97cc7a08cf2994a87920d610c24d7a258aff2",
+                                 "sha256_after":  "d8ea6797edad95cf67b67ee815a97cc7a08cf2994a87920d610c24d7a258aff2",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/kt2a5763-1748932797773.jpg",
+                                 "sha256_before":  "367f99f67a45e8dada06ba61cd0cdb01f489b19e9027459e253af43acdfd1b87",
+                                 "sha256_after":  "367f99f67a45e8dada06ba61cd0cdb01f489b19e9027459e253af43acdfd1b87",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/kt2a5763-1748932797773.jpg",
+                                 "sha256_before":  "367f99f67a45e8dada06ba61cd0cdb01f489b19e9027459e253af43acdfd1b87",
+                                 "sha256_after":  "367f99f67a45e8dada06ba61cd0cdb01f489b19e9027459e253af43acdfd1b87",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/gochoaxinh-com-564-1747907308008.jpg",
+                                 "sha256_before":  "86ad60f3d7800d5061368b32fb3166e31fba0bf3ba113ed8cc84daf5f2dc8777",
+                                 "sha256_after":  "86ad60f3d7800d5061368b32fb3166e31fba0bf3ba113ed8cc84daf5f2dc8777",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/gochoaxinh-com-564-1747907308008.jpg",
+                                 "sha256_before":  "86ad60f3d7800d5061368b32fb3166e31fba0bf3ba113ed8cc84daf5f2dc8777",
+                                 "sha256_after":  "86ad60f3d7800d5061368b32fb3166e31fba0bf3ba113ed8cc84daf5f2dc8777",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/gochoaxinh-com-290-1747907186021.jpg",
+                                 "sha256_before":  "714604583305f15c1a9339bedada183abb5972e31b486118e17a4d83bc936cf2",
+                                 "sha256_after":  "714604583305f15c1a9339bedada183abb5972e31b486118e17a4d83bc936cf2",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/gochoaxinh-com-290-1747907186021.jpg",
+                                 "sha256_before":  "714604583305f15c1a9339bedada183abb5972e31b486118e17a4d83bc936cf2",
+                                 "sha256_after":  "714604583305f15c1a9339bedada183abb5972e31b486118e17a4d83bc936cf2",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/gochoaxinh-com-064-1747906819351.jpg",
+                                 "sha256_before":  "eeb461a2e1529d2e61ad0bc0d3ce37ac6cf7b8b6b788cdc6660d0ab743197ea3",
+                                 "sha256_after":  "eeb461a2e1529d2e61ad0bc0d3ce37ac6cf7b8b6b788cdc6660d0ab743197ea3",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/gochoaxinh-com-064-1747906819351.jpg",
+                                 "sha256_before":  "eeb461a2e1529d2e61ad0bc0d3ce37ac6cf7b8b6b788cdc6660d0ab743197ea3",
+                                 "sha256_after":  "eeb461a2e1529d2e61ad0bc0d3ce37ac6cf7b8b6b788cdc6660d0ab743197ea3",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/z6627827948270-77c577f191bca0887273fd45355e5fd5-1747906523997.jpg",
+                                 "sha256_before":  "eb2b54a18a013f0e541c0affbcf91d87a7505642d611438de1122b4043e341b4",
+                                 "sha256_after":  "eb2b54a18a013f0e541c0affbcf91d87a7505642d611438de1122b4043e341b4",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/z6627827948270-77c577f191bca0887273fd45355e5fd5-1747906523997.jpg",
+                                 "sha256_before":  "eb2b54a18a013f0e541c0affbcf91d87a7505642d611438de1122b4043e341b4",
+                                 "sha256_after":  "eb2b54a18a013f0e541c0affbcf91d87a7505642d611438de1122b4043e341b4",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/dsc06024-1747888666528.jpg",
+                                 "sha256_before":  "41bb77d59f1e0e9048decae05ef5e01af36eaae0034038850c6d7871d7f7f0ac",
+                                 "sha256_after":  "41bb77d59f1e0e9048decae05ef5e01af36eaae0034038850c6d7871d7f7f0ac",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/dsc06024-1747888666528.jpg",
+                                 "sha256_before":  "41bb77d59f1e0e9048decae05ef5e01af36eaae0034038850c6d7871d7f7f0ac",
+                                 "sha256_after":  "41bb77d59f1e0e9048decae05ef5e01af36eaae0034038850c6d7871d7f7f0ac",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/intagram11.jpg",
+                                 "sha256_before":  "c2bcd4fe4c4de19db1c8862dbf50fea0210130b0ddd1e61a7e879a9a2559bbd3",
+                                 "sha256_after":  "c2bcd4fe4c4de19db1c8862dbf50fea0210130b0ddd1e61a7e879a9a2559bbd3",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/intagram11.jpg",
+                                 "sha256_before":  "c2bcd4fe4c4de19db1c8862dbf50fea0210130b0ddd1e61a7e879a9a2559bbd3",
+                                 "sha256_after":  "c2bcd4fe4c4de19db1c8862dbf50fea0210130b0ddd1e61a7e879a9a2559bbd3",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/fb1-1747886608385.jpg",
+                                 "sha256_before":  "7990f7cb69e0e12684f6b35bade6e97de840d6d052d436b07c347cf10c47da69",
+                                 "sha256_after":  "7990f7cb69e0e12684f6b35bade6e97de840d6d052d436b07c347cf10c47da69",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/fb1-1747886608385.jpg",
+                                 "sha256_before":  "7990f7cb69e0e12684f6b35bade6e97de840d6d052d436b07c347cf10c47da69",
+                                 "sha256_after":  "7990f7cb69e0e12684f6b35bade6e97de840d6d052d436b07c347cf10c47da69",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/dsc06013-1747886590835.jpg",
+                                 "sha256_before":  "43a7b5d84c75b15b8977b756f5fbcc0915be806cd06981950a296bbb7dd838d4",
+                                 "sha256_after":  "43a7b5d84c75b15b8977b756f5fbcc0915be806cd06981950a296bbb7dd838d4",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/dsc06013-1747886590835.jpg",
+                                 "sha256_before":  "43a7b5d84c75b15b8977b756f5fbcc0915be806cd06981950a296bbb7dd838d4",
+                                 "sha256_after":  "43a7b5d84c75b15b8977b756f5fbcc0915be806cd06981950a296bbb7dd838d4",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/dsc06003-1747886582937.jpg",
+                                 "sha256_before":  "8658f2ee40cc782fcba78e77a12210ef3bcd9b924805c88a6626bdd80d91235e",
+                                 "sha256_after":  "8658f2ee40cc782fcba78e77a12210ef3bcd9b924805c88a6626bdd80d91235e",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/dsc06003-1747886582937.jpg",
+                                 "sha256_before":  "8658f2ee40cc782fcba78e77a12210ef3bcd9b924805c88a6626bdd80d91235e",
+                                 "sha256_after":  "8658f2ee40cc782fcba78e77a12210ef3bcd9b924805c88a6626bdd80d91235e",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/1800-2-1722653563019.jpg",
+                                 "sha256_before":  "f1dde60118dab6672830c1c644aaebab6dbd1ad4e06d84fdcde27297486a81d1",
+                                 "sha256_after":  "f1dde60118dab6672830c1c644aaebab6dbd1ad4e06d84fdcde27297486a81d1",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/1800-2-1722653563019.jpg",
+                                 "sha256_before":  "f1dde60118dab6672830c1c644aaebab6dbd1ad4e06d84fdcde27297486a81d1",
+                                 "sha256_after":  "f1dde60118dab6672830c1c644aaebab6dbd1ad4e06d84fdcde27297486a81d1",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/1800-1722653849972.jpg",
+                                 "sha256_before":  "1987a42454ac6ab09b11ae97d1d2e0e4acc26341f7620622c69d8b77ea90c0a0",
+                                 "sha256_after":  "1987a42454ac6ab09b11ae97d1d2e0e4acc26341f7620622c69d8b77ea90c0a0",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/1800-1722653849972.jpg",
+                                 "sha256_before":  "1987a42454ac6ab09b11ae97d1d2e0e4acc26341f7620622c69d8b77ea90c0a0",
+                                 "sha256_after":  "1987a42454ac6ab09b11ae97d1d2e0e4acc26341f7620622c69d8b77ea90c0a0",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/2000-4-1722653843954.jpg",
+                                 "sha256_before":  "0e24d8619aa0404b1fc6691cf775e559e8ffed8df71df12c59673b137afdc717",
+                                 "sha256_after":  "0e24d8619aa0404b1fc6691cf775e559e8ffed8df71df12c59673b137afdc717",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/2000-4-1722653843954.jpg",
+                                 "sha256_before":  "0e24d8619aa0404b1fc6691cf775e559e8ffed8df71df12c59673b137afdc717",
+                                 "sha256_after":  "0e24d8619aa0404b1fc6691cf775e559e8ffed8df71df12c59673b137afdc717",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/dsc05924-1747883847164.jpg",
+                                 "sha256_before":  "b688dd87f663e3ca26497b84f1c996cd2731109813744437df68183b2c2ddb14",
+                                 "sha256_after":  "b688dd87f663e3ca26497b84f1c996cd2731109813744437df68183b2c2ddb14",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/dsc05924-1747883847164.jpg",
+                                 "sha256_before":  "b688dd87f663e3ca26497b84f1c996cd2731109813744437df68183b2c2ddb14",
+                                 "sha256_after":  "b688dd87f663e3ca26497b84f1c996cd2731109813744437df68183b2c2ddb14",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/d81ff475-f43e-4410-8d94-67dfa42eed26.jpg",
+                                 "sha256_before":  "8790ff3af7270647050cbce0edc1d3ee07797b8b90554ffb7e0fc9fbf83acbb0",
+                                 "sha256_after":  "8790ff3af7270647050cbce0edc1d3ee07797b8b90554ffb7e0fc9fbf83acbb0",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/d81ff475-f43e-4410-8d94-67dfa42eed26.jpg",
+                                 "sha256_before":  "8790ff3af7270647050cbce0edc1d3ee07797b8b90554ffb7e0fc9fbf83acbb0",
+                                 "sha256_after":  "8790ff3af7270647050cbce0edc1d3ee07797b8b90554ffb7e0fc9fbf83acbb0",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/506fec83-7c0c-4c95-934c-380b7c3fe0ff-25ffd02a-9702-46a4-9df9-8539b0fb8268.jpg",
+                                 "sha256_before":  "460ab598048ab9fdc64954a10be84f5793ba3b080d922f58972a8232473dfb77",
+                                 "sha256_after":  "460ab598048ab9fdc64954a10be84f5793ba3b080d922f58972a8232473dfb77",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/506fec83-7c0c-4c95-934c-380b7c3fe0ff-25ffd02a-9702-46a4-9df9-8539b0fb8268.jpg",
+                                 "sha256_before":  "460ab598048ab9fdc64954a10be84f5793ba3b080d922f58972a8232473dfb77",
+                                 "sha256_after":  "460ab598048ab9fdc64954a10be84f5793ba3b080d922f58972a8232473dfb77",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/17e29066-6ba1-46c8-aa2f-7d8902971f88-cb06fb46-a261-46c7-b5e5-fba5f3f90535.jpg",
+                                 "sha256_before":  "42e5e223a44305b6d2505460dc7b77ee59b04b022f0e7b95314132e677ecd720",
+                                 "sha256_after":  "42e5e223a44305b6d2505460dc7b77ee59b04b022f0e7b95314132e677ecd720",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/17e29066-6ba1-46c8-aa2f-7d8902971f88-cb06fb46-a261-46c7-b5e5-fba5f3f90535.jpg",
+                                 "sha256_before":  "42e5e223a44305b6d2505460dc7b77ee59b04b022f0e7b95314132e677ecd720",
+                                 "sha256_after":  "42e5e223a44305b6d2505460dc7b77ee59b04b022f0e7b95314132e677ecd720",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/93b2da08-4c24-4af1-80b2-1469b8fbebad-2988918b-9fb3-4d7e-82e4-1ac979d8db6c.jpg",
+                                 "sha256_before":  "26d7b3691f7f11b6934ac662b62e82f06e773c1d276022d4cb8e80cc438c22bf",
+                                 "sha256_after":  "26d7b3691f7f11b6934ac662b62e82f06e773c1d276022d4cb8e80cc438c22bf",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/93b2da08-4c24-4af1-80b2-1469b8fbebad-2988918b-9fb3-4d7e-82e4-1ac979d8db6c.jpg",
+                                 "sha256_before":  "26d7b3691f7f11b6934ac662b62e82f06e773c1d276022d4cb8e80cc438c22bf",
+                                 "sha256_after":  "26d7b3691f7f11b6934ac662b62e82f06e773c1d276022d4cb8e80cc438c22bf",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/5844d8a8-b333-4d61-a857-4d57b922292b-614db907-6248-40c8-89d4-d63d64d35dfe.jpg",
+                                 "sha256_before":  "4603ff90e7744233ac2692381b1a6f1018d4cd26ebf1887b8d8110660feb9c90",
+                                 "sha256_after":  "4603ff90e7744233ac2692381b1a6f1018d4cd26ebf1887b8d8110660feb9c90",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/5844d8a8-b333-4d61-a857-4d57b922292b-614db907-6248-40c8-89d4-d63d64d35dfe.jpg",
+                                 "sha256_before":  "4603ff90e7744233ac2692381b1a6f1018d4cd26ebf1887b8d8110660feb9c90",
+                                 "sha256_after":  "4603ff90e7744233ac2692381b1a6f1018d4cd26ebf1887b8d8110660feb9c90",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/z5674686162213-eb1ab140741362a141e2c291f9c7fbe0-1722653232530-adc6ea3d-94cb-4223-b008-6f1392d5936e.jpg",
+                                 "sha256_before":  "b3c884ed2a11dfeefa4a19eb8591fa86d2723a72a0d2f7b4bce0d583a5f36943",
+                                 "sha256_after":  "b3c884ed2a11dfeefa4a19eb8591fa86d2723a72a0d2f7b4bce0d583a5f36943",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/z5674686162213-eb1ab140741362a141e2c291f9c7fbe0-1722653232530-adc6ea3d-94cb-4223-b008-6f1392d5936e.jpg",
+                                 "sha256_before":  "b3c884ed2a11dfeefa4a19eb8591fa86d2723a72a0d2f7b4bce0d583a5f36943",
+                                 "sha256_after":  "b3c884ed2a11dfeefa4a19eb8591fa86d2723a72a0d2f7b4bce0d583a5f36943",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/5f956891d7cc47ad8b55520889bf75-1722653587944.jpg",
+                                 "sha256_before":  "d7ac728a843c3adf5b617d00138b81b7b1764310cbcc3fa345058f3a75cb73d7",
+                                 "sha256_after":  "d7ac728a843c3adf5b617d00138b81b7b1764310cbcc3fa345058f3a75cb73d7",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/5f956891d7cc47ad8b55520889bf75-1722653587944.jpg",
+                                 "sha256_before":  "d7ac728a843c3adf5b617d00138b81b7b1764310cbcc3fa345058f3a75cb73d7",
+                                 "sha256_after":  "d7ac728a843c3adf5b617d00138b81b7b1764310cbcc3fa345058f3a75cb73d7",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/2d18e2cd34754ef9a0c4ac9a85b02e-1722653677419.jpg",
+                                 "sha256_before":  "679879d1894bac7a5c929c43399303e68d3fd7b2f5c94ff8ab37a58a823a7d68",
+                                 "sha256_after":  "679879d1894bac7a5c929c43399303e68d3fd7b2f5c94ff8ab37a58a823a7d68",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/2d18e2cd34754ef9a0c4ac9a85b02e-1722653677419.jpg",
+                                 "sha256_before":  "679879d1894bac7a5c929c43399303e68d3fd7b2f5c94ff8ab37a58a823a7d68",
+                                 "sha256_after":  "679879d1894bac7a5c929c43399303e68d3fd7b2f5c94ff8ab37a58a823a7d68",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/85b4538030374625842be6d944fb91-jpeg-1722654065530.jpg",
+                                 "sha256_before":  "94789798a59330e9db445e7421d669dd059e5b05a892ac0df57915cfa4961443",
+                                 "sha256_after":  "94789798a59330e9db445e7421d669dd059e5b05a892ac0df57915cfa4961443",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/85b4538030374625842be6d944fb91-jpeg-1722654065530.jpg",
+                                 "sha256_before":  "94789798a59330e9db445e7421d669dd059e5b05a892ac0df57915cfa4961443",
+                                 "sha256_after":  "94789798a59330e9db445e7421d669dd059e5b05a892ac0df57915cfa4961443",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/075264983fc24d8a83908f79bda4a8-jpeg-1722654096584.jpg",
+                                 "sha256_before":  "1a3dedd95e9a2f453fb5a2936cd87ead079dff4f30c9942dc87ad6738e6bf5cc",
+                                 "sha256_after":  "1a3dedd95e9a2f453fb5a2936cd87ead079dff4f30c9942dc87ad6738e6bf5cc",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/075264983fc24d8a83908f79bda4a8-jpeg-1722654096584.jpg",
+                                 "sha256_before":  "1a3dedd95e9a2f453fb5a2936cd87ead079dff4f30c9942dc87ad6738e6bf5cc",
+                                 "sha256_after":  "1a3dedd95e9a2f453fb5a2936cd87ead079dff4f30c9942dc87ad6738e6bf5cc",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/dsc05989-1747886576924.jpg",
+                                 "sha256_before":  "c91472b64b020a8b9a7180dfc2c73d6a46d964205c41ee4ed9eb801eb339ecb9",
+                                 "sha256_after":  "c91472b64b020a8b9a7180dfc2c73d6a46d964205c41ee4ed9eb801eb339ecb9",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/dsc05989-1747886576924.jpg",
+                                 "sha256_before":  "c91472b64b020a8b9a7180dfc2c73d6a46d964205c41ee4ed9eb801eb339ecb9",
+                                 "sha256_after":  "c91472b64b020a8b9a7180dfc2c73d6a46d964205c41ee4ed9eb801eb339ecb9",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/0f4259b7-0ca8-4281-9dde-4fc2d0d9021a-df3108d7-dac6-44ad-a854-34b0815bd0be.jpg",
+                                 "sha256_before":  "6dfb0a7a8fc8f86ac80bade938cb047fae67c95929426bf9e44a201d7134841b",
+                                 "sha256_after":  "6dfb0a7a8fc8f86ac80bade938cb047fae67c95929426bf9e44a201d7134841b",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/0f4259b7-0ca8-4281-9dde-4fc2d0d9021a-df3108d7-dac6-44ad-a854-34b0815bd0be.jpg",
+                                 "sha256_before":  "6dfb0a7a8fc8f86ac80bade938cb047fae67c95929426bf9e44a201d7134841b",
+                                 "sha256_after":  "6dfb0a7a8fc8f86ac80bade938cb047fae67c95929426bf9e44a201d7134841b",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/60051864-4b91-41b3-a4f5-bfcc4336e869-172a385b-3c75-40cf-82cf-ae00160bb6c8.jpg",
+                                 "sha256_before":  "b66f5babe7e7b03eb2fb625d4c8c9c9df20816cbe8a989c50aaa927a01023892",
+                                 "sha256_after":  "b66f5babe7e7b03eb2fb625d4c8c9c9df20816cbe8a989c50aaa927a01023892",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/60051864-4b91-41b3-a4f5-bfcc4336e869-172a385b-3c75-40cf-82cf-ae00160bb6c8.jpg",
+                                 "sha256_before":  "b66f5babe7e7b03eb2fb625d4c8c9c9df20816cbe8a989c50aaa927a01023892",
+                                 "sha256_after":  "b66f5babe7e7b03eb2fb625d4c8c9c9df20816cbe8a989c50aaa927a01023892",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/f22755b7-3dc1-4675-8628-08e077ea524b-db327258-936b-487a-9dbe-781257cb5208.jpg",
+                                 "sha256_before":  "b5f5c7bb1272ce60b0d87dac959fa32dc781637a98da48cc3e560c98e3b26615",
+                                 "sha256_after":  "b5f5c7bb1272ce60b0d87dac959fa32dc781637a98da48cc3e560c98e3b26615",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/f22755b7-3dc1-4675-8628-08e077ea524b-db327258-936b-487a-9dbe-781257cb5208.jpg",
+                                 "sha256_before":  "b5f5c7bb1272ce60b0d87dac959fa32dc781637a98da48cc3e560c98e3b26615",
+                                 "sha256_after":  "b5f5c7bb1272ce60b0d87dac959fa32dc781637a98da48cc3e560c98e3b26615",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/a51d8e91-e013-4774-b9f4-660b4f098e78-30dae6c3-08ea-4df3-a893-76140e0bafde.jpg",
+                                 "sha256_before":  "8167af997fd8c1d7e6fdaac908b5a0a7dd58c1a35e8cc4dcc4b8acf46d124c6c",
+                                 "sha256_after":  "8167af997fd8c1d7e6fdaac908b5a0a7dd58c1a35e8cc4dcc4b8acf46d124c6c",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/a51d8e91-e013-4774-b9f4-660b4f098e78-30dae6c3-08ea-4df3-a893-76140e0bafde.jpg",
+                                 "sha256_before":  "8167af997fd8c1d7e6fdaac908b5a0a7dd58c1a35e8cc4dcc4b8acf46d124c6c",
+                                 "sha256_after":  "8167af997fd8c1d7e6fdaac908b5a0a7dd58c1a35e8cc4dcc4b8acf46d124c6c",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/65f6c2a120134df2ace75655b6a4b7-1722653591040.jpg",
+                                 "sha256_before":  "87a98a27d9fb15739655d109620cc9c63950133ca5922b42e4ef430f2c812aff",
+                                 "sha256_after":  "87a98a27d9fb15739655d109620cc9c63950133ca5922b42e4ef430f2c812aff",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/65f6c2a120134df2ace75655b6a4b7-1722653591040.jpg",
+                                 "sha256_before":  "87a98a27d9fb15739655d109620cc9c63950133ca5922b42e4ef430f2c812aff",
+                                 "sha256_after":  "87a98a27d9fb15739655d109620cc9c63950133ca5922b42e4ef430f2c812aff",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/906f51f663204f91b3e9eb49162489-1722653593495.jpg",
+                                 "sha256_before":  "6f7cea218690b4d826a97b7ec056a489fa6824d6c194d1042efa920ff1293c0d",
+                                 "sha256_after":  "6f7cea218690b4d826a97b7ec056a489fa6824d6c194d1042efa920ff1293c0d",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/906f51f663204f91b3e9eb49162489-1722653593495.jpg",
+                                 "sha256_before":  "6f7cea218690b4d826a97b7ec056a489fa6824d6c194d1042efa920ff1293c0d",
+                                 "sha256_after":  "6f7cea218690b4d826a97b7ec056a489fa6824d6c194d1042efa920ff1293c0d",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/9eeedfe0-f320-4ade-b798-d6f8a6420cf3-87094deb-18d5-4900-a1b2-4c3a1cdfc4b5.jpg",
+                                 "sha256_before":  "9664ebf7e357290cf8b12d72ff1301062d616cc8ee06f87d1be31819a765a593",
+                                 "sha256_after":  "9664ebf7e357290cf8b12d72ff1301062d616cc8ee06f87d1be31819a765a593",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/9eeedfe0-f320-4ade-b798-d6f8a6420cf3-87094deb-18d5-4900-a1b2-4c3a1cdfc4b5.jpg",
+                                 "sha256_before":  "9664ebf7e357290cf8b12d72ff1301062d616cc8ee06f87d1be31819a765a593",
+                                 "sha256_after":  "9664ebf7e357290cf8b12d72ff1301062d616cc8ee06f87d1be31819a765a593",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/4ddb74ef20284b879bf639141e7bfe-1722653682470.jpg",
+                                 "sha256_before":  "2300fc9c0bbc94dc947eee3132b025cdbd610504c58c60aa079ab1a1e5ab347e",
+                                 "sha256_after":  "2300fc9c0bbc94dc947eee3132b025cdbd610504c58c60aa079ab1a1e5ab347e",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/4ddb74ef20284b879bf639141e7bfe-1722653682470.jpg",
+                                 "sha256_before":  "2300fc9c0bbc94dc947eee3132b025cdbd610504c58c60aa079ab1a1e5ab347e",
+                                 "sha256_after":  "2300fc9c0bbc94dc947eee3132b025cdbd610504c58c60aa079ab1a1e5ab347e",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/43c6ef7068f2467e9cc74c2dcb2eb8-1722653683116.jpg",
+                                 "sha256_before":  "63b4c10b6790578ebec3dda18e07b966731435a834d75e92f805297a2568029d",
+                                 "sha256_after":  "63b4c10b6790578ebec3dda18e07b966731435a834d75e92f805297a2568029d",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/43c6ef7068f2467e9cc74c2dcb2eb8-1722653683116.jpg",
+                                 "sha256_before":  "63b4c10b6790578ebec3dda18e07b966731435a834d75e92f805297a2568029d",
+                                 "sha256_after":  "63b4c10b6790578ebec3dda18e07b966731435a834d75e92f805297a2568029d",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/344e46dadb8545d5963bf538886c36-1722653684094.jpg",
+                                 "sha256_before":  "c298a283a24576b51ed5a0c1f3555f76ad06c69ea6f769f0b116fe47d6e2da1e",
+                                 "sha256_after":  "c298a283a24576b51ed5a0c1f3555f76ad06c69ea6f769f0b116fe47d6e2da1e",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/344e46dadb8545d5963bf538886c36-1722653684094.jpg",
+                                 "sha256_before":  "c298a283a24576b51ed5a0c1f3555f76ad06c69ea6f769f0b116fe47d6e2da1e",
+                                 "sha256_after":  "c298a283a24576b51ed5a0c1f3555f76ad06c69ea6f769f0b116fe47d6e2da1e",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/db26e8f53bfa400eb65f55de9e5095-1722654026836.jpg",
+                                 "sha256_before":  "575f8e1b27b545da0457d4defa385f382461c40a4620fb763342497e6b80cd27",
+                                 "sha256_after":  "575f8e1b27b545da0457d4defa385f382461c40a4620fb763342497e6b80cd27",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/db26e8f53bfa400eb65f55de9e5095-1722654026836.jpg",
+                                 "sha256_before":  "575f8e1b27b545da0457d4defa385f382461c40a4620fb763342497e6b80cd27",
+                                 "sha256_after":  "575f8e1b27b545da0457d4defa385f382461c40a4620fb763342497e6b80cd27",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/74ecbbb888e0459e8e2551098b6ffb-1722654027924.jpg",
+                                 "sha256_before":  "b84f31f85e0894c5f288ce48f9502b85d7e6e6fa742d43e4818bddf7af3566fb",
+                                 "sha256_after":  "b84f31f85e0894c5f288ce48f9502b85d7e6e6fa742d43e4818bddf7af3566fb",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/74ecbbb888e0459e8e2551098b6ffb-1722654027924.jpg",
+                                 "sha256_before":  "b84f31f85e0894c5f288ce48f9502b85d7e6e6fa742d43e4818bddf7af3566fb",
+                                 "sha256_after":  "b84f31f85e0894c5f288ce48f9502b85d7e6e6fa742d43e4818bddf7af3566fb",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/baa89f99-77ee-4e14-93f3-b44c8ce4e239.jpg",
+                                 "sha256_before":  "31bb401854ea40cd6e4a5d1cdbadfceccedc439ab4cbd0dc704e25845114a16d",
+                                 "sha256_after":  "31bb401854ea40cd6e4a5d1cdbadfceccedc439ab4cbd0dc704e25845114a16d",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/baa89f99-77ee-4e14-93f3-b44c8ce4e239.jpg",
+                                 "sha256_before":  "31bb401854ea40cd6e4a5d1cdbadfceccedc439ab4cbd0dc704e25845114a16d",
+                                 "sha256_after":  "31bb401854ea40cd6e4a5d1cdbadfceccedc439ab4cbd0dc704e25845114a16d",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/7fd0929e-bf94-41a9-bb82-650c9b33ba9f-acb9e454-4c9d-4829-a72d-0a9dbf6cd728.jpg",
+                                 "sha256_before":  "07dcd93a14e73005925486724b68b48d7efb0fc6ca95ef03ce82fe63997d9f0d",
+                                 "sha256_after":  "07dcd93a14e73005925486724b68b48d7efb0fc6ca95ef03ce82fe63997d9f0d",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/7fd0929e-bf94-41a9-bb82-650c9b33ba9f-acb9e454-4c9d-4829-a72d-0a9dbf6cd728.jpg",
+                                 "sha256_before":  "07dcd93a14e73005925486724b68b48d7efb0fc6ca95ef03ce82fe63997d9f0d",
+                                 "sha256_after":  "07dcd93a14e73005925486724b68b48d7efb0fc6ca95ef03ce82fe63997d9f0d",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/2e19fd6b-d03c-4f86-b590-e50cd6999bce-75c718d3-cd05-476b-a135-ca73ac3c8167.jpg",
+                                 "sha256_before":  "68feec62d97c166b2345165b4c84c7310fb4d20cc9849123954e54cc7e32af60",
+                                 "sha256_after":  "68feec62d97c166b2345165b4c84c7310fb4d20cc9849123954e54cc7e32af60",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/2e19fd6b-d03c-4f86-b590-e50cd6999bce-75c718d3-cd05-476b-a135-ca73ac3c8167.jpg",
+                                 "sha256_before":  "68feec62d97c166b2345165b4c84c7310fb4d20cc9849123954e54cc7e32af60",
+                                 "sha256_after":  "68feec62d97c166b2345165b4c84c7310fb4d20cc9849123954e54cc7e32af60",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/assets/products/f57d07a4-2646-414a-803d-b156974e2603-97f4024c-bd67-491f-8a1e-e6207a9e2b30.jpg",
+                                 "sha256_before":  "e3eba30c544461819c3f0587cccdbb8dfde8ac0866a4a6f5e50c5aa6ddb2b8bf",
+                                 "sha256_after":  "e3eba30c544461819c3f0587cccdbb8dfde8ac0866a4a6f5e50c5aa6ddb2b8bf",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "storage/app/public/products/f57d07a4-2646-414a-803d-b156974e2603-97f4024c-bd67-491f-8a1e-e6207a9e2b30.jpg",
+                                 "sha256_before":  "e3eba30c544461819c3f0587cccdbb8dfde8ac0866a4a6f5e50c5aa6ddb2b8bf",
+                                 "sha256_after":  "e3eba30c544461819c3f0587cccdbb8dfde8ac0866a4a6f5e50c5aa6ddb2b8bf",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "docs/dung/SEED_VA_KIEM_THU.md",
+                                 "sha256_before":  "3b9fd598c465641756869e9daa0a2313f175d263ff40a79edb07fd468e27a2d3",
+                                 "sha256_after":  "3b9fd598c465641756869e9daa0a2313f175d263ff40a79edb07fd468e27a2d3",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "scripts/test-dung-data.ps1",
+                                 "sha256_before":  "bbe768b28da51e00581d705cb246d4091646f4c3d1df6e01a9ee3eb9c9abb886",
+                                 "sha256_after":  "bbe768b28da51e00581d705cb246d4091646f4c3d1df6e01a9ee3eb9c9abb886",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "docs/dung/evidence/mongodb-qa-cleanup-dry-run-2026-10-27.json",
+                                 "sha256_before":  "f3b7abf905dee9033dec479e7dbf60516e0b5c64c26d9fe636a0209c43e21297",
+                                 "sha256_after":  "f3b7abf905dee9033dec479e7dbf60516e0b5c64c26d9fe636a0209c43e21297",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "docs/dung/evidence/mongodb-qa-cleanup-manifest-2026-10-27.json",
+                                 "sha256_before":  "db03880c453af07f61d4c101d181fdf7f2fa2d5ac21b4042af95654e6323bf90",
+                                 "sha256_after":  "db03880c453af07f61d4c101d181fdf7f2fa2d5ac21b4042af95654e6323bf90",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "scripts/dung-qa-db-cleanup.ps1",
+                                 "sha256_before":  "7e38e3d34ee548fded3d25678d177742d1c9c05ddbd61a5797925c1f307e32b9",
+                                 "sha256_after":  "7e38e3d34ee548fded3d25678d177742d1c9c05ddbd61a5797925c1f307e32b9",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/seeders/data/flowers.json",
+                                 "sha256_before":  "0931865aaa93fd0f7260c97cc12484e1dec621265c03f6b861c873972e737e52",
+                                 "sha256_after":  "0931865aaa93fd0f7260c97cc12484e1dec621265c03f6b861c873972e737e52",
+                                 "unchanged":  true
+                             },
+                             {
+                                 "path":  "database/mongodb_init.js",
+                                 "sha256_before":  "fbdc44b7d5fc8f3976494d998a777b51c0022ec65e804599c791fbb589c590d1",
+                                 "sha256_after":  "fbdc44b7d5fc8f3976494d998a777b51c0022ec65e804599c791fbb589c590d1",
+                                 "unchanged":  true
+                             }
+                         ],
+    "runtime_product_files":  74,
+    "seed_product_files":  74,
+    "all_dataset_image_paths":  77,
+    "image_decode_errors":  0,
+    "output_mime":  "image/jpeg",
+    "width":  800,
+    "height":  800,
+    "new_min_bytes":  45744,
+    "new_max_bytes":  117055,
+    "public_storage":  "Existing Junction preserved; all 74 product paths resolve with matching hashes.",
+    "tests":  {
+                  "command":  "php artisan test tests/Unit/ProductImageLibraryTest.php tests/Unit/FlowerDatasetTest.php",
+                  "passed":  38,
+                  "total":  38,
+                  "assertions":  706,
+                  "full_suite":  false,
+                  "mongodb_operations":  0
+              },
+    "preview":  "docs/dung/evidence/product-images-main-type-contact-2026-10-27.jpg",
+    "sources":  [
+                    {
+                        "source_url":  "https://commons.wikimedia.org/wiki/File:Red_Carnations_flower.jpg",
+                        "author":  "Rashid Jorvee",
+                        "license":  "CC-BY-SA-4.0",
+                        "license_url":  "https://creativecommons.org/licenses/by-sa/4.0/",
+                        "attribution_required":  true,
+                        "filenames":  [
+                                          "dsc05510-1747888898698.jpg"
+                                      ]
+                    },
+                    {
+                        "source_url":  "https://www.pexels.com/photo/bouquet-of-pink-and-white-roses-and-tulips-20570561/",
+                        "author":  "Alina Skazka",
+                        "license":  "PEXELS-LICENSE",
+                        "license_url":  "https://www.pexels.com/license/",
+                        "attribution_required":  false,
+                        "filenames":  [
+                                          "dsc05950-1747886536759.jpg"
+                                      ]
+                    },
+                    {
+                        "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+                        "author":  "kevin yung",
+                        "license":  "PEXELS-LICENSE",
+                        "license_url":  "https://www.pexels.com/license/",
+                        "attribution_required":  false,
+                        "filenames":  [
+                                          "9f919d1b-c620-44eb-8a81-9ede8e0ece25-d158250d-fb63-4621-9dfa-3f935779ad36.jpg",
+                                          "ea3d5ac32f1f48929e21de1702ffe5-jpeg-1722654141569.jpg",
+                                          "74f67376-3ef8-4846-8b7d-6645cede93cc-bce2fad8-7ad4-4d5e-b3a5-77b5e409b459.jpg",
+                                          "kt2a5650-1747887004846.jpg",
+                                          "74286e4d90904bac802010454bc6aa-1722654044948.jpg",
+                                          "0545951168fa4ff79b779abbc65e74-jpeg-1722654059820.jpg",
+                                          "318c355a-9602-499d-8a1d-df5ca6b419e2-6c459fe6-7e15-45ad-ba7b-feaa00621f1f.jpg",
+                                          "41fb9b0c-94c4-448b-9934-0550c78e818a-c0598f5b-22f8-4316-8da5-9243db90f0ea.jpg",
+                                          "66268d10bd3748599235ea425d9059-1722653592009.jpg",
+                                          "1100-1722653577560.jpg",
+                                          "1800-5-1722653851361.jpg"
+                                      ]
+                    },
+                    {
+                        "source_url":  "https://www.pexels.com/photo/beautiful-bouquet-of-soap-flowers-in-basket-32434555/",
+                        "author":  "Nur Yilmaz",
+                        "license":  "PEXELS-LICENSE",
+                        "license_url":  "https://www.pexels.com/license/",
+                        "attribution_required":  false,
+                        "filenames":  [
+                                          "bbd87433-2175-413f-bc06-9f9f0d69a1f4-0769bbe2-5681-4978-af04-54803a4cb567.jpg"
+                                      ]
+                    },
+                    {
+                        "source_url":  "https://commons.wikimedia.org/wiki/File:Pink_carnation_bouquets_(Unsplash).jpg",
+                        "author":  "Lizzie amianyuhua",
+                        "license":  "CC0-1.0",
+                        "license_url":  "https://creativecommons.org/publicdomain/zero/1.0/",
+                        "attribution_required":  false,
+                        "filenames":  [
+                                          "b6d8c5f2-6953-461c-9586-e4620db6920a-357cc108-cd54-4cdb-93e3-4fa5f9e9ded2.jpg"
+                                      ]
+                    },
+                    {
+                        "source_url":  "https://www.pexels.com/photo/hydrangea-flowers-in-a-basket-13205236/",
+                        "author":  "CHOICE FLOWERS M",
+                        "license":  "PEXELS-LICENSE",
+                        "license_url":  "https://www.pexels.com/license/",
+                        "attribution_required":  false,
+                        "filenames":  [
+                                          "1b8594947c8b4fec91d72681aa350a-jpeg-1722654110593.jpg"
+                                      ]
+                    },
+                    {
+                        "source_url":  "https://www.pexels.com/photo/white-flower-on-white-textile-13832389/",
+                        "author":  "Nârince",
+                        "license":  "PEXELS-LICENSE",
+                        "license_url":  "https://www.pexels.com/license/",
+                        "attribution_required":  false,
+                        "filenames":  [
+                                          "433091b3480b44fe9a14366dd4c80f-1722653618377.jpg"
+                                      ]
+                    },
+                    {
+                        "source_url":  "https://commons.wikimedia.org/wiki/File:Bunch_tulip_Paris_2011.jpg",
+                        "author":  "Jebulon",
+                        "license":  "CC0-1.0",
+                        "license_url":  "https://creativecommons.org/publicdomain/zero/1.0/",
+                        "attribution_required":  false,
+                        "filenames":  [
+                                          "930b0ba7ba0e4314bad0ad58c624c0-1722654030131.jpg"
+                                      ]
+                    },
+                    {
+                        "source_url":  "https://commons.wikimedia.org/wiki/File:Tulip_Bouquet_(141139731).jpeg",
+                        "author":  "Marta Borowiecka",
+                        "license":  "CC0-1.0",
+                        "license_url":  "https://creativecommons.org/publicdomain/zero/1.0/",
+                        "attribution_required":  false,
+                        "filenames":  [
+                                          "18daf2561f4e4786a69b02ea7acf90-1722654032459.jpg"
+                                      ]
+                    },
+                    {
+                        "source_url":  "https://www.pexels.com/photo/colorful-handmade-soap-flowers-on-wooden-table-34241268/",
+                        "author":  "Rumeysa Sürücüoğlu",
+                        "license":  "PEXELS-LICENSE",
+                        "license_url":  "https://www.pexels.com/license/",
+                        "attribution_required":  false,
+                        "filenames":  [
+                                          "182c9b79-e156-4073-bea2-8d7e33be6e0b.jpg",
+                                          "910bfaa5-64d4-4545-b039-dcafda3a3bde.jpg",
+                                          "a14f549b-3383-4cf2-b11d-9494f8a78588-e2279fa4-2996-4b49-a40d-9b81a5bfe86e.jpg",
+                                          "4fbabb86-9ff3-4abf-9671-3a9c449928dc-994fab37-c370-4307-bc0c-7d8deb42ca37.jpg",
+                                          "e55e643a-4900-4b4c-bbbd-f66406162f32-e2865c77-224d-42fc-a4bf-eb3795c6a163.jpg"
+                                      ]
+                    },
+                    {
+                        "source_url":  "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-dry-flowers-10819681/",
+                        "author":  "Hasan Gulec",
+                        "license":  "PEXELS-LICENSE",
+                        "license_url":  "https://www.pexels.com/license/",
+                        "attribution_required":  false,
+                        "filenames":  [
+                                          "7d977015-f660-468e-aa92-6d1e55b2b6f6-8b98c7f4-cb5d-41a7-a080-a33a20c779d2.jpg"
+                                      ]
+                    },
+                    {
+                        "source_url":  "https://www.pexels.com/photo/elegant-bouquet-with-soap-flowers-and-dried-accents-37048655/",
+                        "author":  "Ayşe Ergül",
+                        "license":  "PEXELS-LICENSE",
+                        "license_url":  "https://www.pexels.com/license/",
+                        "attribution_required":  false,
+                        "filenames":  [
+                                          "d08a4678-d17f-4282-b3ec-d49a89df7a6b-815ce74d-dafe-47f3-acdf-bcc347d4a3b8.jpg",
+                                          "f905f2b0-e982-4ad8-b463-392acda6ac1b-997fe73e-8e0e-4463-80ea-4c840a4c688f.jpg",
+                                          "a8eeb848-6697-4162-a6e8-d3d8e3222338-d93f4830-a55b-4878-ba5b-8ee192a138ef.jpg",
+                                          "ff575cda-55bd-4183-96dc-b896b7b763d8-57150620-e2b1-41ef-8e3b-535e0d85a80f.jpg",
+                                          "41de3033-7340-4b5d-9bc7-347f9534fabb-e5821c08-239e-4277-ba39-1761943d284f.jpg",
+                                          "0cca8e59-9a9c-4ab2-84ac-d6eb6e70e9a9-0b68cd02-0a34-4152-9b30-271bc2383a04.jpg"
+                                      ]
+                    }
+                ],
+    "imported":  [
+                     {
+                         "code":  "PVN290",
+                         "name":  "Bó Hoa “Lời Chúc Bình An” – Cẩm chướng xanh trắng \u0026 hồng môn",
+                         "image":  "dsc05510-1747888898698.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "CARNATION",
+                         "source_url":  "https://commons.wikimedia.org/wiki/File:Red_Carnations_flower.jpg",
+                         "author":  "Rashid Jorvee",
+                         "license":  "CC-BY-SA-4.0",
+                         "license_url":  "https://creativecommons.org/licenses/by-sa/4.0/",
+                         "attribution":  "Photo by Rashid Jorvee, Wikimedia Commons, CC-BY-SA-4.0. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  true,
+                         "fit_notes":  "Ảnh có cẩm chướng rõ nét, đúng loài được nhắc đầu tiên; không đối chiếu màu xanh–trắng hay thành phần hồng môn.",
+                         "source_reuse_filename_count":  1,
+                         "source_reuse_reason":  null,
+                         "bytes":  85190,
+                         "sha256":  "138dd4095f3957cc69b75c5ee575032a1c99ef84eba4d85873323e18b2a72225"
+                     },
+                     {
+                         "code":  "PVN276",
+                         "name":  "Bó Hoa Tulip Trắng – Thanh Khiết Tinh Khôi",
+                         "image":  "dsc05950-1747886536759.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "ROSE_TULIP",
+                         "source_url":  "https://www.pexels.com/photo/bouquet-of-pink-and-white-roses-and-tulips-20570561/",
+                         "author":  "Alina Skazka",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Alina Skazka, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh có cả tulip và hoa hồng; dùng chung cho PVN276 và PVN244 theo chấp thuận rõ ràng của người dùng. Không xác minh đúng SKU.",
+                         "source_reuse_filename_count":  1,
+                         "source_reuse_reason":  null,
+                         "bytes":  49021,
+                         "sha256":  "369133be50295efd086cce7fe6a4e599098ceae2b490ef914c8fcf6fffbc2840"
+                     },
+                     {
+                         "code":  "PVN244",
+                         "name":  "💖 Bó Hoa Pastel Hồng – Ngọt Ngào Như Lời Tỏ Tình",
+                         "image":  "dsc05950-1747886536759.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "ROSE_TULIP",
+                         "source_url":  "https://www.pexels.com/photo/bouquet-of-pink-and-white-roses-and-tulips-20570561/",
+                         "author":  "Alina Skazka",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Alina Skazka, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh có cả tulip và hoa hồng; dùng chung cho PVN276 và PVN244 theo chấp thuận rõ ràng của người dùng. Không xác minh đúng SKU.",
+                         "source_reuse_filename_count":  1,
+                         "source_reuse_reason":  null,
+                         "bytes":  49021,
+                         "sha256":  "369133be50295efd086cce7fe6a4e599098ceae2b490ef914c8fcf6fffbc2840"
+                     },
+                     {
+                         "code":  "H63",
+                         "name":  "Kệ hoa Khai Trương/Chúc Mừng mini SP000091",
+                         "image":  "9f919d1b-c620-44eb-8a81-9ede8e0ece25-d158250d-fb63-4621-9dfa-3f935779ad36.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "FLOWER_STAND",
+                         "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+                         "author":  "kevin yung",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+                         "source_reuse_filename_count":  11,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  68774,
+                         "sha256":  "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629"
+                     },
+                     {
+                         "code":  "H194",
+                         "name":  "Kệ hoa chúc mừng",
+                         "image":  "ea3d5ac32f1f48929e21de1702ffe5-jpeg-1722654141569.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "FLOWER_STAND",
+                         "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+                         "author":  "kevin yung",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+                         "source_reuse_filename_count":  11,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  68774,
+                         "sha256":  "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629"
+                     },
+                     {
+                         "code":  "PVN209",
+                         "name":  "Kệ hoa chúc mừng,lẳng hoa khai tương",
+                         "image":  "74f67376-3ef8-4846-8b7d-6645cede93cc-bce2fad8-7ad4-4d5e-b3a5-77b5e409b459.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "FLOWER_STAND",
+                         "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+                         "author":  "kevin yung",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+                         "source_reuse_filename_count":  11,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  68774,
+                         "sha256":  "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629"
+                     },
+                     {
+                         "code":  "H129",
+                         "name":  "Kệ hoa khai trương vàng phối giấy xanh SP000070",
+                         "image":  "74f67376-3ef8-4846-8b7d-6645cede93cc-bce2fad8-7ad4-4d5e-b3a5-77b5e409b459.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "FLOWER_STAND",
+                         "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+                         "author":  "kevin yung",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+                         "source_reuse_filename_count":  11,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  68774,
+                         "sha256":  "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629"
+                     },
+                     {
+                         "code":  "PVN285",
+                         "name":  "Kệ Hoa Khai Trương đỏ – hồng pastel Hồng Phát Rực Rỡ",
+                         "image":  "kt2a5650-1747887004846.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "FLOWER_STAND",
+                         "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+                         "author":  "kevin yung",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+                         "source_reuse_filename_count":  11,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  68774,
+                         "sha256":  "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629"
+                     },
+                     {
+                         "code":  "H130",
+                         "name":  "Kệ hoa khai trương SP000071",
+                         "image":  "74286e4d90904bac802010454bc6aa-1722654044948.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "FLOWER_STAND",
+                         "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+                         "author":  "kevin yung",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+                         "source_reuse_filename_count":  11,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  68774,
+                         "sha256":  "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629"
+                     },
+                     {
+                         "code":  "H143",
+                         "name":  "Kệ hoa khai trương,chúc mừng",
+                         "image":  "0545951168fa4ff79b779abbc65e74-jpeg-1722654059820.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "FLOWER_STAND",
+                         "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+                         "author":  "kevin yung",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+                         "source_reuse_filename_count":  11,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  68774,
+                         "sha256":  "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629"
+                     },
+                     {
+                         "code":  "PVN207",
+                         "name":  "Kệ hoa khai trương,lẳng hoa chúc mừng",
+                         "image":  "318c355a-9602-499d-8a1d-df5ca6b419e2-6c459fe6-7e15-45ad-ba7b-feaa00621f1f.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "FLOWER_STAND",
+                         "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+                         "author":  "kevin yung",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh kệ hoa phối dùng minh họa chung PVN207/H86; khác kiểu kệ/giỏ không phải xung đột loài hoa theo tiêu chí đã chốt.",
+                         "source_reuse_filename_count":  11,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  68774,
+                         "sha256":  "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629"
+                     },
+                     {
+                         "code":  "PVN188",
+                         "name":  "Kệ hoa khai trương,lẳng hoa chúc mừng",
+                         "image":  "41fb9b0c-94c4-448b-9934-0550c78e818a-c0598f5b-22f8-4316-8da5-9243db90f0ea.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "FLOWER_STAND",
+                         "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+                         "author":  "kevin yung",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+                         "source_reuse_filename_count":  11,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  68774,
+                         "sha256":  "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629"
+                     },
+                     {
+                         "code":  "H71",
+                         "name":  "Kệ hoa khai trương/chúc mừng SP000008",
+                         "image":  "66268d10bd3748599235ea425d9059-1722653592009.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "FLOWER_STAND",
+                         "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+                         "author":  "kevin yung",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh kệ hoa có hoa hồng: phù hợp H71 (kệ hoa) và H101 (hoa hồng). Kiểu hộp không phải điều kiện đối chiếu theo tiêu chí mới.",
+                         "source_reuse_filename_count":  11,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  68774,
+                         "sha256":  "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629"
+                     },
+                     {
+                         "code":  "H61",
+                         "name":  "Kệ hoa khai trương/chúc mừng sp000093",
+                         "image":  "1100-1722653577560.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "FLOWER_STAND",
+                         "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+                         "author":  "kevin yung",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+                         "source_reuse_filename_count":  11,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  68774,
+                         "sha256":  "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629"
+                     },
+                     {
+                         "code":  "H58",
+                         "name":  "Kệ hoa khai trương/chúc mừng SP000097",
+                         "image":  "1100-1722653577560.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "FLOWER_STAND",
+                         "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+                         "author":  "kevin yung",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+                         "source_reuse_filename_count":  11,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  68774,
+                         "sha256":  "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629"
+                     },
+                     {
+                         "code":  "H50",
+                         "name":  "Kệ hoa tươi khai trương/chúc mừng SP000105",
+                         "image":  "1800-5-1722653851361.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "FLOWER_STAND",
+                         "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+                         "author":  "kevin yung",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+                         "source_reuse_filename_count":  11,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  68774,
+                         "sha256":  "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629"
+                     },
+                     {
+                         "code":  "PVN222",
+                         "name":  "Giỏ Hoa Sáp Hồng – Xanh Dương: Chúc Mừng Trọng Thị \u0026 Sang Trọng Lịch Lãm",
+                         "image":  "bbd87433-2175-413f-bc06-9f9f0d69a1f4-0769bbe2-5681-4978-af04-54803a4cb567.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "SOAP_ROSE",
+                         "source_url":  "https://www.pexels.com/photo/beautiful-bouquet-of-soap-flowers-in-basket-32434555/",
+                         "author":  "Nur Yilmaz",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Nur Yilmaz, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Nguồn xác nhận soap flowers, có hoa hồng trong giỏ. Dùng minh họa hoa sáp/hồng; không đối chiếu màu hồng–xanh hoặc thiết kế. Tái sử dụng nguồn đã kiểm tra của PVN217; không sửa ảnh hay metadata PVN217.",
+                         "source_reuse_filename_count":  2,
+                         "source_reuse_reason":  "Intentional demo reuse of the licensed soap-flower basket source already used by PVN217. PVN222 has the same soap/rose product family; colors and exact design are outside the matching criteria. The existing PVN217 asset and metadata are preserved.",
+                         "bytes":  117055,
+                         "sha256":  "07dcd93a14e73005925486724b68b48d7efb0fc6ca95ef03ce82fe63997d9f0d"
+                     },
+                     {
+                         "code":  "H03",
+                         "name":  "Giỏ hoa Phăng/Cát Tường mix hoa ly,hồng kem tú cầu",
+                         "image":  "b6d8c5f2-6953-461c-9586-e4620db6920a-357cc108-cd54-4cdb-93e3-4fa5f9e9ded2.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "CARNATION",
+                         "source_url":  "https://commons.wikimedia.org/wiki/File:Pink_carnation_bouquets_(Unsplash).jpg",
+                         "author":  "Lizzie amianyuhua",
+                         "license":  "CC0-1.0",
+                         "license_url":  "https://creativecommons.org/publicdomain/zero/1.0/",
+                         "attribution":  "Photo by Lizzie amianyuhua, Wikimedia Commons, CC0-1.0. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh có cẩm chướng (phăng), đúng loại được nhắc đầu tiên trong tên; không yêu cầu đồng thời cát tường, ly, hồng kem và tú cầu.",
+                         "source_reuse_filename_count":  1,
+                         "source_reuse_reason":  null,
+                         "bytes":  85188,
+                         "sha256":  "9236ce4cde71a73eaf3c6bf2a82b47ce58cab614c550e0957773703bde80a969"
+                     },
+                     {
+                         "code":  "H86",
+                         "name":  "Giỏ hoa khai trương SP000023",
+                         "image":  "318c355a-9602-499d-8a1d-df5ca6b419e2-6c459fe6-7e15-45ad-ba7b-feaa00621f1f.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "FLOWER_STAND",
+                         "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+                         "author":  "kevin yung",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh kệ hoa phối dùng minh họa chung PVN207/H86; khác kiểu kệ/giỏ không phải xung đột loài hoa theo tiêu chí đã chốt.",
+                         "source_reuse_filename_count":  11,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  68774,
+                         "sha256":  "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629"
+                     },
+                     {
+                         "code":  "H101",
+                         "name":  "Hộp hoa Hồng SP000039",
+                         "image":  "66268d10bd3748599235ea425d9059-1722653592009.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "FLOWER_STAND",
+                         "source_url":  "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+                         "author":  "kevin yung",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh kệ hoa có hoa hồng: phù hợp H71 (kệ hoa) và H101 (hoa hồng). Kiểu hộp không phải điều kiện đối chiếu theo tiêu chí mới.",
+                         "source_reuse_filename_count":  11,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  68774,
+                         "sha256":  "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629"
+                     },
+                     {
+                         "code":  "H167",
+                         "name":  "Hộp hoa tú cầu",
+                         "image":  "1b8594947c8b4fec91d72681aa350a-jpeg-1722654110593.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "HYDRANGEA",
+                         "source_url":  "https://www.pexels.com/photo/hydrangea-flowers-in-a-basket-13205236/",
+                         "author":  "CHOICE FLOWERS M",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by CHOICE FLOWERS M, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh thể hiện cẩm tú cầu rõ nét; đúng loài hoa chính. Không đối chiếu kiểu giỏ/hộp hoặc màu.",
+                         "source_reuse_filename_count":  1,
+                         "source_reuse_reason":  null,
+                         "bytes":  68434,
+                         "sha256":  "9c914f1f5449e12d1c339a4a3db7a64e950a68840c14869f613210d5c1a84741"
+                     },
+                     {
+                         "code":  "H81",
+                         "name":  "Hoa cưới cally mix tulip SP000018",
+                         "image":  "433091b3480b44fe9a14366dd4c80f-1722653618377.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "CALLA",
+                         "source_url":  "https://www.pexels.com/photo/white-flower-on-white-textile-13832389/",
+                         "author":  "Nârince",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Nârince, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh có calla/cally, đúng loại được nhắc đầu tiên; không yêu cầu đồng thời tulip hoặc đúng mẫu cưới/SKU.",
+                         "source_reuse_filename_count":  1,
+                         "source_reuse_reason":  null,
+                         "bytes":  45744,
+                         "sha256":  "6013b9892ab0827dc3e80fc8dcd5af7c535578d13cefafb14082ca7cbb8a030b"
+                     },
+                     {
+                         "code":  "H114",
+                         "name":  "Hoa cưới tulip mix cally hồng SP000052",
+                         "image":  "930b0ba7ba0e4314bad0ad58c624c0-1722654030131.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "TULIP",
+                         "source_url":  "https://commons.wikimedia.org/wiki/File:Bunch_tulip_Paris_2011.jpg",
+                         "author":  "Jebulon",
+                         "license":  "CC0-1.0",
+                         "license_url":  "https://creativecommons.org/publicdomain/zero/1.0/",
+                         "attribution":  "Photo by Jebulon, Wikimedia Commons, CC0-1.0. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh tulip đúng loài được nhắc đầu tiên; không yêu cầu có thêm calla hay đúng màu/kiểu cưới.",
+                         "source_reuse_filename_count":  1,
+                         "source_reuse_reason":  null,
+                         "bytes":  105288,
+                         "sha256":  "a6feb86db9133f28c0cf0200223e09e47326c7981bee19286ad2cbd648b11877"
+                     },
+                     {
+                         "code":  "H116",
+                         "name":  "Hoa cưới tulip mix cally SP000054",
+                         "image":  "18daf2561f4e4786a69b02ea7acf90-1722654032459.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "TULIP",
+                         "source_url":  "https://commons.wikimedia.org/wiki/File:Tulip_Bouquet_(141139731).jpeg",
+                         "author":  "Marta Borowiecka",
+                         "license":  "CC0-1.0",
+                         "license_url":  "https://creativecommons.org/publicdomain/zero/1.0/",
+                         "attribution":  "Photo by Marta Borowiecka, Wikimedia Commons, CC0-1.0. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Ảnh tulip đúng loài được nhắc đầu tiên; không đối chiếu calla, bình/bó hoặc SKU.",
+                         "source_reuse_filename_count":  1,
+                         "source_reuse_reason":  null,
+                         "bytes":  48660,
+                         "sha256":  "6ea4602f7bff2fc9eee181ce6f8dc781405bc18db46dc3bbb2140446fb03f4e4"
+                     },
+                     {
+                         "code":  "H229",
+                         "name":  "Bó Hoa Sáp Xanh Pastel 20 Bông – Tươi Mát \u0026 Ấn Tượng Lâu Dài",
+                         "image":  "182c9b79-e156-4073-bea2-8d7e33be6e0b.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "SOAP_FLOWERS",
+                         "source_url":  "https://www.pexels.com/photo/colorful-handmade-soap-flowers-on-wooden-table-34241268/",
+                         "author":  "Rumeysa Sürücüoğlu",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Rumeysa Sürücüoğlu, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Nguồn xác nhận hoa xà phòng/soap flowers, phù hợp loại hoa sáp demo; tên không chỉ định loài. Không đối chiếu màu, số bông hoặc kiểu bó.",
+                         "source_reuse_filename_count":  5,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  71078,
+                         "sha256":  "e8ad48f2bb8b61fdd219b86fa43fcb5b8af6b3c7b022c5632a549599a7b7c507"
+                     },
+                     {
+                         "code":  "H228",
+                         "name":  "Bó Hoa Sáp Xanh Pastel – Đẳng Cấp \u0026 Trường Tồn Như Tình Yêu Lâu Dài",
+                         "image":  "910bfaa5-64d4-4545-b039-dcafda3a3bde.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "SOAP_FLOWERS",
+                         "source_url":  "https://www.pexels.com/photo/colorful-handmade-soap-flowers-on-wooden-table-34241268/",
+                         "author":  "Rumeysa Sürücüoğlu",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Rumeysa Sürücüoğlu, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Nguồn xác nhận hoa xà phòng/soap flowers, phù hợp loại hoa sáp demo; tên không chỉ định loài. Không đối chiếu màu, số bông hoặc kiểu bó.",
+                         "source_reuse_filename_count":  5,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  71078,
+                         "sha256":  "e8ad48f2bb8b61fdd219b86fa43fcb5b8af6b3c7b022c5632a549599a7b7c507"
+                     },
+                     {
+                         "code":  "PVN227",
+                         "name":  "Bó Hoa Bi Khô Đỏ – Cá Tính \u0026 Ấn Tượng Khó Phai",
+                         "image":  "7d977015-f660-468e-aa92-6d1e55b2b6f6-8b98c7f4-cb5d-41a7-a080-a33a20c779d2.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "GYPSOPHILA_DRY",
+                         "source_url":  "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-dry-flowers-10819681/",
+                         "author":  "Hasan Gulec",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Hasan Gulec, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Nguồn mô tả baby\u0027s breath/Gypsophila khô, phù hợp hoa bi/baby khô; không đối chiếu màu đỏ hoặc kiểu bó.",
+                         "source_reuse_filename_count":  1,
+                         "source_reuse_reason":  null,
+                         "bytes":  55298,
+                         "sha256":  "c8be25315d4d7fb6611fef3beb0c40ce81c5a3221f88aace7e348f457f499a6b"
+                     },
+                     {
+                         "code":  "PVN226",
+                         "name":  "Bó Hoa Sáp Hồng Đậm – “Every Love You” – Đậm Đà \u0026 Lâu Bền Như Tình Yêu",
+                         "image":  "d08a4678-d17f-4282-b3ec-d49a89df7a6b-815ce74d-dafe-47f3-acdf-bcc347d4a3b8.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "SOAP_ROSE",
+                         "source_url":  "https://www.pexels.com/photo/elegant-bouquet-with-soap-flowers-and-dried-accents-37048655/",
+                         "author":  "Ayşe Ergül",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Ayşe Ergül, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Nguồn xác nhận soap roses (hoa hồng xà phòng), phù hợp hoa sáp/hoa hồng sáp. Không đối chiếu màu, số bông, tên mẫu công chúa hay kiểu hộp/bó; chỉ minh họa loại sản phẩm.",
+                         "source_reuse_filename_count":  6,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  77124,
+                         "sha256":  "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a"
+                     },
+                     {
+                         "code":  "PVN215",
+                         "name":  "Bó hoa sáp xanh ngọc",
+                         "image":  "a14f549b-3383-4cf2-b11d-9494f8a78588-e2279fa4-2996-4b49-a40d-9b81a5bfe86e.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "SOAP_FLOWERS",
+                         "source_url":  "https://www.pexels.com/photo/colorful-handmade-soap-flowers-on-wooden-table-34241268/",
+                         "author":  "Rumeysa Sürücüoğlu",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Rumeysa Sürücüoğlu, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Nguồn xác nhận hoa xà phòng/soap flowers, phù hợp loại hoa sáp demo; tên không chỉ định loài. Không đối chiếu màu, số bông hoặc kiểu bó.",
+                         "source_reuse_filename_count":  5,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  71078,
+                         "sha256":  "e8ad48f2bb8b61fdd219b86fa43fcb5b8af6b3c7b022c5632a549599a7b7c507"
+                     },
+                     {
+                         "code":  "PVN212",
+                         "name":  "Bó hoa sáp mix màu",
+                         "image":  "4fbabb86-9ff3-4abf-9671-3a9c449928dc-994fab37-c370-4307-bc0c-7d8deb42ca37.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "SOAP_FLOWERS",
+                         "source_url":  "https://www.pexels.com/photo/colorful-handmade-soap-flowers-on-wooden-table-34241268/",
+                         "author":  "Rumeysa Sürücüoğlu",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Rumeysa Sürücüoğlu, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Nguồn xác nhận hoa xà phòng/soap flowers, phù hợp loại hoa sáp demo; tên không chỉ định loài. Không đối chiếu màu, số bông hoặc kiểu bó.",
+                         "source_reuse_filename_count":  5,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  71078,
+                         "sha256":  "e8ad48f2bb8b61fdd219b86fa43fcb5b8af6b3c7b022c5632a549599a7b7c507"
+                     },
+                     {
+                         "code":  "H105",
+                         "name":  "Bó hoa Hồng sáp bông SP000043",
+                         "image":  "f905f2b0-e982-4ad8-b463-392acda6ac1b-997fe73e-8e0e-4463-80ea-4c840a4c688f.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "SOAP_ROSE",
+                         "source_url":  "https://www.pexels.com/photo/elegant-bouquet-with-soap-flowers-and-dried-accents-37048655/",
+                         "author":  "Ayşe Ergül",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Ayşe Ergül, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Nguồn xác nhận soap roses (hoa hồng xà phòng), phù hợp hoa sáp/hoa hồng sáp. Không đối chiếu màu, số bông, tên mẫu công chúa hay kiểu hộp/bó; chỉ minh họa loại sản phẩm.",
+                         "source_reuse_filename_count":  6,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  77124,
+                         "sha256":  "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a"
+                     },
+                     {
+                         "code":  "H106",
+                         "name":  "Hoa Hồng sáp 19 bông",
+                         "image":  "a8eeb848-6697-4162-a6e8-d3d8e3222338-d93f4830-a55b-4878-ba5b-8ee192a138ef.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "SOAP_ROSE",
+                         "source_url":  "https://www.pexels.com/photo/elegant-bouquet-with-soap-flowers-and-dried-accents-37048655/",
+                         "author":  "Ayşe Ergül",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Ayşe Ergül, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Nguồn xác nhận soap roses (hoa hồng xà phòng), phù hợp hoa sáp/hoa hồng sáp. Không đối chiếu màu, số bông, tên mẫu công chúa hay kiểu hộp/bó; chỉ minh họa loại sản phẩm.",
+                         "source_reuse_filename_count":  6,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  77124,
+                         "sha256":  "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a"
+                     },
+                     {
+                         "code":  "H119",
+                         "name":  "Hoa Hồng sáp công chúa SP000057",
+                         "image":  "ff575cda-55bd-4183-96dc-b896b7b763d8-57150620-e2b1-41ef-8e3b-535e0d85a80f.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "SOAP_ROSE",
+                         "source_url":  "https://www.pexels.com/photo/elegant-bouquet-with-soap-flowers-and-dried-accents-37048655/",
+                         "author":  "Ayşe Ergül",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Ayşe Ergül, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Nguồn xác nhận soap roses (hoa hồng xà phòng), phù hợp hoa sáp/hoa hồng sáp. Không đối chiếu màu, số bông, tên mẫu công chúa hay kiểu hộp/bó; chỉ minh họa loại sản phẩm.",
+                         "source_reuse_filename_count":  6,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  77124,
+                         "sha256":  "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a"
+                     },
+                     {
+                         "code":  "H142",
+                         "name":  "Hoa sáp công chúa",
+                         "image":  "41de3033-7340-4b5d-9bc7-347f9534fabb-e5821c08-239e-4277-ba39-1761943d284f.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "SOAP_ROSE",
+                         "source_url":  "https://www.pexels.com/photo/elegant-bouquet-with-soap-flowers-and-dried-accents-37048655/",
+                         "author":  "Ayşe Ergül",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Ayşe Ergül, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Nguồn xác nhận soap roses (hoa hồng xà phòng), phù hợp hoa sáp/hoa hồng sáp. Không đối chiếu màu, số bông, tên mẫu công chúa hay kiểu hộp/bó; chỉ minh họa loại sản phẩm.",
+                         "source_reuse_filename_count":  6,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  77124,
+                         "sha256":  "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a"
+                     },
+                     {
+                         "code":  "H169",
+                         "name":  "Bó hoa sáp",
+                         "image":  "e55e643a-4900-4b4c-bbbd-f66406162f32-e2865c77-224d-42fc-a4bf-eb3795c6a163.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "SOAP_FLOWERS",
+                         "source_url":  "https://www.pexels.com/photo/colorful-handmade-soap-flowers-on-wooden-table-34241268/",
+                         "author":  "Rumeysa Sürücüoğlu",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Rumeysa Sürücüoğlu, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Nguồn xác nhận hoa xà phòng/soap flowers, phù hợp loại hoa sáp demo; tên không chỉ định loài. Không đối chiếu màu, số bông hoặc kiểu bó.",
+                         "source_reuse_filename_count":  5,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  71078,
+                         "sha256":  "e8ad48f2bb8b61fdd219b86fa43fcb5b8af6b3c7b022c5632a549599a7b7c507"
+                     },
+                     {
+                         "code":  "H170",
+                         "name":  "Hộp hoa sáp",
+                         "image":  "0cca8e59-9a9c-4ab2-84ac-d6eb6e70e9a9-0b68cd02-0a34-4152-9b30-271bc2383a04.jpg",
+                         "fit_status":  "ILLUSTRATIVE",
+                         "matched_type":  "SOAP_ROSE",
+                         "source_url":  "https://www.pexels.com/photo/elegant-bouquet-with-soap-flowers-and-dried-accents-37048655/",
+                         "author":  "Ayşe Ergül",
+                         "license":  "PEXELS-LICENSE",
+                         "license_url":  "https://www.pexels.com/license/",
+                         "attribution":  "Photo by Ayşe Ergül, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
+                         "attribution_required":  false,
+                         "fit_notes":  "Nguồn xác nhận soap roses (hoa hồng xà phòng), phù hợp hoa sáp/hoa hồng sáp. Không đối chiếu màu, số bông, tên mẫu công chúa hay kiểu hộp/bó; chỉ minh họa loại sản phẩm.",
+                         "source_reuse_filename_count":  6,
+                         "source_reuse_reason":  "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+                         "bytes":  77124,
+                         "sha256":  "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a"
+                     }
+                 ],
+    "unused_downloaded_candidates":  [
+                                         36768718,
+                                         6913052,
+                                         30287486,
+                                         15290949,
+                                         36985586,
+                                         6392740,
+                                         2649503,
+                                         802356
+                                     ],
+    "unused_candidate_note":  "A flower-focused calla photo was selected instead of the initial bridal-body composition; fresh baby was not needed after finding dried baby. Generic artificial-rose candidates were not substituted for source-confirmed soap flowers.",
+    "external_limits":  "No Wikimedia image download requests were made; unused previously downloaded licensed Commons images were used. No HTTP 429 was bypassed."
+}

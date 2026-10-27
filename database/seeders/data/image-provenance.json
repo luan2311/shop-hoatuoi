@@ -108,16 +108,43 @@
             "asset_sha256": "eb2b54a18a013f0e541c0affbcf91d87a7505642d611438de1122b4043e341b4"
         },
         "products/dsc05510-1747888898698.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Rashid Jorvee",
+            "license": "CC-BY-SA-4.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Red_Carnations_flower.jpg",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "attribution": "Photo by Rashid Jorvee, Wikimedia Commons, CC-BY-SA-4.0. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN290"
-            ]
+            ],
+            "source_title": "File:Red Carnations flower.jpg",
+            "source_description": "Red Carnations flower",
+            "source_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/Red_Carnations_flower.jpg/960px-Red_Carnations_flower.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "source_sha256": "5de8ae2c1768d579c9a51834d3bbe30796bb09c56afa0fb294f5dfbc5a38a02b",
+            "source_was_cached": true,
+            "attribution_required": true,
+            "license_checked_at": "2026-10-27T07:37:37.2836277Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "CARNATION",
+            "fit_notes": "Ảnh có cẩm chướng rõ nét, đúng loài được nhắc đầu tiên; không đối chiếu màu xanh–trắng hay thành phần hồng môn.",
+            "source_reuse_product_codes": [
+                "PVN290"
+            ],
+            "source_reuse_filename_count": 1,
+            "source_reuse_reason": null,
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "PVN290",
+                    "name": "Bó Hoa “Lời Chúc Bình An” – Cẩm chướng xanh trắng & hồng môn"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "138dd4095f3957cc69b75c5ee575032a1c99ef84eba4d85873323e18b2a72225",
+            "asset_sha256": "138dd4095f3957cc69b75c5ee575032a1c99ef84eba4d85873323e18b2a72225",
+            "same_source_new_filename_count": 1
         },
         "products/dsc06024-1747888666528.jpg": {
             "author": "WikipediaNeko",
@@ -195,29 +222,102 @@
             "asset_sha256": "8658f2ee40cc782fcba78e77a12210ef3bcd9b924805c88a6626bdd80d91235e"
         },
         "products/dsc05950-1747886536759.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Alina Skazka",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/bouquet-of-pink-and-white-roses-and-tulips-20570561/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Alina Skazka, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN276",
                 "PVN244"
-            ]
+            ],
+            "source_title": "bouquet-of-pink-and-white-roses-and-tulips",
+            "source_description": "roses and tulips",
+            "source_download_url": "https://images.pexels.com/photos/20570561/pexels-photo-20570561.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "a9e0ccf8b6b686083634d130c0f2b65d1eb41424f2790e2451edd0e1fe340fb0",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.3065695Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "ROSE_TULIP",
+            "fit_notes": "Ảnh có cả tulip và hoa hồng; dùng chung cho PVN276 và PVN244 theo chấp thuận rõ ràng của người dùng. Không xác minh đúng SKU.",
+            "source_reuse_product_codes": [
+                "PVN276",
+                "PVN244"
+            ],
+            "source_reuse_filename_count": 1,
+            "source_reuse_reason": null,
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "PVN276",
+                    "name": "Bó Hoa Tulip Trắng – Thanh Khiết Tinh Khôi"
+                },
+                {
+                    "code": "PVN244",
+                    "name": "💖 Bó Hoa Pastel Hồng – Ngọt Ngào Như Lời Tỏ Tình"
+                }
+            ],
+            "shared_mixed_flower_approval": "User explicitly approved a shared image containing roses and tulips for PVN276/PVN244.",
+            "sha256": "369133be50295efd086cce7fe6a4e599098ceae2b490ef914c8fcf6fffbc2840",
+            "asset_sha256": "369133be50295efd086cce7fe6a4e599098ceae2b490ef914c8fcf6fffbc2840",
+            "same_source_new_filename_count": 1
         },
         "products/9f919d1b-c620-44eb-8a81-9ede8e0ece25-d158250d-fb63-4621-9dfa-3f935779ad36.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "kevin yung",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H63"
-            ]
+            ],
+            "source_title": "elegant-floral-arrangement-on-artistic-stand",
+            "source_description": "roses and greenery on a stand",
+            "source_download_url": "https://images.pexels.com/photos/36766847/pexels-photo-36766847.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "6c6596d803f33a01af9c010af6fb7d6f0ac231369a40f7e31d396c1cbc05304a",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.3216065Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "FLOWER_STAND",
+            "fit_notes": "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+            "source_reuse_product_codes": [
+                "H63",
+                "H194",
+                "PVN209",
+                "H129",
+                "PVN285",
+                "H130",
+                "H143",
+                "PVN207",
+                "H86",
+                "PVN188",
+                "H71",
+                "H101",
+                "H61",
+                "H58",
+                "H50"
+            ],
+            "source_reuse_filename_count": 11,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H63",
+                    "name": "Kệ hoa Khai Trương/Chúc Mừng mini SP000091"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "asset_sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "same_source_new_filename_count": 11
         },
         "products/1800-2-1722653563019.jpg": {
             "role": "illustration",
@@ -268,128 +368,554 @@
             "asset_sha256": "0e24d8619aa0404b1fc6691cf775e559e8ffed8df71df12c59673b137afdc717"
         },
         "products/ea3d5ac32f1f48929e21de1702ffe5-jpeg-1722654141569.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "kevin yung",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H194"
-            ]
+            ],
+            "source_title": "elegant-floral-arrangement-on-artistic-stand",
+            "source_description": "roses and greenery on a stand",
+            "source_download_url": "https://images.pexels.com/photos/36766847/pexels-photo-36766847.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "6c6596d803f33a01af9c010af6fb7d6f0ac231369a40f7e31d396c1cbc05304a",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.3366036Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "FLOWER_STAND",
+            "fit_notes": "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+            "source_reuse_product_codes": [
+                "H63",
+                "H194",
+                "PVN209",
+                "H129",
+                "PVN285",
+                "H130",
+                "H143",
+                "PVN207",
+                "H86",
+                "PVN188",
+                "H71",
+                "H101",
+                "H61",
+                "H58",
+                "H50"
+            ],
+            "source_reuse_filename_count": 11,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H194",
+                    "name": "Kệ hoa chúc mừng"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "asset_sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "same_source_new_filename_count": 11
         },
         "products/74f67376-3ef8-4846-8b7d-6645cede93cc-bce2fad8-7ad4-4d5e-b3a5-77b5e409b459.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "kevin yung",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN209",
                 "H129"
-            ]
+            ],
+            "source_title": "elegant-floral-arrangement-on-artistic-stand",
+            "source_description": "roses and greenery on a stand",
+            "source_download_url": "https://images.pexels.com/photos/36766847/pexels-photo-36766847.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "6c6596d803f33a01af9c010af6fb7d6f0ac231369a40f7e31d396c1cbc05304a",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.3519807Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "FLOWER_STAND",
+            "fit_notes": "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+            "source_reuse_product_codes": [
+                "H63",
+                "H194",
+                "PVN209",
+                "H129",
+                "PVN285",
+                "H130",
+                "H143",
+                "PVN207",
+                "H86",
+                "PVN188",
+                "H71",
+                "H101",
+                "H61",
+                "H58",
+                "H50"
+            ],
+            "source_reuse_filename_count": 11,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "PVN209",
+                    "name": "Kệ hoa chúc mừng,lẳng hoa khai tương"
+                },
+                {
+                    "code": "H129",
+                    "name": "Kệ hoa khai trương vàng phối giấy xanh SP000070"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "asset_sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "same_source_new_filename_count": 11
         },
         "products/kt2a5650-1747887004846.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "kevin yung",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN285"
-            ]
+            ],
+            "source_title": "elegant-floral-arrangement-on-artistic-stand",
+            "source_description": "roses and greenery on a stand",
+            "source_download_url": "https://images.pexels.com/photos/36766847/pexels-photo-36766847.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "6c6596d803f33a01af9c010af6fb7d6f0ac231369a40f7e31d396c1cbc05304a",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.3699815Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "FLOWER_STAND",
+            "fit_notes": "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+            "source_reuse_product_codes": [
+                "H63",
+                "H194",
+                "PVN209",
+                "H129",
+                "PVN285",
+                "H130",
+                "H143",
+                "PVN207",
+                "H86",
+                "PVN188",
+                "H71",
+                "H101",
+                "H61",
+                "H58",
+                "H50"
+            ],
+            "source_reuse_filename_count": 11,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "PVN285",
+                    "name": "Kệ Hoa Khai Trương đỏ – hồng pastel Hồng Phát Rực Rỡ"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "asset_sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "same_source_new_filename_count": 11
         },
         "products/74286e4d90904bac802010454bc6aa-1722654044948.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "kevin yung",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H130"
-            ]
+            ],
+            "source_title": "elegant-floral-arrangement-on-artistic-stand",
+            "source_description": "roses and greenery on a stand",
+            "source_download_url": "https://images.pexels.com/photos/36766847/pexels-photo-36766847.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "6c6596d803f33a01af9c010af6fb7d6f0ac231369a40f7e31d396c1cbc05304a",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.3866284Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "FLOWER_STAND",
+            "fit_notes": "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+            "source_reuse_product_codes": [
+                "H63",
+                "H194",
+                "PVN209",
+                "H129",
+                "PVN285",
+                "H130",
+                "H143",
+                "PVN207",
+                "H86",
+                "PVN188",
+                "H71",
+                "H101",
+                "H61",
+                "H58",
+                "H50"
+            ],
+            "source_reuse_filename_count": 11,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H130",
+                    "name": "Kệ hoa khai trương SP000071"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "asset_sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "same_source_new_filename_count": 11
         },
         "products/0545951168fa4ff79b779abbc65e74-jpeg-1722654059820.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "kevin yung",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H143"
-            ]
+            ],
+            "source_title": "elegant-floral-arrangement-on-artistic-stand",
+            "source_description": "roses and greenery on a stand",
+            "source_download_url": "https://images.pexels.com/photos/36766847/pexels-photo-36766847.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "6c6596d803f33a01af9c010af6fb7d6f0ac231369a40f7e31d396c1cbc05304a",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.4045036Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "FLOWER_STAND",
+            "fit_notes": "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+            "source_reuse_product_codes": [
+                "H63",
+                "H194",
+                "PVN209",
+                "H129",
+                "PVN285",
+                "H130",
+                "H143",
+                "PVN207",
+                "H86",
+                "PVN188",
+                "H71",
+                "H101",
+                "H61",
+                "H58",
+                "H50"
+            ],
+            "source_reuse_filename_count": 11,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H143",
+                    "name": "Kệ hoa khai trương,chúc mừng"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "asset_sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "same_source_new_filename_count": 11
         },
         "products/318c355a-9602-499d-8a1d-df5ca6b419e2-6c459fe6-7e15-45ad-ba7b-feaa00621f1f.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "kevin yung",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN207",
                 "H86"
-            ]
+            ],
+            "source_title": "elegant-floral-arrangement-on-artistic-stand",
+            "source_description": "roses and greenery on a stand",
+            "source_download_url": "https://images.pexels.com/photos/36766847/pexels-photo-36766847.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "6c6596d803f33a01af9c010af6fb7d6f0ac231369a40f7e31d396c1cbc05304a",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.4215818Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "FLOWER_STAND",
+            "fit_notes": "Ảnh kệ hoa phối dùng minh họa chung PVN207/H86; khác kiểu kệ/giỏ không phải xung đột loài hoa theo tiêu chí đã chốt.",
+            "source_reuse_product_codes": [
+                "H63",
+                "H194",
+                "PVN209",
+                "H129",
+                "PVN285",
+                "H130",
+                "H143",
+                "PVN207",
+                "H86",
+                "PVN188",
+                "H71",
+                "H101",
+                "H61",
+                "H58",
+                "H50"
+            ],
+            "source_reuse_filename_count": 11,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "PVN207",
+                    "name": "Kệ hoa khai trương,lẳng hoa chúc mừng"
+                },
+                {
+                    "code": "H86",
+                    "name": "Giỏ hoa khai trương SP000023"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "asset_sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "same_source_new_filename_count": 11
         },
         "products/41fb9b0c-94c4-448b-9934-0550c78e818a-c0598f5b-22f8-4316-8da5-9243db90f0ea.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "kevin yung",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN188"
-            ]
+            ],
+            "source_title": "elegant-floral-arrangement-on-artistic-stand",
+            "source_description": "roses and greenery on a stand",
+            "source_download_url": "https://images.pexels.com/photos/36766847/pexels-photo-36766847.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "6c6596d803f33a01af9c010af6fb7d6f0ac231369a40f7e31d396c1cbc05304a",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.4390610Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "FLOWER_STAND",
+            "fit_notes": "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+            "source_reuse_product_codes": [
+                "H63",
+                "H194",
+                "PVN209",
+                "H129",
+                "PVN285",
+                "H130",
+                "H143",
+                "PVN207",
+                "H86",
+                "PVN188",
+                "H71",
+                "H101",
+                "H61",
+                "H58",
+                "H50"
+            ],
+            "source_reuse_filename_count": 11,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "PVN188",
+                    "name": "Kệ hoa khai trương,lẳng hoa chúc mừng"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "asset_sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "same_source_new_filename_count": 11
         },
         "products/66268d10bd3748599235ea425d9059-1722653592009.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "kevin yung",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H71",
                 "H101"
-            ]
+            ],
+            "source_title": "elegant-floral-arrangement-on-artistic-stand",
+            "source_description": "roses and greenery on a stand",
+            "source_download_url": "https://images.pexels.com/photos/36766847/pexels-photo-36766847.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "6c6596d803f33a01af9c010af6fb7d6f0ac231369a40f7e31d396c1cbc05304a",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.4590478Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "FLOWER_STAND",
+            "fit_notes": "Ảnh kệ hoa có hoa hồng: phù hợp H71 (kệ hoa) và H101 (hoa hồng). Kiểu hộp không phải điều kiện đối chiếu theo tiêu chí mới.",
+            "source_reuse_product_codes": [
+                "H63",
+                "H194",
+                "PVN209",
+                "H129",
+                "PVN285",
+                "H130",
+                "H143",
+                "PVN207",
+                "H86",
+                "PVN188",
+                "H71",
+                "H101",
+                "H61",
+                "H58",
+                "H50"
+            ],
+            "source_reuse_filename_count": 11,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H71",
+                    "name": "Kệ hoa khai trương/chúc mừng SP000008"
+                },
+                {
+                    "code": "H101",
+                    "name": "Hộp hoa Hồng SP000039"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "asset_sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "same_source_new_filename_count": 11
         },
         "products/1100-1722653577560.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "kevin yung",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H61",
                 "H58"
-            ]
+            ],
+            "source_title": "elegant-floral-arrangement-on-artistic-stand",
+            "source_description": "roses and greenery on a stand",
+            "source_download_url": "https://images.pexels.com/photos/36766847/pexels-photo-36766847.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "6c6596d803f33a01af9c010af6fb7d6f0ac231369a40f7e31d396c1cbc05304a",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.4900708Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "FLOWER_STAND",
+            "fit_notes": "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+            "source_reuse_product_codes": [
+                "H63",
+                "H194",
+                "PVN209",
+                "H129",
+                "PVN285",
+                "H130",
+                "H143",
+                "PVN207",
+                "H86",
+                "PVN188",
+                "H71",
+                "H101",
+                "H61",
+                "H58",
+                "H50"
+            ],
+            "source_reuse_filename_count": 11,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H61",
+                    "name": "Kệ hoa khai trương/chúc mừng sp000093"
+                },
+                {
+                    "code": "H58",
+                    "name": "Kệ hoa khai trương/chúc mừng SP000097"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "asset_sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "same_source_new_filename_count": 11
         },
         "products/1800-5-1722653851361.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "kevin yung",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-floral-arrangement-on-artistic-stand-36766847/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by kevin yung, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H50"
-            ]
+            ],
+            "source_title": "elegant-floral-arrangement-on-artistic-stand",
+            "source_description": "roses and greenery on a stand",
+            "source_download_url": "https://images.pexels.com/photos/36766847/pexels-photo-36766847.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "6c6596d803f33a01af9c010af6fb7d6f0ac231369a40f7e31d396c1cbc05304a",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.5060739Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "FLOWER_STAND",
+            "fit_notes": "Ảnh thể hiện kệ hoa đứng có hoa phối, phù hợp loại sản phẩm kệ hoa; tên không chỉ định loài nên không tự suy ra thành phần hay SKU.",
+            "source_reuse_product_codes": [
+                "H63",
+                "H194",
+                "PVN209",
+                "H129",
+                "PVN285",
+                "H130",
+                "H143",
+                "PVN207",
+                "H86",
+                "PVN188",
+                "H71",
+                "H101",
+                "H61",
+                "H58",
+                "H50"
+            ],
+            "source_reuse_filename_count": 11,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H50",
+                    "name": "Kệ hoa tươi khai trương/chúc mừng SP000105"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "asset_sha256": "7fe034e03270b55d227c8e2a54533e6dc9dcd00c47388ce7283000ecc2e5a629",
+            "same_source_new_filename_count": 11
         },
         "products/dsc05924-1747883847164.jpg": {
             "role": "illustration",
@@ -436,16 +962,44 @@
             "asset_sha256": "8790ff3af7270647050cbce0edc1d3ee07797b8b90554ffb7e0fc9fbf83acbb0"
         },
         "products/bbd87433-2175-413f-bc06-9f9f0d69a1f4-0769bbe2-5681-4978-af04-54803a4cb567.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Nur Yilmaz",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/beautiful-bouquet-of-soap-flowers-in-basket-32434555/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Nur Yilmaz, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN222"
-            ]
+            ],
+            "source_title": "beautiful-bouquet-of-soap-flowers-in-basket",
+            "source_description": null,
+            "source_download_url": "https://images.pexels.com/photos/32434555/pexels-photo-32434555.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "bc5a7f8ae66e11929bd93eedeea2e38ca9d37693a757152be667347521cfc2fd",
+            "source_was_cached": true,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.5150743Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "SOAP_ROSE",
+            "fit_notes": "Nguồn xác nhận soap flowers, có hoa hồng trong giỏ. Dùng minh họa hoa sáp/hồng; không đối chiếu màu hồng–xanh hoặc thiết kế. Tái sử dụng nguồn đã kiểm tra của PVN217; không sửa ảnh hay metadata PVN217.",
+            "source_reuse_product_codes": [
+                "PVN222",
+                "PVN217"
+            ],
+            "source_reuse_filename_count": 2,
+            "source_reuse_reason": "Intentional demo reuse of the licensed soap-flower basket source already used by PVN217. PVN222 has the same soap/rose product family; colors and exact design are outside the matching criteria. The existing PVN217 asset and metadata are preserved.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "PVN222",
+                    "name": "Giỏ Hoa Sáp Hồng – Xanh Dương: Chúc Mừng Trọng Thị & Sang Trọng Lịch Lãm"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "07dcd93a14e73005925486724b68b48d7efb0fc6ca95ef03ce82fe63997d9f0d",
+            "asset_sha256": "07dcd93a14e73005925486724b68b48d7efb0fc6ca95ef03ce82fe63997d9f0d",
+            "same_source_new_filename_count": 1
         },
         "products/506fec83-7c0c-4c95-934c-380b7c3fe0ff-25ffd02a-9702-46a4-9df9-8539b0fb8268.jpg": {
             "role": "illustration",
@@ -552,16 +1106,43 @@
             "asset_sha256": "b3c884ed2a11dfeefa4a19eb8591fa86d2723a72a0d2f7b4bce0d583a5f36943"
         },
         "products/b6d8c5f2-6953-461c-9586-e4620db6920a-357cc108-cd54-4cdb-93e3-4fa5f9e9ded2.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Lizzie amianyuhua",
+            "license": "CC0-1.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Pink_carnation_bouquets_(Unsplash).jpg",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attribution": "Photo by Lizzie amianyuhua, Wikimedia Commons, CC0-1.0. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H03"
-            ]
+            ],
+            "source_title": "File:Pink carnation bouquets (Unsplash).jpg",
+            "source_description": "Lizzie 2017-05-09",
+            "source_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Pink_carnation_bouquets_%28Unsplash%29.jpg/960px-Pink_carnation_bouquets_%28Unsplash%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "source_sha256": "bd062ab2da2842190f3660781a225c25adba0ef3c26784891d5569c383aecb86",
+            "source_was_cached": true,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.5230721Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "CARNATION",
+            "fit_notes": "Ảnh có cẩm chướng (phăng), đúng loại được nhắc đầu tiên trong tên; không yêu cầu đồng thời cát tường, ly, hồng kem và tú cầu.",
+            "source_reuse_product_codes": [
+                "H03"
+            ],
+            "source_reuse_filename_count": 1,
+            "source_reuse_reason": null,
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H03",
+                    "name": "Giỏ hoa Phăng/Cát Tường mix hoa ly,hồng kem tú cầu"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "9236ce4cde71a73eaf3c6bf2a82b47ce58cab614c550e0957773703bde80a969",
+            "asset_sha256": "9236ce4cde71a73eaf3c6bf2a82b47ce58cab614c550e0957773703bde80a969",
+            "same_source_new_filename_count": 1
         },
         "products/5f956891d7cc47ad8b55520889bf75-1722653587944.jpg": {
             "role": "illustration",
@@ -652,16 +1233,43 @@
             "asset_sha256": "1a3dedd95e9a2f453fb5a2936cd87ead079dff4f30c9942dc87ad6738e6bf5cc"
         },
         "products/1b8594947c8b4fec91d72681aa350a-jpeg-1722654110593.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "CHOICE FLOWERS M",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/hydrangea-flowers-in-a-basket-13205236/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by CHOICE FLOWERS M, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H167"
-            ]
+            ],
+            "source_title": "hydrangea-flowers-in-a-basket",
+            "source_description": null,
+            "source_download_url": "https://images.pexels.com/photos/13205236/pexels-photo-13205236.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "653e6c9626f7acc03597efe0b12adedc662bbb33e34f699e3628a19e84291515",
+            "source_was_cached": true,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.5330728Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "HYDRANGEA",
+            "fit_notes": "Ảnh thể hiện cẩm tú cầu rõ nét; đúng loài hoa chính. Không đối chiếu kiểu giỏ/hộp hoặc màu.",
+            "source_reuse_product_codes": [
+                "H167"
+            ],
+            "source_reuse_filename_count": 1,
+            "source_reuse_reason": null,
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H167",
+                    "name": "Hộp hoa tú cầu"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "9c914f1f5449e12d1c339a4a3db7a64e950a68840c14869f613210d5c1a84741",
+            "asset_sha256": "9c914f1f5449e12d1c339a4a3db7a64e950a68840c14869f613210d5c1a84741",
+            "same_source_new_filename_count": 1
         },
         "products/dsc05989-1747886576924.jpg": {
             "role": "illustration",
@@ -792,16 +1400,43 @@
             "asset_sha256": "9664ebf7e357290cf8b12d72ff1301062d616cc8ee06f87d1be31819a765a593"
         },
         "products/433091b3480b44fe9a14366dd4c80f-1722653618377.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Nârince",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/white-flower-on-white-textile-13832389/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Nârince, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H81"
-            ]
+            ],
+            "source_title": "White Flower Bouquet on White Textile",
+            "source_description": "Bouquet of white calla lilies on white textile; flowers visible without a person.",
+            "source_download_url": "https://images.pexels.com/photos/13832389/pexels-photo-13832389.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "1284618799f8241d0f3f5bfd7ad703d1b07120f2d85d116536acd399f97b4cb5",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T08:06:04.7058173Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "CALLA",
+            "fit_notes": "Ảnh có calla/cally, đúng loại được nhắc đầu tiên; không yêu cầu đồng thời tulip hoặc đúng mẫu cưới/SKU.",
+            "source_reuse_product_codes": [
+                "H81"
+            ],
+            "source_reuse_filename_count": 1,
+            "source_reuse_reason": null,
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H81",
+                    "name": "Hoa cưới cally mix tulip SP000018"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "same_source_new_filename_count": 1,
+            "sha256": "6013b9892ab0827dc3e80fc8dcd5af7c535578d13cefafb14082ca7cbb8a030b",
+            "asset_sha256": "6013b9892ab0827dc3e80fc8dcd5af7c535578d13cefafb14082ca7cbb8a030b"
         },
         "products/4ddb74ef20284b879bf639141e7bfe-1722653682470.jpg": {
             "role": "illustration",
@@ -896,64 +1531,207 @@
             "asset_sha256": "b84f31f85e0894c5f288ce48f9502b85d7e6e6fa742d43e4818bddf7af3566fb"
         },
         "products/930b0ba7ba0e4314bad0ad58c624c0-1722654030131.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Jebulon",
+            "license": "CC0-1.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Bunch_tulip_Paris_2011.jpg",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attribution": "Photo by Jebulon, Wikimedia Commons, CC0-1.0. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H114"
-            ]
+            ],
+            "source_title": "File:Bunch tulip Paris 2011.jpg",
+            "source_description": "Bunch of tulip cultivars, by a florist, in Paris",
+            "source_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Bunch_tulip_Paris_2011.jpg/960px-Bunch_tulip_Paris_2011.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "source_sha256": "629f172159ffa39bb1d8ce30f509821061d066b6bd48a6634c2452b797e660a9",
+            "source_was_cached": true,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.5517313Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "TULIP",
+            "fit_notes": "Ảnh tulip đúng loài được nhắc đầu tiên; không yêu cầu có thêm calla hay đúng màu/kiểu cưới.",
+            "source_reuse_product_codes": [
+                "H114"
+            ],
+            "source_reuse_filename_count": 1,
+            "source_reuse_reason": null,
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H114",
+                    "name": "Hoa cưới tulip mix cally hồng SP000052"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "a6feb86db9133f28c0cf0200223e09e47326c7981bee19286ad2cbd648b11877",
+            "asset_sha256": "a6feb86db9133f28c0cf0200223e09e47326c7981bee19286ad2cbd648b11877",
+            "same_source_new_filename_count": 1
         },
         "products/18daf2561f4e4786a69b02ea7acf90-1722654032459.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Marta Borowiecka",
+            "license": "CC0-1.0",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Tulip_Bouquet_(141139731).jpeg",
+            "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "attribution": "Photo by Marta Borowiecka, Wikimedia Commons, CC0-1.0. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H116"
-            ]
+            ],
+            "source_title": "File:Tulip Bouquet (141139731).jpeg",
+            "source_description": "500px provided description: White tulips bouquet [#flowers ,#beauty ,#spring ,#nature ,#flower ,#beautiful ,#plant ,#white ,#green ,#garden ,#purple ,#bouquet ,#room ,#tulips ,#birthday ,#anniversary ,#brunch]",
+            "source_download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Tulip_Bouquet_%28141139731%29.jpeg/960px-Tulip_Bouquet_%28141139731%29.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+            "source_sha256": "5c9732105ed0ab3f406ba690fedd7353dea7092137624c58691ab98a69299e1f",
+            "source_was_cached": true,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.5607250Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "TULIP",
+            "fit_notes": "Ảnh tulip đúng loài được nhắc đầu tiên; không đối chiếu calla, bình/bó hoặc SKU.",
+            "source_reuse_product_codes": [
+                "H116"
+            ],
+            "source_reuse_filename_count": 1,
+            "source_reuse_reason": null,
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H116",
+                    "name": "Hoa cưới tulip mix cally SP000054"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "6ea4602f7bff2fc9eee181ce6f8dc781405bc18db46dc3bbb2140446fb03f4e4",
+            "asset_sha256": "6ea4602f7bff2fc9eee181ce6f8dc781405bc18db46dc3bbb2140446fb03f4e4",
+            "same_source_new_filename_count": 1
         },
         "products/182c9b79-e156-4073-bea2-8d7e33be6e0b.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Rumeysa Sürücüoğlu",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/colorful-handmade-soap-flowers-on-wooden-table-34241268/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Rumeysa Sürücüoğlu, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H229"
-            ]
+            ],
+            "source_title": "colorful-handmade-soap-flowers-on-wooden-table",
+            "source_description": "handmade soap flowers",
+            "source_download_url": "https://images.pexels.com/photos/34241268/pexels-photo-34241268.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "a99cc66ce2a47b854792b9096abaefe4f313d39f4f0288a31fea19a033401d38",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.5729546Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "SOAP_FLOWERS",
+            "fit_notes": "Nguồn xác nhận hoa xà phòng/soap flowers, phù hợp loại hoa sáp demo; tên không chỉ định loài. Không đối chiếu màu, số bông hoặc kiểu bó.",
+            "source_reuse_product_codes": [
+                "H229",
+                "H228",
+                "PVN215",
+                "PVN212",
+                "H169"
+            ],
+            "source_reuse_filename_count": 5,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H229",
+                    "name": "Bó Hoa Sáp Xanh Pastel 20 Bông – Tươi Mát & Ấn Tượng Lâu Dài"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "e8ad48f2bb8b61fdd219b86fa43fcb5b8af6b3c7b022c5632a549599a7b7c507",
+            "asset_sha256": "e8ad48f2bb8b61fdd219b86fa43fcb5b8af6b3c7b022c5632a549599a7b7c507",
+            "same_source_new_filename_count": 5
         },
         "products/910bfaa5-64d4-4545-b039-dcafda3a3bde.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Rumeysa Sürücüoğlu",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/colorful-handmade-soap-flowers-on-wooden-table-34241268/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Rumeysa Sürücüoğlu, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H228"
-            ]
+            ],
+            "source_title": "colorful-handmade-soap-flowers-on-wooden-table",
+            "source_description": "handmade soap flowers",
+            "source_download_url": "https://images.pexels.com/photos/34241268/pexels-photo-34241268.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "a99cc66ce2a47b854792b9096abaefe4f313d39f4f0288a31fea19a033401d38",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.5849554Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "SOAP_FLOWERS",
+            "fit_notes": "Nguồn xác nhận hoa xà phòng/soap flowers, phù hợp loại hoa sáp demo; tên không chỉ định loài. Không đối chiếu màu, số bông hoặc kiểu bó.",
+            "source_reuse_product_codes": [
+                "H229",
+                "H228",
+                "PVN215",
+                "PVN212",
+                "H169"
+            ],
+            "source_reuse_filename_count": 5,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H228",
+                    "name": "Bó Hoa Sáp Xanh Pastel – Đẳng Cấp & Trường Tồn Như Tình Yêu Lâu Dài"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "e8ad48f2bb8b61fdd219b86fa43fcb5b8af6b3c7b022c5632a549599a7b7c507",
+            "asset_sha256": "e8ad48f2bb8b61fdd219b86fa43fcb5b8af6b3c7b022c5632a549599a7b7c507",
+            "same_source_new_filename_count": 5
         },
         "products/7d977015-f660-468e-aa92-6d1e55b2b6f6-8b98c7f4-cb5d-41a7-a080-a33a20c779d2.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Hasan Gulec",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-dry-flowers-10819681/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Hasan Gulec, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN227"
-            ]
+            ],
+            "source_title": "close-up-shot-of-a-person-holding-dry-flowers",
+            "source_description": "dried Gypsophila / baby's breath",
+            "source_download_url": "https://images.pexels.com/photos/10819681/pexels-photo-10819681.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "b60b58f13113a8b29005b5b994b3c49e7434c217087026450a0acb325cd573f1",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.6308977Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "GYPSOPHILA_DRY",
+            "fit_notes": "Nguồn mô tả baby's breath/Gypsophila khô, phù hợp hoa bi/baby khô; không đối chiếu màu đỏ hoặc kiểu bó.",
+            "source_reuse_product_codes": [
+                "PVN227"
+            ],
+            "source_reuse_filename_count": 1,
+            "source_reuse_reason": null,
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "PVN227",
+                    "name": "Bó Hoa Bi Khô Đỏ – Cá Tính & Ấn Tượng Khó Phai"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "c8be25315d4d7fb6611fef3beb0c40ce81c5a3221f88aace7e348f457f499a6b",
+            "asset_sha256": "c8be25315d4d7fb6611fef3beb0c40ce81c5a3221f88aace7e348f457f499a6b",
+            "same_source_new_filename_count": 1
         },
         "products/baa89f99-77ee-4e14-93f3-b44c8ce4e239.jpg": {
             "role": "illustration",
@@ -972,16 +1750,48 @@
             "asset_sha256": "31bb401854ea40cd6e4a5d1cdbadfceccedc439ab4cbd0dc704e25845114a16d"
         },
         "products/d08a4678-d17f-4282-b3ec-d49a89df7a6b-815ce74d-dafe-47f3-acdf-bcc347d4a3b8.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Ayşe Ergül",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-bouquet-with-soap-flowers-and-dried-accents-37048655/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Ayşe Ergül, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN226"
-            ]
+            ],
+            "source_title": "elegant-bouquet-with-soap-flowers-and-dried-accents",
+            "source_description": "soap roses and dried flowers",
+            "source_download_url": "https://images.pexels.com/photos/37048655/pexels-photo-37048655.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "56fa44a7a8092d62535cd4ac181a84b298d28c97e39b1c6d5b83b212ca4c95b1",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.6434625Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "SOAP_ROSE",
+            "fit_notes": "Nguồn xác nhận soap roses (hoa hồng xà phòng), phù hợp hoa sáp/hoa hồng sáp. Không đối chiếu màu, số bông, tên mẫu công chúa hay kiểu hộp/bó; chỉ minh họa loại sản phẩm.",
+            "source_reuse_product_codes": [
+                "PVN226",
+                "H105",
+                "H106",
+                "H119",
+                "H142",
+                "H170"
+            ],
+            "source_reuse_filename_count": 6,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "PVN226",
+                    "name": "Bó Hoa Sáp Hồng Đậm – “Every Love You” – Đậm Đà & Lâu Bền Như Tình Yêu"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a",
+            "asset_sha256": "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a",
+            "same_source_new_filename_count": 6
         },
         "products/7fd0929e-bf94-41a9-bb82-650c9b33ba9f-acb9e454-4c9d-4829-a72d-0a9dbf6cd728.jpg": {
             "role": "illustration",
@@ -1006,16 +1816,47 @@
             "asset_sha256": "07dcd93a14e73005925486724b68b48d7efb0fc6ca95ef03ce82fe63997d9f0d"
         },
         "products/a14f549b-3383-4cf2-b11d-9494f8a78588-e2279fa4-2996-4b49-a40d-9b81a5bfe86e.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Rumeysa Sürücüoğlu",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/colorful-handmade-soap-flowers-on-wooden-table-34241268/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Rumeysa Sürücüoğlu, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN215"
-            ]
+            ],
+            "source_title": "colorful-handmade-soap-flowers-on-wooden-table",
+            "source_description": "handmade soap flowers",
+            "source_download_url": "https://images.pexels.com/photos/34241268/pexels-photo-34241268.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "a99cc66ce2a47b854792b9096abaefe4f313d39f4f0288a31fea19a033401d38",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.5989572Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "SOAP_FLOWERS",
+            "fit_notes": "Nguồn xác nhận hoa xà phòng/soap flowers, phù hợp loại hoa sáp demo; tên không chỉ định loài. Không đối chiếu màu, số bông hoặc kiểu bó.",
+            "source_reuse_product_codes": [
+                "H229",
+                "H228",
+                "PVN215",
+                "PVN212",
+                "H169"
+            ],
+            "source_reuse_filename_count": 5,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "PVN215",
+                    "name": "Bó hoa sáp xanh ngọc"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "e8ad48f2bb8b61fdd219b86fa43fcb5b8af6b3c7b022c5632a549599a7b7c507",
+            "asset_sha256": "e8ad48f2bb8b61fdd219b86fa43fcb5b8af6b3c7b022c5632a549599a7b7c507",
+            "same_source_new_filename_count": 5
         },
         "products/2e19fd6b-d03c-4f86-b590-e50cd6999bce-75c718d3-cd05-476b-a135-ca73ac3c8167.jpg": {
             "role": "illustration",
@@ -1050,88 +1891,310 @@
             "asset_sha256": "e3eba30c544461819c3f0587cccdbb8dfde8ac0866a4a6f5e50c5aa6ddb2b8bf"
         },
         "products/4fbabb86-9ff3-4abf-9671-3a9c449928dc-994fab37-c370-4307-bc0c-7d8deb42ca37.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Rumeysa Sürücüoğlu",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/colorful-handmade-soap-flowers-on-wooden-table-34241268/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Rumeysa Sürücüoğlu, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "PVN212"
-            ]
+            ],
+            "source_title": "colorful-handmade-soap-flowers-on-wooden-table",
+            "source_description": "handmade soap flowers",
+            "source_download_url": "https://images.pexels.com/photos/34241268/pexels-photo-34241268.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "a99cc66ce2a47b854792b9096abaefe4f313d39f4f0288a31fea19a033401d38",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.6109534Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "SOAP_FLOWERS",
+            "fit_notes": "Nguồn xác nhận hoa xà phòng/soap flowers, phù hợp loại hoa sáp demo; tên không chỉ định loài. Không đối chiếu màu, số bông hoặc kiểu bó.",
+            "source_reuse_product_codes": [
+                "H229",
+                "H228",
+                "PVN215",
+                "PVN212",
+                "H169"
+            ],
+            "source_reuse_filename_count": 5,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "PVN212",
+                    "name": "Bó hoa sáp mix màu"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "e8ad48f2bb8b61fdd219b86fa43fcb5b8af6b3c7b022c5632a549599a7b7c507",
+            "asset_sha256": "e8ad48f2bb8b61fdd219b86fa43fcb5b8af6b3c7b022c5632a549599a7b7c507",
+            "same_source_new_filename_count": 5
         },
         "products/f905f2b0-e982-4ad8-b463-392acda6ac1b-997fe73e-8e0e-4463-80ea-4c840a4c688f.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Ayşe Ergül",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-bouquet-with-soap-flowers-and-dried-accents-37048655/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Ayşe Ergül, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H105"
-            ]
+            ],
+            "source_title": "elegant-bouquet-with-soap-flowers-and-dried-accents",
+            "source_description": "soap roses and dried flowers",
+            "source_download_url": "https://images.pexels.com/photos/37048655/pexels-photo-37048655.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "56fa44a7a8092d62535cd4ac181a84b298d28c97e39b1c6d5b83b212ca4c95b1",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.6564485Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "SOAP_ROSE",
+            "fit_notes": "Nguồn xác nhận soap roses (hoa hồng xà phòng), phù hợp hoa sáp/hoa hồng sáp. Không đối chiếu màu, số bông, tên mẫu công chúa hay kiểu hộp/bó; chỉ minh họa loại sản phẩm.",
+            "source_reuse_product_codes": [
+                "PVN226",
+                "H105",
+                "H106",
+                "H119",
+                "H142",
+                "H170"
+            ],
+            "source_reuse_filename_count": 6,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H105",
+                    "name": "Bó hoa Hồng sáp bông SP000043"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a",
+            "asset_sha256": "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a",
+            "same_source_new_filename_count": 6
         },
         "products/a8eeb848-6697-4162-a6e8-d3d8e3222338-d93f4830-a55b-4878-ba5b-8ee192a138ef.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Ayşe Ergül",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-bouquet-with-soap-flowers-and-dried-accents-37048655/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Ayşe Ergül, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H106"
-            ]
+            ],
+            "source_title": "elegant-bouquet-with-soap-flowers-and-dried-accents",
+            "source_description": "soap roses and dried flowers",
+            "source_download_url": "https://images.pexels.com/photos/37048655/pexels-photo-37048655.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "56fa44a7a8092d62535cd4ac181a84b298d28c97e39b1c6d5b83b212ca4c95b1",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.6722926Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "SOAP_ROSE",
+            "fit_notes": "Nguồn xác nhận soap roses (hoa hồng xà phòng), phù hợp hoa sáp/hoa hồng sáp. Không đối chiếu màu, số bông, tên mẫu công chúa hay kiểu hộp/bó; chỉ minh họa loại sản phẩm.",
+            "source_reuse_product_codes": [
+                "PVN226",
+                "H105",
+                "H106",
+                "H119",
+                "H142",
+                "H170"
+            ],
+            "source_reuse_filename_count": 6,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H106",
+                    "name": "Hoa Hồng sáp 19 bông"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a",
+            "asset_sha256": "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a",
+            "same_source_new_filename_count": 6
         },
         "products/ff575cda-55bd-4183-96dc-b896b7b763d8-57150620-e2b1-41ef-8e3b-535e0d85a80f.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Ayşe Ergül",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-bouquet-with-soap-flowers-and-dried-accents-37048655/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Ayşe Ergül, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H119"
-            ]
+            ],
+            "source_title": "elegant-bouquet-with-soap-flowers-and-dried-accents",
+            "source_description": "soap roses and dried flowers",
+            "source_download_url": "https://images.pexels.com/photos/37048655/pexels-photo-37048655.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "56fa44a7a8092d62535cd4ac181a84b298d28c97e39b1c6d5b83b212ca4c95b1",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.6832956Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "SOAP_ROSE",
+            "fit_notes": "Nguồn xác nhận soap roses (hoa hồng xà phòng), phù hợp hoa sáp/hoa hồng sáp. Không đối chiếu màu, số bông, tên mẫu công chúa hay kiểu hộp/bó; chỉ minh họa loại sản phẩm.",
+            "source_reuse_product_codes": [
+                "PVN226",
+                "H105",
+                "H106",
+                "H119",
+                "H142",
+                "H170"
+            ],
+            "source_reuse_filename_count": 6,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H119",
+                    "name": "Hoa Hồng sáp công chúa SP000057"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a",
+            "asset_sha256": "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a",
+            "same_source_new_filename_count": 6
         },
         "products/41de3033-7340-4b5d-9bc7-347f9534fabb-e5821c08-239e-4277-ba39-1761943d284f.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Ayşe Ergül",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-bouquet-with-soap-flowers-and-dried-accents-37048655/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Ayşe Ergül, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H142"
-            ]
+            ],
+            "source_title": "elegant-bouquet-with-soap-flowers-and-dried-accents",
+            "source_description": "soap roses and dried flowers",
+            "source_download_url": "https://images.pexels.com/photos/37048655/pexels-photo-37048655.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "56fa44a7a8092d62535cd4ac181a84b298d28c97e39b1c6d5b83b212ca4c95b1",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.6962624Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "SOAP_ROSE",
+            "fit_notes": "Nguồn xác nhận soap roses (hoa hồng xà phòng), phù hợp hoa sáp/hoa hồng sáp. Không đối chiếu màu, số bông, tên mẫu công chúa hay kiểu hộp/bó; chỉ minh họa loại sản phẩm.",
+            "source_reuse_product_codes": [
+                "PVN226",
+                "H105",
+                "H106",
+                "H119",
+                "H142",
+                "H170"
+            ],
+            "source_reuse_filename_count": 6,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H142",
+                    "name": "Hoa sáp công chúa"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a",
+            "asset_sha256": "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a",
+            "same_source_new_filename_count": 6
         },
         "products/e55e643a-4900-4b4c-bbbd-f66406162f32-e2865c77-224d-42fc-a4bf-eb3795c6a163.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Rumeysa Sürücüoğlu",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/colorful-handmade-soap-flowers-on-wooden-table-34241268/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Rumeysa Sürücüoğlu, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H169"
-            ]
+            ],
+            "source_title": "colorful-handmade-soap-flowers-on-wooden-table",
+            "source_description": "handmade soap flowers",
+            "source_download_url": "https://images.pexels.com/photos/34241268/pexels-photo-34241268.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "a99cc66ce2a47b854792b9096abaefe4f313d39f4f0288a31fea19a033401d38",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.6215718Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "SOAP_FLOWERS",
+            "fit_notes": "Nguồn xác nhận hoa xà phòng/soap flowers, phù hợp loại hoa sáp demo; tên không chỉ định loài. Không đối chiếu màu, số bông hoặc kiểu bó.",
+            "source_reuse_product_codes": [
+                "H229",
+                "H228",
+                "PVN215",
+                "PVN212",
+                "H169"
+            ],
+            "source_reuse_filename_count": 5,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H169",
+                    "name": "Bó hoa sáp"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "e8ad48f2bb8b61fdd219b86fa43fcb5b8af6b3c7b022c5632a549599a7b7c507",
+            "asset_sha256": "e8ad48f2bb8b61fdd219b86fa43fcb5b8af6b3c7b022c5632a549599a7b7c507",
+            "same_source_new_filename_count": 5
         },
         "products/0cca8e59-9a9c-4ab2-84ac-d6eb6e70e9a9-0b68cd02-0a34-4152-9b30-271bc2383a04.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Ayşe Ergül",
+            "license": "PEXELS-LICENSE",
+            "source_url": "https://www.pexels.com/photo/elegant-bouquet-with-soap-flowers-and-dried-accents-37048655/",
+            "license_url": "https://www.pexels.com/license/",
+            "attribution": "Photo by Ayşe Ergül, Pexels, PEXELS-LICENSE. Resized/letterboxed to 800x800; illustration label added. Not verified as an exact SKU photo.",
             "verified_product_codes": [],
             "expected_codes": [
                 "H170"
-            ]
+            ],
+            "source_title": "elegant-bouquet-with-soap-flowers-and-dried-accents",
+            "source_description": "soap roses and dried flowers",
+            "source_download_url": "https://images.pexels.com/photos/37048655/pexels-photo-37048655.jpeg?auto=compress&cs=tinysrgb&w=1200",
+            "source_sha256": "56fa44a7a8092d62535cd4ac181a84b298d28c97e39b1c6d5b83b212ca4c95b1",
+            "source_was_cached": false,
+            "attribution_required": false,
+            "license_checked_at": "2026-10-27T07:37:37.7072946Z",
+            "selection_policy": "MAIN_FLOWER_OR_PRODUCT_TYPE_ONLY_DEMO",
+            "matched_type": "SOAP_ROSE",
+            "fit_notes": "Nguồn xác nhận soap roses (hoa hồng xà phòng), phù hợp hoa sáp/hoa hồng sáp. Không đối chiếu màu, số bông, tên mẫu công chúa hay kiểu hộp/bó; chỉ minh họa loại sản phẩm.",
+            "source_reuse_product_codes": [
+                "PVN226",
+                "H105",
+                "H106",
+                "H119",
+                "H142",
+                "H170"
+            ],
+            "source_reuse_filename_count": 6,
+            "source_reuse_reason": "Intentional demo reuse: these filenames describe the same flower/product family; user does not require color, count, decoration or exact SKU. The source image matches that family and is not presented as a unique photograph of each SKU.",
+            "visual_review": "Source photograph inspected for the named flower/product type and watermarks; no source watermark observed.",
+            "comparison_limits": "Color, flower count, wrapping/arrangement style and exact SKU are not verified.",
+            "shared_filename_review": [
+                {
+                    "code": "H170",
+                    "name": "Hộp hoa sáp"
+                }
+            ],
+            "shared_mixed_flower_approval": null,
+            "sha256": "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a",
+            "asset_sha256": "f2d1acaf051ce3515c46d5d4ec8d7d58347ccf86046533af31a0b0fe964ac69a",
+            "same_source_new_filename_count": 6
         },
         "posts/z5968847074391-636bbcd57cd0cb2bdd1b62cb7039fec1.jpg": {
             "role": "illustration",

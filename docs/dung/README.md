@@ -35,18 +35,18 @@ Source thực tế: PHP `^8.3`, Laravel lock `13.37.0`, `mongodb/laravel-mongodb
 
 ### Tình trạng ảnh
 
-Manifest sản phẩm có 80 dòng/74 tên file duy nhất: **0 ảnh xác minh đúng SKU; 43 file minh họa có giấy phép gắn với 44 dòng sản phẩm; 31 filename chưa có ảnh sản phẩm** (36 dòng SKU). Trong 68 filename thiếu ban đầu, đã bổ sung 37 ảnh: 24 ảnh Commons ở lượt trước được giữ nguyên và 13 ảnh Pexels ở lượt tiếp theo. Tất cả chỉ là `ILLUSTRATIVE`. Ba thumbnail bài viết có provenance riêng. Manifest ghi riêng `file_status` (file vật lý, kể cả placeholder), `product_photo_status`, `fit_status`, URL nguồn, tác giả, giấy phép và ghi chú cho từng SKU. Xem [evidence lượt bổ sung 13 ảnh](evidence/product-images-followup-2026-10-27.json) và [provenance ledger](../../database/seeders/data/image-provenance.json).
+Manifest hiện có **80 dòng/74 filename, đủ 74/74 ảnh minh họa, 0 filename thiếu và 0 ảnh xác minh đúng SKU**. Lượt này chỉ điền 31 filename trước đó `MISSING`, dùng 12 ảnh nguồn có giấy phép; giữ nguyên byte ảnh và toàn bộ metadata của 43 filename cũ (44 dòng sản phẩm). Các nhóm dùng lại nguồn cho sản phẩm demo cùng loại có `source_reuse_reason` trong manifest/provenance. Xem [evidence và hash trước/sau](evidence/product-images-main-type-2026-10-27.json), [bản xem nhanh 12 nguồn dùng cho 31 filename](evidence/product-images-main-type-contact-2026-10-27.jpg) và [provenance ledger](../../database/seeders/data/image-provenance.json). [Evidence lượt 13 ảnh](evidence/product-images-followup-2026-10-27.json) giữ nguyên như snapshot lịch sử.
 
-Git cũng lưu template placeholder chung tại `database/seeders/assets/placeholder.jpg`. Runtime hiện còn 31 placeholder cho 31 filename chưa có ảnh sản phẩm; ba ảnh bài viết không còn placeholder. Trường `file_status=EXISTS` chỉ xác nhận file vật lý có mặt, còn `product_photo_status=MISSING` phân biệt placeholder với ảnh hoa. Các filename dùng chung nhưng khác loại sản phẩm/màu sắc tiếp tục thiếu nếu chưa có ảnh phù hợp mọi SKU.
+Runtime không còn placeholder ở 74 filename sản phẩm; template chung `database/seeders/assets/placeholder.jpg` vẫn được giữ. Mọi dòng có `file_status=EXISTS`, `product_photo_status=EXISTS`, `fit_status=ILLUSTRATIVE`; không đánh đồng có file/minh họa với xác minh SKU. Tiêu chí mới chỉ đối chiếu loài hoa chính hoặc loại sản phẩm: kệ hoa dùng ảnh kệ hoa, hoa sáp dùng nguồn xác nhận soap flowers. Màu, số bông, giấy gói, kiểu bó/giỏ/hộp và SKU không phải điều kiện. Filename chung PVN276/PVN244 dùng ảnh có cả tulip và hồng theo chấp thuận của người dùng.
 
-Nguồn ảnh gồm Wikimedia Commons và Pexels. Ảnh Commons giữ giấy phép CC đã ghi trước đó; 13 ảnh Pexels dùng [Pexels License](https://www.pexels.com/license/), cho phép dùng trên website thương mại và chỉnh sửa. Giấy phép này được ghi `PEXELS-LICENSE`, không gán thành CC0/CC BY. Attribution Pexels không bắt buộc nhưng vẫn được lưu đầy đủ. Công cụ ảnh chỉ chấp nhận Pexels ở vai trò minh họa, với URL trang ảnh và URL giấy phép chính thức; ghi chú nêu rõ những thành phần, kiểu dáng hoặc bối cảnh chưa đối chiếu được.
+Nguồn ảnh gồm Wikimedia Commons và Pexels. Ảnh Commons giữ giấy phép CC ghi theo từng file; các filename dùng nguồn Pexels mang [Pexels License](https://www.pexels.com/license/), cho phép dùng trên website thương mại và chỉnh sửa. Giấy phép này được ghi `PEXELS-LICENSE`, không gán thành CC0/CC BY. Attribution Pexels không bắt buộc nhưng vẫn được lưu đầy đủ. Công cụ ảnh chỉ chấp nhận Pexels ở vai trò minh họa, với URL trang ảnh và URL giấy phép chính thức; ghi chú nêu rõ giới hạn đối chiếu và lý do tái sử dụng nguồn.
 
 ## Phần cần tiếp tục phối hợp
 
 | Phạm vi | Trạng thái | Người phối hợp |
 |---|---|---|
 | Dữ liệu và importer trên database test riêng | Có code và kiểm thử; xem kết quả thực tế | Dũng |
-| Ảnh sản phẩm | 43 file minh họa có nguồn/giấy phép, 0 ảnh xác minh đúng SKU; lượt này thêm 13 filename, còn 31 filename thiếu ảnh | Dũng ghi provenance; An xác nhận contract hiển thị ảnh |
+| Ảnh sản phẩm demo | Đủ 74/74 filename minh họa; thêm 31, bảo toàn 43 cũ và metadata; nguồn/giấy phép/ghi chú tái sử dụng đầy đủ | Dũng ghi provenance; An xác nhận contract hiển thị và attribution |
 | Category/Role và quan hệ SQL → MongoDB | Chưa tự chuyển; nhánh Luân chưa tương thích toàn bộ | Luân |
 | Catalog, Product CRUD/upload, search/filter | Chưa có trên nền kiểm chứng | An |
 | Layout cuối, wishlist, liên hệ/Maps, blog | Chưa có trên nền kiểm chứng | Huy |
@@ -57,10 +57,10 @@ Nguồn ảnh gồm Wikimedia Commons và Pexels. Ảnh Commons giữ giấy ph�
 
 | Hạng mục | Trạng thái | Kết quả và dependency |
 |---|---|---|
-| Ảnh sản phẩm | PARTIAL | Giữ nguyên 24 ảnh Commons đã thêm, bổ sung 13 ảnh Pexels có provenance; 0 ảnh xác minh đúng SKU, còn 31 filename thiếu. Không thử lại tải Wikimedia sau HTTP 429; StockSnap/Public Domain Pictures chặn truy cập nên đã dừng. Các ảnh không phù hợp kiểu dáng, chất liệu hoặc SKU dùng chung giữ `MISSING`. |
+| Ảnh minh họa sản phẩm demo | DONE | 74/74 filename có ảnh, 0 thiếu; 31 filename mới là `ILLUSTRATIVE` theo loại hoa/sản phẩm; 43 ảnh cũ và metadata không đổi. 93 hash bảo vệ khớp; 38/38 test, 706 assertions PASS. Không tải lại ảnh Wikimedia sau HTTP 429; dùng các file Commons đã tải hợp lệ. |
 | 3 thumbnail bài viết | PARTIAL | Đã tái sử dụng và cài 3 ảnh CC có ghi attribution; module Posts chỉ có trong ref nhánh Huy, chưa hiển thị được trên checkout hiện tại. |
 | Luồng tích hợp Catalog → Product → Cart → Checkout → History → Admin | BLOCKED | Catalog/Product route chưa có; ref product-search không có trong clone nên chưa thể kiểm thử xuyên suốt. PHPUnit backend riêng đã chạy PASS trên `dungQA`; điều đó không xác nhận Catalog/Admin UI đã tích hợp. |
 | Hai lỗi mobile trang success | PARTIAL | Đã xác định email và bảng sản phẩm; patch đề xuất riêng cho view của Tiến. Chưa áp dụng/chưa chụp lại trên browser. |
 | Full PHPUnit | DONE | 110/110 tests, 2.132 assertions, 0 failures/errors/skips lúc 11:36 +07 ngày 27/10/2026; chạy qua `scripts/test-dung-data.ps1` trên `dungQA` với MongoDB extension được nạp theo process. Evidence: [phpunit-runtime-2026-10-27.json](evidence/phpunit-runtime-2026-10-27.json). |
 
-Không đánh dấu hoàn thành checklist toàn nhóm: ảnh đúng SKU, Catalog/UI và nghiệm thu website hoàn chỉnh còn dependency.
+Phần ảnh minh họa hoàn tất theo tiêu chí demo đã chốt. Catalog/UI và nghiệm thu toàn website vẫn còn phụ thuộc tích hợp; 0 ảnh xác minh SKU được báo riêng và không phải điều kiện của lượt ảnh demo này.
