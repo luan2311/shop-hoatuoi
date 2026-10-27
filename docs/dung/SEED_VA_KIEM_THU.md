@@ -93,7 +93,9 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File scripts/test-dung-data.p
 php vendor/bin/phpunit --filter FlowerDatasetTest
 ```
 
-Launcher đặt URI riêng, sinh APP_KEY tạm trong memory nếu chưa có, rồi khôi phục biến môi trường của process. Test trait bắt buộc APP_ENV testing và database prefix test, mỗi test tạo database `shop_hoatuoi_test_dung_<pid>_<random>` mới. Trait chỉ tạo validators/migrations additive trên DB đó, không migrate database development. DB test được giữ lại để đọc bằng chứng; có thể tích lũy dung lượng, chưa tự dọn.
+Launcher đặt URI QA riêng, sinh APP_KEY tạm trong memory nếu chưa có, rồi khôi phục biến môi trường của process. Nếu có `.runtime/php/mongodb.ini`, launcher đặt `PHP_INI_SCAN_DIR` chỉ cho process PHPUnit để nạp extension MongoDB; không sửa `php.ini` hay cấu hình PHP toàn hệ thống. Test trait bắt buộc APP_ENV testing và database prefix test, mỗi test tạo database `shop_hoatuoi_test_dung_<pid>_<random>` mới. Trait chỉ tạo validators/migrations additive trên DB đó, không migrate database development. DB test được giữ lại để đọc bằng chứng; có thể tích lũy dung lượng, chưa tự dọn.
+
+Lượt full suite PASS ngày 27/10/2026 dùng lệnh: `powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\test-dung-data.ps1 -Filter '.*' -EvidencePath '.runtime/dung-qa/phpunit-recovery-full.xml'`. Kết quả là 110/110 tests, 2.132 assertions, không failure/error/skip; đích là replica set QA `dungQA` trên `127.0.0.1:27028`.
 
 Thiếu extension/server/replica set: tests dữ liệu Mongo ghi SKIP/BLOCKED. Launcher trả exit 2 nếu có test skipped, không coi exit 0 thông thường của PHPUnit là PASS toàn bộ.
 
@@ -101,9 +103,9 @@ Kết quả mặc định ở `.runtime/dung-qa/phpunit.xml`; readback nghiệp 
 
 ## Hình ảnh và xử lý lỗi
 
-Manifest [product-images.json](product-images.json) giữ filename theo source và phân biệt ảnh được commit trong `database/seeders/assets/products` với file runtime trong `storage/app/public/products`. Hiện có **6 ảnh minh họa có attribution/CC BY 4.0 hoặc CC BY-SA 4.0; 0 ảnh được xác minh đúng SKU; còn thiếu 68 ảnh đúng mẫu** trên 74 tên file duy nhất. Mỗi minh họa được chuẩn hóa thành JPEG 800×800, tối đa 350 KB và có dải chữ “ILLUSTRATION – PRODUCT MATCH NOT VERIFIED”. Sáu tên file được hai sản phẩm dùng chung; tên chung không chứng minh hai ảnh là cùng sản phẩm. Ba thumbnail bài viết vẫn thiếu asset có giấy phép.
+Manifest [product-images.json](product-images.json) giữ filename theo source và phân biệt asset trong `database/seeders/assets/products` với file runtime ở `storage/app/public/products`. Có **6 file minh họa có attribution/CC BY 4.0 hoặc CC BY-SA 4.0; 0 ảnh xác minh đúng SKU; 68 tên file sản phẩm còn thiếu** trên 74 tên duy nhất. Minh họa là JPEG 800×800 có dải chữ “ILLUSTRATION – PRODUCT MATCH NOT VERIFIED”. Ba thumbnail bài viết đã được chuẩn bị bằng cách tái sử dụng ảnh Commons có giấy phép; mapping/attribution nằm trong `image-provenance.json`, runtime copy ở `storage/app/public/posts`. Route Posts chưa tích hợp trên nhánh hiện tại, nên chưa browser-verify.
 
-`database/seeders/assets/placeholder.jpg` là template placeholder chung **được commit trong Git**. Thư viện dùng template này cho placeholder runtime; template không phải ảnh hoa hay ảnh sản phẩm. Runtime readback hiện có 68 placeholder cho tên ảnh sản phẩm thiếu asset và 3 placeholder cho thumbnail bài viết. Các con số này tách biệt với 6 ảnh minh họa có giấy phép.
+`database/seeders/assets/placeholder.jpg` là template placeholder chung **được commit trong Git**. Thư viện dùng template này cho placeholder runtime; template không phải ảnh hoa hay ảnh sản phẩm. Readback sau khi cài thumbnail: còn 68 placeholder cho tên ảnh sản phẩm thiếu asset; ba post paths có illustration hợp lệ. Các con số này tách biệt với 6 ảnh minh họa sản phẩm và 3 thumbnail bài viết.
 
 Trên checkout mới, cài asset đã được kiểm tra bằng:
 

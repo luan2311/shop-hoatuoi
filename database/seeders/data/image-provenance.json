@@ -908,40 +908,46 @@
             ]
         },
         "posts/z5968847074391-636bbcd57cd0cb2bdd1b62cb7039fec1.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Missvain (Sarah Stierch)",
+            "license": "CC-BY-4.0",
+            "license_url": "https://creativecommons.org/licenses/by/4.0/",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Birthday_flower_bouquet_-_2021-08-26_-_Sarah_Stierch.jpg",
+            "attribution": "Sarah Stierch (Missvain), Wikimedia Commons, CC BY 4.0; resized and marked as an illustration. Reused unmodified as article thumbnail illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "TT001"
-            ]
+            ],
+            "asset_sha256": "eb2b54a18a013f0e541c0affbcf91d87a7505642d611438de1122b4043e341b4",
+            "sha256": "eb2b54a18a013f0e541c0affbcf91d87a7505642d611438de1122b4043e341b4"
         },
         "posts/z5969155691986-ffc7f601f2164a817f993e795c4d78b3.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "Ninix8",
+            "license": "CC-BY-4.0",
+            "license_url": "https://creativecommons.org/licenses/by/4.0/",
+            "source_url": "https://commons.wikimedia.org/wiki/File:Bouquet_of_Red_Roses.jpg",
+            "attribution": "Ninix8, Wikimedia Commons, CC BY 4.0; resized and marked as an illustration. Reused unmodified as article thumbnail illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "TT002"
-            ]
+            ],
+            "asset_sha256": "367f99f67a45e8dada06ba61cd0cdb01f489b19e9027459e253af43acdfd1b87",
+            "sha256": "367f99f67a45e8dada06ba61cd0cdb01f489b19e9027459e253af43acdfd1b87"
         },
         "posts/cach-bao-quan-hoa-goc-hoa-xinh.jpg": {
-            "role": "placeholder",
-            "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-            "author": "Nhóm dự án; mẫu trung tính do script tạo",
-            "license": "PROJECT-GENERATED",
-            "source_url": "project://scripts/prepare-product-images.php",
-            "attribution": "",
+            "role": "illustration",
+            "author": "PattayaPatrol",
+            "license": "CC-BY-SA-4.0",
+            "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+            "source_url": "https://commons.wikimedia.org/wiki/File:DFC_0794_Bright_bouquet_of_pink_roses_and_a_cheerful_sunflower_arranged_with_greenery_on_a_golden_surface.jpg",
+            "attribution": "PattayaPatrol, Wikimedia Commons, CC BY-SA 4.0; resized and marked as an illustration. Reused unmodified as article thumbnail illustration.",
             "verified_product_codes": [],
             "expected_codes": [
                 "TT003"
-            ]
+            ],
+            "asset_sha256": "d8ea6797edad95cf67b67ee815a97cc7a08cf2994a87920d610c24d7a258aff2",
+            "sha256": "d8ea6797edad95cf67b67ee815a97cc7a08cf2994a87920d610c24d7a258aff2"
         }
     }
 }

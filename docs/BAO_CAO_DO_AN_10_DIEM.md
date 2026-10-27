@@ -3,7 +3,7 @@
 | Thông tin | Giá trị |
 |---|---|
 | Ngày cập nhật | 27/10/2026 |
-| Phạm vi khảo sát | Nhánh feature/testing-docs-seeder, commit f71b010 |
+| Phạm vi khảo sát | Nhánh feature/testing-docs-seeder; local HEAD 2a7b76af, remote-tracking cache f71b010 |
 | Thành viên 5 | Đồng Viết Dũng |
 | Trạng thái | Báo cáo phản ánh code và bằng chứng hiện có; không khẳng định website đã tích hợp đủ rubric hoặc sẵn sàng production. |
 
@@ -11,7 +11,7 @@
 
 Shop Hoa Tươi là ứng dụng Laravel đang chuyển một số module bán hàng sang MongoDB. Nhánh được khảo sát có đăng ký/đăng nhập, hồ sơ, giỏ hàng, checkout, lịch sử đơn hàng và quản lý đơn hàng Admin. Bộ dữ liệu MongoDB mẫu và importer an toàn được xây dựng để hỗ trợ các module này.
 
-Kết quả PHPUnit mới nhất được xác minh là **110 tests, 2.132 assertions, 0 failure, 0 error, 0 skipped**. Kết quả này xác nhận test suite hiện có, không xác nhận Catalog, Product CRUD/upload, wishlist, contact, blog hoặc toàn bộ giao diện đã tích hợp. Trang chủ vẫn trả view Laravel welcome. Ảnh thật đúng SKU và nghiệm thu browser toàn website còn thiếu.
+Full suite gần nhất **PASS 110 tests, 2.132 assertions, 0 failure/error/skip** lúc 11:36 +07 ngày 27/10/2026 trên replica set QA riêng `dungQA` tại `127.0.0.1:27028`. Lượt gọi trực tiếp lúc 11:20 +07 không nạp MongoDB extension và ghi nhận 37 PASS, 700 assertions, 50 ERROR, 23 SKIP; extension 2.5.5 có sẵn trong `.runtime/php` và được nạp thành công bằng `scripts/test-dung-data.ps1` với biến scan chỉ đặt cho process test. Cấu hình PHP toàn hệ thống không đổi. Kết quả kiểm thử không chứng minh Catalog, Product CRUD/upload, wishlist, contact, blog hoặc toàn bộ giao diện đã tích hợp. Trang chủ vẫn trả view Laravel welcome. Ảnh đúng SKU và nghiệm thu browser toàn website còn thiếu.
 
 ## 1. Đề tài và mục tiêu
 
@@ -90,14 +90,14 @@ Manifest có 80 sản phẩm và 74 tên file ảnh duy nhất:
 - **6** file ảnh hoa có license và attribution, đã đóng dấu là minh họa.
 - **0** ảnh được xác minh là đúng SKU.
 - **68** tên ảnh sản phẩm thiếu asset đúng mẫu.
-- **3** thumbnail bài viết chưa có asset có giấy phép.
-- Git có thêm một template placeholder chung tại database/seeders/assets/placeholder.jpg. Template không phải ảnh sản phẩm; runtime có 68 placeholder sản phẩm và 3 placeholder bài viết được tạo từ template.
+- **3/3** thumbnail bài viết đã có file JPEG minh họa có giấy phép, attribution và provenance; Posts chưa tích hợp trên nhánh này nên chưa browser-verify.
+- Git có thêm một template placeholder chung tại `database/seeders/assets/placeholder.jpg`. Template không phải ảnh sản phẩm; runtime còn 68 placeholder sản phẩm. Thumbnails không còn dùng placeholder.
 
 Các số liệu tách biệt trong [product-images.json](dung/product-images.json), [image-audit.json](dung/image-audit.json) và [provenance ledger](../database/seeders/data/image-provenance.json). Tài liệu không xem placeholder hoặc ảnh minh họa là ảnh sản phẩm hoàn chỉnh.
 
 ## 8. Kiểm thử và QA
 
-Lượt PHPUnit mới nhất được ghi nhận ngày 27/10/2026 lúc 10:24 +07:00 trên replica set QA loopback:
+Lượt full-suite PASS gần nhất được ghi nhận ngày 27/10/2026 lúc 11:36 +07:00 trên replica set QA `dungQA` tại `127.0.0.1:27028`, bằng script QA có nạp extension theo process:
 
 | Phạm vi | Tests | Assertions | Failures | Errors | Skips |
 |---|---:|---:|---:|---:|---:|
@@ -105,9 +105,9 @@ Lượt PHPUnit mới nhất được ghi nhận ngày 27/10/2026 lúc 10:24 +07
 | Dữ liệu/seeder/image/sales tích hợp của Dũng | 59 | 1.777 | 0 | 0 | 0 |
 | Hồi quy Auth/Profile/Sales còn lại | 51 | 355 | 0 | 0 | 0 |
 
-JUnit đầy đủ và summary JSON được lưu ở [evidence](dung/evidence/). Bộ test chạy trên database có tiền tố shop_hoatuoi_test_*; kết quả không đại diện dữ liệu production hay database dùng chung.
+JUnit PASS trước đó và summary JSON được lưu ở [evidence](dung/evidence/); JUnit runtime mới nhất được giữ trong `.runtime/dung-qa/phpunit-recovery-full.xml` (được Git ignore), với kết quả và SHA-256 tại [phpunit-runtime-2026-10-27.json](dung/evidence/phpunit-runtime-2026-10-27.json). Launcher chỉ kết nối tới replica set QA loopback `dungQA`, database có tiền tố `shop_hoatuoi_test_`; số DB quan sát tăng 603 lên 675 vì test giữ lại DB riêng. Không có DB nào bị xóa và không ghi vào production hay database dùng chung.
 
-Browser evidence hiện có bao gồm 24 phép đo ở desktop/mobile. Các thao tác đăng ký/giỏ/checkout trong evidence thành công; có hai lỗi tràn ngang ở trang success tại viewport 390 px và 375 px. Browser chưa được chạy lại trong lượt cập nhật tài liệu này. Kết quả browser và hạn chế được ghi riêng trong [QA_KET_QUA.md](dung/QA_KET_QUA.md).
+Browser evidence hiện có bao gồm 24 phép đo ở desktop/mobile. Các thao tác đăng ký/giỏ/checkout trong snapshot cũ thành công; có lỗi email dài và bảng sản phẩm ở trang success tại viewport 390 px/375 px. Lượt này tạo patch đề xuất cho view do Thành viên 3 quản lý nhưng không áp dụng và không chạy lại browser. [QA_KET_QUA.md](dung/QA_KET_QUA.md) và [patch đề xuất](dung/evidence/proposed-orders-success-mobile.patch) ghi rõ kết quả.
 
 ## 9. Hạn chế và phụ thuộc
 
@@ -119,7 +119,7 @@ Browser evidence hiện có bao gồm 24 phép đo ở desktop/mobile. Các thao
 | Hợp nhất route/schema sales và xử lý lỗi mobile đã ghi nhận | Thành viên 3, thành viên sở hữu view và nhóm trưởng |
 | Database QA chung, nhánh tích hợp và quy trình release | Nhóm trưởng |
 
-Ngoài các phụ thuộc trên, 68 ảnh sản phẩm đúng SKU và 3 thumbnail bài viết còn thiếu; phương thức thanh toán mới ghi nhận lựa chọn COD/Banking, chưa có tích hợp cổng thanh toán. DatabaseSeeder và một số ví dụ trong kế hoạch còn theo SQL/pivot, cần giữ tách biệt khỏi MongoDB importer.
+Ngoài các phụ thuộc trên, còn thiếu 68 tên file ảnh sản phẩm; 0 ảnh xác minh đúng SKU. Ba thumbnail bài viết đã có asset minh họa nhưng chưa browser-verify. Phương thức thanh toán mới ghi nhận lựa chọn COD/Banking, chưa có tích hợp cổng thanh toán. DatabaseSeeder và một số ví dụ trong kế hoạch còn theo SQL/pivot, cần giữ tách biệt khỏi MongoDB importer.
 
 ## 10. Đối chiếu tiêu chí đồ án
 
@@ -137,7 +137,7 @@ Bảng này ghi trạng thái kỹ thuật, không quy đổi thành điểm ho�
 
 1. Nhóm thống nhất nhánh tích hợp và contract MongoDB/Auth/Category trước khi ghép module.
 2. Hoàn thành Catalog, Product CRUD, upload và liên kết danh mục; viết test trên database QA riêng.
-3. Thay 68 ảnh placeholder sản phẩm và 3 thumbnail bằng asset có quyền sử dụng, provenance và SKU được xác nhận.
+3. Tìm ảnh exact-SKU có quyền sử dụng cho 68 tên file còn thiếu; tích hợp và kiểm tra hiển thị ba thumbnail đã có provenance khi Posts được nhập vào nhánh.
 4. Tích hợp wishlist, contact/Maps, blog và dashboard theo schema đã thống nhất.
 5. Sửa hai lỗi mobile đã ghi nhận, chạy lại browser trên các viewport và viết full journey test dựa trên route/model thật.
 6. Rà soát lại DatabaseSeeder, migration và tài liệu hướng dẫn trước khi chọn quy trình triển khai chung.

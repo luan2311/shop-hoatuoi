@@ -1,32 +1,106 @@
 {
-    "result":  {
-                   "status":  "PASS",
-                   "action":  {
-                                  "installed":  0,
-                                  "skipped":  6,
-                                  "missing":  71,
-                                  "rejected":  0
-                              },
-                   "counts":  {
-                                  "placeholder":  71,
-                                  "illustration":  6
-                              }
-               },
-    "scope": "Current local runtime. Six licensed illustration assets are tracked in Git and already installed. A separate generic placeholder template is also tracked at database/seeders/assets/placeholder.jpg; it is not a product photo. The 71 runtime placeholders are generated from that template for 68 product filenames without a product-specific asset and 3 article thumbnails without a licensed asset. These placeholders are not counted as completed product photos.",
-    "placeholder_template": {
-        "path": "database/seeders/assets/placeholder.jpg",
-        "git_tracked": true,
-        "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-        "purpose": "Generic runtime placeholder source; not a product photo."
+  "result": {
+    "status": "PASS",
+    "action": {
+      "installed": 3,
+      "skipped": 6,
+      "missing": 68,
+      "rejected": 0
     },
-    "runtime_readback": {
-        "product_files": {
-            "illustration_source": 6,
-            "placeholder_template": 68
-        },
-        "post_files": {
-            "placeholder_template": 3
-        },
-        "invalid_jpeg_signatures": 0
+    "counts": {
+      "placeholder": 68,
+      "illustration": 9
     }
+  },
+  "scope": "Current local checkout. Six licensed Commons illustration files are used by product records (seven SKU references); none is verified against a product SKU. Three post thumbnail files reuse three of those licensed images and are recorded separately as illustrations. The generic Git-tracked placeholder template supplies only the 68 still-missing product targets. No thumbnail browser route is integrated in this checkout, so rendered-page display was not verified.",
+  "product_images": {
+    "product_records": 80,
+    "unique_product_filenames": 74,
+    "licensed_illustration_files": 6,
+    "product_rows_referencing_illustrations": 7,
+    "sku_verified_photos": 0,
+    "missing_unique_product_filenames": 68,
+    "product_rows_referencing_missing_filenames": 73
+  },
+  "post_thumbnails": [
+    {
+      "code": "TT001",
+      "title": "Tặng Hoa Sinh Nhật – Món Quà Ý Nghĩa Và Tinh Tế",
+      "asset_path": "database/seeders/assets/posts/z5968847074391-636bbcd57cd0cb2bdd1b62cb7039fec1.jpg",
+      "runtime_path": "storage/app/public/posts/z5968847074391-636bbcd57cd0cb2bdd1b62cb7039fec1.jpg",
+      "role": "illustration",
+      "author": "Missvain (Sarah Stierch)",
+      "license": "CC-BY-4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Birthday_flower_bouquet_-_2021-08-26_-_Sarah_Stierch.jpg",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "verified_product_codes": [],
+      "format": "image/jpeg",
+      "width": 800,
+      "height": 800,
+      "bytes": 127183,
+      "sha256": "eb2b54a18a013f0e541c0affbcf91d87a7505642d611438de1122b4043e341b4",
+      "runtime_state": "present"
+    },
+    {
+      "code": "TT002",
+      "title": "Bó Hoa Hồng Đẹp – Quà Tặng Tinh Tế Từ Góc Hoa Xinh",
+      "asset_path": "database/seeders/assets/posts/z5969155691986-ffc7f601f2164a817f993e795c4d78b3.jpg",
+      "runtime_path": "storage/app/public/posts/z5969155691986-ffc7f601f2164a817f993e795c4d78b3.jpg",
+      "role": "illustration",
+      "author": "Ninix8",
+      "license": "CC-BY-4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bouquet_of_Red_Roses.jpg",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "verified_product_codes": [],
+      "format": "image/jpeg",
+      "width": 800,
+      "height": 800,
+      "bytes": 97344,
+      "sha256": "367f99f67a45e8dada06ba61cd0cdb01f489b19e9027459e253af43acdfd1b87",
+      "runtime_state": "present"
+    },
+    {
+      "code": "TT003",
+      "title": "Bảo Quản Hoa Tươi Sau Khi Được Tặng - Giữ Hoa Luôn Tươi Mới",
+      "asset_path": "database/seeders/assets/posts/cach-bao-quan-hoa-goc-hoa-xinh.jpg",
+      "runtime_path": "storage/app/public/posts/cach-bao-quan-hoa-goc-hoa-xinh.jpg",
+      "role": "illustration",
+      "author": "PattayaPatrol",
+      "license": "CC-BY-SA-4.0",
+      "source_url": "https://commons.wikimedia.org/wiki/File:DFC_0794_Bright_bouquet_of_pink_roses_and_a_cheerful_sunflower_arranged_with_greenery_on_a_golden_surface.jpg",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "verified_product_codes": [],
+      "format": "image/jpeg",
+      "width": 800,
+      "height": 800,
+      "bytes": 74099,
+      "sha256": "d8ea6797edad95cf67b67ee815a97cc7a08cf2994a87920d610c24d7a258aff2",
+      "runtime_state": "present"
+    }
+  ],
+  "placeholder_template": {
+    "path": "database/seeders/assets/placeholder.jpg",
+    "git_tracked": true,
+    "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
+    "purpose": "Generic project-owned runtime placeholder template; not a flower photo or SKU image."
+  },
+  "runtime_readback": {
+    "product_files": {
+      "licensed_illustration_source": 6,
+      "placeholder_from_template": 68
+    },
+    "post_files": {
+      "licensed_illustration": 3,
+      "placeholder_from_template": 0
+    },
+    "valid_image_files": 77,
+    "invalid_jpeg_signatures": 0,
+    "display_verified_in_browser": false
+  },
+  "public_storage_readback": {
+    "junction_exists": true,
+    "target": "storage/app/public",
+    "post_public_files_visible": 3,
+    "note": "The filesystem paths resolve through public/storage. No integrated Posts page exists on this branch, so browser rendering was not checked."
+  }
 }

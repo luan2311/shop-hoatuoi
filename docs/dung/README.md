@@ -6,7 +6,7 @@ Thành viên 5, tài khoản GitHub `Dungmeww`. Phạm vi: dữ liệu mẫu, ma
 
 Phần Dũng được tách trên `feature/testing-docs-seeder`, dựa trên commit `89242cd` của nhánh cart/checkout. Đây là nhánh làm việc riêng, không merge hoặc rebase nhánh thành viên khác. Nền tích hợp chính thức `dev`/`develop` vẫn do nhóm quyết định.
 
-Snapshot remote-tracking trong clone khi cập nhật tài liệu: `main` (`d69cbfc`), `dev` (`3ffe4cb`), `feature/auth-category-admin` (`c370d6f`), `feature/cart-checkout-orders` (`89242cd`) và nhánh Dũng tại `f71b010`. Nhánh Dũng có commit `89242cd` của Tiến làm cha trực tiếp. Kết nối GitHub không khả dụng trong lần kiểm tra này nên các ref trên không xác nhận trạng thái live, PR hoặc thay đổi sau lần fetch gần nhất. Các chức năng Catalog/Product CRUD, upload ảnh và UI của thành viên khác chưa có trong nhánh Dũng đang kiểm tra.
+Snapshot remote-tracking trong clone gồm `main` (`d69cbfc`), `dev` (`3ffe4cb`), `feature/auth-category-admin` (`c370d6f`), `feature/cart-checkout-orders` (`89242cd`), `feature/user-ui-wishlist-contact` (`8d8d700`) và nhánh Dũng tại `f71b010`. Local HEAD hiện là `2a7b76afef4d863837f56c2d09437016f73fed6a`, ahead 1 commit; GitHub chưa truy cập được nên ref remote vẫn là cache và không xác nhận trạng thái live. Ref `feature/product-search` không có trong clone. Catalog/Product CRUD, upload ảnh và UI của thành viên khác chưa tích hợp vào checkout Dũng.
 
 Source thực tế: PHP `^8.3`, Laravel lock `13.37.0`, `mongodb/laravel-mongodb 5.7.0`, MongoDB library `2.5.0`. Giao diện Breeze/Tailwind/Alpine trên checkout; nhánh Luân có Bootstrap Admin riêng. Không đổi dependency, models, controllers bán hàng, routes hoặc layout của thành viên khác.
 
@@ -35,9 +35,9 @@ Source thực tế: PHP `^8.3`, Laravel lock `13.37.0`, `mongodb/laravel-mongodb
 
 ### Tình trạng ảnh
 
-Manifest đếm file có thể phân phối trong Git: **6 ảnh minh họa có nguồn và giấy phép, 0 ảnh được xác minh đúng SKU, 68 ảnh sản phẩm còn thiếu** trên 74 tên file duy nhất. Sáu ảnh minh họa có dải nhãn “ILLUSTRATION – PRODUCT MATCH NOT VERIFIED”; chúng không được báo là ảnh sản phẩm hoàn chỉnh. Ba thumbnail bài viết cũng chưa có asset được cấp phép. Danh sách từng filename, mã sản phẩm và attribution nằm trong [product-images.json](product-images.json) và [`image-provenance.json`](../../database/seeders/data/image-provenance.json).
+Manifest sản phẩm có 80 dòng/74 tên file duy nhất: **0 ảnh xác minh đúng SKU; 6 file minh họa có giấy phép gắn với 7 dòng sản phẩm; 68 tên file ảnh sản phẩm còn thiếu** (73 dòng SKU tham chiếu các tên thiếu). Sáu ảnh được đóng dấu “ILLUSTRATION – PRODUCT MATCH NOT VERIFIED”; không được tính là ảnh sản phẩm đúng mẫu. Ba thumbnail bài viết hiện có file JPEG minh họa có giấy phép và provenance riêng, đã cài vào runtime. Danh sách filename/SKU sản phẩm nằm trong [product-images.json](product-images.json); ledger nguồn ảnh gồm cả bài viết tại [`image-provenance.json`](../../database/seeders/data/image-provenance.json).
 
-Git cũng lưu template placeholder chung tại `database/seeders/assets/placeholder.jpg`. Template được dùng làm nguồn cho 71 placeholder runtime (68 tên ảnh sản phẩm còn thiếu và 3 thumbnail bài viết); nó không phải ảnh hoa hoặc ảnh sản phẩm, không được tính vào 6 ảnh minh họa.
+Git cũng lưu template placeholder chung tại `database/seeders/assets/placeholder.jpg`. Sau khi cài thumbnail, runtime còn 68 placeholder từ template cho các tên ảnh sản phẩm thiếu; ba ảnh bài viết không còn placeholder. Template không phải ảnh hoa hoặc ảnh sản phẩm và không được tính vào 6 ảnh minh họa sản phẩm.
 
 Nguồn ảnh là Wikimedia Commons: [Ninix8 – hoa hồng đỏ](https://commons.wikimedia.org/wiki/File:Bouquet_of_Red_Roses.jpg), [Astari28 – bó hồng hồng](https://commons.wikimedia.org/wiki/File:Buket_bunga_mawar_pink_1.jpg), [PattayaPatrol – hồng và hướng dương](https://commons.wikimedia.org/wiki/File:DFC_0794_Bright_bouquet_of_pink_roses_and_a_cheerful_sunflower_arranged_with_greenery_on_a_golden_surface.jpg), [Salicyna – tulip](https://commons.wikimedia.org/wiki/File:Tulipa_2019-02-09_5461.jpg), [WikipediaNeko – mẫu đơn](https://commons.wikimedia.org/wiki/File:Picture_of_a_Peony.jpg), và [Missvain/Sarah Stierch – gerbera](https://commons.wikimedia.org/wiki/File:Birthday_flower_bouquet_-_2021-08-26_-_Sarah_Stierch.jpg). Các asset dùng CC BY 4.0 hoặc CC BY-SA 4.0; attribution và ghi chú chỉnh kích thước/đóng dấu được lưu cùng manifest.
 
@@ -53,4 +53,14 @@ Nguồn ảnh là Wikimedia Commons: [Ninix8 – hoa hồng đỏ](https://commo
 | Hợp đồng cart/checkout/order | Tái sử dụng, không viết lại | Tiến |
 | Database chung, hướng PR và nhánh nền chính thức | Chưa quyết định; không tự nhập code | Nhóm trưởng |
 
-Không đánh dấu hoàn thành checklist toàn nhóm: ảnh thật, Catalog/UI và nghiệm thu website hoàn chỉnh còn thiếu dependency.
+### Checklist hiện tại của Thành viên 5
+
+| Hạng mục | Trạng thái | Kết quả và dependency |
+|---|---|---|
+| Ảnh sản phẩm đúng SKU | PARTIAL | 0/80 ảnh được xác minh; 68 tên file còn thiếu; ảnh tải thêm bị chặn bởi không có kênh tải asset vào workspace và chưa có nguồn exact-SKU kèm quyền sử dụng. |
+| 3 thumbnail bài viết | PARTIAL | Đã tái sử dụng và cài 3 ảnh CC có ghi attribution; module Posts chỉ có trong ref nhánh Huy, chưa hiển thị được trên checkout hiện tại. |
+| Luồng tích hợp Catalog → Product → Cart → Checkout → History → Admin | BLOCKED | Catalog/Product route chưa có; ref product-search không có trong clone nên chưa thể kiểm thử xuyên suốt. PHPUnit backend riêng đã chạy PASS trên `dungQA`; điều đó không xác nhận Catalog/Admin UI đã tích hợp. |
+| Hai lỗi mobile trang success | PARTIAL | Đã xác định email và bảng sản phẩm; patch đề xuất riêng cho view của Tiến. Chưa áp dụng/chưa chụp lại trên browser. |
+| Full PHPUnit | DONE | 110/110 tests, 2.132 assertions, 0 failures/errors/skips lúc 11:36 +07 ngày 27/10/2026; chạy qua `scripts/test-dung-data.ps1` trên `dungQA` với MongoDB extension được nạp theo process. Evidence: [phpunit-runtime-2026-10-27.json](evidence/phpunit-runtime-2026-10-27.json). |
+
+Không đánh dấu hoàn thành checklist toàn nhóm: ảnh đúng SKU, Catalog/UI và nghiệm thu website hoàn chỉnh còn dependency.

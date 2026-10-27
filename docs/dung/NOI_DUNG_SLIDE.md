@@ -71,17 +71,18 @@ Dàn ý này phản ánh code trên nhánh QA và các kết quả có evidence.
 
 - 74 tên file ảnh sản phẩm duy nhất trong manifest.
 - 6 ảnh có license là minh họa, chưa xác minh đúng SKU.
-- Còn 68 ảnh sản phẩm đúng mẫu và 3 thumbnail bài viết cần asset.
-- Một template placeholder chung được track trong Git; 71 placeholder runtime không phải ảnh hoàn chỉnh.
+- Còn 68 tên file ảnh sản phẩm thiếu asset; 0 ảnh đã xác minh đúng SKU.
+- Đã chuẩn bị 3 thumbnail bài viết có giấy phép từ ảnh Commons; route Posts chưa tích hợp để kiểm tra hiển thị.
+- Template placeholder chung được track trong Git; runtime còn 68 placeholder sản phẩm, không tính là ảnh hoàn chỉnh.
 
 **Gợi ý hình:** Trích bảng trạng thái từ [product-images.json](product-images.json); không trình bày placeholder như ảnh hoa thật.
 
 ## Slide 9 — Kiểm thử tự động
 
-- 110 tests và 2.132 assertions.
-- 0 failures, 0 errors, 0 skipped trong lần xác minh gần nhất.
-- Phạm vi Dũng: 59 tests/1.777 assertions; hồi quy Auth/Profile/Sales: 51/355.
-- Test chạy trên replica set QA riêng và database có tiền tố shop_hoatuoi_test_*.
+- Full suite mới nhất PASS: 110 tests, 2.132 assertions, 0 failure/error/skip trên replica set QA riêng `dungQA` tại `127.0.0.1:27028`.
+- PHP CLI mặc định chưa nạp extension; launcher QA nạp extension 2.5.5 chỉ trong process test và khôi phục biến môi trường.
+- Test chỉ ghi vào các database QA có tiền tố riêng; các DB giữ lại, không có DB nào bị xóa.
+- Xem [QA_KET_QUA.md](QA_KET_QUA.md) và [runtime evidence](evidence/phpunit-runtime-2026-10-27.json).
 
 **Ghi chú:** Đây là kết quả PHPUnit; không phải chứng nhận production hoặc browser toàn website.
 
