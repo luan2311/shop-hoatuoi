@@ -4,12 +4,12 @@ namespace Tests\Feature;
 
 use App\Models\Role;
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\Concerns\UsesMongoDatabase;
 use Tests\TestCase;
 
 class RoleMiddlewareTest extends TestCase
 {
-    use RefreshDatabase;
+    use UsesMongoDatabase;
 
     public function test_user_without_admin_role_cannot_access_admin_dashboard(): void
     {

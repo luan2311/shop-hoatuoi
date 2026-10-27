@@ -19,6 +19,9 @@ class Category extends Model
         parent::boot();
 
         static::creating(function ($category) {
+            if (empty($category->code)) {
+                $category->code = 'LH'.str_pad((string) (Category::count() + 1), 3, '0', STR_PAD_LEFT);
+            }
             if (empty($category->slug)) {
                 $category->slug = Str::slug($category->name);
             } else {
@@ -35,9 +38,8 @@ class Category extends Model
         });
     }
 
-    // Sản phẩm nhúng bản sao danh mục trong field category.slug
     public function products()
     {
-        return $this->hasMany(Product::class, 'category.slug', 'slug');
+        return $this->hasMany(Product::class, 'category_id');
     }
 }

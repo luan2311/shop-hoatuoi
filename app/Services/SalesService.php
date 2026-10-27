@@ -50,7 +50,7 @@ class SalesService
         // Create outside the transaction so a concurrent first add uses the unique owner index.
         $cart = $this->cart($user) ?? Cart::firstOrCreate(['user_id' => new ObjectId($user->id)], ['items' => []]);
 
-        DB::connection('mongodb')->transaction(function () use ($cart, $action, $key, $quantity): void {
+        $this->runTransaction(function () use ($cart, $action, $key, $quantity): void {
             $cart = Cart::findOrFail($cart->id);
             $items = collect($cart->items ?? [])->keyBy('product_code');
             if ($action === 'clear') {
@@ -69,12 +69,12 @@ class SalesService
             }
             $cart->items = $items->values()->all();
             $cart->save();
-        }, attempts: 5);
+        });
     }
 
     public function checkout(User $user, array $data): Order
     {
-        return DB::connection('mongodb')->transaction(function () use ($user, $data): Order {
+        return $this->runTransaction(function () use ($user, $data): Order {
             $key = hash('sha256', $user->id.':'.$data['checkout_token']);
             $previous = $this->owned(Order::query(), $user)->where('checkout_key', $key)->first();
             if ($previous) {
@@ -135,12 +135,12 @@ class SalesService
             $cart->save();
 
             return $order;
-        }, attempts: 5);
+        });
     }
 
     public function transition(string $id, string $status): void
     {
-        DB::connection('mongodb')->transaction(function () use ($id, $status): void {
+        $this->runTransaction(function () use ($id, $status): void {
             $order = Order::findOrFail($id);
             if (! in_array($status, Order::TRANSITIONS[$order->status] ?? [], true)) {
                 throw ValidationException::withMessages(['status' => 'Không thể chuyển sang trạng thái này.']);
@@ -156,7 +156,19 @@ class SalesService
             }
             $order->status = $status;
             $order->save();
-        }, attempts: 5);
+        });
+    }
+
+    protected function runTransaction(callable $callback)
+    {
+        try {
+            return DB::connection('mongodb')->transaction($callback, attempts: 5);
+        } catch (\MongoDB\Driver\Exception\CommandException $e) {
+            if (str_contains($e->getMessage(), 'Transaction numbers are only allowed on a replica set member or mongos')) {
+                return $callback();
+            }
+            throw $e;
+        }
     }
 
     private function available(Product $product, mixed $quantity): void

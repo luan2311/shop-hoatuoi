@@ -64,7 +64,14 @@ class DashboardController extends Controller
             });
         }
 
-        $categoriesWithCounts = Category::withCount('products')->take(6)->get();
+        $categoriesWithCounts = Category::take(6)->get()->map(function ($cat) {
+            $cat->products_count = Product::where('category.code', $cat->code)
+                ->orWhere('category.slug', $cat->slug)
+                ->orWhere('category_id', (string) $cat->id)
+                ->count();
+
+            return $cat;
+        });
 
         return view('admin.dashboard', compact(
             'totalCategories',

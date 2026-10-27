@@ -5,14 +5,12 @@ namespace Tests\Feature;
 use App\Models\Product;
 use App\Models\User;
 use App\Models\Wishlist;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\Concerns\UsesMongoDatabase;
 use Tests\TestCase;
 
 class WishlistAjaxTest extends TestCase
 {
-    // User vẫn ở database mặc định (auth của Member 1), wishlist + sản phẩm ở MongoDB
-    use RefreshDatabase, UsesMongoDatabase;
+    use UsesMongoDatabase;
 
     private function makeProduct(): Product
     {

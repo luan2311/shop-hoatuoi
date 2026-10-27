@@ -60,10 +60,53 @@ class User extends Authenticatable
         return $this->hasMany(Wishlist::class);
     }
 
+    public function roles()
+    {
+        return new class($this) {
+            private User $user;
+
+            public function __construct(User $user)
+            {
+                $this->user = $user;
+            }
+
+            public function attach(mixed $roleId): void
+            {
+                $role = Role::find($roleId);
+                $roleName = $role ? $role->name : (string) $roleId;
+                $currentRoles = (array) ($this->user->getAttributes()['roles'] ?? []);
+                if (! in_array($roleName, $currentRoles, true)) {
+                    $currentRoles[] = $roleName;
+                }
+                $this->user->forceFill(['roles' => $currentRoles])->save();
+            }
+
+            public function detach(mixed $roleId): void
+            {
+                $role = Role::find($roleId);
+                $roleName = $role ? $role->name : (string) $roleId;
+                $currentRoles = array_values(array_filter(
+                    (array) ($this->user->getAttributes()['roles'] ?? []),
+                    fn ($r) => $r !== $roleName
+                ));
+                $this->user->forceFill(['roles' => $currentRoles])->save();
+            }
+        };
+    }
+
     // Helpers
     public function hasRole(string $role): bool
     {
-        return in_array($role, $this->getAttributes()['roles'] ?? [], true);
+        $roles = $this->getAttributes()['roles'] ?? [];
+        if (in_array($role, (array) $roles, true)) {
+            return true;
+        }
+
+        try {
+            return $this->roles()->where('name', $role)->exists();
+        } catch (\Throwable $e) {
+            return false;
+        }
     }
 
     public function isAdmin(): bool

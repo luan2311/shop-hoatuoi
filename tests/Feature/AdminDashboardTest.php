@@ -7,12 +7,12 @@ use App\Models\Order;
 use App\Models\Product;
 use App\Models\Role;
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\Concerns\UsesMongoDatabase;
 use Tests\TestCase;
 
 class AdminDashboardTest extends TestCase
 {
-    use RefreshDatabase;
+    use UsesMongoDatabase;
 
     public function test_admin_can_view_dashboard(): void
     {

@@ -5,32 +5,16 @@
             "codes": [
                 "PVN297"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN297"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -118,32 +102,16 @@
             "codes": [
                 "PVN294"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN294"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -151,32 +119,16 @@
             "codes": [
                 "PVN293"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN293"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -184,32 +136,16 @@
             "codes": [
                 "PVN292"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN292"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -257,32 +193,16 @@
             "codes": [
                 "PVN290"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN290"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -372,32 +292,16 @@
             "codes": [
                 "PVN284"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN284"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -445,32 +349,16 @@
             "codes": [
                 "PVN280"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN280"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -479,33 +367,16 @@
                 "PVN276",
                 "PVN244"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN276",
-                    "PVN244"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -513,32 +384,16 @@
             "codes": [
                 "H63"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H63"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -546,32 +401,16 @@
             "codes": [
                 "H53"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H53"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -579,32 +418,16 @@
             "codes": [
                 "H49"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H49"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -612,32 +435,16 @@
             "codes": [
                 "H45"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H45"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -645,32 +452,16 @@
             "codes": [
                 "H194"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H194"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -679,33 +470,16 @@
                 "PVN209",
                 "H129"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN209",
-                    "H129"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -713,32 +487,16 @@
             "codes": [
                 "PVN285"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN285"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -746,32 +504,16 @@
             "codes": [
                 "H130"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H130"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -779,32 +521,16 @@
             "codes": [
                 "H143"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H143"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -813,33 +539,16 @@
                 "PVN207",
                 "H86"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN207",
-                    "H86"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -847,32 +556,16 @@
             "codes": [
                 "PVN188"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN188"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -881,33 +574,16 @@
                 "H71",
                 "H101"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H71",
-                    "H101"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -916,33 +592,16 @@
                 "H61",
                 "H58"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H61",
-                    "H58"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -950,32 +609,16 @@
             "codes": [
                 "H50"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H50"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -983,32 +626,16 @@
             "codes": [
                 "PVN275"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN275"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1016,32 +643,16 @@
             "codes": [
                 "H246"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H246"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1049,32 +660,16 @@
             "codes": [
                 "PVN222"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN222"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1082,32 +677,16 @@
             "codes": [
                 "PVN205"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN205"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1115,32 +694,16 @@
             "codes": [
                 "PVN203"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN203"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1148,32 +711,16 @@
             "codes": [
                 "PVN196"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN196"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1181,32 +728,16 @@
             "codes": [
                 "PVN184"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN184"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1214,32 +745,16 @@
             "codes": [
                 "H01"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H01"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1247,32 +762,16 @@
             "codes": [
                 "H03"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H03"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1280,32 +779,16 @@
             "codes": [
                 "H67"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H67"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1313,32 +796,16 @@
             "codes": [
                 "H94"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H94"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1346,32 +813,16 @@
             "codes": [
                 "H148"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H148"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1379,32 +830,16 @@
             "codes": [
                 "H155"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H155"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1412,32 +847,16 @@
             "codes": [
                 "H167"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H167"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1445,32 +864,16 @@
             "codes": [
                 "PVN279"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN279"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1478,32 +881,16 @@
             "codes": [
                 "PVN210"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN210"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1511,32 +898,16 @@
             "codes": [
                 "PVN201"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN201"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1544,32 +915,16 @@
             "codes": [
                 "PVN200"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN200"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1577,32 +932,16 @@
             "codes": [
                 "PVN199"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN199"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1610,32 +949,16 @@
             "codes": [
                 "H70"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H70"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1643,32 +966,16 @@
             "codes": [
                 "H72"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H72"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1676,32 +983,16 @@
             "codes": [
                 "H78"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H78"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1709,32 +1000,16 @@
             "codes": [
                 "H81"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H81"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1742,32 +1017,16 @@
             "codes": [
                 "H98"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H98"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1775,32 +1034,16 @@
             "codes": [
                 "H99"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H99"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1808,32 +1051,16 @@
             "codes": [
                 "H100"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H100"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1841,32 +1068,16 @@
             "codes": [
                 "H110"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H110"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1874,32 +1085,16 @@
             "codes": [
                 "H111"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H111"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1907,32 +1102,16 @@
             "codes": [
                 "H114"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H114"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1940,32 +1119,16 @@
             "codes": [
                 "H116"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H116"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -1973,32 +1136,16 @@
             "codes": [
                 "H229"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H229"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -2006,32 +1153,16 @@
             "codes": [
                 "H228"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H228"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -2039,32 +1170,16 @@
             "codes": [
                 "PVN227"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN227"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -2072,32 +1187,16 @@
             "codes": [
                 "H225"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H225"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -2105,32 +1204,16 @@
             "codes": [
                 "PVN226"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN226"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -2138,32 +1221,16 @@
             "codes": [
                 "PVN217"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN217"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -2171,32 +1238,16 @@
             "codes": [
                 "PVN215"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN215"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -2204,32 +1255,16 @@
             "codes": [
                 "PVN214"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN214"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -2237,32 +1272,16 @@
             "codes": [
                 "PVN213"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN213"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -2270,32 +1289,16 @@
             "codes": [
                 "PVN212"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "PVN212"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -2303,32 +1306,16 @@
             "codes": [
                 "H105"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H105"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -2336,32 +1323,16 @@
             "codes": [
                 "H106"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H106"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -2369,32 +1340,16 @@
             "codes": [
                 "H119"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H119"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -2402,32 +1357,16 @@
             "codes": [
                 "H142"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H142"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -2435,32 +1374,16 @@
             "codes": [
                 "H169"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H169"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -2468,32 +1391,16 @@
             "codes": [
                 "H170"
             ],
-            "role": "placeholder",
-            "runtime_state": "placeholder",
-            "provenance": {
-                "role": "placeholder",
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
-                "author": "Nhóm dự án; mẫu trung tính do script tạo",
-                "license": "PROJECT-GENERATED",
-                "source_url": "project://scripts/prepare-product-images.php",
-                "attribution": "",
-                "verified_product_codes": [],
-                "expected_codes": [
-                    "H170"
-                ]
-            },
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
             "asset": {
                 "exists": false,
                 "valid": false
             },
             "image": {
-                "exists": true,
-                "valid": true,
-                "width": 800,
-                "height": 800,
-                "mime": "image/jpeg",
-                "bytes": 20913,
-                "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6"
+                "exists": false,
+                "valid": false
             }
         },
         {
@@ -2618,11 +1525,11 @@
         }
     ],
     "counts": {
-        "placeholder": 68,
+        "missing": 68,
         "illustration": 9
     },
     "runtime_counts": {
-        "placeholder": 68,
+        "missing": 68,
         "present": 9
     }
 }

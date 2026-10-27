@@ -18,7 +18,35 @@ class Product extends Model
 
     protected function casts(): array
     {
-        return ['price' => 'float', 'original_price' => 'float', 'stock' => 'integer'];
+        return ['stock' => 'integer'];
+    }
+
+    public function getPriceAttribute($value): int|float|null
+    {
+        if ($value instanceof \MongoDB\BSON\Decimal128) {
+            $str = (string) $value;
+            return str_contains($str, '.') ? (float) $str : (int) $str;
+        }
+
+        if ($value === null) {
+            return null;
+        }
+
+        return is_numeric($value) && (int) $value == $value ? (int) $value : (float) $value;
+    }
+
+    public function getOriginalPriceAttribute($value): int|float|null
+    {
+        if ($value instanceof \MongoDB\BSON\Decimal128) {
+            $str = (string) $value;
+            return str_contains($str, '.') ? (float) $str : (int) $str;
+        }
+
+        if ($value === null) {
+            return null;
+        }
+
+        return is_numeric($value) && (int) $value == $value ? (int) $value : (float) $value;
     }
 
     protected static function boot()

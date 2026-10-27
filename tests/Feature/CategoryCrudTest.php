@@ -5,12 +5,12 @@ namespace Tests\Feature;
 use App\Models\Category;
 use App\Models\Role;
 use App\Models\User;
-use Illuminate\Foundation\Testing\RefreshDatabase;
+use Tests\Concerns\UsesMongoDatabase;
 use Tests\TestCase;
 
 class CategoryCrudTest extends TestCase
 {
-    use RefreshDatabase;
+    use UsesMongoDatabase;
 
     private User $admin;
     private User $user;
@@ -53,7 +53,7 @@ class CategoryCrudTest extends TestCase
         ]);
 
         $response->assertRedirect('/admin/categories');
-        $this->assertDatabaseHas('categories', ['slug' => 'hoa-lan-ho-diep']);
+        $this->assertDatabaseHas('categories', ['slug' => 'hoa-lan-ho-diep'], 'mongodb');
     }
 
     public function test_admin_can_create_category_with_auto_generated_slug(): void
@@ -63,7 +63,7 @@ class CategoryCrudTest extends TestCase
         ]);
 
         $response->assertRedirect('/admin/categories');
-        $this->assertDatabaseHas('categories', ['slug' => 'hoa-hong-nhap-khau']);
+        $this->assertDatabaseHas('categories', ['slug' => 'hoa-hong-nhap-khau'], 'mongodb');
     }
 
     public function test_category_validation_requires_name(): void
@@ -94,8 +94,8 @@ class CategoryCrudTest extends TestCase
         ]);
 
         $response->assertRedirect('/admin/categories');
-        $this->assertDatabaseHas('categories', ['name' => 'Hoa Chia Buồn', 'slug' => 'hoa-chia-buon']);
-        $this->assertDatabaseMissing('categories', ['slug' => 'hoa-dam-tang']);
+        $this->assertDatabaseHas('categories', ['name' => 'Hoa Chia Buồn', 'slug' => 'hoa-chia-buon'], 'mongodb');
+        $this->assertDatabaseMissing('categories', ['slug' => 'hoa-dam-tang'], 'mongodb');
     }
 
     public function test_admin_can_delete_empty_category(): void
@@ -104,7 +104,7 @@ class CategoryCrudTest extends TestCase
 
         $response = $this->actingAs($this->admin)->delete("/admin/categories/{$category->id}");
         $response->assertRedirect('/admin/categories');
-        $this->assertDatabaseMissing('categories', ['id' => $category->id]);
+        $this->assertDatabaseMissing('categories', ['slug' => 'hoa-tam'], 'mongodb');
     }
 
     public function test_non_admin_cannot_access_categories(): void
