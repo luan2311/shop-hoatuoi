@@ -47,7 +47,7 @@ Chưa tạo test toàn trình giả định route Catalog để rồi ghi PASS. 
 
 ## Trạng thái module theo nhánh đã kiểm tra
 
-Checkout hiện tại là HEAD `d9239c741239ea73310ebebced8fd05e5a9b621d`; các ref dưới đây được fetch an toàn, chưa merge vào checkout này.
+Lượt test gần nhất có evidence chạy trên HEAD `d9239c741239ea73310ebebced8fd05e5a9b621d`. Review contract ngày 27/10/2026 được thực hiện trên HEAD hiện tại `996cad97dcd87e22bccbf6da8dc4c2999c97b27e` và ref `origin/feat/an-laravel-mongodb` tại `9a081ba37e54dddabfa8c7a25f81f6f06ba94452`, dựa trên merge-base `3ffe4cb0a09be7b7372dee98bf5b0580c83d350f`. Chỉ dùng Git read-only để xem hai cây; không checkout, fetch hoặc merge trong lượt review này. Từ HEAD test đến HEAD hiện tại chỉ đổi QA docs/evidence, không đổi app/routes/tests.
 
 | Thành viên | Có trên nhánh hiện tại | Chỉ có trên ref khác | Trạng thái |
 |---|---|---|---|
@@ -71,7 +71,7 @@ Các test/evidence trên ref riêng chỉ chứng minh trạng thái của ref �
 | WEB-09 | Ảnh sau upload hiện đúng ở catalog/cart | Ảnh có quyền sử dụng, Product CRUD/upload, storage link | BLOCKED |
 | WEB-10 | Desktop/mobile các route hiện có; full site | Browser Chrome, server loopback và 4 viewport; Catalog/UI/ảnh thật vẫn thiếu | NOT RUN lượt này; evidence cũ cho thấy 2 overflow ở success; patch đề xuất chưa áp dụng |
 
-## Lượt kiểm thử tích hợp hiện tại
+## Lượt kiểm thử tích hợp gần nhất có evidence
 
 Ngày 27/10/2026, chạy filter Auth/Sales qua `scripts/test-dung-data.ps1` trên `dungQA` loopback, HEAD `d9239c741239ea73310ebebced8fd05e5a9b621d`. Kết quả mới: **37 tests, 315 assertions, 0 failures, 0 errors, 0 skipped**, PASS. JUnit chi tiết và summary nằm tại [member5-integration-2026-10-27.xml](evidence/member5-integration-2026-10-27.xml) và [member5-integration-summary-2026-10-27.json](evidence/member5-integration-summary-2026-10-27.json). Test run sinh 37 database QA riêng; chúng được giữ nguyên, không cleanup. Kết quả này chỉ xác nhận các Feature test HTTP trong tiến trình PHPUnit; không xác nhận browser hoặc luồng xuyên Catalog.
 
@@ -111,3 +111,52 @@ Các case dưới đây đã chuẩn bị về expected/fixture nhưng **chưa c
 12. Kiểm tra Laragon Apache/Nginx riêng nếu đó là môi trường demo. Kết quả Artisan/test process không thay cho kết quả web server.
 
 Mỗi case lưu PASS/FAIL/SKIP/BLOCKED, điều kiện, expected/actual, SHA và evidence. Không chuyển BLOCKED thành PASS bằng cách tạo catalog giả hoặc nới quyền/validation.
+
+## Review contract Catalog/Product ↔ Cart/Checkout — 27/10/2026
+
+Đây là đối chiếu source tĩnh giữa HEAD `996cad97` và ref An `9a081ba`; không chạy PHPUnit, không chạy browser và không kết nối MongoDB trong lượt này. Các test/evidence ở ref An chỉ phản ánh nhánh An, chưa chứng minh tích hợp.
+
+| Hạng mục | Bằng chứng từ source | Kết luận / việc cần làm |
+|---|---|---|
+| Loader route | Nhánh hiện tại `routes/web.php` nạp `sales.php`; ref An nạp `products.php` thay vào cùng vị trí | Khi ghép phải giữ cả `auth.php`, `sales.php` và `products.php`; kiểm tra tên route và middleware sau ghép. Nếu thay file bằng bản An, toàn bộ route Sales sẽ mất. |
+| Product Detail → Cart | `routes/products.php` dùng URL `/products/{slug}`; Cart dùng `POST /cart/add`. `CartRequest` yêu cầu `product_id` là chuỗi 24 ký tự hex; component Sales gửi `$product->id` | Định dạng URL/ID tương thích: slug dùng để xem, Mongo ObjectId dùng để thêm. Tuy nhiên `products/show.blade.php` của An hiện không render `<x-add-to-cart>` hoặc form thay thế: luồng bị BLOCKED cho tới khi An thêm CTA và xử lý guest cần đăng nhập. |
+| Mã sản phẩm trong Cart | `SalesService::change(add)` tìm Product bằng `_id`, sau đó lưu `product_code`; cập nhật/xóa Cart dùng `code` | Tương thích nếu form gửi ObjectId và Product có `code` ổn định. Tiến cần xác nhận bằng test xuyên form → Cart, không đổi khóa Cart sang slug. |
+| Tồn kho và trạng thái | Sales yêu cầu `status = Còn hàng`, quantity 1–999 và không vượt `stock`; component giới hạn quantity theo stock. Checkout mới trừ kho | Contract tương thích ở giá trị trạng thái và kho; cần test stock 0, hết hàng, quantity vượt kho và xác nhận add/update không trừ kho trước checkout. |
+| Giá | An `ProductRequest` cho phép số lẻ và tới `999999999999`, admin controller ép `float`; Sales từ chối số lẻ và giá trên `1000000000` | **Mismatch đã xác nhận từ validation/service source.** An nên giới hạn tiền nguyên VND 0–1.000.000.000 ở request và form, đồng thời giữ kiểu số phù hợp. Không mở giới hạn Sales nếu chưa có quyết định nghiệp vụ và test biên của Tiến. |
+| Ảnh | An lưu upload dưới `products/<filename>` và `image_url` xử lý được dạng này. Dataset hiện tại dùng filename trần; ảnh runtime ở `storage/app/public/products/<filename>`. Accessor An chỉ kiểm tra `products/...` hoặc `public/images/products`/`public/Images`, không tra Storage cho filename trần | **Mismatch đường dẫn đã xác nhận từ source.** An cần hỗ trợ filename trần qua public Storage hoặc chuẩn hóa dữ liệu ảnh sang `products/<filename>`. Hiện dataset có 80 product rows/74 filename: 6 ảnh minh họa dùng cho 7 rows, 68 target thiếu ảnh thật được lấp bằng placeholder runtime, 0 SKU xác minh. Nhánh An không mang bộ asset sản phẩm; `ProductDemoSeeder` cũng không đặt trường ảnh. Không coi placeholder/ảnh minh họa là ảnh đúng SKU. |
+| Category/schema | Product An có `category_id` và embedded snapshot `{code,name,slug}`; Catalog lọc/detail dựa vào `category.code`. Category hiện tại là SQL model; Category An là Mongo model | **Dependency cần Luân chốt**: collection, ID, `code` ổn định, slug và snapshot. Không ghép riêng Category model trước khi xác nhận hợp đồng và cách seed dữ liệu. |
+| Product model chung | Cả hai cây sửa `app/Models/Product.php`. Bản hiện tại có các quan hệ Sales và `scopeSearch`; bản An thêm cast/image accessor, `categoryRecord` và `scopeMatchingKeyword` | File có nguy cơ conflict trực tiếp. Khi ghép phải giữ quan hệ `cartItems`, `orderDetails`, `wishlists`, slug và stock; kiểm tra call-site trước khi thay `scopeSearch` hoặc đổi quan hệ Category. |
+| Auth/Admin | Nhánh hiện tại dùng Mongo `User` với roles dạng mảng; ref An giữ SQL `User`. Test `ProductAuthIntegrationTest` của An giả định SQLite auth và SQL seeder | **Test/auth contract chưa tương thích nếu dùng nguyên test An.** Luân và An cần điều chỉnh guard/provider/seeder/test để kiểm tra Product Admin bằng User/role đang dùng trên nhánh tích hợp. Không suy từ `role:Admin` cùng tên rằng hai cơ chế User giống nhau. |
+
+### File cần ghép có kiểm soát
+
+- `routes/web.php`: hai nhánh thêm require khác nhau; giữ đồng thời route Sales và Catalog.
+- `app/Models/Product.php`: thay đổi trực tiếp hai phía; hợp nhất các accessor/scope/relations.
+- `app/Models/Category.php`: SQL ở checkout hiện tại so với Mongo ở ref An; cần quyết định schema với Luân.
+- `bootstrap/app.php`: cả hai phía thêm xử lý exception khác nhau; phải giữ role alias và compose handler cho lỗi Catalog lẫn Sales.
+- `composer.json`/`composer.lock`: checkout yêu cầu `mongodb/laravel-mongodb ^5.7`, ref An yêu cầu `^5.11`; thống nhất constraint rồi resolve lock từ một cây tích hợp.
+- `config/database.php`: cả hai thêm Mongo connection; kiểm tra giữ cấu hình thống nhất, không ghi đè cấu hình môi trường.
+- `.env.example`: URI mặc định khác nhau (Sales dùng replica set `tienRS` trên 27018, An dùng 27017); chỉ hợp nhất ví dụ theo môi trường, không chép vào `.env`.
+- `app/Models/User.php`: chỉ checkout hiện tại đổi sang Mongo kể từ base; đây là dependency ngữ nghĩa cho test/admin An dù không phải sửa trực tiếp cùng phía.
+- Migration Catalog và Sales cùng tạo index/schema trên collection `products` nhưng tên file khác nhau; không có filename collision đã xác nhận, vẫn phải chạy migration trên DB tích hợp cô lập để kiểm tra validators/index idempotence.
+
+### Checklist sau khi dependency được ghép
+
+Các case dưới đây là **NOT RUN** trong lượt review này. Thực hiện trên Mongo QA cô lập sau khi thống nhất Category, User, giá, route và ảnh; ghi SHA của candidate và evidence mới.
+
+| Case | Luồng / dữ liệu | Kỳ vọng | Trạng thái hiện tại |
+|---|---|---|---|
+| CAT-SALES-01 | Catalog → category filter/search/sort/page → detail theo slug | Đúng Product/category; filter và query string giữ nguyên; detail hiển thị trạng thái/giá | NOT RUN; Catalog chỉ có trên ref An |
+| CAT-SALES-02 | User đăng nhập, detail bấm thêm với Product Mongo ObjectId | POST `/cart/add` 302 về Cart; Cart lưu `product_code`; kho chưa giảm | BLOCKED; detail An chưa có CTA |
+| CAT-SALES-03 | Guest, ObjectId sai, status hết hàng, stock 0, quantity 0/1000/vượt kho | Guest được yêu cầu login; input sai bị 4xx/validation; dữ liệu Cart/kho không đổi | NOT RUN; cần CTA và test kết hợp |
+| CAT-SALES-04 | PATCH `/cart/items/{code}` tăng/giảm quantity, DELETE item/clear | Cart dùng code; không vượt stock; chỉ checkout mới trừ kho | NOT RUN; Cart độc lập đã có test trước đó, chưa test từ Catalog An |
+| CAT-SALES-05 | GET checkout lấy token → POST đơn hợp lệ/thiếu trường/hết kho | Giá lấy từ DB; order snapshot code/name/slug/image/price; trừ kho đúng một lần, Cart rỗng khi thành công | NOT RUN xuyên Catalog; giá An cần khớp Sales trước khi chạy |
+| CAT-SALES-06 | Retry checkout token cũ sau khi thay Cart; hai khách mua stock cuối | Một order theo token; không trừ kho kép; một checkout cạnh tranh thất bại an toàn | Chưa chạy xuyên Catalog; logic Sales có test độc lập trong evidence trước |
+| CAT-SALES-07 | Admin/Role User CRUD Product, upload ảnh hợp lệ/sai, Product public detail | User bị 403; Admin được phép; upload theo Storage path; ảnh hiển thị ở Catalog và Cart | BLOCKED tới khi thống nhất User/Category và image accessor |
+
+### Phân công xử lý
+
+- **An:** thêm CTA Cart vào Product Detail; giới hạn price theo contract Sales; hỗ trợ filename ảnh runtime hiện tại và placeholder; phối hợp chuyển Product model mà không mất các quan hệ Sales; cập nhật auth integration test theo User Mongo.
+- **Tiến:** xác nhận contract `ObjectId → product_code`, stock, giá nguyên VND, ảnh snapshot; bổ sung/duyệt test xuyên Product Detail → Cart → Checkout trên candidate sau ghép.
+- **Luân:** chốt Category Mongo/ID/code/slug/snapshot và cơ chế User/Admin chung trước khi merge module.
+- **Dũng:** giữ checklist/evidence tách bạch; sau khi candidate an toàn sẵn sàng, chạy nhóm case CAT-SALES trên QA riêng và ghi PASS/FAIL/BLOCKED mới. Review này không chạy test.
