@@ -1,4 +1,4 @@
-﻿// Loading functionality
+// Loading functionality
 window.addEventListener('load', function () {
     // Ẩn loading sau khi trang load xong
     setTimeout(function () {
@@ -157,6 +157,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Handle Back to Top smooth scroll
+    const backToTop = document.querySelector('.backtop');
+    if (backToTop) {
+        backToTop.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
     //Handle loading overlay on internal link clicks
     const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="~/"]');
 
@@ -167,8 +176,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            // Không hiển thị loading cho link javascript
-            if (this.getAttribute('href').startsWith('javascript:')) {
+            // Không hiển thị loading cho link javascript, anchor hash hoặc wishlist
+            const href = this.getAttribute('href') || '';
+            if (href.startsWith('javascript:') || href === '#' || href.startsWith('/#') || this.classList.contains('backtop') || this.classList.contains('js-wishlist-toggle')) {
                 return;
             }
 
@@ -181,10 +191,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Hiển thị loading khi submit form
+    // Hiển thị loading khi submit form (ngoại trừ live search debounce)
     const forms = document.querySelectorAll('form');
     forms.forEach(function (form) {
         form.addEventListener('submit', function (e) {
+            if (this.hasAttribute('data-product-search') || this.classList.contains('header-search-form')) {
+                return;
+            }
             const loadingOverlay = document.getElementById('loading-overlay');
             if (loadingOverlay) {
                 loadingOverlay.style.display = 'flex';

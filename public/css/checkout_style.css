@@ -1,0 +1,174 @@
+﻿body {
+    background-color: #f5f5f5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+}
+
+.checkout-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-content {
+    flex: 1;
+    padding: 40px 5%;
+    background-color: white;
+    min-width: 55%;
+}
+
+.sidebar-content {
+    flex: 0 0 40%;
+    padding: 40px 5%;
+    background-color: #fafafa;
+    border-left: 1px solid #e1e1e1;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    max-width: 250px;
+}
+
+.form-section {
+    margin-bottom: 30px;
+}
+
+    .form-section h3 {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
+
+.form-control {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.payment-method {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+    .payment-method label {
+        margin-left: 10px;
+        flex-grow: 1;
+        margin-bottom: 0;
+    }
+
+.payment-logo {
+    height: 24px;
+    margin-left: auto;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.back-link {
+    color: #007bff;
+}
+
+.btn-place-order {
+    padding: 15px 30px;
+    font-weight: bold;
+}
+
+/* Sidebar */
+.order-summary {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.item-image {
+    position: relative;
+}
+
+    .item-image img {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+    }
+
+.item-quantity {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #555;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+}
+
+.item-name {
+    margin-left: 15px;
+    flex-grow: 1;
+}
+
+.item-price {
+    font-weight: 500;
+}
+
+.discount-section {
+    display: flex;
+}
+
+    .discount-section .form-control {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .discount-section .btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.grand-total {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+    .grand-total .total-price {
+        font-size: 1.4em;
+        color: #537547;
+    }
+
+@media (max-width: 992px) {
+    .checkout-container {
+        flex-direction: column-reverse;
+    }
+
+    .sidebar-content {
+        border-left: none;
+        border-bottom: 1px solid #e1e1e1;
+    }
+}
