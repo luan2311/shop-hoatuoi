@@ -35,8 +35,9 @@ class Category extends Model
         });
     }
 
+    // Sản phẩm nhúng bản sao danh mục trong field category.slug
     public function products()
     {
-        return $this->hasMany(Product::class);
+        return $this->hasMany(Product::class, 'category.slug', 'slug');
     }
 }

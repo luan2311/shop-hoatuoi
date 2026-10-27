@@ -1,0 +1,69 @@
+/* ========================================
+   AJAX Notification Styles
+   ======================================== */
+
+.ajax-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    min-width: 250px;
+    max-width: 400px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 9999;
+    display: none;
+    font-size: 14px;
+    font-weight: 500;
+    animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Success notification */
+.ajax-notification.success {
+    background-color: #28a745;
+    color: white;
+    border-left: 4px solid #1e7e34;
+}
+
+/* Error notification */
+.ajax-notification.error {
+    background-color: #dc3545;
+    color: white;
+    border-left: 4px solid #bd2130;
+}
+
+/* Info notification */
+.ajax-notification.info {
+    background-color: #17a2b8;
+    color: white;
+    border-left: 4px solid #117a8b;
+}
+
+/* Warning notification */
+.ajax-notification.warning {
+    background-color: #ffc107;
+    color: #212529;
+    border-left: 4px solid #d39e00;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .ajax-notification {
+        right: 10px;
+        left: 10px;
+        min-width: auto;
+        max-width: none;
+    }
+}

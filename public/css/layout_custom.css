@@ -1,0 +1,175 @@
+/* Bổ sung theo plan Task 4.1 (Member 4), dùng lại màu của style_layout.css:
+   xanh #537453 / #436b46, cam #ea8725. html font-size = 62.5% nên 1rem = 10px. */
+
+/* Thanh thông báo miễn phí ship */
+.top-banner {
+    background: #436b46;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hero carousel trang chủ */
+.hero-carousel {
+    margin-bottom: 25px;
+}
+
+.hero-carousel .hero-slide {
+    position: relative;
+    display: flex;
+    aspect-ratio: 1908 / 842;
+    background: #eef0f1;
+    overflow: hidden;
+}
+
+    .hero-carousel .hero-slide img {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.hero-carousel .hero-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 6%;
+    color: #537453;
+}
+
+.hero-carousel .hero-title {
+    font-size: clamp(2.4rem, 6vw, 11rem);
+    font-weight: 900;
+    line-height: 1.05;
+    margin: 0;
+}
+
+.hero-carousel .hero-sub {
+    display: flex;
+    align-items: flex-end;
+    font-size: clamp(1.4rem, 2.6vw, 4.6rem);
+    margin: 2vw 0 0;
+}
+
+.hero-carousel .hero-line {
+    display: inline-block;
+    width: 22%;
+    border-bottom: 3px solid #537453;
+    margin-bottom: 0.3em;
+}
+
+.hero-carousel .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    opacity: 1;
+}
+
+.hero-carousel .carousel-indicators .active {
+    background-color: #537453;
+}
+
+.hero-carousel .carousel-control-prev,
+.hero-carousel .carousel-control-next {
+    width: 6%;
+}
+
+    .hero-carousel .carousel-control-prev-icon,
+    .hero-carousel .carousel-control-next-icon {
+        background-color: rgba(83, 116, 83, 0.6);
+        border-radius: 50%;
+        background-size: 55%;
+    }
+
+/* Nút tim wishlist đã thích: luôn hiện (không cần hover) và giữ tim đỏ */
+.item_product_main .product-action .product-thumbnail .action-button .btn-circle.setWishlist.active {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    border-color: #e53935;
+}
+
+/* Khối tin tức mới trang chủ */
+.section_news {
+    margin-bottom: 40px;
+}
+
+    .section_news .news-item {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+    }
+
+        .section_news .news-item:hover {
+            box-shadow: 0 0 12px rgba(83, 116, 83, 0.3);
+        }
+
+    .section_news .news-thumb img {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+    }
+
+    .section_news .news-info {
+        padding: 12px 15px;
+    }
+
+        .section_news .news-info .time-post {
+            color: #888;
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .section_news .news-info h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+            .section_news .news-info h3 a {
+                color: #333;
+            }
+
+                .section_news .news-info h3 a:hover {
+                    color: #537453;
+                }
+
+    .section_news .news-empty {
+        font-size: 1.4rem;
+        color: #888;
+        padding: 20px 0;
+    }
+
+@media (max-width: 767px) {
+    .top-banner {
+        font-size: 1.2rem;
+    }
+
+    /* Danh mục nổi bật: khi tràn ngang thì canh trái để cuộn được tới ô đầu tiên
+       (inline style justify-content:center của đồ án cũ làm mất ô "Bó hoa tươi" trên mobile) */
+    .swiper_category .swiper-wrapper {
+        justify-content: flex-start !important;
+    }
+
+    /* Tab "Kệ Hoa Khai Trương / Giỏ hoa mừng": thu khoảng đệm để vừa màn 375px
+       (bản cũ bị cắt chữ "Giỏ hoa mừng" vì thanh cuộn ngang bị ẩn) */
+    .section-index.section_product_tab .tab_big .tab_ul {
+        padding: 0 5px;
+    }
+
+        .section-index.section_product_tab .tab_big .tab_ul ul li {
+            padding: 0 8px;
+            font-size: 1.5rem;
+        }
+
+    .hero-carousel .hero-line {
+        border-bottom-width: 2px;
+    }
+}

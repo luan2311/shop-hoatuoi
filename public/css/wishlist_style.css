@@ -1,0 +1,177 @@
+/* Trang yêu thích - chép từ Contents/CSS/wishlist_style.css (đồ án cũ) */
+.CartHeaderContainer .cart--empty-message .btn-continue-shopping {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #537453;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid #537453;
+    text-align: center;
+}
+
+    .CartHeaderContainer .cart--empty-message .btn-continue-shopping:hover {
+        background: #ea8725;
+        border-color: #ea8725;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .CartHeaderContainer .cart--empty-message .btn-continue-shopping i {
+        margin-right: 8px;
+    }
+
+/* Responsive cho button */
+@media (max-width: 768px) {
+    .CartHeaderContainer .cart--empty-message .btn-continue-shopping {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .CartHeaderContainer .cart--empty-message .btn-continue-shopping {
+        padding: 8px 16px;
+        font-size: 13px;
+        width: 100%;
+        max-width: 250px;
+    }
+}
+
+/* Các thẻ cùng hàng cao bằng nhau: tên tối đa 2 dòng, giá + nút luôn nằm cùng 1 đường */
+.js-wishlist-item {
+    display: flex;
+}
+
+.favorite-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+    .favorite-card .favorite-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .favorite-card .favorite-info h5 {
+        line-height: 1.5;
+        height: 3em;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+
+    .favorite-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important;
+    }
+
+    /* style_layout.css có "img { height: auto !important }" làm ảnh cao theo tỉ lệ gốc
+       -> các thẻ lệch nhau; ép lại chiều cao cố định (mobile vẫn 180px ở @media bên dưới) */
+    .favorite-card img {
+        height: 250px !important;
+    }
+
+.btn-action {
+    font-size: 13px;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+    .btn-action:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+
+.add-cart:hover {
+    background: #c8e6c9 !important;
+}
+
+.remove-fav:hover {
+    background: #ffcdd2 !important;
+}
+
+/* File cũ ghi nhầm "@@media" (cú pháp Razor) nên khối này chưa từng chạy; sửa lại thành @media */
+@media (max-width: 768px) {
+    .favorite-card img {
+        height: 180px !important;
+    }
+
+    .favorite-info h5 {
+        font-size: 14px !important;
+        min-height: 40px !important;
+    }
+
+    .favorite-price {
+        font-size: 16px !important;
+    }
+
+    .btn-action {
+        padding: 6px 8px !important;
+        font-size: 12px !important;
+    }
+}
+
+/* Khung "yêu thích trống" - chép từ Contents/CSS/cart_style.css (đồ án cũ) */
+.CartHeaderContainer {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1)
+}
+
+    .CartHeaderContainer .cart--empty-message {
+        text-align: center;
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center
+    }
+
+        .CartHeaderContainer .cart--empty-message p {
+            font-size: 2rem;
+            color: #333;
+            margin-top: 20px;
+            line-height: 1.5
+        }
+
+@media (max-width: 768px) {
+    .CartHeaderContainer {
+        max-width: 90%;
+        padding: 20px;
+        margin: 30px auto
+    }
+
+        .CartHeaderContainer .cart--empty-message {
+            padding: 20px 10px
+        }
+
+            .CartHeaderContainer .cart--empty-message p {
+                font-size: 1.6rem
+            }
+}
+
+@media (max-width: 480px) {
+    .CartHeaderContainer {
+        max-width: 95%;
+        padding: 15px;
+        margin: 20px auto
+    }
+
+        .CartHeaderContainer .cart--empty-message {
+            padding: 15px 5px
+        }
+}

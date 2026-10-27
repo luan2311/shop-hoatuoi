@@ -12,8 +12,8 @@ class Product extends Model
     protected $connection = 'mongodb';
 
     protected $fillable = [
-        'code', 'name', 'price', 'image', 'description',
-        'status', 'brand', 'stock', 'slug', 'category_id', 'category', 'original_price',
+        'code', 'name', 'price', 'original_price', 'image', 'description',
+        'status', 'brand', 'stock', 'slug', 'category_id', 'category',
     ];
 
     protected function casts(): array
@@ -64,7 +64,7 @@ class Product extends Model
 
     public function wishlists()
     {
-        return $this->hasMany(Wishlist::class);
+        return $this->hasMany(Wishlist::class, 'product_code', 'code');
     }
 
     // Accessor: format giá tiền VND
@@ -88,5 +88,10 @@ class Product extends Model
     public function scopeInStock($query)
     {
         return $query->where('stock', '>', 0)->where('status', 'Còn hàng');
+    }
+
+    public function scopeInCategory($query, string $slug)
+    {
+        return $query->where('category.slug', $slug);
     }
 }

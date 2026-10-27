@@ -27,6 +27,8 @@
         <env name="MONGODB_DATABASE" value="shop_hoatuoi_test_suite" force="true"/>
         <env name="MONGODB_URI" value="mongodb://127.0.0.1:27018/?replicaSet=tienRS&amp;serverSelectionTimeoutMS=3000"/>
         <env name="DB_URL" value=""/>
+        <env name="MONGODB_URI" value="mongodb://127.0.0.1:27017" force="true"/>
+        <env name="MONGODB_DATABASE" value="shop_hoatuoi_test" force="true"/>
         <env name="MAIL_MAILER" value="array"/>
         <env name="QUEUE_CONNECTION" value="sync"/>
         <env name="SESSION_DRIVER" value="array"/>
