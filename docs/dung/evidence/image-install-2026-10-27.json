@@ -12,5 +12,21 @@
                                   "illustration":  6
                               }
                },
-    "scope":  "Current local runtime. The six licensed repo assets are already installed; 71 non-licensed placeholder runtime files have no tracked source asset."
+    "scope": "Current local runtime. Six licensed illustration assets are tracked in Git and already installed. A separate generic placeholder template is also tracked at database/seeders/assets/placeholder.jpg; it is not a product photo. The 71 runtime placeholders are generated from that template for 68 product filenames without a product-specific asset and 3 article thumbnails without a licensed asset. These placeholders are not counted as completed product photos.",
+    "placeholder_template": {
+        "path": "database/seeders/assets/placeholder.jpg",
+        "git_tracked": true,
+        "sha256": "0e6b127591901fad2b9014bdebde3ee02b602b23f3a89ff764b44a7cec2d00d6",
+        "purpose": "Generic runtime placeholder source; not a product photo."
+    },
+    "runtime_readback": {
+        "product_files": {
+            "illustration_source": 6,
+            "placeholder_template": 68
+        },
+        "post_files": {
+            "placeholder_template": 3
+        },
+        "invalid_jpeg_signatures": 0
+    }
 }

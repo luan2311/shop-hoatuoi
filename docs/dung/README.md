@@ -6,7 +6,7 @@ Thành viên 5, tài khoản GitHub `Dungmeww`. Phạm vi: dữ liệu mẫu, ma
 
 Phần Dũng được tách trên `feature/testing-docs-seeder`, dựa trên commit `89242cd` của nhánh cart/checkout. Đây là nhánh làm việc riêng, không merge hoặc rebase nhánh thành viên khác. Nền tích hợp chính thức `dev`/`develop` vẫn do nhóm quyết định.
 
-Remote đã đọc lại có `main` (`d69cbfc`), `dev` (`3ffe4cb`), `feature/auth-category-admin` (`c370d6f`) và `feature/cart-checkout-orders` (`89242cd`). PR #1 vẫn mở, từ nhánh Tiến vào `main`. Chưa có Catalog của An hoặc UI của Huy trên remote. Chưa thấy nhánh QA trước lần triển khai này.
+Snapshot remote-tracking trong clone khi cập nhật tài liệu: `main` (`d69cbfc`), `dev` (`3ffe4cb`), `feature/auth-category-admin` (`c370d6f`), `feature/cart-checkout-orders` (`89242cd`) và nhánh Dũng tại `f71b010`. Nhánh Dũng có commit `89242cd` của Tiến làm cha trực tiếp. Kết nối GitHub không khả dụng trong lần kiểm tra này nên các ref trên không xác nhận trạng thái live, PR hoặc thay đổi sau lần fetch gần nhất. Các chức năng Catalog/Product CRUD, upload ảnh và UI của thành viên khác chưa có trong nhánh Dũng đang kiểm tra.
 
 Source thực tế: PHP `^8.3`, Laravel lock `13.37.0`, `mongodb/laravel-mongodb 5.7.0`, MongoDB library `2.5.0`. Giao diện Breeze/Tailwind/Alpine trên checkout; nhánh Luân có Bootstrap Admin riêng. Không đổi dependency, models, controllers bán hàng, routes hoặc layout của thành viên khác.
 
@@ -19,6 +19,8 @@ Source thực tế: PHP `^8.3`, Laravel lock `13.37.0`, `mongodb/laravel-mongodb
 | [QA_TEST_PLAN.md](QA_TEST_PLAN.md) | Test đã triển khai, điều kiện nghiệm thu toàn website, phần chờ tích hợp |
 | [SO_DO.md](SO_DO.md), [USE_CASE.puml](USE_CASE.puml) | Kiến trúc Laravel–MongoDB, collection, import, activity/sequence checkout và Use Case; phân biệt code đang có với kế hoạch |
 | [QA_KET_QUA.md](QA_KET_QUA.md) | Kết quả chạy thực tế và giới hạn; đọc cùng evidence |
+| [Báo cáo đồ án](../BAO_CAO_DO_AN_10_DIEM.md) | Tóm tắt đề tài, trạng thái chức năng, thiết kế, kiểm thử, hạn chế và hướng phát triển dựa trên code hiện có |
+| [Nội dung slide](NOI_DUNG_SLIDE.md) | Dàn ý 12 slide có thông điệp và ghi chú trình bày; chưa phải file PowerPoint |
 | [source-audit.json](source-audit.json) | Toàn bộ collection, số bản ghi trong script, 23 định nghĩa index và checksum |
 | [product-images.json](product-images.json) | 80 sản phẩm, 74 tên file ảnh; phân biệt ảnh sản phẩm đã xác minh, ảnh minh họa có attribution và file còn thiếu |
 | [evidence/](evidence/) | Bằng chứng kiểm thử và bảo toàn dữ liệu đã lược bỏ thông tin nhạy cảm |
@@ -34,6 +36,8 @@ Source thực tế: PHP `^8.3`, Laravel lock `13.37.0`, `mongodb/laravel-mongodb
 ### Tình trạng ảnh
 
 Manifest đếm file có thể phân phối trong Git: **6 ảnh minh họa có nguồn và giấy phép, 0 ảnh được xác minh đúng SKU, 68 ảnh sản phẩm còn thiếu** trên 74 tên file duy nhất. Sáu ảnh minh họa có dải nhãn “ILLUSTRATION – PRODUCT MATCH NOT VERIFIED”; chúng không được báo là ảnh sản phẩm hoàn chỉnh. Ba thumbnail bài viết cũng chưa có asset được cấp phép. Danh sách từng filename, mã sản phẩm và attribution nằm trong [product-images.json](product-images.json) và [`image-provenance.json`](../../database/seeders/data/image-provenance.json).
+
+Git cũng lưu template placeholder chung tại `database/seeders/assets/placeholder.jpg`. Template được dùng làm nguồn cho 71 placeholder runtime (68 tên ảnh sản phẩm còn thiếu và 3 thumbnail bài viết); nó không phải ảnh hoa hoặc ảnh sản phẩm, không được tính vào 6 ảnh minh họa.
 
 Nguồn ảnh là Wikimedia Commons: [Ninix8 – hoa hồng đỏ](https://commons.wikimedia.org/wiki/File:Bouquet_of_Red_Roses.jpg), [Astari28 – bó hồng hồng](https://commons.wikimedia.org/wiki/File:Buket_bunga_mawar_pink_1.jpg), [PattayaPatrol – hồng và hướng dương](https://commons.wikimedia.org/wiki/File:DFC_0794_Bright_bouquet_of_pink_roses_and_a_cheerful_sunflower_arranged_with_greenery_on_a_golden_surface.jpg), [Salicyna – tulip](https://commons.wikimedia.org/wiki/File:Tulipa_2019-02-09_5461.jpg), [WikipediaNeko – mẫu đơn](https://commons.wikimedia.org/wiki/File:Picture_of_a_Peony.jpg), và [Missvain/Sarah Stierch – gerbera](https://commons.wikimedia.org/wiki/File:Birthday_flower_bouquet_-_2021-08-26_-_Sarah_Stierch.jpg). Các asset dùng CC BY 4.0 hoặc CC BY-SA 4.0; attribution và ghi chú chỉnh kích thước/đóng dấu được lưu cùng manifest.
 

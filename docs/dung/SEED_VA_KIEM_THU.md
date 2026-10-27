@@ -101,7 +101,9 @@ Kết quả mặc định ở `.runtime/dung-qa/phpunit.xml`; readback nghiệp 
 
 ## Hình ảnh và xử lý lỗi
 
-Manifest [product-images.json](product-images.json) giữ filename theo source và phân biệt ảnh được commit trong `database/seeders/assets/products` với file runtime trong `storage/app/public/products`. Hiện có **6 ảnh minh họa có attribution/CC BY 4.0 hoặc CC BY-SA 4.0; 0 ảnh được xác minh đúng SKU; còn thiếu 68 ảnh đúng mẫu** trên 74 tên file duy nhất. Mỗi minh họa được chuẩn hóa thành JPEG 800×800, tối đa 350 KB và có dải chữ “ILLUSTRATION – PRODUCT MATCH NOT VERIFIED”. Sáu tên file được hai sản phẩm dùng chung; tên chung không chứng minh hai ảnh là cùng sản phẩm. Ba thumbnail bài viết vẫn thiếu.
+Manifest [product-images.json](product-images.json) giữ filename theo source và phân biệt ảnh được commit trong `database/seeders/assets/products` với file runtime trong `storage/app/public/products`. Hiện có **6 ảnh minh họa có attribution/CC BY 4.0 hoặc CC BY-SA 4.0; 0 ảnh được xác minh đúng SKU; còn thiếu 68 ảnh đúng mẫu** trên 74 tên file duy nhất. Mỗi minh họa được chuẩn hóa thành JPEG 800×800, tối đa 350 KB và có dải chữ “ILLUSTRATION – PRODUCT MATCH NOT VERIFIED”. Sáu tên file được hai sản phẩm dùng chung; tên chung không chứng minh hai ảnh là cùng sản phẩm. Ba thumbnail bài viết vẫn thiếu asset có giấy phép.
+
+`database/seeders/assets/placeholder.jpg` là template placeholder chung **được commit trong Git**. Thư viện dùng template này cho placeholder runtime; template không phải ảnh hoa hay ảnh sản phẩm. Runtime readback hiện có 68 placeholder cho tên ảnh sản phẩm thiếu asset và 3 placeholder cho thumbnail bài viết. Các con số này tách biệt với 6 ảnh minh họa có giấy phép.
 
 Trên checkout mới, cài asset đã được kiểm tra bằng:
 
@@ -111,7 +113,7 @@ php scripts/prepare-product-images.php --write-manifest
 python scripts/prepare-dung-data.py
 ```
 
-Lệnh cài chỉ nhận asset có hash/giấy phép khớp provenance; có thể thay placeholder do script dự án tạo, nhưng từ chối file runtime khác hoặc asset repository bị sửa. Muốn thay ảnh, dùng `--target=products/<filename> --input=<file> --rights=<metadata.json>` để preview; thêm `--apply` sau khi đã review nguồn, giấy phép, tác giả và mã sản phẩm. `role=product` đòi hỏi xác minh tất cả code dùng chung filename; ảnh chung chung phải để `role=illustration`.
+Lệnh cài chỉ nhận asset có hash/giấy phép khớp provenance; có thể thay placeholder runtime nếu nội dung trùng template chung đã biết, nhưng từ chối file runtime khác hoặc asset repository bị sửa. Muốn thay ảnh, dùng `--target=products/<filename> --input=<file> --rights=<metadata.json>` để preview; thêm `--apply` sau khi đã review nguồn, giấy phép, tác giả và mã sản phẩm. `role=product` đòi hỏi xác minh tất cả code dùng chung filename; ảnh chung chung phải để `role=illustration`.
 
 | Thông báo/tình huống | Xử lý |
 |---|---|
