@@ -18,6 +18,38 @@ class ProductRequest extends FormRequest
     protected function prepareForValidation(): void
     {
         $product = $this->route('product');
+
+        if ($this->has('TenSP') && !$this->has('name')) {
+            $this->merge(['name' => $this->input('TenSP')]);
+        }
+        if ($this->has('GiaBan') && !$this->has('price')) {
+            $this->merge(['price' => $this->input('GiaBan')]);
+        }
+        if ($this->has('SoLuongTon') && !$this->has('stock')) {
+            $this->merge(['stock' => $this->input('SoLuongTon')]);
+        }
+        if ($this->has('TinhTrang') && !$this->has('status')) {
+            $this->merge(['status' => $this->input('TinhTrang')]);
+        }
+        if ($this->has('MaLoai') && !$this->has('category_id')) {
+            $this->merge(['category_id' => $this->input('MaLoai')]);
+        }
+        if ($this->has('MoTaSP') && !$this->has('description')) {
+            $this->merge(['description' => $this->input('MoTaSP')]);
+        }
+        if ($this->hasFile('AnhBiaFile') && !$this->hasFile('image')) {
+            $this->files->set('image', $this->file('AnhBiaFile'));
+        }
+
+        if (! $this->filled('code') && ! ($product instanceof Product && $product->code)) {
+            $lastProd = Product::where('code', 'regex', '/^SP\d+/i')->orderBy('code', 'desc')->first();
+            $nextNum = 1;
+            if ($lastProd && preg_match('/^SP(\d+)/i', $lastProd->code, $m)) {
+                $nextNum = (int)$m[1] + 1;
+            }
+            $this->merge(['code' => 'SP' . str_pad((string)$nextNum, 3, '0', STR_PAD_LEFT)]);
+        }
+
         if (! $this->filled('slug')) {
             $name = $this->input('name');
             $code = $this->input('code');

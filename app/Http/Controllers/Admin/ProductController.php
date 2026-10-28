@@ -60,6 +60,15 @@ class ProductController extends Controller
         return to_route('admin.products.index')->with('status', 'Xóa sản phẩm thành công.');
     }
 
+    public function stopSelling(Product $product)
+    {
+        $product->stock = 0;
+        $product->status = 'Hết hàng';
+        $product->save();
+
+        return to_route('admin.products.index')->with('status', 'Đã ngưng bán sản phẩm: ' . $product->name . '. Tình trạng đã được cập nhật thành "Hết hàng".');
+    }
+
     private function persist(ProductRequest $request, Product $product): void
     {
         $data = $request->safe()->except(['image', 'category_id']);

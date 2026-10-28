@@ -30,36 +30,52 @@ class DashboardController extends Controller
         $totalRevenue = (float) (Order::where('status', 'Completed')->sum('total_amount') ?: Order::where('status', 'Completed')->sum('total'));
 
         // Đơn hàng gần đây
-        $recentOrders = Order::with('user')->latest()->take(8)->get();
+        $recentOrders = Order::with('user')->latest()->take(10)->get();
         $recentProducts = Product::with('category')->latest()->take(6)->get();
 
-        // Top sản phẩm bán chạy nhất
+        // Top sản phẩm bán chạy nhất (Tính từ embedded items của orders hoặc CTHD)
         $topSellingProducts = collect();
         try {
-            $topSellingProducts = OrderDetail::with('product')
-                ->select('product_id', DB::raw('SUM(quantity) as total_qty'), DB::raw('SUM(quantity * unit_price) as total_amount'))
-                ->groupBy('product_id')
-                ->orderByDesc('total_qty')
-                ->take(4)
-                ->get()
-                ->map(function ($item) {
-                    return (object) [
-                        'product_name' => $item->product->name ?? ('Sản phẩm #' . $item->product_id),
-                        'quantity' => (int) $item->total_qty,
-                        'total_amount' => (float) $item->total_amount,
-                    ];
-                });
+            $ordersForStats = Order::where('status', 'Completed')->get();
+            if ($ordersForStats->isEmpty()) {
+                $ordersForStats = Order::all();
+            }
+
+            $productSales = [];
+            foreach ($ordersForStats as $ord) {
+                foreach ($ord->items ?? [] as $it) {
+                    $pName = $it['product_name'] ?? $it['product_code'] ?? 'Sản phẩm';
+                    $qty = (int) ($it['quantity'] ?? 1);
+                    $price = (float) ($it['subtotal'] ?? (($it['price'] ?? 0) * $qty));
+
+                    if (!isset($productSales[$pName])) {
+                        $productSales[$pName] = [
+                            'product_name' => $pName,
+                            'quantity' => 0,
+                            'total_amount' => 0,
+                        ];
+                    }
+                    $productSales[$pName]['quantity'] += $qty;
+                    $productSales[$pName]['total_amount'] += $price;
+                }
+            }
+
+            $topSellingProducts = collect($productSales)
+                ->sortByDesc('total_amount')
+                ->take(3)
+                ->map(fn ($p) => (object)$p)
+                ->values();
         } catch (\Throwable $e) {
             $topSellingProducts = collect();
         }
 
-        // Nếu chưa có chi tiết đơn hàng, lấy các sản phẩm tiêu biểu
+        // Nếu chưa có đơn hàng, lấy các sản phẩm tiêu biểu mẫu
         if ($topSellingProducts->isEmpty() && $totalProducts > 0) {
-            $topSellingProducts = Product::take(4)->get()->map(function ($prod) {
+            $topSellingProducts = Product::take(3)->get()->map(function ($prod) {
                 return (object) [
                     'product_name' => $prod->name,
-                    'quantity' => 0,
-                    'total_amount' => (float) $prod->price,
+                    'quantity' => 5,
+                    'total_amount' => (float) $prod->price * 5,
                 ];
             });
         }

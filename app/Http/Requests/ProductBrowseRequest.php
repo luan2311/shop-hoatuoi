@@ -14,8 +14,12 @@ class ProductBrowseRequest extends FormRequest
 
     protected function prepareForValidation(): void
     {
-        if (! $this->has('q') && $this->has('query')) {
-            $this->merge(['q' => $this->input('query')]);
+        if (! $this->has('q')) {
+            if ($this->has('searchString')) {
+                $this->merge(['q' => $this->input('searchString')]);
+            } elseif ($this->has('query')) {
+                $this->merge(['q' => $this->input('query')]);
+            }
         }
     }
 

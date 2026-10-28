@@ -17,12 +17,4 @@ Route::middleware('auth')->group(function (): void {
     Route::get('/account/orders', [OrderController::class, 'index'])->name('orders.index');
     Route::get('/account/orders/{order}', [OrderController::class, 'show'])
         ->where('order', '[a-fA-F0-9]{24}')->name('orders.show');
-
-    Route::prefix('admin')->name('admin.')->middleware('role:Admin')->group(function (): void {
-        Route::get('/orders', [AdminOrderController::class, 'index'])->name('orders.index');
-        Route::get('/orders/{order}', [AdminOrderController::class, 'show'])
-            ->where('order', '[a-fA-F0-9]{24}')->name('orders.show');
-        Route::patch('/orders/{order}/status', [AdminOrderController::class, 'updateStatus'])
-            ->where('order', '[a-fA-F0-9]{24}')->name('orders.status');
-    });
 });

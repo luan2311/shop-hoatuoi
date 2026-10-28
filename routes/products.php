@@ -44,9 +44,4 @@ Route::group([], function () {
     Route::get('/api/products/{id}/info', [ProductController::class, 'getProductInfo'])->name('products.info');
     Route::get('/api/products', [ProductController::class, 'apiIndex'])->name('products.api.index');
     Route::get('/api/products/{id}', [ProductController::class, 'apiShow'])->name('products.api.show');
-
-    // Admin endpoints
-    Route::prefix('admin')->name('admin.')->middleware(['auth', 'role:Admin'])->group(function () {
-        Route::resource('products', AdminProductController::class)->except('show');
-    });
 });

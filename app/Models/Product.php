@@ -63,23 +63,58 @@ class Product extends Model
         return $this->belongsTo(Category::class, 'category_id');
     }
 
-    public function category()
+    public function getCategoryAttribute($value)
     {
-        return $this->belongsTo(Category::class, 'category_id');
+        if (! empty($value)) {
+            return $value;
+        }
+
+        if ($this->category_id && $this->categoryRecord) {
+            return [
+                'code' => $this->categoryRecord->code,
+                'name' => $this->categoryRecord->name,
+                'slug' => $this->categoryRecord->slug,
+            ];
+        }
+
+        return null;
     }
 
     public function getImageUrlAttribute(): ?string
     {
-        $image = (string) $this->image;
-        if (preg_match('~^products/[a-zA-Z0-9_-]+\.(?:jpg|jpeg|png|webp)$~i', $image)) {
-            return Storage::disk('public')->url($image);
+        $image = trim((string) $this->image);
+        if ($image === '') {
+            return null;
         }
-        if ($image !== '' && basename($image) === $image && preg_match('/\.(jpg|jpeg|png|webp)$/i', $image)) {
-            foreach (['images/products/', 'Images/'] as $directory) {
-                if (is_file(public_path($directory.$image))) {
-                    return asset($directory.$image);
-                }
+
+        if (str_starts_with($image, 'http://') || str_starts_with($image, 'https://')) {
+            return $image;
+        }
+
+        if (str_starts_with($image, 'products/')) {
+            return asset('storage/' . $image);
+        }
+
+        if (str_starts_with($image, 'storage/')) {
+            return asset($image);
+        }
+
+        $candidates = [
+            'storage/products/' => public_path('storage/products/' . $image),
+            'storage/' => public_path('storage/' . $image),
+            'images/products/' => public_path('images/products/' . $image),
+            'images/' => public_path('images/' . $image),
+            'Images/' => public_path('Images/' . $image),
+        ];
+
+        foreach ($candidates as $prefix => $fullPath) {
+            if (is_file($fullPath)) {
+                return asset($prefix . $image);
             }
+        }
+
+        if (preg_match('/\.(?:jpg|jpeg|png|webp|gif|svg)$/i', $image)) {
+            return asset('storage/products/' . $image);
         }
 
         return null;
