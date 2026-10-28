@@ -2,6 +2,50 @@
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/trangchu_style.css') }}">
+    <style>
+        .about_collapse_wrap {
+            position: relative;
+            max-height: 200px;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out;
+        }
+        .about_collapse_wrap.is-expanded {
+            max-height: 6000px;
+        }
+        .about_collapse_overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 35px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.95) 100%);
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .about_collapse_wrap.is-expanded .about_collapse_overlay {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .btn-toggle-about {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            color: #537453;
+            border: 1px solid #537453;
+            border-radius: 30px;
+            padding: 6px 22px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            transition: all 0.25s ease;
+        }
+        .btn-toggle-about:hover {
+            background: #537453;
+            color: #fff;
+        }
+    </style>
 @endpush
 
 @section('content')
@@ -48,7 +92,7 @@
         <div class="container">
             <div class="row promo-box">
                 <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-                    <div class="promo-item duration-300">
+                    <div class="duration-300 promo-item">
                         <div class="icon aspect-1">
                             <img width="50" height="50" class="lazyload loaded" alt="Góc Hoa Xinh"
                                  src="{{ asset('images/ser_1.svg') }}" data-was-processed="true">
@@ -66,7 +110,7 @@
                 </div>
 
                 <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-                    <div class="promo-item duration-300">
+                    <div class="duration-300 promo-item">
                         <div class="icon aspect-1">
                             <img width="50" height="50" class="lazyload loaded" alt="Góc Hoa Xinh"
                                  src="{{ asset('images/ser_2.svg') }}" data-was-processed="true">
@@ -84,7 +128,7 @@
                 </div>
 
                 <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-                    <div class="promo-item duration-300">
+                    <div class="duration-300 promo-item">
                         <div class="icon aspect-1">
                             <img width="50" height="50" class="lazyload loaded" alt="Góc Hoa Xinh"
                                  src="{{ asset('images/ser_3.svg') }}" data-was-processed="true">
@@ -102,7 +146,7 @@
                 </div>
 
                 <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-                    <div class="promo-item duration-300">
+                    <div class="duration-300 promo-item">
                         <div class="icon aspect-1">
                             <img width="50" height="50" class="lazyload loaded" alt="Góc Hoa Xinh"
                                  src="{{ asset('images/ser_4.svg') }}" data-was-processed="true">
@@ -138,10 +182,10 @@
                         <a href="/products?category_slug=bo-hoa-tuoi" title="Bó hoa tươi" class="cate-item">
                             <div class="box-cate">
                                 <div class="cate-image aspect-1">
-                                    <img alt="Slider 5" width="250" height="250" class="lazyload duration-300 loaded"
+                                    <img alt="Slider 5" width="250" height="250" class="duration-300 lazyload loaded"
                                          src="{{ asset('images/cate_1.png') }}" data-was-processed="true">
                                 </div>
-                                <h3 class="cate-name line-clamp line-clamp-1 duration-300">
+                                <h3 class="duration-300 cate-name line-clamp line-clamp-1">
                                     Bó hoa tươi
                                 </h3>
                             </div>
@@ -152,10 +196,10 @@
                         <a href="/products?category_slug=ke-chuc-mung" title="Kệ khai trương" class="cate-item">
                             <div class="box-cate">
                                 <div class="cate-image aspect-1">
-                                    <img alt="Slider 5" width="250" height="250" class="lazyload duration-300 loaded"
+                                    <img alt="Slider 5" width="250" height="250" class="duration-300 lazyload loaded"
                                          src="{{ asset('images/cate_2.png') }}" data-was-processed="true">
                                 </div>
-                                <h3 class="cate-name line-clamp line-clamp-1 duration-300">
+                                <h3 class="duration-300 cate-name line-clamp line-clamp-1">
                                     Kệ khai trương
                                 </h3>
                             </div>
@@ -166,10 +210,10 @@
                         <a href="/products?category_slug=gio-hoa-chuc-mung" title="Hoa chúc mừng" class="cate-item">
                             <div class="box-cate">
                                 <div class="cate-image aspect-1">
-                                    <img alt="Slider 5" width="250" height="250" class="lazyload duration-300 loaded"
+                                    <img alt="Slider 5" width="250" height="250" class="duration-300 lazyload loaded"
                                          src="{{ asset('images/cate_3.png') }}" data-was-processed="true">
                                 </div>
-                                <h3 class="cate-name line-clamp line-clamp-1 duration-300">
+                                <h3 class="duration-300 cate-name line-clamp line-clamp-1">
                                     Hoa chúc mừng
                                 </h3>
                             </div>
@@ -180,10 +224,10 @@
                         <a href="/products?category_slug=hoa-sap" title="Hoa sáp" class="cate-item">
                             <div class="box-cate">
                                 <div class="cate-image aspect-1">
-                                    <img alt="Slider 5" width="250" height="250" class="lazyload duration-300 loaded"
+                                    <img alt="Slider 5" width="250" height="250" class="duration-300 lazyload loaded"
                                          src="{{ asset('images/cate_4.png') }}" data-was-processed="true">
                                 </div>
-                                <h3 class="cate-name line-clamp line-clamp-1 duration-300">
+                                <h3 class="duration-300 cate-name line-clamp line-clamp-1">
                                     Hoa sáp
                                 </h3>
                             </div>
@@ -194,10 +238,10 @@
                         <a href="/products?category_slug=hoa-cuoi" title="Hoa Cưới" class="cate-item">
                             <div class="box-cate">
                                 <div class="cate-image aspect-1">
-                                    <img alt="Slider 5" width="250" height="250" class="lazyload duration-300 loaded"
+                                    <img alt="Slider 5" width="250" height="250" class="duration-300 lazyload loaded"
                                          src="{{ asset('images/cate_5.png') }}" data-was-processed="true">
                                 </div>
-                                <h3 class="cate-name line-clamp line-clamp-1 duration-300">
+                                <h3 class="duration-300 cate-name line-clamp line-clamp-1">
                                     Hoa Cưới
                                 </h3>
                             </div>
@@ -250,7 +294,7 @@
 
                     <div class="tab_big">
                         <div class="tab_ul">
-                            <ul class="tabs tabs-title tab-pc tabtitle2 ajax clearfix">
+                            <ul class="clearfix tabs tabs-title tab-pc tabtitle2 ajax">
                                 <li class="tab-link tab_cate has-content current" data-tab="tab1-1">
                                     <span>Bó hoa tươi</span>
                                 </li>
@@ -265,7 +309,7 @@
                                 @include('partials.product-card')
                             @endforeach
                         </div>
-                        <div class="view-more clearfix">
+                        <div class="clearfix view-more">
                             <a href="/products?category_slug=bo-hoa-tuoi" title="Xem tất cả" class="btn" style="font-size:1.4rem">
                                 Xem tất cả
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -293,7 +337,7 @@
                     </h2>
                     <div class="tab_big">
                         <div class="tab_ul">
-                            <ul class="tabs tabs-title tab-pc tabtitle2 ajax clearfix">
+                            <ul class="clearfix tabs tabs-title tab-pc tabtitle2 ajax">
                                 <li class="tab-link tab_cate has-content current" data-tab="tab2-1">
                                     <span>Kệ Hoa Khai Trương</span>
                                 </li>
@@ -312,7 +356,7 @@
                                 @include('partials.product-card')
                             @endforeach
                         </div>
-                        <div class="view-more clearfix">
+                        <div class="clearfix view-more">
                             <a href="/products?category_slug=ke-chuc-mung" title="Xem tất cả" class="btn" style="font-size:1.4rem">
                                 Xem tất cả
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -329,7 +373,7 @@
                                 @include('partials.product-card')
                             @endforeach
                         </div>
-                        <div class="view-more clearfix">
+                        <div class="clearfix view-more">
                             <a href="/products?category_slug=gio-hoa-chuc-mung" title="Xem tất cả" class="btn" style="font-size:1.4rem">
                                 Xem tất cả
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -351,13 +395,155 @@
         <h5 class="alert-heading"></h5>
         <p class="alert-content"></p>
     </div>
+
+    <!-- Hoa sáp -->
+    <section class="section-index section_product_tab section_product_tab_3">
+        <div class="container">
+            <div class="wrap_tab_index not-dqtab e-tabs ajax-tab-1" data-section-2="ajax-tab-1">
+                <div class="section-title">
+                    <h2>
+                        <a href="/products?category_slug=hoa-sap">
+                            Hoa Sáp
+                        </a>
+                    </h2>
+
+                    <div class="tab_big">
+                        <div class="tab_ul">
+                            <ul class="clearfix tabs tabs-title tab-pc tabtitle2 ajax">
+                                <li class="tab-link tab_cate has-content current" data-tab="tab3-1">
+                                    <span>Hoa Sáp</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-products">
+                    <div class="tab3-1 tab-content current">
+                        <div class="row load-after" data-section="section_product_tab_3">
+                            @foreach ($hoaSap as $product)
+                                @include('partials.product-card')
+                            @endforeach
+                        </div>
+                        <div class="clearfix view-more">
+                            <a href="/products?category_slug=hoa-sap" title="Xem tất cả" class="btn" style="font-size:1.4rem">
+                                Xem tất cả
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                     stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hoa Cưới -->
+    <section class="section-index section_product_tab section_product_tab_4">
+        <div class="container">
+            <div class="wrap_tab_index not-dqtab e-tabs ajax-tab-1" data-section-2="ajax-tab-1">
+                <div class="section-title">
+                    <h2>
+                        <a href="/products?category_slug=hoa-cuoi">
+                            Hoa Cưới
+                        </a>
+                    </h2>
+
+                    <div class="tab_big">
+                        <div class="tab_ul">
+                            <ul class="clearfix tabs tabs-title tab-pc tabtitle2 ajax">
+                                <li class="tab-link tab_cate has-content current" data-tab="tab4-1">
+                                    <span>Hoa Cầm Tay</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="block-products">
+                    <div class="tab4-1 tab-content current">
+                        <div class="row load-after" data-section="section_product_tab_4">
+                            @foreach ($hoaCuoi as $product)
+                                @include('partials.product-card')
+                            @endforeach
+                        </div>
+                        <div class="clearfix view-more">
+                            <a href="/products?category_slug=hoa-cuoi" title="Xem tất cả" class="btn" style="font-size:1.4rem">
+                                Xem tất cả
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                     stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tin tức mới (Load trực tiếp từ MongoDB collection posts) -->
+    <section class="section-index section_news">
+        <div class="container">
+            <div class="section-title">
+                <h2>
+                    <a href="{{ route('posts.index') }}" title="Tin tức mới">
+                        Tin tức mới
+                    </a>
+                </h2>
+            </div>
+            <div class="row">
+                @forelse ($tinTucMoi as $post)
+                    <div class="mb-3 col-lg-4 col-md-4 col-12">
+                        <div class="duration-300 news-item">
+                            <a class="news-thumb" href="{{ route('posts.show', $post->slug) }}" title="{{ $post->title }}">
+                                <img src="{{ $post->thumbnail_url }}"
+                                     alt="{{ $post->title }}"
+                                     class="lazyload loaded"
+                                     data-was-processed="true">
+                            </a>
+                            <div class="news-info">
+                                <p class="time-post">
+                                    <svg width="14" height="14" viewBox="0 0 11 11" fill="none" class="me-1" style="vertical-align: -1px;">
+                                        <path d="M5.50016 0.458252C4.50302 0.458252 3.52826 0.753941 2.69917 1.30793C1.87007 1.86191 1.22386 2.64931 0.842272 3.57056C0.460681 4.4918 0.360839 5.50551 0.555373 6.4835C0.749906 7.46149 1.23008 8.35983 1.93517 9.06492C2.64026 9.77001 3.5386 10.2502 4.51658 10.4447C5.49457 10.6392 6.50828 10.5394 7.42953 10.1578C8.35077 9.77622 9.13817 9.13002 9.69216 8.30092C10.2461 7.47182 10.5418 6.49707 10.5418 5.49992C10.5403 4.16327 10.0086 2.88182 9.06342 1.93666C8.11827 0.991509 6.83681 0.459829 5.50016 0.458252ZM7.19921 7.19896C7.11326 7.28488 6.9967 7.33315 6.87516 7.33315C6.75363 7.33315 6.63707 7.28488 6.55112 7.19896L5.17612 5.82396C5.09016 5.73803 5.04186 5.62147 5.04183 5.49992V2.74992C5.04183 2.62836 5.09012 2.51178 5.17607 2.42583C5.26203 2.33987 5.37861 2.29159 5.50016 2.29159C5.62172 2.29159 5.7383 2.33987 5.82426 2.42583C5.91021 2.51178 5.9585 2.62836 5.9585 2.74992V5.31017L7.19921 6.55088C7.28513 6.63683 7.3334 6.75339 7.3334 6.87492C7.3334 6.99645 7.28513 7.11301 7.19921 7.19896Z" fill="#898989"></path>
+                                    </svg>
+                                    <span>{{ $post->display_date }}</span>
+                                </p>
+                                <h3 class="line-clamp line-clamp-2">
+                                    <a href="{{ route('posts.show', $post->slug) }}" title="{{ $post->title }}">{{ $post->title }}</a>
+                                </h3>
+                                <p class="mt-1 mb-0 line-clamp line-clamp-3 text-muted small" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">
+                                    {{ $post->excerpt }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                    <div class="py-4 text-center col-12 news-empty">Chưa có bài viết nào.</div>
+                @endforelse
+            </div>
+            <div class="clearfix view-more">
+                <a href="{{ route('posts.index') }}" title="Xem tất cả tin tức" class="btn" style="font-size:1.4rem">
+                    Xem tất cả tin tức
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Giới thiệu (About) -->
     <section class="section-index section_about" id="about">
         <div class="container">
             <div class="row">
 
                 <div class="col-lg-12 col-md-12 col-sm-12 about_page">
                     <div class="collection-summary rte">
-                        <div>
+                        <div class="about_collapse_wrap" id="aboutCollapseWrap">
+                            <div>
                             <h1 style="text-align: center;">
                                 Góc Hoa Xinh - Nơi Kết Nối Cảm Xúc Qua Những Bó Hoa Tươi Tắn
                             </h1>
@@ -506,131 +692,20 @@
                             </p>
 
                         </div>
+                        <div class="about_collapse_overlay"></div>
+                    </div>
+                    <div class="mt-3 mb-2 text-center">
+                        <button type="button" id="btnToggleAbout" class="btn-toggle-about" aria-expanded="false">
+                            <span class="btn-text">Xem thêm</span>
+                            <svg class="btn-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16" style="transition: transform 0.3s ease;">
+                                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                            </svg>
+                        </button>
+                    </div>
 
                     </div>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Hoa sáp -->
-    <section class="section-index section_product_tab section_product_tab_3">
-        <div class="container">
-            <div class="wrap_tab_index not-dqtab e-tabs ajax-tab-1" data-section-2="ajax-tab-1">
-                <div class="section-title">
-                    <h2>
-                        <a href="/products?category_slug=hoa-sap">
-                            Hoa Sáp
-                        </a>
-                    </h2>
-
-                    <div class="tab_big">
-                        <div class="tab_ul">
-                            <ul class="tabs tabs-title tab-pc tabtitle2 ajax clearfix">
-                                <li class="tab-link tab_cate has-content current" data-tab="tab3-1">
-                                    <span>Hoa Sáp</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="block-products">
-                    <div class="tab3-1 tab-content current">
-                        <div class="row load-after" data-section="section_product_tab_3">
-                            @foreach ($hoaSap as $product)
-                                @include('partials.product-card')
-                            @endforeach
-                        </div>
-                        <div class="view-more clearfix">
-                            <a href="/products?category_slug=hoa-sap" title="Xem tất cả" class="btn" style="font-size:1.4rem">
-                                Xem tất cả
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Hoa Cưới -->
-    <section class="section-index section_product_tab section_product_tab_4">
-        <div class="container">
-            <div class="wrap_tab_index not-dqtab e-tabs ajax-tab-1" data-section-2="ajax-tab-1">
-                <div class="section-title">
-                    <h2>
-                        <a href="/products?category_slug=hoa-cuoi">
-                            Hoa Cưới
-                        </a>
-                    </h2>
-
-                    <div class="tab_big">
-                        <div class="tab_ul">
-                            <ul class="tabs tabs-title tab-pc tabtitle2 ajax clearfix">
-                                <li class="tab-link tab_cate has-content current" data-tab="tab4-1">
-                                    <span>Hoa Cầm Tay</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="block-products">
-                    <div class="tab4-1 tab-content current">
-                        <div class="row load-after" data-section="section_product_tab_4">
-                            @foreach ($hoaCuoi as $product)
-                                @include('partials.product-card')
-                            @endforeach
-                        </div>
-                        <div class="view-more clearfix">
-                            <a href="/products?category_slug=hoa-cuoi" title="Xem tất cả" class="btn" style="font-size:1.4rem">
-                                Xem tất cả
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                     stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tin tức mới -->
-    <section class="section-index section_news">
-        <div class="container">
-            <div class="section-title">
-                <h2>
-                    <a href="/posts">
-                        Tin tức mới
-                    </a>
-                </h2>
-            </div>
-            <div class="row">
-                @forelse ($tinTucMoi as $post)
-                    <div class="col-lg-4 col-md-4 col-12">
-                        <div class="news-item duration-300">
-                            <a class="news-thumb" href="/posts/{{ $post->slug }}" title="{{ $post->title }}">
-                                <img src="{{ $post->thumbnail_url }}"
-                                     alt="{{ $post->title }}">
-                            </a>
-                            <div class="news-info">
-                                <p class="time-post">{{ $post->display_date }}</p>
-                                <h3 class="line-clamp line-clamp-2">
-                                    <a href="/posts/{{ $post->slug }}" title="{{ $post->title }}">{{ $post->title }}</a>
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                @empty
-                    <div class="col-12 text-center news-empty">Chưa có bài viết nào.</div>
-                @endforelse
             </div>
         </div>
     </section>
@@ -656,6 +731,27 @@
                     });
                 });
             });
+
+            // Toggle xem thêm / thu gọn section about (giới hạn ban đầu 50px)
+            const btnToggleAbout = document.getElementById('btnToggleAbout');
+            const aboutWrap = document.getElementById('aboutCollapseWrap');
+            if (btnToggleAbout && aboutWrap) {
+                btnToggleAbout.addEventListener('click', function () {
+                    const isExpanded = aboutWrap.classList.toggle('is-expanded');
+                    const btnText = btnToggleAbout.querySelector('.btn-text');
+                    const btnIcon = btnToggleAbout.querySelector('.btn-icon');
+                    btnToggleAbout.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+
+                    if (isExpanded) {
+                        btnText.textContent = 'Thu gọn';
+                        btnIcon.style.transform = 'rotate(180deg)';
+                    } else {
+                        btnText.textContent = 'Xem thêm';
+                        btnIcon.style.transform = 'rotate(0deg)';
+                        document.getElementById('about').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                });
+            }
         });
     </script>
 @endpush

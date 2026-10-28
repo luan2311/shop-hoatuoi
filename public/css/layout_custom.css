@@ -161,16 +161,30 @@
         overflow: hidden;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
         margin-bottom: 20px;
+        transition: box-shadow 0.3s ease;
     }
 
         .section_news .news-item:hover {
             box-shadow: 0 0 12px rgba(83, 116, 83, 0.3);
         }
 
+    .section_news .news-thumb {
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+
     .section_news .news-thumb img {
         width: 100%;
         aspect-ratio: 16 / 10;
         object-fit: cover;
+        transition: transform 0.4s ease-in-out;
+        will-change: transform;
+    }
+
+    .section_news .news-item:hover .news-thumb img,
+    .section_news .news-thumb:hover img {
+        transform: scale(1.05);
     }
 
     .section_news .news-info {
@@ -202,6 +216,61 @@
         color: #888;
         padding: 20px 0;
     }
+
+    .section_news .view-more {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+        .section_news .view-more a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            line-height: 40px;
+            height: auto;
+            border: 1px solid #537453;
+            color: #537453;
+            font-weight: 500;
+            background: #fff;
+            padding: 0 25px;
+            border-radius: 8px;
+            transition: background-color 0.5s ease;
+            text-decoration: none;
+        }
+
+            .section_news .view-more a svg {
+                width: 18px;
+                height: 18px;
+                margin-left: 5px;
+            }
+
+            .section_news .view-more a:hover {
+                border: 1px solid #ea8725;
+                background: #ea8725;
+                color: #fff;
+            }
+
+                .section_news .view-more a:hover svg {
+                    color: #fff;
+                }
+
+/* Đồng bộ hiệu ứng hover phóng to mượt mà cho ảnh sản phẩm và bài viết blog */
+.item_product_main .product-action .product-thumbnail .image_thumb img {
+    transition: transform 0.4s ease-in-out;
+    will-change: transform;
+}
+
+.item_product_main .product-action:hover .product-thumbnail .image_thumb img {
+    transform: scale(1.05);
+}
+
+.layout-blog .image-blog img,
+.layout-blog .thumb a img,
+.layout-blog .item-blog .thumb img {
+    transition: transform 0.4s ease-in-out;
+    will-change: transform;
+}
 
 @media (max-width: 767px) {
     .top-banner {

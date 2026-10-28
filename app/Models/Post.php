@@ -24,9 +24,17 @@ class Post extends Model
     // Ảnh bìa trong storage/app/public/posts; bài chưa có ảnh thì dùng ảnh mặc định
     public function getThumbnailUrlAttribute(): string
     {
-        return $this->thumbnail
-            ? asset('storage/posts/' . $this->thumbnail)
-            : asset('images/slide-giao-hoa-2h.jpg');
+        if ($this->thumbnail) {
+            if (is_file(public_path('storage/posts/' . $this->thumbnail))) {
+                return asset('storage/posts/' . $this->thumbnail);
+            }
+            if (is_file(public_path('images/' . $this->thumbnail))) {
+                return asset('images/' . $this->thumbnail);
+            }
+            return asset('storage/posts/' . $this->thumbnail);
+        }
+
+        return asset('images/slide-giao-hoa-2h.jpg');
     }
 
     // Ngày đăng dạng dd/mm/yyyy (chưa có published_at thì lấy ngày tạo)

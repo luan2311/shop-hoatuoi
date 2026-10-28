@@ -20,7 +20,7 @@ class HomeController extends Controller
             'gioHoa'    => $byCategory('gio-hoa-chuc-mung'),
             'hoaSap'    => $byCategory('hoa-sap'),
             'hoaCuoi'   => $byCategory('hoa-cuoi'),
-            'tinTucMoi' => Post::orderBy('published_at', 'desc')->take(3)->get(),
+            'tinTucMoi' => Post::orderBy('published_at', 'desc')->orderBy('_id', 'desc')->take(3)->get(),
         ]);
     }
 

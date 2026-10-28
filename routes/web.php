@@ -14,6 +14,13 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('/posts/{slug}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/tin-tuc', fn () => redirect()->route('posts.index'));
+Route::get('/tin-tuc/{slug}', [PostController::class, 'show']);
+Route::get('/Home/Tin_tuc', fn () => redirect()->route('posts.index'));
+Route::get('/Home/Details/{id?}', function (\Illuminate\Http\Request $request, ?string $id = null) {
+    $target = $id ?: $request->query('id');
+    return $target ? redirect()->route('posts.show', $target) : redirect()->route('posts.index');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');

@@ -18,11 +18,19 @@ class PostController extends Controller
 
     public function show(string $slug)
     {
-        $post = Post::where('slug', $slug)->firstOrFail();
+        $post = Post::where('slug', $slug)
+            ->orWhere('code', $slug)
+            ->orWhere('_id', $slug)
+            ->firstOrFail();
 
         return view('posts.show', [
             'post'           => $post,
-            'tinTucLienQuan' => Post::where('slug', '!=', $post->slug)->orderBy('published_at', 'desc')->take(3)->get(),
+            'tinTucLienQuan' => Post::where('slug', '!=', $post->slug)
+                ->where('code', '!=', $post->code)
+                ->orderBy('published_at', 'desc')
+                ->orderBy('_id', 'desc')
+                ->take(3)
+                ->get(),
             'tinTucNoiBat'   => $this->tinTucNoiBat(),
         ]);
     }
