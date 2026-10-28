@@ -20,6 +20,16 @@ class AdminDashboardTest extends TestCase
         $admin = User::factory()->create();
         $admin->roles()->attach($adminRole->id);
 
+        $category = Category::create(['code' => 'LH001', 'name' => 'Hoa Tươi', 'slug' => 'hoa-tuoi']);
+        Product::create([
+            'code' => 'SP001',
+            'name' => 'Hoa Hồng',
+            'price' => 100000,
+            'stock' => 10,
+            'category_id' => $category->id,
+            'category' => ['code' => 'LH001', 'name' => 'Hoa Tươi', 'slug' => 'hoa-tuoi'],
+        ]);
+
         $response = $this->actingAs($admin)->get('/admin/dashboard');
         $response->assertStatus(200);
         $response->assertSee('Tổng quan quản trị');

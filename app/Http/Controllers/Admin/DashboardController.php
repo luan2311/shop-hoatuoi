@@ -27,7 +27,7 @@ class DashboardController extends Controller
 
         // Thống kê doanh thu và đơn hoàn thành (tương tự Dashboard C# ASP.NET MVC 5)
         $completedOrders = Order::where('status', 'Completed')->count();
-        $totalRevenue = (float) Order::where('status', 'Completed')->sum('total');
+        $totalRevenue = (float) (Order::where('status', 'Completed')->sum('total_amount') ?: Order::where('status', 'Completed')->sum('total'));
 
         // Đơn hàng gần đây
         $recentOrders = Order::with('user')->latest()->take(8)->get();
@@ -111,7 +111,7 @@ class DashboardController extends Controller
             // Lấy tất cả đơn hàng completed trong khoảng ngày
             $orders = Order::where('status', 'Completed')
                 ->whereBetween('created_at', [$startDate, $endDate])
-                ->get(['created_at', 'total']);
+                ->get(['created_at', 'total', 'total_amount']);
 
             // Nhóm theo ngày dd/MM/yyyy
             $grouped = $orders->groupBy(function ($order) {
@@ -125,7 +125,7 @@ class DashboardController extends Controller
                 $ordersOnDate = $grouped->get($dateKey, collect());
                 $chartData[] = [
                     'date' => $dateKey,
-                    'revenue' => (float) $ordersOnDate->sum('total'),
+                    'revenue' => (float) $ordersOnDate->sum(fn ($o) => (float) ($o->total ?? $o->total_amount ?? 0)),
                 ];
                 $current->addDay();
             }

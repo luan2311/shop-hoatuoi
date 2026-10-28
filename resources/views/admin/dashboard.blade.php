@@ -244,7 +244,7 @@
                                         <div class="small text-muted">{{ $order->receiver_phone ?? ($order->user->email ?? '') }}</div>
                                     </td>
                                     <td class="small text-muted">{{ $order->created_at ? $order->created_at->format('d/m/Y') : '---' }}</td>
-                                    <td class="fw-bold text-success">{{ number_format($order->total ?? 0, 0, ',', '.') }} đ</td>
+                                    <td class="fw-bold text-success">{{ number_format($order->total ?? $order->total_amount ?? 0, 0, ',', '.') }} đ</td>
                                     <td class="text-center">
                                         @php
                                             $st = $order->status ?? 'Pending';

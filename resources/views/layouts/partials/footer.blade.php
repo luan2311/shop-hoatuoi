@@ -11,18 +11,18 @@
                     </div>
                     <div class="des_foo"></div>
                     <div class="list-menu toggle-mn">
-                        <div class="content-contact clearfix">
+                        <div class="clearfix content-contact">
                             <span class="list_footer">
                                 <b>Địa chỉ: </b>140 Lê Trọng Tấn, Quận Tân Phú, TP.HCM
                             </span>
                         </div>
-                        <div class="content-contact clearfix">
+                        <div class="clearfix content-contact">
                             <span class="list_footer">
                                 <b>Điện thoại: </b>&nbsp;
                                 <a href="tel:0898449950" title="0898449950" style="color: white;">0898449950</a>
                             </span>
                         </div>
-                        <div class="content-contact clearfix">
+                        <div class="clearfix content-contact">
                             <span class="list_footer">
                                 <b>Email: </b>
                                 <a href="mailto:2001230486@huit.edu.vn" title="2001230486@huit.edu.vn">2001230486@huit.edu.vn</a>
@@ -74,10 +74,10 @@
     </div>
 
     <!-- Copyright & Back to Top -->
-    <div class="bg-footer-bottom copyright clearfix">
+    <!-- <div class="clearfix bg-footer-bottom copyright">
         <div class="container">
             <div class="row tablet">
-                <div id="copyright" class="col-lg-12 col-md-12 col-xs-12 fot_copyright text-center">
+                <div id="copyright" class="text-center col-lg-12 col-md-12 col-xs-12 fot_copyright">
                     <span class="wsp">
                         <span class="mobile">
                             &copy; {{ date('Y') }} Bản quyền thuộc về <b>Góc Hoa Xinh</b> - Shop Hoa Tươi Laravel & MongoDB
@@ -87,5 +87,5 @@
             </div>
         </div>
         <a href="#" class="backtop show" title="Lên đầu trang" aria-label="Lên đầu trang"><i class="fa fa-angle-up"></i></a>
-    </div>
+    </div> -->
 </footer>

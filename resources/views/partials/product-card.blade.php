@@ -11,7 +11,7 @@
                    href="/products/{{ $product->slug }}"
                    title="{{ $product->name }}">
                     <img class="lazyload duration-300 loaded"
-                         src="{{ asset('storage/products/' . $product->image) }}"
+                         src="{{ $product->image_url ?? asset('storage/products/' . $product->image) }}"
                          alt="{{ $product->name }}"
                          data-was-processed="true">
                     @if ($product->stock == 0)

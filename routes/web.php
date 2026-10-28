@@ -21,6 +21,9 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/dashboard', function () {
+    if (auth()->check() && auth()->user()->isAdmin()) {
+        return redirect()->route('admin.dashboard');
+    }
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 

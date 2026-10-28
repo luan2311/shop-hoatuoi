@@ -28,4 +28,18 @@ class RegistrationTest extends TestCase
         $this->assertAuthenticated();
         $response->assertRedirect(route('dashboard', absolute: false));
     }
+
+    public function test_users_can_register_using_shopflower_csharp_fields(): void
+    {
+        $response = $this->post('/register', [
+            'TenDangNhap' => 'flowerlover',
+            'Email' => 'flowerlover@example.com',
+            'TenHienThi' => 'Người Yêu Hoa',
+            'MatKhau' => 'password123',
+            'XacNhanMatKhau' => 'password123',
+        ]);
+
+        $this->assertAuthenticated();
+        $response->assertRedirect(route('dashboard', absolute: false));
+    }
 }

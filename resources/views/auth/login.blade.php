@@ -1,171 +1,178 @@
-<x-guest-layout>
-    <div class="bg-gray py-5">
-        <section class="section">
-            <div class="container">
-                <div class="page_login">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-5 col-md-7 col-sm-10 col-12 account-animate">
-                            <div class="page-login pagecustome clearfix">
-                                <div class="wpx">
-                                    <h1 class="title_heads a-center">
-                                        <span>Đăng nhập</span>
-                                    </h1>
+@extends('layouts.app')
 
-                                    <!-- Session Status / Alert Messages -->
-                                    @if (session('status'))
-                                        <div class="alert alert-success alert-dismissible fade show mb-3" role="alert">
-                                            <i class="fas fa-check-circle me-1"></i> {{ session('status') }}
-                                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                                        </div>
-                                    @endif
+@section('title', 'Đăng nhập tài khoản')
 
-                                    @if ($errors->any())
-                                        <div class="alert alert-danger mb-3" style="font-size: 14px;">
-                                            <ul class="mb-0 ps-3">
+@section('content')
+@php
+    $returnUrl = request('returnUrl', request('ReturnUrl', ''));
+@endphp
+
+<div class="bg-gray">
+    <section class="section">
+        <div class="container">
+            <div class="page_login">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xl-4 offset-0 offset-xl-4 offset-lg-4 offset-md-3 col-12 account-animate">
+                        <div class="page-login pagecustome clearfix">
+                            <div class="wpx">
+                                <!-- Tiêu đề Đăng nhập chính -->
+                                <h1 class="title_heads a-center" id="mainLoginTitle"><span>Đăng nhập</span></h1>
+
+                                @if (session('status'))
+                                    <div class="alert alert-success">{{ session('status') }}</div>
+                                @endif
+                                @if (session('ForgotResult'))
+                                    <div class="alert alert-success">{{ session('ForgotResult') }}</div>
+                                @endif
+                                @if (session('ResetSuccess'))
+                                    <div class="alert alert-success">{{ session('ResetSuccess') }}</div>
+                                @endif
+                                @if (session('ForgotError'))
+                                    <div class="alert alert-danger">{{ session('ForgotError') }}</div>
+                                @endif
+
+                                <!-- Box Đăng nhập -->
+                                <div id="login" class="section">
+                                    <form method="POST" action="{{ route('login') }}">
+                                        @csrf
+                                        <input type="hidden" name="returnUrl" value="{{ $returnUrl }}" />
+
+                                        @if ($errors->any())
+                                            <div class="alert alert-danger" style="display: block; margin-bottom: 15px; font-size: 14px;">
                                                 @foreach ($errors->all() as $error)
-                                                    <li>{{ $error }}</li>
+                                                    <p style="margin: 0;">{{ $error }}</p>
                                                 @endforeach
-                                            </ul>
-                                        </div>
-                                    @endif
-
-                                    <!-- Main Login Form -->
-                                    <div id="login" class="section">
-                                        <form method="POST" action="{{ route('login') }}" class="form-signup">
-                                            @csrf
-
-                                            <div class="form-group mb-3">
-                                                <label for="email" class="form-label fw-semibold text-secondary small">Email đăng nhập <span class="text-danger">*</span></label>
-                                                <div class="input-group">
-                                                    <span class="input-group-text bg-white border-end-0 text-muted">
-                                                        <i class="fas fa-envelope"></i>
-                                                    </span>
-                                                    <input type="email"
-                                                           id="email"
-                                                           name="email"
-                                                           class="form-control form-control-lg border-start-0 ps-0 @error('email') is-invalid @enderror"
-                                                           value="{{ old('email') }}"
-                                                           placeholder="Nhập địa chỉ email của bạn"
-                                                           required
-                                                           autofocus
-                                                           autocomplete="username">
-                                                </div>
                                             </div>
+                                        @endif
 
-                                            <div class="form-group mb-3">
-                                                <label for="password" class="form-label fw-semibold text-secondary small">Mật khẩu <span class="text-danger">*</span></label>
-                                                <div class="input-group">
-                                                    <span class="input-group-text bg-white border-end-0 text-muted">
-                                                        <i class="fas fa-lock"></i>
-                                                    </span>
-                                                    <input type="password"
-                                                           id="password"
-                                                           name="password"
-                                                           class="form-control form-control-lg border-start-0 ps-0 @error('password') is-invalid @enderror"
-                                                           placeholder="Nhập mật khẩu"
-                                                           required
-                                                           autocomplete="current-password">
-                                                </div>
-                                            </div>
+                                        <div class="form-signup clearfix">
+                                            <fieldset class="form-group">
+                                                <label for="TenDangNhap" class="form-label">
+                                                    Tên đăng nhập <span class="text-danger">*</span>
+                                                </label>
+                                                <input type="text"
+                                                       class="form-control form-control-lg"
+                                                       value="{{ old('email', old('TenDangNhap')) }}"
+                                                       name="TenDangNhap"
+                                                       id="TenDangNhap"
+                                                       placeholder="Nhập tên đăng nhập hoặc email"
+                                                       required
+                                                       autofocus />
+                                            </fieldset>
 
-                                            <div class="d-flex justify-content-between align-items-center mb-4">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="remember" id="remember_me">
-                                                    <label class="form-check-label text-secondary small" for="remember_me">
-                                                        Ghi nhớ mật khẩu
-                                                    </label>
-                                                </div>
-                                                <div>
-                                                    <span class="quenmk" id="btnForgotPass" style="cursor: pointer; font-size: 14px;">Quên mật khẩu?</span>
-                                                </div>
-                                            </div>
+                                            <fieldset class="form-group">
+                                                <label for="MatKhau" class="form-label">
+                                                    Mật khẩu <span class="text-danger">*</span>
+                                                </label>
+                                                <input type="password"
+                                                       class="form-control form-control-lg"
+                                                       name="MatKhau"
+                                                       id="MatKhau"
+                                                       placeholder="Nhập mật khẩu"
+                                                       required />
+                                            </fieldset>
 
-                                            <div class="pull-xs-left mb-3">
-                                                <button type="submit" class="btn btn-primary btn-style text-uppercase">
-                                                    ĐĂNG NHẬP
-                                                </button>
+                                            <div class="action-btn-submit">
+                                                <input class="btn btn-primary btn-style" type="submit" value="ĐĂNG NHẬP" />
+                                                <button type="submit" style="position: absolute; top: 0; left: -10px; width: 1px; height: 1px; opacity: 0; border: none; padding: 0; margin: 0; z-index: 10;" tabindex="-1"></button>
                                             </div>
 
                                             <div class="btn_boz_khac">
-                                                <div class="btn_khac w-100 d-flex justify-content-between align-items-center">
-                                                    <span class="text-muted">Chưa có tài khoản?</span>
-                                                    <a href="{{ route('register') }}" class="btn-link-style btn-register" title="Đăng ký tài khoản">
-                                                        Đăng ký tại đây
-                                                    </a>
+                                                <div class="btn_khac">
+                                                    <span class="quenmk" style="cursor: pointer;">Quên mật khẩu?</span>
+                                                    <a href="{{ route('register') }}" class="btn-link-style btn-register" title="Đăng ký tại đây">Đăng ký tại đây</a>
                                                 </div>
                                             </div>
-                                        </form>
-                                    </div>
-
-                                    <!-- Recover Password Section (Toggled dynamically like C# Dang_nhap.cshtml) -->
-                                    <div class="h_recover" style="display:none;">
-                                        <div class="text-center mb-3">
-                                            <h4 class="fw-bold" style="color: var(--brand-primary);">Lấy lại mật khẩu</h4>
-                                            <p class="text-muted small">Chúng tôi sẽ gửi cho bạn một liên kết qua email để kích hoạt việc đặt lại mật khẩu mới.</p>
                                         </div>
+                                    </form>
+                                </div>
 
-                                        <form method="POST" action="{{ route('password.email') }}" class="form-signup">
+                                <!-- Box Quên mật khẩu (.h_recover) -->
+                                <div class="h_recover" style="display:none;">
+                                    <h1 class="title_heads a-center"><span>Lấy lại mật khẩu</span></h1>
+                                    <div id="recover-password" class="form-signup page-login">
+                                        <form method="POST" action="{{ route('password.email') }}">
                                             @csrf
-                                            <div class="form-group mb-3">
-                                                <div class="input-group">
-                                                    <span class="input-group-text bg-white border-end-0 text-muted">
-                                                        <i class="fas fa-envelope"></i>
-                                                    </span>
+                                            <div class="form-signup clearfix">
+                                                <p class="text-muted small text-center mb-3">Chúng tôi sẽ gửi cho bạn một email để kích hoạt việc đặt lại mật khẩu.</p>
+                                                <fieldset class="form-group">
+                                                    <label for="recover-email" class="form-label">
+                                                        Email <span class="text-danger">*</span>
+                                                    </label>
                                                     <input type="email"
+                                                           class="form-control form-control-lg"
+                                                           value="{{ old('email') }}"
                                                            name="email"
                                                            id="recover-email"
-                                                           class="form-control form-control-lg border-start-0 ps-0"
-                                                           placeholder="Nhập email của bạn"
-                                                           value="{{ old('email') }}"
-                                                           required>
-                                                </div>
+                                                           placeholder="Nhập địa chỉ email của bạn"
+                                                           required />
+                                                </fieldset>
                                             </div>
-
-                                            <div class="d-grid gap-2">
-                                                <button type="submit" class="btn btn-primary btn-style text-uppercase">
-                                                    GỬI LIÊN KẾT XÁC NHẬN
-                                                </button>
-                                                <button type="button" class="btn btn-outline-secondary quay_lai" style="border-radius: 8px; height: 42px;">
-                                                    Hủy bỏ và quay lại
-                                                </button>
+                                            <div class="action_bottom">
+                                                <input class="btn btn-primary btn-style" style="margin-top: 0px;" type="submit" value="Gửi">
+                                                <span class="btn btn-link quay_lai" style="cursor: pointer; font-size: 15px; font-weight: bold; color: #537453;">Hủy</span>
                                             </div>
                                         </form>
                                     </div>
-
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+</div>
+@endsection
 
-    @push('scripts')
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const loginSection = document.getElementById('login');
-            const recoverSection = document.querySelector('.h_recover');
-            const mainTitle = document.querySelector('.title_heads span');
-            const btnForgot = document.getElementById('btnForgotPass');
-            const btnCancel = document.querySelector('.quay_lai');
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var loginForm = document.getElementById('login');
+        var recoverDiv = document.querySelector('.h_recover');
+        var mainTitle = document.getElementById('mainLoginTitle');
 
-            if (btnForgot && loginSection && recoverSection) {
-                btnForgot.addEventListener('click', function () {
-                    loginSection.style.display = 'none';
-                    recoverSection.style.display = 'block';
-                    if (mainTitle) mainTitle.textContent = 'Lấy lại mật khẩu';
-                });
+        function showRecoverForm(e) {
+            if (e) e.preventDefault();
+            if (loginForm) {
+                loginForm.style.display = 'none';
+                loginForm.classList.add('hidden', 'd-none');
             }
-
-            if (btnCancel && loginSection && recoverSection) {
-                btnCancel.addEventListener('click', function () {
-                    recoverSection.style.display = 'none';
-                    loginSection.style.display = 'block';
-                    if (mainTitle) mainTitle.textContent = 'Đăng nhập';
-                });
+            if (mainTitle) {
+                mainTitle.style.display = 'none';
             }
-        });
-    </script>
-    @endpush
-</x-guest-layout>
+            if (recoverDiv) {
+                recoverDiv.style.display = 'block';
+                recoverDiv.classList.remove('d-none');
+            }
+        }
+
+        function showLoginForm(e) {
+            if (e) e.preventDefault();
+            if (recoverDiv) {
+                recoverDiv.style.display = 'none';
+                recoverDiv.classList.add('d-none');
+            }
+            if (loginForm) {
+                loginForm.style.display = 'block';
+                loginForm.classList.remove('hidden', 'd-none');
+            }
+            if (mainTitle) {
+                mainTitle.style.display = 'block';
+            }
+        }
+
+        var quenmkBtn = document.querySelector('.quenmk');
+        var quaylaiBtn = document.querySelector('.quay_lai');
+        if (quenmkBtn) quenmkBtn.addEventListener('click', showRecoverForm);
+        if (quaylaiBtn) quaylaiBtn.addEventListener('click', showLoginForm);
+
+        // Kiểm tra URL nếu có ?show_recover
+        var urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('show_recover')) {
+            showRecoverForm();
+        }
+    });
+</script>
+@endpush

@@ -18,6 +18,12 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'role' => RoleMiddleware::class,
         ]);
+        $middleware->redirectUsersTo(function (Request $request) {
+            if ($request->user() && $request->user()->isAdmin()) {
+                return route('admin.dashboard');
+            }
+            return route('dashboard');
+        });
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->render(fn (Throwable $exception, Request $request) => ProductDatabaseErrors::render($exception, $request));

@@ -21,6 +21,20 @@ class LoginRequest extends FormRequest
     }
 
     /**
+     * Prepare inputs for validation.
+     * Supports both C# ShopFlower field names (TenDangNhap, MatKhau) and Laravel field names (email, password).
+     */
+    protected function prepareForValidation(): void
+    {
+        if ($this->has('TenDangNhap') && ! $this->has('email')) {
+            $this->merge(['email' => $this->input('TenDangNhap')]);
+        }
+        if ($this->has('MatKhau') && ! $this->has('password')) {
+            $this->merge(['password' => $this->input('MatKhau')]);
+        }
+    }
+
+    /**
      * Get the validation rules that apply to the request.
      *
      * @return array<string, ValidationRule|array<mixed>|string>
@@ -28,13 +42,14 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => ['required', 'string', 'email'],
+            'email' => ['required', 'string'],
             'password' => ['required', 'string'],
         ];
     }
 
     /**
      * Attempt to authenticate the request's credentials.
+     * Supports authentication by either email or username (TenDangNhap).
      *
      * @throws ValidationException
      */
@@ -42,7 +57,21 @@ class LoginRequest extends FormRequest
     {
         $this->ensureIsNotRateLimited();
 
-        if (! Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
+        $loginInput = (string) $this->input('email');
+        $password = (string) $this->input('password');
+
+        $isEmail = filter_var($loginInput, FILTER_VALIDATE_EMAIL);
+        $credentials = $isEmail
+            ? ['email' => $loginInput, 'password' => $password]
+            : ['username' => $loginInput, 'password' => $password];
+
+        if (! Auth::attempt($credentials, $this->boolean('remember'))) {
+            // If attempt by username failed, try attempt by email as fallback
+            if (! $isEmail && Auth::attempt(['email' => $loginInput, 'password' => $password], $this->boolean('remember'))) {
+                RateLimiter::clear($this->throttleKey());
+                return;
+            }
+
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([

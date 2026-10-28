@@ -122,40 +122,54 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Handle password recovery toggle
     const quenmkButtons = document.querySelectorAll('.quenmk');
+    const quaylaiButtons = document.querySelectorAll('.quay_lai');
+    const loginElement = document.getElementById('login');
+    const recoverElement = document.querySelector('.h_recover');
+    const mainLoginTitle = document.querySelector('.pagecustome > .wpx > h1.title_heads');
+
+    function openRecoverForm(e) {
+        if (e) e.preventDefault();
+        if (loginElement) {
+            loginElement.style.display = 'none';
+            loginElement.classList.add('hidden', 'd-none');
+        }
+        if (mainLoginTitle) {
+            mainLoginTitle.style.display = 'none';
+        }
+        if (recoverElement) {
+            recoverElement.style.display = 'block';
+            recoverElement.classList.remove('d-none');
+            recoverElement.style.maxHeight = 'none';
+            recoverElement.style.overflow = 'visible';
+        }
+    }
+
+    function closeRecoverForm(e) {
+        if (e) e.preventDefault();
+        if (recoverElement) {
+            recoverElement.style.display = 'none';
+            recoverElement.classList.add('d-none');
+        }
+        if (loginElement) {
+            loginElement.style.display = 'block';
+            loginElement.classList.remove('hidden', 'd-none');
+        }
+        if (mainLoginTitle) {
+            mainLoginTitle.style.display = 'block';
+        }
+    }
+
     quenmkButtons.forEach(function (button) {
-        button.addEventListener('click', function () {
-            const loginElement = document.getElementById('login');
-            const recoverElement = document.querySelector('.h_recover');
-
-            // Toggle class 'hidden' cho #login
-            if (loginElement) {
-                loginElement.classList.toggle('hidden');
-            }
-
-            // Slide toggle cho .h_recover
-            if (recoverElement) {
-                if (recoverElement.style.display === 'none' || recoverElement.style.display === '') {
-                    // Hiện phần tử với animation
-                    recoverElement.style.display = 'block';
-                    recoverElement.style.maxHeight = '0';
-                    recoverElement.style.overflow = 'hidden';
-                    recoverElement.style.transition = 'max-height 0.3s ease-in-out';
-
-                    // Trigger reflow
-                    recoverElement.offsetHeight;
-
-                    recoverElement.style.maxHeight = recoverElement.scrollHeight + 'px';
-                } else {
-                    // Ẩn phần tử với animation
-                    recoverElement.style.maxHeight = '0';
-
-                    setTimeout(function () {
-                        recoverElement.style.display = 'none';
-                    }, 300);
-                }
-            }
-        });
+        button.addEventListener('click', openRecoverForm);
     });
+
+    quaylaiButtons.forEach(function (button) {
+        button.addEventListener('click', closeRecoverForm);
+    });
+
+    if (window.location.search && window.location.search.includes('show_recover')) {
+        openRecoverForm();
+    }
 
     // Handle Back to Top smooth scroll
     const backToTop = document.querySelector('.backtop');

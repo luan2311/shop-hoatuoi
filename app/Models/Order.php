@@ -28,6 +28,11 @@ class Order extends Model
         return ['order_date' => 'datetime'];
     }
 
+    public function getTotalAttribute(): int|float
+    {
+        return $this->attributes['total'] ?? $this->attributes['total_amount'] ?? 0;
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);

@@ -30,6 +30,19 @@ class AuthenticationTest extends TestCase
         $response->assertRedirect(route('dashboard', absolute: false));
     }
 
+    public function test_users_can_authenticate_using_shopflower_csharp_fields(): void
+    {
+        $user = User::factory()->create();
+
+        $response = $this->post('/login', [
+            'TenDangNhap' => $user->email,
+            'MatKhau' => 'password',
+        ]);
+
+        $this->assertAuthenticated();
+        $response->assertRedirect(route('dashboard', absolute: false));
+    }
+
     public function test_admin_is_redirected_to_admin_dashboard_after_login(): void
     {
         $adminRole = \App\Models\Role::create(['name' => 'Admin']);
@@ -37,6 +50,21 @@ class AuthenticationTest extends TestCase
         $admin->roles()->attach($adminRole->id);
 
         $response = $this->post('/login', [
+            'email' => $admin->email,
+            'password' => 'password',
+        ]);
+
+        $this->assertAuthenticated();
+        $response->assertRedirect(route('admin.dashboard', absolute: false));
+    }
+
+    public function test_admin_is_redirected_to_admin_dashboard_even_with_session_intended_url(): void
+    {
+        $adminRole = \App\Models\Role::create(['name' => 'Admin']);
+        $admin = User::factory()->create();
+        $admin->roles()->attach($adminRole->id);
+
+        $response = $this->withSession(['url.intended' => '/cart'])->post('/login', [
             'email' => $admin->email,
             'password' => 'password',
         ]);
