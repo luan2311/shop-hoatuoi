@@ -22,9 +22,9 @@ class ContactAndPostTest extends TestCase
         $response->assertRedirect('/contact');
         $this->assertDatabaseHas('contacts', ['email' => 'tranthib@gmail.com'], 'mongodb');
 
-        // Ô "name" trên form lưu vào field full_name; mã LH001 và status pending do model tự gán
+        // Ô "name" trên form lưu vào field full_name; mã CT001 và status pending do model tự gán
         $this->assertDatabaseHas('contacts', [
-            'code'      => 'LH001',
+            'code'      => 'CT001',
             'full_name' => 'Trần Thị B',
             'phone'     => '0912345678',
             'message'   => 'Cần tư vấn mẫu hoa cưới phong cách hiện đại.',
@@ -40,7 +40,7 @@ class ContactAndPostTest extends TestCase
         $this->followingRedirects()->post('/contact', $data)
             ->assertSee('Gửi liên hệ thành công! Cửa hàng sẽ liên hệ lại sớm nhất.');
 
-        $this->assertDatabaseHas('contacts', ['code' => 'LH002'], 'mongodb');
+        $this->assertDatabaseHas('contacts', ['code' => 'CT002'], 'mongodb');
     }
 
     public function test_contact_page_shows_form_and_google_map(): void

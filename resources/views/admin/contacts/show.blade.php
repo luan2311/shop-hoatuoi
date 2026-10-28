@@ -9,7 +9,7 @@
 
     <dl class="row mt-3">
         <dt class="col-sm-3 text-muted">Mã Liên Hệ</dt>
-        <dd class="col-sm-9 font-weight-bold text-dark">{{ $contact->code ?? 'LH' }}</dd>
+        <dd class="col-sm-9 font-weight-bold text-dark">{{ $contact->code ?? 'CT' }}</dd>
 
         <dt class="col-sm-3 text-muted">Họ Tên</dt>
         <dd class="col-sm-9 font-weight-bold">{{ $contact->full_name }}</dd>

@@ -50,13 +50,17 @@
                 <dt class="col-sm-4 text-muted">Trạng Thái</dt>
                 <dd class="col-sm-8">
                     @if ($order->status == 'Pending')
-                        <span class="status-pending">{{ $order->status }}</span>
+                        <span class="status-pending">Chờ xử lý</span>
+                    @elseif ($order->status == 'Processing')
+                        <span class="status-processing">Đang đóng gói</span>
+                    @elseif ($order->status == 'Shipped')
+                        <span class="status-shipped">Đang giao hàng</span>
                     @elseif ($order->status == 'Completed')
-                        <span class="status-completed">{{ $order->status }}</span>
+                        <span class="status-completed">Hoàn thành</span>
                     @elseif ($order->status == 'Cancelled')
-                        <span class="badge badge-danger">{{ $order->status }}</span>
+                        <span class="status-cancelled">Đã hủy</span>
                     @else
-                        <span class="badge badge-info">{{ $order->status }}</span>
+                        <span class="badge badge-secondary">{{ $order->status_label ?? $order->status }}</span>
                     @endif
                 </dd>
 
@@ -71,7 +75,7 @@
                 <label for="status" class="mr-2 font-weight-bold small">Cập nhật trạng thái:</label>
                 <select name="status" id="status" class="form-control form-control-sm mr-2">
                     @foreach(\App\Models\Order::STATUSES as $st)
-                        <option value="{{ $st }}" @selected($order->status === $st)>{{ $st }}</option>
+                        <option value="{{ $st }}" @selected($order->status === $st)>{{ \App\Models\Order::STATUS_LABELS[$st] ?? $st }}</option>
                     @endforeach
                 </select>
                 <button type="submit" class="btn btn-outline-primary btn-sm">Cập nhật</button>

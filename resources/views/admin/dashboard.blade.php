@@ -103,6 +103,56 @@
         color: #333;
         margin-bottom: 15px;
     }
+
+    .status-completed {
+        background-color: #28a745;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 0.8em;
+        font-weight: 500;
+        display: inline-block;
+    }
+
+    .status-pending {
+        background-color: #ffc107;
+        color: #212529;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 0.8em;
+        font-weight: 500;
+        display: inline-block;
+    }
+
+    .status-processing {
+        background-color: #17a2b8;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 0.8em;
+        font-weight: 500;
+        display: inline-block;
+    }
+
+    .status-shipped {
+        background-color: #007bff;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 0.8em;
+        font-weight: 500;
+        display: inline-block;
+    }
+
+    .status-cancelled {
+        background-color: #dc3545;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 12px;
+        font-size: 0.8em;
+        font-weight: 500;
+        display: inline-block;
+    }
 </style>
 @endpush
 
@@ -174,29 +224,37 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
-                                <th>Mã HĐ</th>
+                                <th style="width: 100px; max-width: 100px;">Mã HĐ</th>
                                 <th>Khách hàng</th>
-                                <th>Ngày đặt</th>
-                                <th>Tổng tiền</th>
-                                <th>Trạng thái</th>
+                                <th class="text-nowrap">Ngày đặt</th>
+                                <th class="text-nowrap">Tổng tiền</th>
+                                <th class="text-nowrap">Trạng thái</th>
                             </tr>
                         </thead>
                         <tbody>
                             @forelse ($recentOrders as $order)
                                 <tr>
-                                    <td>
-                                        <a href="{{ route('admin.orders.show', $order->id) }}" class="text-info font-weight-bold">
+                                    <td style="width: 100px; max-width: 100px;">
+                                        <a href="{{ route('admin.orders.show', $order->id) }}" class="text-info font-weight-bold d-inline-block text-truncate" style="max-width: 85px; vertical-align: middle;" title="{{ $order->order_code }}">
                                             {{ $order->order_code }}
                                         </a>
                                     </td>
                                     <td>{{ $order->customer['name'] ?? ($order->user->name ?? 'Khách hàng') }}</td>
-                                    <td>{{ $order->created_at ? $order->created_at->format('dd/MM/yyyy') : '—' }}</td>
-                                    <td>{{ number_format((float) (string) ($order->total_amount ?? $order->total), 0, ',', '.') }} đ</td>
-                                    <td>
-                                        @if ($order->status == 'Pending')
-                                            <span class="status-pending">{{ $order->status }}</span>
+                                    <td class="text-nowrap">{{ $order->created_at ? $order->created_at->format('d/m/Y') : '—' }}</td>
+                                    <td class="text-nowrap">{{ number_format((float) (string) ($order->total_amount ?? $order->total), 0, ',', '.') }} đ</td>
+                                    <td class="text-nowrap">
+                                        @if ($order->status === 'Pending')
+                                            <span class="status-pending">Chờ xử lý</span>
+                                        @elseif ($order->status === 'Processing')
+                                            <span class="status-processing">Đang đóng gói</span>
+                                        @elseif ($order->status === 'Shipped')
+                                            <span class="status-shipped">Đang giao hàng</span>
+                                        @elseif ($order->status === 'Completed')
+                                            <span class="status-completed">Hoàn thành</span>
+                                        @elseif ($order->status === 'Cancelled')
+                                            <span class="status-cancelled">Đã hủy</span>
                                         @else
-                                            <span class="status-completed">{{ $order->status }}</span>
+                                            <span class="badge badge-secondary">{{ $order->status_label ?? $order->status }}</span>
                                         @endif
                                     </td>
                                 </tr>

@@ -15,6 +15,14 @@ class Order extends Model
 
     const STATUSES = ['Pending', 'Processing', 'Shipped', 'Completed', 'Cancelled'];
 
+    public const STATUS_LABELS = [
+        'Pending' => 'Chờ xử lý',
+        'Processing' => 'Đang đóng gói',
+        'Shipped' => 'Đang giao hàng',
+        'Completed' => 'Hoàn thành',
+        'Cancelled' => 'Đã hủy',
+    ];
+
     public const TRANSITIONS = [
         'Pending' => ['Processing', 'Cancelled'],
         'Processing' => ['Shipped', 'Cancelled'],
@@ -36,6 +44,11 @@ class Order extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function getStatusLabelAttribute(): string
+    {
+        return self::STATUS_LABELS[$this->status] ?? $this->status;
     }
 
     public function getStatusBadgeAttribute(): string

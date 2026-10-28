@@ -340,7 +340,7 @@ dbTarget.posts.insertMany(postsData);
 print('--> Inserting sample contacts...');
 dbTarget.contacts.insertMany([
     {
-        code: 'LH001',
+        code: 'CT001',
         full_name: 'Nguyễn Văn A',
         email: 'nguyenvana@gmail.com',
         phone: '0901234567',
@@ -349,7 +349,7 @@ dbTarget.contacts.insertMany([
         created_at: new Date()
     },
     {
-        code: 'LH002',
+        code: 'CT002',
         full_name: 'Trần Thị B',
         email: 'tranthib@gmail.com',
         phone: '0987654321',

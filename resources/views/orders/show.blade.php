@@ -255,7 +255,7 @@
                                 </span>
                             @elseif($order->status === 'Processing')
                                 <span class="badge bg-info text-dark px-3 py-2" style="font-size: 13px; border-radius: 6px;">
-                                    <i class="fa fa-cog me-1"></i>Trạng thái: Đang chuẩn bị hàng
+                                    <i class="fa fa-box-open me-1"></i>Trạng thái: Đang đóng gói
                                 </span>
                             @elseif($order->status === 'Shipped')
                                 <span class="badge bg-primary px-3 py-2" style="font-size: 13px; border-radius: 6px;">

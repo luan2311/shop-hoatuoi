@@ -392,7 +392,7 @@
                                                         </span>
                                                     @elseif($order->status === 'Processing')
                                                         <span class="badge bg-info text-dark px-2 py-1" style="border-radius: 6px;">
-                                                            <i class="fa fa-cog me-1"></i>Đang xử lý
+                                                            <i class="fa fa-box-open me-1"></i>Đang đóng gói
                                                         </span>
                                                     @elseif($order->status === 'Shipped')
                                                         <span class="badge bg-primary px-2 py-1" style="border-radius: 6px;">
@@ -533,10 +533,9 @@
                         </table>
                     </div>
                 </div>
-                <div class="modal-footer bg-light">
-                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal" style="border-radius: 8px;">Đóng</button>
-                    <a href="{{ route('orders.show', $order->id) }}" class="btn btn-style btn-sm" style="border-radius: 8px;">
-                        <i class="fa fa-external-link-alt me-1"></i> Xem chi tiết đầy đủ
+                <div class="modal-footer bg-light p-3">
+                    <a href="{{ route('orders.show', $order->id) }}" class="btn btn-style w-100 py-2 fw-bold text-center text-uppercase" style="border-radius: 8px;">
+                        <i class="fa fa-external-link-alt me-2"></i> Xem chi tiết đầy đủ
                     </a>
                 </div>
             </div>

@@ -22,7 +22,7 @@
         <table class="table table-light table-striped table-hover mb-0">
             <thead>
                 <tr class="thead-light">
-                    <th>Mã LH</th>
+                    <th>Mã liên hệ</th>
                     <th>Họ Tên</th>
                     <th>Email</th>
                     <th>Số điện thoại</th>
@@ -33,7 +33,7 @@
             <tbody>
                 @forelse ($contacts as $item)
                     <tr>
-                        <td><strong>{{ $item->code ?? 'LH' }}</strong></td>
+                        <td><strong>{{ $item->code ?? 'CT' }}</strong></td>
                         <td>{{ $item->full_name }}</td>
                         <td>{{ $item->email }}</td>
                         <td>{{ $item->phone }}</td>

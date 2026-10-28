@@ -1,4 +1,4 @@
-﻿body {
+body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
 }
@@ -123,14 +123,43 @@
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 0.8em;
+    display: inline-block;
 }
 
 .status-pending {
     background-color: #ffc107;
+    color: #212529;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    display: inline-block;
+}
+
+.status-processing {
+    background-color: #17a2b8;
     color: white;
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 0.8em;
+    display: inline-block;
+}
+
+.status-shipped {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    display: inline-block;
+}
+
+.status-cancelled {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    display: inline-block;
 }
 
 @media (max-width: 768px) {

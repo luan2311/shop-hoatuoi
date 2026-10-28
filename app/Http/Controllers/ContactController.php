@@ -14,7 +14,7 @@ class ContactController extends Controller
 
     public function store(ContactRequest $request)
     {
-        // Ô "name" trên form lưu vào field full_name; code (LH001...) và status do model tự gán
+        // Ô "name" trên form lưu vào field full_name; code (CT001...) và status do model tự gán
         Contact::create([
             'full_name' => $request->validated('name'),
             'email'     => $request->validated('email'),

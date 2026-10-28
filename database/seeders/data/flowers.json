@@ -1,7 +1,7 @@
 {
   "source": {
     "path": "database/mongodb_init.js",
-    "sha256_lf": "fbdc44b7d5fc8f3976494d998a777b51c0022ec65e804599c791fbb589c590d1"
+    "sha256_lf": "186f4bd729c59134368d3740857542486ac0ce4b99531d1edc29065d8a08b765"
   },
   "collections": {
     "categories": [

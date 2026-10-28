@@ -20,12 +20,12 @@ class Contact extends Model
         });
     }
 
-    // Mã liên hệ kế tiếp: LH001, LH002, ... (code là unique trong collection contacts)
+    // Mã liên hệ kế tiếp: CT001, CT002, ... (code là unique trong collection contacts)
     public static function nextCode(): string
     {
-        $last = static::where('code', 'regex', '/^LH\d+$/')->orderBy('code', 'desc')->value('code');
+        $last = static::where('code', 'regex', '/^CT\d+$/')->orderBy('code', 'desc')->value('code');
         $number = $last ? (int) substr($last, 2) + 1 : 1;
 
-        return 'LH' . str_pad((string) $number, 3, '0', STR_PAD_LEFT);
+        return 'CT' . str_pad((string) $number, 3, '0', STR_PAD_LEFT);
     }
 }

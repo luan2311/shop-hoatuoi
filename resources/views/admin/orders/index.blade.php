@@ -13,7 +13,7 @@
         <select name="status" class="form-control" onchange="this.form.submit()">
             <option value="">-- Tất cả trạng thái --</option>
             @foreach(\App\Models\Order::STATUSES as $st)
-                <option value="{{ $st }}" @selected(request('status') === $st)>{{ $st }}</option>
+                <option value="{{ $st }}" @selected(request('status') === $st)>{{ \App\Models\Order::STATUS_LABELS[$st] ?? $st }}</option>
             @endforeach
         </select>
     </div>
@@ -54,13 +54,17 @@
                         <td>{{ $item->created_at ? $item->created_at->format('d/m/Y') : '—' }}</td>
                         <td>
                             @if ($item->status == 'Pending')
-                                <span class="status-pending">{{ $item->status }}</span>
+                                <span class="status-pending">Chờ xử lý</span>
+                            @elseif ($item->status == 'Processing')
+                                <span class="status-processing">Đang đóng gói</span>
+                            @elseif ($item->status == 'Shipped')
+                                <span class="status-shipped">Đang giao hàng</span>
                             @elseif ($item->status == 'Completed')
-                                <span class="status-completed">{{ $item->status }}</span>
+                                <span class="status-completed">Hoàn thành</span>
                             @elseif ($item->status == 'Cancelled')
-                                <span class="badge badge-danger">{{ $item->status }}</span>
+                                <span class="status-cancelled">Đã hủy</span>
                             @else
-                                <span class="badge badge-info">{{ $item->status }}</span>
+                                <span class="badge badge-secondary">{{ $item->status_label ?? $item->status }}</span>
                             @endif
                         </td>
                         <td><strong>{{ number_format((float) (string) ($item->total_amount ?? $item->total), 0, ',', '.') }} đ</strong></td>
@@ -73,7 +77,7 @@
                                 <form method="POST" action="{{ route('admin.orders.complete', $item->id) }}" style="display:inline-block;">
                                     @csrf
                                     <button type="submit" class="btn btn-success btn-sm ml-1" onclick="return confirm('Bạn có chắc đơn hàng này đã thanh toán?');">
-                                        Completed
+                                        Hoàn thành
                                     </button>
                                 </form>
                             @elseif ($item->status == 'Completed')
