@@ -32,6 +32,22 @@ class AuthenticatedSessionController extends Controller
             return redirect()->route('admin.dashboard');
         }
 
+        if ($request->user() && (
+            strtolower((string) $request->user()->username) === 'user_demo'
+            || strtolower((string) $request->user()->email) === 'user@shophoatuoi.com'
+        )) {
+            if ($request->filled('returnUrl')) {
+                $returnUrl = $request->input('returnUrl');
+                if (! str_starts_with($returnUrl, 'http://') && ! str_starts_with($returnUrl, 'https://') && ! str_contains($returnUrl, 'dashboard')) {
+                    return redirect($returnUrl);
+                }
+            }
+
+            session()->forget('url.intended');
+
+            return redirect()->route('home');
+        }
+
         if ($request->filled('returnUrl')) {
             $returnUrl = $request->input('returnUrl');
             if (! str_starts_with($returnUrl, 'http://') && ! str_starts_with($returnUrl, 'https://')) {

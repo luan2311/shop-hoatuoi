@@ -63,7 +63,7 @@
                                 <span class="badge badge-info">{{ $item->status }}</span>
                             @endif
                         </td>
-                        <td><strong>{{ number_format((float)($item->total_amount ?? $item->total), 0, ',', '.') }}đ</strong></td>
+                        <td><strong>{{ number_format((float) (string) ($item->total_amount ?? $item->total), 0, ',', '.') }} đ</strong></td>
                         <td>
                             <a href="{{ route('admin.orders.show', $item->id) }}" class="btn btn-info btn-sm">
                                 <i class="fas fa-eye"></i> Chi tiết

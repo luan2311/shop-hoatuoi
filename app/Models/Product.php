@@ -80,9 +80,9 @@ class Product extends Model
         return null;
     }
 
-    public function getImageUrlAttribute(): ?string
+    public static function resolveImageUrl(?string $image): ?string
     {
-        $image = trim((string) $this->image);
+        $image = trim((string) $image);
         if ($image === '') {
             return null;
         }
@@ -118,6 +118,32 @@ class Product extends Model
         }
 
         return null;
+    }
+
+    public static function resolveItemImageUrl(?string $image, ?string $productCode = null): ?string
+    {
+        $url = static::resolveImageUrl($image);
+        if ($url) {
+            return $url;
+        }
+
+        if (! empty($productCode)) {
+            try {
+                $product = static::where('code', $productCode)->first();
+                if ($product?->image) {
+                    return static::resolveImageUrl($product->image);
+                }
+            } catch (\Throwable) {
+                // Ignore query error if DB is unreachable
+            }
+        }
+
+        return null;
+    }
+
+    public function getImageUrlAttribute(): ?string
+    {
+        return static::resolveImageUrl($this->image);
     }
 
     public function cartItems()

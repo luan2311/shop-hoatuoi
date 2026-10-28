@@ -16,7 +16,7 @@ class User extends Authenticatable
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
 
-    protected $fillable = ['name', 'email', 'password', 'username'];
+    protected $fillable = ['name', 'email', 'password', 'username', 'phone', 'address'];
 
     protected $hidden = ['password', 'remember_token'];
 
@@ -62,7 +62,8 @@ class User extends Authenticatable
 
     public function roles()
     {
-        return new class($this) {
+        return new class($this)
+        {
             private User $user;
 
             public function __construct(User $user)

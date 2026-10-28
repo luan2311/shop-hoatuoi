@@ -63,7 +63,7 @@
                     <h4 class="title-menu clicked">Thành viên thực hiện</h4>
                     <ul class="list-menu toggle-mn hidden-mob list-social">
                         <li class="li_menu"><a>Phạm Nguyễn Minh Luân (Nhóm trưởng)</a></li>
-                        <li class="li_menu"><a>Trần Nguyên Bảo An</a></li>
+                        <li class="li_menu"><a>Trần Nguyễn Bảo An</a></li>
                         <li class="li_menu"><a>Nguyễn Văn Tiến</a></li>
                         <li class="li_menu"><a>Phùng Tuấn Huy</a></li>
                         <li class="li_menu"><a>Đồng Viết Dũng</a></li>

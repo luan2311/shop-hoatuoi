@@ -96,10 +96,7 @@
                     <tr>
                         <td class="text-center">
                             @php
-                                $imgSrc = null;
-                                if (!empty($item['image'])) {
-                                    $imgSrc = str_starts_with($item['image'], 'http') ? $item['image'] : asset('storage/' . $item['image']);
-                                }
+                                $imgSrc = \App\Models\Product::resolveItemImageUrl($item['image'] ?? null, $item['product_code'] ?? null);
                             @endphp
                             @if($imgSrc)
                                 <img src="{{ $imgSrc }}" alt="{{ $item['product_name'] ?? '' }}" class="img-thumbnail" style="max-width: 60px; max-height: 60px; object-fit: cover;" />

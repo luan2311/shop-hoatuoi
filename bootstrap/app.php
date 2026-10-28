@@ -22,6 +22,12 @@ return Application::configure(basePath: dirname(__DIR__))
             if ($request->user() && $request->user()->isAdmin()) {
                 return route('admin.dashboard');
             }
+            if ($request->user() && (
+                strtolower((string) $request->user()->username) === 'user_demo'
+                || strtolower((string) $request->user()->email) === 'user@shophoatuoi.com'
+            )) {
+                return route('home');
+            }
             return route('dashboard');
         });
     })

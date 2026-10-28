@@ -31,8 +31,14 @@ Route::get('/dashboard', function () {
     if (auth()->check() && auth()->user()->isAdmin()) {
         return redirect()->route('admin.dashboard');
     }
+    if (auth()->check() && (
+        strtolower((string) auth()->user()->username) === 'user_demo'
+        || strtolower((string) auth()->user()->email) === 'user@shophoatuoi.com'
+    )) {
+        return redirect()->route('home');
+    }
     return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

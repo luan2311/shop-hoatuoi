@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
         // 2. Seed Admin user
         $admin = User::create([
             'name'     => 'Quản Trị Viên',
+            'username' => 'admin_demo',
             'email'    => 'admin@shophoatuoi.com',
             'password' => Hash::make('Admin@123'),
         ]);
@@ -29,6 +30,7 @@ class DatabaseSeeder extends Seeder
         // 3. Seed User thường
         $user = User::create([
             'name'     => 'Khách Hàng Demo',
+            'username' => 'user_demo',
             'email'    => 'user@shophoatuoi.com',
             'password' => Hash::make('User@123'),
         ]);

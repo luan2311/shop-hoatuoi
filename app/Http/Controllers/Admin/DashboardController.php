@@ -31,7 +31,7 @@ class DashboardController extends Controller
 
         // Đơn hàng gần đây
         $recentOrders = Order::with('user')->latest()->take(10)->get();
-        $recentProducts = Product::with('category')->latest()->take(6)->get();
+        $recentProducts = Product::with('categoryRecord')->latest()->take(6)->get();
 
         // Top sản phẩm bán chạy nhất (Tính từ embedded items của orders hoặc CTHD)
         $topSellingProducts = collect();

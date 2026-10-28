@@ -61,4 +61,10 @@ class ProductModelTest extends TestCase
         $relation = $product->categoryRecord();
         $this->assertInstanceOf(\Illuminate\Database\Eloquent\Relations\BelongsTo::class, $relation);
     }
+
+    public function test_resolve_item_image_url_resolves_image_and_fallback(): void
+    {
+        $this->assertStringEndsWith('/storage/products/kt2a5767-1748932933010.jpg', Product::resolveItemImageUrl('kt2a5767-1748932933010.jpg'));
+        $this->assertNull(Product::resolveItemImageUrl(null, 'NONEXISTENT'));
+    }
 }

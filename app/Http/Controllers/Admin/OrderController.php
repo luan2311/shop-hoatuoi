@@ -15,6 +15,10 @@ class OrderController extends Controller
 {
     public function index(Request $request): View
     {
+        $request->validate([
+            'status' => ['nullable', 'string', Rule::in(Order::STATUSES)],
+        ]);
+
         $searchKey = $request->input('searchString') ?? $request->input('q');
         $status = $request->input('status');
 

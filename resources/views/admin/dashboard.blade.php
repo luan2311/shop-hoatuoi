@@ -191,7 +191,7 @@
                                     </td>
                                     <td>{{ $order->customer['name'] ?? ($order->user->name ?? 'Khách hàng') }}</td>
                                     <td>{{ $order->created_at ? $order->created_at->format('dd/MM/yyyy') : '—' }}</td>
-                                    <td>{{ number_format((float)($order->total_amount ?? $order->total), 0, ',', '.') }}đ</td>
+                                    <td>{{ number_format((float) (string) ($order->total_amount ?? $order->total), 0, ',', '.') }} đ</td>
                                     <td>
                                         @if ($order->status == 'Pending')
                                             <span class="status-pending">{{ $order->status }}</span>

@@ -2,6 +2,7 @@
 
 namespace Tests\Feature\Auth;
 
+use App\Models\Role;
 use App\Models\User;
 use Tests\Concerns\UsesMongoDatabase;
 use Tests\TestCase;
@@ -45,7 +46,7 @@ class AuthenticationTest extends TestCase
 
     public function test_admin_is_redirected_to_admin_dashboard_after_login(): void
     {
-        $adminRole = \App\Models\Role::create(['name' => 'Admin']);
+        $adminRole = Role::create(['name' => 'Admin']);
         $admin = User::factory()->create();
         $admin->roles()->attach($adminRole->id);
 
@@ -58,9 +59,85 @@ class AuthenticationTest extends TestCase
         $response->assertRedirect(route('admin.dashboard', absolute: false));
     }
 
+    public function test_user_demo_is_redirected_to_home_after_login_with_username(): void
+    {
+        $userRole = Role::firstOrCreate(['name' => 'User']);
+        $userDemo = User::factory()->create([
+            'username' => 'user_demo',
+            'email' => 'user@shophoatuoi.com',
+            'password' => 'password',
+        ]);
+        $userDemo->roles()->attach($userRole->id);
+
+        $response = $this->post('/login', [
+            'email' => 'user_demo',
+            'password' => 'password',
+        ]);
+
+        $this->assertAuthenticated();
+        $response->assertRedirect(route('home', absolute: false));
+    }
+
+    public function test_user_demo_is_redirected_to_home_after_login_with_email(): void
+    {
+        $userRole = Role::firstOrCreate(['name' => 'User']);
+        $userDemo = User::factory()->create([
+            'username' => 'user_demo',
+            'email' => 'user@shophoatuoi.com',
+            'password' => 'password',
+        ]);
+        $userDemo->roles()->attach($userRole->id);
+
+        $response = $this->post('/login', [
+            'email' => 'user@shophoatuoi.com',
+            'password' => 'password',
+        ]);
+
+        $this->assertAuthenticated();
+        $response->assertRedirect(route('home', absolute: false));
+    }
+
+    public function test_user_demo_is_redirected_to_home_using_shopflower_csharp_fields(): void
+    {
+        $userRole = Role::firstOrCreate(['name' => 'User']);
+        $userDemo = User::factory()->create([
+            'username' => 'user_demo',
+            'email' => 'user@shophoatuoi.com',
+            'password' => 'password',
+        ]);
+        $userDemo->roles()->attach($userRole->id);
+
+        $response = $this->post('/login', [
+            'TenDangNhap' => 'user_demo',
+            'MatKhau' => 'password',
+        ]);
+
+        $this->assertAuthenticated();
+        $response->assertRedirect(route('home', absolute: false));
+    }
+
+    public function test_user_demo_is_redirected_to_home_even_with_session_intended_dashboard(): void
+    {
+        $userRole = Role::firstOrCreate(['name' => 'User']);
+        $userDemo = User::factory()->create([
+            'username' => 'user_demo',
+            'email' => 'user@shophoatuoi.com',
+            'password' => 'password',
+        ]);
+        $userDemo->roles()->attach($userRole->id);
+
+        $response = $this->withSession(['url.intended' => '/dashboard'])->post('/login', [
+            'email' => 'user_demo',
+            'password' => 'password',
+        ]);
+
+        $this->assertAuthenticated();
+        $response->assertRedirect(route('home', absolute: false));
+    }
+
     public function test_admin_is_redirected_to_admin_dashboard_even_with_session_intended_url(): void
     {
-        $adminRole = \App\Models\Role::create(['name' => 'Admin']);
+        $adminRole = Role::create(['name' => 'Admin']);
         $admin = User::factory()->create();
         $admin->roles()->attach($adminRole->id);
 

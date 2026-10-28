@@ -70,15 +70,7 @@
                                 @csrf
                                 <button type="submit" class="btn btn-warning btn-sm mb-1"
                                     @if($item->stock == 0) disabled title="Sản phẩm đã ngưng bán" @else onclick="return confirm('Bạn có chắc chắn muốn ngưng bán sản phẩm này? Số lượng tồn sẽ được đặt về 0 và tình trạng sẽ chuyển thành Hết hàng.');" @endif>
-                                    Ngưng bán
-                                </button>
-                            </form>
-
-                            <form method="POST" action="{{ route('admin.products.destroy', $item) }}" style="display: inline-block;" onsubmit="return confirm('Bạn có chắc chắn muốn xóa vĩnh viễn sản phẩm &quot;{{ $item->name }}&quot; không?');">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger btn-sm mb-1">
-                                    <i class="fas fa-trash"></i> Xóa
+                                    <i class="fas fa-ban mr-1"></i> Ngưng bán
                                 </button>
                             </form>
                         </td>
