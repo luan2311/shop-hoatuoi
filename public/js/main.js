@@ -1,27 +1,46 @@
 // Loading functionality
+let loadingSafetyTimer = null;
+
+function hideLoadingOverlay() {
+    clearTimeout(loadingSafetyTimer);
+    const loadingOverlay = document.getElementById('loading-overlay');
+    if (loadingOverlay) {
+        loadingOverlay.classList.remove('active');
+        loadingOverlay.classList.add('hidden');
+        loadingOverlay.style.display = 'none';
+        loadingOverlay.style.opacity = '0';
+        loadingOverlay.style.pointerEvents = 'none';
+    }
+}
+
+function showLoadingOverlay() {
+    const loadingOverlay = document.getElementById('loading-overlay');
+    if (loadingOverlay) {
+        loadingOverlay.classList.remove('hidden');
+        loadingOverlay.classList.add('active');
+        loadingOverlay.style.display = 'flex';
+        loadingOverlay.style.opacity = '1';
+        loadingOverlay.style.pointerEvents = 'auto';
+
+        clearTimeout(loadingSafetyTimer);
+        // Tự động tắt sau 3 giây để phòng ngừa bị kẹt
+        loadingSafetyTimer = setTimeout(hideLoadingOverlay, 3000);
+    }
+}
+
+window.showLoadingOverlay = showLoadingOverlay;
+window.hideLoadingOverlay = hideLoadingOverlay;
+
 window.addEventListener('load', function () {
     // Ẩn loading sau khi trang load xong
-    setTimeout(function () {
-        const loadingOverlay = document.getElementById('loading-overlay');
-        if (loadingOverlay) {
-            loadingOverlay.classList.add('hidden');
-            // Xóa element sau khi animation kết thúc
-            setTimeout(function () {
-                loadingOverlay.style.display = 'none';
-            }, 300);
-        }
-    }, 0); // Thời gian hiển thị tối thiểu (500ms)
+    setTimeout(hideLoadingOverlay, 0);
 });
 
 // Bấm Back/Forward: trình duyệt khôi phục trang từ bfcache (đúng trạng thái lúc rời đi,
 // loading đang hiện) và KHÔNG chạy lại sự kiện 'load' -> phải ẩn loading ở 'pageshow'
 window.addEventListener('pageshow', function (event) {
     if (event.persisted) {
-        const loadingOverlay = document.getElementById('loading-overlay');
-        if (loadingOverlay) {
-            loadingOverlay.classList.add('hidden');
-            loadingOverlay.style.display = 'none';
-        }
+        hideLoadingOverlay();
     }
 });
 
@@ -180,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    //Handle loading overlay on internal link clicks
+    // Handle loading overlay on internal link clicks
     const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="~/"]');
 
     internalLinks.forEach(function (link) {
@@ -190,33 +209,71 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            // Không hiển thị loading cho link javascript, anchor hash hoặc wishlist
+            // Không hiển thị loading cho link javascript, anchor hash hoặc các nút bấm AJAX
             const href = this.getAttribute('href') || '';
-            if (href.startsWith('javascript:') || href === '#' || href.startsWith('/#') || this.classList.contains('backtop') || this.classList.contains('js-wishlist-toggle')) {
+            if (
+                href.startsWith('javascript:') ||
+                href === '#' ||
+                href.startsWith('/#') ||
+                this.classList.contains('backtop') ||
+                this.classList.contains('js-wishlist-toggle') ||
+                this.classList.contains('setWishlist') ||
+                this.classList.contains('remove-fav') ||
+                this.classList.contains('remove-item-cart') ||
+                this.classList.contains('btn-clear-cart') ||
+                this.classList.contains('btn-qty-minus') ||
+                this.classList.contains('btn-qty-plus') ||
+                this.hasAttribute('data-no-loading') ||
+                this.hasAttribute('data-ajax-add-cart')
+            ) {
                 return;
             }
 
             // Hiển thị loading
-            const loadingOverlay = document.getElementById('loading-overlay');
-            if (loadingOverlay) {
-                loadingOverlay.style.display = 'flex';
-                loadingOverlay.classList.remove('hidden');
-            }
+            showLoadingOverlay();
         });
     });
 
-    // Hiển thị loading khi submit form (ngoại trừ live search debounce)
-    const forms = document.querySelectorAll('form');
-    forms.forEach(function (form) {
-        form.addEventListener('submit', function (e) {
-            if (this.hasAttribute('data-product-search') || this.classList.contains('header-search-form')) {
-                return;
-            }
-            const loadingOverlay = document.getElementById('loading-overlay');
-            if (loadingOverlay) {
-                loadingOverlay.style.display = 'flex';
-                loadingOverlay.classList.remove('hidden');
-            }
-        });
+    // Hiển thị loading khi submit form (ngoại trừ live search debounce, các form ajax giỏ hàng)
+    document.addEventListener('submit', function (e) {
+        const form = e.target;
+        if (!form || form.tagName !== 'FORM') {
+            return;
+        }
+
+        // Bỏ qua nếu submit đã bị preventDefault
+        if (e.defaultPrevented) {
+            return;
+        }
+
+        // Kiểm tra nếu người dùng bấm "Mua ngay" -> cho phép hiển thị loading khi chuyển hướng
+        const submitter = e.submitter || (e.originalEvent && e.originalEvent.submitter);
+        const isBuyNow = submitter && (
+            submitter.name === 'buy_now' ||
+            (submitter.classList && submitter.classList.contains('btn-buyNow')) ||
+            submitter.value === '1'
+        );
+
+        const action = (form.getAttribute('action') || '').toLowerCase();
+        const isAddToCart = action.includes('/cart/add') ||
+            action.includes('cart/themgiohang') ||
+            form.id === 'add-to-cart-form' ||
+            form.hasAttribute('data-cart-form');
+
+        // Bỏ qua các form AJAX hoặc không cần loading overlay
+        if (
+            form.hasAttribute('data-product-search') ||
+            form.classList.contains('header-search-form') ||
+            form.hasAttribute('data-no-loading') ||
+            form.classList.contains('form-remove-item') ||
+            form.classList.contains('form-update-qty') ||
+            form.classList.contains('form-clear-cart') ||
+            form.classList.contains('form-cart-ajax') ||
+            (isAddToCart && !isBuyNow)
+        ) {
+            return;
+        }
+
+        showLoadingOverlay();
     });
 });

@@ -2,11 +2,23 @@
     $cartCount = 0;
     if (auth()->check()) {
         try {
-            $userCart = \App\Models\Cart::where('user_id', auth()->id())->first();
+            $userCart = app(\App\Services\SalesService::class)->cart(auth()->user());
             if ($userCart && is_array($userCart->items)) {
                 $cartCount = array_sum(array_column($userCart->items, 'quantity'));
             }
-        } catch (\Throwable $e) {}
+        } catch (\Throwable $e) {
+            try {
+                $uid = auth()->id();
+                $ids = [(string) $uid];
+                if (\MongoDB\BSON\ObjectId::isValid($uid)) {
+                    $ids[] = new \MongoDB\BSON\ObjectId($uid);
+                }
+                $userCart = \App\Models\Cart::whereIn('user_id', $ids)->first();
+                if ($userCart && is_array($userCart->items)) {
+                    $cartCount = array_sum(array_column($userCart->items, 'quantity'));
+                }
+            } catch (\Throwable $e2) {}
+        }
     }
     $wishlistCount = 0;
     try {

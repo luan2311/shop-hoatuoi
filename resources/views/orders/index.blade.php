@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="{{ asset('css/account_style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/breadcrumb_style.css') }}">
     <style>
+        .modal {
+            z-index: 1065 !important;
+        }
+        .modal-backdrop {
+            z-index: 1050 !important;
+        }
         .page_customer_account {
             padding: 30px 0 60px;
             background: #fbfbfb;
@@ -454,8 +460,10 @@
         </div>
     </div>
 </section>
+@endsection
 
-<!-- Quick View Modals -->
+@push('modals')
+<!-- Quick View Modals (Rendered outside .bodywrap to prevent backdrop trapping) -->
 @foreach ($orders as $order)
     <div class="modal fade" id="orderQuickViewModal_{{ $order->id }}" tabindex="-1" aria-labelledby="modalLabel_{{ $order->id }}" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -535,4 +543,4 @@
         </div>
     </div>
 @endforeach
-@endsection
+@endpush

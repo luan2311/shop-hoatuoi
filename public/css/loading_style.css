@@ -1,4 +1,4 @@
-﻿/* Loading Overlay */
+/* Loading Overlay */
 #loading-overlay {
     position: fixed;
     top: 0;
@@ -6,17 +6,26 @@
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.8);
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
 }
 
-    #loading-overlay.hidden {
-        opacity: 0;
-        pointer-events: none;
-    }
+    #loading-overlay.hidden, #loading-overlay[style*="display: none"] {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+}
+
+#loading-overlay.active {
+    display: flex !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    visibility: visible !important;
+}
 
 .loading-spinner {
     text-align: center;
@@ -81,3 +90,5 @@
         transform: translateX(100%);
     }
 }
+
+

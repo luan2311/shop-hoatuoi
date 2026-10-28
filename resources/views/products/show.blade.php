@@ -179,7 +179,7 @@
                     </div>
 
                     <!-- Form Thêm vào giỏ hàng -->
-                    <form action="/cart/add" method="post" id="add-to-cart-form" class="mt-3">
+                    <form action="/cart/add" method="post" id="add-to-cart-form" class="mt-3" data-cart-form="">
                         @csrf
                         <input type="hidden" name="product_id" value="{{ $product->id }}">
 

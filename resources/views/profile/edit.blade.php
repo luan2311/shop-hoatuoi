@@ -388,55 +388,58 @@
                         <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#confirmUserDeletionModal" style="font-size: small; border-radius: 10px;">
                             <i class="fa fa-trash me-1"></i> Xóa tài khoản vĩnh viễn
                         </button>
-
-                        <!-- Modal xác nhận xóa tài khoản -->
-                        <div class="modal fade" id="confirmUserDeletionModal" tabindex="-1" aria-labelledby="confirmUserDeletionModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content">
-                                    <form method="post" action="{{ route('profile.destroy') }}">
-                                        @csrf
-                                        @method('delete')
-
-                                        <div class="modal-header">
-                                            <h5 class="modal-title text-danger" id="confirmUserDeletionModalLabel">
-                                                <i class="fa fa-exclamation-triangle me-1"></i> Xác nhận xóa tài khoản
-                                            </h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <p class="text-muted small mb-3">
-                                                Bạn có chắc chắn muốn xóa tài khoản này không? Vui lòng nhập mật khẩu tài khoản của bạn để xác nhận.
-                                            </p>
-                                            <div class="mb-3">
-                                                <label for="delete_account_password" class="form-label">
-                                                    Mật khẩu xác nhận <span class="text-danger">*</span>
-                                                </label>
-                                                <input type="password"
-                                                       name="password"
-                                                       id="delete_account_password"
-                                                       class="form-control @if($errors->userDeletion->has('password')) is-invalid @endif"
-                                                       placeholder="Nhập mật khẩu"
-                                                       required />
-                                                @if($errors->userDeletion->has('password'))
-                                                    <div class="invalid-feedback">{{ $errors->userDeletion->first('password') }}</div>
-                                                @endif
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy bỏ</button>
-                                            <button type="submit" class="btn btn-danger">Xóa tài khoản</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
-            </main>
-        </div>
+            </div>
+        </main>
     </div>
+</div>
 </section>
 @endsection
+
+@push('modals')
+<!-- Modal xác nhận xóa tài khoản -->
+<div class="modal fade" id="confirmUserDeletionModal" tabindex="-1" aria-labelledby="confirmUserDeletionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <form method="post" action="{{ route('profile.destroy') }}">
+                @csrf
+                @method('delete')
+
+                <div class="modal-header">
+                    <h5 class="modal-title text-danger" id="confirmUserDeletionModalLabel">
+                        <i class="fa fa-exclamation-triangle me-1"></i> Xác nhận xóa tài khoản
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted small mb-3">
+                        Bạn có chắc chắn muốn xóa tài khoản này không? Vui lòng nhập mật khẩu tài khoản của bạn để xác nhận.
+                    </p>
+                    <div class="mb-3">
+                        <label for="delete_account_password" class="form-label">
+                            Mật khẩu xác nhận <span class="text-danger">*</span>
+                        </label>
+                        <input type="password"
+                               name="password"
+                               id="delete_account_password"
+                               class="form-control @if($errors->userDeletion->has('password')) is-invalid @endif"
+                               placeholder="Nhập mật khẩu"
+                               required />
+                        @if($errors->userDeletion->has('password'))
+                            <div class="invalid-feedback">{{ $errors->userDeletion->first('password') }}</div>
+                        @endif
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy bỏ</button>
+                    <button type="submit" class="btn btn-danger">Xóa tài khoản</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@endpush
 
 @push('scripts')
 <script>

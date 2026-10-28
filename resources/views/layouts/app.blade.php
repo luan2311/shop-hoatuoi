@@ -22,32 +22,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS ported từ codebase C# Shop-Flower -->
-    <link rel="stylesheet" href="{{ asset('css/style_layout.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/collection_style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/breadcrumb_style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/trangchu_style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/contact_style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/404page.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/product_style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/blog_style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/account_style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/loading_style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/cart_style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/wishlist_style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/ajax-notification.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/layout_custom.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style_layout.css') }}?v={{ @filemtime(public_path('css/style_layout.css')) ?: 1 }}">
+    <link rel="stylesheet" href="{{ asset('css/collection_style.css') }}?v={{ @filemtime(public_path('css/collection_style.css')) ?: 1 }}">
+    <link rel="stylesheet" href="{{ asset('css/breadcrumb_style.css') }}?v={{ @filemtime(public_path('css/breadcrumb_style.css')) ?: 1 }}">
+    <link rel="stylesheet" href="{{ asset('css/trangchu_style.css') }}?v={{ @filemtime(public_path('css/trangchu_style.css')) ?: 1 }}">
+    <link rel="stylesheet" href="{{ asset('css/contact_style.css') }}?v={{ @filemtime(public_path('css/contact_style.css')) ?: 1 }}">
+    <link rel="stylesheet" href="{{ asset('css/404page.css') }}?v={{ @filemtime(public_path('css/404page.css')) ?: 1 }}">
+    <link rel="stylesheet" href="{{ asset('css/product_style.css') }}?v={{ @filemtime(public_path('css/product_style.css')) ?: 1 }}">
+    <link rel="stylesheet" href="{{ asset('css/blog_style.css') }}?v={{ @filemtime(public_path('css/blog_style.css')) ?: 1 }}">
+    <link rel="stylesheet" href="{{ asset('css/account_style.css') }}?v={{ @filemtime(public_path('css/account_style.css')) ?: 1 }}">
+    <link rel="stylesheet" href="{{ asset('css/loading_style.css') }}?v={{ @filemtime(public_path('css/loading_style.css')) ?: 1 }}">
+    <link rel="stylesheet" href="{{ asset('css/cart_style.css') }}?v={{ @filemtime(public_path('css/cart_style.css')) ?: 1 }}">
+    <link rel="stylesheet" href="{{ asset('css/wishlist_style.css') }}?v={{ @filemtime(public_path('css/wishlist_style.css')) ?: 1 }}">
+    <link rel="stylesheet" href="{{ asset('css/ajax-notification.css') }}?v={{ @filemtime(public_path('css/ajax-notification.css')) ?: 1 }}">
+    <link rel="stylesheet" href="{{ asset('css/layout_custom.css') }}?v={{ @filemtime(public_path('css/layout_custom.css')) ?: 1 }}">
     @stack('styles')
 
     <!-- JS ported từ codebase C# Shop-Flower -->
-    <script src="{{ asset('js/main.js') }}"></script>
-    <script src="{{ asset('js/wishlist-ajax.js') }}"></script>
-    <script src="{{ asset('js/search-realtime.js') }}"></script>
+    <script src="{{ asset('js/main.js') }}?v={{ @filemtime(public_path('js/main.js')) ?: 1 }}"></script>
+    <script src="{{ asset('js/wishlist-ajax.js') }}?v={{ @filemtime(public_path('js/wishlist-ajax.js')) ?: 1 }}"></script>
+    <script src="{{ asset('js/cart-ajax.js') }}?v={{ @filemtime(public_path('js/cart-ajax.js')) ?: 1 }}"></script>
+    <script src="{{ asset('js/search-realtime.js') }}?v={{ @filemtime(public_path('js/search-realtime.js')) ?: 1 }}"></script>
 
     <title>@yield('title', 'Shop Hoa Tươi Góc Hoa Xinh - Những Bó Hoa Tươi xinh xắn')</title>
 </head>
 <body>
     <!-- Loading Overlay ported từ _LayoutChung.cshtml -->
-    <div id="loading-overlay">
+    <div id="loading-overlay" class="hidden" style="display: none;">
         <div class="loading-spinner">
             <div class="spinner-border" role="status">
                 <span class="sr-only">Đang tải...</span>
@@ -103,6 +104,7 @@
     <!-- Footer ported từ _Footer.cshtml -->
     @include('layouts.partials.footer')
 
+    @stack('modals')
     @stack('scripts')
 </body>
 </html>

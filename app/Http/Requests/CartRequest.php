@@ -16,6 +16,8 @@ class CartRequest extends FormRequest
         return [
             'product_id' => [$this->routeIs('cart.add') ? 'required' : 'sometimes', 'string', 'regex:/^[a-f0-9]{24}$/i'],
             'quantity' => ['required', 'integer', 'min:1', 'max:999'],
+            'remove_from_wishlist' => ['sometimes', 'boolean'],
+            'product_code' => ['sometimes', 'nullable', 'string', 'max:50'],
         ];
     }
 }

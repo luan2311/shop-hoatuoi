@@ -61,10 +61,12 @@
                                         <i class="fas fa-shopping-cart" style="margin-right: 6px;"></i> Thêm giỏ
                                     </button>
                                 @else
-                                    <form action="/cart/add" method="post" style="margin: 0;">
+                                    <form action="/cart/add" method="post" style="margin: 0;" data-no-loading="true" data-cart-form="">
                                         @csrf
                                         <input type="hidden" name="product_id" value="{{ $product->id }}">
                                         <input type="hidden" name="quantity" value="1">
+                                        <input type="hidden" name="remove_from_wishlist" value="1">
+                                        <input type="hidden" name="product_code" value="{{ $product->code }}">
                                         <button type="submit"
                                                 class="btn-action add-cart"
                                                 style="background: #e7f4ec; color: #1b5e20; border-radius: 8px; padding: 8px 12px; margin: 4px; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; font-size: 14px;">

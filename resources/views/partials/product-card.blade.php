@@ -1,7 +1,7 @@
 <div class="col-lg-3 col-md-3 col-sm-6 col-6">
     <div class="item_product_main">
         <form action="/cart/add" method="post"
-              class="variants product-action item-product-main duration-300" data-cart-form="">
+              class="variants product-action item-product-main duration-300" data-cart-form="" data-no-loading="true">
             @csrf
             <input type="hidden" name="product_id" value="{{ $product->id }}">
             <input type="hidden" name="quantity" value="1">
@@ -60,7 +60,7 @@
                                 </svg>
                             </button>
                         @else
-                            <button class="btn-cart btn-views add_to_cart "
+                            <button type="submit" class="btn-cart btn-views add_to_cart"
                                     title="Thêm vào giỏ hàng">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
                                      fill="currentColor" class="bi bi-cart-plus"

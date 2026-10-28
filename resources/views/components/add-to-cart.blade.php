@@ -1,5 +1,5 @@
 @props(['product'])
-<form method="POST" action="{{ route('cart.add') }}" class="relative flex flex-wrap gap-2">
+<form method="POST" action="{{ route('cart.add') }}" class="relative flex flex-wrap gap-2" data-no-loading="true" data-cart-form="">
     @csrf
     <input type="hidden" name="product_id" value="{{ $product->id }}">
     <label class="sr-only" for="add-quantity-{{ $product->id }}">Số lượng {{ $product->name }}</label>
