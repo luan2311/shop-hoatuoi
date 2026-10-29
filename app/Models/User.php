@@ -36,6 +36,7 @@ class User extends Authenticatable
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'is_active' => 'boolean',
         ];
     }
 
@@ -98,9 +99,11 @@ class User extends Authenticatable
     // Helpers
     public function hasRole(string $role): bool
     {
-        $roles = $this->getAttributes()['roles'] ?? [];
-        if (in_array($role, (array) $roles, true)) {
-            return true;
+        $roles = (array) ($this->getAttributes()['roles'] ?? []);
+        foreach ($roles as $r) {
+            if (strcasecmp((string) $r, $role) === 0) {
+                return true;
+            }
         }
 
         try {
@@ -113,5 +116,15 @@ class User extends Authenticatable
     public function isAdmin(): bool
     {
         return $this->hasRole('Admin');
+    }
+
+    public function isUser(): bool
+    {
+        return $this->hasRole('User') || ! $this->isAdmin();
+    }
+
+    public function isActive(): bool
+    {
+        return (bool) ($this->is_active ?? true);
     }
 }

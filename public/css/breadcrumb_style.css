@@ -69,8 +69,18 @@
                 color: #ea8725
             }
 
-    .breadcrumb > li + li:before {
-        display: none
+    .breadcrumb > li + li:before,
+    .breadcrumb-item + .breadcrumb-item:before,
+    .breadcrumb-item + .breadcrumb-item::before,
+    .breadcrumb > li + li::before {
+        display: inline-block !important;
+        content: ">" !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        color: #718096 !important;
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        vertical-align: middle !important;
     }
 
 .pagination > li:first-child > a, .pagination > li:first-child > span {

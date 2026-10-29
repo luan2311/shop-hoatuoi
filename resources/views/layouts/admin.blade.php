@@ -14,6 +14,8 @@
     <!-- Dashboard.css (Ported from C# ASP.NET MVC 5 ShopFlower) -->
     <link href="{{ asset('css/Dashboard.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/PagedList.css') }}" rel="stylesheet" />
+    <!-- Toast notification styles (giống khi thêm vào giỏ hàng) -->
+    <link href="{{ asset('css/ajax-notification.css') }}" rel="stylesheet" />
     <style>
         /* Smooth responsive adjustments */
         .sidebar {
@@ -33,6 +35,39 @@
     @yield('styles')
 </head>
 <body>
+    <!-- Floating Toast Notification (giống khi thêm vào giỏ hàng) -->
+    @if (session('error') || session('status_error'))
+        <div class="ajax-notification cart-toast error" style="display: block;" id="admin-toast-error">
+            {{ session('error') ?? session('status_error') }}
+        </div>
+        <script>
+            setTimeout(function () {
+                var el = document.getElementById('admin-toast-error');
+                if (el) {
+                    el.style.transition = 'opacity 0.3s ease';
+                    el.style.opacity = '0';
+                    setTimeout(function () { if (el && el.parentNode) el.parentNode.removeChild(el); }, 300);
+                }
+            }, 4000);
+        </script>
+    @endif
+
+    @if (session('success') || session('status'))
+        <div class="ajax-notification cart-toast success" style="display: block;" id="admin-toast-success">
+            {{ session('success') ?: session('status') }}
+        </div>
+        <script>
+            setTimeout(function () {
+                var el = document.getElementById('admin-toast-success');
+                if (el) {
+                    el.style.transition = 'opacity 0.3s ease';
+                    el.style.opacity = '0';
+                    setTimeout(function () { if (el && el.parentNode) el.parentNode.removeChild(el); }, 300);
+                }
+            }, 2800);
+        </script>
+    @endif
+
     <div class="sidebar">
         <div class="sidebar-header">
             <h3 style="text-align:center; color:wheat; margin:0; font-weight:700; letter-spacing:1px;">ADMIN</h3>
@@ -101,24 +136,6 @@
         </nav>
 
         <div class="content-body">
-            @if(session('success') || session('status'))
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <i class="fas fa-check-circle mr-2"></i> {{ session('success') ?: session('status') }}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            @endif
-
-            @if(session('error'))
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <i class="fas fa-exclamation-triangle mr-2"></i> {{ session('error') }}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-            @endif
-
             @if(isset($errors) && $errors->any())
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                     <strong>Có lỗi xảy ra:</strong>
@@ -137,6 +154,8 @@
         </div>
     </div>
 
+    @stack('modals')
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -150,7 +169,31 @@
             if ($.fn.tooltip) {
                 $('[data-toggle="tooltip"]').tooltip();
             }
+
+            // Đóng nhanh thông báo nổi khi click vào
+            $(document).on('click', '.ajax-notification', function () {
+                $(this).fadeOut(200, function () {
+                    $(this).remove();
+                });
+            });
         });
+
+        // Hàm hiển thị thông báo toast dùng chung trong Admin
+        function showNotification(message, type) {
+            type = type || 'success';
+            $('.ajax-notification.cart-toast').remove();
+
+            var box = $('<div class="ajax-notification cart-toast ' + type + '" style="display: block;">' + message + '</div>');
+            $('body').append(box);
+
+            setTimeout(function () {
+                box.fadeOut(300, function () {
+                    $(this).remove();
+                });
+            }, 2800);
+        }
+        window.showNotification = showNotification;
+        window.showCartNotification = showNotification;
     </script>
     @stack('scripts')
     @yield('scripts')

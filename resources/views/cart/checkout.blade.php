@@ -427,15 +427,21 @@
          Ported & Enhanced from C# ASP MVC 5 ThanhToan.cshtml & Playwright test-cases
          ========================================================================== -->
     <script>
-        // Data Tỉnh / Thành, Quận / Huyện, Phường / Xã chuẩn Việt Nam
+        // Data Tỉnh / Thành, Quận / Huyện, Phường / Xã chuẩn Việt Nam (Đầy đủ 63 tỉnh thành & quận huyện lớn)
         var tinhThanhData = [
             "TP Hồ Chí Minh", "Hà Nội", "Đà Nẵng", "Hải Phòng", "Cần Thơ",
             "Bình Dương", "Đồng Nai", "Bà Rịa - Vũng Tàu", "Lâm Đồng", "Khánh Hòa",
-            "An Giang", "Bắc Giang", "Bắc Ninh", "Bến Tre", "Bình Định",
-            "Bình Phước", "Bình Thuận", "Cà Mau", "Đắk Lắk", "Gia Lai",
-            "Hà Nam", "Hà Tĩnh", "Hải Dương", "Hậu Giang", "Huế", "Kiên Giang",
-            "Long An", "Nam Định", "Nghệ An", "Quảng Nam", "Quảng Ninh", "Tây Ninh",
-            "Thanh Hóa", "Tiền Giang", "Vĩnh Long", "Vĩnh Phúc"
+            "An Giang", "Bắc Giang", "Bắc Kạn", "Bạc Liêu", "Bắc Ninh",
+            "Bến Tre", "Bình Định", "Bình Phước", "Bình Thuận", "Cà Mau",
+            "Cao Bằng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Tháp",
+            "Gia Lai", "Hà Giang", "Hà Nam", "Hà Tĩnh", "Hải Dương",
+            "Hậu Giang", "Hòa Bình", "Hưng Yên", "Kiên Giang", "Kon Tum",
+            "Lai Châu", "Lạng Sơn", "Lào Cai", "Long An", "Nam Định",
+            "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên",
+            "Quảng Bình", "Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị",
+            "Sóc Trăng", "Sơn La", "Tây Ninh", "Thái Bình", "Thái Nguyên",
+            "Thanh Hóa", "Thừa Thiên Huế", "Tiền Giang", "Trà Vinh", "Tuyên Quang",
+            "Vĩnh Long", "Vĩnh Phúc", "Yên Bái"
         ];
 
         var quanHuyenData = {
@@ -443,145 +449,339 @@
                 "Quận 1", "Quận 3", "Quận 4", "Quận 5", "Quận 6",
                 "Quận 7", "Quận 8", "Quận 10", "Quận 11", "Quận 12",
                 "Bình Thạnh", "Tân Bình", "Tân Phú", "Phú Nhuận", "Gò Vấp",
-                "Bình Tân", "TP Thủ Đức", "Hóc Môn", "Bình Chánh", "Nhà Bè"
+                "Bình Tân", "TP Thủ Đức", "Hóc Môn", "Bình Chánh", "Nhà Bè", "Củ Chi", "Cần Giờ"
             ],
             "Hà Nội": [
                 "Ba Đình", "Hoàn Kiếm", "Tây Hồ", "Long Biên", "Cầu Giấy",
                 "Đống Đa", "Hai Bà Trưng", "Hoàng Mai", "Thanh Xuân", "Hà Đông",
-                "Nam Từ Liêm", "Bắc Từ Liêm"
+                "Nam Từ Liêm", "Bắc Từ Liêm", "Sơn Tây", "Ba Vì", "Đông Anh",
+                "Gia Lâm", "Hoài Đức", "Mê Linh", "Sóc Sơn", "Thạch Thất", "Thanh Trì", "Thường Tín"
             ],
             "Đà Nẵng": [
-                "Hải Châu", "Thanh Khê", "Sơn Trà", "Ngũ Hành Sơn", "Liên Chiểu", "Cẩm Lệ"
+                "Hải Châu", "Thanh Khê", "Sơn Trà", "Ngũ Hành Sơn", "Liên Chiểu", "Cẩm Lệ", "Hòa Vang"
             ],
             "Cần Thơ": [
-                "Ninh Kiều", "Bình Thủy", "Cái Răng", "Ô Môn", "Thốt Nốt"
+                "Ninh Kiều", "Bình Thủy", "Cái Răng", "Ô Môn", "Thốt Nốt", "Phong Điền", "Cờ Đỏ", "Thới Lai", "Vĩnh Thạnh"
+            ],
+            "Hải Phòng": [
+                "Hồng Bàng", "Ngô Quyền", "Lê Chân", "Hải An", "Kiến An", "Đồ Sơn", "Dương Kinh", "Thủy Nguyên", "An Dương"
             ],
             "Bình Dương": [
-                "Thủ Dầu Một", "Thuận An", "Dĩ An", "Bến Cát", "Tân Uyên"
+                "Thủ Dầu Một", "Thuận An", "Dĩ An", "Bến Cát", "Tân Uyên", "Bàu Bàng", "Bắc Tân Uyên"
+            ],
+            "Đồng Nai": [
+                "Biên Hòa", "Long Khánh", "Long Thành", "Nhơn Trạch", "Trảng Bom", "Thống Nhất"
+            ],
+            "Bà Rịa - Vũng Tàu": [
+                "Vũng Tàu", "Bà Rịa", "Phú Mỹ", "Châu Đức", "Long Điền", "Đất Đỏ", "Xuyên Mộc"
+            ],
+            "Lâm Đồng": [
+                "Đà Lạt", "Bảo Lộc", "Đức Trọng", "Di Linh", "Đơn Dương", "Lạc Dương"
+            ],
+            "Khánh Hòa": [
+                "Nha Trang", "Cam Ranh", "Ninh Hòa", "Vạn Ninh", "Diên Khánh"
+            ],
+            "Thừa Thiên Huế": [
+                "TP Huế", "Hương Thủy", "Hương Trà", "Phú Vang", "Quảng Điền"
+            ],
+            "Huế": [
+                "TP Huế", "Hương Thủy", "Hương Trà", "Phú Vang", "Quảng Điền"
             ]
         };
 
         var phuongXaData = {
             "Quận 1": [
-                "Tân Định", "Đa Kao", "Bến Nghé", "Bến Thành", "Nguyễn Thái Bình",
-                "Phạm Ngũ Lão", "Cô Giang", "Nguyễn Cư Trinh", "Cầu Ông Lãnh", "Cầu Kho"
+                "Bến Nghé", "Bến Thành", "Cô Giang", "Cầu Kho", "Cầu Ông Lãnh",
+                "Đa Kao", "Nguyễn Cư Trinh", "Nguyễn Thái Bình", "Phạm Ngũ Lão", "Tân Định"
+            ],
+            "Quận 3": [
+                "Phường 1", "Phường 2", "Phường 3", "Phường 4", "Phường 5",
+                "Phường 9", "Phường 10", "Phường 11", "Phường 12", "Phường 13", "Phường 14", "Võ Thị Sáu"
+            ],
+            "Quận 4": [
+                "Phường 1", "Phường 2", "Phường 3", "Phường 4", "Phường 6", "Phường 8", "Phường 9", "Phường 10", "Phường 13", "Phường 14", "Phường 15", "Phường 16", "Phường 18"
+            ],
+            "Quận 5": [
+                "Phường 1", "Phường 2", "Phường 3", "Phường 4", "Phường 5", "Phường 6", "Phường 7", "Phường 8", "Phường 9", "Phường 10", "Phường 11", "Phường 12", "Phường 13", "Phường 14"
             ],
             "Quận 7": [
-                "Tân Thuận Đông", "Tân Thuận Tây", "Tân Kiểng", "Tân Hưng",
-                "Bình Thuận", "Tân Quy", "Phú Thuận", "Tân Phú", "Tân Phong", "Phú Mỹ"
+                "Bình Thuận", "Phú Mỹ", "Phú Thuận", "Tân Hưng", "Tân Kiểng",
+                "Tân Phong", "Tân Phú", "Tân Quy", "Tân Thuận Đông", "Tân Thuận Tây"
             ],
-            "Tân Phú": [
-                "Tây Thạnh", "Sơn Kỳ", "Tân Sơn Nhì", "Tân Thành", "Phú Thọ Hòa",
-                "Phú Thạnh", "Phú Trung", "Hòa Thạnh", "Hiệp Tân", "Tân Thới Hòa"
+            "Quận 10": [
+                "Phường 1", "Phường 2", "Phường 4", "Phường 5", "Phường 6", "Phường 7", "Phường 8", "Phường 9", "Phường 10", "Phường 11", "Phường 12", "Phường 13", "Phường 14", "Phường 15"
             ],
             "Bình Thạnh": [
                 "Phường 1", "Phường 2", "Phường 3", "Phường 5", "Phường 6", "Phường 7",
-                "Phường 11", "Phường 12", "Phường 13", "Phường 14", "Phường 15", "Phường 17", "Phường 25"
+                "Phường 11", "Phường 12", "Phường 13", "Phường 14", "Phường 15", "Phường 17",
+                "Phường 19", "Phường 21", "Phường 22", "Phường 24", "Phường 25", "Phường 26", "Phường 27", "Phường 28"
+            ],
+            "Tân Bình": [
+                "Phường 1", "Phường 2", "Phường 3", "Phường 4", "Phường 5", "Phường 6",
+                "Phường 7", "Phường 8", "Phường 9", "Phường 10", "Phường 11", "Phường 12", "Phường 13", "Phường 14", "Phường 15"
+            ],
+            "Tân Phú": [
+                "Hiệp Tân", "Hòa Thạnh", "Phú Thạnh", "Phú Thọ Hòa", "Phú Trung",
+                "Sơn Kỳ", "Tân Quý", "Tân Sơn Nhì", "Tân Thành", "Tân Thới Hòa", "Tây Thạnh"
+            ],
+            "Phú Nhuận": [
+                "Phường 1", "Phường 2", "Phường 3", "Phường 4", "Phường 5", "Phường 7",
+                "Phường 8", "Phường 9", "Phường 10", "Phường 11", "Phường 13", "Phường 15", "Phường 17"
+            ],
+            "Gò Vấp": [
+                "Phường 1", "Phường 3", "Phường 4", "Phường 5", "Phường 6", "Phường 7",
+                "Phường 8", "Phường 9", "Phường 10", "Phường 11", "Phường 12", "Phường 14", "Phường 15", "Phường 16", "Phường 17"
+            ],
+            "Bình Tân": [
+                "An Lạc", "An Lạc A", "Bình Hưng Hòa", "Bình Hưng Hòa A", "Bình Hưng Hòa B",
+                "Bình Trị Đông", "Bình Trị Đông A", "Bình Trị Đông B", "Tân Tạo", "Tân Tạo A"
+            ],
+            "TP Thủ Đức": [
+                "An Khánh", "An Lợi Đông", "An Phú", "Bình Chiểu", "Bình Thọ",
+                "Hiệp Bình Chánh", "Hiệp Bình Phước", "Hiệp Phú", "Linh Chiểu", "Linh Đông",
+                "Linh Trung", "Linh Xuân", "Phước Bình", "Phước Long A", "Phước Long B",
+                "Tam Bình", "Tam Phú", "Tăng Nhơn Phú A", "Tăng Nhơn Phú B", "Thảo Điền", "Thủ Thiêm"
             ],
             "Ba Đình": [
-                "Phúc Xá", "Trúc Bạch", "Vĩnh Phúc", "Cống Vị", "Liễu Giai",
-                "Nguyễn Trung Trực", "Quán Thánh", "Ngọc Hà", "Điện Biên", "Đội Cấn"
+                "Cống Vị", "Điện Biên", "Đội Cấn", "Giảng Võ", "Kim Mã",
+                "Liễu Giai", "Ngọc Hà", "Ngọc Khánh", "Nguyễn Trung Trực", "Phúc Xá",
+                "Quán Thánh", "Thành Công", "Trúc Bạch", "Vĩnh Phúc"
+            ],
+            "Hoàn Kiếm": [
+                "Chương Dương", "Cửa Đông", "Cửa Nam", "Đồng Xuân", "Hàng Bạc",
+                "Hàng Bài", "Hàng Bồ", "Hàng Bông", "Hàng Buồm", "Hàng Đào",
+                "Hàng Gai", "Hàng Mã", "Hàng Trống", "Lý Thái Tổ", "Phan Chu Trinh", "Trần Hưng Đạo", "Tràng Tiền"
+            ],
+            "Đống Đa": [
+                "Cát Linh", "Hàng Bột", "Khâm Thiên", "Khương Thượng", "Kim Liên",
+                "Láng Hạ", "Láng Thượng", "Nam Đồng", "Ngã Tư Sở", "Ô Chợ Dừa",
+                "Phương Liên", "Phương Mai", "Quang Trung", "Quốc Tử Giám", "Thịnh Quang", "Văn Miếu"
+            ],
+            "Cầu Giấy": [
+                "Dịch Vọng", "Dịch Vọng Hậu", "Mai Dịch", "Nghĩa Đô", "Nghĩa Tân", "Quan Hoa", "Trung Hòa", "Yên Hòa"
+            ],
+            "Hai Bà Trưng": [
+                "Bạch Đằng", "Bách Khoa", "Bạch Mai", "Cầu Dền", "Đống Mác", "Đồng Nhân", "Đồng Tâm", "Lê Đại Hành", "Minh Khai", "Nguyễn Du", "Trương Định", "Vĩnh Tuy"
+            ],
+            "Thanh Xuân": [
+                "Hạ Đình", "Khương Đình", "Khương Mai", "Khương Trung", "Kim Giang", "Nhân Chính", "Phương Liệt", "Thanh Xuân Bắc", "Thanh Xuân Nam", "Thanh Xuân Trung", "Thượng Đình"
+            ],
+            "Hải Châu": [
+                "Bình Hiên", "Bình Thuận", "Hải Châu 1", "Hải Châu 2", "Hòa Cường Bắc", "Hòa Cường Nam",
+                "Hòa Thuận Đông", "Hòa Thuận Tây", "Nam Dương", "Phước Ninh", "Thạch Thang", "Thanh Bình", "Thuận Phước"
+            ],
+            "Ninh Kiều": [
+                "An Bình", "An Cư", "An Hòa", "An Khánh", "An Nghiệp", "Cái Khế", "Hưng Lợi", "Tân An", "Thới Bình", "Xuân Khánh"
+            ],
+            "Thủ Dầu Một": [
+                "Chánh Mỹ", "Chánh Nghĩa", "Định Hòa", "Hiệp An", "Hiệp Thành", "Hòa Phú", "Phú Cường", "Phú Hòa", "Phú Lợi", "Phú Mỹ"
+            ],
+            "Biên Hòa": [
+                "An Bình", "An Hòa", "Bình Đa", "Bửu Hòa", "Bửu Long", "Hiệp Hòa", "Hóa An", "Hòa Bình", "Hố Nai", "Long Bình", "Tân Phong"
+            ],
+            "Đà Lạt": [
+                "Phường 1", "Phường 2", "Phường 3", "Phường 4", "Phường 5", "Phường 6",
+                "Phường 7", "Phường 8", "Phường 9", "Phường 10", "Phường 11", "Phường 12"
             ]
         };
 
-        // Hàm Autocomplete có hỗ trợ bàn phím (Up, Down, Enter, Esc)
-        function setupAutocomplete(inp, arr) {
+        // Chuẩn hóa chuỗi tiếng Việt không dấu để tìm kiếm thông minh
+        function removeVietnameseTones(str) {
+            if (!str) return '';
+            return str
+                .toLowerCase()
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .replace(/đ/g, 'd')
+                .replace(/Đ/g, 'd')
+                .trim();
+        }
+
+        function closeAllLists(elmnt) {
+            var items = document.getElementsByClassName("autocomplete-items");
+            for (var i = items.length - 1; i >= 0; i--) {
+                var container = items[i];
+                if (elmnt !== container && (!container.previousElementSibling || elmnt !== container.previousElementSibling)) {
+                    if (container.parentNode) {
+                        container.parentNode.style.zIndex = "";
+                        container.parentNode.removeChild(container);
+                    }
+                }
+            }
+        }
+
+        // Hàm Autocomplete thông minh có hỗ trợ bàn phím (Up, Down, Enter, Esc), gõ không dấu, hiển thị từ 1 ký tự
+        function setupAutocomplete(inp, dataProvider) {
+            if (!inp) return;
+
+            // Cập nhật nguồn dữ liệu cho input (có thể là mảng hoặc hàm trả về mảng)
+            inp._getAutocompleteData = typeof dataProvider === 'function' ? dataProvider : function() {
+                return Array.isArray(dataProvider) ? dataProvider : [];
+            };
+
+            // Nếu đã gán các sự kiện trước đó thì không gán lại tránh trùng lặp listener
+            if (inp._autocompleteInitialized) return;
+            inp._autocompleteInitialized = true;
+
             var currentFocus = -1;
 
-            inp.addEventListener("input", function(e) {
-                var a, b, i, val = this.value;
+            function renderDropdown(val) {
                 closeAllLists();
-                if (!val) {
-                    return false;
+                var data = inp._getAutocompleteData() || [];
+                if (!data || data.length === 0) return;
+
+                var cleanVal = (val || "").trim();
+                var normalizedVal = removeVietnameseTones(cleanVal);
+                var matches = [];
+
+                if (!cleanVal) {
+                    // Khi chưa gõ ký tự nào, hiển thị danh sách gợi ý mẫu (tối đa 12 kết quả)
+                    matches = data.slice(0, 12);
+                } else {
+                    matches = data.filter(function(item) {
+                        var rawItem = item.toLowerCase();
+                        var rawQuery = cleanVal.toLowerCase();
+
+                        // 1. So khớp trực tiếp chuỗi con (có dấu)
+                        if (rawItem.indexOf(rawQuery) > -1) return true;
+
+                        // 2. So khớp không dấu tiếng Việt (vd: "da nang" -> "Đà Nẵng", "d" -> "Đà Nẵng")
+                        var normItem = removeVietnameseTones(item);
+                        if (normItem.indexOf(normalizedVal) > -1) return true;
+
+                        // 3. Viết tắt phổ biến
+                        if (rawQuery === 'hcm' || rawQuery === 'sg' || rawQuery === 'tphcm') {
+                            return normItem.indexOf('ho chi minh') > -1;
+                        }
+                        if (rawQuery === 'hn') {
+                            return normItem.indexOf('ha noi') > -1;
+                        }
+                        if (rawQuery === 'dn') {
+                            return normItem.indexOf('da nang') > -1;
+                        }
+                        return false;
+                    }).slice(0, 15);
                 }
+
+                if (matches.length === 0) return;
+
                 currentFocus = -1;
-
-                a = document.createElement("DIV");
-                a.setAttribute("class", "autocomplete-items");
-                this.parentNode.appendChild(a);
-
-                var count = 0;
-                for (i = 0; i < arr.length; i++) {
-                    if (arr[i].toUpperCase().indexOf(val.toUpperCase()) > -1) {
-                        b = document.createElement("DIV");
-                        // In đậm phần ký tự trùng khớp
-                        var matchIndex = arr[i].toUpperCase().indexOf(val.toUpperCase());
-                        b.innerHTML = arr[i].substring(0, matchIndex) +
-                            "<strong>" + arr[i].substring(matchIndex, matchIndex + val.length) + "</strong>" +
-                            arr[i].substring(matchIndex + val.length);
-                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-
-                        b.addEventListener("click", function(e) {
-                            inp.value = this.getElementsByTagName("input")[0].value;
-                            closeAllLists();
-                            var event = new Event('change');
-                            inp.dispatchEvent(event);
-                            syncFullAddress();
-                        });
-                        a.appendChild(b);
-                        count++;
-                        if (count >= 12) break; // Giới hạn tối đa 12 kết quả
-                    }
+                if (inp.parentNode) {
+                    inp.parentNode.style.zIndex = "35";
                 }
+
+                var container = document.createElement("DIV");
+                container.setAttribute("class", "autocomplete-items");
+                inp.parentNode.appendChild(container);
+
+                matches.forEach(function(itemText) {
+                    var itemDiv = document.createElement("DIV");
+
+                    var matchPos = -1;
+                    var matchLen = cleanVal.length;
+
+                    if (cleanVal) {
+                        matchPos = itemText.toLowerCase().indexOf(cleanVal.toLowerCase());
+                        if (matchPos === -1) {
+                            var normItem = removeVietnameseTones(itemText);
+                            matchPos = normItem.indexOf(normalizedVal);
+                        }
+                    }
+
+                    if (matchPos > -1 && cleanVal) {
+                        itemDiv.innerHTML = itemText.substring(0, matchPos) +
+                            "<strong>" + itemText.substring(matchPos, matchPos + matchLen) + "</strong>" +
+                            itemText.substring(matchPos + matchLen);
+                    } else {
+                        itemDiv.textContent = itemText;
+                    }
+
+                    itemDiv.setAttribute("data-value", itemText);
+
+                    itemDiv.addEventListener("click", function(e) {
+                        e.stopPropagation();
+                        var selectedVal = this.getAttribute("data-value") || this.textContent;
+                        inp.value = selectedVal;
+                        closeAllLists();
+                        var changeEvt = new Event('change', { bubbles: true });
+                        inp.dispatchEvent(changeEvt);
+                        syncFullAddress();
+                    });
+
+                    container.appendChild(itemDiv);
+                });
+            }
+
+            // Gợi ý ngay lập tức khi gõ từ 1 ký tự
+            inp.addEventListener("input", function(e) {
+                renderDropdown(this.value);
             });
 
+            // Gợi ý khi click hoặc focus vào ô
+            inp.addEventListener("focus", function(e) {
+                renderDropdown(this.value);
+            });
+
+            inp.addEventListener("click", function(e) {
+                e.stopPropagation();
+                renderDropdown(this.value);
+            });
+
+            // Hỗ trợ bàn phím (Phím Lên, Xuống, Enter, Escape)
             inp.addEventListener("keydown", function(e) {
-                var x = this.parentNode.querySelector(".autocomplete-items");
-                if (x) x = x.getElementsByTagName("div");
-                if (e.keyCode == 40) { // Down
-                    currentFocus++;
-                    addActive(x);
-                } else if (e.keyCode == 38) { // Up
-                    currentFocus--;
-                    addActive(x);
-                } else if (e.keyCode == 13) { // Enter
+                var container = this.parentNode ? this.parentNode.querySelector(".autocomplete-items") : null;
+                if (!container) return;
+                var items = container.getElementsByTagName("div");
+                if (!items || items.length === 0) return;
+
+                if (e.keyCode === 40) { // Down
                     e.preventDefault();
-                    if (currentFocus > -1) {
-                        if (x) x[currentFocus].click();
+                    currentFocus++;
+                    addActive(items);
+                } else if (e.keyCode === 38) { // Up
+                    e.preventDefault();
+                    currentFocus--;
+                    addActive(items);
+                } else if (e.keyCode === 13) { // Enter
+                    if (currentFocus > -1 && items[currentFocus]) {
+                        e.preventDefault();
+                        items[currentFocus].click();
                     }
-                } else if (e.keyCode == 27) { // Escape
+                } else if (e.keyCode === 27) { // Escape
                     closeAllLists();
                 }
             });
 
-            function addActive(x) {
-                if (!x) return false;
-                removeActive(x);
-                if (currentFocus >= x.length) currentFocus = 0;
-                if (currentFocus < 0) currentFocus = (x.length - 1);
-                x[currentFocus].classList.add("autocomplete-active");
-                x[currentFocus].scrollIntoView({
+            function addActive(items) {
+                if (!items || items.length === 0) return false;
+                removeActive(items);
+                if (currentFocus >= items.length) currentFocus = 0;
+                if (currentFocus < 0) currentFocus = items.length - 1;
+                items[currentFocus].classList.add("autocomplete-active");
+                items[currentFocus].scrollIntoView({
                     block: "nearest"
                 });
             }
 
-            function removeActive(x) {
-                for (var i = 0; i < x.length; i++) {
-                    x[i].classList.remove("autocomplete-active");
+            function removeActive(items) {
+                for (var i = 0; i < items.length; i++) {
+                    items[i].classList.remove("autocomplete-active");
                 }
             }
-
-            function closeAllLists(elmnt) {
-                var x = document.getElementsByClassName("autocomplete-items");
-                for (var i = 0; i < x.length; i++) {
-                    if (elmnt != x[i] && elmnt != inp) {
-                        x[i].parentNode.removeChild(x[i]);
-                    }
-                }
-            }
-
-            document.addEventListener("click", function(e) {
-                closeAllLists(e.target);
-            });
         }
+
+        // Đóng dropdown khi click ra ngoài
+        document.addEventListener("click", function(e) {
+            closeAllLists(e.target);
+        });
 
         // Chọn nhanh Tỉnh thành qua Preset chips
         function quickSelectCity(cityName) {
             var tinhInput = document.getElementById("TinhThanh");
             if (tinhInput) {
                 tinhInput.value = cityName;
-                var event = new Event('change');
-                tinhInput.dispatchEvent(event);
+                tinhInput.dispatchEvent(new Event('input', { bubbles: true }));
+                tinhInput.dispatchEvent(new Event('change', { bubbles: true }));
                 syncFullAddress();
             }
         }
@@ -641,11 +841,7 @@
         }
 
         // Tính năng áp dụng Voucher giảm giá tương tác
-        var originalTotal = {
-            {
-                (int) $total
-            }
-        };
+        var originalTotal = {{ (int) ($total ?? 0) }};
         var currentDiscount = 0;
 
         function applyVoucherPreset(code) {
@@ -716,37 +912,38 @@
                 setupAutocomplete(tinhThanhInput, tinhThanhData);
 
                 tinhThanhInput.addEventListener("change", function() {
-                    var selectedTinh = this.value;
+                    var selectedTinh = this.value ? this.value.trim() : "";
                     if (quanHuyenInput) {
                         quanHuyenInput.value = "";
-                        if (quanHuyenData[selectedTinh]) {
-                            setupAutocomplete(quanHuyenInput, quanHuyenData[selectedTinh]);
-                        } else {
-                            setupAutocomplete(quanHuyenInput, []);
-                        }
+                        var districts = quanHuyenData[selectedTinh] || [];
+                        setupAutocomplete(quanHuyenInput, districts);
                     }
-                    if (phuongXaInput) phuongXaInput.value = "";
+                    if (phuongXaInput) {
+                        phuongXaInput.value = "";
+                        setupAutocomplete(phuongXaInput, []);
+                    }
                 });
             }
 
             if (quanHuyenInput) {
-                setupAutocomplete(quanHuyenInput, quanHuyenData["TP Hồ Chí Minh"] || []);
+                var initialDistricts = (tinhThanhInput && tinhThanhInput.value && quanHuyenData[tinhThanhInput.value.trim()]) ?
+                    quanHuyenData[tinhThanhInput.value.trim()] : (quanHuyenData["TP Hồ Chí Minh"] || []);
+                setupAutocomplete(quanHuyenInput, initialDistricts);
 
                 quanHuyenInput.addEventListener("change", function() {
-                    var selectedQuan = this.value;
+                    var selectedQuan = this.value ? this.value.trim() : "";
                     if (phuongXaInput) {
                         phuongXaInput.value = "";
-                        if (phuongXaData[selectedQuan]) {
-                            setupAutocomplete(phuongXaInput, phuongXaData[selectedQuan]);
-                        } else {
-                            setupAutocomplete(phuongXaInput, []);
-                        }
+                        var wards = phuongXaData[selectedQuan] || [];
+                        setupAutocomplete(phuongXaInput, wards);
                     }
                 });
             }
 
             if (phuongXaInput) {
-                setupAutocomplete(phuongXaInput, phuongXaData["Quận 1"] || []);
+                var initialWards = (quanHuyenInput && quanHuyenInput.value && phuongXaData[quanHuyenInput.value.trim()]) ?
+                    phuongXaData[quanHuyenInput.value.trim()] : (phuongXaData["Quận 1"] || []);
+                setupAutocomplete(phuongXaInput, initialWards);
             }
 
             // 2. Mobile Drawer Toggle
@@ -939,6 +1136,24 @@
                             }
                         }
                     } else {
+                        // Tự động bổ sung Phường/Quận/Tỉnh vào địa chỉ chi tiết nếu người dùng chưa điền đầy đủ
+                        if (addressInput) {
+                            var rawAddress = addressInput.value.trim();
+                            var extraParts = [];
+                            if (phuongXaInput && phuongXaInput.value.trim() && rawAddress.toLowerCase().indexOf(phuongXaInput.value.trim().toLowerCase()) === -1) {
+                                extraParts.push(phuongXaInput.value.trim());
+                            }
+                            if (quanHuyenInput && quanHuyenInput.value.trim() && rawAddress.toLowerCase().indexOf(quanHuyenInput.value.trim().toLowerCase()) === -1) {
+                                extraParts.push(quanHuyenInput.value.trim());
+                            }
+                            if (tinhThanhInput && tinhThanhInput.value.trim() && rawAddress.toLowerCase().indexOf(tinhThanhInput.value.trim().toLowerCase()) === -1) {
+                                extraParts.push(tinhThanhInput.value.trim());
+                            }
+                            if (extraParts.length > 0 && rawAddress) {
+                                addressInput.value = rawAddress + ", " + extraParts.join(", ");
+                            }
+                        }
+
                         // Hiển thị trạng thái Loading trên nút Đặt hàng
                         var btnSubmit = document.getElementById("btnPlaceOrder");
                         var btnSpinner = document.getElementById("btnSpinner");

@@ -136,7 +136,7 @@
         .table-orders thead th {
             background-color: #f8f9fa;
             color: #495057;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.3px;
@@ -164,6 +164,12 @@
             padding: 4px 8px;
             border-radius: 6px;
             transition: all 0.2s;
+            display: inline-block;
+            max-width: 85px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            vertical-align: middle;
         }
         .order-code-badge:hover {
             background: #537453;
@@ -191,7 +197,7 @@
 @section('content')
 <div class="py-2 mb-3 breadcrumb_background bg-light">
     <div class="container">
-        <nav aria-label="breadcrumb">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="py-2 mb-0 breadcrumb small">
                 <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-decoration-none text-muted">Trang chủ</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('profile.edit') }}" class="text-decoration-none text-muted">Trang tài khoản</a></li>
@@ -311,7 +317,7 @@
                                 <table class="table table-orders align-middle">
                                     <thead>
                                         <tr>
-                                            <th>Mã đơn</th>
+                                            <th style="width: 100px; max-width: 100px;">Mã đơn</th>
                                             <th>Ngày đặt</th>
                                             <th>Người nhận</th>
                                             <th>Sản phẩm</th>
@@ -324,8 +330,8 @@
                                         @foreach ($orders as $order)
                                             <tr>
                                                 <!-- Mã đơn hàng -->
-                                                <td>
-                                                    <a href="{{ route('orders.show', $order->id) }}" class="order-code-badge" title="Xem hóa đơn {{ $order->order_code }}">
+                                                <td style="width: 100px; max-width: 100px;">
+                                                    <a href="{{ route('orders.show', $order->id) }}" class="order-code-badge d-inline-block text-truncate" style="max-width: 85px; vertical-align: middle;" title="Xem hóa đơn {{ $order->order_code }}">
                                                         #{{ $order->order_code }}
                                                     </a>
                                                 </td>

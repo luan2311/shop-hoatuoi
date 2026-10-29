@@ -124,7 +124,7 @@
 @section('content')
 <div class="py-2 mb-3 breadcrumb_background bg-light">
     <div class="container">
-        <nav aria-label="breadcrumb">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="py-2 mb-0 breadcrumb small">
                 <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-decoration-none text-muted">Trang chủ</a></li>
                 <li class="breadcrumb-item active text-dark" aria-current="page">Trang tài khoản</li>

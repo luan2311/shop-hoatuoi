@@ -499,23 +499,36 @@ textarea.form-control {
 }
 
 /* Autocomplete Dropdown (Vietnamese Address) */
+.input-with-icon:focus-within {
+    z-index: 30;
+}
+
 .autocomplete-items {
     position: absolute;
-    border: 1px solid var(--border-color);
+    border: 1.5px solid var(--border-color);
     border-top: none;
-    z-index: 999;
+    z-index: 1050;
     top: 100%;
     left: 0;
     right: 0;
-    max-height: 220px;
+    max-height: 240px;
     overflow-y: auto;
     background-color: #ffffff;
     border-radius: 0 0 var(--radius-md) var(--radius-md);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.06);
+}
+
+.autocomplete-items::-webkit-scrollbar {
+    width: 6px;
+}
+
+.autocomplete-items::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 4px;
 }
 
 .autocomplete-items div {
-    padding: 10px 14px;
+    padding: 10px 15px;
     cursor: pointer;
     background-color: #ffffff;
     border-bottom: 1px solid #f2f5f1;
@@ -524,16 +537,29 @@ textarea.form-control {
     transition: var(--transition);
 }
 
+.autocomplete-items div:last-child {
+    border-bottom: none;
+}
+
 .autocomplete-items div:hover {
     background-color: var(--leaf-50);
     color: var(--leaf-800);
     padding-left: 18px;
 }
 
+.autocomplete-items div strong {
+    color: var(--leaf-700);
+    font-weight: 700;
+}
+
 .autocomplete-active {
     background-color: var(--leaf-600) !important;
     color: #ffffff !important;
     font-weight: 600;
+}
+
+.autocomplete-active strong {
+    color: #ffffff !important;
 }
 
 /* Quick Address Preset Chips */

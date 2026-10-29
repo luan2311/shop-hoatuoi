@@ -77,4 +77,44 @@ class CartOperationsTest extends TestCase
         $this->get('/cart')->assertOk()->assertSee('không còn tồn tại');
         $this->delete('/cart/items/'.$product->code)->assertRedirect('/cart');
     }
+
+    public function test_ajax_update_quantity_calculates_subtotal_for_new_and_custom_products(): void
+    {
+        $user = $this->customer();
+        $this->actingAs($user);
+
+        // Tạo sản phẩm mới tương tự thao tác admin
+        $newProduct = $this->product([
+            'code' => 'SP099',
+            'name' => 'Hoa Mới Tạo',
+            'price' => 50000,
+            'stock' => 5,
+            'status' => 'Còn hàng',
+        ]);
+
+        $this->post('/cart/add', ['product_id' => $newProduct->id, 'quantity' => 1])->assertRedirect('/cart');
+
+        // Tăng số lượng lên 3 qua AJAX
+        $response = $this->patchJson('/cart/items/SP099', ['quantity' => 3]);
+        $response->assertOk()->assertJson([
+            'success' => true,
+            'itemTotalPrice' => '150.000 đ',
+            'cartSubtotal' => '150.000 đ',
+            'cartCount' => 3,
+        ]);
+
+        // Giảm số lượng xuống 2 qua AJAX (hỗ trợ cả mã chữ thường)
+        $responseLower = $this->patchJson('/cart/items/sp099', ['quantity' => 2]);
+        $responseLower->assertOk()->assertJson([
+            'success' => true,
+            'itemTotalPrice' => '100.000 đ',
+            'cartSubtotal' => '100.000 đ',
+            'cartCount' => 2,
+        ]);
+
+        // Vượt quá tồn kho (stock = 5, thử tăng lên 6)
+        $this->patchJson('/cart/items/SP099', ['quantity' => 6])
+            ->assertUnprocessable()
+            ->assertJsonValidationErrors('quantity');
+    }
 }

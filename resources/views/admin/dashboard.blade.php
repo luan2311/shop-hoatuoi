@@ -160,7 +160,7 @@
 <div class="container-fluid">
     <!-- Summary Cards -->
     <div class="row">
-        <div class="col-md-3 mb-4">
+        <div class="mb-4 col-md-3">
             <div class="card">
                 <div class="card-body">
                     <div class="icon" style="background-color: #e3342f">
@@ -173,7 +173,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="mb-4 col-md-3">
             <div class="card">
                 <div class="card-body">
                     <div class="icon" style="background-color: #4dc0b5">
@@ -181,12 +181,12 @@
                     </div>
                     <div>
                         <div class="text-value">{{ $totalUsers }}</div>
-                        <div class="text-muted">Tổng người dùng</div>
+                        <div class="text-muted">Người dùng</div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="mb-4 col-md-3">
             <div class="card">
                 <div class="card-body">
                     <div class="icon" style="background-color: #3490dc">
@@ -194,12 +194,12 @@
                     </div>
                     <div>
                         <div class="text-value">{{ $completedOrders }}</div>
-                        <div class="text-muted">Đơn giao thành công</div>
+                        <div class="text-muted">Tổng số đơn</div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 mb-4">
+        <div class="mb-4 col-md-3">
             <div class="card">
                 <div class="card-body">
                     <div class="icon" style="background-color: #ffc107">
@@ -299,7 +299,7 @@
                 <h4>Sản phẩm bán chạy</h4>
                 <div class="row">
                     @forelse ($topSellingProducts as $product)
-                        <div class="col-md-4 mb-2">
+                        <div class="mb-2 col-md-4">
                             <div class="list-group-item d-flex justify-content-between align-items-center"
                                  style="border: 1px solid #e0e0e0; border-radius: 6px; padding: 15px;">
                                 <div>

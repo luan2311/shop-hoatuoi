@@ -27,64 +27,63 @@
             font-weight: 700;
             margin-bottom: 12px;
         }
-        .details-pro .special-price .price {
-            font-size: 2rem;
-            color: #d63384;
-            font-weight: 700;
+        /* Custom styles chuẩn hóa theo codebase C# ASP MVC 5 Shop-Flower */
+        .details-product .details-pro .form-inline .boz-form .flex-quantity .custom-btn-number .input_number_product {
+            display: inline-flex !important;
+            align-items: stretch;
+            vertical-align: middle;
         }
-        .btn-buyNow {
-            background-color: #537453;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: opacity 0.2s;
-        }
-        .btn-buyNow:hover {
-            opacity: 0.9;
-            color: #fff;
-        }
-        .btn_add_cart {
-            border: 2px solid #537453;
-            color: #537453;
+        .details-product .details-pro .form-inline .boz-form .flex-quantity .custom-btn-number .input_number_product input#qtym {
+            width: 50px !important;
+            height: 40px !important;
+            line-height: 40px !important;
+            border-top: 1px solid #ddd !important;
+            border-bottom: 1px solid #ddd !important;
+            border-left: none !important;
+            border-right: none !important;
+            box-shadow: none !important;
+            outline: none !important;
+            font-size: 1.4rem;
+            text-align: center;
             background: #fff;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-weight: 600;
+            padding: 0 !important;
+            margin: 0 !important;
         }
-        .btn_add_cart:hover {
-            background: #537453;
+        .details-product .details-pro .form-inline .boz-form .flex-quantity .custom-btn-number .input_number_product .btn_num {
+            display: inline-flex !important;
+            align-items: center;
+            justify-content: center;
+            height: 40px !important;
+            width: 35px !important;
+            min-width: 35px !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            font-size: 1.6rem;
+            font-weight: 600;
+            line-height: 1;
+            border: 1px solid #ddd !important;
+            background: #f8f8f8;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.2s;
+            user-select: none;
+            text-decoration: none;
+        }
+        .details-product .details-pro .form-inline .boz-form .flex-quantity .custom-btn-number .input_number_product .btn_num:hover {
+            background: #537453 !important;
+            color: #fff !important;
+            border-color: #537453 !important;
+        }
+        .details-product .details-pro .form-inline .boz-form .flex-quantity .button_actions .btn.btn_add_cart svg {
+            color: #ea8725;
+            transition: color 0.3s;
+        }
+        .details-product .details-pro .form-inline .boz-form .flex-quantity .button_actions .btn.btn_add_cart:hover svg {
             color: #fff;
+            fill: #fff;
         }
-        .block-policy {
-            background: #fdfdfd;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            padding: 16px;
-        }
-        .block-policy .heading-policy {
-            font-weight: 700;
-            color: #537453;
-            font-size: 1.1rem;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .policy-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
-        .policy-item .info h3 {
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin: 0;
-        }
-        .policy-item .info span {
-            font-size: 0.8rem;
-            color: #6c757d;
+        .details-product .product-col-right .block-policy .policy-content .col-12:last-child .policy-item {
+            border-bottom: none;
         }
         .product-review-details {
             background: #fff;
@@ -108,7 +107,7 @@
 @section('content')
 <div class="py-2 mb-4 breadcrumb_background bg-light">
     <div class="container">
-        <nav aria-label="breadcrumb">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="py-2 mb-0 breadcrumb small">
                 <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-decoration-none text-muted">Trang chủ</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('products.index') }}" class="text-decoration-none text-muted">Sản phẩm</a></li>
@@ -129,8 +128,8 @@
     <div class="container">
         <div class="details-product">
             <div class="row margin-bottom-30">
-                <!-- Cột trái: Hình ảnh sản phẩm -->
-                <div class="mb-4 col-lg-5 col-md-6 col-12 product-detail-left product-images">
+                <!-- Cột trái: Hình ảnh sản phẩm (col-lg-4 theo chuẩn C# chi_tiet_san_pham.cshtml) -->
+                <div class="mb-4 col-lg-4 col-md-6 col-12 product-detail-left product-images">
                     <div class="relative product-image-block">
                         <div class="product-image-main">
                             @php
@@ -149,8 +148,8 @@
                     </div>
                 </div>
 
-                <!-- Cột giữa: Thông tin chi tiết sản phẩm -->
-                <div class="mb-4 col-lg-4 col-md-6 col-12 details-pro">
+                <!-- Cột giữa: Thông tin chi tiết sản phẩm (col-lg-5 theo chuẩn C# chi_tiet_san_pham.cshtml) -->
+                <div class="mb-4 col-lg-5 col-md-6 col-12 details-pro">
                     <h1 class="title-product">{{ $product->name }}</h1>
 
                     <div class="clearfix mb-2 product-top">
@@ -163,29 +162,30 @@
                         </div>
                     </div>
 
-                    <div class="mb-3 inventory_quantity small">
+                    <div class="mb-3 inventory_quantity">
                         <span class="mb-break">
-                            <span class="stock-brand-title text-muted">Thương hiệu:</span>
-                            <span class="a-vendor fw-bold text-dark">{{ $product->brand ?? 'Góc Hoa Xinh' }}</span>
+                            <span class="stock-brand-title">Thương hiệu:</span>
+                            <span class="a-vendor fw-bold">
+                                {{ $product->brand ?? 'Góc Hoa Xinh' }}
+                            </span>
                         </span>
-                        <span class="mx-2 text-muted">|</span>
+                        <span class="line">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                         <span class="mb-break">
-                            <span class="stock-brand-title text-muted">Tình trạng:</span>
+                            <span class="stock-brand-title">Tình trạng:</span>
                             <span class="a-stock fw-bold {{ $product->stock > 0 ? 'text-success' : 'text-danger' }}">
                                 {{ $product->status ?? ($product->stock > 0 ? 'Còn hàng' : 'Hết hàng') }}
                             </span>
-                            <span class="text-muted ms-1">· Tồn kho: {{ $product->stock }}</span>
                         </span>
                     </div>
 
-                    <!-- Form Thêm vào giỏ hàng -->
-                    <form action="/cart/add" method="post" id="add-to-cart-form" class="mt-3" data-cart-form="">
+                    <!-- Form Thêm vào giỏ hàng chuẩn C# chi_tiet_san_pham.cshtml -->
+                    <form action="/cart/add" method="post" id="add-to-cart-form" class="form-inline" data-cart-form="">
                         @csrf
                         <input type="hidden" name="product_id" value="{{ $product->id }}">
 
-                        <div class="clearfix mb-3 price-box">
+                        <div class="clearfix price-box">
                             <div class="special-price">
-                                <span class="price product-price text-danger fw-bold fs-3">{{ $product->formatted_price }}</span>
+                                <span class="price product-price">{{ $product->formatted_price }}</span>
                                 @if($product->original_price && $product->original_price > $product->price)
                                     <span class="text-muted text-decoration-line-through ms-2 fs-6">
                                         {{ number_format($product->original_price, 0, ',', '.') }} đ
@@ -195,32 +195,43 @@
                         </div>
 
                         <div class="form-product">
-                            <div class="gap-3 mb-3 d-flex align-items-center">
-                                <label for="quantity" class="mb-0 form-label fw-semibold text-muted">Số lượng:</label>
-                                <div class="input-group" style="width: 120px;">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="const q=document.getElementById('quantity'); if(parseInt(q.value)>1) q.value=parseInt(q.value)-1;">-</button>
-                                    <input type="number" id="quantity" name="quantity" value="1" min="1" max="{{ max(1, $product->stock) }}" class="text-center form-control" style="font-weight: 600;">
-                                    <button class="btn btn-outline-secondary" type="button" onclick="const q=document.getElementById('quantity'); q.value=parseInt(q.value)+1;">+</button>
-                                </div>
+                            <div class="clearfix box-variant">
+                                <input type="hidden" id="one_variant" name="variantId" value="171650208">
                             </div>
 
-                            <div class="flex-wrap gap-2 mt-3 d-flex">
-                                @if($product->stock == 0)
-                                    <button type="button" class="px-4 py-2 btn btn-secondary" disabled style="cursor: not-allowed;">
-                                        Sản phẩm tạm hết hàng
-                                    </button>
-                                @else
-                                    <button type="submit" class="gap-2 px-4 py-2 btn btn-outline-success btn_add_cart d-flex align-items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
-                                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"></path>
-                                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
-                                        </svg>
-                                        Thêm vào giỏ
-                                    </button>
-                                    <button type="submit" name="buy_now" value="1" class="px-4 py-2 btn btn-success btn-buyNow">
-                                        Mua ngay
-                                    </button>
-                                @endif
+                            <div class="boz-form">
+                                <div class="flex-quantity">
+                                    <div class="custom custom-btn-number show">
+                                        <span>Số lượng: </span>
+                                        <div class="input_number_product">
+                                            <button class="btn_num num_1 button button_qty" onclick="var result = document.getElementById('qtym'); var qtypro = parseInt(result.value); if( !isNaN( qtypro ) && qtypro > 1 ) result.value = qtypro - 1; return false;" type="button">-</button>
+                                            <input type="text" id="qtym" name="quantity"
+                                                   value="1" maxlength="3" class="form-control prd_quantity"
+                                                   onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
+                                                   onchange="var v = parseInt(this.value); if(isNaN(v) || v < 1) this.value = 1; else this.value = v;">
+                                            <button class="btn_num num_2 button button_qty" onclick="var result = document.getElementById('qtym'); var qtypro = parseInt(result.value); if( !isNaN( qtypro )) result.value = qtypro + 1; return false;" type="button"><span>+</span></button>
+                                        </div>
+                                        @if($product->stock < 5 && $product->stock > 0)
+                                            <div class="text-danger small mt-1 text-center font-weight-normal ms-2" style="font-size: 11px;">(Còn {{ $product->stock }} sp)</div>
+                                        @endif
+                                    </div>
+                                    <div class="clearfix btn-mua button_actions">
+                                        @if($product->stock == 0)
+                                            <button type="button" class="btn btn_base normal_button btn_add_cart add_to_cart btn-cart" disabled="disabled" style="width: 100%;">
+                                                <span class="txt-main">Hết hàng</span>
+                                            </button>
+                                        @else
+                                            <button type="submit" name="buy_now" value="1" class="btn btn-buyNow">
+                                                <span class="txt-main">Mua ngay</span>
+                                                <span>Giao tận nơi hoặc nhận tại cửa hàng</span>
+                                            </button>
+                                            <button type="submit" class="btn btn_base normal_button btn_add_cart add_to_cart btn-cart">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16"> <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"></path> <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path></svg>
+                                                <span class="txt-main">Thêm vào giỏ</span>
+                                            </button>
+                                        @endif
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -230,48 +241,69 @@
                 <div class="mb-4 col-lg-3 col-md-12 col-12 product-col-right">
                     <div class="block-policy">
                         <div class="heading-policy">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
-                                <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
                             </svg>
                             Chính sách hỗ trợ
                         </div>
-                        <div class="policy-content">
-                            <div class="policy-item">
-                                <div class="icon">
-                                    <img width="36" height="36" src="//bizweb.dktcdn.net/100/487/411/themes/957692/assets/product_policy_1.svg?1757405855081" alt="Duyệt ảnh">
-                                </div>
-                                <div class="info">
-                                    <h3>Duyệt ảnh sản phẩm</h3>
-                                    <span>Gửi ảnh chụp hoa ưng ý trước khi giao</span>
-                                </div>
-                            </div>
-                            <div class="policy-item">
-                                <div class="icon">
-                                    <img width="36" height="36" src="//bizweb.dktcdn.net/100/487/411/themes/957692/assets/product_policy_2.svg?1757405855081" alt="Thiệp chúc mừng">
-                                </div>
-                                <div class="info">
-                                    <h3>Thiệp chúc mừng free</h3>
-                                    <span>Tặng thiệp và in nội dung theo yêu cầu</span>
+                        <div class="row policy-content">
+                            <div class="col-lg-12 col-md-6 col-sm-6 col-12">
+                                <div class="policy-item duration-300">
+                                    <div class="icon aspect-1">
+                                        <img width="50" height="50" class="lazyload loaded" data-src="{{ asset('images/product_policy_1.svg') }}" alt="Góc Hoa Xinh" src="{{ asset('images/product_policy_1.svg') }}" data-was-processed="true">
+                                    </div>
+                                    <div class="info">
+                                        <h3>Duyệt ảnh sản phẩm</h3>
+                                        <span>Gửi hình ảnh sản phẩm ưng ý mới giao hàng</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="policy-item">
-                                <div class="icon">
-                                    <img width="36" height="36" src="//bizweb.dktcdn.net/100/487/411/themes/957692/assets/product_policy_3.svg?1757405855081" alt="Banner sản phẩm">
-                                </div>
-                                <div class="info">
-                                    <h3>Banner miễn phí</h3>
-                                    <span>Thiết kế banner chữ đẹp sang trọng</span>
-                                </div>
-                            </div>
-                            <div class="policy-item">
-                                <div class="icon">
-                                    <img width="36" height="36" src="//bizweb.dktcdn.net/100/487/411/themes/957692/assets/product_policy_4.svg?1757405855081" alt="Giao nhanh 2h">
-                                </div>
-                                <div class="info">
-                                    <h3>Giao nhanh trong 2H</h3>
-                                    <span>Giao hỏa tốc nội thành đúng hẹn</span>
+
+                            <div class="col-lg-12 col-md-6 col-sm-6 col-12">
+                                <div class="policy-item duration-300">
+                                    <div class="icon aspect-1">
+                                        <img width="50" height="50" class="lazyload loaded" data-src="{{ asset('images/product_policy_2.svg') }}" alt="Góc Hoa Xinh" src="{{ asset('images/product_policy_2.svg') }}" data-was-processed="true">
+                                    </div>
+                                    <div class="info">
+                                        <h3>Thẻ chúc mừng miễn phí</h3>
+                                        <span>Miễn phí thiệp và nội dụng theo yêu cầu</span>
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="col-lg-12 col-md-6 col-sm-6 col-12">
+                                <div class="policy-item duration-300">
+                                    <div class="icon aspect-1">
+                                        <img width="50" height="50" class="lazyload loaded" data-src="{{ asset('images/product_policy_3.svg') }}" alt="Góc Hoa Xinh" src="{{ asset('images/product_policy_3.svg') }}" data-was-processed="true">
+                                    </div>
+                                    <div class="info">
+                                        <h3>Banner sản phẩm</h3>
+                                        <span>Miễn phí banner sản phẩm</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-6 col-sm-6 col-12">
+                                <div class="policy-item duration-300">
+                                    <div class="icon aspect-1">
+                                        <img width="50" height="50" class="lazyload loaded" data-src="{{ asset('images/product_policy_4.svg') }}" alt="Góc Hoa Xinh" src="{{ asset('images/product_policy_4.svg') }}" data-was-processed="true">
+                                    </div>
+                                    <div class="info">
+                                        <h3>Giao hàng trong 2H</h3>
+                                        <span>Giao nhanh nếu sản phẩm cần gấp</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thêm yêu thích chuẩn C# chi_tiet_san_pham.cshtml -->
+                    <div class="gr-wish-compare">
+                        <div class="product-wish">
+                            <a href="javascript:void(0)" class="setWishlist btn-views" data-product-code="{{ $product->code }}" tabindex="0" title="Thêm vào yêu thích">
+                                <img width="25" height="25" src="{{ asset('images/heart.png') }}" alt="Thêm vào yêu thích">
+                                Thêm vào yêu thích
+                            </a>
                         </div>
                     </div>
                 </div>

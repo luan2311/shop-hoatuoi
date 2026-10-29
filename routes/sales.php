@@ -12,6 +12,7 @@ Route::middleware('auth')->group(function (): void {
     Route::match(['get', 'delete'], '/cart/items/{code}', [CartController::class, 'remove'])->name('cart.remove');
     Route::match(['get', 'delete'], '/cart/remove/{code}', [CartController::class, 'remove']);
     Route::match(['get', 'delete'], '/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
+    Route::delete('/cart', [CartController::class, 'clear']);
     
     // Tương thích các URL từ codebase C# ShopFlower
     Route::match(['get', 'post'], '/Cart/ThemGioHang', function (\Illuminate\Http\Request $request, CartController $controller) {

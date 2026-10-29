@@ -33,11 +33,13 @@
 
         <!-- Action Navigation Buttons -->
         <div class="d-flex flex-wrap gap-3 justify-content-between align-items-center pt-2">
-            <a href="{{ route('home') }}" class="btn px-4 py-2 fw-semibold" style="background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; border-radius: 8px;">
-                <i class="fa-solid fa-arrow-left me-1"></i> Tiếp tục mua hoa
+            <a href="{{ route('home') }}" class="btn fw-semibold d-inline-flex align-items-center justify-content-center text-center gap-2" style="background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 15px; padding: 10px 24px; min-height: 44px; height: auto; line-height: 1.5; text-decoration: none;">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Tiếp tục mua hoa</span>
             </a>
-            <a href="{{ route('orders.index') }}" class="btn px-4 py-2 text-white fw-semibold" style="background: #537547; border-radius: 8px; box-shadow: 0 4px 12px rgba(83, 117, 71, 0.25);">
-                <i class="fa-solid fa-box-archive me-1"></i> Quản lý lịch sử đơn hàng
+            <a href="{{ route('orders.index') }}" class="btn text-white fw-semibold d-inline-flex align-items-center justify-content-center text-center gap-2" style="background: #537547; color: #ffffff !important; border: 1px solid #537547; border-radius: 8px; box-shadow: 0 4px 12px rgba(83, 117, 71, 0.25); font-size: 15px; padding: 10px 24px; min-height: 44px; height: auto; line-height: 1.5; text-decoration: none;">
+                <i class="fa-solid fa-box-archive"></i>
+                <span>Quản lý lịch sử đơn hàng</span>
             </a>
         </div>
     </div>

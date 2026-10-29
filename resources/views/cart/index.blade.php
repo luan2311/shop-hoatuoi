@@ -504,6 +504,19 @@
                     </div>
                 </div>
 
+                @if(session('status'))
+                    <div class="alert alert-success alert-dismissible fade show mb-3" role="alert">
+                        <i class="fa-solid fa-circle-check me-2"></i> {{ session('status') }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+                @if(session('error') || $errors->any())
+                    <div class="alert alert-danger alert-dismissible fade show mb-3" role="alert">
+                        <i class="fa-solid fa-circle-exclamation me-2"></i> {{ session('error') ?? $errors->first() }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                @endif
+
                 <div class="row">
                     <div class="col-12">
                         <div class="clearfix"></div>
@@ -555,17 +568,20 @@
                                                             </div>
                                                         </div>
                                                         <div class="grid">
-                                                            <div class="grid__item cart_select">
+                                                            <div class="grid__item cart_select flex-column">
                                                                 <div class="ajaxcart__qty">
                                                                     <form method="POST" action="{{ route('cart.update', $line['code']) }}" class="form-update-qty d-inline-flex align-items-center m-0" data-no-loading="true">
                                                                         @csrf
                                                                         @method('PATCH')
                                                                         <button type="button" class="btn-qty-minus btn-minus" aria-label="Giảm số lượng">-</button>
-                                                                        <input type="number" name="quantity" value="{{ $line['quantity'] }}" min="1" max="999" class="cart-quantity-input" data-product-id="{{ $line['code'] }}">
+                                                                        <input type="number" name="quantity" value="{{ $line['quantity'] }}" min="1" max="{{ $prod ? max(1, (int)$prod->stock) : 999 }}" class="cart-quantity-input" data-product-id="{{ $line['code'] }}" data-stock="{{ $prod ? (int)$prod->stock : 999 }}" data-previous-val="{{ $line['quantity'] }}">
                                                                         <button type="button" class="btn-qty-plus btn-plus" aria-label="Tăng số lượng">+</button>
                                                                         <button type="submit" class="btn-update-submit d-none">Cập nhật</button>
                                                                     </form>
                                                                 </div>
+                                                                @if($prod && $prod->stock <= 5)
+                                                                    <div class="text-danger small mt-1 text-center font-weight-normal" style="font-size: 11px;">(Còn {{ $prod->stock }} sp)</div>
+                                                                @endif
                                                             </div>
                                                         </div>
                                                         <div class="grid justify-right">
@@ -658,17 +674,20 @@
                                                         </div>
                                                     </div>
                                                     <div class="grid align-items-center justify-content-between">
-                                                        <div class="cart_select">
+                                                        <div class="cart_select d-flex flex-column align-items-start">
                                                             <div class="ajaxcart__qty">
                                                                 <form method="POST" action="{{ route('cart.update', $line['code']) }}" class="form-update-qty d-inline-flex align-items-center m-0" data-no-loading="true">
                                                                     @csrf
                                                                     @method('PATCH')
                                                                     <button type="button" class="btn-qty-minus btn-minus" aria-label="Giảm số lượng">-</button>
-                                                                    <input type="number" name="quantity" value="{{ $line['quantity'] }}" min="1" max="999" class="cart-quantity-input" data-product-id="{{ $line['code'] }}">
+                                                                    <input type="number" name="quantity" value="{{ $line['quantity'] }}" min="1" max="{{ $prod ? max(1, (int)$prod->stock) : 999 }}" class="cart-quantity-input" data-product-id="{{ $line['code'] }}" data-stock="{{ $prod ? (int)$prod->stock : 999 }}" data-previous-val="{{ $line['quantity'] }}">
                                                                     <button type="button" class="btn-qty-plus btn-plus" aria-label="Tăng số lượng">+</button>
                                                                     <button type="submit" class="btn-update-submit d-none">Cập nhật</button>
                                                                 </form>
                                                             </div>
+                                                            @if($prod && $prod->stock <= 5)
+                                                                <div class="text-danger small mt-1" style="font-size: 11px;">(Còn {{ $prod->stock }} sp)</div>
+                                                            @endif
                                                         </div>
                                                         <div class="text-end">
                                                             <span class="cart-price item-total-price fw-bold" style="color: #ea8725; font-size: 15px;">{{ $formattedSubtotal }}</span>
@@ -767,13 +786,28 @@
             document.body.appendChild(modalEl);
         }
 
+        // Helper tìm tất cả element có data-product-id trùng khớp (không phân biệt hoa/thường)
+        function findMatchingProductElements(productId) {
+            var target = String(productId || '').trim().toLowerCase();
+            return $('[data-product-id]').filter(function () {
+                return String($(this).attr('data-product-id') || '').trim().toLowerCase() === target;
+            });
+        }
+
         // Mở popup xác nhận xóa 1 sản phẩm
         function promptRemoveProduct(productId) {
             actionType = 'item';
             targetProductToDelete = productId;
 
+            var row = findMatchingProductElements(productId).first();
+            var prodName = row.find('.ajaxcart__product-name, .cart_name a').first().text().trim();
+
             $('#confirmRemoveItemModalLabel').text('Xác nhận xóa sản phẩm');
-            $('#confirmRemoveModalDesc').text('Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng?');
+            if (prodName) {
+                $('#confirmRemoveModalDesc').text('Bạn có chắc chắn muốn xóa "' + prodName + '" khỏi giỏ hàng?');
+            } else {
+                $('#confirmRemoveModalDesc').text('Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng?');
+            }
             $('#btn-confirm-delete-text').text('Xóa sản phẩm');
 
             showConfirmModal();
@@ -892,7 +926,8 @@
                 $(modalEl).modal('hide');
             }
 
-            var form = $('[data-product-id="' + productId + '"]').find('.form-remove-item');
+            var matchingRows = findMatchingProductElements(productId);
+            var form = matchingRows.find('.form-remove-item');
             var url = '/cart/items/' + encodeURIComponent(productId);
 
             $.ajax({
@@ -910,11 +945,14 @@
                     if (res.isEmpty) {
                         window.location.reload();
                     } else {
-                        $('[data-product-id="' + productId + '"]').fadeOut(250, function () {
+                        matchingRows.fadeOut(250, function () {
                             $(this).remove();
                         });
                         $('.cart-subtotal-price').text(res.cartSubtotal);
                         syncCartHeaderCount(res.cartCount);
+                        if (typeof window.showCartNotification === 'function') {
+                            window.showCartNotification('Đã xóa sản phẩm khỏi giỏ hàng.', 'success');
+                        }
                     }
                 },
                 error: function () {
@@ -937,17 +975,25 @@
             }
         });
 
-        // Hàm cập nhật giỏ hàng qua AJAX (kế thừa logic từ Cart.cshtml)
+        // Hàm cập nhật giỏ hàng qua AJAX
         function updateCart(productId, quantity, $sourceInput) {
             if (isNaN(quantity) || quantity < 1) {
                 quantity = 1;
             }
-            if (quantity > 999) {
-                quantity = 999;
+
+            var maxStock = 999;
+            if ($sourceInput) {
+                var stockAttr = $sourceInput.attr('data-stock') || $sourceInput.attr('max');
+                if (stockAttr) {
+                    maxStock = parseInt(stockAttr, 10) || 999;
+                }
+            }
+            if (quantity > maxStock) {
+                quantity = maxStock;
             }
 
-            // Đồng bộ giá trị input trên cả desktop và mobile
-            $('.cart-quantity-input[data-product-id="' + productId + '"]').val(quantity);
+            var matchingInputs = findMatchingProductElements(productId).filter('.cart-quantity-input');
+            matchingInputs.val(quantity);
 
             $.ajax({
                 url: '/cart/items/' + encodeURIComponent(productId),
@@ -963,31 +1009,72 @@
                 },
                 success: function (response) {
                     if (response.success) {
-                        var rows = $('[data-product-id="' + productId + '"]');
+                        var rows = findMatchingProductElements(productId);
                         rows.find('.item-total-price').text(response.itemTotalPrice);
                         $('.cart-subtotal-price').text(response.cartSubtotal);
                         syncCartHeaderCount(response.cartCount);
+
+                        // Lưu lại previous-val cho lần tiếp theo
+                        matchingInputs.data('previous-val', quantity);
                     } else if (response.message) {
-                        alert('Lỗi: ' + response.message);
+                        if (typeof window.showCartNotification === 'function') {
+                            window.showCartNotification(response.message, 'error');
+                        } else {
+                            alert('Lỗi: ' + response.message);
+                        }
                     }
                 },
                 error: function (xhr) {
-                    if ($sourceInput && $sourceInput.closest('form').length) {
-                        $sourceInput.closest('form')[0].submit();
+                    var errorMsg = 'Không thể cập nhật số lượng.';
+                    if (xhr.responseJSON) {
+                        if (xhr.responseJSON.message) {
+                            errorMsg = xhr.responseJSON.message;
+                        } else if (xhr.responseJSON.errors) {
+                            var firstKey = Object.keys(xhr.responseJSON.errors)[0];
+                            if (firstKey && xhr.responseJSON.errors[firstKey].length) {
+                                errorMsg = xhr.responseJSON.errors[firstKey][0];
+                            }
+                        }
                     }
+
+                    if (typeof window.showCartNotification === 'function') {
+                        window.showCartNotification(errorMsg, 'error');
+                    } else {
+                        alert(errorMsg);
+                    }
+
+                    // Khôi phục lại giá trị hợp lệ trước đó, KHÔNG submit reload trang
+                    var prevVal = ($sourceInput && $sourceInput.data('previous-val')) ? parseInt($sourceInput.data('previous-val'), 10) : 1;
+                    matchingInputs.val(prevVal);
                 }
             });
         }
+
+        // Lưu previous-val khi focus
+        $(document).on('focus', '.cart-quantity-input', function () {
+            $(this).data('previous-val', parseInt($(this).val(), 10) || 1);
+        });
 
         // Debounce khi gõ số lượng trực tiếp
         var debounceTimer = null;
         $(document).on('input', '.cart-quantity-input', function () {
             var input = $(this);
-            var productId = input.data('product-id');
+            var productId = input.attr('data-product-id') || input.data('product-id');
             var quantity = parseInt(input.val(), 10);
+            var maxStock = parseInt(input.attr('data-stock') || input.attr('max'), 10) || 999;
 
             if (quantity <= 0 || isNaN(quantity)) {
                 return;
+            }
+
+            if (quantity > maxStock) {
+                var prodName = input.closest('[data-product-id]').find('.ajaxcart__product-name, .cart_name a').first().text().trim();
+                var msg = (prodName ? ('"' + prodName + '" ') : 'Sản phẩm ') + 'chỉ còn tối đa ' + maxStock + ' sản phẩm trong kho.';
+                if (typeof window.showCartNotification === 'function') {
+                    window.showCartNotification(msg, 'error');
+                }
+                quantity = maxStock;
+                input.val(maxStock);
             }
 
             clearTimeout(debounceTimer);
@@ -1000,9 +1087,10 @@
         $(document).on('change', '.cart-quantity-input', function (e) {
             var input = $(this);
             var quantity = parseInt(input.val(), 10);
+            var productId = input.attr('data-product-id') || input.data('product-id');
             if (quantity <= 0 || isNaN(quantity)) {
                 input.val(1);
-                promptRemoveProduct(input.data('product-id'));
+                promptRemoveProduct(productId);
             }
         });
 
@@ -1013,10 +1101,11 @@
             var input = $(this).siblings('.cart-quantity-input');
             if (!input.length) input = $(this).closest('.form-update-qty, .cart_select').find('.cart-quantity-input');
             var currentVal = parseInt(input.val(), 10) || 1;
-            var productId = input.data('product-id');
+            var productId = input.attr('data-product-id') || input.data('product-id');
 
             if (currentVal > 1) {
                 var newVal = currentVal - 1;
+                input.data('previous-val', currentVal);
                 input.val(newVal);
                 updateCart(productId, newVal, input);
             } else {
@@ -1032,11 +1121,24 @@
             var input = $(this).siblings('.cart-quantity-input');
             if (!input.length) input = $(this).closest('.form-update-qty, .cart_select').find('.cart-quantity-input');
             var currentVal = parseInt(input.val(), 10) || 1;
-            if (currentVal < 999) {
-                var newVal = currentVal + 1;
-                input.val(newVal);
-                updateCart(input.data('product-id'), newVal, input);
+            var maxStock = parseInt(input.attr('data-stock') || input.attr('max'), 10) || 999;
+            var productId = input.attr('data-product-id') || input.data('product-id');
+
+            if (currentVal >= maxStock) {
+                var prodName = input.closest('[data-product-id]').find('.ajaxcart__product-name, .cart_name a').first().text().trim();
+                var msg = (prodName ? ('"' + prodName + '" ') : 'Sản phẩm ') + 'chỉ còn ' + maxStock + ' sản phẩm trong kho.';
+                if (typeof window.showCartNotification === 'function') {
+                    window.showCartNotification(msg, 'error');
+                } else {
+                    alert(msg);
+                }
+                return;
             }
+
+            var newVal = currentVal + 1;
+            input.data('previous-val', currentVal);
+            input.val(newVal);
+            updateCart(productId, newVal, input);
         });
 
         // Bấm chữ "Xóa" hoặc icon thùng rác -> hiển thị popup hỏi xóa
@@ -1044,7 +1146,7 @@
             e.preventDefault();
             e.stopPropagation();
             var row = $(this).closest('[data-product-id]');
-            var productId = row.data('product-id');
+            var productId = row.attr('data-product-id') || row.data('product-id');
             promptRemoveProduct(productId);
         });
 
@@ -1053,7 +1155,7 @@
             e.preventDefault();
             e.stopPropagation();
             var row = $(this).closest('[data-product-id]');
-            var productId = row.data('product-id');
+            var productId = row.attr('data-product-id') || row.data('product-id');
             promptRemoveProduct(productId);
         });
 

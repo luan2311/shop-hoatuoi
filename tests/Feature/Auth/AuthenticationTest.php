@@ -28,7 +28,7 @@ class AuthenticationTest extends TestCase
         ]);
 
         $this->assertAuthenticated();
-        $response->assertRedirect(route('dashboard', absolute: false));
+        $response->assertRedirect(route('home', absolute: false));
     }
 
     public function test_users_can_authenticate_using_shopflower_csharp_fields(): void
@@ -41,7 +41,46 @@ class AuthenticationTest extends TestCase
         ]);
 
         $this->assertAuthenticated();
-        $response->assertRedirect(route('dashboard', absolute: false));
+        $response->assertRedirect(route('home', absolute: false));
+    }
+
+    public function test_user_with_role_user_is_redirected_to_home_after_login(): void
+    {
+        $user = User::factory()->create([
+            'username' => 'user1',
+            'roles' => ['User'],
+        ]);
+
+        $response = $this->post('/login', [
+            'email' => $user->email,
+            'password' => 'password',
+        ]);
+
+        $this->assertAuthenticated();
+        $response->assertRedirect(route('home', absolute: false));
+    }
+
+    public function test_dashboard_url_redirects_role_user_to_home(): void
+    {
+        $user = User::factory()->create([
+            'username' => 'user1',
+            'roles' => ['User'],
+        ]);
+
+        $response = $this->actingAs($user)->get('/dashboard');
+
+        $response->assertRedirect(route('home', absolute: false));
+    }
+
+    public function test_dashboard_url_redirects_admin_to_admin_dashboard(): void
+    {
+        $adminRole = Role::create(['name' => 'Admin']);
+        $admin = User::factory()->create();
+        $admin->roles()->attach($adminRole->id);
+
+        $response = $this->actingAs($admin)->get('/dashboard');
+
+        $response->assertRedirect(route('admin.dashboard', absolute: false));
     }
 
     public function test_admin_is_redirected_to_admin_dashboard_after_login(): void
@@ -170,5 +209,49 @@ class AuthenticationTest extends TestCase
 
         $this->assertGuest();
         $response->assertRedirect('/');
+    }
+
+    public function test_deactivated_user_cannot_authenticate(): void
+    {
+        $user = User::factory()->create([
+            'is_active' => false,
+        ]);
+
+        $response = $this->post('/login', [
+            'email' => $user->email,
+            'password' => 'password',
+        ]);
+
+        $this->assertGuest();
+        $response->assertSessionHasErrors('email');
+    }
+
+    public function test_deactivated_user_cannot_authenticate_by_username(): void
+    {
+        $user = User::factory()->create([
+            'username' => 'inactive_user',
+            'is_active' => false,
+        ]);
+
+        $response = $this->post('/login', [
+            'email' => 'inactive_user',
+            'password' => 'password',
+        ]);
+
+        $this->assertGuest();
+        $response->assertSessionHasErrors('email');
+    }
+
+    public function test_already_authenticated_deactivated_user_is_logged_out_by_middleware(): void
+    {
+        $user = User::factory()->create([
+            'is_active' => false,
+        ]);
+
+        $response = $this->actingAs($user)->get('/');
+
+        $this->assertGuest();
+        $response->assertRedirect(route('login'));
+        $response->assertSessionHasErrors('email');
     }
 }

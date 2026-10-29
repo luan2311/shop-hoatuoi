@@ -74,10 +74,13 @@ class CartController extends Controller
         if ($request->wantsJson() || $request->ajax()) {
             $cart = $this->sales->cart($request->user());
             $summary = $this->sales->summary($cart);
-            $line = collect($summary['lines'])->firstWhere('code', $code);
+            $line = collect($summary['lines'])->first(function ($item) use ($code) {
+                return strcasecmp($item['code'], $code) === 0;
+            });
+            $itemSubtotal = $line['subtotal'] ?? 0;
             return response()->json([
                 'success' => true,
-                'itemTotalPrice' => number_format($line['subtotal'] ?? 0, 0, ',', '.') . ' đ',
+                'itemTotalPrice' => number_format($itemSubtotal, 0, ',', '.') . ' đ',
                 'cartSubtotal' => number_format($summary['total'] ?? 0, 0, ',', '.') . ' đ',
                 'cartCount' => array_sum(array_column($summary['lines'], 'quantity')),
             ]);

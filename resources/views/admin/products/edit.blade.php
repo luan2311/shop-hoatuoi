@@ -53,11 +53,22 @@
                 <input type="text" class="form-control mb-2" value="{{ $product->image }}" readonly style="background-color: #e9ecef; cursor: not-allowed;" />
                 @if($product->image_url)
                     <div class="mb-2">
+                        <span class="small text-muted font-weight-bold d-block mb-1">Ảnh hiện tại:</span>
                         <img src="{{ $product->image_url }}" alt="{{ $product->name }}" style="max-width: 150px; max-height: 120px; border-radius: 4px; border: 1px solid #ddd; padding: 4px;" />
                     </div>
                 @endif
                 <input type="file" name="image" id="image" class="form-control-file" accept="image/*" />
                 <small class="form-text text-muted">Chọn ảnh mới nếu muốn thay đổi ảnh đại diện sản phẩm</small>
+
+                <!-- Khung xem trước ảnh mới kích thước nhỏ -->
+                <div id="image-preview-wrapper" class="mt-2" style="display: none;">
+                    <div class="small text-muted mb-1 font-weight-bold">Ảnh mới xem trước:</div>
+                    <div style="position: relative; display: inline-block;">
+                        <img id="image-preview" src="#" alt="Ảnh mới xem trước" style="max-width: 120px; max-height: 120px; object-fit: cover; border-radius: 6px; border: 1px solid #dee2e6; padding: 3px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.08);" />
+                        <button type="button" id="remove-preview-btn" class="btn btn-sm btn-danger" style="position: absolute; top: -8px; right: -8px; border-radius: 50%; width: 22px; height: 22px; padding: 0; line-height: 20px; font-size: 11px;" title="Hủy chọn ảnh mới">&times;</button>
+                    </div>
+                </div>
+
                 @error('image') <span class="text-danger small">{{ $message }}</span> @enderror
             </div>
         </div>
@@ -85,6 +96,7 @@
             <label for="stock" class="col-md-2 col-form-label">Số lượng tồn <span class="text-danger">*</span></label>
             <div class="col-md-10">
                 <input type="number" name="stock" id="stock" class="form-control" min="0" value="{{ old('stock', $product->stock) }}" required />
+                <small class="form-text text-muted">Số lượng sản phẩm trong kho (khách hàng không thể tăng số lượng trong giỏ hàng vượt quá tồn kho này)</small>
                 @error('stock') <span class="text-danger small">{{ $message }}</span> @enderror
             </div>
         </div>
@@ -117,3 +129,47 @@
     </form>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const imageInput = document.getElementById('image');
+        const previewWrapper = document.getElementById('image-preview-wrapper');
+        const previewImg = document.getElementById('image-preview');
+        const removeBtn = document.getElementById('remove-preview-btn');
+
+        if (!imageInput || !previewWrapper || !previewImg) return;
+
+        imageInput.addEventListener('change', function () {
+            const file = this.files && this.files[0];
+            if (file) {
+                if (!file.type.startsWith('image/')) {
+                    alert('Vui lòng chọn một tệp hình ảnh hợp lệ (JPG, PNG, WebP).');
+                    this.value = '';
+                    previewWrapper.style.display = 'none';
+                    previewImg.src = '#';
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    previewImg.src = e.target.result;
+                    previewWrapper.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            } else {
+                previewWrapper.style.display = 'none';
+                previewImg.src = '#';
+            }
+        });
+
+        if (removeBtn) {
+            removeBtn.addEventListener('click', function () {
+                imageInput.value = '';
+                previewWrapper.style.display = 'none';
+                previewImg.src = '#';
+            });
+        }
+    });
+</script>
+@endpush

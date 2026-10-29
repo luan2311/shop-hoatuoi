@@ -31,7 +31,8 @@
                     <div class="card favorite-card" style="border: none; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: all 0.2s ease-in-out; {{ $isDiscontinued ? 'opacity: 0.7;' : '' }}">
                         <div style="position: relative;">
                             <a href="/products/{{ $product->slug }}">
-                                <img src="{{ asset('storage/products/' . $product->image) }}" alt="{{ $product->name }}"
+                                <img src="{{ $product->image_url ?? asset('storage/products/' . $product->image) }}" alt="{{ $product->name }}"
+                                     onerror="this.onerror=null;this.src='{{ asset('images/cate_1.png') }}';"
                                      style="border-top-left-radius: 15px; border-top-right-radius: 15px; height: 250px; object-fit: cover; width: 100%;">
                             </a>
                             @if ($isDiscontinued)

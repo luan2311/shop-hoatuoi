@@ -28,10 +28,18 @@ class SalesService
     public function summary(?Cart $cart): array
     {
         $items = $cart?->items ?? [];
-        $products = Product::whereIn('code', array_column($items, 'product_code'))->get()->keyBy('code');
+        $codes = array_column($items, 'product_code');
+        $products = Product::whereIn('code', $codes)->get();
+        $productsMap = [];
+        foreach ($products as $p) {
+            $productsMap[$p->code] = $p;
+            $productsMap[strtolower($p->code)] = $p;
+        }
+
         $lines = [];
         foreach ($items as $item) {
-            $product = $products->get($item['product_code']);
+            $code = $item['product_code'];
+            $product = $productsMap[$code] ?? $productsMap[strtolower($code)] ?? Product::where('code', 'regex', '/^'.preg_quote($code, '/').'$/i')->first();
             $price = $product ? $this->price($product) : null;
             $lines[] = [
                 'code' => $item['product_code'],
@@ -56,12 +64,16 @@ class SalesService
             if ($action === 'clear') {
                 $items = collect();
             } elseif ($action === 'remove') {
-                abort_unless($items->has($key), 404);
-                $items->forget($key);
+                $matchedKey = $items->keys()->first(fn ($k) => strcasecmp((string)$k, (string)$key) === 0);
+                abort_unless($matchedKey !== null, 404);
+                $items->forget($matchedKey);
             } else {
-                $product = $action === 'add' ? Product::findOrFail($key) : Product::where('code', $key)->firstOrFail();
+                $product = $action === 'add'
+                    ? Product::findOrFail($key)
+                    : (Product::where('code', $key)->first() ?? Product::where('code', 'regex', '/^'.preg_quote($key, '/').'$/i')->firstOrFail());
                 if ($action === 'update') {
-                    abort_unless($items->has($product->code), 404);
+                    $matchedKey = $items->keys()->first(fn ($k) => strcasecmp((string)$k, (string)$product->code) === 0);
+                    abort_unless($matchedKey !== null, 404);
                 }
                 $amount = $quantity + ($action === 'add' ? ($items->get($product->code)['quantity'] ?? 0) : 0);
                 $this->available($product, $amount);

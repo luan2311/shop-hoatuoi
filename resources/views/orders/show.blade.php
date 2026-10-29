@@ -155,6 +155,50 @@
             padding-bottom: 8px;
             border-bottom: 1px solid #e2ece2;
         }
+        .btn-order-action {
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 8px;
+            font-size: 15px !important;
+            font-weight: 500;
+            line-height: 1.5 !important;
+            height: auto !important;
+            min-height: 40px;
+            padding: 8px 20px !important;
+            border-radius: 8px !important;
+            text-align: center;
+            text-decoration: none !important;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .btn-order-action.btn-outline-secondary {
+            border: 1px solid #6c757d !important;
+            color: #495057 !important;
+            background-color: transparent !important;
+        }
+        .btn-order-action.btn-outline-secondary:hover {
+            background-color: #6c757d !important;
+            color: #ffffff !important;
+            border-color: #6c757d !important;
+        }
+        .btn-order-action.btn-outline-success {
+            border: 1px solid #537453 !important;
+            color: #537453 !important;
+            background-color: transparent !important;
+        }
+        .btn-order-action.btn-outline-success:hover {
+            background-color: #537453 !important;
+            color: #ffffff !important;
+            border-color: #537453 !important;
+        }
+        .btn-order-action i {
+            font-size: 15px;
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
         @media print {
             header, footer, .breadcrumb_background, .col-left-ac, .no-print, #loading-overlay {
                 display: none !important;
@@ -173,7 +217,7 @@
 @section('content')
 <div class="py-2 mb-3 breadcrumb_background bg-light">
     <div class="container">
-        <nav aria-label="breadcrumb">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
             <ol class="py-2 mb-0 breadcrumb small">
                 <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-decoration-none text-muted">Trang chủ</a></li>
                 <li class="breadcrumb-item"><a href="{{ route('orders.index') }}" class="text-decoration-none text-muted">Đơn hàng của bạn</a></li>
@@ -229,12 +273,12 @@
             <!-- Cột phải: Chi tiết đơn hàng / Hóa đơn -->
             <main class="col-xs-12 col-sm-12 col-lg-9 col-right-ac">
                 <!-- Thanh công cụ trên đầu -->
-                <div class="d-flex justify-content-between align-items-center mb-3 no-print">
-                    <a href="{{ route('orders.index') }}" class="btn btn-outline-secondary btn-sm" style="border-radius: 8px;">
-                        <i class="fa fa-arrow-left me-1"></i> Quay lại danh sách đơn hàng
+                <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3 no-print">
+                    <a href="{{ route('orders.index') }}" class="btn btn-outline-secondary btn-order-action" style="border-radius: 8px;">
+                        <i class="fa fa-arrow-left"></i> Quay lại danh sách đơn hàng
                     </a>
-                    <button type="button" onclick="window.print()" class="btn btn-outline-success btn-sm" style="border-radius: 8px;">
-                        <i class="fa fa-print me-1"></i> In hóa đơn
+                    <button type="button" onclick="window.print()" class="btn btn-outline-success btn-order-action" style="border-radius: 8px;">
+                        <i class="fa fa-print"></i> In hóa đơn
                     </button>
                 </div>
 

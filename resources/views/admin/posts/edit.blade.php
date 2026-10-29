@@ -44,11 +44,22 @@
                 <input type="text" class="form-control mb-2" value="{{ $post->thumbnail }}" readonly style="background-color: #e9ecef; cursor: not-allowed;" />
                 @if(!empty($post->thumbnail))
                     <div class="mb-2">
-                        <img src="{{ $post->thumbnail_url }}" alt="Ảnh bìa tin tức" style="max-width: 200px; max-height: 140px; border-radius: 4px; border: 1px solid #ddd; padding: 4px;" />
+                        <div class="small text-muted mb-1 font-weight-bold">Ảnh hiện tại:</div>
+                        <img src="{{ $post->thumbnail_url }}" alt="Ảnh bìa tin tức" style="max-width: 130px; max-height: 130px; object-fit: cover; border-radius: 6px; border: 1px solid #ced4da; padding: 3px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1);" />
                     </div>
                 @endif
                 <input type="file" name="thumbnail" id="thumbnail" class="form-control-file" accept="image/*" />
                 <small class="form-text text-muted">Chọn ảnh mới nếu muốn thay đổi ảnh bìa</small>
+                
+                <!-- Khung xem trước ảnh mới ở góc nhỏ -->
+                <div id="thumbnail-preview-wrapper" class="mt-2" style="display: none;">
+                    <div class="small text-muted mb-1 font-weight-bold">Xem trước ảnh mới:</div>
+                    <div style="position: relative; display: inline-block;">
+                        <img id="thumbnail-preview" src="#" alt="Xem trước ảnh bìa mới" style="max-width: 130px; max-height: 130px; object-fit: cover; border-radius: 6px; border: 1px solid #ced4da; padding: 3px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1);" />
+                        <button type="button" id="remove-thumbnail-preview" class="btn btn-sm btn-danger" style="position: absolute; top: -8px; right: -8px; border-radius: 50%; width: 22px; height: 22px; padding: 0; line-height: 20px; font-size: 11px;" title="Hủy ảnh mới">&times;</button>
+                    </div>
+                </div>
+
                 @error('thumbnail') <span class="text-danger small">{{ $message }}</span> @enderror
             </div>
         </div>
@@ -66,3 +77,47 @@
     </form>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const thumbnailInput = document.getElementById('thumbnail');
+        const previewWrapper = document.getElementById('thumbnail-preview-wrapper');
+        const previewImg = document.getElementById('thumbnail-preview');
+        const removeBtn = document.getElementById('remove-thumbnail-preview');
+
+        if (!thumbnailInput || !previewWrapper || !previewImg) return;
+
+        thumbnailInput.addEventListener('change', function () {
+            const file = this.files && this.files[0];
+            if (file) {
+                if (!file.type.startsWith('image/')) {
+                    alert('Vui lòng chọn một tệp hình ảnh hợp lệ (JPG, PNG, WebP).');
+                    this.value = '';
+                    previewWrapper.style.display = 'none';
+                    previewImg.src = '#';
+                    return;
+                }
+
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    previewImg.src = e.target.result;
+                    previewWrapper.style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            } else {
+                previewWrapper.style.display = 'none';
+                previewImg.src = '#';
+            }
+        });
+
+        if (removeBtn) {
+            removeBtn.addEventListener('click', function () {
+                thumbnailInput.value = '';
+                previewWrapper.style.display = 'none';
+                previewImg.src = '#';
+            });
+        }
+    });
+</script>
+@endpush

@@ -40,12 +40,28 @@ class ProductController extends Controller
     {
         $this->persist($request, new Product);
 
+        if ($request->wantsJson() || $request->ajax()) {
+            return response()->json([
+                'success' => true,
+                'message' => 'Tạo sản phẩm thành công.',
+                'redirect' => route('admin.products.index'),
+            ]);
+        }
+
         return to_route('admin.products.index')->with('status', 'Tạo sản phẩm thành công.');
     }
 
     public function update(ProductRequest $request, Product $product)
     {
         $this->persist($request, $product);
+
+        if ($request->wantsJson() || $request->ajax()) {
+            return response()->json([
+                'success' => true,
+                'message' => 'Cập nhật sản phẩm thành công.',
+                'redirect' => route('admin.products.index'),
+            ]);
+        }
 
         return to_route('admin.products.index')->with('status', 'Cập nhật sản phẩm thành công.');
     }
@@ -57,6 +73,14 @@ class ProductController extends Controller
         abort_if($result->getDeletedCount() !== 1, 409, 'Sản phẩm đã thay đổi. Vui lòng tải lại trang.');
         $this->removeOwnedImage($image);
 
+        if (request()->wantsJson() || request()->ajax()) {
+            return response()->json([
+                'success' => true,
+                'message' => 'Xóa sản phẩm thành công.',
+                'redirect' => route('admin.products.index'),
+            ]);
+        }
+
         return to_route('admin.products.index')->with('status', 'Xóa sản phẩm thành công.');
     }
 
@@ -66,7 +90,16 @@ class ProductController extends Controller
         $product->status = 'Hết hàng';
         $product->save();
 
-        return to_route('admin.products.index')->with('status', 'Đã ngưng bán sản phẩm: ' . $product->name . '. Tình trạng đã được cập nhật thành "Hết hàng".');
+        $msg = 'Đã ngưng bán sản phẩm: ' . $product->name . '. Tình trạng đã được cập nhật thành "Hết hàng".';
+        if (request()->wantsJson() || request()->ajax()) {
+            return response()->json([
+                'success' => true,
+                'message' => $msg,
+                'redirect' => route('admin.products.index'),
+            ]);
+        }
+
+        return to_route('admin.products.index')->with('status', $msg);
     }
 
     private function persist(ProductRequest $request, Product $product): void

@@ -65,17 +65,31 @@ class LoginRequest extends FormRequest
             ? ['email' => $loginInput, 'password' => $password]
             : ['username' => $loginInput, 'password' => $password];
 
-        if (! Auth::attempt($credentials, $this->boolean('remember'))) {
-            // If attempt by username failed, try attempt by email as fallback
-            if (! $isEmail && Auth::attempt(['email' => $loginInput, 'password' => $password], $this->boolean('remember'))) {
-                RateLimiter::clear($this->throttleKey());
-                return;
-            }
+        $authenticated = Auth::attempt($credentials, $this->boolean('remember'));
 
+        // If attempt by username failed, try attempt by email as fallback
+        if (! $authenticated && ! $isEmail) {
+            $authenticated = Auth::attempt(['email' => $loginInput, 'password' => $password], $this->boolean('remember'));
+        }
+
+        if (! $authenticated) {
             RateLimiter::hit($this->throttleKey());
 
             throw ValidationException::withMessages([
                 'email' => trans('auth.failed'),
+            ]);
+        }
+
+        $user = Auth::user();
+        if ($user && ! $user->isActive()) {
+            Auth::guard('web')->logout();
+            $this->session()->invalidate();
+            $this->session()->regenerateToken();
+
+            RateLimiter::hit($this->throttleKey());
+
+            throw ValidationException::withMessages([
+                'email' => 'Tài khoản của bạn đã bị vô hiệu hóa. Vui lòng liên hệ quản trị viên để biết thêm chi tiết.',
             ]);
         }
 
