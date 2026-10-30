@@ -193,7 +193,7 @@
                         <i class="fas fa-shopping-cart"></i>
                     </div>
                     <div>
-                        <div class="text-value">{{ $completedOrders }}</div>
+                        <div class="text-value">{{ $totalOrders }}</div>
                         <div class="text-muted">Tổng số đơn</div>
                     </div>
                 </div>
