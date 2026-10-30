@@ -1,0 +1,51 @@
+[
+  {
+    "path": "/admin/products",
+    "method": "POST",
+    "spoof": null,
+    "csrf": null,
+    "bodyAvailable": false
+  },
+  {
+    "path": "/admin/products",
+    "method": "POST",
+    "spoof": null,
+    "csrf": true,
+    "bodyAvailable": true
+  },
+  {
+    "path": "/admin/products/6ae4d6cbfdf4eadfd0037a86",
+    "method": "POST",
+    "spoof": "PUT",
+    "csrf": true,
+    "bodyAvailable": true
+  },
+  {
+    "path": "/admin/products/6ae4d6cbfdf4eadfd0037a86/stop-selling",
+    "method": "POST",
+    "spoof": null,
+    "csrf": true,
+    "bodyAvailable": true
+  },
+  {
+    "path": "/admin/products/6ae4d6cbfdf4eadfd0037a86/resume-selling",
+    "method": "POST",
+    "spoof": null,
+    "csrf": true,
+    "bodyAvailable": true
+  },
+  {
+    "path": "/admin/products/6ae4d6cbfdf4eadfd0037a86",
+    "method": "POST",
+    "spoof": "DELETE",
+    "csrf": true,
+    "bodyAvailable": true
+  },
+  {
+    "path": "/admin/products/6ae4d6cbfdf4eadfd0037a86",
+    "method": "POST",
+    "spoof": "DELETE",
+    "csrf": true,
+    "bodyAvailable": true
+  }
+]

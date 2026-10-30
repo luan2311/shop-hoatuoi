@@ -1,0 +1,55 @@
+## feat/an-product-sales-lifecycle
+ M app/Http/Controllers/Admin/CategoryController.php
+ M app/Http/Controllers/Admin/ContactController.php
+ M app/Http/Controllers/Admin/OrderController.php
+ M app/Http/Controllers/Admin/PostController.php
+ M app/Http/Controllers/Admin/ProductController.php
+ M app/Http/Controllers/Admin/UserController.php
+ M app/Http/Controllers/HomeController.php
+ M app/Http/Controllers/ProductController.php
+ M app/Http/Controllers/WishlistController.php
+ M app/Http/Requests/ProductRequest.php
+ M app/Models/Product.php
+ M app/Services/SalesService.php
+ M resources/views/admin/categories/index.blade.php
+ M resources/views/admin/contacts/index.blade.php
+ M resources/views/admin/orders/index.blade.php
+ M resources/views/admin/posts/index.blade.php
+ M resources/views/admin/products/create.blade.php
+ M resources/views/admin/products/edit.blade.php
+ M resources/views/admin/products/index.blade.php
+ M resources/views/admin/users/index.blade.php
+ M resources/views/components/add-to-cart.blade.php
+ M resources/views/partials/product-card.blade.php
+ M resources/views/products/show.blade.php
+ M resources/views/wishlist/index.blade.php
+ M routes/admin.php
+?? app/Http/Requests/AdminProductBrowseRequest.php
+?? app/Http/Requests/CategoryBrowseRequest.php
+?? app/Services/CategoryUsage.php
+?? app/Services/ProductLifecycle.php
+?? app/Support/AdminPagination.php
+?? docs/an/ADMIN-confirm-modal.md
+?? docs/an/ADMIN-product-ui-review.md
+?? docs/an/AN-12-product-lifecycle.md
+?? docs/an/CATEGORY-admin-result.md
+?? docs/an/evidence/admin-pagination/
+?? docs/an/evidence/admin-product-ui/
+?? docs/an/evidence/an12/
+?? docs/an/evidence/category-ui/
+?? docs/an/evidence/confirm-modal/
+?? public/css/admin-categories.css
+?? public/css/admin-confirm-modal.css
+?? public/css/admin-pagination.css
+?? public/css/admin-products.css
+?? public/js/admin-confirm-modal.js
+?? public/js/admin-products.js
+?? resources/views/admin/partials/
+?? resources/views/admin/products/partials/pagination.blade.php
+?? resources/views/components/admin/
+?? tests/Feature/AdminPaginationTest.php
+?? tests/Feature/AdminProductBrowseTest.php
+?? tests/Feature/CategoryAdminUsageTest.php
+?? tests/Feature/ProductLifecycleTest.php
+?? tests/Fixtures/lifecycle-worker.php
+?? tests/JavaScript/admin-confirm-modal.test.cjs

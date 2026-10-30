@@ -1,0 +1,46 @@
+{
+    "database": "shop_hoatuoi_test_slides_20261030",
+    "collections": {
+        "products": {
+            "count": 81,
+            "data_sha256": "4fe4532e57c1999fb7e988f4529fcb4ef898a04a0785a71d12425f5620c25b58",
+            "schema_sha256": "0168d1bd6fcd57252967cba380ffb2f7c8df948fc94074fe5a6a035bf5f19e3e"
+        },
+        "categories": {
+            "count": 5,
+            "data_sha256": "cddd1e8d9f3cab751fa357bcb2051e059adb7a598b427b39d9adae7b009c0254",
+            "schema_sha256": "49acd8cba91b022e73d4c7419cf86de706defb948dfef39cce818d21b214b111"
+        },
+        "orders": {
+            "count": 3,
+            "data_sha256": "ec75f04f465becd8634cd849c9f9ae4d53bd3dcb9762e98ccf6857f418d86a28",
+            "schema_sha256": "a2b612600f3506ca343605305f5a7fcf7e2740ef4b5388115a9d147aeacfbef1"
+        },
+        "carts": {
+            "count": 2,
+            "data_sha256": "6635c5c04905ffd28745ab97b7411c8a9cc202b1a2f643a0265d71594a973e07",
+            "schema_sha256": "7a6288afde88712b7df656f882e2f88deea3adc12932e3b70ace8703f7fc92ca"
+        },
+        "wishlists": {
+            "count": 0,
+            "data_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "schema_sha256": "d794315b31f42677f1aff6a195313b20d5b477467d3ca6274cd2d264b3175475"
+        },
+        "contacts": {
+            "count": 0,
+            "data_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "schema_sha256": "643d5437104296e21d906ecb15b2c96ad278f20cfc4af53b12bb6069bd853726"
+        },
+        "posts": {
+            "count": 3,
+            "data_sha256": "9489dd1e03b26351d6d373cc55e4b1e6c2b1ea678b0d0beb85ba83f7835e0300",
+            "schema_sha256": "9c74daacc275d052bc7eecfd3572625a6ae9535aa3870f5ec605a18371635b61"
+        }
+    },
+    "stats": {
+        "total": 81,
+        "selling": 81,
+        "stopped": 0,
+        "out-of-stock": 0
+    }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "case": "desktop",
+    "status": "PASS",
+    "counts": [
+      "17",
+      "16",
+      "16",
+      "16",
+      "16"
+    ]
+  },
+  {
+    "case": "mobile",
+    "status": "PASS"
+  },
+  {
+    "case": "search-filter-sort",
+    "status": "PASS"
+  },
+  {
+    "case": "confirm-cancel-qa",
+    "status": "PASS",
+    "mutations": 0
+  }
+]

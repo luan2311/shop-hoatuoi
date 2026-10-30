@@ -1,0 +1,866 @@
+[
+  {
+    "method": "GET",
+    "path": "/login"
+  },
+  {
+    "method": "GET",
+    "path": "/css/style_layout.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/collection_style.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/breadcrumb_style.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/trangchu_style.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/contact_style.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/404page.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/product_style.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/blog_style.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/account_style.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/loading_style.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/cart_style.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/wishlist_style.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/ajax-notification.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/layout_custom.css"
+  },
+  {
+    "method": "GET",
+    "path": "/js/main.js"
+  },
+  {
+    "method": "GET",
+    "path": "/js/wishlist-ajax.js"
+  },
+  {
+    "method": "GET",
+    "path": "/js/cart-ajax.js"
+  },
+  {
+    "method": "GET",
+    "path": "/js/search-realtime.js"
+  },
+  {
+    "method": "POST",
+    "path": "/login"
+  },
+  {
+    "method": "GET",
+    "path": "/css/Dashboard.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/PagedList.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/ajax-notification.css"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/products"
+  },
+  {
+    "method": "GET",
+    "path": "/css/Dashboard.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/PagedList.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/ajax-notification.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/admin-products.css"
+  },
+  {
+    "method": "GET",
+    "path": "/js/admin-products.js"
+  },
+  {
+    "method": "GET",
+    "path": "/storage/products/HihDAHdlzexOgo1t4hzHbhMh6UQBtNIzO1ZicNzu.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/0cca8e59-9a9c-4ab2-84ac-d6eb6e70e9a9-0b68cd02-0a34-4152-9b30-271bc2383a04.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/e55e643a-4900-4b4c-bbbd-f66406162f32-e2865c77-224d-42fc-a4bf-eb3795c6a163.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/41de3033-7340-4b5d-9bc7-347f9534fabb-e5821c08-239e-4277-ba39-1761943d284f.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/ff575cda-55bd-4183-96dc-b896b7b763d8-57150620-e2b1-41ef-8e3b-535e0d85a80f.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/a8eeb848-6697-4162-a6e8-d3d8e3222338-d93f4830-a55b-4878-ba5b-8ee192a138ef.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/f905f2b0-e982-4ad8-b463-392acda6ac1b-997fe73e-8e0e-4463-80ea-4c840a4c688f.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/4fbabb86-9ff3-4abf-9671-3a9c449928dc-994fab37-c370-4307-bc0c-7d8deb42ca37.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/f57d07a4-2646-414a-803d-b156974e2603-97f4024c-bd67-491f-8a1e-e6207a9e2b30.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/2e19fd6b-d03c-4f86-b590-e50cd6999bce-75c718d3-cd05-476b-a135-ca73ac3c8167.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/products"
+  },
+  {
+    "method": "GET",
+    "path": "/css/Dashboard.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/PagedList.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/ajax-notification.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/admin-products.css"
+  },
+  {
+    "method": "GET",
+    "path": "/js/admin-products.js"
+  },
+  {
+    "method": "GET",
+    "path": "/storage/products/HihDAHdlzexOgo1t4hzHbhMh6UQBtNIzO1ZicNzu.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/0cca8e59-9a9c-4ab2-84ac-d6eb6e70e9a9-0b68cd02-0a34-4152-9b30-271bc2383a04.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/e55e643a-4900-4b4c-bbbd-f66406162f32-e2865c77-224d-42fc-a4bf-eb3795c6a163.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/41de3033-7340-4b5d-9bc7-347f9534fabb-e5821c08-239e-4277-ba39-1761943d284f.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/ff575cda-55bd-4183-96dc-b896b7b763d8-57150620-e2b1-41ef-8e3b-535e0d85a80f.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/a8eeb848-6697-4162-a6e8-d3d8e3222338-d93f4830-a55b-4878-ba5b-8ee192a138ef.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/f905f2b0-e982-4ad8-b463-392acda6ac1b-997fe73e-8e0e-4463-80ea-4c840a4c688f.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/4fbabb86-9ff3-4abf-9671-3a9c449928dc-994fab37-c370-4307-bc0c-7d8deb42ca37.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/f57d07a4-2646-414a-803d-b156974e2603-97f4024c-bd67-491f-8a1e-e6207a9e2b30.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/2e19fd6b-d03c-4f86-b590-e50cd6999bce-75c718d3-cd05-476b-a135-ca73ac3c8167.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/products"
+  },
+  {
+    "method": "GET",
+    "path": "/css/Dashboard.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/PagedList.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/ajax-notification.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/admin-products.css"
+  },
+  {
+    "method": "GET",
+    "path": "/js/admin-products.js"
+  },
+  {
+    "method": "GET",
+    "path": "/storage/products/HihDAHdlzexOgo1t4hzHbhMh6UQBtNIzO1ZicNzu.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/products"
+  },
+  {
+    "method": "GET",
+    "path": "/css/Dashboard.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/PagedList.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/ajax-notification.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/admin-products.css"
+  },
+  {
+    "method": "GET",
+    "path": "/js/admin-products.js"
+  },
+  {
+    "method": "GET",
+    "path": "/storage/products/HihDAHdlzexOgo1t4hzHbhMh6UQBtNIzO1ZicNzu.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/ff575cda-55bd-4183-96dc-b896b7b763d8-57150620-e2b1-41ef-8e3b-535e0d85a80f.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/a8eeb848-6697-4162-a6e8-d3d8e3222338-d93f4830-a55b-4878-ba5b-8ee192a138ef.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/f905f2b0-e982-4ad8-b463-392acda6ac1b-997fe73e-8e0e-4463-80ea-4c840a4c688f.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/f57d07a4-2646-414a-803d-b156974e2603-97f4024c-bd67-491f-8a1e-e6207a9e2b30.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/2e19fd6b-d03c-4f86-b590-e50cd6999bce-75c718d3-cd05-476b-a135-ca73ac3c8167.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/d08a4678-d17f-4282-b3ec-d49a89df7a6b-815ce74d-dafe-47f3-acdf-bcc347d4a3b8.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/baa89f99-77ee-4e14-93f3-b44c8ce4e239.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/930b0ba7ba0e4314bad0ad58c624c0-1722654030131.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/74ecbbb888e0459e8e2551098b6ffb-1722654027924.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/products"
+  },
+  {
+    "method": "GET",
+    "path": "/css/Dashboard.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/PagedList.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/ajax-notification.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/admin-products.css"
+  },
+  {
+    "method": "GET",
+    "path": "/js/admin-products.js"
+  },
+  {
+    "method": "GET",
+    "path": "/images/baa89f99-77ee-4e14-93f3-b44c8ce4e239.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/a14f549b-3383-4cf2-b11d-9494f8a78588-e2279fa4-2996-4b49-a40d-9b81a5bfe86e.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/7fd0929e-bf94-41a9-bb82-650c9b33ba9f-acb9e454-4c9d-4829-a72d-0a9dbf6cd728.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/d08a4678-d17f-4282-b3ec-d49a89df7a6b-815ce74d-dafe-47f3-acdf-bcc347d4a3b8.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/e55e643a-4900-4b4c-bbbd-f66406162f32-e2865c77-224d-42fc-a4bf-eb3795c6a163.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/a8eeb848-6697-4162-a6e8-d3d8e3222338-d93f4830-a55b-4878-ba5b-8ee192a138ef.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/f905f2b0-e982-4ad8-b463-392acda6ac1b-997fe73e-8e0e-4463-80ea-4c840a4c688f.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/182c9b79-e156-4073-bea2-8d7e33be6e0b.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/dsc06003-1747886582937.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/f57d07a4-2646-414a-803d-b156974e2603-97f4024c-bd67-491f-8a1e-e6207a9e2b30.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/products"
+  },
+  {
+    "method": "GET",
+    "path": "/css/Dashboard.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/PagedList.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/ajax-notification.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/admin-products.css"
+  },
+  {
+    "method": "GET",
+    "path": "/js/admin-products.js"
+  },
+  {
+    "method": "GET",
+    "path": "/images/2e19fd6b-d03c-4f86-b590-e50cd6999bce-75c718d3-cd05-476b-a135-ca73ac3c8167.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/41fb9b0c-94c4-448b-9934-0550c78e818a-c0598f5b-22f8-4316-8da5-9243db90f0ea.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/1800-5-1722653851361.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/1800-2-1722653563019.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/74286e4d90904bac802010454bc6aa-1722654044948.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/433091b3480b44fe9a14366dd4c80f-1722653618377.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/1800-1722653849972.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/2000-4-1722653843954.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/ea3d5ac32f1f48929e21de1702ffe5-jpeg-1722654141569.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/kt2a5650-1747887004846.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/products"
+  },
+  {
+    "method": "GET",
+    "path": "/css/Dashboard.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/PagedList.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/ajax-notification.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/admin-products.css"
+  },
+  {
+    "method": "GET",
+    "path": "/js/admin-products.js"
+  },
+  {
+    "method": "GET",
+    "path": "/storage/products/HihDAHdlzexOgo1t4hzHbhMh6UQBtNIzO1ZicNzu.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/kt2a5767-1748932933010.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/344e46dadb8545d5963bf538886c36-1722653684094.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/5f956891d7cc47ad8b55520889bf75-1722653587944.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/18daf2561f4e4786a69b02ea7acf90-1722654032459.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/4fbabb86-9ff3-4abf-9671-3a9c449928dc-994fab37-c370-4307-bc0c-7d8deb42ca37.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/dsc05989-1747886576924.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/e55e643a-4900-4b4c-bbbd-f66406162f32-e2865c77-224d-42fc-a4bf-eb3795c6a163.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/1800-5-1722653851361.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/a8eeb848-6697-4162-a6e8-d3d8e3222338-d93f4830-a55b-4878-ba5b-8ee192a138ef.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/products"
+  },
+  {
+    "method": "GET",
+    "path": "/css/Dashboard.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/PagedList.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/ajax-notification.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/admin-products.css"
+  },
+  {
+    "method": "GET",
+    "path": "/js/admin-products.js"
+  },
+  {
+    "method": "GET",
+    "path": "/images/gochoaxinh-com-564-1747907308008.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/ea3d5ac32f1f48929e21de1702ffe5-jpeg-1722654141569.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/433091b3480b44fe9a14366dd4c80f-1722653618377.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/93b2da08-4c24-4af1-80b2-1469b8fbebad-2988918b-9fb3-4d7e-82e4-1ac979d8db6c.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/65f6c2a120134df2ace75655b6a4b7-1722653591040.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/f905f2b0-e982-4ad8-b463-392acda6ac1b-997fe73e-8e0e-4463-80ea-4c840a4c688f.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/41de3033-7340-4b5d-9bc7-347f9534fabb-e5821c08-239e-4277-ba39-1761943d284f.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/17e29066-6ba1-46c8-aa2f-7d8902971f88-cb06fb46-a261-46c7-b5e5-fba5f3f90535.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/74ecbbb888e0459e8e2551098b6ffb-1722654027924.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/43c6ef7068f2467e9cc74c2dcb2eb8-1722653683116.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/products"
+  },
+  {
+    "method": "GET",
+    "path": "/css/Dashboard.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/PagedList.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/ajax-notification.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/admin-products.css"
+  },
+  {
+    "method": "GET",
+    "path": "/js/admin-products.js"
+  },
+  {
+    "method": "GET",
+    "path": "/storage/products/HihDAHdlzexOgo1t4hzHbhMh6UQBtNIzO1ZicNzu.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/0cca8e59-9a9c-4ab2-84ac-d6eb6e70e9a9-0b68cd02-0a34-4152-9b30-271bc2383a04.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/e55e643a-4900-4b4c-bbbd-f66406162f32-e2865c77-224d-42fc-a4bf-eb3795c6a163.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/41de3033-7340-4b5d-9bc7-347f9534fabb-e5821c08-239e-4277-ba39-1761943d284f.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/ff575cda-55bd-4183-96dc-b896b7b763d8-57150620-e2b1-41ef-8e3b-535e0d85a80f.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/a8eeb848-6697-4162-a6e8-d3d8e3222338-d93f4830-a55b-4878-ba5b-8ee192a138ef.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/f905f2b0-e982-4ad8-b463-392acda6ac1b-997fe73e-8e0e-4463-80ea-4c840a4c688f.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/4fbabb86-9ff3-4abf-9671-3a9c449928dc-994fab37-c370-4307-bc0c-7d8deb42ca37.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/f57d07a4-2646-414a-803d-b156974e2603-97f4024c-bd67-491f-8a1e-e6207a9e2b30.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/2e19fd6b-d03c-4f86-b590-e50cd6999bce-75c718d3-cd05-476b-a135-ca73ac3c8167.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/products"
+  },
+  {
+    "method": "GET",
+    "path": "/css/Dashboard.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/PagedList.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/ajax-notification.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/admin-products.css"
+  },
+  {
+    "method": "GET",
+    "path": "/js/admin-products.js"
+  },
+  {
+    "method": "GET",
+    "path": "/images/dsc06003-1747886582937.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/dsc06013-1747886590835.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/gochoaxinh-com-290-1747907186021.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/kt2a5725-1748932784453.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/gochoaxinh-com-064-1747906819351.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/dsc05950-1747886536759.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/dsc06024-1747888666528.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/kt2a5767-1748932933010.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/gochoaxinh-com-564-1747907308008.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/fb1-1747886608385.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/products"
+  },
+  {
+    "method": "GET",
+    "path": "/css/Dashboard.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/PagedList.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/ajax-notification.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/admin-products.css"
+  },
+  {
+    "method": "GET",
+    "path": "/js/admin-products.js"
+  },
+  {
+    "method": "GET",
+    "path": "/images/dsc05510-1747888898698.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/kt2a5763-1748932797773.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/dsc05950-1747886536759.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/z6627827948270-77c577f191bca0887273fd45355e5fd5-1747906523997.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/intagram11.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/products"
+  },
+  {
+    "method": "GET",
+    "path": "/css/Dashboard.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/PagedList.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/ajax-notification.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/admin-products.css"
+  },
+  {
+    "method": "GET",
+    "path": "/js/admin-products.js"
+  },
+  {
+    "method": "GET",
+    "path": "/storage/products/HihDAHdlzexOgo1t4hzHbhMh6UQBtNIzO1ZicNzu.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/0cca8e59-9a9c-4ab2-84ac-d6eb6e70e9a9-0b68cd02-0a34-4152-9b30-271bc2383a04.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/e55e643a-4900-4b4c-bbbd-f66406162f32-e2865c77-224d-42fc-a4bf-eb3795c6a163.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/41de3033-7340-4b5d-9bc7-347f9534fabb-e5821c08-239e-4277-ba39-1761943d284f.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/ff575cda-55bd-4183-96dc-b896b7b763d8-57150620-e2b1-41ef-8e3b-535e0d85a80f.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/a8eeb848-6697-4162-a6e8-d3d8e3222338-d93f4830-a55b-4878-ba5b-8ee192a138ef.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/f905f2b0-e982-4ad8-b463-392acda6ac1b-997fe73e-8e0e-4463-80ea-4c840a4c688f.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/4fbabb86-9ff3-4abf-9671-3a9c449928dc-994fab37-c370-4307-bc0c-7d8deb42ca37.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/f57d07a4-2646-414a-803d-b156974e2603-97f4024c-bd67-491f-8a1e-e6207a9e2b30.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/images/2e19fd6b-d03c-4f86-b590-e50cd6999bce-75c718d3-cd05-476b-a135-ca73ac3c8167.jpg"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/products"
+  },
+  {
+    "method": "GET",
+    "path": "/css/Dashboard.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/PagedList.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/ajax-notification.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/admin-products.css"
+  },
+  {
+    "method": "GET",
+    "path": "/js/admin-products.js"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/categories"
+  },
+  {
+    "method": "GET",
+    "path": "/css/Dashboard.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/PagedList.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/ajax-notification.css"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/dashboard"
+  },
+  {
+    "method": "GET",
+    "path": "/css/Dashboard.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/PagedList.css"
+  },
+  {
+    "method": "GET",
+    "path": "/css/ajax-notification.css"
+  },
+  {
+    "method": "GET",
+    "path": "/admin/dashboard/revenue-data"
+  }
+]
