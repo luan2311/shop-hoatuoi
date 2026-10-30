@@ -17,9 +17,14 @@
                     <span style="color: #64748b;">Ngân hàng:</span>
                     <strong style="color: #1a2f20;">MB Bank (Ngân Hàng Quân Đội)</strong>
                 </div>
-                <div style="display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed #e2e8f0;">
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px dashed #e2e8f0;">
                     <span style="color: #64748b;">Số tài khoản:</span>
-                    <strong style="color: #1a2f20; letter-spacing: 0.5px;">0898449950</strong>
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <strong style="color: #1a2f20; letter-spacing: 0.5px; font-size: 15px;">0898449950</strong>
+                        <button type="button" class="btn btn-sm btn-outline-secondary p-1 px-2" style="font-size: 11px; border-radius: 4px;" onclick="navigator.clipboard.writeText('0898449950'); this.innerHTML='<i class=\'fa fa-check text-success\'></i> Đã chép'; setTimeout(()=>this.innerHTML='<i class=\'fa fa-copy\'></i> Chép', 2000);" title="Sao chép số tài khoản">
+                            <i class="fa fa-copy"></i> Chép
+                        </button>
+                    </div>
                 </div>
                 <div style="display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed #e2e8f0;">
                     <span style="color: #64748b;">Chủ tài khoản:</span>
@@ -29,9 +34,14 @@
                     <span style="color: #64748b;">Số tiền cần chuyển:</span>
                     <strong style="color: #b91c1c; font-size: 16px;">{{ number_format((float) (string) $order->total_amount, 0, ',', '.') }} đ</strong>
                 </div>
-                <div style="display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed #e2e8f0;">
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px dashed #e2e8f0;">
                     <span style="color: #64748b;">Cú pháp chuyển khoản:</span>
-                    <strong style="font-family: monospace; background: #eef2f6; padding: 2px 8px; border-radius: 4px; color: #0284c7;">{{ $order->order_code }}</strong>
+                    <div style="display: flex; align-items: center; gap: 6px;">
+                        <strong style="font-family: monospace; background: #eef2f6; padding: 2px 8px; border-radius: 4px; color: #0284c7; font-size: 14px;">{{ $order->order_code }}</strong>
+                        <button type="button" class="btn btn-sm btn-outline-secondary p-1 px-2" style="font-size: 11px; border-radius: 4px;" onclick="navigator.clipboard.writeText('{{ $order->order_code }}'); this.innerHTML='<i class=\'fa fa-check text-success\'></i> Đã chép'; setTimeout(()=>this.innerHTML='<i class=\'fa fa-copy\'></i> Chép', 2000);" title="Sao chép cú pháp chuyển khoản">
+                            <i class="fa fa-copy"></i> Chép
+                        </button>
+                    </div>
                 </div>
 
                 <div style="margin-top: 12px; padding: 10px 14px; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; font-size: 12.5px; color: #166534; line-height: 1.45;">

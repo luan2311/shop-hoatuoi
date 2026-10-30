@@ -584,7 +584,8 @@
                                 <img alt="Bó hoa tươi đầy màu sắc từ Góc Hoa Xinh, shop hoa tươi uy tín tại Quận 7, mang đến sự tươi mới và tinh tế cho mọi dịp"
                                      data-thumb="original" original-height="640" original-width="640"
                                      src="{{ asset('images/shop-hoa-tuoi-goc-hoa-xinh-ba8c9601-b5c9-49d4-803d-35a049880323.jpg') }}"
-                                     style="width: 640px; height: 640px;">
+                                     class="img-fluid rounded"
+                                     style="max-width: 640px; width: 100%; height: auto;">
                             </p>
                             <h2>Sứ Mệnh - Lan Tỏa Yêu Thương Qua Từng Bó Hoa Tươi</h2>
                             <p>
