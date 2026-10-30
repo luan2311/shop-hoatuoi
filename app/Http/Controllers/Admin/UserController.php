@@ -17,12 +17,12 @@ class UserController extends Controller
         $search = $request->input('searchString') ?? $request->input('q');
         $query = User::query();
 
-        if (!empty($search)) {
-            $escaped = '%' . addcslashes($search, '\\%_') . '%';
+        if (! empty($search)) {
+            $escaped = '%'.addcslashes($search, '\\%_').'%';
             $query->where(function ($q) use ($escaped) {
                 $q->where('name', 'like', $escaped)
-                  ->orWhere('username', 'like', $escaped)
-                  ->orWhere('email', 'like', $escaped);
+                    ->orWhere('username', 'like', $escaped)
+                    ->orWhere('email', 'like', $escaped);
             });
         }
 
@@ -76,14 +76,15 @@ class UserController extends Controller
 
     public function toggleActive(User $user): RedirectResponse
     {
-        if ((string)$user->getKey() === (string)Auth::id()) {
+        if ((string) $user->getKey() === (string) Auth::id()) {
             return redirect()->route('admin.users.index')->with('error', 'Bạn không thể thay đổi trạng thái tài khoản của chính mình.');
         }
 
-        $user->is_active = !($user->is_active ?? true);
+        $user->is_active = ! ($user->is_active ?? true);
         $user->save();
 
         $msg = $user->is_active ? 'Đã kích hoạt tài khoản thành công!' : 'Đã vô hiệu hóa tài khoản thành công!';
+
         return redirect()->route('admin.users.index')->with('success', $msg);
     }
 }

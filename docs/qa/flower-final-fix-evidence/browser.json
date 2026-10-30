@@ -1,0 +1,14 @@
+{
+  "status": "PASS_CORE_FLOWS_WITH_KNOWN_CONTENT_LIMITATION",
+  "engine": "Chromium via computer-use",
+  "pages": 18,
+  "responsive_views": 72,
+  "viewports": ["1440x900", "1280x800", "390x844", "375x812"],
+  "overflow_after_layout_settled": 0,
+  "flows_passed": ["register", "user/admin login and logout", "catalog filter and pagination", "product details", "Vietnamese live suggestions", "search empty/no-results/Escape/Enter", "wishlist AJAX", "cart add/update", "COD checkout twice", "success/history/detail", "Pending completion rejected", "Processing then Shipped then POST completion", "dashboard total", "admin product create/upload/edit", "contact submit", "news list/detail", "mobile menu"],
+  "browser_order_totals": [800000, 125000],
+  "console_warnings_errors_captured": 0,
+  "known_limitations": ["Two legacy article-content image URLs return external CDN 404; article cover and reading flow work", "Search API failure state covered by Node tests, not fault-injected in browser", "No full HAR or load/performance test", "No real bank payment or email delivery"],
+  "screenshots_private": ".runtime/screenshots/resumed/",
+  "metrics": "browser-responsive.json"
+}

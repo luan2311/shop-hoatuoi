@@ -1,0 +1,798 @@
+[
+  {
+    "page": "checkout",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [],
+    "headings": [
+      "1 Thông tin nhận hàng",
+      "2 Phương thức thanh toán"
+    ],
+    "scrollWidth": 1425
+  },
+  {
+    "page": "checkout",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [],
+    "headings": [
+      "1 Thông tin nhận hàng",
+      "2 Phương thức thanh toán"
+    ],
+    "scrollWidth": 1265
+  },
+  {
+    "page": "checkout",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [],
+    "headings": [
+      "1 Thông tin nhận hàng",
+      "2 Phương thức thanh toán"
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "page": "checkout",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [],
+    "headings": [
+      "1 Thông tin nhận hàng",
+      "2 Phương thức thanh toán"
+    ],
+    "scrollWidth": 360
+  },
+  {
+    "page": "search",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [],
+    "headings": [
+      "Kết quả tìm kiếm cho: \"hồng\"",
+      "Xếp theo:",
+      "Hộp hoa hồng xanh mix phăng,đồng tiền,cát tường",
+      "Giỏ hoa Phăng/Cát Tường mix hoa ly,hồng kem tú cầu"
+    ],
+    "scrollWidth": 1425
+  },
+  {
+    "page": "search",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [],
+    "headings": [
+      "Kết quả tìm kiếm cho: \"hồng\"",
+      "Xếp theo:",
+      "Hộp hoa hồng xanh mix phăng,đồng tiền,cát tường",
+      "Giỏ hoa Phăng/Cát Tường mix hoa ly,hồng kem tú cầu"
+    ],
+    "scrollWidth": 1265
+  },
+  {
+    "page": "search",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [],
+    "headings": [
+      "Kết quả tìm kiếm cho: \"hồng\"",
+      "Xếp theo:",
+      "Hộp hoa hồng xanh mix phăng,đồng tiền,cát tường",
+      "Giỏ hoa Phăng/Cát Tường mix hoa ly,hồng kem tú cầu"
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "page": "search",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [],
+    "headings": [
+      "Kết quả tìm kiếm cho: \"hồng\"",
+      "Xếp theo:",
+      "Hộp hoa hồng xanh mix phăng,đồng tiền,cát tường",
+      "Giỏ hoa Phăng/Cát Tường mix hoa ly,hồng kem tú cầu"
+    ],
+    "scrollWidth": 360
+  },
+  {
+    "page": "home",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [],
+    "headings": [
+      "Giao hoa 2h",
+      "Xuất hóa đơn VAT",
+      "100% tươi mới",
+      "Hotline: 0898449950"
+    ],
+    "scrollWidth": 1425
+  },
+  {
+    "page": "home",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [],
+    "headings": [
+      "Giao hoa 2h",
+      "Xuất hóa đơn VAT",
+      "100% tươi mới",
+      "Hotline: 0898449950"
+    ],
+    "scrollWidth": 1265
+  },
+  {
+    "page": "home",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [],
+    "headings": [
+      "Giao hoa 2h",
+      "Xuất hóa đơn VAT",
+      "100% tươi mới",
+      "Hotline: 0898449950"
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "page": "home",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [],
+    "headings": [
+      "Giao hoa 2h",
+      "Xuất hóa đơn VAT",
+      "100% tươi mới",
+      "Hotline: 0898449950"
+    ],
+    "scrollWidth": 360
+  },
+  {
+    "page": "catalog",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [],
+    "headings": [
+      "Tất cả sản phẩm",
+      "Xếp theo:",
+      "Hộp hoa hồng xanh mix phăng,đồng tiền,cát tường",
+      "Giỏ hoa Phăng/Cát Tường mix hoa ly,hồng kem tú cầu"
+    ],
+    "scrollWidth": 1425
+  },
+  {
+    "page": "catalog",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [],
+    "headings": [
+      "Tất cả sản phẩm",
+      "Xếp theo:",
+      "Hộp hoa hồng xanh mix phăng,đồng tiền,cát tường",
+      "Giỏ hoa Phăng/Cát Tường mix hoa ly,hồng kem tú cầu"
+    ],
+    "scrollWidth": 1265
+  },
+  {
+    "page": "catalog",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [],
+    "headings": [
+      "Tất cả sản phẩm",
+      "Xếp theo:",
+      "Hộp hoa hồng xanh mix phăng,đồng tiền,cát tường",
+      "Giỏ hoa Phăng/Cát Tường mix hoa ly,hồng kem tú cầu"
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "page": "catalog",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [],
+    "headings": [
+      "Tất cả sản phẩm",
+      "Xếp theo:",
+      "Hộp hoa hồng xanh mix phăng,đồng tiền,cát tường",
+      "Giỏ hoa Phăng/Cát Tường mix hoa ly,hồng kem tú cầu"
+    ],
+    "scrollWidth": 360
+  },
+  {
+    "page": "product-detail",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [],
+    "headings": [
+      "Bó Hoa Hướng Dương – Rực Rỡ & Lạc Quan ngày tốt nghiệp",
+      "Duyệt ảnh sản phẩm",
+      "Thẻ chúc mừng miễn phí",
+      "Banner sản phẩm"
+    ],
+    "scrollWidth": 1425
+  },
+  {
+    "page": "product-detail",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [],
+    "headings": [
+      "Bó Hoa Hướng Dương – Rực Rỡ & Lạc Quan ngày tốt nghiệp",
+      "Duyệt ảnh sản phẩm",
+      "Thẻ chúc mừng miễn phí",
+      "Banner sản phẩm"
+    ],
+    "scrollWidth": 1265
+  },
+  {
+    "page": "product-detail",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [],
+    "headings": [
+      "Bó Hoa Hướng Dương – Rực Rỡ & Lạc Quan ngày tốt nghiệp",
+      "Duyệt ảnh sản phẩm",
+      "Thẻ chúc mừng miễn phí",
+      "Banner sản phẩm"
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "page": "product-detail",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [],
+    "headings": [
+      "Bó Hoa Hướng Dương – Rực Rỡ & Lạc Quan ngày tốt nghiệp",
+      "Duyệt ảnh sản phẩm",
+      "Thẻ chúc mừng miễn phí",
+      "Banner sản phẩm"
+    ],
+    "scrollWidth": 360
+  },
+  {
+    "page": "history",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [],
+    "headings": [],
+    "scrollWidth": 1425
+  },
+  {
+    "page": "history",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [],
+    "headings": [],
+    "scrollWidth": 1265
+  },
+  {
+    "page": "history",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [],
+    "headings": [],
+    "scrollWidth": 375
+  },
+  {
+    "page": "history",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [],
+    "headings": [],
+    "scrollWidth": 360
+  },
+  {
+    "page": "order-detail",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [],
+    "headings": [],
+    "scrollWidth": 1425
+  },
+  {
+    "page": "order-detail",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [],
+    "headings": [],
+    "scrollWidth": 1265
+  },
+  {
+    "page": "order-detail",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [],
+    "headings": [],
+    "scrollWidth": 375
+  },
+  {
+    "page": "order-detail",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [],
+    "headings": [],
+    "scrollWidth": 360
+  },
+  {
+    "page": "admin-orders",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [],
+    "headings": [
+      "ADMIN",
+      "QUẢN LÝ HÓA ĐƠN"
+    ],
+    "scrollWidth": 1440
+  },
+  {
+    "page": "admin-orders",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [],
+    "headings": [
+      "ADMIN",
+      "QUẢN LÝ HÓA ĐƠN"
+    ],
+    "scrollWidth": 1280
+  },
+  {
+    "page": "admin-orders",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [],
+    "headings": [
+      "ADMIN",
+      "QUẢN LÝ HÓA ĐƠN"
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "page": "admin-orders",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [],
+    "headings": [
+      "ADMIN",
+      "QUẢN LÝ HÓA ĐƠN"
+    ],
+    "scrollWidth": 360
+  },
+  {
+    "page": "admin-dashboard",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [],
+    "headings": [
+      "ADMIN"
+    ],
+    "scrollWidth": 1425
+  },
+  {
+    "page": "admin-dashboard",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [],
+    "headings": [
+      "ADMIN"
+    ],
+    "scrollWidth": 1265
+  },
+  {
+    "page": "admin-dashboard",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [],
+    "headings": [
+      "ADMIN"
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "page": "admin-dashboard",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [],
+    "headings": [
+      "ADMIN"
+    ],
+    "scrollWidth": 366
+  },
+  {
+    "page": "admin-products",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [],
+    "headings": [
+      "ADMIN",
+      "QUẢN LÝ SẢN PHẨM"
+    ],
+    "scrollWidth": 1425
+  },
+  {
+    "page": "admin-products",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [],
+    "headings": [
+      "ADMIN",
+      "QUẢN LÝ SẢN PHẨM"
+    ],
+    "scrollWidth": 1265
+  },
+  {
+    "page": "admin-products",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [],
+    "headings": [
+      "ADMIN",
+      "QUẢN LÝ SẢN PHẨM"
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "page": "admin-products",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [],
+    "headings": [
+      "ADMIN",
+      "QUẢN LÝ SẢN PHẨM"
+    ],
+    "scrollWidth": 360
+  },
+  {
+    "page": "login",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [],
+    "headings": [
+      "Đăng nhập",
+      "Lấy lại mật khẩu"
+    ],
+    "scrollWidth": 1425
+  },
+  {
+    "page": "login",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [],
+    "headings": [
+      "Đăng nhập",
+      "Lấy lại mật khẩu"
+    ],
+    "scrollWidth": 1265
+  },
+  {
+    "page": "login",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [],
+    "headings": [
+      "Đăng nhập",
+      "Lấy lại mật khẩu"
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "page": "login",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [],
+    "headings": [
+      "Đăng nhập",
+      "Lấy lại mật khẩu"
+    ],
+    "scrollWidth": 360
+  },
+  {
+    "page": "register",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [],
+    "headings": [
+      "Đăng ký"
+    ],
+    "scrollWidth": 1425
+  },
+  {
+    "page": "register",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [],
+    "headings": [
+      "Đăng ký"
+    ],
+    "scrollWidth": 1265
+  },
+  {
+    "page": "register",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [],
+    "headings": [
+      "Đăng ký"
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "page": "register",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [],
+    "headings": [
+      "Đăng ký"
+    ],
+    "scrollWidth": 360
+  },
+  {
+    "page": "wishlist",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [],
+    "headings": [
+      "Sản phẩm yêu thích"
+    ],
+    "scrollWidth": 1425
+  },
+  {
+    "page": "wishlist",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [],
+    "headings": [
+      "Sản phẩm yêu thích"
+    ],
+    "scrollWidth": 1265
+  },
+  {
+    "page": "wishlist",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [],
+    "headings": [
+      "Sản phẩm yêu thích"
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "page": "wishlist",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [],
+    "headings": [
+      "Sản phẩm yêu thích"
+    ],
+    "scrollWidth": 360
+  },
+  {
+    "page": "cart",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [],
+    "headings": [
+      "Giỏ hàng của bạn"
+    ],
+    "scrollWidth": 1425
+  },
+  {
+    "page": "cart",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [],
+    "headings": [
+      "Giỏ hàng của bạn"
+    ],
+    "scrollWidth": 1265
+  },
+  {
+    "page": "cart",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [],
+    "headings": [
+      "Giỏ hàng của bạn"
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "page": "cart",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [],
+    "headings": [
+      "Giỏ hàng của bạn"
+    ],
+    "scrollWidth": 360
+  },
+  {
+    "page": "cod-success",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [],
+    "headings": [
+      "Đặt hàng thành công!"
+    ],
+    "scrollWidth": 1425
+  },
+  {
+    "page": "cod-success",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [],
+    "headings": [
+      "Đặt hàng thành công!"
+    ],
+    "scrollWidth": 1265
+  },
+  {
+    "page": "cod-success",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [],
+    "headings": [
+      "Đặt hàng thành công!"
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "page": "cod-success",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [],
+    "headings": [
+      "Đặt hàng thành công!"
+    ],
+    "scrollWidth": 360
+  },
+  {
+    "page": "contact",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [],
+    "headings": [],
+    "scrollWidth": 1425
+  },
+  {
+    "page": "contact",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [],
+    "headings": [],
+    "scrollWidth": 1265
+  },
+  {
+    "page": "contact",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [],
+    "headings": [],
+    "scrollWidth": 375
+  },
+  {
+    "page": "contact",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [],
+    "headings": [],
+    "scrollWidth": 360
+  },
+  {
+    "page": "news",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [],
+    "headings": [
+      "Tin tức",
+      "Bó Hoa Hồng Đẹp – Quà Tặng Tinh Tế Từ Góc Hoa Xinh",
+      "Tặng Hoa Sinh Nhật – Món Quà Ý Nghĩa Và Tinh Tế",
+      "Bảo Quản Hoa Tươi Sau Khi Được Tặng - Giữ Hoa Luôn Tươi Mới"
+    ],
+    "scrollWidth": 1425
+  },
+  {
+    "page": "news",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [],
+    "headings": [
+      "Tin tức",
+      "Bó Hoa Hồng Đẹp – Quà Tặng Tinh Tế Từ Góc Hoa Xinh",
+      "Tặng Hoa Sinh Nhật – Món Quà Ý Nghĩa Và Tinh Tế",
+      "Bảo Quản Hoa Tươi Sau Khi Được Tặng - Giữ Hoa Luôn Tươi Mới"
+    ],
+    "scrollWidth": 1265
+  },
+  {
+    "page": "news",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [],
+    "headings": [
+      "Tin tức",
+      "Bó Hoa Hồng Đẹp – Quà Tặng Tinh Tế Từ Góc Hoa Xinh",
+      "Tặng Hoa Sinh Nhật – Món Quà Ý Nghĩa Và Tinh Tế",
+      "Bảo Quản Hoa Tươi Sau Khi Được Tặng - Giữ Hoa Luôn Tươi Mới"
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "page": "news",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [],
+    "headings": [
+      "Tin tức",
+      "Bó Hoa Hồng Đẹp – Quà Tặng Tinh Tế Từ Góc Hoa Xinh",
+      "Tặng Hoa Sinh Nhật – Món Quà Ý Nghĩa Và Tinh Tế",
+      "Bảo Quản Hoa Tươi Sau Khi Được Tặng - Giữ Hoa Luôn Tươi Mới"
+    ],
+    "scrollWidth": 360
+  },
+  {
+    "page": "news-detail",
+    "width": 1440,
+    "height": 900,
+    "brokenImages": [
+      "//bizweb.dktcdn.net/100/487/411/products/2d122e79-8505-4345-9af1-eb98339ed245.jpg?v=1731045034930",
+      "//bizweb.dktcdn.net/100/487/411/products/41bea17a-528a-471a-a571-a69a8d601ffb.jpg?v=1730122516977"
+    ],
+    "headings": [
+      "Bó Hoa Hồng Đẹp – Quà Tặng Tinh Tế Từ Góc Hoa Xinh",
+      "Ý Nghĩa Đặc Biệt Của Các Loại Hoa Hồng",
+      "Những Mẫu Bó Hoa Hồng Tại Góc Hoa Xinh",
+      "Cách Chọn Số Lượng Bông Hoa Hồng Đúng Ý Nghĩa"
+    ],
+    "scrollWidth": 1425
+  },
+  {
+    "page": "news-detail",
+    "width": 1280,
+    "height": 800,
+    "brokenImages": [
+      "//bizweb.dktcdn.net/100/487/411/products/2d122e79-8505-4345-9af1-eb98339ed245.jpg?v=1731045034930",
+      "//bizweb.dktcdn.net/100/487/411/products/41bea17a-528a-471a-a571-a69a8d601ffb.jpg?v=1730122516977"
+    ],
+    "headings": [
+      "Bó Hoa Hồng Đẹp – Quà Tặng Tinh Tế Từ Góc Hoa Xinh",
+      "Ý Nghĩa Đặc Biệt Của Các Loại Hoa Hồng",
+      "Những Mẫu Bó Hoa Hồng Tại Góc Hoa Xinh",
+      "Cách Chọn Số Lượng Bông Hoa Hồng Đúng Ý Nghĩa"
+    ],
+    "scrollWidth": 1265
+  },
+  {
+    "page": "news-detail",
+    "width": 390,
+    "height": 844,
+    "brokenImages": [
+      "//bizweb.dktcdn.net/100/487/411/products/2d122e79-8505-4345-9af1-eb98339ed245.jpg?v=1731045034930",
+      "//bizweb.dktcdn.net/100/487/411/products/41bea17a-528a-471a-a571-a69a8d601ffb.jpg?v=1730122516977"
+    ],
+    "headings": [
+      "Bó Hoa Hồng Đẹp – Quà Tặng Tinh Tế Từ Góc Hoa Xinh",
+      "Ý Nghĩa Đặc Biệt Của Các Loại Hoa Hồng",
+      "Những Mẫu Bó Hoa Hồng Tại Góc Hoa Xinh",
+      "Cách Chọn Số Lượng Bông Hoa Hồng Đúng Ý Nghĩa"
+    ],
+    "scrollWidth": 375
+  },
+  {
+    "page": "news-detail",
+    "width": 375,
+    "height": 812,
+    "brokenImages": [
+      "//bizweb.dktcdn.net/100/487/411/products/2d122e79-8505-4345-9af1-eb98339ed245.jpg?v=1731045034930",
+      "//bizweb.dktcdn.net/100/487/411/products/41bea17a-528a-471a-a571-a69a8d601ffb.jpg?v=1730122516977"
+    ],
+    "headings": [
+      "Bó Hoa Hồng Đẹp – Quà Tặng Tinh Tế Từ Góc Hoa Xinh",
+      "Ý Nghĩa Đặc Biệt Của Các Loại Hoa Hồng",
+      "Những Mẫu Bó Hoa Hồng Tại Góc Hoa Xinh",
+      "Cách Chọn Số Lượng Bông Hoa Hồng Đúng Ý Nghĩa"
+    ],
+    "scrollWidth": 360
+  }
+]

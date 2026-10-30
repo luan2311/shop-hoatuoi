@@ -1,3 +1,9 @@
+@php
+    $oldInput = static function (string $key, mixed $default = ''): mixed {
+        $value = old($key, $default);
+        return is_scalar($value) || $value === null ? $value : $default;
+    };
+@endphp
 @if(isset($errors) && $errors->any())
     <div class="alert alert-danger mb-4">
         <ul class="mb-0">
@@ -12,21 +18,21 @@
 <div class="form-group row">
     <label for="name" class="col-md-2 col-form-label">Tên sản phẩm <span class="text-danger">*</span></label>
     <div class="col-md-10">
-        <input type="text" name="name" id="name" class="form-control" value="{{ old('name', $product->name ?? '') }}" required />
+        <input type="text" name="name" id="name" class="form-control" value="{{ $oldInput('name', $product->name ?? '') }}" required />
     </div>
 </div>
 
 <div class="form-group row">
     <label for="code" class="col-md-2 col-form-label">Mã sản phẩm</label>
     <div class="col-md-10">
-        <input type="text" name="code" id="code" class="form-control" value="{{ old('code', $product->code ?? '') }}" />
+        <input type="text" name="code" id="code" class="form-control" value="{{ $oldInput('code', $product->code ?? '') }}" />
     </div>
 </div>
 
 <div class="form-group row">
     <label for="price" class="col-md-2 col-form-label">Giá bán <span class="text-danger">*</span></label>
     <div class="col-md-10">
-        <input type="number" name="price" id="price" class="form-control" min="0" value="{{ old('price', (int)($product->price ?? 0)) }}" required />
+        <input type="number" name="price" id="price" class="form-control" min="0" value="{{ $oldInput('price', (int)($product->price ?? 0)) }}" required />
     </div>
 </div>
 
@@ -36,7 +42,7 @@
         <select name="category_id" id="category_id" class="form-control" required>
             <option value="">--- Chọn loại sản phẩm ---</option>
             @foreach($categories as $category)
-                <option value="{{ $category->id }}" @selected(old('category_id', $product->category_id ?? '') === (string)$category->id || old('category_id', data_get($product->category ?? [], 'code')) === $category->code)>
+                <option value="{{ $category->id }}" @selected($oldInput('category_id', $product->category_id ?? '') === (string)$category->id || $oldInput('category_id', data_get($product->category ?? [], 'code')) === $category->code)>
                     {{ $category->name }}
                 </option>
             @endforeach
@@ -48,8 +54,8 @@
     <label for="status" class="col-md-2 col-form-label">Tình trạng <span class="text-danger">*</span></label>
     <div class="col-md-10">
         <select name="status" id="status" class="form-control" required>
-            <option value="Còn hàng" @selected(old('status', $product->status ?? 'Còn hàng') === 'Còn hàng')>Còn hàng</option>
-            <option value="Hết hàng" @selected(old('status', $product->status ?? '') === 'Hết hàng')>Hết hàng</option>
+            <option value="Còn hàng" @selected($oldInput('status', $product->status ?? 'Còn hàng') === 'Còn hàng')>Còn hàng</option>
+            <option value="Hết hàng" @selected($oldInput('status', $product->status ?? '') === 'Hết hàng')>Hết hàng</option>
         </select>
     </div>
 </div>
@@ -57,14 +63,14 @@
 <div class="form-group row">
     <label for="stock" class="col-md-2 col-form-label">Số lượng tồn <span class="text-danger">*</span></label>
     <div class="col-md-10">
-        <input type="number" name="stock" id="stock" class="form-control" min="0" value="{{ old('stock', $product->stock ?? 10) }}" required />
+        <input type="number" name="stock" id="stock" class="form-control" min="0" value="{{ $oldInput('stock', $product->stock ?? 10) }}" required />
     </div>
 </div>
 
 <div class="form-group row">
     <label for="description" class="col-md-2 col-form-label">Mô tả</label>
     <div class="col-md-10">
-        <textarea name="description" id="description" class="form-control" rows="5">{{ old('description', $product->description ?? '') }}</textarea>
+        <textarea name="description" id="description" class="form-control" rows="5">{{ $oldInput('description', $product->description ?? '') }}</textarea>
     </div>
 </div>
 

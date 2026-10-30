@@ -7,6 +7,8 @@ use RuntimeException;
 
 trait UsesMongoDatabase
 {
+    private bool $mongoDatabaseInitialized = false;
+
     protected function setUpUsesMongoDatabase(): void
     {
         $this->initializeMongoDatabase();
@@ -20,12 +22,10 @@ trait UsesMongoDatabase
 
     private function initializeMongoDatabase(): void
     {
-        static $initialized = [];
-        $key = spl_object_hash($this);
-        if (isset($initialized[$key])) {
+        if ($this->mongoDatabaseInitialized) {
             return;
         }
-        $initialized[$key] = true;
+        $this->mongoDatabaseInitialized = true;
 
         $database = config('database.connections.mongodb.database');
         if (! app()->environment('testing') || ! str_starts_with($database, 'shop_hoatuoi_test')) {
@@ -33,17 +33,28 @@ trait UsesMongoDatabase
         }
 
         // Each test gets a new isolated database and automatically drops it after completion.
-        $testDb = $database.'_'.getmypid().'_'.bin2hex(random_bytes(4));
+        $testDb = 'shop_hoatuoi_test_'.getmypid().'_'.bin2hex(random_bytes(8));
         config(['database.connections.mongodb.database' => $testDb]);
         DB::purge('mongodb');
         $connection = DB::connection('mongodb');
 
-        $this->beforeApplicationDestroyed(function () use ($connection, $testDb): void {
-            if (! env('KEEP_TEST_DB', false) && str_starts_with($testDb, 'shop_hoatuoi_test')) {
-                try {
-                    $connection->getDatabase()->drop();
-                } catch (\Throwable) {
+        $client = $connection->getMongoClient();
+        if (in_array($testDb, iterator_to_array($client->listDatabaseNames()), true)) {
+            throw new RuntimeException('Refusing to use a pre-existing test database.');
+        }
+        $ownerToken = bin2hex(random_bytes(16));
+        $ownedDatabase = $connection->getDatabase();
+        $ownedDatabase->selectCollection('_test_owner')->insertOne(['token' => $ownerToken]);
+
+        $this->beforeApplicationDestroyed(function () use ($ownedDatabase, $testDb, $ownerToken): void {
+            if (! env('KEEP_TEST_DB', false)) {
+                $marker = $ownedDatabase->selectCollection('_test_owner')->findOne(['token' => $ownerToken]);
+                if ($ownedDatabase->getDatabaseName() !== $testDb
+                    || ! preg_match('/^shop_hoatuoi_test_[0-9]+_[a-f0-9]{16}$/', $testDb)
+                    || $marker === null) {
+                    throw new RuntimeException('Unowned database cleanup refused.');
                 }
+                $ownedDatabase->drop();
             }
         });
 

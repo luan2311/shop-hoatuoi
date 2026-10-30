@@ -1,0 +1,324 @@
+[
+  {
+    "check": "Public GET /",
+    "result": "PASS"
+  },
+  {
+    "check": "Public GET /products",
+    "result": "PASS"
+  },
+  {
+    "check": "Public GET /products?category_slug=bo-hoa-tuoi",
+    "result": "PASS"
+  },
+  {
+    "check": "Public GET /products?q=h%C6%B0%E1%BB%9Bng",
+    "result": "PASS"
+  },
+  {
+    "check": "Public GET /products?page=2",
+    "result": "PASS"
+  },
+  {
+    "check": "Public GET /posts",
+    "result": "PASS"
+  },
+  {
+    "check": "Public GET /contact",
+    "result": "PASS"
+  },
+  {
+    "check": "Public GET /login",
+    "result": "PASS"
+  },
+  {
+    "check": "Public GET /register",
+    "result": "PASS"
+  },
+  {
+    "check": "Missing product 404",
+    "result": "PASS"
+  },
+  {
+    "check": "Missing post 404",
+    "result": "PASS"
+  },
+  {
+    "check": "Guest cart login gate",
+    "result": "PASS"
+  },
+  {
+    "check": "user seeded QA login",
+    "result": "PASS"
+  },
+  {
+    "check": "admin seeded QA login",
+    "result": "PASS"
+  },
+  {
+    "check": "Admin GET /admin/dashboard",
+    "result": "PASS",
+    "http": 200
+  },
+  {
+    "check": "Admin GET /admin/products",
+    "result": "PASS",
+    "http": 200
+  },
+  {
+    "check": "Admin GET /admin/products/create",
+    "result": "PASS",
+    "http": 200
+  },
+  {
+    "check": "Admin GET /admin/orders",
+    "result": "PASS",
+    "http": 200
+  },
+  {
+    "check": "Admin GET /admin/users",
+    "result": "PASS",
+    "http": 200
+  },
+  {
+    "check": "Admin GET /admin/users/create",
+    "result": "PASS",
+    "http": 200
+  },
+  {
+    "check": "Admin GET /admin/posts",
+    "result": "PASS",
+    "http": 200
+  },
+  {
+    "check": "Admin GET /admin/posts/create",
+    "result": "PASS",
+    "http": 200
+  },
+  {
+    "check": "Admin GET /admin/contacts",
+    "result": "PASS",
+    "http": 200
+  },
+  {
+    "check": "Admin GET /admin/categories",
+    "result": "PASS",
+    "http": 200
+  },
+  {
+    "check": "Admin GET /admin/categories/create",
+    "result": "PASS",
+    "http": 200
+  },
+  {
+    "check": "User admin forbidden",
+    "result": "PASS"
+  },
+  {
+    "check": "CSRF missing token blocked",
+    "result": "PASS"
+  },
+  {
+    "check": "AJAX add 2",
+    "result": "PASS",
+    "http": 200,
+    "cartCount": 2
+  },
+  {
+    "check": "AJAX add 1",
+    "result": "PASS",
+    "http": 200,
+    "cartCount": 3
+  },
+  {
+    "check": "Cart Mongo accumulation",
+    "result": "PASS"
+  },
+  {
+    "check": "Navbar BSON count after reload",
+    "result": "PASS"
+  },
+  {
+    "check": "Cart validation 0",
+    "result": "PASS"
+  },
+  {
+    "check": "Cart validation 1",
+    "result": "PASS"
+  },
+  {
+    "check": "Cart validation 2",
+    "result": "PASS"
+  },
+  {
+    "check": "Delivery validation422",
+    "result": "PASS"
+  },
+  {
+    "check": "Checkout real HTTP redirect",
+    "result": "PASS"
+  },
+  {
+    "check": "Checkout snapshot stock and cart atomic",
+    "result": "PASS"
+  },
+  {
+    "check": "Replay same token no duplicate",
+    "result": "PASS"
+  },
+  {
+    "check": "History own detail",
+    "result": "PASS"
+  },
+  {
+    "check": "Register validation",
+    "result": "PASS"
+  },
+  {
+    "check": "Registration persists user",
+    "result": "PASS"
+  },
+  {
+    "check": "Cross owner order404",
+    "result": "PASS"
+  },
+  {
+    "check": "Cross owner cart empty",
+    "result": "PASS"
+  },
+  {
+    "check": "Duplicate email422",
+    "result": "PASS"
+  },
+  {
+    "check": "Logout ends session",
+    "result": "PASS"
+  },
+  {
+    "check": "Admin search/filter",
+    "result": "PASS"
+  },
+  {
+    "check": "Workflow rejects skip",
+    "result": "PASS"
+  },
+  {
+    "check": "Workflow Processing",
+    "result": "PASS"
+  },
+  {
+    "check": "Cancel restocks once",
+    "result": "PASS"
+  },
+  {
+    "check": "Repeat cancel422 no stock increment",
+    "result": "PASS"
+  },
+  {
+    "check": "Cancelled order cannot reopen via complete shortcut",
+    "result": "PASS",
+    "http": 302,
+    "actual_status": "Cancelled",
+    "stock": 6
+  },
+  {
+    "check": "Contact invalid422",
+    "result": "PASS"
+  },
+  {
+    "check": "Contact saved Mongo",
+    "result": "PASS"
+  },
+  {
+    "check": "Wishlist AJAX200",
+    "result": "PASS"
+  },
+  {
+    "check": "Wishlist Mongo saved",
+    "result": "PASS"
+  },
+  {
+    "check": "Search API returns JSON",
+    "result": "PASS"
+  },
+  {
+    "check": "Revenue endpoint works",
+    "result": "PASS"
+  },
+  {
+    "check": "QA fixture price stock image baseline",
+    "result": "PASS"
+  },
+  {
+    "check": "Stop selling fixture",
+    "result": "PASS"
+  },
+  {
+    "check": "Stopped product cannot add",
+    "result": "PASS"
+  },
+  {
+    "check": "Delete uploaded QA fixture",
+    "result": "PASS"
+  },
+  {
+    "check": "Admin category create",
+    "result": "PASS"
+  },
+  {
+    "check": "Admin category edit",
+    "result": "PASS"
+  },
+  {
+    "check": "Admin category delete empty fixture",
+    "result": "PASS"
+  },
+  {
+    "check": "Admin post create",
+    "result": "PASS"
+  },
+  {
+    "check": "Public new post detail",
+    "result": "PASS"
+  },
+  {
+    "check": "Admin post edit",
+    "result": "PASS"
+  },
+  {
+    "check": "Admin post delete fixture",
+    "result": "PASS"
+  },
+  {
+    "check": "Admin create user",
+    "result": "PASS"
+  },
+  {
+    "check": "Admin disable user",
+    "result": "PASS"
+  },
+  {
+    "check": "Disabled user cannot login",
+    "result": "PASS",
+    "login_http": 422,
+    "protected_cart_http": 302
+  },
+  {
+    "check": "Admin re-enable user",
+    "result": "PASS"
+  },
+  {
+    "check": "Admin contact detail",
+    "result": "PASS"
+  },
+  {
+    "check": "Admin contact delete QA fixture",
+    "result": "PASS"
+  },
+  {
+    "check": "Login rejects external protocol-relative returnUrl",
+    "result": "PASS",
+    "http": 302,
+    "location": "http://127.0.0.1:8050"
+  }
+]

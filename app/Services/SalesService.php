@@ -64,7 +64,7 @@ class SalesService
             if ($action === 'clear') {
                 $items = collect();
             } elseif ($action === 'remove') {
-                $matchedKey = $items->keys()->first(fn ($k) => strcasecmp((string)$k, (string)$key) === 0);
+                $matchedKey = $items->keys()->first(fn ($k) => strcasecmp((string) $k, (string) $key) === 0);
                 abort_unless($matchedKey !== null, 404);
                 $items->forget($matchedKey);
             } else {
@@ -72,7 +72,7 @@ class SalesService
                     ? Product::findOrFail($key)
                     : (Product::where('code', $key)->first() ?? Product::where('code', 'regex', '/^'.preg_quote($key, '/').'$/i')->firstOrFail());
                 if ($action === 'update') {
-                    $matchedKey = $items->keys()->first(fn ($k) => strcasecmp((string)$k, (string)$product->code) === 0);
+                    $matchedKey = $items->keys()->first(fn ($k) => strcasecmp((string) $k, (string) $product->code) === 0);
                     abort_unless($matchedKey !== null, 404);
                 }
                 $amount = $quantity + ($action === 'add' ? ($items->get($product->code)['quantity'] ?? 0) : 0);
@@ -173,14 +173,7 @@ class SalesService
 
     protected function runTransaction(callable $callback)
     {
-        try {
-            return DB::connection('mongodb')->transaction($callback, attempts: 5);
-        } catch (\MongoDB\Driver\Exception\CommandException $e) {
-            if (str_contains($e->getMessage(), 'Transaction numbers are only allowed on a replica set member or mongos')) {
-                return $callback();
-            }
-            throw $e;
-        }
+        return DB::connection('mongodb')->transaction($callback, attempts: 5);
     }
 
     private function available(Product $product, mixed $quantity): void

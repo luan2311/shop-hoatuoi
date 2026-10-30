@@ -11,7 +11,7 @@ class PostController extends Controller
         $posts = Post::orderBy('published_at', 'desc')->orderBy('_id', 'desc')->paginate(10);
 
         return view('posts.index', [
-            'posts'        => $posts,
+            'posts' => $posts,
             'tinTucNoiBat' => $this->tinTucNoiBat(),
         ]);
     }
@@ -24,14 +24,14 @@ class PostController extends Controller
             ->firstOrFail();
 
         return view('posts.show', [
-            'post'           => $post,
+            'post' => $post,
             'tinTucLienQuan' => Post::where('slug', '!=', $post->slug)
                 ->where('code', '!=', $post->code)
                 ->orderBy('published_at', 'desc')
                 ->orderBy('_id', 'desc')
                 ->take(3)
                 ->get(),
-            'tinTucNoiBat'   => $this->tinTucNoiBat(),
+            'tinTucNoiBat' => $this->tinTucNoiBat(),
         ]);
     }
 

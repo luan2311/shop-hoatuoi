@@ -5,13 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Order;
-use App\Models\OrderDetail;
 use App\Models\Product;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -48,7 +46,7 @@ class DashboardController extends Controller
                     $qty = (int) ($it['quantity'] ?? 1);
                     $price = (float) ($it['subtotal'] ?? (($it['price'] ?? 0) * $qty));
 
-                    if (!isset($productSales[$pName])) {
+                    if (! isset($productSales[$pName])) {
                         $productSales[$pName] = [
                             'product_name' => $pName,
                             'quantity' => 0,
@@ -63,7 +61,7 @@ class DashboardController extends Controller
             $topSellingProducts = collect($productSales)
                 ->sortByDesc('total_amount')
                 ->take(3)
-                ->map(fn ($p) => (object)$p)
+                ->map(fn ($p) => (object) $p)
                 ->values();
         } catch (\Throwable $e) {
             $topSellingProducts = collect();
