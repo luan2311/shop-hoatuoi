@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 use MongoDB\BSON\ObjectId;
+use MongoDB\Driver\Exception\CommandException;
 
 class SalesService
 {
@@ -25,7 +26,7 @@ class SalesService
         return $this->owned(Cart::query(), $user)->first();
     }
 
-    public function summary(?Cart $cart): array
+    public function summary(?Cart $cart, ?string $voucherCode = null): array
     {
         $items = $cart?->items ?? [];
         $codes = array_column($items, 'product_code');
@@ -50,7 +51,9 @@ class SalesService
             ];
         }
 
-        return ['lines' => $lines, 'total' => array_sum(array_column($lines, 'subtotal'))];
+        $totals = app(VoucherService::class)->totals(array_sum(array_column($lines, 'subtotal')), $voucherCode);
+
+        return ['lines' => $lines, 'total' => $totals['total_amount']] + $totals;
     }
 
     public function change(User $user, string $action, ?string $key = null, int $quantity = 1): void
@@ -64,7 +67,7 @@ class SalesService
             if ($action === 'clear') {
                 $items = collect();
             } elseif ($action === 'remove') {
-                $matchedKey = $items->keys()->first(fn ($k) => strcasecmp((string)$k, (string)$key) === 0);
+                $matchedKey = $items->keys()->first(fn ($k) => strcasecmp((string) $k, (string) $key) === 0);
                 abort_unless($matchedKey !== null, 404);
                 $items->forget($matchedKey);
             } else {
@@ -72,7 +75,7 @@ class SalesService
                     ? Product::findOrFail($key)
                     : (Product::where('code', $key)->first() ?? Product::where('code', 'regex', '/^'.preg_quote($key, '/').'$/i')->firstOrFail());
                 if ($action === 'update') {
-                    $matchedKey = $items->keys()->first(fn ($k) => strcasecmp((string)$k, (string)$product->code) === 0);
+                    $matchedKey = $items->keys()->first(fn ($k) => strcasecmp((string) $k, (string) $product->code) === 0);
                     abort_unless($matchedKey !== null, 404);
                 }
                 $amount = $quantity + ($action === 'add' ? ($items->get($product->code)['quantity'] ?? 0) : 0);
@@ -99,6 +102,8 @@ class SalesService
                 throw ValidationException::withMessages(['cart' => 'Giỏ hàng đang trống.']);
             }
 
+            // Reject unknown codes before any stock write; never accept client money fields.
+            app(VoucherService::class)->totals(0, $data['voucher_code'] ?? null);
             $snapshots = [];
             foreach ($cart->items as $item) {
                 $product = Product::where('code', $item['product_code'])->first();
@@ -125,6 +130,9 @@ class SalesService
                 ];
             }
 
+            $totals = app(VoucherService::class)->totals(
+                array_sum(array_column($snapshots, 'subtotal')), $data['voucher_code'] ?? null
+            );
             $order = Order::create([
                 'order_code' => 'HD-'.Str::ulid(),
                 'checkout_key' => $key,
@@ -137,11 +145,10 @@ class SalesService
                     'note' => $data['note'] ?? null,
                 ],
                 'items' => $snapshots,
-                'total_amount' => array_sum(array_column($snapshots, 'subtotal')),
                 'payment_method' => $data['payment_method'],
                 'status' => 'Pending',
                 'order_date' => now(),
-            ]);
+            ] + $totals);
             // Updating the same document makes concurrent checkout/cart edits conflict and retry.
             $cart->items = [];
             $cart->save();
@@ -175,7 +182,7 @@ class SalesService
     {
         try {
             return DB::connection('mongodb')->transaction($callback, attempts: 5);
-        } catch (\MongoDB\Driver\Exception\CommandException $e) {
+        } catch (CommandException $e) {
             if (str_contains($e->getMessage(), 'Transaction numbers are only allowed on a replica set member or mongos')) {
                 return $callback();
             }

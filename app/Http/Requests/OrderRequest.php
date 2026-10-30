@@ -21,6 +21,7 @@ class OrderRequest extends FormRequest
             'email' => ['nullable', 'email', 'max:255'],
             'note' => ['nullable', 'string', 'max:1000'],
             'payment_method' => ['required', 'in:COD,Banking'],
+            'voucher_code' => ['nullable', 'string', 'max:50'],
         ];
     }
 }

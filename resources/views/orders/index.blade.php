@@ -529,6 +529,10 @@
                                 @endforeach
                             </tbody>
                             <tfoot class="table-light">
+                                @if($order->voucher_code)
+                                <tr><td colspan="3" class="text-end">Tạm tính:</td><td class="text-end">{{ number_format((float) (string) $order->subtotal_amount, 0, ',', '.') }} đ</td></tr>
+                                <tr><td colspan="3" class="text-end">Voucher {{ $order->voucher_code }}:</td><td class="text-end">- {{ number_format((float) (string) $order->discount_amount, 0, ',', '.') }} đ</td></tr>
+                                @endif
                                 <tr>
                                     <td colspan="3" class="text-end fw-bold">Tổng thanh toán:</td>
                                     <td class="text-end fw-bold text-danger">
