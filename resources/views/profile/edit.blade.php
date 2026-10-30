@@ -136,8 +136,8 @@
 <section class="page_customer_account">
     <div class="container">
         <div class="row">
-            <!-- Cột trái: Điều hướng tài khoản (Ported từ Index.cshtml repo cũ) -->
-            <aside class="col-xs-12 col-sm-12 col-lg-3 col-left-ac mb-4">
+            <!-- Cột trái: Điều hướng tài khoản (Chỉ hiển thị trên Desktop >= 992px) -->
+            <aside class="col-xs-12 col-sm-12 col-lg-3 col-left-ac mb-4 d-none d-lg-block">
                 <div class="block-account">
                     <h5 class="title-account">Trang tài khoản</h5>
                     <p>
@@ -178,6 +178,27 @@
 
             <!-- Cột phải: Thông tin cá nhân & Đổi mật khẩu -->
             <main class="col-xs-12 col-sm-12 col-lg-9 col-right-ac">
+                <!-- Thanh Tab điều hướng nhanh trên Mobile (< 992px) -->
+                <div class="account-mobile-tabs d-flex d-lg-none">
+                    <a href="{{ route('profile.edit') }}" class="account-mobile-tab-item active">
+                        <i class="fa fa-user"></i> Thông tin
+                    </a>
+                    <a href="{{ route('orders.index') }}" class="account-mobile-tab-item">
+                        <i class="fa fa-shopping-bag"></i> Đơn hàng
+                    </a>
+                    <a href="/wishlist" class="account-mobile-tab-item">
+                        <i class="fa fa-heart text-danger"></i> Yêu thích
+                    </a>
+                    <a href="#doi-mat-khau" class="account-mobile-tab-item">
+                        <i class="fa fa-key"></i> Đổi mật khẩu
+                    </a>
+                    <form method="post" action="{{ route('logout') }}" id="mobileProfileLogoutForm" class="d-inline m-0">
+                        @csrf
+                        <a href="#" class="account-mobile-tab-item text-danger" onclick="document.getElementById('mobileProfileLogoutForm').submit(); return false;">
+                            <i class="fa fa-sign-out"></i> Đăng xuất
+                        </a>
+                    </form>
+                </div>
                 @if (session('status') === 'profile-updated')
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                         <i class="fa fa-check-circle me-2"></i>Cập nhật thông tin tài khoản thành công!

@@ -50,7 +50,16 @@ document.addEventListener('DOMContentLoaded', function () {
     if (btnMenuMobile) {
         btnMenuMobile.addEventListener('click', function () {
             document.querySelector('.header-menu').classList.add('current');
-            document.querySelector('.mobile-nav-overflow').classList.toggle('open');
+            document.querySelector('.mobile-nav-overflow').classList.add('open');
+        });
+    }
+
+    // Handle click on close button in mobile drawer
+    const btnCloseDrawer = document.getElementById('btn-close-drawer');
+    if (btnCloseDrawer) {
+        btnCloseDrawer.addEventListener('click', function () {
+            document.querySelector('.header-menu').classList.remove('current');
+            document.querySelector('.mobile-nav-overflow').classList.remove('open');
         });
     }
 

@@ -2,13 +2,6 @@
 <x-app-layout>
     <x-slot name="header"><h1 class="text-xl font-semibold">{{ $title }}</h1></x-slot>
     <div class="max-w-7xl mx-auto p-4 sm:p-6 space-y-4">
-        <nav class="flex flex-wrap gap-4" aria-label="Bán hàng">
-            <a class="underline" href="{{ route('cart.index') }}">Giỏ hàng</a>
-            <a class="underline" href="{{ route('orders.index') }}">Đơn hàng của tôi</a>
-            @if(auth()->user()->hasRole('Admin'))
-                <a class="underline" href="{{ route('admin.orders.index') }}">Quản lý đơn hàng</a>
-            @endif
-        </nav>
         @if(session('status'))<p role="status" class="p-3 bg-green-50">{{ session('status') }}</p>@endif
         @if($errors->any())
             <ul role="alert" class="p-3 bg-red-50 text-red-800">

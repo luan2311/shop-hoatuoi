@@ -70,7 +70,7 @@
 
                     <div class="row list-news">
                         @foreach ($danhSach as $item)
-                            <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                                 <div class="item-blog">
                                     <a class="block-thumb thumb" href="/posts/{{ $item->slug }}" title="{{ $item->title }}">
                                         <img width="400" height="240" class="lazyload duration-300 loaded" src="{{ $item->thumbnail_url }}" alt="{{ $item->title }}">

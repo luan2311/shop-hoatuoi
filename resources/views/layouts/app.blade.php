@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="{{ asset('css/wishlist_style.css') }}?v={{ @filemtime(public_path('css/wishlist_style.css')) ?: 1 }}">
     <link rel="stylesheet" href="{{ asset('css/ajax-notification.css') }}?v={{ @filemtime(public_path('css/ajax-notification.css')) ?: 1 }}">
     <link rel="stylesheet" href="{{ asset('css/layout_custom.css') }}?v={{ @filemtime(public_path('css/layout_custom.css')) ?: 1 }}">
+    <link rel="stylesheet" href="{{ asset('css/mobile_responsive.css') }}?v={{ @filemtime(public_path('css/mobile_responsive.css')) ?: 1 }}">
     @stack('styles')
 
     <!-- JS ported từ codebase C# Shop-Flower -->
@@ -103,6 +104,9 @@
 
     <!-- Footer ported từ _Footer.cshtml -->
     @include('layouts.partials.footer')
+
+    <!-- Mobile Bottom Navigation Bar (< 992px) -->
+    @include('layouts.partials.bottom-nav')
 
     @stack('modals')
     @stack('scripts')

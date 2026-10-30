@@ -187,13 +187,34 @@
         </div>
     </div>
 
-    <!-- Main Navigation Menu ported từ _Header.cshtml -->
+    <!-- Main Navigation Menu & Mobile Drawer -->
     <div class="header-menu">
-        <div class="container">
+        <div class="container p-0">
+            <!-- Header của Drawer chỉ hiện trên Mobile/Tablet -->
+            <div class="drawer-user-header d-lg-none">
+                <button type="button" class="drawer-close-btn" id="btn-close-drawer" aria-label="Đóng menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                @auth
+                    <div class="drawer-user-avatar">
+                        {{ mb_strtoupper(mb_substr(auth()->user()->name ?? 'U', 0, 1, 'UTF-8')) }}
+                    </div>
+                    <div class="drawer-user-name">{{ auth()->user()->name }}</div>
+                    <div class="drawer-user-sub">{{ auth()->user()->email ?? 'Khách hàng thân thiết' }}</div>
+                @else
+                    <div class="drawer-user-avatar">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <div class="drawer-user-name">Xin chào quý khách!</div>
+                    <div class="drawer-user-sub">Đăng nhập để nhận ưu đãi thành viên</div>
+                    <div class="drawer-auth-actions">
+                        <a href="{{ route('login') }}" class="drawer-auth-btn btn-login">Đăng nhập</a>
+                        <a href="{{ route('register') }}" class="drawer-auth-btn btn-register">Đăng ký</a>
+                    </div>
+                @endauth
+            </div>
+
             <div class="navigation-horizontal overflow">
-                <div class="title_menu md-hidden">
-                    <span class="title_">Danh mục</span>
-                </div>
                 <div class="col-menu">
                     <ul id="nav" class="nav">
                         <li class="nav-item {{ request()->is('/') ? 'active' : '' }}">
@@ -235,6 +256,50 @@
                             <a class="nav-link" href="/contact" title="Liên Hệ">Liên Hệ</a>
                         </li>
                     </ul>
+
+                    <!-- Khối menu tài khoản ở chân Drawer Mobile -->
+                    <div class="drawer-account-section d-lg-none">
+                        @auth
+                            @if (auth()->user()->isAdmin())
+                                <a href="/admin/dashboard" class="drawer-menu-item text-primary">
+                                    <i class="fa-solid fa-gauge"></i>
+                                    <span>Quản trị hệ thống</span>
+                                </a>
+                            @endif
+                            <a href="{{ route('profile.edit') }}" class="drawer-menu-item">
+                                <i class="fa-regular fa-id-badge text-success"></i>
+                                <span>Thông tin tài khoản</span>
+                            </a>
+                            <a href="{{ route('orders.index') }}" class="drawer-menu-item">
+                                <i class="fa-solid fa-receipt text-warning"></i>
+                                <span>Đơn hàng của tôi</span>
+                            </a>
+                            <a href="{{ route('wishlist.index') }}" class="drawer-menu-item">
+                                <i class="fa-solid fa-heart text-danger"></i>
+                                <span>Yêu thích (<span class="js-wishlist-count">{{ $wishlistCount }}</span>)</span>
+                            </a>
+                            <a href="tel:0898449950" class="drawer-menu-item">
+                                <i class="fa-solid fa-phone text-info"></i>
+                                <span>Hotline: 0898.449.950</span>
+                            </a>
+                            <form method="post" action="{{ route('logout') }}" id="drawerLogoutForm" class="m-0">
+                                @csrf
+                                <a href="#" class="drawer-menu-item text-danger" onclick="document.getElementById('drawerLogoutForm').submit(); return false;">
+                                    <i class="fa-solid fa-right-from-bracket"></i>
+                                    <span>Đăng xuất</span>
+                                </a>
+                            </form>
+                        @else
+                            <a href="{{ route('wishlist.index') }}" class="drawer-menu-item">
+                                <i class="fa-solid fa-heart text-danger"></i>
+                                <span>Yêu thích (<span class="js-wishlist-count">{{ $wishlistCount }}</span>)</span>
+                            </a>
+                            <a href="tel:0898449950" class="drawer-menu-item">
+                                <i class="fa-solid fa-phone text-info"></i>
+                                <span>Hotline: 0898.449.950</span>
+                            </a>
+                        @endauth
+                    </div>
                 </div>
             </div>
         </div>

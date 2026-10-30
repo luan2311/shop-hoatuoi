@@ -210,8 +210,8 @@
 <section class="page_customer_account">
     <div class="container">
         <div class="row">
-            <!-- Cột trái: Điều hướng tài khoản -->
-            <aside class="col-xs-12 col-sm-12 col-lg-3 col-left-ac mb-4">
+            <!-- Cột trái: Điều hướng tài khoản (Chỉ hiển thị trên Desktop >= 992px) -->
+            <aside class="col-xs-12 col-sm-12 col-lg-3 col-left-ac mb-4 d-none d-lg-block">
                 <div class="block-account">
                     <h5 class="title-account">Trang tài khoản</h5>
                     <p>
@@ -252,6 +252,27 @@
 
             <!-- Cột phải: Danh sách hóa đơn / đơn hàng -->
             <main class="col-xs-12 col-sm-12 col-lg-9 col-right-ac">
+                <!-- Thanh Tab điều hướng nhanh trên Mobile (< 992px) -->
+                <div class="account-mobile-tabs d-flex d-lg-none">
+                    <a href="{{ route('profile.edit') }}" class="account-mobile-tab-item">
+                        <i class="fa fa-user"></i> Thông tin
+                    </a>
+                    <a href="{{ route('orders.index') }}" class="account-mobile-tab-item active">
+                        <i class="fa fa-shopping-bag"></i> Đơn hàng
+                    </a>
+                    <a href="/wishlist" class="account-mobile-tab-item">
+                        <i class="fa fa-heart text-danger"></i> Yêu thích
+                    </a>
+                    <a href="{{ route('profile.edit') }}#doi-mat-khau" class="account-mobile-tab-item">
+                        <i class="fa fa-key"></i> Đổi mật khẩu
+                    </a>
+                    <form method="post" action="{{ route('logout') }}" id="mobileLogoutForm" class="d-inline m-0">
+                        @csrf
+                        <a href="#" class="account-mobile-tab-item text-danger" onclick="document.getElementById('mobileLogoutForm').submit(); return false;">
+                            <i class="fa fa-sign-out"></i> Đăng xuất
+                        </a>
+                    </form>
+                </div>
                 @php
                     $salesService = app(\App\Services\SalesService::class);
                     $allOrdersQuery = $salesService->owned(\App\Models\Order::query(), auth()->user());
@@ -313,7 +334,83 @@
                     </div>
                     <div class="card-body p-0">
                         @if ($orders->count() > 0)
-                            <div class="table-responsive">
+                            <!-- Giao diện Mobile: Thẻ đơn hàng (Chỉ hiển thị trên Mobile < 768px) -->
+                            <div class="d-block d-md-none p-3">
+                                @foreach ($orders as $order)
+                                    <div class="order-card-mobile">
+                                        <div class="order-card-header">
+                                            <a href="{{ route('orders.show', $order->id) }}" class="order-code">
+                                                #{{ $order->order_code }}
+                                            </a>
+                                            <div>
+                                                @if($order->status === 'Pending')
+                                                    <span class="badge bg-warning text-dark px-2 py-1" style="border-radius: 6px; font-size: 11.5px;">
+                                                        <i class="fa fa-clock me-1"></i>Chờ xử lý
+                                                    </span>
+                                                @elseif($order->status === 'Processing')
+                                                    <span class="badge bg-info text-dark px-2 py-1" style="border-radius: 6px; font-size: 11.5px;">
+                                                        <i class="fa fa-box-open me-1"></i>Đang đóng gói
+                                                    </span>
+                                                @elseif($order->status === 'Shipped')
+                                                    <span class="badge bg-primary px-2 py-1" style="border-radius: 6px; font-size: 11.5px;">
+                                                        <i class="fa fa-truck me-1"></i>Đang giao
+                                                    </span>
+                                                @elseif($order->status === 'Completed')
+                                                    <span class="badge bg-success px-2 py-1" style="border-radius: 6px; font-size: 11.5px;">
+                                                        <i class="fa fa-check-circle me-1"></i>Hoàn tất
+                                                    </span>
+                                                @elseif($order->status === 'Cancelled')
+                                                    <span class="badge bg-danger px-2 py-1" style="border-radius: 6px; font-size: 11.5px;">
+                                                        <i class="fa fa-times-circle me-1"></i>Đã hủy
+                                                    </span>
+                                                @else
+                                                    <span class="badge bg-secondary px-2 py-1" style="border-radius: 6px; font-size: 11.5px;">
+                                                        {{ $order->status }}
+                                                    </span>
+                                                @endif
+                                            </div>
+                                        </div>
+                                        <div class="order-card-body">
+                                            <div class="order-date">
+                                                <i class="fa-regular fa-calendar-days text-muted"></i>
+                                                <span>{{ $order->order_date ? $order->order_date->timezone('Asia/Ho_Chi_Minh')->format('d/m/Y H:i') : ($order->created_at ? $order->created_at->timezone('Asia/Ho_Chi_Minh')->format('d/m/Y H:i') : '—') }}</span>
+                                            </div>
+                                            <div class="mb-1 text-dark">
+                                                <strong>Người nhận:</strong> {{ $order->customer['name'] ?? '—' }}
+                                                @if(!empty($order->customer['phone']))
+                                                    <span class="text-muted">({{ $order->customer['phone'] }})</span>
+                                                @endif
+                                            </div>
+                                            <div class="order-items-summary">
+                                                @foreach(array_slice($order->items ?? [], 0, 2) as $item)
+                                                    <div class="text-truncate">
+                                                        • {{ $item['product_name'] ?? 'Sản phẩm' }} <span class="text-muted">(x{{ $item['quantity'] ?? 1 }})</span>
+                                                    </div>
+                                                @endforeach
+                                                @if(count($order->items ?? []) > 2)
+                                                    <div class="text-muted fst-italic">
+                                                        + {{ count($order->items) - 2 }} sản phẩm khác
+                                                    </div>
+                                                @endif
+                                            </div>
+                                        </div>
+                                        <div class="order-card-footer">
+                                            <div>
+                                                <span class="text-muted small">Tổng tiền:</span>
+                                                <div class="order-total-price">
+                                                    {{ number_format((float) (string) ($order->total_amount ?? $order->total), 0, ',', '.') }} đ
+                                                </div>
+                                            </div>
+                                            <a href="{{ route('orders.show', $order->id) }}" class="btn-view-detail">
+                                                <span>Chi tiết</span> <i class="fa fa-chevron-right" style="font-size: 10px;"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+
+                            <!-- Giao diện Desktop: Bảng Table (Chỉ hiển thị trên Desktop >= 768px) -->
+                            <div class="table-responsive d-none d-md-block">
                                 <table class="table table-orders align-middle">
                                     <thead>
                                         <tr>

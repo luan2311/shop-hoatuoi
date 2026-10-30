@@ -340,5 +340,34 @@
             @endif
         </div>
     </div>
+
+    @if($product->stock > 0)
+        <!-- Sticky Bottom Purchase Bar cho Mobile (< 992px) -->
+        <div class="mobile-sticky-product-bar d-flex d-lg-none">
+            <div class="sticky-price-wrap">
+                <span class="sticky-price">{{ $product->formatted_price }}</span>
+                <span class="sticky-sku">{{ $product->name }}</span>
+            </div>
+            <div class="sticky-btn-group">
+                <form action="/cart/add" method="post" class="d-inline m-0" data-cart-form="" data-no-loading="true">
+                    @csrf
+                    <input type="hidden" name="product_id" value="{{ $product->id }}">
+                    <input type="hidden" name="quantity" value="1">
+                    <button type="submit" class="btn-sticky-cart" title="Thêm vào giỏ">
+                        <i class="fa-solid fa-cart-plus me-1"></i> Giỏ
+                    </button>
+                </form>
+                <form action="/cart/add" method="post" class="d-inline m-0">
+                    @csrf
+                    <input type="hidden" name="product_id" value="{{ $product->id }}">
+                    <input type="hidden" name="quantity" value="1">
+                    <input type="hidden" name="buy_now" value="1">
+                    <button type="submit" class="btn-sticky-buy" title="Mua ngay">
+                        Mua ngay
+                    </button>
+                </form>
+            </div>
+        </div>
+    @endif
 </section>
 @endsection

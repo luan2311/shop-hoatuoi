@@ -230,8 +230,8 @@
 <section class="page_customer_account">
     <div class="container">
         <div class="row">
-            <!-- Cột trái: Điều hướng tài khoản -->
-            <aside class="col-xs-12 col-sm-12 col-lg-3 col-left-ac mb-4 no-print">
+            <!-- Cột trái: Điều hướng tài khoản (Chỉ hiển thị trên Desktop >= 992px) -->
+            <aside class="col-xs-12 col-sm-12 col-lg-3 col-left-ac mb-4 no-print d-none d-lg-block">
                 <div class="block-account">
                     <h5 class="title-account">Trang tài khoản</h5>
                     <p>
@@ -272,6 +272,27 @@
 
             <!-- Cột phải: Chi tiết đơn hàng / Hóa đơn -->
             <main class="col-xs-12 col-sm-12 col-lg-9 col-right-ac">
+                <!-- Thanh Tab điều hướng nhanh trên Mobile (< 992px) -->
+                <div class="account-mobile-tabs d-flex d-lg-none no-print">
+                    <a href="{{ route('profile.edit') }}" class="account-mobile-tab-item">
+                        <i class="fa fa-user"></i> Thông tin
+                    </a>
+                    <a href="{{ route('orders.index') }}" class="account-mobile-tab-item active">
+                        <i class="fa fa-shopping-bag"></i> Đơn hàng
+                    </a>
+                    <a href="/wishlist" class="account-mobile-tab-item">
+                        <i class="fa fa-heart text-danger"></i> Yêu thích
+                    </a>
+                    <a href="{{ route('profile.edit') }}#doi-mat-khau" class="account-mobile-tab-item">
+                        <i class="fa fa-key"></i> Đổi mật khẩu
+                    </a>
+                    <form method="post" action="{{ route('logout') }}" id="mobileShowLogoutForm" class="d-inline m-0">
+                        @csrf
+                        <a href="#" class="account-mobile-tab-item text-danger" onclick="document.getElementById('mobileShowLogoutForm').submit(); return false;">
+                            <i class="fa fa-sign-out"></i> Đăng xuất
+                        </a>
+                    </form>
+                </div>
                 <!-- Thanh công cụ trên đầu -->
                 <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3 no-print">
                     <a href="{{ route('orders.index') }}" class="btn btn-outline-secondary btn-order-action" style="border-radius: 8px;">
