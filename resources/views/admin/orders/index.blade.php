@@ -191,7 +191,7 @@
                                 <i class="fas fa-eye"></i> Chi tiết
                             </a>
 
-                            @if ($item->status != 'Completed' && $item->status != 'Cancelled')
+                            @if (in_array('Completed', \App\Models\Order::TRANSITIONS[$item->status] ?? [], true))
                                 <button type="button" 
                                         class="btn btn-success btn-sm ml-1 btn-open-complete-order"
                                         data-action="{{ route('admin.orders.complete', $item->id) }}"
