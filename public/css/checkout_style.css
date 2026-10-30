@@ -699,44 +699,99 @@ textarea.form-control {
 }
 
 .banking-info-box {
-    background: var(--cream-100);
-    border: 1px solid var(--cream-200);
+    background: #fdfbf7;
+    border: 1px solid #ebdccb;
     border-radius: var(--radius-md);
-    padding: 16px;
+    padding: 18px;
     display: flex;
-    gap: 16px;
+    gap: 20px;
     align-items: center;
 }
 
-.banking-qr-code {
-    width: 100px;
-    height: 100px;
-    border-radius: var(--radius-sm);
+.banking-qr-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.banking-qr-card {
+    position: relative;
     background: #ffffff;
-    padding: 4px;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow-sm);
-    object-fit: contain;
+    padding: 6px;
+    border-radius: 12px;
+    border: 1.5px solid #d4e2d1;
+    box-shadow: 0 4px 14px rgba(83, 117, 71, 0.12);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 150px;
+    text-align: center;
+}
+
+.banking-qr-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(83, 117, 71, 0.2);
+}
+
+.banking-qr-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.banking-qr-card-hint {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #ffffff;
+    font-size: 10.5px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+
+.banking-qr-card:hover .banking-qr-card-hint {
+    opacity: 1;
+}
+
+.banking-qr-note {
+    font-size: 11.5px;
+    color: #16a34a;
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .banking-details {
     flex: 1;
-    font-size: 13px;
+    font-size: 13.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 
 .banking-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 5px;
+    padding: 4px 0;
+    border-bottom: 1px dashed #ede5db;
 }
 
 .banking-row:last-child {
-    margin-bottom: 0;
+    border-bottom: none;
 }
 
 .banking-label {
-    color: var(--text-muted);
+    color: #64748b;
+    font-weight: 500;
 }
 
 .banking-val {
@@ -747,19 +802,195 @@ textarea.form-control {
     gap: 6px;
 }
 
+.banking-val.highlight-amount {
+    color: #b91c1c;
+    font-size: 14.5px;
+}
+
+.banking-val .syntax-code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    background: #f1f5f9;
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
 .btn-copy-acc {
-    background: none;
-    border: none;
-    color: var(--leaf-600);
-    font-size: 12px;
+    background: #eef5eb;
+    border: 1px solid #cce3c5;
+    color: var(--leaf-700);
+    font-size: 11.5px;
+    font-weight: 600;
+    border-radius: 4px;
+    padding: 2px 7px;
     cursor: pointer;
-    padding: 0 4px;
-    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: all 0.15s ease;
 }
 
 .btn-copy-acc:hover {
-    color: var(--leaf-800);
-    transform: scale(1.1);
+    background: var(--leaf-600);
+    color: #ffffff;
+    border-color: var(--leaf-600);
+    transform: translateY(-1px);
+}
+
+.banking-scan-tip {
+    margin-top: 8px;
+    padding: 9px 12px;
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #166534;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.45;
+}
+
+/* Copy Toast Notification */
+.copy-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(30px);
+    background: #1e293b;
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 13.5px;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    pointer-events: none;
+}
+
+.copy-toast.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.copy-toast i {
+    color: #4ade80;
+}
+
+/* QR Zoom Modal */
+.qr-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(4px);
+    z-index: 99998;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    animation: fadeInModal 0.2s ease;
+}
+
+.qr-modal.active {
+    display: flex;
+}
+
+@keyframes fadeInModal {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.qr-modal-card {
+    background: #ffffff;
+    border-radius: 16px;
+    max-width: 380px;
+    width: 100%;
+    padding: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    text-align: center;
+    position: relative;
+    animation: scaleInModal 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes scaleInModal {
+    from { transform: scale(0.92); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.qr-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: #f1f5f9;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.qr-modal-close:hover {
+    background: #e2e8f0;
+    color: #0f172a;
+}
+
+.qr-modal-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a2f20;
+    margin-bottom: 4px;
+}
+
+.qr-modal-desc {
+    font-size: 12.5px;
+    color: #64748b;
+    margin-bottom: 16px;
+}
+
+.qr-modal-img {
+    width: 100%;
+    max-width: 290px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 8px;
+    display: block;
+    border: 1px solid #e2e8f0;
+}
+
+.qr-modal-details {
+    margin-top: 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 10px 14px;
+    text-align: left;
+    font-size: 13px;
+}
+
+.qr-modal-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.qr-modal-row:last-child {
+    margin-bottom: 0;
 }
 
 /* Navigation Actions (Bottom of left form) */
@@ -1192,5 +1423,28 @@ textarea.form-control {
     .back-to-cart-link {
         width: 100%;
         justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .banking-info-box {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 14px;
+        gap: 14px;
+    }
+
+    .banking-qr-col {
+        width: 100%;
+    }
+
+    .banking-qr-card {
+        width: 180px;
+        margin: 0 auto;
+    }
+
+    .banking-row {
+        flex-wrap: wrap;
+        gap: 4px;
     }
 }

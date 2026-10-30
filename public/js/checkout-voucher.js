@@ -15,6 +15,9 @@
         document.getElementById('discountRow').style.display = quote.voucher_code ? 'flex' : 'none';
         document.getElementById('grandTotalPrice').textContent = money(quote.total_amount);
         document.getElementById('mobileTotalPreview').textContent = money(quote.total_amount);
+        if (typeof window !== 'undefined' && typeof window.updateBankingQr === 'function') {
+            window.updateBankingQr(quote.total_amount);
+        }
     }
 
     async function apply(code) {

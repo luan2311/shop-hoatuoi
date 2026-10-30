@@ -256,7 +256,30 @@
 
                                     <div class="payment-subpanel">
                                         <div class="banking-info-box">
-                                            <p class="banking-qr-code">Mã VietQR theo tổng tiền sau giảm sẽ hiển thị sau khi xác nhận đơn hàng. Chưa chuyển tiền ở bước này.</p>
+                                            <div class="banking-qr-col">
+                                                <div class="banking-qr-card" onclick="openQrModal()" title="Nhấn để phóng to mã QR">
+                                                    @php
+                                                        $checkoutPhone = preg_replace('/[^0-9]/', '', (string) old('receiver_phone', auth()->user()->phone ?? ''));
+                                                        $checkoutMemo = $checkoutPhone ? ('HOAXINH ' . $checkoutPhone) : 'HOAXINH';
+                                                        $vietqrUrl = 'https://img.vietqr.io/image/970422-0898449950-compact2.png?' . http_build_query([
+                                                            'amount' => (int) $total,
+                                                            'addInfo' => $checkoutMemo,
+                                                            'accountName' => 'GOC HOA XINH'
+                                                        ], '', '&', PHP_QUERY_RFC3986);
+                                                        $vietqrFallbackUrl = 'https://api.vietqr.io/image/970422-0898449950-compact2.jpg?' . http_build_query([
+                                                            'amount' => (int) $total,
+                                                            'addInfo' => $checkoutMemo,
+                                                            'accountName' => 'TIEM HOA GOC HOA XINH'
+                                                        ], '', '&', PHP_QUERY_RFC3986);
+                                                    @endphp
+                                                    <img id="vietqrImage"
+                                                        src="{{ $vietqrUrl }}"
+                                                        alt="VietQR MB Bank - Blossom Corner"
+                                                        onerror="this.onerror=null; this.src='{{ $vietqrFallbackUrl }}';" />
+                                                    <span class="banking-qr-card-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Phóng to</span>
+                                                </div>
+                                            </div>
+
                                             <div class="banking-details">
                                                 <div class="banking-row">
                                                     <span class="banking-label">Ngân hàng:</span>
@@ -266,8 +289,9 @@
                                                     <span class="banking-label">Số tài khoản:</span>
                                                     <span class="banking-val">
                                                         <span>0898449950</span>
-                                                        <button type="button" class="btn-copy-acc" onclick="event.stopPropagation(); copyToClipboard('0898449950')" title="Sao chép STK">
+                                                        <button type="button" class="btn-copy-acc" onclick="event.stopPropagation(); copyToClipboard('0898449950', 'Số tài khoản')" title="Sao chép STK">
                                                             <i class="fa-regular fa-copy"></i>
+                                                            <span>Sao chép</span>
                                                         </button>
                                                     </span>
                                                 </div>
@@ -276,8 +300,24 @@
                                                     <span class="banking-val">GÓC HOA XINH</span>
                                                 </div>
                                                 <div class="banking-row">
+                                                    <span class="banking-label">Số tiền:</span>
+                                                    <span class="banking-val highlight-amount">
+                                                        <span id="bankingAmountVal">{{ number_format($total, 0, ',', '.') }} đ</span>
+                                                        <button type="button" class="btn-copy-acc" onclick="event.stopPropagation(); copyToClipboard(String(window.currentOrderTotal || {{ (int) $total }}), 'Số tiền')" title="Sao chép số tiền">
+                                                            <i class="fa-regular fa-copy"></i>
+                                                            <span>Sao chép</span>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                                <div class="banking-row">
                                                     <span class="banking-label">Cú pháp CK:</span>
-                                                    <span class="banking-val">Mã đơn sẽ được tạo khi xác nhận</span>
+                                                    <span class="banking-val">
+                                                        <span class="syntax-code" id="bankingSyntaxVal">{{ $checkoutMemo }}</span>
+                                                        <button type="button" class="btn-copy-acc" onclick="event.stopPropagation(); copyToClipboard(document.getElementById('bankingSyntaxVal') ? document.getElementById('bankingSyntaxVal').textContent.trim() : 'HOAXINH', 'Cú pháp CK')" title="Sao chép cú pháp">
+                                                            <i class="fa-regular fa-copy"></i>
+                                                            <span>Sao chép</span>
+                                                        </button>
+                                                    </span>
                                                 </div>
                                             </div>
                                         </div>
@@ -411,6 +451,44 @@
                 </div>
             </form>
         </main>
+
+        <!-- QR Modal Zoom -->
+        <div id="qrModal" class="qr-modal" onclick="closeQrModal(event)">
+            <div class="qr-modal-card" onclick="event.stopPropagation()">
+                <button type="button" class="qr-modal-close" onclick="closeQrModal()">&times;</button>
+                <div class="qr-modal-title"><i class="fa-solid fa-qrcode text-success"></i> Quét mã VietQR thanh toán</div>
+                <div class="qr-modal-desc">Mở App Ngân hàng hoặc MoMo để quét. Số tiền thanh toán sẽ tự động được điền.</div>
+                <img id="vietqrModalImage" class="qr-modal-img"
+                    src="{{ $vietqrUrl }}"
+                    alt="VietQR MB Bank - Blossom Corner"
+                    onerror="this.onerror=null; this.src='{{ $vietqrFallbackUrl }}';" />
+                <div class="qr-modal-details">
+                    <div class="qr-modal-row">
+                        <span class="text-muted">Ngân hàng:</span>
+                        <strong>MB Bank (Ngân Hàng Quân Đội)</strong>
+                    </div>
+                    <div class="qr-modal-row">
+                        <span class="text-muted">Số tài khoản:</span>
+                        <strong style="color: #1a2f20;">0898449950</strong>
+                    </div>
+                    <div class="qr-modal-row">
+                        <span class="text-muted">Chủ tài khoản:</span>
+                        <strong>GÓC HOA XINH</strong>
+                    </div>
+                    <div class="qr-modal-row">
+                        <span class="text-muted">Số tiền:</span>
+                        <strong class="text-danger" id="qrModalAmount">{{ number_format($total, 0, ',', '.') }} đ</strong>
+                    </div>
+                    <div class="qr-modal-row">
+                        <span class="text-muted">Nội dung CK:</span>
+                        <strong style="font-family: monospace; color: #0284c7;" id="qrModalMemo">{{ $checkoutMemo }}</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copy Toast Notification -->
+        <div id="copyToast" class="copy-toast" role="status" aria-live="polite"></div>
 
         <!-- Minimalist Footer -->
         <footer style="text-align: center; padding: 24px; color: var(--text-muted); font-size: 13px; border-top: 1px solid var(--border-color); background: #ffffff;">
@@ -827,16 +905,92 @@
             });
         }
 
-        // Sao chép nhanh số tài khoản
-        function copyToClipboard(text) {
-            if (navigator.clipboard) {
-                navigator.clipboard.writeText(text).then(function() {
-                    alert("Đã sao chép số tài khoản MB Bank: " + text);
-                });
-            } else {
-                alert("Số tài khoản MB Bank: " + text);
+        // Tổng tiền đơn hàng để đồng bộ mã QR động
+        var currentOrderTotal = {{ (int) ($total ?? 0) }};
+
+        // Phóng to mã QR
+        function openQrModal() {
+            var modal = document.getElementById("qrModal");
+            if (modal) {
+                modal.classList.add("active");
+                if (document.body) document.body.style.overflow = "hidden";
             }
         }
+
+        // Đóng phóng to mã QR
+        function closeQrModal(e) {
+            if (e && e.target && e.target.closest && e.target.closest(".qr-modal-card") && !e.target.classList.contains("qr-modal-close")) {
+                return;
+            }
+            var modal = document.getElementById("qrModal");
+            if (modal) {
+                modal.classList.remove("active");
+                if (document.body) document.body.style.overflow = "";
+            }
+        }
+
+        // Thông báo toast sao chép
+        function showCopyToast(msg) {
+            var toast = document.getElementById("copyToast");
+            if (!toast) return;
+            toast.innerHTML = '<i class="fa-solid fa-circle-check"></i> ' + msg;
+            toast.classList.add("show");
+            clearTimeout(toast._timeout);
+            toast._timeout = setTimeout(function() {
+                toast.classList.remove("show");
+            }, 2500);
+        }
+
+        // Sao chép nhanh với fallback & toast
+        function copyToClipboard(text, label) {
+            var desc = label ? ("Đã sao chép " + label + ": " + text) : ("Đã sao chép: " + text);
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(function() {
+                    showCopyToast(desc);
+                }).catch(function() {
+                    showCopyToast(desc);
+                });
+            } else {
+                showCopyToast(desc);
+            }
+        }
+
+        // Đồng bộ cập nhật mã QR & thông tin chuyển khoản động theo số tiền và số điện thoại
+        function updateBankingQr(newTotal) {
+            if (typeof newTotal !== 'undefined' && newTotal !== null) {
+                currentOrderTotal = parseInt(newTotal, 10) || 0;
+            }
+            window.currentOrderTotal = currentOrderTotal;
+
+            var qrImg = document.getElementById("vietqrImage");
+            var qrModalImg = document.getElementById("vietqrModalImage");
+            var amountVal = document.getElementById("bankingAmountVal");
+            var tipAmountVal = document.getElementById("tipAmountVal");
+            var modalAmountVal = document.getElementById("qrModalAmount");
+            var syntaxVal = document.getElementById("bankingSyntaxVal");
+            var modalMemoVal = document.getElementById("qrModalMemo");
+            var phoneInput = document.getElementById("SoDienThoai");
+
+            var phone = (phoneInput && phoneInput.value) ? phoneInput.value.trim().replace(/[^0-9]/g, '') : "";
+            var memo = phone ? ("HOAXINH " + phone) : "HOAXINH";
+
+            if (syntaxVal) syntaxVal.textContent = memo;
+            if (modalMemoVal) modalMemoVal.textContent = memo;
+
+            var formattedMoney = Number(currentOrderTotal).toLocaleString('vi-VN') + " đ";
+            if (amountVal) amountVal.textContent = formattedMoney;
+            if (tipAmountVal) tipAmountVal.textContent = formattedMoney;
+            if (modalAmountVal) modalAmountVal.textContent = formattedMoney;
+
+            var qrUrl = "https://img.vietqr.io/image/970422-0898449950-compact2.png?amount=" + currentOrderTotal +
+                        "&addInfo=" + encodeURIComponent(memo) +
+                        "&accountName=" + encodeURIComponent("GOC HOA XINH");
+
+            if (qrImg) qrImg.src = qrUrl;
+            if (qrModalImg) qrModalImg.src = qrUrl;
+        }
+        window.updateBankingQr = updateBankingQr;
+        window.currentOrderTotal = currentOrderTotal;
 
         // Khởi tạo khi DOM sẵn sàng
         document.addEventListener('DOMContentLoaded', function() {
@@ -907,12 +1061,19 @@
             var momoRadio = document.getElementById("momo");
             var codRadio = document.getElementById("cod");
 
-            // [PAY_01]: Xác thực trường Số điện thoại tự động lọc chữ cái (digits only)
+            // [PAY_01]: Xác thực trường Số điện thoại tự động lọc chữ cái (digits only) và cập nhật QR
             if (phoneInput) {
                 phoneInput.addEventListener("input", function(e) {
                     this.value = this.value.replace(/[^0-9]/g, '');
+                    updateBankingQr();
                 });
             }
+
+            document.addEventListener("keydown", function(e) {
+                if (e.key === "Escape") {
+                    closeQrModal();
+                }
+            });
 
             // Hàm hiển thị lỗi chuẩn
             function showError(inputElement, fieldNames, message) {
