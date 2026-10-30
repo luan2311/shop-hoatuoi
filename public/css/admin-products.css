@@ -1,0 +1,91 @@
+/* Scoped to the Product management page and its preview. Shared Admin chrome is unchanged. */
+.admin-product-page { color: #252738; }
+.admin-product-page .product-page-title { text-align: center; font-size: clamp(24px, 2.4vw, 34px); font-weight: 700; margin: 2px 0 22px; }
+.admin-product-page .product-stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.admin-product-page .product-stat-card { display: flex; align-items: center; gap: 16px; padding: 18px; background: #fff; border: 1px solid #e6e9ee; border-radius: 8px; color: inherit; min-width: 0; text-decoration: none; box-shadow: 0 1px 3px #18233b04; }
+.admin-product-page .product-stat-card:hover { border-color: #c5ccd8; }
+.admin-product-page .stat-icon { width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center; font-size: 22px; flex: none; }
+.admin-product-page .stat-icon-blue { background: #e6f2ff; color: #007bff; }
+.admin-product-page .stat-icon-green { background: #e0f3e7; color: #28a745; }
+.admin-product-page .stat-icon-amber { background: #fff2d2; color: #d79400; }
+.admin-product-page .stat-icon-red { background: #ffe5e8; color: #dc3545; }
+.admin-product-page .stat-label { color: #6b7588; font-size: 13px; display: block; }
+.admin-product-page .stat-value { display: block; font-size: 24px; line-height: 1.4; font-weight: 700; }
+.admin-product-page .stat-chevron { margin-left: auto; font-size: 12px; color: #a2acbd; }
+.admin-product-page .product-stat-note { color: #747d8b; font-size: 12px; margin: 10px 0 18px; }
+.admin-product-page .product-toolbar { display: flex; align-items: flex-end; gap: 22px; margin-bottom: 18px; }
+.admin-product-page .product-filter-form { flex: 1; min-width: 0; display: grid; grid-template-columns: minmax(240px, 1.7fr) minmax(130px, 1fr) minmax(130px, 1fr) minmax(145px, 1fr) auto; gap: 14px; align-items: end; }
+.admin-product-page .product-filter-form label { display: block; color: #667085; font-size: 12px; margin-bottom: 5px; }
+.admin-product-page .product-search-controls { display: flex; gap: 8px; }
+.admin-product-page .product-search-controls input { min-width: 0; }
+.admin-product-page .form-control { font-size: 13px; border-color: #d9dfe8; height: 38px; }
+.admin-product-page .product-toolbar .btn { white-space: nowrap; min-height: 38px; font-size: 13px; display: inline-flex; align-items: center; justify-content: center; }
+.admin-product-page .product-reset { border: 1px solid #dce1e9; color: #536071; }
+.admin-product-page .product-create { flex: none; }
+.admin-product-page .product-table-panel { background: white; border: 1px solid #e5e9ef; border-radius: 8px; overflow: hidden; }
+.admin-product-page .product-management-table { width: 100%; min-width: 1040px; margin: 0; font-size: 13px; }
+.admin-product-page .product-management-table th { background: #e9edf1; color: #4b5565; border: 0; padding: 12px; white-space: nowrap; }
+.admin-product-page .product-management-table td { padding: 10px 12px; vertical-align: middle; border: 0; }
+.admin-product-page .product-management-table tbody tr:nth-child(odd) { background: #f5f6f8; }
+.admin-product-page .product-management-table tbody tr:hover { background: #f0f5fa; }
+.admin-product-page .product-image-cell { width: 88px; }
+.admin-product-page .product-image-cell img { width: 64px; height: 64px; object-fit: cover; border-radius: 4px; }
+.admin-product-page .product-no-image { display: block; width: 64px; color: #7a8594; font-size: 11px; }
+.admin-product-page .product-name-cell { min-width: 260px; max-width: 450px; width: 36%; overflow-wrap: anywhere; }
+.admin-product-page .product-preview-name { padding: 0; border: 0; background: transparent; color: #202333; font: inherit; font-weight: 600; text-align: left; line-height: 1.4; overflow-wrap: anywhere; }
+.admin-product-page .product-preview-name:hover { color: #007bff; }
+.admin-product-page .product-preview-name i { font-size: 11px; color: #8b95a5; margin-left: 3px; }
+.admin-product-page .product-code { display: block; margin: 2px 0 4px; color: #7d8797; font-size: 11px; overflow-wrap: anywhere; }
+.admin-product-page .product-status-badge { border-radius: 12px; font-weight: 400; padding: 4px 8px; font-size: 11px; }
+.admin-product-page .product-status-badge.badge-success { color: #176d40; background: #d8f1e1; }
+.admin-product-page .product-status-badge.badge-warning { color: #805900; background: #fff0c2; }
+.admin-product-page .product-status-badge.badge-danger { color: #9b2430; background: #fce0e4; }
+.admin-product-page .product-price-cell { min-width: 135px; white-space: nowrap; }
+.admin-product-page .product-category-cell { min-width: 115px; max-width: 160px; overflow-wrap: anywhere; }
+.admin-product-page .product-actions-cell { min-width: 306px; }
+.admin-product-page .product-actions { display: flex; align-items: center; gap: 8px; }
+.admin-product-page .product-actions form { margin: 0; }
+.admin-product-page .product-actions .btn { font-size: 12px; white-space: nowrap; min-height: 34px; display: inline-flex; align-items: center; }
+.admin-product-page .product-delete-reason { display: inline-flex; align-items: center; gap: 6px; border: 0; background: transparent; color: #778397; font: inherit; font-size: 12px; min-height: 34px; padding: 4px; white-space: nowrap; }
+.admin-product-page .product-delete-reason:hover { color: #40536f; }
+.admin-product-page .product-empty-state { text-align: center; padding: 48px 20px !important; }
+.admin-product-page .product-management-table.is-empty { min-width: 0; }
+.admin-product-page .product-management-table.is-empty thead { display: none; }
+.admin-product-page .product-empty-state > * { display: block; margin: 8px 0; }
+.admin-product-page .product-empty-state span { color: #7a8493; }
+.admin-product-page .product-pagination-bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding: 14px 16px; color: #657086; font-size: 13px; border-top: 1px solid #e8ecf0; }
+.admin-product-page .pagination { flex-wrap: wrap; gap: 3px; }
+.admin-product-page .page-link { border-radius: 4px; padding: 7px 11px; }
+.admin-product-page :focus-visible { outline: 2px solid #007bff; outline-offset: 3px; }
+.an-product-reason-popover { max-width: min(320px, calc(100vw - 24px)); overflow-wrap: anywhere; }
+.admin-product-preview .modal-body > img { display: block; max-width: 100%; width: 100%; height: 220px; object-fit: contain; margin-bottom: 20px; }
+.admin-product-preview [hidden] { display: none !important; }
+.admin-product-preview .modal-body h3 { overflow-wrap: anywhere; line-height: 1.5; }
+.admin-product-preview .product-preview-details { margin: 18px 0 0; }
+.admin-product-preview .product-preview-details > div { display: grid; grid-template-columns: 125px minmax(0, 1fr); gap: 12px; padding: 8px 0; border-bottom: 1px solid #edf0f3; }
+.admin-product-preview dt { font-weight: 500; color: #768194; }
+.admin-product-preview dd { margin: 0; overflow-wrap: anywhere; }
+@media(max-width: 1399px) {
+ .admin-product-page .product-toolbar { flex-wrap: wrap; gap: 14px; }
+ .admin-product-page .product-filter-form { flex-basis: 100%; }
+ .admin-product-page .product-create { margin-left: auto; }
+ .admin-product-page .product-stat-card { padding: 14px; gap: 12px; }
+}
+@media(max-width: 991px) {
+ .admin-product-page .product-stat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+ .admin-product-page .product-filter-form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .admin-product-page .product-filter-search { grid-column: 1 / -1; }
+ .admin-product-page .product-reset { justify-self: start; }
+}
+@media(max-width: 575px) {
+ .admin-product-page .product-stat-card { gap: 10px; padding: 12px; }
+ .admin-product-page .stat-icon { width: 34px; height: 34px; font-size: 16px; }
+ .admin-product-page .stat-label { font-size: 11px; }
+ .admin-product-page .stat-value { font-size: 22px; }
+ .admin-product-page .stat-chevron { display: none; }
+ .admin-product-page .product-filter-form { grid-template-columns: minmax(0, 1fr); }
+ .admin-product-page .product-create { width: 100%; }
+ .admin-product-page .product-pagination-bar { padding: 12px; }
+ .admin-product-page .pagination .page-link { padding: 7px 9px; }
+ .admin-product-preview .product-preview-details > div { grid-template-columns: 100px minmax(0, 1fr); }
+}

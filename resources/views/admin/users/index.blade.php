@@ -297,6 +297,7 @@
 
 <div class="d-flex justify-content-between align-items-center mb-3">
     <form action="{{ route('admin.users.index') }}" method="GET" class="form-inline">
+        <input type="hidden" name="per_page" value="{{ request('per_page', 10) }}">
         <div class="form-group">
             <input type="text" name="searchString" value="{{ request('searchString', request('q')) }}" class="form-control" placeholder="Tìm theo tên đăng nhập hoặc email..." />
         </div>
@@ -388,14 +389,7 @@
     </div>
 </div>
 
-<div class="d-flex justify-content-between align-items-center mt-3">
-    <div class="text-muted">
-        Trang {{ $users->currentPage() }} / {{ $users->lastPage() }} (Tổng: {{ $users->total() }} tài khoản)
-    </div>
-    <nav aria-label="Page navigation">
-        {{ $users->links('pagination::bootstrap-4') }}
-    </nav>
-</div>
+<x-admin.pagination :paginator="$users" label="tài khoản" />
 @endsection
 
 @push('modals')

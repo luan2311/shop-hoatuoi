@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Support\AdminPagination;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,6 +15,7 @@ class UserController extends Controller
 {
     public function index(Request $request): View
     {
+        $perPage = AdminPagination::perPage($request);
         $search = $request->input('searchString') ?? $request->input('q');
         $query = User::query();
 
@@ -26,7 +28,7 @@ class UserController extends Controller
             });
         }
 
-        $users = $query->orderBy('name')->orderBy('_id')->paginate(10)->withQueryString();
+        $users = $query->orderBy('name')->orderBy('_id')->paginate($perPage)->withQueryString();
 
         return view('admin.users.index', compact('users'));
     }

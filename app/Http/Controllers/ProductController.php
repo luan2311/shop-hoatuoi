@@ -14,7 +14,7 @@ class ProductController extends Controller
      */
     public function index(ProductBrowseRequest $request)
     {
-        $query = Product::query();
+        $query = Product::selling();
         $currentCategory = null;
 
         if ($id = $request->validated('category_id')) {
@@ -63,7 +63,7 @@ class ProductController extends Controller
             ->orWhere('code', $slug)
             ->firstOrFail();
 
-        $relatedProducts = Product::where('category.code', data_get($product->category, 'code'))
+        $relatedProducts = Product::selling()->where('category.code', data_get($product->category, 'code'))
             ->where('_id', '!=', $product->getKey())
             ->orderBy('code')
             ->limit(4)
@@ -83,7 +83,7 @@ class ProductController extends Controller
             return response()->json(['products' => []]);
         }
 
-        $products = Product::matchingKeyword($keyword)->orderBy('code')->limit(6)->get()
+        $products = Product::selling()->matchingKeyword($keyword)->orderBy('code')->limit(6)->get()
             ->map(fn (Product $product) => [
                 'id' => (string) $product->getKey(),
                 'code' => $product->code,

@@ -14,9 +14,9 @@
                          src="{{ $product->image_url ?? asset('storage/products/' . $product->image) }}"
                          alt="{{ $product->name }}"
                          data-was-processed="true">
-                    @if ($product->stock == 0)
+                    @if (! $product->is_selling || $product->stock < 1 || $product->status !== 'Còn hàng')
                         <div style="position: absolute; top: 10px; right: 10px; background-color: #dc3545; color: white; padding: 5px 10px; border-radius: 3px; font-size: 12px; font-weight: bold;">
-                            Ngưng bán
+                            {{ $product->sale_label }}
                         </div>
                     @endif
                 </a>
@@ -46,9 +46,9 @@
                         <span class="price">{{ $product->formatted_price }}</span>
                     </div>
                     <div class="product-button">
-                        @if ($product->stock == 0)
+                        @if (! $product->is_selling || $product->stock < 1 || $product->status !== 'Còn hàng')
                             <button type="button" class="btn-cart btn-views add_to_cart" disabled
-                                    title="Sản phẩm đã ngừng kinh doanh"
+                                    title="{{ $product->sale_label }}"
                                     style="opacity: 0.5; cursor: not-allowed;">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
                                      fill="currentColor" class="bi bi-cart-plus"
