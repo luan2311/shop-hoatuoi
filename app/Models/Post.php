@@ -17,7 +17,7 @@ class Post extends Model
     {
         parent::boot();
         static::creating(function ($post) {
-            $post->slug ??= Str::slug($post->title).'-'.now()->timestamp;
+            $post->slug ??= Str::slug($post->title) . '-' . now()->timestamp;
         });
     }
 
@@ -25,14 +25,13 @@ class Post extends Model
     public function getThumbnailUrlAttribute(): string
     {
         if ($this->thumbnail) {
-            if (is_file(public_path('storage/posts/'.$this->thumbnail))) {
-                return asset('storage/posts/'.$this->thumbnail);
+            if (is_file(public_path('storage/posts/' . $this->thumbnail))) {
+                return asset('storage/posts/' . $this->thumbnail);
             }
-            if (is_file(public_path('images/'.$this->thumbnail))) {
-                return asset('images/'.$this->thumbnail);
+            if (is_file(public_path('images/' . $this->thumbnail))) {
+                return asset('images/' . $this->thumbnail);
             }
-
-            return asset('storage/posts/'.$this->thumbnail);
+            return asset('storage/posts/' . $this->thumbnail);
         }
 
         return asset('images/slide-giao-hoa-2h.jpg');

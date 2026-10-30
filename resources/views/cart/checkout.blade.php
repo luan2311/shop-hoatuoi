@@ -237,12 +237,60 @@
                             </div>
 
                             <div class="payment-methods-list">
-                                <p class="payment-desc" role="note">Chuyển khoản chưa được hỗ trợ. Vui lòng thanh toán khi nhận hàng (COD).</p>
+                                <!-- Chuyển khoản VietQR & MoMo -->
+                                <div class="payment-method-card active" id="card-banking" onclick="selectPaymentMethod('Banking')">
+                                    <div class="payment-method-header">
+                                        <input type="radio" id="momo" name="payment_method" value="Banking"
+                                            @checked(old('payment_method')==='Banking' || old('payment_method')===null)>
+                                        <div class="payment-label-wrap">
+                                            <span class="payment-title">Chuyển khoản Ngân hàng qua VietQR / MoMo</span>
+                                            <span class="payment-desc">Quét mã QR thanh toán nhanh chóng qua bất kỳ App Ngân hàng hoặc Ví MoMo</span>
+                                        </div>
+                                        <div class="payment-logos">
+                                            <img src="{{ asset('images/MoMo.png') }}" alt="MoMo" class="payment-logo" onerror="this.style.display='none'">
+                                            <span style="font-size: 11px; font-weight: 700; color: #16a34a; background: #f0fdf4; border: 1px solid #bbf7d0; padding: 2px 8px; border-radius: 4px;">VietQR</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="payment-subpanel">
+                                        <div class="banking-info-box">
+                                            <img src="https://api.vietqr.io/image/970422-0898449950-compact2.jpg?amount=370000&amp;addInfo=HOATUOI%200909123456&amp;accountName=TIEM%20HOA%20GOC%20HOA%20XINH" alt="VietQR Mã Thanh Toán" class="banking-qr-code" onerror="this.src='http://127.0.0.1:8000/images/MoMo.png'" style="
+    with: 150px;
+    height: 200px;
+    width: auto;
+">
+                                            <div class="banking-details">
+                                                <div class="banking-row">
+                                                    <span class="banking-label">Ngân hàng:</span>
+                                                    <span class="banking-val">MB Bank (Ngân Hàng Quân Đội)</span>
+                                                </div>
+                                                <div class="banking-row">
+                                                    <span class="banking-label">Số tài khoản:</span>
+                                                    <span class="banking-val">
+                                                        <span>0898449950</span>
+                                                        <button type="button" class="btn-copy-acc" onclick="event.stopPropagation(); copyToClipboard('0898449950')" title="Sao chép STK">
+                                                            <i class="fa-regular fa-copy"></i>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                                <div class="banking-row">
+                                                    <span class="banking-label">Chủ tài khoản:</span>
+                                                    <span class="banking-val">GÓC HOA XINH</span>
+                                                </div>
+                                                <div class="banking-row">
+                                                    <span class="banking-label">Cú pháp CK:</span>
+                                                    <span class="banking-val">HOATUOI {{ auth()->user()->phone ?? 'SDT' }}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <!-- Thanh toán COD -->
-                                <div class="payment-method-card active" id="card-cod" onclick="selectPaymentMethod('COD')">
+                                <div class="payment-method-card" id="card-cod" onclick="selectPaymentMethod('COD')">
                                     <div class="payment-method-header">
                                         <input type="radio" id="cod" name="payment_method" value="COD"
-                                            checked>
+                                            @checked(old('payment_method')==='COD' )>
                                         <div class="payment-label-wrap">
                                             <span class="payment-title">Thanh toán khi nhận hàng (COD)</span>
                                             <span class="payment-desc">Kiểm tra độ tươi nguyên của hoa và ký nhận trước khi thanh toán tiền mặt cho shipper</span>
@@ -305,7 +353,18 @@
                             @endforeach
                         </div>
 
-                        <p class="payment-desc" role="note">Mã ưu đãi chưa được hỗ trợ. Tổng tiền được tính theo giá sản phẩm hiện tại.</p>
+                        <!-- Voucher Code Box -->
+                        <div class="discount-section">
+                            <div class="discount-input-wrap">
+                                <input type="text" class="form-control" id="voucherInput" placeholder="Nhập mã ưu đãi..." autocomplete="off">
+                            </div>
+                            <button type="button" class="btn-apply-voucher" id="btnApplyVoucher">Áp dụng</button>
+                        </div>
+                        <div class="voucher-tags-row">
+                            <span class="voucher-tag" onclick="applyVoucherPreset('HOATUOI2026')">🌸 HOATUOI2026 (-50k)</span>
+                            <span class="voucher-tag" onclick="applyVoucherPreset('FREESHIP')">🚚 FREESHIP (Miễn phí ship)</span>
+                        </div>
+                        <div id="voucherFeedback" style="display: none; font-size: 12.5px; margin-bottom: 14px; font-weight: 600;"></div>
 
                         <!-- Fee Breakdown -->
                         <div class="total-section">
@@ -781,6 +840,66 @@
             }
         }
 
+        // Tính năng áp dụng Voucher giảm giá tương tác
+        var originalTotal = {{ (int) ($total ?? 0) }};
+        var currentDiscount = 0;
+
+        function applyVoucherPreset(code) {
+            var voucherInput = document.getElementById("voucherInput");
+            if (voucherInput) {
+                voucherInput.value = code;
+                processVoucher(code);
+            }
+        }
+
+        function processVoucher(code) {
+            var feedback = document.getElementById("voucherFeedback");
+            var discountRow = document.getElementById("discountRow");
+            var discountDisplay = document.getElementById("discountDisplay");
+            var grandTotalPrice = document.getElementById("grandTotalPrice");
+            var mobileTotalPreview = document.getElementById("mobileTotalPreview");
+
+            if (!code) {
+                if (feedback) {
+                    feedback.style.display = "block";
+                    feedback.style.color = "#dc2626";
+                    feedback.textContent = "Vui lòng nhập mã giảm giá.";
+                }
+                return;
+            }
+
+            code = code.trim().toUpperCase();
+
+            if (code === "HOATUOI2026") {
+                currentDiscount = 50000;
+                var finalTotal = Math.max(0, originalTotal - currentDiscount);
+                if (discountRow) discountRow.style.display = "flex";
+                if (discountDisplay) discountDisplay.textContent = "- " + currentDiscount.toLocaleString('vi-VN') + " đ";
+                if (grandTotalPrice) grandTotalPrice.textContent = finalTotal.toLocaleString('vi-VN') + " đ";
+                if (mobileTotalPreview) mobileTotalPreview.textContent = finalTotal.toLocaleString('vi-VN') + " đ";
+                if (feedback) {
+                    feedback.style.display = "block";
+                    feedback.style.color = "#16a34a";
+                    feedback.textContent = "✓ Áp dụng mã HOATUOI2026 thành công: Giảm 50.000 đ";
+                }
+            } else if (code === "FREESHIP") {
+                currentDiscount = 0;
+                if (discountRow) discountRow.style.display = "flex";
+                if (discountDisplay) discountDisplay.textContent = "Miễn phí";
+                if (feedback) {
+                    feedback.style.display = "block";
+                    feedback.style.color = "#16a34a";
+                    feedback.textContent = "✓ Áp dụng mã FREESHIP thành công: Miễn phí giao hoa toàn thành phố";
+                }
+            } else {
+                if (feedback) {
+                    feedback.style.display = "block";
+                    feedback.style.color = "#dc2626";
+                    feedback.textContent = "Mã ưu đãi không hợp lệ hoặc đã hết lượt áp dụng.";
+                }
+            }
+        }
+
         // Khởi tạo khi DOM sẵn sàng
         document.addEventListener('DOMContentLoaded', function() {
 
@@ -839,6 +958,14 @@
                 });
             }
 
+            // 3. Nút áp dụng Voucher
+            var btnApplyVoucher = document.getElementById("btnApplyVoucher");
+            var voucherInput = document.getElementById("voucherInput");
+            if (btnApplyVoucher && voucherInput) {
+                btnApplyVoucher.addEventListener("click", function() {
+                    processVoucher(voucherInput.value);
+                });
+            }
 
             // ==================================================================
             // REAL-TIME VALIDATION ENGINE (Ported from C# Shop-Flower & PAY_01-PAY_04)

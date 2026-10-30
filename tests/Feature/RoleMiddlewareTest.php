@@ -37,3 +37,4 @@ class RoleMiddlewareTest extends TestCase
         $response->assertStatus(200);
     }
 }
+

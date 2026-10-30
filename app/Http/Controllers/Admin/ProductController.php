@@ -90,7 +90,7 @@ class ProductController extends Controller
         $product->status = 'Hết hàng';
         $product->save();
 
-        $msg = 'Đã ngưng bán sản phẩm: '.$product->name.'. Tình trạng đã được cập nhật thành "Hết hàng".';
+        $msg = 'Đã ngưng bán sản phẩm: ' . $product->name . '. Tình trạng đã được cập nhật thành "Hết hàng".';
         if (request()->wantsJson() || request()->ajax()) {
             return response()->json([
                 'success' => true,

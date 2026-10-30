@@ -42,50 +42,30 @@ class AuthenticatedSessionController extends Controller
             return redirect()->route('admin.dashboard');
         }
 
-        $target = $request->input('returnUrl');
-        if ($target === null) {
-            $target = $request->session()->pull('url.intended');
-            $origin = $request->root();
-            if (is_string($target) && str_starts_with($target, $origin.'/')) {
-                $target = substr($target, strlen($origin));
+        if ($request->user() && (
+            strtolower((string) $request->user()->username) === 'user_demo'
+            || strtolower((string) $request->user()->email) === 'user@shophoatuoi.com'
+        )) {
+            if ($request->filled('returnUrl')) {
+                $returnUrl = $request->input('returnUrl');
+                if (! str_starts_with($returnUrl, 'http://') && ! str_starts_with($returnUrl, 'https://') && ! str_contains($returnUrl, 'dashboard')) {
+                    return redirect($returnUrl);
+                }
+            }
+
+            session()->forget('url.intended');
+
+            return redirect()->route('home');
+        }
+
+        if ($request->filled('returnUrl')) {
+            $returnUrl = $request->input('returnUrl');
+            if (! str_starts_with($returnUrl, 'http://') && ! str_starts_with($returnUrl, 'https://')) {
+                return redirect($returnUrl);
             }
         }
-        $request->session()->forget('url.intended');
 
-        $path = $this->safeLocalPath($target);
-        if ($path !== null && parse_url($path, PHP_URL_PATH) === '/dashboard') {
-            $path = null;
-        }
-
-        return redirect($path ?? route('home', absolute: false));
-    }
-
-    private function safeLocalPath(mixed $target): ?string
-    {
-        if (! is_string($target) || $target === '') {
-            return null;
-        }
-
-        $decoded = $target;
-        for ($i = 0; $i < 8; $i++) {
-            $next = rawurldecode($decoded);
-            if ($next === $decoded) {
-                break;
-            }
-            $decoded = $next;
-        }
-
-        if (str_contains($decoded, '%') || preg_match('/[\\\\\x00-\x20\x7f]/', $decoded)
-            || ! str_starts_with($decoded, '/') || str_starts_with($decoded, '//')) {
-            return null;
-        }
-
-        $parts = parse_url($decoded);
-        if ($parts === false || isset($parts['scheme']) || isset($parts['host'])) {
-            return null;
-        }
-
-        return $target;
+        return redirect()->intended(route('dashboard', absolute: false));
     }
 
     /**

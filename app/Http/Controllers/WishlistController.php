@@ -43,7 +43,7 @@ class WishlistController extends Controller
 
         return response()->json([
             'status' => $status,
-            'count' => Wishlist::ofUser($user)->count(),
+            'count'  => Wishlist::ofUser($user)->count(),
         ]);
     }
 }

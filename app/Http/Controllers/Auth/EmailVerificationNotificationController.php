@@ -15,7 +15,6 @@ class EmailVerificationNotificationController extends Controller
     {
         if ($request->user()->hasVerifiedEmail()) {
             $defaultRoute = $request->user()->isAdmin() ? route('admin.dashboard') : route('home', absolute: false);
-
             return redirect()->intended($defaultRoute);
         }
 

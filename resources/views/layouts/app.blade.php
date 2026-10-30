@@ -42,7 +42,7 @@
     <script src="{{ asset('js/main.js') }}?v={{ @filemtime(public_path('js/main.js')) ?: 1 }}"></script>
     <script src="{{ asset('js/wishlist-ajax.js') }}?v={{ @filemtime(public_path('js/wishlist-ajax.js')) ?: 1 }}"></script>
     <script src="{{ asset('js/cart-ajax.js') }}?v={{ @filemtime(public_path('js/cart-ajax.js')) ?: 1 }}"></script>
-    <script defer src="{{ asset('js/search-realtime.js') }}?v={{ @filemtime(public_path('js/search-realtime.js')) ?: 1 }}"></script>
+    <script src="{{ asset('js/search-realtime.js') }}?v={{ @filemtime(public_path('js/search-realtime.js')) ?: 1 }}"></script>
 
     <title>@yield('title', 'Shop Hoa Tươi Góc Hoa Xinh - Những Bó Hoa Tươi xinh xắn')</title>
 </head>

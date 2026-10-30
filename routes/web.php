@@ -5,7 +5,6 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WishlistController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -18,9 +17,8 @@ Route::get('/posts/{slug}', [PostController::class, 'show'])->name('posts.show')
 Route::get('/tin-tuc', fn () => redirect()->route('posts.index'));
 Route::get('/tin-tuc/{slug}', [PostController::class, 'show']);
 Route::get('/Home/Tin_tuc', fn () => redirect()->route('posts.index'));
-Route::get('/Home/Details/{id?}', function (Request $request, ?string $id = null) {
+Route::get('/Home/Details/{id?}', function (\Illuminate\Http\Request $request, ?string $id = null) {
     $target = $id ?: $request->query('id');
-
     return $target ? redirect()->route('posts.show', $target) : redirect()->route('posts.index');
 });
 
@@ -33,7 +31,6 @@ Route::get('/dashboard', function () {
     if (auth()->check() && auth()->user()->isAdmin()) {
         return redirect()->route('admin.dashboard');
     }
-
     return redirect()->route('home');
 })->middleware(['auth'])->name('dashboard');
 

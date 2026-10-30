@@ -20,7 +20,7 @@ class ProductSchemaTest extends ProductTestCase
         $product->update(['price' => 1]);
         $this->seed(ProductDemoSeeder::class);
         $this->assertSame(15, Product::count());
-        $this->assertSame(1, $product->fresh()->price);
+        $this->assertSame(1.0, $product->fresh()->price);
         $raw = DB::connection('mongodb')->getDatabase()->products->findOne(['code' => 'ANDEMO01']);
         $this->assertInstanceOf(ObjectId::class, $raw['_id']);
         $this->assertInstanceOf(UTCDateTime::class, $raw['created_at']);

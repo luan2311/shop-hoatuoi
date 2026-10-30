@@ -52,14 +52,13 @@ class ProductFailureTest extends ProductTestCase
 
     public function test_unavailable_mongodb_returns_generic_503_including_route_binding(): void
     {
-        $actor = $this->actor();
         $dsn = config('database.connections.mongodb.dsn');
         try {
             config(['database.connections.mongodb.dsn' => 'mongodb://127.0.0.1:1/?serverSelectionTimeoutMS=50&connectTimeoutMS=50']);
             DB::purge('mongodb');
             $this->getJson('/api/products/search?q=hoa')->assertStatus(503)
                 ->assertDontSee('127.0.0.1:1')->assertDontSee('MongoDB\\Driver');
-            $this->actingAs($actor)->getJson('/admin/products/'.str_repeat('a', 24).'/edit')->assertStatus(503);
+            $this->actingAs($this->actor())->getJson('/admin/products/'.str_repeat('a', 24).'/edit')->assertStatus(503);
         } finally {
             config(['database.connections.mongodb.dsn' => $dsn]);
             DB::purge('mongodb');

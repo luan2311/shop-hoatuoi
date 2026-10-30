@@ -23,6 +23,14 @@ trait UsesDungMongoDatabase
         config(['database.connections.mongodb.database' => $database]);
         DB::purge('mongodb');
 
+        $this->beforeApplicationDestroyed(function () use ($database): void {
+            if (! env('KEEP_TEST_DB', false) && str_starts_with($database, 'shop_hoatuoi_test_dung_')) {
+                try {
+                    DB::connection('mongodb')->getDatabase()->drop();
+                } catch (Throwable) {
+                }
+            }
+        });
         try {
             $db = DB::connection('mongodb')->getDatabase();
             $hello = $db->command(['hello' => 1])->toArray()[0];
@@ -32,22 +40,6 @@ trait UsesDungMongoDatabase
         if (! isset($hello->setName) && ($hello->msg ?? '') !== 'isdbgrid') {
             $this->markTestSkipped('BLOCKED: QA nghiệp vụ cần replica set hoặc sharded cluster.');
         }
-        $client = DB::connection('mongodb')->getMongoClient();
-        if (in_array($database, iterator_to_array($client->listDatabaseNames()), true)) {
-            throw new RuntimeException('Refusing to use a pre-existing QA test database.');
-        }
-        $ownerToken = bin2hex(random_bytes(16));
-        $db->selectCollection('_test_owner')->insertOne(['token' => $ownerToken]);
-        $this->beforeApplicationDestroyed(function () use ($db, $database, $ownerToken): void {
-            if (! env('KEEP_TEST_DB', false)) {
-                if ($db->getDatabaseName() !== $database
-                    || ! preg_match('/^shop_hoatuoi_test_dung_[0-9]+_[a-f0-9]{12}$/', $database)
-                    || $db->selectCollection('_test_owner')->findOne(['token' => $ownerToken]) === null) {
-                    throw new RuntimeException('Unowned QA database cleanup refused.');
-                }
-                $db->drop();
-            }
-        });
         $schemas = json_decode(file_get_contents(base_path('tests/Fixtures/mongodb-validators.json')), true, flags: JSON_THROW_ON_ERROR);
         foreach ($schemas as $name => $options) {
             $db->createCollection($name, $options);

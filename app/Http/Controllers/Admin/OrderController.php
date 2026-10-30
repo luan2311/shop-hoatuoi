@@ -28,13 +28,13 @@ class OrderController extends Controller
             $query->where('status', $status);
         }
 
-        if (! empty($searchKey)) {
-            $escaped = '%'.addcslashes($searchKey, '\\%_').'%';
+        if (!empty($searchKey)) {
+            $escaped = '%' . addcslashes($searchKey, '\\%_') . '%';
             $query->where(function ($q) use ($escaped) {
                 $q->where('order_code', 'like', $escaped)
-                    ->orWhere('customer.name', 'like', $escaped)
-                    ->orWhere('customer.email', 'like', $escaped)
-                    ->orWhere('customer.phone', 'like', $escaped);
+                  ->orWhere('customer.name', 'like', $escaped)
+                  ->orWhere('customer.email', 'like', $escaped)
+                  ->orWhere('customer.phone', 'like', $escaped);
             });
         }
 
@@ -55,10 +55,11 @@ class OrderController extends Controller
         return to_route('admin.orders.show', $order)->with('status', 'Đã cập nhật trạng thái đơn hàng.');
     }
 
-    public function markCompleted(Order $order, SalesService $sales): RedirectResponse
+    public function markCompleted(Order $order): RedirectResponse
     {
-        $sales->transition((string) $order->id, 'Completed');
+        $order->status = 'Completed';
+        $order->save();
 
-        return redirect()->back()->with('status', 'Đơn hàng #'.$order->order_code.' đã được đánh dấu hoàn thành (Completed).');
+        return redirect()->back()->with('status', 'Đơn hàng #' . $order->order_code . ' đã được đánh dấu hoàn thành (Completed).');
     }
 }

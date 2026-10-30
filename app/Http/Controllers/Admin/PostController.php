@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 use Illuminate\View\View;
 
@@ -16,8 +17,8 @@ class PostController extends Controller
         $search = $request->input('searchString') ?? $request->input('q');
         $query = Post::query();
 
-        if (! empty($search)) {
-            $escaped = '%'.addcslashes($search, '\\%_').'%';
+        if (!empty($search)) {
+            $escaped = '%' . addcslashes($search, '\\%_') . '%';
             $query->where('title', 'like', $escaped);
         }
 
@@ -45,7 +46,7 @@ class PostController extends Controller
         $thumbnailName = null;
         if ($request->hasFile('thumbnail')) {
             $file = $request->file('thumbnail');
-            $thumbnailName = time().'_'.$file->getClientOriginalName();
+            $thumbnailName = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('images'), $thumbnailName);
         }
 
@@ -53,14 +54,14 @@ class PostController extends Controller
         $lastPost = Post::where('code', 'regex', '/^TT\d+/i')->orderBy('code', 'desc')->first();
         $nextNum = 1;
         if ($lastPost && preg_match('/^TT(\d+)/i', $lastPost->code, $m)) {
-            $nextNum = (int) $m[1] + 1;
+            $nextNum = (int)$m[1] + 1;
         }
-        $code = 'TT'.str_pad((string) $nextNum, 3, '0', STR_PAD_LEFT);
+        $code = 'TT' . str_pad((string)$nextNum, 3, '0', STR_PAD_LEFT);
 
         Post::create([
             'code' => $code,
             'title' => $request->input('title'),
-            'slug' => Str::slug($request->input('title')).'-'.time(),
+            'slug' => Str::slug($request->input('title')) . '-' . time(),
             'summary' => Str::limit(strip_tags($request->input('content')), 180),
             'content' => $request->input('content'),
             'thumbnail' => $thumbnailName,
@@ -89,7 +90,7 @@ class PostController extends Controller
 
         if ($request->hasFile('thumbnail')) {
             $file = $request->file('thumbnail');
-            $thumbnailName = time().'_'.$file->getClientOriginalName();
+            $thumbnailName = time() . '_' . $file->getClientOriginalName();
             $file->move(public_path('images'), $thumbnailName);
             $post->thumbnail = $thumbnailName;
         }
