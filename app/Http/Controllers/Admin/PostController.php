@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Post;
+use App\Support\AdminPagination;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -14,6 +15,7 @@ class PostController extends Controller
 {
     public function index(Request $request): View
     {
+        $perPage = AdminPagination::perPage($request);
         $search = $request->input('searchString') ?? $request->input('q');
         $query = Post::query();
 
@@ -22,7 +24,7 @@ class PostController extends Controller
             $query->where('title', 'like', $escaped);
         }
 
-        $posts = $query->orderBy('published_at', 'desc')->orderBy('_id', 'desc')->paginate(10)->withQueryString();
+        $posts = $query->orderBy('published_at', 'desc')->orderBy('_id', 'desc')->paginate($perPage)->withQueryString();
 
         return view('admin.posts.index', compact('posts'));
     }

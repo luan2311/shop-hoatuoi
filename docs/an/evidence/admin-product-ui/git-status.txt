@@ -1,0 +1,77 @@
+## feat/an-product-sales-lifecycle
+ M app/Http/Controllers/Admin/ProductController.php
+ M app/Http/Controllers/HomeController.php
+ M app/Http/Controllers/ProductController.php
+ M app/Http/Controllers/WishlistController.php
+ M app/Http/Requests/ProductRequest.php
+ M app/Models/Product.php
+ M app/Services/SalesService.php
+ M resources/views/admin/products/edit.blade.php
+ M resources/views/admin/products/index.blade.php
+ M resources/views/components/add-to-cart.blade.php
+ M resources/views/partials/product-card.blade.php
+ M resources/views/products/show.blade.php
+ M resources/views/wishlist/index.blade.php
+ M routes/admin.php
+?? app/Http/Requests/AdminProductBrowseRequest.php
+?? app/Services/ProductLifecycle.php
+?? docs/an/ADMIN-product-ui-review.md
+?? docs/an/AN-12-product-lifecycle.md
+?? docs/an/evidence/admin-product-ui/actions-1440.png
+?? docs/an/evidence/admin-product-ui/actions-375.png
+?? docs/an/evidence/admin-product-ui/actions-768.png
+?? docs/an/evidence/admin-product-ui/browser-results.json
+?? docs/an/evidence/admin-product-ui/combined-filters.png
+?? docs/an/evidence/admin-product-ui/console.json
+?? docs/an/evidence/admin-product-ui/data-after.json
+?? docs/an/evidence/admin-product-ui/data-before.json
+?? docs/an/evidence/admin-product-ui/data-comparison.json
+?? docs/an/evidence/admin-product-ui/empty-mobile.png
+?? docs/an/evidence/admin-product-ui/empty-stopped.png
+?? docs/an/evidence/admin-product-ui/git-status.txt
+?? docs/an/evidence/admin-product-ui/javascript-tests.txt
+?? docs/an/evidence/admin-product-ui/listing-1440.png
+?? docs/an/evidence/admin-product-ui/listing-375.png
+?? docs/an/evidence/admin-product-ui/listing-768.png
+?? docs/an/evidence/admin-product-ui/php-tests.json
+?? docs/an/evidence/admin-product-ui/pint.json
+?? docs/an/evidence/admin-product-ui/preview-1440.png
+?? docs/an/evidence/admin-product-ui/preview-375.png
+?? docs/an/evidence/admin-product-ui/preview-768.png
+?? docs/an/evidence/admin-product-ui/reason-keyboard.png
+?? docs/an/evidence/admin-product-ui/requests.json
+?? docs/an/evidence/admin-product-ui/screenshots.json
+?? docs/an/evidence/admin-product-ui/search-code.png
+?? docs/an/evidence/an12/AN12QABROWSER1-created.png
+?? docs/an/evidence/an12/AN12QAORDERED-created.png
+?? docs/an/evidence/an12/actions-resumed-1440.png
+?? docs/an/evidence/an12/actions-resumed-375.png
+?? docs/an/evidence/an12/actions-resumed-768.png
+?? docs/an/evidence/an12/actions-stopped-1440.png
+?? docs/an/evidence/an12/actions-stopped-375.png
+?? docs/an/evidence/an12/actions-stopped-768.png
+?? docs/an/evidence/an12/baseline-results.json
+?? docs/an/evidence/an12/browser-results.json
+?? docs/an/evidence/an12/create-failure.png
+?? docs/an/evidence/an12/deleted.png
+?? docs/an/evidence/an12/focused-results.json
+?? docs/an/evidence/an12/git-status.txt
+?? docs/an/evidence/an12/javascript-tests.txt
+?? docs/an/evidence/an12/mongo-readback.json
+?? docs/an/evidence/an12/order-delete-blocked.png
+?? docs/an/evidence/an12/pint.txt
+?? docs/an/evidence/an12/platform.txt
+?? docs/an/evidence/an12/regression-results.json
+?? docs/an/evidence/an12/responsive-results.json
+?? docs/an/evidence/an12/resumed.png
+?? docs/an/evidence/an12/routes.json
+?? docs/an/evidence/an12/stopped-1440.png
+?? docs/an/evidence/an12/stopped-375.png
+?? docs/an/evidence/an12/stopped-768.png
+?? docs/an/evidence/an12/user-forbidden.png
+?? public/css/admin-products.css
+?? public/js/admin-products.js
+?? resources/views/admin/products/partials/pagination.blade.php
+?? tests/Feature/AdminProductBrowseTest.php
+?? tests/Feature/ProductLifecycleTest.php
+?? tests/Fixtures/lifecycle-worker.php

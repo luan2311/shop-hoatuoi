@@ -1,0 +1,43 @@
+[
+  {
+    "list": "products",
+    "desktop": "PASS",
+    "mobile": "PASS",
+    "sizeSelector": "PASS"
+  },
+  {
+    "list": "orders",
+    "desktop": "PASS",
+    "mobile": "PASS",
+    "sizeSelector": "PASS"
+  },
+  {
+    "list": "users",
+    "desktop": "PASS",
+    "mobile": "PASS",
+    "sizeSelector": "PASS"
+  },
+  {
+    "list": "posts",
+    "desktop": "PASS",
+    "mobile": "PASS",
+    "sizeSelector": "PASS"
+  },
+  {
+    "list": "contacts",
+    "desktop": "PASS",
+    "mobile": "PASS",
+    "sizeSelector": "PASS"
+  },
+  {
+    "list": "categories",
+    "desktop": "PASS",
+    "mobile": "PASS",
+    "sizeSelector": "PASS"
+  },
+  {
+    "case": "next-page-filter-preservation-size-reset",
+    "status": "PASS",
+    "businessMutations": 0
+  }
+]

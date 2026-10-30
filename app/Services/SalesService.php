@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
 use MongoDB\BSON\ObjectId;
-use MongoDB\Driver\Exception\CommandException;
 
 class SalesService
 {
@@ -79,6 +78,7 @@ class SalesService
                     abort_unless($matchedKey !== null, 404);
                 }
                 $amount = $quantity + ($action === 'add' ? ($items->get($product->code)['quantity'] ?? 0) : 0);
+                app(ProductLifecycle::class)->lock($product);
                 $this->available($product, $amount);
                 $items->put($product->code, ['product_code' => $product->code, 'quantity' => $amount]);
             }
@@ -115,7 +115,7 @@ class SalesService
                 $price = $this->price($product);
                 // Conditional decrement also protects stock when two customers buy together.
                 $changed = Product::whereKey($product->id)->where('stock', '>=', $quantity)
-                    ->where('status', 'Còn hàng')->decrement('stock', $quantity);
+                    ->selling()->where('status', 'Còn hàng')->decrement('stock', $quantity);
                 if ($changed !== 1) {
                     throw ValidationException::withMessages(['cart' => 'Tồn kho vừa thay đổi. Vui lòng thử lại.']);
                 }
@@ -180,20 +180,13 @@ class SalesService
 
     protected function runTransaction(callable $callback)
     {
-        try {
-            return DB::connection('mongodb')->transaction($callback, attempts: 5);
-        } catch (CommandException $e) {
-            if (str_contains($e->getMessage(), 'Transaction numbers are only allowed on a replica set member or mongos')) {
-                return $callback();
-            }
-            throw $e;
-        }
+        return DB::connection('mongodb')->transaction($callback, attempts: 5);
     }
 
     private function available(Product $product, mixed $quantity): void
     {
         if (! is_int($quantity) || $quantity < 1 || $quantity > 999
-            || $product->status !== 'Còn hàng' || $quantity > ($product->stock ?? 0)) {
+            || ! $product->is_selling || $product->status !== 'Còn hàng' || $quantity > ($product->stock ?? 0)) {
             throw ValidationException::withMessages(['quantity' => 'Số lượng không hợp lệ hoặc vượt tồn kho.']);
         }
     }

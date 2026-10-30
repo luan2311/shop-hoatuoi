@@ -18,6 +18,7 @@ Route::middleware(['auth', 'role:Admin'])->prefix('admin')->name('admin.')->grou
     // Products
     Route::resource('products', AdminProductController::class)->except('show');
     Route::post('/products/{product}/stop-selling', [AdminProductController::class, 'stopSelling'])->name('products.stop-selling');
+    Route::post('/products/{product}/resume-selling', [AdminProductController::class, 'resumeSelling'])->name('products.resume-selling');
 
     // Orders
     Route::get('/orders', [AdminOrderController::class, 'index'])->name('orders.index');

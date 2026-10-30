@@ -1,0 +1,124 @@
+TAP version 13
+# Subtest: fails closed when Bootstrap is unavailable
+ok 1 - fails closed when Bootstrap is unavailable
+  ---
+  duration_ms: 3.3837
+  type: 'test'
+  ...
+# Subtest: uses one configurable modal, plain text and returns focus after cancel
+ok 2 - uses one configurable modal, plain text and returns focus after cancel
+  ---
+  duration_ms: 5.5423
+  type: 'test'
+  ...
+# Subtest: double click and dismiss during a pending callback execute once
+ok 3 - double click and dismiss during a pending callback execute once
+  ---
+  duration_ms: 2.4815
+  type: 'test'
+  ...
+# Subtest: rejected callback stays open, shows error as text and allows safe cancel/reopen
+ok 4 - rejected callback stays open, shows error as text and allows safe cancel/reopen
+  ---
+  duration_ms: 2.5487
+  type: 'test'
+  ...
+# Subtest: checkout script parses and loads without syntax errors
+ok 5 - checkout script parses and loads without syntax errors
+  ---
+  duration_ms: 7.279
+  type: 'test'
+  ...
+# Subtest: removeVietnameseTones correctly strips Vietnamese diacritics
+ok 6 - removeVietnameseTones correctly strips Vietnamese diacritics
+  ---
+  duration_ms: 2.3392
+  type: 'test'
+  ...
+# Subtest: typing 1 character shows matching dropdown suggestions (accent & accentless)
+ok 7 - typing 1 character shows matching dropdown suggestions (accent & accentless)
+  ---
+  duration_ms: 5.0343
+  type: 'test'
+  ...
+# Subtest: selecting an item updates input value and dispatches change event
+ok 8 - selecting an item updates input value and dispatches change event
+  ---
+  duration_ms: 2.6695
+  type: 'test'
+  ...
+# Subtest: keyboard arrow down and enter selects highlighted option
+ok 9 - keyboard arrow down and enter selects highlighted option
+  ---
+  duration_ms: 2.8615
+  type: 'test'
+  ...
+# Subtest: focusing or clicking input displays suggestion list
+ok 10 - focusing or clicking input displays suggestion list
+  ---
+  duration_ms: 2.553
+  type: 'test'
+  ...
+# Subtest: cascading updates available districts when province changes
+ok 11 - cascading updates available districts when province changes
+  ---
+  duration_ms: 3.426
+  type: 'test'
+  ...
+# Subtest: Escape key and outside click close the dropdown
+ok 12 - Escape key and outside click close the dropdown
+  ---
+  duration_ms: 3.6849
+  type: 'test'
+  ...
+# Subtest: voucher UI waits for server, sends only code with CSRF and renders the quote once
+ok 13 - voucher UI waits for server, sends only code with CSRF and renders the quote once
+  ---
+  duration_ms: 48.5327
+  type: 'test'
+  ...
+# Subtest: invalid code clears stale discount from server response and shows an error
+ok 14 - invalid code clears stale discount from server response and shows an error
+  ---
+  duration_ms: 1.6706
+  type: 'test'
+  ...
+# Subtest: network failure never shows a fake success or changes the last verified amount
+ok 15 - network failure never shows a fake success or changes the last verified amount
+  ---
+  duration_ms: 2.9134
+  type: 'test'
+  ...
+# Subtest: debounces 300 ms, aborts old request, and ignores a late response
+ok 16 - debounces 300 ms, aborts old request, and ignores a late response
+  ---
+  duration_ms: 9.8949
+  type: 'test'
+  ...
+# Subtest: renders untrusted names as text and URL-encodes slugs
+ok 17 - renders untrusted names as text and URL-encodes slugs
+  ---
+  duration_ms: 2.9921
+  type: 'test'
+  ...
+# Subtest: empty query, Escape and outside clicks cancel pending results
+ok 18 - empty query, Escape and outside clicks cancel pending results
+  ---
+  duration_ms: 2.9443
+  type: 'test'
+  ...
+# Subtest: shows empty and failure states without injecting server content
+ok 19 - shows empty and failure states without injecting server content
+  ---
+  duration_ms: 4.4528
+  type: 'test'
+  ...
+1..19
+# tests 19
+# suites 0
+# pass 19
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 231.8572

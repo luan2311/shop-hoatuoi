@@ -1,0 +1,22 @@
+[
+  {
+    "path": "D:\\learning\\MNM\\shop-hoatuoi-dev\\app\\Services\\ProductLifecycle.php",
+    "unchanged": true
+  },
+  {
+    "path": "D:\\learning\\MNM\\shop-hoatuoi-dev\\app\\Services\\SalesService.php",
+    "unchanged": true
+  },
+  {
+    "path": "D:\\learning\\MNM\\shop-hoatuoi-dev\\app\\Models\\Product.php",
+    "unchanged": true
+  },
+  {
+    "path": "D:\\learning\\MNM\\shop-hoatuoi-dev\\routes\\admin.php",
+    "unchanged": true
+  },
+  {
+    "path": "D:\\learning\\MNM\\shop-hoatuoi-dev\\app\\Http\\Controllers\\Admin\\ProductController.php",
+    "unchanged": true
+  }
+]

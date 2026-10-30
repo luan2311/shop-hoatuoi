@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\OrderStatusRequest;
 use App\Models\Order;
 use App\Services\SalesService;
+use App\Support\AdminPagination;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -15,6 +16,7 @@ class OrderController extends Controller
 {
     public function index(Request $request): View
     {
+        $perPage = AdminPagination::perPage($request);
         $request->validate([
             'status' => ['nullable', 'string', Rule::in(Order::STATUSES)],
         ]);
@@ -38,7 +40,7 @@ class OrderController extends Controller
             });
         }
 
-        $orders = $query->orderBy('created_at', 'desc')->orderBy('_id', 'desc')->paginate(10)->withQueryString();
+        $orders = $query->orderBy('created_at', 'desc')->orderBy('_id', 'desc')->paginate($perPage)->withQueryString();
 
         return view('admin.orders.index', compact('orders'));
     }

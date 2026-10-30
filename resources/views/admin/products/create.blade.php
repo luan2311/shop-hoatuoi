@@ -3,6 +3,7 @@
 @section('title', 'Tạo sản phẩm mới')
 
 @section('content')
+<x-admin.confirm-modal />
 <div class="card p-4 border-0 shadow-sm" style="display: block; border-radius: 8px;">
     <h2>Tạo sản phẩm mới</h2>
 
@@ -17,7 +18,8 @@
         </div>
     @endif
 
-    <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data" class="mt-4">
+    <form action="{{ route('admin.products.store') }}" method="POST" enctype="multipart/form-data" class="mt-4" data-confirm-form data-confirm-transport="fetch" data-confirm-type="success" data-confirm-title="Xác nhận thêm sản phẩm" data-confirm-message="Bạn có chắc chắn muốn thêm sản phẩm này?" data-confirm-text="Thêm sản phẩm">
+        <fieldset data-confirm-gate disabled>
         @csrf
 
         <div class="form-group row">
@@ -109,13 +111,14 @@
         <div class="form-group row mt-4">
             <div class="col-md-10 offset-md-2">
                 <button type="submit" class="btn btn-success px-4">
-                    <i class="fas fa-check mr-1"></i> Tạo mới
+                    <i class="fas fa-check mr-1" aria-hidden="true"></i> Tạo mới
                 </button>
                 <a href="{{ route('admin.products.index') }}" class="btn btn-secondary ml-2">
                     Quay lại danh sách
                 </a>
             </div>
         </div>
+        </fieldset>
     </form>
 </div>
 @endsection

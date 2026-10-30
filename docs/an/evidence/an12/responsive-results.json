@@ -1,0 +1,17 @@
+[
+  {
+    "width": 1440,
+    "status": "PASS",
+    "note": "Admin table scrolls horizontally inside table-responsive; both buttons clicked at this width"
+  },
+  {
+    "width": 768,
+    "status": "PASS",
+    "note": "Admin table scrolls horizontally inside table-responsive; both buttons clicked at this width"
+  },
+  {
+    "width": 375,
+    "status": "PASS",
+    "note": "Admin table scrolls horizontally inside table-responsive; both buttons clicked at this width"
+  }
+]
