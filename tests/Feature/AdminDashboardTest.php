@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Models\Category;
+use App\Models\Order;
 use App\Models\Product;
 use App\Models\Role;
 use App\Models\User;
@@ -31,7 +32,7 @@ class AdminDashboardTest extends TestCase
 
         $response = $this->actingAs($admin)->get('/admin/dashboard');
         $response->assertStatus(200);
-        $response->assertSee('Đơn hàng gần đây');
+        $response->assertSee('Tổng quan quản trị');
     }
 
     public function test_admin_dashboard_displays_statistic_counts(): void
@@ -58,8 +59,8 @@ class AdminDashboardTest extends TestCase
         $response->assertJsonStructure([
             'success',
             'data' => [
-                '*' => ['date', 'revenue'],
-            ],
+                '*' => ['date', 'revenue']
+            ]
         ]);
     }
 

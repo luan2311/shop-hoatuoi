@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
-use MongoDB\BSON\Decimal128;
 use MongoDB\BSON\Regex;
 use MongoDB\Laravel\Eloquent\Model;
 
@@ -23,9 +23,8 @@ class Product extends Model
 
     public function getPriceAttribute($value): int|float|null
     {
-        if ($value instanceof Decimal128) {
+        if ($value instanceof \MongoDB\BSON\Decimal128) {
             $str = (string) $value;
-
             return str_contains($str, '.') ? (float) $str : (int) $str;
         }
 
@@ -38,9 +37,8 @@ class Product extends Model
 
     public function getOriginalPriceAttribute($value): int|float|null
     {
-        if ($value instanceof Decimal128) {
+        if ($value instanceof \MongoDB\BSON\Decimal128) {
             $str = (string) $value;
-
             return str_contains($str, '.') ? (float) $str : (int) $str;
         }
 
@@ -94,7 +92,7 @@ class Product extends Model
         }
 
         if (str_starts_with($image, 'products/')) {
-            return asset('storage/'.$image);
+            return asset('storage/' . $image);
         }
 
         if (str_starts_with($image, 'storage/')) {
@@ -102,21 +100,21 @@ class Product extends Model
         }
 
         $candidates = [
-            'storage/products/' => public_path('storage/products/'.$image),
-            'storage/' => public_path('storage/'.$image),
-            'images/products/' => public_path('images/products/'.$image),
-            'images/' => public_path('images/'.$image),
-            'Images/' => public_path('Images/'.$image),
+            'storage/products/' => public_path('storage/products/' . $image),
+            'storage/' => public_path('storage/' . $image),
+            'images/products/' => public_path('images/products/' . $image),
+            'images/' => public_path('images/' . $image),
+            'Images/' => public_path('Images/' . $image),
         ];
 
         foreach ($candidates as $prefix => $fullPath) {
             if (is_file($fullPath)) {
-                return asset($prefix.$image);
+                return asset($prefix . $image);
             }
         }
 
         if (preg_match('/\.(?:jpg|jpeg|png|webp|gif|svg)$/i', $image)) {
-            return asset('storage/products/'.$image);
+            return asset('storage/products/' . $image);
         }
 
         return null;

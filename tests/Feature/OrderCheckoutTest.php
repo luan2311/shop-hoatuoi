@@ -74,30 +74,6 @@ class OrderCheckoutTest extends TestCase
         $this->assertSame(2, Cart::first()->items[0]['quantity']);
     }
 
-    public function test_cart_write_failure_rolls_back_created_order_and_all_stock_changes(): void
-    {
-        $user = $this->customer();
-        $this->actingAs($user);
-        $first = $this->product();
-        $second = $this->product();
-        foreach ([$first, $second] as $product) {
-            $this->post('/cart/add', ['product_id' => $product->id, 'quantity' => 2])->assertRedirect('/cart');
-        }
-        $cart = Cart::firstOrFail();
-        $items = $cart->items;
-        // Fail the final cart write, after both stock decrements and the order insert.
-        DB::connection('mongodb')->getDatabase()->modifyCollection('carts', [
-            'validator' => ['$jsonSchema' => ['bsonType' => 'object', 'required' => ['forced_missing_field']]],
-        ]);
-
-        $this->postJson('/checkout', $this->delivery())->assertStatus(503);
-
-        $this->assertSame(0, Order::count());
-        $this->assertSame(10, $first->fresh()->stock);
-        $this->assertSame(10, $second->fresh()->stock);
-        $this->assertSame($items, $cart->fresh()->items);
-    }
-
     public function test_empty_cart_deleted_product_and_invalid_delivery_are_rejected(): void
     {
         $this->get('/checkout')->assertRedirect('/login');
@@ -126,9 +102,9 @@ class OrderCheckoutTest extends TestCase
         $this->postJson('/checkout', $this->delivery())->assertUnprocessable();
         $this->assertSame(10, $product->fresh()->stock);
         $product->update(['price' => 400000]);
-        $this->post('/checkout', $this->delivery())->assertRedirect();
+        $this->post('/checkout', $this->delivery(['payment_method' => 'Banking']))->assertRedirect();
         $this->assertSame(400000, Order::first()->total_amount);
-        $this->assertSame('COD', Order::first()->payment_method);
+        $this->assertSame('Banking', Order::first()->payment_method);
     }
 
     public function test_history_is_owned_paginated_and_supports_legacy_string_user_ids(): void

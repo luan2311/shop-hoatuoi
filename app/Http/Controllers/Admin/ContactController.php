@@ -15,13 +15,13 @@ class ContactController extends Controller
         $search = $request->input('searchString') ?? $request->input('q');
         $query = Contact::query();
 
-        if (! empty($search)) {
-            $escaped = '%'.addcslashes($search, '\\%_').'%';
+        if (!empty($search)) {
+            $escaped = '%' . addcslashes($search, '\\%_') . '%';
             $query->where(function ($q) use ($escaped) {
                 $q->where('full_name', 'like', $escaped)
-                    ->orWhere('email', 'like', $escaped)
-                    ->orWhere('phone', 'like', $escaped)
-                    ->orWhere('message', 'like', $escaped);
+                  ->orWhere('email', 'like', $escaped)
+                  ->orWhere('phone', 'like', $escaped)
+                  ->orWhere('message', 'like', $escaped);
             });
         }
 

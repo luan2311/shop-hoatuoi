@@ -17,9 +17,9 @@ class ContactController extends Controller
         // Ô "name" trên form lưu vào field full_name; code (CT001...) và status do model tự gán
         Contact::create([
             'full_name' => $request->validated('name'),
-            'email' => $request->validated('email'),
-            'phone' => $request->validated('phone'),
-            'message' => $request->validated('message'),
+            'email'     => $request->validated('email'),
+            'phone'     => $request->validated('phone'),
+            'message'   => $request->validated('message'),
         ]);
 
         return redirect('/contact')

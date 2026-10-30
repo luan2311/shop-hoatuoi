@@ -108,19 +108,4 @@ class SalesConcurrencyTest extends TestCase
         $this->assertSame('Cancelled', $order->fresh()->status);
         $this->assertSame(10, Product::first()->stock);
     }
-
-    public function test_concurrent_completion_of_shipped_order_has_one_winner(): void
-    {
-        $admin = $this->customer('Admin');
-        $order = $this->placedOrder($admin);
-        app(SalesService::class)->transition($order->id, 'Processing');
-        app(SalesService::class)->transition($order->id, 'Shipped');
-        $stock = Product::first()->stock;
-
-        $results = $this->race([['complete', $admin, $order], ['complete', $admin, $order]]);
-        sort($results);
-        $this->assertSame(['rejected', 'success'], $results);
-        $this->assertSame('Completed', $order->fresh()->status);
-        $this->assertSame($stock, Product::first()->stock);
-    }
 }

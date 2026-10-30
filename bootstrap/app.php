@@ -30,7 +30,6 @@ return Application::configure(basePath: dirname(__DIR__))
             )) {
                 return route('home');
             }
-
             return route('dashboard');
         });
     })

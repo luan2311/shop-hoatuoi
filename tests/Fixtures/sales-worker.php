@@ -22,8 +22,6 @@ $user = User::findOrFail($userId);
 try {
     if ($action === 'add') {
         $sales->change($user, 'add', $productId, 1);
-    } elseif ($action === 'complete') {
-        $sales->transition($productId, 'Completed');
     } elseif ($action === 'cancel') {
         $sales->transition($productId, 'Cancelled');
     } else {

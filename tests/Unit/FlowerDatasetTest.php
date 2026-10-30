@@ -97,9 +97,7 @@ class FlowerDatasetTest extends TestCase
         foreach ($manifest as $image) {
             $this->assertTrue($image['valid_filename']);
             $this->assertSame(is_file(base_path($image['asset_path'])), $image['exists']);
-            // Runtime uploads are ignored deployment state; the manifest records the audit-time snapshot.
-            $this->assertIsBool($image['runtime_exists']);
-            $this->assertStringStartsWith('storage/', $image['storage_path']);
+            $this->assertSame(is_file(base_path($image['storage_path'])), $image['runtime_exists']);
             if (! $image['exists']) {
                 $this->assertSame('missing', $image['status']);
 

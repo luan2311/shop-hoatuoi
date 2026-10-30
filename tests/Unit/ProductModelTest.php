@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
+use App\Models\Category;
 use App\Models\Product;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Tests\TestCase;
 
 class ProductModelTest extends TestCase
@@ -26,7 +26,7 @@ class ProductModelTest extends TestCase
     public function test_image_url_resolves_raw_filename(): void
     {
         $product = new Product(['image' => 'kt2a5767-1748932933010.jpg']);
-        $this->assertStringEndsWith('/images/kt2a5767-1748932933010.jpg', $product->image_url);
+        $this->assertStringEndsWith('/storage/products/kt2a5767-1748932933010.jpg', $product->image_url);
     }
 
     public function test_image_url_returns_null_when_empty(): void
@@ -59,12 +59,12 @@ class ProductModelTest extends TestCase
     {
         $product = new Product;
         $relation = $product->categoryRecord();
-        $this->assertInstanceOf(BelongsTo::class, $relation);
+        $this->assertInstanceOf(\Illuminate\Database\Eloquent\Relations\BelongsTo::class, $relation);
     }
 
     public function test_resolve_item_image_url_resolves_image_and_fallback(): void
     {
-        $this->assertStringEndsWith('/images/kt2a5767-1748932933010.jpg', Product::resolveItemImageUrl('kt2a5767-1748932933010.jpg'));
+        $this->assertStringEndsWith('/storage/products/kt2a5767-1748932933010.jpg', Product::resolveItemImageUrl('kt2a5767-1748932933010.jpg'));
         $this->assertNull(Product::resolveItemImageUrl(null, 'NONEXISTENT'));
     }
 }

@@ -4,7 +4,6 @@ namespace Tests\Feature\Products;
 
 use App\Models\Product;
 use Illuminate\Http\UploadedFile;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class AdminProductTest extends ProductTestCase
@@ -26,7 +25,7 @@ class AdminProductTest extends ProductTestCase
             ->assertRedirect('/admin/products');
         $product = Product::where('code', 'SP999')->firstOrFail();
         $this->assertSame(20, $product->stock);
-        $this->assertSame(500000, $product->price);
+        $this->assertSame(500000.0, $product->price);
         $this->assertSame('LH001', $product->category['code']);
         $this->assertSame($category->id, $product->categoryRecord->id);
         $this->assertNull($product->getAttribute('is_admin'));
@@ -41,7 +40,7 @@ class AdminProductTest extends ProductTestCase
         $updated = $product->fresh();
         $this->assertSame('Tên mới', $updated->name);
         $this->assertSame($product->slug, $updated->slug);
-        $this->assertSame(0, $updated->price);
+        $this->assertSame(0.0, $updated->price);
         Storage::disk('public')->assertMissing($oldImage);
         Storage::disk('public')->assertExists($updated->image);
         unset($data['image']);
@@ -59,7 +58,7 @@ class AdminProductTest extends ProductTestCase
         $payload = array_replace($this->payload($category->id), ['price' => '123456.75', 'stock' => '7']);
         $this->actingAs($this->actor())->post('/admin/products', $payload)->assertRedirect('/admin/products');
         $product = Product::where('code', 'SP999')->firstOrFail();
-        $raw = DB::connection('mongodb')->getDatabase()->products->findOne(['code' => 'SP999']);
+        $raw = \Illuminate\Support\Facades\DB::connection('mongodb')->getDatabase()->products->findOne(['code' => 'SP999']);
         $this->assertSame(123456.75, $raw['price']);
         $this->assertSame(7, $raw['stock']);
         Storage::disk('public')->assertExists($product->image);
@@ -86,7 +85,7 @@ class AdminProductTest extends ProductTestCase
         $category = $this->category();
         $existing = $this->product($category, ['code' => 'SP999']);
         $this->actingAs($this->actor());
-        $this->postJson('/admin/products', [])->assertUnprocessable()->assertJsonValidationErrors(['name', 'price', 'stock', 'category_id', 'status', 'image']);
+        $this->postJson('/admin/products', [])->assertUnprocessable()->assertJsonValidationErrors(['code', 'name', 'price', 'stock', 'category_id', 'status', 'image']);
         $this->postJson('/admin/products', ['name' => ['bad'], 'code' => ['bad']])->assertUnprocessable()->assertJsonValidationErrors(['name', 'code']);
         $payload = $this->payload($category->id);
         $payload['slug'] = $existing->slug;

@@ -20,7 +20,7 @@ class CategoryController extends Controller
         if ($request->filled('search')) {
             $search = $request->input('search');
             $query->where('name', 'like', "%{$search}%")
-                ->orWhere('slug', 'like', "%{$search}%");
+                  ->orWhere('slug', 'like', "%{$search}%");
         }
 
         $categories = $query->latest()->paginate(10)->withQueryString();
@@ -42,7 +42,7 @@ class CategoryController extends Controller
     public function store(CategoryRequest $request)
     {
         $data = $request->validated();
-
+        
         if (empty($data['slug'])) {
             $data['slug'] = Str::slug($data['name']);
         } else {
