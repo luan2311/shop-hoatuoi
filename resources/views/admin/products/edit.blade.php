@@ -3,6 +3,7 @@
 @section('title', 'Chỉnh sửa sản phẩm')
 
 @section('content')
+<x-admin.confirm-modal />
 <div class="card p-4 border-0 shadow-sm" style="display: block; border-radius: 8px;">
     <h2>Chỉnh sửa sản phẩm</h2>
     <h4 class="text-muted">{{ $product->name }} (Mã: {{ $product->code }})</h4>
@@ -19,7 +20,8 @@
         </div>
     @endif
 
-    <form action="{{ route('admin.products.update', $product) }}" method="POST" enctype="multipart/form-data" class="mt-4">
+    <form action="{{ route('admin.products.update', $product) }}" method="POST" enctype="multipart/form-data" class="mt-4" data-confirm-form data-confirm-transport="fetch" data-confirm-type="primary" data-confirm-title="Xác nhận lưu thay đổi" data-confirm-message="Bạn có muốn lưu các thay đổi của sản phẩm này?" data-confirm-text="Lưu thay đổi">
+        <fieldset data-confirm-gate disabled>
         @csrf
         @method('PUT')
 
@@ -34,7 +36,8 @@
         <div class="form-group row">
             <label for="code" class="col-md-2 col-form-label">Mã sản phẩm <span class="text-danger">*</span></label>
             <div class="col-md-10">
-                <input type="text" name="code" id="code" class="form-control" value="{{ old('code', $product->code) }}" required />
+                <input type="text" name="code" id="code" class="form-control" value="{{ $product->code }}" required readonly />
+                <small class="form-text text-muted">Mã đã lưu được giữ nguyên để bảo toàn tham chiếu đơn hàng, giỏ hàng và yêu thích.</small>
                 @error('code') <span class="text-danger small">{{ $message }}</span> @enderror
             </div>
         </div>
@@ -119,13 +122,14 @@
         <div class="form-group row mt-4">
             <div class="col-md-10 offset-md-2">
                 <button type="submit" class="btn btn-primary px-4">
-                    <i class="fas fa-save mr-1"></i> Lưu thay đổi
+                    <i class="fas fa-save mr-1" aria-hidden="true"></i> Lưu thay đổi
                 </button>
                 <a href="{{ route('admin.products.index') }}" class="btn btn-danger ml-2">
                     Quay lại danh sách
                 </a>
             </div>
         </div>
+        </fieldset>
     </form>
 </div>
 @endsection

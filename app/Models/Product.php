@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use MongoDB\BSON\Decimal128;
 use MongoDB\BSON\Regex;
 use MongoDB\Laravel\Eloquent\Model;
 
@@ -23,8 +23,9 @@ class Product extends Model
 
     public function getPriceAttribute($value): int|float|null
     {
-        if ($value instanceof \MongoDB\BSON\Decimal128) {
+        if ($value instanceof Decimal128) {
             $str = (string) $value;
+
             return str_contains($str, '.') ? (float) $str : (int) $str;
         }
 
@@ -37,8 +38,9 @@ class Product extends Model
 
     public function getOriginalPriceAttribute($value): int|float|null
     {
-        if ($value instanceof \MongoDB\BSON\Decimal128) {
+        if ($value instanceof Decimal128) {
             $str = (string) $value;
+
             return str_contains($str, '.') ? (float) $str : (int) $str;
         }
 
@@ -92,7 +94,7 @@ class Product extends Model
         }
 
         if (str_starts_with($image, 'products/')) {
-            return asset('storage/' . $image);
+            return asset('storage/'.$image);
         }
 
         if (str_starts_with($image, 'storage/')) {
@@ -100,21 +102,21 @@ class Product extends Model
         }
 
         $candidates = [
-            'storage/products/' => public_path('storage/products/' . $image),
-            'storage/' => public_path('storage/' . $image),
-            'images/products/' => public_path('images/products/' . $image),
-            'images/' => public_path('images/' . $image),
-            'Images/' => public_path('Images/' . $image),
+            'storage/products/' => public_path('storage/products/'.$image),
+            'storage/' => public_path('storage/'.$image),
+            'images/products/' => public_path('images/products/'.$image),
+            'images/' => public_path('images/'.$image),
+            'Images/' => public_path('Images/'.$image),
         ];
 
         foreach ($candidates as $prefix => $fullPath) {
             if (is_file($fullPath)) {
-                return asset($prefix . $image);
+                return asset($prefix.$image);
             }
         }
 
         if (preg_match('/\.(?:jpg|jpeg|png|webp|gif|svg)$/i', $image)) {
-            return asset('storage/products/' . $image);
+            return asset('storage/products/'.$image);
         }
 
         return null;
@@ -181,7 +183,23 @@ class Product extends Model
 
     public function scopeInStock($query)
     {
-        return $query->where('stock', '>', 0)->where('status', 'Còn hàng');
+        return $query->selling()->where('stock', '>', 0)->where('status', 'Còn hàng');
+    }
+
+    public function getIsSellingAttribute($value): bool
+    {
+        // Missing field in pre-AN12 documents means active, independent of stock.
+        return $value === null || $value === true;
+    }
+
+    public function getSaleLabelAttribute(): string
+    {
+        return ! $this->is_selling ? 'Ngừng bán' : ($this->stock < 1 ? 'Hết hàng' : ($this->status ?? 'Còn hàng'));
+    }
+
+    public function scopeSelling($query)
+    {
+        return $query->where(fn ($q) => $q->where('is_selling', true)->orWhereNull('is_selling'));
     }
 
     public function scopeInCategory($query, string $slug)

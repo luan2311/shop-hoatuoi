@@ -173,7 +173,7 @@
                         <span class="mb-break">
                             <span class="stock-brand-title">Tình trạng:</span>
                             <span class="a-stock fw-bold {{ $product->stock > 0 ? 'text-success' : 'text-danger' }}">
-                                {{ $product->status ?? ($product->stock > 0 ? 'Còn hàng' : 'Hết hàng') }}
+                                {{ $product->sale_label }}
                             </span>
                         </span>
                     </div>
@@ -216,9 +216,9 @@
                                         @endif
                                     </div>
                                     <div class="clearfix btn-mua button_actions">
-                                        @if($product->stock == 0)
+                                        @if(! $product->is_selling || $product->stock < 1 || $product->status !== 'Còn hàng')
                                             <button type="button" class="btn btn_base normal_button btn_add_cart add_to_cart btn-cart" disabled="disabled" style="width: 100%;">
-                                                <span class="txt-main">Hết hàng</span>
+                                                <span class="txt-main">{{ $product->sale_label }}</span>
                                             </button>
                                         @else
                                             <button type="submit" name="buy_now" value="1" class="btn btn-buyNow">

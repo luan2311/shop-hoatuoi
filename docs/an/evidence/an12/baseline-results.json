@@ -1,0 +1,18 @@
+{
+  "tests": 60,
+  "passed": 53,
+  "failed": 7,
+  "errors": 0,
+  "skipped": 0,
+  "assertions": 519,
+  "result": "failed",
+  "failures": [
+    "Tests\\Unit\\FlowerDatasetTest::test_manifest_reports_missing_assets_without_claiming_image_completion",
+    "Tests\\Unit\\ProductModelTest::test_image_url_resolves_raw_filename",
+    "Tests\\Unit\\ProductModelTest::test_resolve_item_image_url_resolves_image_and_fallback",
+    "Tests\\Feature\\AdminDashboardTest::test_admin_can_view_dashboard",
+    "Tests\\Feature\\Auth\\AuthenticationTest::test_users_can_authenticate_using_the_login_screen",
+    "Tests\\Feature\\Auth\\AuthenticationTest::test_users_can_authenticate_using_shopflower_csharp_fields",
+    "Tests\\Feature\\Auth\\AuthenticationTest::test_user_with_role_user_is_redirected_to_home_after_login"
+  ]
+}

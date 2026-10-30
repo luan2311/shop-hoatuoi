@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
+use App\Support\AdminPagination;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -12,6 +13,7 @@ class ContactController extends Controller
 {
     public function index(Request $request): View
     {
+        $perPage = AdminPagination::perPage($request);
         $search = $request->input('searchString') ?? $request->input('q');
         $query = Contact::query();
 
@@ -25,7 +27,7 @@ class ContactController extends Controller
             });
         }
 
-        $contacts = $query->orderBy('created_at', 'desc')->orderBy('_id', 'desc')->paginate(10)->withQueryString();
+        $contacts = $query->orderBy('created_at', 'desc')->orderBy('_id', 'desc')->paginate($perPage)->withQueryString();
 
         return view('admin.contacts.index', compact('contacts'));
     }

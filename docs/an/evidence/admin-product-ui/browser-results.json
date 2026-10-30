@@ -1,0 +1,136 @@
+[
+  {
+    "name": "global-stats",
+    "status": "PASS",
+    "detail": "Matches independent MongoDB readback; counts unchanged by filters"
+  },
+  {
+    "name": "responsive-1440",
+    "status": "PASS",
+    "detail": "No document overflow; table uses local horizontal scroll; preview fits"
+  },
+  {
+    "name": "responsive-768",
+    "status": "PASS",
+    "detail": "No document overflow; table uses local horizontal scroll; preview fits"
+  },
+  {
+    "name": "responsive-375",
+    "status": "PASS",
+    "detail": "No document overflow; table uses local horizontal scroll; preview fits"
+  },
+  {
+    "name": "popover-keyboard-and-click",
+    "status": "PASS",
+    "detail": "Focus and click expose actual reason; Escape closes it"
+  },
+  {
+    "name": "code-search",
+    "status": "PASS",
+    "detail": "Case insensitive, actual existing product"
+  },
+  {
+    "name": "name-search",
+    "status": "PASS",
+    "detail": "Literal Vietnamese substring matched"
+  },
+  {
+    "name": "price-asc",
+    "status": "PASS",
+    "detail": [
+      200000,
+      250000,
+      300000,
+      300000,
+      300000,
+      300000,
+      350000,
+      350000,
+      370000,
+      370000
+    ]
+  },
+  {
+    "name": "price-desc",
+    "status": "PASS",
+    "detail": [
+      3700000,
+      3000000,
+      2500000,
+      2300000,
+      2000000,
+      2000000,
+      2000000,
+      1900000,
+      1800000,
+      1800000
+    ]
+  },
+  {
+    "name": "stock-asc",
+    "status": "PASS",
+    "detail": [
+      5,
+      8,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10,
+      10
+    ]
+  },
+  {
+    "name": "stock-desc",
+    "status": "PASS",
+    "detail": [
+      16,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15,
+      15
+    ]
+  },
+  {
+    "name": "combined-filter-pagination",
+    "status": "PASS",
+    "detail": "All four filters retained on page 2"
+  },
+  {
+    "name": "reset",
+    "status": "PASS",
+    "detail": "Clean URL and default filters"
+  },
+  {
+    "name": "dropdown-submit",
+    "status": "PASS",
+    "detail": "State filter auto-submits the same GET form"
+  },
+  {
+    "name": "isolation-/admin/categories",
+    "status": "PASS",
+    "detail": "Product CSS/JS absent"
+  },
+  {
+    "name": "isolation-/admin/dashboard",
+    "status": "PASS",
+    "detail": "Product CSS/JS absent"
+  },
+  {
+    "name": "readonly-network",
+    "status": "PASS",
+    "detail": "Only GET/HEAD and login POST, no product mutations"
+  },
+  {
+    "name": "console",
+    "status": "PASS",
+    "detail": "No JS page errors"
+  }
+]

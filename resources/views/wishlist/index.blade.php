@@ -24,7 +24,7 @@
             @foreach ($wishlists as $item)
                 @php
                     $product = $item->product;
-                    $isDiscontinued = $product->stock == 0;
+                    $isDiscontinued = ! $product->is_selling || $product->stock < 1 || $product->status !== 'Còn hàng';
                 @endphp
 
                 <div class="col-md-3 mb-4 col-6 js-wishlist-item">
@@ -36,8 +36,8 @@
                                      style="width: 100%; height: 100%; object-fit: cover;">
                             </a>
                             @if ($isDiscontinued)
-                                <div style="position: absolute; top: 10px; right: 10px; background-color: #dc3545; color: white; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: bold;">
-                                    Ngưng bán
+                                <div style="position: absolute; top: 10px; right: 10px; background-color: #dc3545; color: white; padding: 5px 10px; border-radius: 3px; font-size: 12px; font-weight: bold;">
+                                    {{ $product->sale_label }}
                                 </div>
                             @endif
                         </div>
@@ -57,9 +57,9 @@
                                     <button type="button"
                                             class="btn-action add-cart"
                                             disabled
-                                            title="Sản phẩm đã ngừng kinh doanh"
-                                            style="background: #e0e0e0; color: #999; border-radius: 6px; padding: 6px 10px; margin: 2px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; cursor: not-allowed; border: none;">
-                                        <i class="fas fa-shopping-cart me-1"></i> <span class="d-none d-sm-inline">Thêm giỏ</span>
+                                            title="{{ $product->sale_label }}"
+                                            style="background: #e0e0e0; color: #999; border-radius: 8px; padding: 8px 12px; margin: 4px; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; cursor: not-allowed; border: none;">
+                                        <i class="fas fa-shopping-cart" style="margin-right: 6px;"></i> Thêm giỏ
                                     </button>
                                 @else
                                     <form action="/cart/add" method="post" style="margin: 0;" data-no-loading="true" data-cart-form="">

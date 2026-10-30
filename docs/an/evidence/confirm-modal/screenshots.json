@@ -1,0 +1,155 @@
+[
+  {
+    "file": "create-1440.png",
+    "url": "http://127.0.0.1:8012/admin/products/create",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "at": "2026-10-30T17:41:22.548Z"
+  },
+  {
+    "file": "create-768.png",
+    "url": "http://127.0.0.1:8012/admin/products/create",
+    "viewport": {
+      "width": 768,
+      "height": 1000
+    },
+    "at": "2026-10-30T17:41:23.200Z"
+  },
+  {
+    "file": "create-375.png",
+    "url": "http://127.0.0.1:8012/admin/products/create",
+    "viewport": {
+      "width": 375,
+      "height": 1000
+    },
+    "at": "2026-10-30T17:41:23.830Z"
+  },
+  {
+    "file": "server-validation.png",
+    "url": "http://127.0.0.1:8012/admin/products/create",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "at": "2026-10-30T17:41:29.206Z"
+  },
+  {
+    "file": "edit-1440.png",
+    "url": "http://127.0.0.1:8012/admin/products/6ae4d6cbfdf4eadfd0037a86/edit",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "at": "2026-10-30T17:41:35.586Z"
+  },
+  {
+    "file": "edit-768.png",
+    "url": "http://127.0.0.1:8012/admin/products/6ae4d6cbfdf4eadfd0037a86/edit",
+    "viewport": {
+      "width": 768,
+      "height": 1000
+    },
+    "at": "2026-10-30T17:41:36.262Z"
+  },
+  {
+    "file": "edit-375.png",
+    "url": "http://127.0.0.1:8012/admin/products/6ae4d6cbfdf4eadfd0037a86/edit",
+    "viewport": {
+      "width": 375,
+      "height": 1000
+    },
+    "at": "2026-10-30T17:41:36.901Z"
+  },
+  {
+    "file": "stop-1440.png",
+    "url": "http://127.0.0.1:8012/admin/products",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "at": "2026-10-30T17:41:41.368Z"
+  },
+  {
+    "file": "stop-768.png",
+    "url": "http://127.0.0.1:8012/admin/products",
+    "viewport": {
+      "width": 768,
+      "height": 1000
+    },
+    "at": "2026-10-30T17:41:42.017Z"
+  },
+  {
+    "file": "stop-375.png",
+    "url": "http://127.0.0.1:8012/admin/products",
+    "viewport": {
+      "width": 375,
+      "height": 1000
+    },
+    "at": "2026-10-30T17:41:42.655Z"
+  },
+  {
+    "file": "resume-1440.png",
+    "url": "http://127.0.0.1:8012/admin/products",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "at": "2026-10-30T17:41:46.888Z"
+  },
+  {
+    "file": "resume-768.png",
+    "url": "http://127.0.0.1:8012/admin/products",
+    "viewport": {
+      "width": 768,
+      "height": 1000
+    },
+    "at": "2026-10-30T17:41:47.526Z"
+  },
+  {
+    "file": "resume-375.png",
+    "url": "http://127.0.0.1:8012/admin/products",
+    "viewport": {
+      "width": 375,
+      "height": 1000
+    },
+    "at": "2026-10-30T17:41:48.151Z"
+  },
+  {
+    "file": "delete-1440.png",
+    "url": "http://127.0.0.1:8012/admin/products",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "at": "2026-10-30T17:41:51.438Z"
+  },
+  {
+    "file": "delete-768.png",
+    "url": "http://127.0.0.1:8012/admin/products",
+    "viewport": {
+      "width": 768,
+      "height": 1000
+    },
+    "at": "2026-10-30T17:41:52.091Z"
+  },
+  {
+    "file": "delete-375.png",
+    "url": "http://127.0.0.1:8012/admin/products",
+    "viewport": {
+      "width": 375,
+      "height": 1000
+    },
+    "at": "2026-10-30T17:41:52.738Z"
+  },
+  {
+    "file": "simulated-503.png",
+    "url": "http://127.0.0.1:8012/admin/products",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "at": "2026-10-30T17:41:54.534Z"
+  }
+]

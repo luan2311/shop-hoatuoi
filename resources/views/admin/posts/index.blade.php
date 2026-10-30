@@ -7,6 +7,7 @@
 
 <div class="d-flex justify-content-between align-items-center mb-3">
     <form action="{{ route('admin.posts.index') }}" method="GET" class="form-inline">
+        <input type="hidden" name="per_page" value="{{ request('per_page', 10) }}">
         <div class="form-group">
             <input type="text" name="searchString" value="{{ request('searchString', request('q')) }}" class="form-control" placeholder="Tìm theo tiêu đề..." />
         </div>
@@ -74,12 +75,5 @@
     </div>
 </div>
 
-<div class="d-flex justify-content-between align-items-center mt-3">
-    <div class="text-muted">
-        Trang {{ $posts->currentPage() }} / {{ $posts->lastPage() }} (Tổng cộng: {{ $posts->total() }} bài viết)
-    </div>
-    <nav aria-label="Page navigation">
-        {{ $posts->links('pagination::bootstrap-4') }}
-    </nav>
-</div>
+<x-admin.pagination :paginator="$posts" label="bài viết" />
 @endsection

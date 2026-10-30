@@ -122,6 +122,7 @@
 <h1 class="text-center mb-4 font-weight-bold" style="color: #333;">QUẢN LÝ HÓA ĐƠN</h1>
 
 <form action="{{ route('admin.orders.index') }}" method="GET" class="form-inline mb-3">
+        <input type="hidden" name="per_page" value="{{ request('per_page', 10) }}">
     <div class="form-group">
         <input type="text" name="searchString" value="{{ request('searchString', request('q')) }}" class="form-control" placeholder="Tìm theo tên hoặc tài khoản..." />
     </div>
@@ -217,14 +218,7 @@
     </div>
 </div>
 
-<div class="d-flex justify-content-between align-items-center mt-3">
-    <div class="text-muted">
-        Trang {{ $orders->currentPage() }} / {{ $orders->lastPage() }} (Tổng cộng: {{ $orders->total() }} hóa đơn)
-    </div>
-    <nav aria-label="Page navigation">
-        {{ $orders->links('pagination::bootstrap-4') }}
-    </nav>
-</div>
+<x-admin.pagination :paginator="$orders" label="hóa đơn" />
 @endsection
 
 @push('modals')

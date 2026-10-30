@@ -1,0 +1,27 @@
+fieldset[data-confirm-gate] { min-width: 0; padding: 0; margin: 0; border: 0; }
+.admin-confirm-modal .modal-dialog { max-width: 460px; margin: 24px auto; min-height: calc(100% - 48px); padding: 0 12px; }
+.admin-confirm-modal .modal-content { border: 1px solid #e7e9ee; border-radius: 14px; background: #fff; box-shadow: 0 16px 48px #17202d24; overflow: hidden; }
+.admin-confirm-modal .admin-confirm-close { position: absolute; top: 12px; right: 14px; z-index: 1; background: transparent; border: 0; color: #737c8b; font-size: 30px; line-height: 1; width: 36px; height: 36px; }
+.admin-confirm-modal .modal-body { text-align: center; padding: 40px 28px 28px; }
+.admin-confirm-modal .admin-confirm-icon { display: inline-flex; align-items: center; justify-content: center; width: 76px; height: 76px; border-radius: 50%; background: #fce8eb; color: #dc3545; font-size: 34px; margin: 8px 0 22px; }
+.admin-confirm-modal h2 { color: #202535; font-size: 23px; font-weight: 700; line-height: 1.4; margin: 0 0 14px; }
+.admin-confirm-modal #adminConfirmMessage { font-size: 15px; color: #6c7484; line-height: 1.65; margin: 0; white-space: pre-line; overflow-wrap: anywhere; }
+.admin-confirm-modal .admin-confirm-subject { font-size: 13px; color: #465267; margin: 16px 0 0; overflow-wrap: anywhere; }
+.admin-confirm-modal .admin-confirm-error { margin: 16px 0 0; color: #b42335; background: #fff0f1; border-radius: 5px; padding: 10px; font-size: 13px; overflow-wrap: anywhere; }
+.admin-confirm-modal .modal-footer { border-top: 1px solid #e6e9ef; padding: 18px 22px; gap: 10px; }
+.admin-confirm-modal .modal-footer .btn { margin: 0; padding: 10px 18px; min-width: 100px; min-height: 44px; font-size: 14px; font-weight: 600; border-radius: 7px; }
+.admin-confirm-modal .admin-confirm-cancel { background: #edf0f5; border-color: #edf0f5; color: #344054; }
+.admin-confirm-modal.admin-confirm-success .admin-confirm-icon { background: #e0f3e7; color: #28a745; }
+.admin-confirm-modal.admin-confirm-primary .admin-confirm-icon { background: #e6f1ff; color: #007bff; }
+.admin-confirm-modal.admin-confirm-warning .admin-confirm-icon { background: #fff1cb; color: #a97300; }
+.admin-confirm-modal [hidden] { display: none !important; }
+.admin-confirm-modal :focus-visible { outline: 2px solid #007bff; outline-offset: 3px; }
+.admin-confirm-modal[aria-busy="true"] .modal-content { cursor: progress; }
+.admin-confirm-modal .admin-confirm-close:disabled { opacity: .45; }
+@media(max-width: 575px) {
+ .admin-confirm-modal .modal-dialog { margin: 12px auto; min-height: calc(100% - 24px); }
+ .admin-confirm-modal .modal-body { padding: 36px 20px 24px; }
+ .admin-confirm-modal h2 { font-size: 21px; }
+ .admin-confirm-modal .modal-footer { padding: 16px; flex-wrap: wrap; }
+ .admin-confirm-modal .modal-footer .btn { flex: 1; min-width: 0; }
+}

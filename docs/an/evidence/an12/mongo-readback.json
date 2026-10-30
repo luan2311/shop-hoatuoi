@@ -1,0 +1,189 @@
+{
+    "products": {
+        "count": 1,
+        "options": {
+            "validator": {
+                "$jsonSchema": {
+                    "bsonType": "object",
+                    "required": [
+                        "code",
+                        "name",
+                        "slug",
+                        "price",
+                        "category"
+                    ],
+                    "properties": {
+                        "code": {
+                            "bsonType": "string"
+                        },
+                        "name": {
+                            "bsonType": "string"
+                        },
+                        "slug": {
+                            "bsonType": "string"
+                        },
+                        "price": {
+                            "bsonType": [
+                                "int",
+                                "double",
+                                "long",
+                                "decimal"
+                            ],
+                            "minimum": 0
+                        },
+                        "stock": {
+                            "bsonType": [
+                                "int",
+                                "long"
+                            ],
+                            "minimum": 0
+                        },
+                        "category": {
+                            "bsonType": "object",
+                            "required": [
+                                "code",
+                                "name",
+                                "slug"
+                            ],
+                            "properties": {
+                                "code": {
+                                    "bsonType": "string"
+                                },
+                                "name": {
+                                    "bsonType": "string"
+                                },
+                                "slug": {
+                                    "bsonType": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "validationLevel": "strict",
+            "validationAction": "error"
+        },
+        "indexes": [
+            {
+                "name": "_id_",
+                "keys": {
+                    "_id": 1
+                }
+            },
+            {
+                "name": "code_1",
+                "keys": {
+                    "code": 1
+                }
+            },
+            {
+                "name": "slug_1",
+                "keys": {
+                    "slug": 1
+                }
+            },
+            {
+                "name": "category.code_1",
+                "keys": {
+                    "category.code": 1
+                }
+            },
+            {
+                "name": "category.slug_1_price_1",
+                "keys": {
+                    "category.slug": 1,
+                    "price": 1
+                }
+            },
+            {
+                "name": "price_1",
+                "keys": {
+                    "price": 1
+                }
+            },
+            {
+                "name": "status_1",
+                "keys": {
+                    "status": 1
+                }
+            }
+        ]
+    },
+    "orders": {
+        "count": 1,
+        "options": [],
+        "indexes": [
+            {
+                "name": "_id_",
+                "keys": {
+                    "_id": 1
+                }
+            },
+            {
+                "name": "order_code_1",
+                "keys": {
+                    "order_code": 1
+                }
+            },
+            {
+                "name": "user_id_1",
+                "keys": {
+                    "user_id": 1
+                }
+            },
+            {
+                "name": "user_id_1_created_at_-1__id_-1",
+                "keys": {
+                    "user_id": 1,
+                    "created_at": -1,
+                    "_id": -1
+                }
+            },
+            {
+                "name": "status_1_created_at_-1__id_-1",
+                "keys": {
+                    "status": 1,
+                    "created_at": -1,
+                    "_id": -1
+                }
+            },
+            {
+                "name": "checkout_key_1",
+                "keys": {
+                    "checkout_key": 1
+                }
+            }
+        ]
+    },
+    "carts": {
+        "count": 1,
+        "options": [],
+        "indexes": [
+            {
+                "name": "_id_",
+                "keys": {
+                    "_id": 1
+                }
+            },
+            {
+                "name": "user_id_1",
+                "keys": {
+                    "user_id": 1
+                }
+            }
+        ]
+    },
+    "wishlists": {
+        "count": 0,
+        "options": null,
+        "indexes": []
+    },
+    "fixture": {
+        "code": "AN12QAORDERED",
+        "stock": 14,
+        "is_selling": true,
+        "lifecycle_revision": 7,
+        "image_exists": true
+    },
+    "order_snapshot_hash": "a83bedc05dba950755938beb7802e1f6ac2d0dcd7eba8af4c840b4932fcaec62"
+}

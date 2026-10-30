@@ -1,0 +1,60 @@
+[
+  {
+    "case": "create",
+    "status": "PASS",
+    "product": {
+      "id": "6ae4cabbfdf4eadfd0037a82",
+      "code": "AN12QABROWSER1",
+      "stock": 15,
+      "price": 350000,
+      "image": "products/pRdpAPwogppiFrvRqyEytmFC1Tg0Djcth18BFbuH.jpg",
+      "is_selling": true
+    },
+    "orders": 0
+  },
+  {
+    "case": "stop-stock-image-preserved",
+    "status": "PASS",
+    "product": {
+      "id": "6ae4cabbfdf4eadfd0037a82",
+      "code": "AN12QABROWSER1",
+      "stock": 15,
+      "price": 350000,
+      "image": "products/pRdpAPwogppiFrvRqyEytmFC1Tg0Djcth18BFbuH.jpg",
+      "is_selling": false
+    },
+    "orders": 0
+  },
+  {
+    "case": "responsive-admin",
+    "width": 1440,
+    "status": "PASS"
+  },
+  {
+    "case": "responsive-admin",
+    "width": 768,
+    "status": "PASS"
+  },
+  {
+    "case": "responsive-admin",
+    "width": 375,
+    "status": "PASS"
+  },
+  {
+    "case": "resume",
+    "status": "PASS"
+  },
+  {
+    "case": "delete-unreferenced",
+    "status": "PASS"
+  },
+  {
+    "case": "direct-delete-with-order",
+    "status": "PASS",
+    "http": 422
+  },
+  {
+    "case": "user-admin403",
+    "status": "PASS"
+  }
+]
