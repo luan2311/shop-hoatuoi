@@ -1,0 +1,12 @@
+{
+    "replica_set": "tienRS",
+    "database": "shop_hoatuoi_test_finalfix_20261030_1305",
+    "product_code": "QAHTTPaa2d984ed8",
+    "stock_before": 11,
+    "stock_after_checkout": 9,
+    "stock_after_cancel": 11,
+    "order_total": 250000,
+    "item_subtotal": 250000,
+    "status": "Cancelled",
+    "cart_items": []
+}

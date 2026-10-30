@@ -1,0 +1,32 @@
+[
+  {
+    "id": "6ae43b4c51c9ff0f94019e66",
+    "code": "HD-01M65RF91P6YP4JGZZG2Y401MB",
+    "status": "Completed",
+    "total_amount": 800000,
+    "payment_method": "COD",
+    "items": [
+      {
+        "product_code": "PVN295",
+        "quantity": 2,
+        "price": "400000",
+        "subtotal": "800000"
+      }
+    ]
+  },
+  {
+    "id": "6ae43ec151c9ff0f94019e6a",
+    "code": "HD-01M65SA98CBE4N55QPJTS2ZJP4",
+    "status": "Pending",
+    "total_amount": 125000,
+    "payment_method": "COD",
+    "items": [
+      {
+        "product_code": "QAFINALB",
+        "quantity": 1,
+        "price": "125000",
+        "subtotal": "125000"
+      }
+    ]
+  }
+]

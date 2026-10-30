@@ -1,0 +1,178 @@
+[
+    {
+        "check": "Public \/",
+        "result": "PASS"
+    },
+    {
+        "check": "Public \/products",
+        "result": "PASS"
+    },
+    {
+        "check": "Public \/products?q=h%C6%B0%E1%BB%9Bng",
+        "result": "PASS"
+    },
+    {
+        "check": "Public \/posts",
+        "result": "PASS"
+    },
+    {
+        "check": "Public \/contact",
+        "result": "PASS"
+    },
+    {
+        "check": "Public \/login",
+        "result": "PASS"
+    },
+    {
+        "check": "Public \/register",
+        "result": "PASS"
+    },
+    {
+        "check": "Guest cart requires login",
+        "result": "PASS"
+    },
+    {
+        "check": "Login user",
+        "result": "PASS"
+    },
+    {
+        "check": "Login admin",
+        "result": "PASS"
+    },
+    {
+        "check": "RBAC user forbidden",
+        "result": "PASS"
+    },
+    {
+        "check": "Admin \/admin\/dashboard",
+        "result": "PASS"
+    },
+    {
+        "check": "Admin \/admin\/products",
+        "result": "PASS"
+    },
+    {
+        "check": "Admin \/admin\/orders",
+        "result": "PASS"
+    },
+    {
+        "check": "Admin \/admin\/categories",
+        "result": "PASS"
+    },
+    {
+        "check": "Admin \/admin\/contacts",
+        "result": "PASS"
+    },
+    {
+        "check": "Admin \/admin\/posts",
+        "result": "PASS"
+    },
+    {
+        "check": "Admin \/admin\/users",
+        "result": "PASS"
+    },
+    {
+        "check": "Missing CSRF rejected",
+        "result": "PASS"
+    },
+    {
+        "check": "Add product",
+        "result": "PASS"
+    },
+    {
+        "check": "Cart persisted quantities",
+        "result": "PASS"
+    },
+    {
+        "check": "COD only and no demo discount\/QR",
+        "result": "PASS"
+    },
+    {
+        "check": "Banking rejected",
+        "result": "PASS"
+    },
+    {
+        "check": "Voucher rejected HOATUOI2026",
+        "result": "PASS"
+    },
+    {
+        "check": "Voucher rejected INVALID",
+        "result": "PASS"
+    },
+    {
+        "check": "Rejected checkout no mutations",
+        "result": "PASS"
+    },
+    {
+        "check": "COD checkout",
+        "result": "PASS"
+    },
+    {
+        "check": "Authoritative money snapshot ignores tamper",
+        "result": "PASS"
+    },
+    {
+        "check": "Atomic stock and cart",
+        "result": "PASS"
+    },
+    {
+        "check": "Same-token retry",
+        "result": "PASS"
+    },
+    {
+        "check": "Order history",
+        "result": "PASS"
+    },
+    {
+        "check": "Order detail total",
+        "result": "PASS"
+    },
+    {
+        "check": "Other owner cannot read order",
+        "result": "PASS"
+    },
+    {
+        "check": "POST Pending completion rejected",
+        "result": "PASS"
+    },
+    {
+        "check": "PATCH Pending completion rejected",
+        "result": "PASS"
+    },
+    {
+        "check": "Cancel order",
+        "result": "PASS"
+    },
+    {
+        "check": "Cancel restores stock once",
+        "result": "PASS"
+    },
+    {
+        "check": "Repeated cancel rejected",
+        "result": "PASS"
+    },
+    {
+        "check": "Cancelled completion rejected",
+        "result": "PASS"
+    },
+    {
+        "check": "Unsafe redirect 0",
+        "result": "PASS"
+    },
+    {
+        "check": "Unsafe redirect 1",
+        "result": "PASS"
+    },
+    {
+        "check": "Unsafe redirect 2",
+        "result": "PASS"
+    },
+    {
+        "check": "Unsafe redirect 3",
+        "result": "PASS"
+    },
+    {
+        "check": "Search suggestions JSON",
+        "result": "PASS"
+    }
+]
