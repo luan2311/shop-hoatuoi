@@ -14,4 +14,9 @@
         @endforeach</tbody>
     </table>
 </div>
+@if($order->voucher_code)
+    <p>Tạm tính: {{ number_format((float) (string) $order->subtotal_amount, 0, ',', '.') }} đ</p>
+    <p>Voucher {{ $order->voucher_code }}: - {{ number_format((float) (string) $order->discount_amount, 0, ',', '.') }} đ</p>
+@endif
 <p class="font-semibold">Tổng tiền: {{ number_format((float) (string) $order->total_amount, 0, ',', '.') }} đ</p>
+@include('orders.partials.banking-qr')

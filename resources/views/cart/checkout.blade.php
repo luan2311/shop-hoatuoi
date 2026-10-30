@@ -16,6 +16,7 @@
 
     <!-- Checkout Stylesheet (Ported & Elevated from C# ASP MVC 5 Shop-Flower) -->
     <link rel="stylesheet" href="{{ asset('css/checkout_style.css') }}?v={{ @filemtime(public_path('css/checkout_style.css')) ?: 1 }}" />
+    <script src="{{ asset('js/checkout-voucher.js') }}" defer></script>
 </head>
 
 <body class="checkout-body">
@@ -63,6 +64,7 @@
             <form method="POST" action="{{ route('checkout.store') }}" id="checkoutForm">
                 @csrf
                 <input type="hidden" name="checkout_token" value="{{ old('checkout_token', $checkoutToken) }}">
+                <input type="hidden" name="voucher_code" id="appliedVoucher" value="{{ $voucher_code }}">
 
                 <div class="checkout-container">
 
@@ -254,11 +256,7 @@
 
                                     <div class="payment-subpanel">
                                         <div class="banking-info-box">
-                                            <img src="https://api.vietqr.io/image/970422-0898449950-compact2.jpg?amount=370000&amp;addInfo=HOATUOI%200909123456&amp;accountName=TIEM%20HOA%20GOC%20HOA%20XINH" alt="VietQR Mã Thanh Toán" class="banking-qr-code" onerror="this.src='http://127.0.0.1:8000/images/MoMo.png'" style="
-    with: 150px;
-    height: 200px;
-    width: auto;
-">
+                                            <p class="banking-qr-code">Mã VietQR theo tổng tiền sau giảm sẽ hiển thị sau khi xác nhận đơn hàng. Chưa chuyển tiền ở bước này.</p>
                                             <div class="banking-details">
                                                 <div class="banking-row">
                                                     <span class="banking-label">Ngân hàng:</span>
@@ -279,7 +277,7 @@
                                                 </div>
                                                 <div class="banking-row">
                                                     <span class="banking-label">Cú pháp CK:</span>
-                                                    <span class="banking-val">HOATUOI {{ auth()->user()->phone ?? 'SDT' }}</span>
+                                                    <span class="banking-val">Mã đơn sẽ được tạo khi xác nhận</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -356,29 +354,29 @@
                         <!-- Voucher Code Box -->
                         <div class="discount-section">
                             <div class="discount-input-wrap">
-                                <input type="text" class="form-control" id="voucherInput" placeholder="Nhập mã ưu đãi..." autocomplete="off">
+                                <input type="text" class="form-control" id="voucherInput" value="{{ $voucher_code }}" maxlength="50" aria-label="Mã ưu đãi" placeholder="Nhập mã ưu đãi..." autocomplete="off">
                             </div>
-                            <button type="button" class="btn-apply-voucher" id="btnApplyVoucher">Áp dụng</button>
+                            <button type="button" class="btn-apply-voucher" id="btnApplyVoucher" data-url="{{ route('checkout.voucher') }}">Áp dụng</button>
                         </div>
                         <div class="voucher-tags-row">
                             <span class="voucher-tag" onclick="applyVoucherPreset('HOATUOI2026')">🌸 HOATUOI2026 (-50k)</span>
                             <span class="voucher-tag" onclick="applyVoucherPreset('FREESHIP')">🚚 FREESHIP (Miễn phí ship)</span>
                         </div>
-                        <div id="voucherFeedback" style="display: none; font-size: 12.5px; margin-bottom: 14px; font-weight: 600;"></div>
+                        <div id="voucherFeedback" role="status" aria-live="polite" style="font-size: 12.5px; margin-bottom: 14px; font-weight: 600;">{{ $voucher_code ? 'Đang áp dụng mã '.$voucher_code : '' }}</div>
 
                         <!-- Fee Breakdown -->
                         <div class="total-section">
                             <div class="total-row">
                                 <span>Tạm tính</span>
-                                <span id="subtotalDisplay">{{ number_format($total, 0, ',', '.') }} đ</span>
+                                <span id="subtotalDisplay">{{ number_format($subtotal_amount, 0, ',', '.') }} đ</span>
                             </div>
                             <div class="total-row">
                                 <span>Phí vận chuyển</span>
                                 <span class="val-free">Miễn phí giao hoa 2h</span>
                             </div>
-                            <div class="total-row" id="discountRow" style="display: none;">
+                            <div class="total-row" id="discountRow" @if(!$voucher_code) style="display: none;" @endif>
                                 <span>Giảm giá Voucher</span>
-                                <span class="text-danger fw-bold" id="discountDisplay">- 0 đ</span>
+                                <span class="text-danger fw-bold" id="discountDisplay">- {{ number_format($discount_amount, 0, ',', '.') }} đ</span>
                             </div>
                         </div>
 
@@ -840,66 +838,6 @@
             }
         }
 
-        // Tính năng áp dụng Voucher giảm giá tương tác
-        var originalTotal = {{ (int) ($total ?? 0) }};
-        var currentDiscount = 0;
-
-        function applyVoucherPreset(code) {
-            var voucherInput = document.getElementById("voucherInput");
-            if (voucherInput) {
-                voucherInput.value = code;
-                processVoucher(code);
-            }
-        }
-
-        function processVoucher(code) {
-            var feedback = document.getElementById("voucherFeedback");
-            var discountRow = document.getElementById("discountRow");
-            var discountDisplay = document.getElementById("discountDisplay");
-            var grandTotalPrice = document.getElementById("grandTotalPrice");
-            var mobileTotalPreview = document.getElementById("mobileTotalPreview");
-
-            if (!code) {
-                if (feedback) {
-                    feedback.style.display = "block";
-                    feedback.style.color = "#dc2626";
-                    feedback.textContent = "Vui lòng nhập mã giảm giá.";
-                }
-                return;
-            }
-
-            code = code.trim().toUpperCase();
-
-            if (code === "HOATUOI2026") {
-                currentDiscount = 50000;
-                var finalTotal = Math.max(0, originalTotal - currentDiscount);
-                if (discountRow) discountRow.style.display = "flex";
-                if (discountDisplay) discountDisplay.textContent = "- " + currentDiscount.toLocaleString('vi-VN') + " đ";
-                if (grandTotalPrice) grandTotalPrice.textContent = finalTotal.toLocaleString('vi-VN') + " đ";
-                if (mobileTotalPreview) mobileTotalPreview.textContent = finalTotal.toLocaleString('vi-VN') + " đ";
-                if (feedback) {
-                    feedback.style.display = "block";
-                    feedback.style.color = "#16a34a";
-                    feedback.textContent = "✓ Áp dụng mã HOATUOI2026 thành công: Giảm 50.000 đ";
-                }
-            } else if (code === "FREESHIP") {
-                currentDiscount = 0;
-                if (discountRow) discountRow.style.display = "flex";
-                if (discountDisplay) discountDisplay.textContent = "Miễn phí";
-                if (feedback) {
-                    feedback.style.display = "block";
-                    feedback.style.color = "#16a34a";
-                    feedback.textContent = "✓ Áp dụng mã FREESHIP thành công: Miễn phí giao hoa toàn thành phố";
-                }
-            } else {
-                if (feedback) {
-                    feedback.style.display = "block";
-                    feedback.style.color = "#dc2626";
-                    feedback.textContent = "Mã ưu đãi không hợp lệ hoặc đã hết lượt áp dụng.";
-                }
-            }
-        }
-
         // Khởi tạo khi DOM sẵn sàng
         document.addEventListener('DOMContentLoaded', function() {
 
@@ -955,15 +893,6 @@
                 mobileToggleBtn.addEventListener("click", function() {
                     sidebarContent.classList.toggle("mobile-visible");
                     mobileToggleBtn.classList.toggle("open");
-                });
-            }
-
-            // 3. Nút áp dụng Voucher
-            var btnApplyVoucher = document.getElementById("btnApplyVoucher");
-            var voucherInput = document.getElementById("voucherInput");
-            if (btnApplyVoucher && voucherInput) {
-                btnApplyVoucher.addEventListener("click", function() {
-                    processVoucher(voucherInput.value);
                 });
             }
 

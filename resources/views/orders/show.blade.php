@@ -414,13 +414,19 @@
                                         <tr>
                                             <td colspan="3" class="text-end text-muted">Tạm tính:</td>
                                             <td class="text-end fw-semibold">
-                                                {{ number_format((float) (string) $order->total_amount, 0, ',', '.') }} đ
+                                                {{ number_format((float) (string) ($order->subtotal_amount ?? $order->total_amount), 0, ',', '.') }} đ
                                             </td>
                                         </tr>
                                         <tr>
                                             <td colspan="3" class="text-end text-muted">Phí giao hàng:</td>
                                             <td class="text-end text-success fw-semibold">Miễn phí</td>
                                         </tr>
+                                        @if($order->voucher_code)
+                                        <tr>
+                                            <td colspan="3" class="text-end text-muted">Voucher {{ $order->voucher_code }}:</td>
+                                            <td class="text-end">- {{ number_format((float) (string) $order->discount_amount, 0, ',', '.') }} đ</td>
+                                        </tr>
+                                        @endif
                                         <tr>
                                             <td colspan="3" class="text-end fw-bold fs-6">Tổng tiền:</td>
                                             <td class="text-end fw-bold text-danger fs-5">
@@ -432,6 +438,7 @@
                             </div>
                         </div>
 
+                        @include('orders.partials.banking-qr')
                         <!-- Chân trang hóa đơn / Liên hệ hỗ trợ -->
                         <div class="p-3 bg-light rounded text-center small text-muted">
                             Nếu bạn có bất kỳ thắc mắc nào về hóa đơn này, vui lòng liên hệ với Góc Hoa Xinh qua hotline: <strong>090.123.4567</strong> hoặc email: <strong>cskh@shophoatuoi.com</strong>.

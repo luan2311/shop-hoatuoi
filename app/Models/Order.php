@@ -10,7 +10,7 @@ class Order extends Model
 
     protected $fillable = [
         'order_code', 'checkout_key', 'user_id', 'customer', 'items', 'total_amount',
-        'status', 'payment_method', 'order_date',
+        'status', 'payment_method', 'order_date', 'subtotal_amount', 'discount_amount', 'voucher_code',
     ];
 
     const STATUSES = ['Pending', 'Processing', 'Shipped', 'Completed', 'Cancelled'];

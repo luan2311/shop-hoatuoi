@@ -127,6 +127,10 @@
                 @endforelse
             </tbody>
             <tfoot>
+                @if($order->voucher_code)
+                <tr><td colspan="4" class="text-right">Tạm tính:</td><td>{{ number_format((float) (string) $order->subtotal_amount, 0, ',', '.') }} VNĐ</td></tr>
+                <tr><td colspan="4" class="text-right">Voucher {{ $order->voucher_code }}:</td><td>- {{ number_format((float) (string) $order->discount_amount, 0, ',', '.') }} VNĐ</td></tr>
+                @endif
                 <tr class="bg-light">
                     <td colspan="4" class="text-right font-weight-bold">Tổng cộng:</td>
                     <td class="text-right">
