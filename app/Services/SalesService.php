@@ -64,7 +64,7 @@ class SalesService
             if ($action === 'clear') {
                 $items = collect();
             } elseif ($action === 'remove') {
-                $matchedKey = $items->keys()->first(fn ($k) => strcasecmp((string)$k, (string)$key) === 0);
+                $matchedKey = $items->keys()->first(fn ($k) => strcasecmp((string) $k, (string) $key) === 0);
                 abort_unless($matchedKey !== null, 404);
                 $items->forget($matchedKey);
             } else {
@@ -72,7 +72,7 @@ class SalesService
                     ? Product::findOrFail($key)
                     : (Product::where('code', $key)->first() ?? Product::where('code', 'regex', '/^'.preg_quote($key, '/').'$/i')->firstOrFail());
                 if ($action === 'update') {
-                    $matchedKey = $items->keys()->first(fn ($k) => strcasecmp((string)$k, (string)$product->code) === 0);
+                    $matchedKey = $items->keys()->first(fn ($k) => strcasecmp((string) $k, (string) $product->code) === 0);
                     abort_unless($matchedKey !== null, 404);
                 }
                 $amount = $quantity + ($action === 'add' ? ($items->get($product->code)['quantity'] ?? 0) : 0);
@@ -154,33 +154,49 @@ class SalesService
     {
         $this->runTransaction(function () use ($id, $status): void {
             $order = Order::findOrFail($id);
-            if (! in_array($status, Order::TRANSITIONS[$order->status] ?? [], true)) {
-                throw ValidationException::withMessages(['status' => 'Không thể chuyển sang trạng thái này.']);
+            $this->applyTransition($order, $status);
+        });
+    }
+
+    public function cancelCustomer(User $user, string $id, ?string $reason = null): void
+    {
+        $this->runTransaction(function () use ($user, $id, $reason): void {
+            $order = $this->owned(Order::query(), $user)->findOrFail($id);
+            if (! $order->canCustomerCancel()) {
+                throw ValidationException::withMessages(['cancel' => 'Không thể tự hủy: đơn không còn Pending COD chưa thanh toán. Vui lòng liên hệ Admin.']);
             }
-            if ($status === 'Cancelled') {
-                foreach ($order->items as $item) {
-                    // Never restore stock to a different or missing product silently.
-                    $changed = Product::where('code', $item['product_code'])->increment('stock', $item['quantity']);
-                    if ($changed !== 1) {
-                        throw ValidationException::withMessages(['status' => 'Không thể hoàn tồn kho: sản phẩm không còn tồn tại.']);
-                    }
+            $order->cancelled_at = now();
+            $order->cancelled_by = ['type' => 'Customer', 'user_id' => new ObjectId($user->id)];
+            $order->cancel_reason = $reason;
+            $this->applyTransition($order, 'Cancelled');
+        });
+    }
+
+    private function applyTransition(Order $order, string $status): void
+    {
+        if (! in_array($status, Order::TRANSITIONS[$order->status] ?? [], true)) {
+            throw ValidationException::withMessages(['status' => 'Không thể chuyển sang trạng thái này.']);
+        }
+        if ($status === 'Cancelled') {
+            foreach ($order->items as $item) {
+                if (! is_int($item['quantity']) || $item['quantity'] < 1) {
+                    throw ValidationException::withMessages(['status' => 'Số lượng hoàn kho không hợp lệ.']);
+                }
+                // Never restore stock to a different or missing product silently.
+                $changed = Product::where('code', $item['product_code'])->increment('stock', $item['quantity']);
+                if ($changed !== 1) {
+                    throw ValidationException::withMessages(['status' => 'Không thể hoàn tồn kho: sản phẩm không còn tồn tại.']);
                 }
             }
-            $order->status = $status;
-            $order->save();
-        });
+        }
+        $order->status = $status;
+        $order->save();
     }
 
     protected function runTransaction(callable $callback)
     {
-        try {
-            return DB::connection('mongodb')->transaction($callback, attempts: 5);
-        } catch (\MongoDB\Driver\Exception\CommandException $e) {
-            if (str_contains($e->getMessage(), 'Transaction numbers are only allowed on a replica set member or mongos')) {
-                return $callback();
-            }
-            throw $e;
-        }
+        // Every stock/order write must stay inside the MongoDB transaction.
+        return DB::connection('mongodb')->transaction($callback, attempts: 5);
     }
 
     private function available(Product $product, mixed $quantity): void

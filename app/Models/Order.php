@@ -33,7 +33,15 @@ class Order extends Model
 
     protected function casts(): array
     {
-        return ['order_date' => 'datetime'];
+        return ['order_date' => 'datetime', 'cancelled_at' => 'datetime'];
+    }
+
+    public function canCustomerCancel(): bool
+    {
+        // COD is unpaid until collection. Banking has no verified payment feed.
+        return $this->status === 'Pending' && $this->payment_method === 'COD'
+            && ! $this->paid_at && ! $this->is_paid && ! $this->paid
+            && in_array($this->payment_status, [null, 'unpaid', 'Unpaid'], true);
     }
 
     public function getTotalAttribute(): int|float

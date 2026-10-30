@@ -31,6 +31,7 @@
             </div>
         </div>
 
+        <p><a href="{{ route('orders.show', $order->id) }}">Xem chi tiết và tùy chọn hủy đơn hàng</a></p>
         <!-- Action Navigation Buttons -->
         <div class="d-flex flex-wrap gap-3 justify-content-between align-items-center pt-2">
             <a href="{{ route('home') }}" class="btn fw-semibold d-inline-flex align-items-center justify-content-center text-center gap-2" style="background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 15px; padding: 10px 24px; min-height: 44px; height: auto; line-height: 1.5; text-decoration: none;">

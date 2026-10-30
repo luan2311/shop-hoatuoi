@@ -195,6 +195,7 @@
 @endpush
 
 @section('content')
+@include('orders.partials.cancel-feedback')
 <div class="py-2 mb-3 breadcrumb_background bg-light">
     <div class="container">
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -421,6 +422,7 @@
 
                                                 <!-- Nút thao tác -->
                                                 <td class="text-center" style="white-space: nowrap;">
+                                                    @include('orders.partials.cancel')
                                                     <a href="{{ route('orders.show', $order->id) }}"
                                                        class="btn btn-outline-success btn-sm me-1"
                                                        style="font-size: small; border-radius: 8px;"

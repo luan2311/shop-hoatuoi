@@ -215,6 +215,8 @@
 @endpush
 
 @section('content')
+@include('orders.partials.cancel-feedback')
+<div class="container mt-3">@include('orders.partials.cancel')</div>
 <div class="py-2 mb-3 breadcrumb_background bg-light">
     <div class="container">
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">

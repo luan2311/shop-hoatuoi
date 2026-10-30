@@ -48,6 +48,15 @@ class OrderController extends Controller
         return view('orders.index', compact('orders'));
     }
 
+    public function cancel(Request $request, string $order): RedirectResponse
+    {
+        $this->sales->owned(Order::query(), $request->user())->findOrFail($order);
+        $data = $request->validate(['reason' => ['nullable', 'string', 'max:200']]);
+        $this->sales->cancelCustomer($request->user(), $order, $data['reason'] ?? null);
+
+        return to_route('orders.show', $order)->with('status', 'Đã hủy đơn hàng và hoàn tồn kho thành công.');
+    }
+
     public function show(Request $request, string $order): View
     {
         $order = $this->sales->owned(Order::query(), $request->user())->findOrFail($order);
