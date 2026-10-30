@@ -13,9 +13,9 @@ class ContactAndPostTest extends TestCase
     public function test_user_can_submit_contact_form(): void
     {
         $response = $this->post('/contact', [
-            'name'    => 'Trần Thị B',
-            'email'   => 'tranthib@gmail.com',
-            'phone'   => '0912345678',
+            'name' => 'Trần Thị B',
+            'email' => 'tranthib@gmail.com',
+            'phone' => '0912345678',
             'message' => 'Cần tư vấn mẫu hoa cưới phong cách hiện đại.',
         ]);
 
@@ -24,11 +24,11 @@ class ContactAndPostTest extends TestCase
 
         // Ô "name" trên form lưu vào field full_name; mã CT001 và status pending do model tự gán
         $this->assertDatabaseHas('contacts', [
-            'code'      => 'CT001',
+            'code' => 'CT001',
             'full_name' => 'Trần Thị B',
-            'phone'     => '0912345678',
-            'message'   => 'Cần tư vấn mẫu hoa cưới phong cách hiện đại.',
-            'status'    => 'pending',
+            'phone' => '0912345678',
+            'message' => 'Cần tư vấn mẫu hoa cưới phong cách hiện đại.',
+            'status' => 'pending',
         ], 'mongodb');
     }
 
@@ -63,9 +63,9 @@ class ContactAndPostTest extends TestCase
     public function test_contact_form_rejects_invalid_email_and_phone(): void
     {
         $this->from('/contact')->post('/contact', [
-            'name'    => 'Trần Thị B',
-            'email'   => 'khong-phai-email',
-            'phone'   => '12345',
+            'name' => 'Trần Thị B',
+            'email' => 'khong-phai-email',
+            'phone' => '12345',
             'message' => 'Nội dung',
         ])->assertSessionHasErrors(['email', 'phone']);
 
@@ -75,9 +75,9 @@ class ContactAndPostTest extends TestCase
     public function test_guest_can_view_post_list_and_detail(): void
     {
         $post = Post::create([
-            'title'        => 'Ý nghĩa hoa hồng',
-            'summary'      => 'Tóm tắt ý nghĩa các màu hoa hồng.',
-            'content'      => '<p>Nội dung <strong>bài viết</strong></p>',
+            'title' => 'Ý nghĩa hoa hồng',
+            'summary' => 'Tóm tắt ý nghĩa các màu hoa hồng.',
+            'content' => '<p>Nội dung <strong>bài viết</strong></p>',
             'published_at' => '2026-10-20',
         ]);
 
@@ -86,7 +86,7 @@ class ContactAndPostTest extends TestCase
             ->assertSee('Ý nghĩa hoa hồng')
             ->assertSee('20/10/2026');
 
-        $this->get('/posts/' . $post->slug)
+        $this->get('/posts/'.$post->slug)
             ->assertStatus(200)
             ->assertSee('Ý nghĩa hoa hồng')
             ->assertSee('<strong>bài viết</strong>', false);
@@ -96,8 +96,8 @@ class ContactAndPostTest extends TestCase
     {
         foreach (range(1, 12) as $i) {
             Post::create([
-                'title'        => "Bài viết số {$i}",
-                'content'      => '<p>Nội dung</p>',
+                'title' => "Bài viết số {$i}",
+                'content' => '<p>Nội dung</p>',
                 'published_at' => now()->subDays($i),
             ]);
         }

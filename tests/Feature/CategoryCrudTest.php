@@ -13,6 +13,7 @@ class CategoryCrudTest extends TestCase
     use UsesMongoDatabase;
 
     private User $admin;
+
     private User $user;
 
     protected function setUp(): void

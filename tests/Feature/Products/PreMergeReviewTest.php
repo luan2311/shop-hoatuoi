@@ -4,7 +4,6 @@ namespace Tests\Feature\Products;
 
 use App\Models\Product;
 use Database\Seeders\DatabaseSeeder;
-use Illuminate\Database\QueryException;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -15,8 +14,6 @@ class PreMergeReviewTest extends ProductTestCase
 {
     public function test_group_seeder_preserves_existing_renamed_catalog(): void
     {
-        $this->assertSame(':memory:', config('database.connections.sqlite.database'));
-        $this->artisan('migrate', ['--database' => 'sqlite', '--path' => 'database/migrations', '--force' => true])->assertSuccessful();
         $category = $this->category(['slug' => 'renamed']);
         $product = $this->product($category, ['code' => 'PVN297', 'price' => 123]);
         $before = $product->fresh()->getAttributes();
@@ -24,14 +21,6 @@ class PreMergeReviewTest extends ProductTestCase
         $this->assertEquals($before, $product->fresh()->getAttributes());
         $this->assertSame('renamed', $category->fresh()->slug);
         $this->assertSame(7, Product::count());
-        // Shared Auth seed remains non-idempotent; confirm its failure does not replace catalog data.
-        try {
-            $this->seed(DatabaseSeeder::class);
-            $this->fail('Expected existing SQL role unique constraint to reject repeated group seed.');
-        } catch (QueryException $exception) {
-            $this->assertStringContainsString('UNIQUE constraint failed: roles.name', $exception->getMessage());
-        }
-        $this->assertEquals($before, $product->fresh()->getAttributes());
     }
 
     public function test_migration_rejects_duplicates_without_rewriting_documents(): void

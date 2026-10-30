@@ -10,11 +10,9 @@ use Illuminate\Support\Facades\Hash;
 
 class ProductAuthIntegrationTest extends ProductTestCase
 {
-    public function test_existing_sql_auth_and_group_seeder_integrate_with_mongodb_catalog(): void
+    public function test_mongodb_auth_and_group_seeder_integrate_with_catalog(): void
     {
-        $this->assertSame('sqlite', config('database.default'));
-        $this->assertSame(':memory:', config('database.connections.sqlite.database'));
-        $this->artisan('migrate', ['--database' => 'sqlite', '--path' => 'database/migrations', '--force' => true])->assertSuccessful();
+        $this->assertSame('mongodb', config('database.default'));
         $this->seed(DatabaseSeeder::class);
         $this->assertSame(5, Category::count());
         $this->assertSame(7, Product::count());
@@ -22,14 +20,14 @@ class ProductAuthIntegrationTest extends ProductTestCase
         $this->assertSame('LH001', $product->category['code']);
         $admin = User::where('email', 'admin@shophoatuoi.com')->firstOrFail();
         $this->assertTrue(Hash::check('Admin@123', $admin->password));
-        $this->post('/login', ['email' => $admin->email, 'password' => 'Admin@123'])->assertRedirect('/dashboard');
+        $this->post('/login', ['email' => $admin->email, 'password' => 'Admin@123'])->assertRedirect('/admin/dashboard');
         $this->get('/admin/products')->assertOk()->assertSee('PVN297');
         $this->put('/admin/products/'.$product->id, [
             'code' => $product->code, 'name' => $product->name,
             'category_id' => $product->category_id, 'price' => 600000,
             'stock' => 9, 'status' => 'Còn hàng',
         ])->assertRedirect('/admin/products');
-        $this->assertSame(600000.0, $product->fresh()->price);
+        $this->assertSame(600000, $product->fresh()->price);
         $this->post('/logout')->assertRedirect('/');
         $this->get('/admin/products')->assertRedirect('/login');
         $this->post('/login', ['email' => 'user@shophoatuoi.com', 'password' => 'User@123'])->assertRedirect('/admin/products');
