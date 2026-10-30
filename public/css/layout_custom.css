@@ -1,0 +1,528 @@
+/* Bổ sung theo plan Task 4.1 (Member 4), dùng lại màu của style_layout.css:
+   xanh #537453 / #436b46, cam #ea8725. html font-size = 62.5% nên 1rem = 10px. */
+
+/* Thanh thông báo miễn phí ship */
+.top-banner {
+    background: #436b46;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hero carousel trang chủ */
+.hero-carousel {
+    margin-bottom: 25px;
+}
+
+.hero-carousel .hero-slide {
+    position: relative;
+    display: flex;
+    aspect-ratio: 1908 / 842;
+    background: #eef0f1;
+    overflow: hidden;
+}
+
+    .hero-carousel .hero-slide img {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.hero-carousel .hero-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 6%;
+    color: #537453;
+}
+
+.hero-carousel .hero-title {
+    font-size: clamp(2.4rem, 6vw, 11rem);
+    font-weight: 900;
+    line-height: 1.05;
+    margin: 0;
+}
+
+.hero-carousel .hero-sub {
+    display: flex;
+    align-items: flex-end;
+    font-size: clamp(1.4rem, 2.6vw, 4.6rem);
+    margin: 2vw 0 0;
+}
+
+.hero-carousel .hero-line {
+    display: inline-block;
+    width: 22%;
+    border-bottom: 3px solid #537453;
+    margin-bottom: 0.3em;
+}
+
+.hero-carousel .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    opacity: 1;
+}
+
+.hero-carousel .carousel-indicators .active {
+    background-color: #537453;
+}
+
+#heroCarousel .carousel-control-prev,
+#heroCarousel .carousel-control-next,
+.hero-carousel .carousel-control-prev,
+.hero-carousel .carousel-control-next {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    margin: 0 15px;
+    padding: 0;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.85;
+    z-index: 5;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+    #heroCarousel .carousel-control-prev:hover,
+    #heroCarousel .carousel-control-next:hover,
+    .hero-carousel .carousel-control-prev:hover,
+    .hero-carousel .carousel-control-next:hover {
+        opacity: 1;
+        transform: translateY(-50%) scale(1.08);
+    }
+
+    #heroCarousel .carousel-control-prev-icon,
+    #heroCarousel .carousel-control-next-icon,
+    .hero-carousel .carousel-control-prev-icon,
+    .hero-carousel .carousel-control-next-icon {
+        width: 44px;
+        height: 44px;
+        background-color: rgba(83, 116, 83, 0.75);
+        border-radius: 50%;
+        background-size: 50%;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.2s ease;
+    }
+
+    #heroCarousel .carousel-control-prev:hover .carousel-control-prev-icon,
+    #heroCarousel .carousel-control-next:hover .carousel-control-next-icon,
+    .hero-carousel .carousel-control-prev:hover .carousel-control-prev-icon,
+    .hero-carousel .carousel-control-next:hover .carousel-control-next-icon {
+        background-color: #537453;
+    }
+
+@media (max-width: 768px) {
+    #heroCarousel .carousel-control-prev,
+    #heroCarousel .carousel-control-next,
+    .hero-carousel .carousel-control-prev,
+    .hero-carousel .carousel-control-next {
+        width: 36px;
+        height: 36px;
+        margin: 0 8px;
+    }
+
+    #heroCarousel .carousel-control-prev-icon,
+    #heroCarousel .carousel-control-next-icon,
+    .hero-carousel .carousel-control-prev-icon,
+    .hero-carousel .carousel-control-next-icon {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+/* Nút tim wishlist đã thích: chỉ hiện khi hover giống các sản phẩm khác, giữ viền đỏ khi active */
+.item_product_main .product-action .product-thumbnail .action-button .btn-circle.setWishlist.active {
+    border-color: #e53935;
+}
+
+/* Khối tin tức mới trang chủ */
+.section_news {
+    margin-bottom: 40px;
+}
+
+    .section_news .news-item {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+        transition: box-shadow 0.3s ease;
+    }
+
+        .section_news .news-item:hover {
+            box-shadow: 0 0 12px rgba(83, 116, 83, 0.3);
+        }
+
+    .section_news .news-thumb {
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .section_news .news-thumb img {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+        transition: transform 0.4s ease-in-out;
+        will-change: transform;
+    }
+
+    .section_news .news-item:hover .news-thumb img,
+    .section_news .news-thumb:hover img {
+        transform: scale(1.05);
+    }
+
+    .section_news .news-info {
+        padding: 12px 15px;
+    }
+
+        .section_news .news-info .time-post {
+            color: #888;
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        .section_news .news-info h3 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+            .section_news .news-info h3 a {
+                color: #333;
+            }
+
+                .section_news .news-info h3 a:hover {
+                    color: #537453;
+                }
+
+    .section_news .news-empty {
+        font-size: 1.4rem;
+        color: #888;
+        padding: 20px 0;
+    }
+
+    .section_news .view-more {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+        .section_news .view-more a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            line-height: 40px;
+            height: auto;
+            border: 1px solid #537453;
+            color: #537453;
+            font-weight: 500;
+            background: #fff;
+            padding: 0 25px;
+            border-radius: 8px;
+            transition: background-color 0.5s ease;
+            text-decoration: none;
+        }
+
+            .section_news .view-more a svg {
+                width: 18px;
+                height: 18px;
+                margin-left: 5px;
+            }
+
+            .section_news .view-more a:hover {
+                border: 1px solid #ea8725;
+                background: #ea8725;
+                color: #fff;
+            }
+
+                .section_news .view-more a:hover svg {
+                    color: #fff;
+                }
+
+/* Đồng bộ hiệu ứng hover phóng to mượt mà cho ảnh sản phẩm và bài viết blog */
+.item_product_main .product-action .product-thumbnail .image_thumb img {
+    transition: transform 0.4s ease-in-out;
+    will-change: transform;
+}
+
+.item_product_main .product-action:hover .product-thumbnail .image_thumb img {
+    transform: scale(1.05);
+}
+
+.layout-blog .image-blog img,
+.layout-blog .thumb a img,
+.layout-blog .item-blog .thumb img {
+    transition: transform 0.4s ease-in-out;
+    will-change: transform;
+}
+
+@media (max-width: 767px) {
+    .top-banner {
+        font-size: 1.2rem;
+    }
+
+    /* Danh mục nổi bật: khi tràn ngang thì canh trái để cuộn được tới ô đầu tiên
+       (inline style justify-content:center của đồ án cũ làm mất ô "Bó hoa tươi" trên mobile) */
+    .swiper_category .swiper-wrapper {
+        justify-content: flex-start !important;
+    }
+
+    /* Tab "Kệ Hoa Khai Trương / Giỏ hoa mừng": thu khoảng đệm để vừa màn 375px
+       (bản cũ bị cắt chữ "Giỏ hoa mừng" vì thanh cuộn ngang bị ẩn) */
+    .section-index.section_product_tab .tab_big .tab_ul {
+        padding: 0 5px;
+    }
+
+        .section-index.section_product_tab .tab_big .tab_ul ul li {
+            padding: 0 8px;
+            font-size: 1.5rem;
+        }
+
+    .hero-carousel .hero-line {
+        border-bottom-width: 2px;
+    }
+}
+
+/* ==========================================================================
+   Trang Xác Thực (Auth: Login, Register, Forgot / Reset Password)
+   Đồng bộ giao diện Master Layout chung của Góc Hoa Xinh & C# ShopFlower
+   ========================================================================== */
+.page_login, .page_register {
+    padding: 30px 0 50px;
+}
+
+.pagecustome {
+    box-shadow: 0px 0px 6px 0px rgba(50,50,93,0.15), 1px 1px 5px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.pagecustome .wpx {
+    background: #fff;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 0px rgba(50,50,93,0.15), 1px 1px 5px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .pagecustome .wpx {
+        padding: 35px 30px;
+    }
+}
+
+.pagecustome .title_heads {
+    font-size: 2.2rem !important;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.pagecustome .title_heads span {
+    color: #537453;
+}
+
+/* Trường nhãn label và dấu * bắt buộc */
+.pagecustome .form-label {
+    display: block !important;
+    text-align: left !important;
+    font-size: 1.4rem !important;
+    font-weight: 600 !important;
+    color: #444 !important;
+    margin-bottom: 6px !important;
+}
+
+.pagecustome .form-label .text-danger {
+    color: #dc3545 !important;
+    font-weight: bold !important;
+    font-size: 1.5rem !important;
+    margin-left: 3px !important;
+}
+
+/* Tách biệt rõ ràng form Đăng nhập (#login) và Lấy lại mật khẩu (.h_recover) */
+#login {
+    width: 100% !important;
+    clear: both !important;
+}
+
+#login.hidden,
+#login.d-none {
+    display: none !important;
+}
+
+.h_recover {
+    width: 100% !important;
+    float: none !important;
+    clear: both !important;
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
+}
+
+.h_recover.d-none {
+    display: none !important;
+}
+
+.page-login .form-signup .form-group input,
+.page-register .form-signup .form-group input,
+.h_recover input {
+    height: 45px !important;
+    padding: 0 15px !important;
+    font-size: 1.4rem !important;
+    color: #333 !important;
+    line-height: 45px !important;
+    border: 1px solid #e1e1e1 !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+    background: #fff !important;
+    margin-bottom: 15px !important;
+    width: 100% !important;
+    outline: none !important;
+}
+
+.page-login .form-signup .form-group input:focus,
+.page-register .form-signup .form-group input:focus,
+.h_recover input:focus {
+    border-color: #537453 !important;
+    box-shadow: 0 0 0 2px rgba(83, 116, 83, 0.15) !important;
+}
+
+/* Khối nút submit action */
+.action-btn-submit {
+    position: relative !important;
+    clear: both !important;
+    width: 100% !important;
+    margin-bottom: 15px !important;
+}
+
+.page-login .btn-style,
+.page-register .btn-style,
+.btn-style {
+    background-color: #537453 !important;
+    color: #fff !important;
+    font-size: 1.4rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px;
+    border: 1px solid #537453 !important;
+    border-radius: 4px !important;
+    height: 45px !important;
+    line-height: 43px !important;
+    padding: 0 20px !important;
+    width: 100% !important;
+    display: block !important;
+    text-align: center !important;
+    transition: all 0.25s ease !important;
+    text-transform: uppercase !important;
+    cursor: pointer !important;
+}
+
+.page-login .btn-style:hover,
+.page-register .btn-style:hover,
+.btn-style:hover {
+    background-color: #ea8725 !important;
+    border-color: #ea8725 !important;
+    color: #fff !important;
+}
+
+/* Khung chuyển hướng Quên mật khẩu & Đăng ký / Đăng nhập */
+.btn_boz_khac {
+    margin-top: 15px !important;
+    padding-top: 12px !important;
+    border-top: 1px dashed #e5e5e5 !important;
+    font-size: 1.4rem !important;
+    clear: both !important;
+    width: 100% !important;
+}
+
+.btn_boz_khac .btn_khac {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.btn_boz_khac .btn_khac span {
+    color: #555 !important;
+    font-size: 1.4rem !important;
+    float: none !important;
+}
+
+.btn_boz_khac .btn_khac a,
+.quenmk {
+    color: #537453 !important;
+    text-decoration: underline !important;
+    font-size: 1.4rem !important;
+    font-weight: 600 !important;
+    float: none !important;
+}
+
+.quenmk {
+    cursor: pointer !important;
+    text-decoration: none !important;
+}
+
+.btn_boz_khac .btn_khac a:hover,
+.quenmk:hover {
+    color: #ea8725 !important;
+    text-decoration: underline !important;
+}
+
+.action_bottom {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-top: 15px !important;
+    clear: both !important;
+    width: 100% !important;
+}
+
+.action_bottom .btn-primary {
+    width: auto !important;
+    min-width: 120px !important;
+}
+
+.action_bottom .quay_lai {
+    cursor: pointer !important;
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    color: #537453 !important;
+    text-decoration: none !important;
+}
+
+.action_bottom .quay_lai:hover {
+    color: #ea8725 !important;
+}
+
+/* Hiệu ứng cập nhật số lượng giỏ hàng trên header */
+.js-cart-count.cart-count-bump,
+.header-action_cart .count_item_pr.cart-count-bump {
+    transform: scale(1.4) !important;
+    background-color: #537453 !important;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s ease !important;
+}
+
+/* Đảm bảo Bootstrap 5 Modal luôn hiển thị phía trên backdrop */
+.modal {
+    z-index: 1065 !important;
+}
+.modal-backdrop {
+    z-index: 1050 !important;
+}
+
+

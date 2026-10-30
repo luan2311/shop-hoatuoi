@@ -2,36 +2,64 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use MongoDB\Laravel\Eloquent\Model;
 
 class Order extends Model
 {
+    protected $connection = 'mongodb';
+
     protected $fillable = [
-        'user_id', 'total', 'receiver_name', 'receiver_address',
-        'receiver_phone', 'email', 'note', 'status', 'payment_method',
+        'order_code', 'checkout_key', 'user_id', 'customer', 'items', 'total_amount',
+        'status', 'payment_method', 'order_date', 'subtotal_amount', 'discount_amount', 'voucher_code',
     ];
 
     const STATUSES = ['Pending', 'Processing', 'Shipped', 'Completed', 'Cancelled'];
+
+    public const STATUS_LABELS = [
+        'Pending' => 'Chờ xử lý',
+        'Processing' => 'Đang đóng gói',
+        'Shipped' => 'Đang giao hàng',
+        'Completed' => 'Hoàn thành',
+        'Cancelled' => 'Đã hủy',
+    ];
+
+    public const TRANSITIONS = [
+        'Pending' => ['Processing', 'Cancelled'],
+        'Processing' => ['Shipped', 'Cancelled'],
+        'Shipped' => ['Completed'],
+        'Completed' => [],
+        'Cancelled' => [],
+    ];
+
+    protected function casts(): array
+    {
+        return ['order_date' => 'datetime'];
+    }
+
+    public function getTotalAttribute(): int|float
+    {
+        return $this->attributes['total'] ?? $this->attributes['total_amount'] ?? 0;
+    }
 
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function details()
+    public function getStatusLabelAttribute(): string
     {
-        return $this->hasMany(OrderDetail::class);
+        return self::STATUS_LABELS[$this->status] ?? $this->status;
     }
 
     public function getStatusBadgeAttribute(): string
     {
-        return match($this->status) {
-            'Pending'    => 'warning',
+        return match ($this->status) {
+            'Pending' => 'warning',
             'Processing' => 'info',
-            'Shipped'    => 'primary',
-            'Completed'  => 'success',
-            'Cancelled'  => 'danger',
-            default      => 'secondary',
+            'Shipped' => 'primary',
+            'Completed' => 'success',
+            'Cancelled' => 'danger',
+            default => 'secondary',
         };
     }
 }

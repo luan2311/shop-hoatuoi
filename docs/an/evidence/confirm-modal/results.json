@@ -1,0 +1,97 @@
+[
+  {
+    "name": "invalid-frontend-no-modal",
+    "status": "PASS",
+    "detail": "Required controls block confirmation"
+  },
+  {
+    "name": "cancel-create-retains-data-focus",
+    "status": "PASS",
+    "detail": "No request; text/file selection retained; focus returns to trigger"
+  },
+  {
+    "name": "x-escape-reopen",
+    "status": "PASS",
+    "detail": "Three open/close cycles, no mutations"
+  },
+  {
+    "name": "server422-retains-text-and-file",
+    "status": "PASS",
+    "detail": "Real backend validation, no product created, no success toast"
+  },
+  {
+    "name": "create-double-click-once",
+    "status": "PASS",
+    "detail": "One real request; loading blocks cancel/Escape/double click"
+  },
+  {
+    "name": "cancel-edit",
+    "status": "PASS",
+    "detail": "Form values retained; server data untouched"
+  },
+  {
+    "name": "confirm-edit",
+    "status": "PASS",
+    "detail": "Existing POST with _method PUT, updated once"
+  },
+  {
+    "name": "cancel-stop",
+    "status": "PASS",
+    "detail": "No request, product remains selling"
+  },
+  {
+    "name": "confirm-stop",
+    "status": "PASS",
+    "detail": "Stock and price preserved"
+  },
+  {
+    "name": "confirm-resume",
+    "status": "PASS",
+    "detail": "Same document/stock/price/image"
+  },
+  {
+    "name": "cancel-delete",
+    "status": "PASS",
+    "detail": "No request and no deletion"
+  },
+  {
+    "name": "server-error-no-fake-success",
+    "status": "PASS",
+    "detail": "Injected 503 before backend; controls recover, product untouched"
+  },
+  {
+    "name": "confirmed-delete",
+    "status": "PASS",
+    "detail": "Original DELETE endpoint via _method; owned image removed"
+  },
+  {
+    "name": "order-delete-backend422",
+    "status": "PASS",
+    "detail": "Direct authenticated request blocked by unchanged ProductLifecycle"
+  },
+  {
+    "name": "callback-rejection",
+    "status": "PASS",
+    "detail": "Shared API displays error and recovers"
+  },
+  {
+    "name": "javascript-disabled",
+    "status": "PASS",
+    "detail": "Guarded form remains disabled, zero mutations"
+  },
+  {
+    "name": "component-script-blocked",
+    "status": "PASS",
+    "detail": "Guarded form remains disabled, zero mutations"
+  },
+  {
+    "name": "other-admin-modules",
+    "status": "PASS",
+    "detail": "No modal/script integrated into unrelated modules"
+  },
+  {
+    "name": "no-native-dialogs-and-preserved-contract",
+    "status": "PASS",
+    "detail": "All product mutation requests retain CSRF/POST/method spoofing"
+  }
+]

@@ -14,11 +14,11 @@
 
 | Thành viên | Vai trò chính | Module phụ trách | Tiêu chí chấm điểm liên quan |
 |---|---|---|---|
-| **Member 1 (Lead)** | Core Architecture & Phân quyền | Role Middleware, Layout Admin, Danh mục (Category CRUD), Dashboard Admin | Tiêu chí 1 (Auth, CRUD) & Tiêu chí 2 (Architecture, Middleware) |
-| **Member 2** | Backend & UI Sản phẩm | Sản phẩm (Product CRUD, Image Upload), Bộ lọc danh mục, Live Search AJAX (debounce) | Tiêu chí 1 (CRUD, Search, Paginate) & Tiêu chí 5 (Upload, AJAX) |
-| **Member 3** | Backend & UI Bán hàng | Giỏ hàng DB (Cart), Đặt hàng (Checkout), Quản lý đơn hàng (Admin/User Order) | Tiêu chí 1 (CRUD bảng quan hệ, Validation) & Tiêu chí 2 (Eloquent) |
-| **Member 4** | Frontend Master UI & Tương tác | Layout User (gochoaxinh style), Wishlist AJAX, Liên hệ + Google Maps API, Tin tức (Post) | Tiêu chí 3 (UI/Responsive), Tiêu chí 5 (AJAX Wishlist, API ngoài) |
-| **Member 5** | QA Testing, Seeder & Báo cáo | Test Suite (PHPUnit Feature Tests), Chuẩn hóa dữ liệu ảnh mẫu, Báo cáo ERD/UML, Slide | Tiêu chí 2 (Test, Seeder), Tiêu chí 4 (Báo cáo, UML, ERD) |
+| **Member 1 (Lead)** | Core Architecture, MongoDB & Phân quyền | Cấu hình kết nối MongoDB (mongodb/laravel-mongodb), Role Middleware, Layout Admin, Danh mục (Category CRUD), Dashboard Admin | Tiêu chí 1 (Auth, CRUD) & Tiêu chí 2 (Architecture, NoSQL Setup) |
+| **Member 2** | Backend & UI Sản phẩm NoSQL | Sản phẩm CRUD trên MongoDB Collection, Image Upload, Bộ lọc danh mục, Live Search AJAX debounce truy vấn MongoDB Full-text Index | Tiêu chí 1 (CRUD, Search, Paginate) & Tiêu chí 5 (Upload, AJAX) |
+| **Member 3** | Backend & UI Bán hàng (Embedded Model) | Giỏ hàng MongoDB (Embedded items), Đặt hàng NoSQL Checkout (Embedded Order Items, Atomic Operations $push/$inc), Quản lý đơn hàng | Tiêu chí 1 (CRUD Document nhúng, Validation) & Tiêu chí 2 (NoSQL Model) |
+| **Member 4** | Frontend Master UI & Tương tác | Layout User (gochoaxinh style), Wishlist AJAX trên MongoDB, Liên hệ + Google Maps API, Tin tức (Posts Collection) | Tiêu chí 3 (UI/Responsive), Tiêu chí 5 (AJAX Wishlist, API ngoài) |
+| **Member 5** | QA Testing, Seeder MongoDB & Báo cáo | Test Suite (PHPUnit Feature Tests), Khởi tạo dữ liệu MongoDB từ mongodb_init.js (80 SP, 5 danh mục), Thiết kế sơ đồ NoSQL Document Schema Model, Slide | Tiêu chí 2 (Test, Seeder NoSQL), Tiêu chí 4 (Báo cáo, UML, NoSQL Schema) |
 
 ---
 
@@ -850,6 +850,8 @@ git commit -m "feat(contact-post): add contact form with google maps embed and b
 
 ### PHẦN 5: MEMBER 5 – QA TESTING, SEEDER DATA & BÁO CÁO ERD/UML
 
+> Các ví dụ triển khai trong phần này là bản phác thảo ban đầu theo SQL/pivot. Nhánh QA hiện dùng Laravel 13/MongoDB; xem trạng thái thực tế ở checklist cuối phần này và hợp đồng trong docs/dung/MONGODB_SCHEMA.md. Không chạy ví dụ seeder hoặc FullCustomerJourneyTest cũ như test của nhánh hiện tại.
+
 #### Task 5.1: Chuẩn hóa Seeder Dữ liệu Mẫu & File Ảnh Sản Phẩm
 **Files:**
 - Modify: `database/seeders/DatabaseSeeder.php`
@@ -988,9 +990,11 @@ git commit -m "test(e2e): add complete end-to-end customer journey and admin ful
 
 #### Task 5.3: Tài liệu Đồ án (Sơ đồ ERD, Use Case UML & Báo cáo Thuyết trình)
 **Files:**
-- Create: `docs/ERD_DATABASE.md`
-- Create: `docs/USECASE_UML.puml`
+- Existing schema and ERD: `docs/dung/MONGODB_SCHEMA.md` and `docs/dung/SO_DO.md`
+- Existing Use Case: `docs/dung/USE_CASE.puml`
 - Create: `docs/BAO_CAO_DO_AN_10_DIEM.md`
+
+Tài liệu schema, ERD, Activity, Sequence và Use Case được giữ tập trung trong `docs/dung/` để tránh tạo bản trùng. Task này dùng chúng làm nguồn cho báo cáo.
 
 **Step 1: Thiết kế Sơ đồ Use Case (PlantUML)**
 ```plantuml
@@ -1043,7 +1047,7 @@ Admin --> UC13
 **Step 2: Viết Báo cáo cấu trúc 10 điểm**
 Biên soạn báo cáo chi tiết bao gồm:
 1. Giới thiệu đề tài & Công nghệ sử dụng.
-2. Thiết kế Cơ sở dữ liệu (Chi tiết 11 bảng MySQL và khóa ngoại).
+2. Thiết kế Cơ sở dữ liệu (Chi tiết 8 Collections MongoDB, cấu trúc Embedded Documents và Text Indexes).
 3. Kiến trúc mã nguồn Laravel 12 (Middleware, FormRequest, Service/Controller).
 4. Minh chứng đáp ứng từng tiêu chí trong Rubric chấm điểm.
 
@@ -1058,11 +1062,13 @@ git commit -m "docs: finalize project report, database ERD and PlantUML use-case
 ## 4. Bảng Checklist Tiến Độ Nghiệm Thu 5 Người
 
 ### Checklist Thành Viên 1 (Lead & Auth/Category)
-- [ ] Khởi tạo Git repo và phân quyền branch cho các thành viên.
-- [ ] Viết `RoleMiddleware` kiểm tra role `Admin`/`User` và chặn 403 khi truy cập trái phép.
-- [ ] Xây dựng Admin Layout base chuẩn Bootstrap 5 responsive.
-- [ ] Hoàn thiện Admin Category CRUD (Validate tên, slug, thông báo toast).
-- [ ] Viết xong `RoleMiddlewareTest` và `CategoryCrudTest` (100% PASS).
+- [x] Khởi tạo Git repo và phân quyền branch cho các thành viên.
+- [x] Viết `RoleMiddleware` kiểm tra role `Admin`/`User` và chặn 403 khi truy cập trái phép.
+- [x] Xây dựng Admin Layout base chuẩn Bootstrap 5 responsive, phong cách thương hiệu Góc Hoa Xinh & C# Shop-Flower.
+- [x] Hoàn thiện Admin Dashboard tổng quan với 4 Cards thống kê, Biểu đồ doanh thu tương tác Chart.js theo khoảng ngày (AJAX), Bảng đơn hàng gần đây và Top sản phẩm bán chạy.
+- [x] Hoàn thiện Admin Category CRUD (Giao diện bảng sang trọng, tự động tạo slug SEO realtime từ tên tiếng Việt, FormRequest validation).
+- [x] Thiết kế toàn bộ giao diện Auth (Đăng nhập, Đăng ký, Quên mật khẩu, Đặt lại mật khẩu) chuẩn Bootstrap 5 bám sát phong cách gochoaxinh.com và port từ C# `Dang_nhap.cshtml` & `Dang_ky.cshtml`.
+- [x] Viết và cập nhật Feature Tests (`RoleMiddlewareTest`, `AdminDashboardTest`, `CategoryCrudTest`, `Auth` suite - 100% PASS 41/41 tests).
 
 ### Checklist Thành Viên 2 (Product & Search)
 - [ ] Xây dựng Admin Product CRUD kèm upload ảnh vào `storage/app/public/products/`.
@@ -1089,12 +1095,22 @@ git commit -m "docs: finalize project report, database ERD and PlantUML use-case
 - [ ] Viết xong `HomePageTest`, `WishlistAjaxTest`, `ContactAndPostTest` (100% PASS).
 
 ### Checklist Thành Viên 5 (QA Testing, Seeder & Báo cáo)
-- [ ] Bổ sung Seeder dữ liệu mẫu phong phú (tối thiểu 15-20 sản phẩm, đủ 5 danh mục).
-- [ ] Chạy `php artisan storage:link` và kiểm tra hiển thị toàn bộ ảnh sản phẩm.
-- [ ] Chạy kiểm thử toàn trình `FullCustomerJourneyTest` và toàn bộ test suite: `php artisan test`.
-- [ ] Thiết kế sơ đồ quan hệ thực thể ERD database đầy đủ 11 bảng.
-- [ ] Thiết kế sơ đồ Use Case UML bằng PlantUML.
-- [ ] Soạn thảo file báo cáo đồ án và outline slide thuyết trình đáp ứng đầy đủ thang 10 điểm.
+> Trạng thái dưới đây phản ánh code và bằng chứng trên nhánh QA ngày 27/10/2026. Các ví dụ Task 5.1–5.2 phía trên là bản phác thảo ban đầu theo SQL/pivot; chúng không phải lệnh nghiệm thu cho MongoDB hiện tại. Không dùng `DatabaseSeeder` cũ hoặc ví dụ `RefreshDatabase`/`roles()->attach()` để kết luận nhánh này đã tích hợp.
+
+| Hạng mục | Trạng thái | Bằng chứng và giới hạn |
+|---|---|---|
+| Dataset seeder, tối thiểu 15–20 sản phẩm và 5 danh mục | DONE | 80 sản phẩm, 5 danh mục, 3 bài viết; checksum khớp initializer và dữ liệu được kiểm tra trong [flowers.json](../../database/seeders/data/flowers.json). Importer MongoDB riêng, không thay DatabaseSeeder SQL. |
+| Storage public và kiểm kê ảnh sản phẩm | PARTIAL | 6 file minh họa có giấy phép/7 SKU tham chiếu; 0 ảnh khớp SKU; còn 68 tên file sản phẩm thiếu. Đã cài 3/3 thumbnail bài viết có provenance; browser route blog chưa có trên nhánh này. Template placeholder được lưu trong Git và không tính là ảnh hoàn chỉnh. |
+| Toàn bộ PHPUnit hiện có | DONE | Full suite 110/110 tests / 2.132 assertions / 0 failure-error-skip lúc 11:36 +07 trên replica set QA riêng `dungQA` (`127.0.0.1:27028`), qua launcher nạp MongoDB extension trong scope process. Evidence: [QA_KET_QUA](../dung/QA_KET_QUA.md) và [runtime JSON](../dung/evidence/phpunit-runtime-2026-10-27.json). |
+| Kiểm thử tích hợp chọn lọc Auth + Sales trên nhánh hiện tại | DONE | Lượt mới nhất: 37/37 tests, 315 assertions, 0 failure/error/skip; JUnit và summary tại [evidence](../dung/evidence/member5-integration-2026-10-27.xml) và [summary](../dung/evidence/member5-integration-summary-2026-10-27.json). Tạo 37 DB riêng trên `dungQA`, giữ nguyên, không cleanup. |
+| `FullCustomerJourneyTest` và nghiệm thu xuyên Catalog → Checkout → Admin | BLOCKED | Các HTTP Feature test Auth/Sales hiện có PASS riêng; vẫn chưa thể chạy xuyên Catalog vì controller/route Catalog chỉ có trên `origin/feat/an-laravel-mongodb`, chưa tích hợp. Browser E2E lượt này NOT RUN. |
+| Ba thumbnail bài viết và kiểm tra hiển thị | PARTIAL | Đã tái sử dụng và cài JPEG minh họa CC BY/CC BY-SA cho TT001–TT003, có ledger và runtime readback; route Posts chỉ có ở ref nhánh Huy, chưa browser-verify trên checkout này. |
+| Hai lỗi mobile ở `/orders/success` (390×844, 375×812) | PARTIAL | Snapshot cũ xác nhận email dài tràn và bảng min-width cắt nội dung. `git apply --check` patch đề xuất PASS nhưng chưa áp dụng vì view thuộc Thành viên 3; không có Playwright/Puppeteer và chưa xác minh sau sửa bằng browser. |
+| Schema NoSQL, collection và embedded documents | DONE | [MONGODB_SCHEMA](../dung/MONGODB_SCHEMA.md) và phần ERD trong [SO_DO](../dung/SO_DO.md). |
+| Sơ đồ Use Case UML | DONE | [USE_CASE.puml](../dung/USE_CASE.puml) tách code hiện có khỏi chức năng theo kế hoạch. |
+| Sơ đồ Activity và Sequence | DONE | Activity đặt hàng và Sequence checkout ở [SO_DO](../dung/SO_DO.md). |
+| Báo cáo đồ án và nội dung outline slide | DONE | [Báo cáo](../BAO_CAO_DO_AN_10_DIEM.md) và [nội dung slide](../dung/NOI_DUNG_SLIDE.md) mô tả chức năng, kết quả, giới hạn và hướng phát triển thực tế. |
+| File trình chiếu PowerPoint | NOT STARTED | Chưa có file .pptx; nội dung Markdown đã chuẩn bị theo yêu cầu thay thế khi chưa tạo được PowerPoint. |
 
 ---
 
@@ -1105,6 +1121,6 @@ git commit -m "docs: finalize project report, database ERD and PlantUML use-case
 | **Tiêu chí 1: Chức năng nghiệp vụ & Auth** | **4.0đ** | - CRUD ít nhất 2 bảng quan hệ (`products ↔ categories`, `orders ↔ order_details`)<br>- Phân quyền 2 role: Admin & User<br>- Tìm kiếm & Phân trang sản phẩm (12 sp/trang)<br>- Form validation đầy đủ tất cả các trường | Thành viên 1, 2, 3 |
 | **Tiêu chí 2: Kiến trúc kỹ thuật & CSDL** | **2.5đ** | - Sử dụng Eloquent ORM 100% (không dùng raw SQL)<br>- Có đủ Migration + DatabaseSeeder dữ liệu mẫu<br>- Chuẩn cấu trúc MVC, Middleware, FormRequest, Blade Template | Cả nhóm (Lead Member 1 & QA Member 5) |
 | **Tiêu chí 3: Giao diện & Trải nghiệm (UI/UX)** | **1.5đ** | - Giao diện Bootstrap 5 hài hòa phong cách gochoaxinh.com<br>- Đảm bảo Responsive hoàn toàn trên mobile 375px, tablet, desktop | Thành viên 4 & Thành viên 1 |
-| **Tiêu chí 4: Báo cáo kỹ thuật & Thuyết trình** | **1.0đ** | - Báo cáo đồ án chi tiết, sơ đồ ERD chuẩn CSDL<br>- Sơ đồ Use Case UML trực quan | Thành viên 5 |
+| **Tiêu chí 4: Báo cáo kỹ thuật & Thuyết trình** | **1.0đ** | - Báo cáo đồ án chi tiết, sơ đồ mô hình NoSQL Document Schema chuẩn mực<br>- Sơ đồ Use Case UML trực quan | Thành viên 5 |
 | **Tiêu chí 5: Kỹ thuật nâng cao & Tích hợp** | **1.0đ** | - Upload file ảnh vào Storage Public an toàn<br>- AJAX Wishlist & AJAX Live Search Realtime<br>- Tích hợp Google Maps Embed API | Thành viên 2 & Thành viên 4 |
 | **TỔNG CỘNG** | **10.0đ** | **ĐẠT ĐIỂM TỐI ĐA** | **CẢ NHÓM (5 THÀNH VIÊN)** |

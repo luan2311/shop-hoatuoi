@@ -2,23 +2,44 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Str;
+use MongoDB\Laravel\Eloquent\Model;
 
 class Category extends Model
 {
-    protected $fillable = ['name', 'slug'];
+    use HasFactory;
+
+    protected $connection = 'mongodb';
+
+    protected $fillable = ['code', 'name', 'slug', 'description'];
 
     protected static function boot()
     {
         parent::boot();
+
         static::creating(function ($category) {
-            $category->slug = Str::slug($category->name);
+            if (empty($category->code)) {
+                $category->code = 'LH'.str_pad((string) (Category::count() + 1), 3, '0', STR_PAD_LEFT);
+            }
+            if (empty($category->slug)) {
+                $category->slug = Str::slug($category->name);
+            } else {
+                $category->slug = Str::slug($category->slug);
+            }
+        });
+
+        static::updating(function ($category) {
+            if (empty($category->slug)) {
+                $category->slug = Str::slug($category->name);
+            } else {
+                $category->slug = Str::slug($category->slug);
+            }
         });
     }
 
     public function products()
     {
-        return $this->hasMany(Product::class);
+        return $this->hasMany(Product::class, 'category_id');
     }
 }

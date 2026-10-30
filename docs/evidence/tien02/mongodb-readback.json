@@ -1,0 +1,31 @@
+{
+    "database": "shop_hoatuoi_test_tien02_20261026140353",
+    "orders": [
+        {
+            "order_code": "HD-01M5VGMSHW6W11CST1XKG64TV5",
+            "status": "Completed",
+            "total_amount": 1050000,
+            "quantity": 3,
+            "price": 350000,
+            "idempotency_key_stored": true
+        },
+        {
+            "order_code": "HD-01M5VH0439VG3X66PDFXQMMEGT",
+            "status": "Cancelled",
+            "total_amount": 1050000,
+            "quantity": 3,
+            "price": 350000,
+            "idempotency_key_stored": true
+        },
+        {
+            "order_code": "HD-01M5VH2NB97TBCMZ78JT1VDWYV",
+            "status": "Cancelled",
+            "total_amount": 350000,
+            "quantity": 1,
+            "price": 350000,
+            "idempotency_key_stored": true
+        }
+    ],
+    "stock": 27,
+    "nonempty_carts": 0
+}

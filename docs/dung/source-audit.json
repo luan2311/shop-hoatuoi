@@ -1,0 +1,416 @@
+{
+  "source": {
+    "path": "database/mongodb_init.js",
+    "working_copy_bytes": 201137,
+    "sha256_raw": "bf54986396db094dbdce065a4b536dc461d38f1915fd419ecd0aee5bc9ae6313",
+    "sha256_lf": "fbdc44b7d5fc8f3976494d998a777b51c0022ec65e804599c791fbb589c590d1",
+    "versions": [
+      {
+        "ref": "origin/main",
+        "exists": false
+      },
+      {
+        "ref": "origin/dev",
+        "exists": true,
+        "bytes_git_blob": 200718,
+        "sha256_lf": "fbdc44b7d5fc8f3976494d998a777b51c0022ec65e804599c791fbb589c590d1"
+      },
+      {
+        "ref": "origin/feature/auth-category-admin",
+        "exists": true,
+        "bytes_git_blob": 200718,
+        "sha256_lf": "fbdc44b7d5fc8f3976494d998a777b51c0022ec65e804599c791fbb589c590d1"
+      },
+      {
+        "ref": "origin/feature/cart-checkout-orders",
+        "exists": true,
+        "bytes_git_blob": 200718,
+        "sha256_lf": "fbdc44b7d5fc8f3976494d998a777b51c0022ec65e804599c791fbb589c590d1"
+      }
+    ]
+  },
+  "method": "Strict literal parser; no JavaScript execution; no MongoDB connection.",
+  "collections": {
+    "categories": {
+      "records_in_script": 5,
+      "fields": [
+        "code",
+        "created_at",
+        "description",
+        "name",
+        "slug",
+        "updated_at"
+      ],
+      "required": [
+        "code",
+        "name",
+        "slug"
+      ]
+    },
+    "products": {
+      "records_in_script": 80,
+      "fields": [
+        "brand",
+        "category",
+        "code",
+        "created_at",
+        "description",
+        "image",
+        "name",
+        "original_price",
+        "price",
+        "slug",
+        "status",
+        "stock",
+        "updated_at"
+      ],
+      "required": [
+        "code",
+        "name",
+        "slug",
+        "price",
+        "category"
+      ]
+    },
+    "users": {
+      "records_in_script": 2,
+      "fields": [
+        "address",
+        "created_at",
+        "email",
+        "is_active",
+        "name",
+        "password",
+        "phone",
+        "roles",
+        "updated_at",
+        "username"
+      ],
+      "required": [
+        "username",
+        "email",
+        "password",
+        "roles"
+      ]
+    },
+    "orders": {
+      "records_in_script": 1,
+      "fields": [
+        "created_at",
+        "customer",
+        "items",
+        "order_code",
+        "order_date",
+        "payment_method",
+        "status",
+        "total_amount",
+        "updated_at",
+        "user_id"
+      ],
+      "required": [
+        "order_code",
+        "customer",
+        "items",
+        "total_amount",
+        "status"
+      ]
+    },
+    "carts": {
+      "records_in_script": 0,
+      "fields": [],
+      "required": []
+    },
+    "wishlists": {
+      "records_in_script": 0,
+      "fields": [],
+      "required": []
+    },
+    "contacts": {
+      "records_in_script": 2,
+      "fields": [
+        "code",
+        "created_at",
+        "email",
+        "full_name",
+        "message",
+        "phone",
+        "status"
+      ],
+      "required": []
+    },
+    "posts": {
+      "records_in_script": 3,
+      "fields": [
+        "code",
+        "content",
+        "created_at",
+        "published_at",
+        "slug",
+        "summary",
+        "thumbnail",
+        "title",
+        "updated_at"
+      ],
+      "required": []
+    },
+    "roles": {
+      "records_in_script": 2,
+      "fields": [
+        "created_at",
+        "description",
+        "name",
+        "permissions"
+      ],
+      "required": []
+    }
+  },
+  "indexes": [
+    {
+      "collection": "categories",
+      "keys": {
+        "code": 1
+      },
+      "options": {
+        "unique": true
+      }
+    },
+    {
+      "collection": "categories",
+      "keys": {
+        "slug": 1
+      },
+      "options": {
+        "unique": true
+      }
+    },
+    {
+      "collection": "products",
+      "keys": {
+        "name": "text",
+        "description": "text"
+      },
+      "options": {
+        "weights": {
+          "name": 10,
+          "description": 1
+        },
+        "default_language": "none"
+      }
+    },
+    {
+      "collection": "products",
+      "keys": {
+        "code": 1
+      },
+      "options": {
+        "unique": true
+      }
+    },
+    {
+      "collection": "products",
+      "keys": {
+        "slug": 1
+      },
+      "options": {
+        "unique": true
+      }
+    },
+    {
+      "collection": "products",
+      "keys": {
+        "category.code": 1
+      },
+      "options": {}
+    },
+    {
+      "collection": "products",
+      "keys": {
+        "category.slug": 1,
+        "price": 1
+      },
+      "options": {}
+    },
+    {
+      "collection": "products",
+      "keys": {
+        "price": 1
+      },
+      "options": {}
+    },
+    {
+      "collection": "products",
+      "keys": {
+        "status": 1
+      },
+      "options": {}
+    },
+    {
+      "collection": "users",
+      "keys": {
+        "username": 1
+      },
+      "options": {
+        "unique": true
+      }
+    },
+    {
+      "collection": "users",
+      "keys": {
+        "email": 1
+      },
+      "options": {
+        "unique": true
+      }
+    },
+    {
+      "collection": "roles",
+      "keys": {
+        "name": 1
+      },
+      "options": {
+        "unique": true
+      }
+    },
+    {
+      "collection": "orders",
+      "keys": {
+        "order_code": 1
+      },
+      "options": {
+        "unique": true
+      }
+    },
+    {
+      "collection": "orders",
+      "keys": {
+        "user_id": 1
+      },
+      "options": {}
+    },
+    {
+      "collection": "orders",
+      "keys": {
+        "status": 1
+      },
+      "options": {}
+    },
+    {
+      "collection": "orders",
+      "keys": {
+        "order_date": -1
+      },
+      "options": {}
+    },
+    {
+      "collection": "posts",
+      "keys": {
+        "code": 1
+      },
+      "options": {
+        "unique": true
+      }
+    },
+    {
+      "collection": "posts",
+      "keys": {
+        "slug": 1
+      },
+      "options": {
+        "unique": true
+      }
+    },
+    {
+      "collection": "posts",
+      "keys": {
+        "published_at": -1
+      },
+      "options": {}
+    },
+    {
+      "collection": "contacts",
+      "keys": {
+        "code": 1
+      },
+      "options": {
+        "unique": true
+      }
+    },
+    {
+      "collection": "contacts",
+      "keys": {
+        "created_at": -1
+      },
+      "options": {}
+    },
+    {
+      "collection": "wishlists",
+      "keys": {
+        "user_id": 1,
+        "product_code": 1
+      },
+      "options": {
+        "unique": true
+      }
+    },
+    {
+      "collection": "carts",
+      "keys": {
+        "user_id": 1
+      },
+      "options": {
+        "unique": true
+      }
+    }
+  ],
+  "source_issues": [],
+  "hazards": {
+    "hardcoded_database": "shop_hoatuoi",
+    "drops_collections": [
+      "categories",
+      "products",
+      "users",
+      "orders",
+      "carts",
+      "wishlists",
+      "contacts",
+      "posts",
+      "roles"
+    ],
+    "drop_database": false,
+    "delete_many": false,
+    "same_demo_password_hash": true
+  },
+  "images": {
+    "products": 80,
+    "unique_filenames": 74,
+    "present": 0,
+    "placeholders": 0,
+    "illustrations": 6,
+    "unverified": 0,
+    "missing": 68,
+    "invalid": 0,
+    "shared_filenames": {
+      "intagram11.jpg": 2,
+      "dsc05950-1747886536759.jpg": 2,
+      "74f67376-3ef8-4846-8b7d-6645cede93cc-bce2fad8-7ad4-4d5e-b3a5-77b5e409b459.jpg": 2,
+      "318c355a-9602-499d-8a1d-df5ca6b419e2-6c459fe6-7e15-45ad-ba7b-feaa00621f1f.jpg": 2,
+      "66268d10bd3748599235ea425d9059-1722653592009.jpg": 2,
+      "1100-1722653577560.jpg": 2
+    }
+  },
+  "import_scope": {
+    "included": [
+      "categories",
+      "products",
+      "posts"
+    ],
+    "excluded": {
+      "users": "Optional fresh QA users only; never reuse source hashes/contact details.",
+      "roles": "Runtime authorization uses users.roles[]. Lead owns standalone Role migration.",
+      "orders": "Historical sample transactions are not imported.",
+      "carts": "Business data is never seeded.",
+      "contacts": "Sample personal contact messages are not imported.",
+      "wishlists": "Business data is never seeded."
+    }
+  }
+}

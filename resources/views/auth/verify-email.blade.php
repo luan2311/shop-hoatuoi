@@ -1,31 +1,52 @@
-<x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600">
-        {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
-    </div>
+@extends('layouts.app')
 
-    @if (session('status') == 'verification-link-sent')
-        <div class="mb-4 font-medium text-sm text-green-600">
-            {{ __('A new verification link has been sent to the email address you provided during registration.') }}
-        </div>
-    @endif
+@section('title', 'Xác thực Email - Góc Hoa Xinh')
 
-    <div class="mt-4 flex items-center justify-between">
-        <form method="POST" action="{{ route('verification.send') }}">
-            @csrf
+@section('content')
+<div class="bg-gray py-4">
+    <section class="section">
+        <div class="container">
+            <div class="page_login">
+                <div class="row justify-content-center">
+                    <div class="col-lg-5 col-md-7 col-sm-10 col-12 account-animate">
+                        <div class="page-login pagecustome clearfix">
+                            <div class="wpx">
+                                <h1 class="title_heads a-center">
+                                    <span>Xác thực Email</span>
+                                </h1>
 
-            <div>
-                <x-primary-button>
-                    {{ __('Resend Verification Email') }}
-                </x-primary-button>
+                                <p class="text-muted text-center small mb-4">
+                                    Cảm ơn bạn đã đăng ký tài khoản tại Góc Hoa Xinh! Trước khi bắt đầu, vui lòng nhấp vào liên kết xác thực chúng tôi vừa gửi đến địa chỉ email của bạn. Nếu chưa nhận được email, chúng tôi sẵn sàng gửi lại cho bạn.
+                                </p>
+
+                                @if (session('status') == 'verification-link-sent')
+                                    <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
+                                        <i class="fas fa-check-circle me-1"></i> Một liên kết xác thực mới đã được gửi đến địa chỉ email mà bạn đã cung cấp khi đăng ký.
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
+                                @endif
+
+                                <div class="d-flex flex-column gap-3">
+                                    <form method="POST" action="{{ route('verification.send') }}">
+                                        @csrf
+                                        <button type="submit" class="btn btn-primary btn-style text-uppercase">
+                                            GỬI LẠI EMAIL XÁC THỰC
+                                        </button>
+                                    </form>
+
+                                    <form method="POST" action="{{ route('logout') }}" class="text-center">
+                                        @csrf
+                                        <button type="submit" class="btn btn-link text-muted small text-decoration-none">
+                                            <i class="fas fa-sign-out-alt me-1"></i> Đăng xuất tài khoản
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </form>
-
-        <form method="POST" action="{{ route('logout') }}">
-            @csrf
-
-            <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                {{ __('Log Out') }}
-            </button>
-        </form>
-    </div>
-</x-guest-layout>
+        </div>
+    </section>
+</div>
+@endsection

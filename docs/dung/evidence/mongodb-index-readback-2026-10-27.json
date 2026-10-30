@@ -1,0 +1,143 @@
+{
+    "readback":  {
+                     "database":  "shop_hoatuoi_test_dung_cli_20261027_130120",
+                     "counts":  {
+                                    "categories":  5,
+                                    "products":  80,
+                                    "posts":  3
+                                },
+                     "indexes":  {
+                                     "categories":  [
+                                                        {
+                                                            "name":  "_id_",
+                                                            "key":  {
+                                                                        "_id":  1
+                                                                    },
+                                                            "unique":  false,
+                                                            "weights":  null
+                                                        },
+                                                        {
+                                                            "name":  "code_1",
+                                                            "key":  {
+                                                                        "code":  1
+                                                                    },
+                                                            "unique":  true,
+                                                            "weights":  null
+                                                        },
+                                                        {
+                                                            "name":  "slug_1",
+                                                            "key":  {
+                                                                        "slug":  1
+                                                                    },
+                                                            "unique":  true,
+                                                            "weights":  null
+                                                        }
+                                                    ],
+                                     "products":  [
+                                                      {
+                                                          "name":  "_id_",
+                                                          "key":  {
+                                                                      "_id":  1
+                                                                  },
+                                                          "unique":  false,
+                                                          "weights":  null
+                                                      },
+                                                      {
+                                                          "name":  "code_1",
+                                                          "key":  {
+                                                                      "code":  1
+                                                                  },
+                                                          "unique":  true,
+                                                          "weights":  null
+                                                      },
+                                                      {
+                                                          "name":  "slug_1",
+                                                          "key":  {
+                                                                      "slug":  1
+                                                                  },
+                                                          "unique":  true,
+                                                          "weights":  null
+                                                      },
+                                                      {
+                                                          "name":  "name_text_description_text",
+                                                          "key":  {
+                                                                      "_fts":  "text",
+                                                                      "_ftsx":  1
+                                                                  },
+                                                          "unique":  false,
+                                                          "weights":  {
+                                                                          "description":  1,
+                                                                          "name":  10
+                                                                      }
+                                                      },
+                                                      {
+                                                          "name":  "category.code_1",
+                                                          "key":  {
+                                                                      "category.code":  1
+                                                                  },
+                                                          "unique":  false,
+                                                          "weights":  null
+                                                      },
+                                                      {
+                                                          "name":  "category.slug_1_price_1",
+                                                          "key":  {
+                                                                      "category.slug":  1,
+                                                                      "price":  1
+                                                                  },
+                                                          "unique":  false,
+                                                          "weights":  null
+                                                      }
+                                                  ],
+                                     "posts":  [
+                                                   {
+                                                       "name":  "_id_",
+                                                       "key":  {
+                                                                   "_id":  1
+                                                               },
+                                                       "unique":  false,
+                                                       "weights":  null
+                                                   },
+                                                   {
+                                                       "name":  "code_1",
+                                                       "key":  {
+                                                                   "code":  1
+                                                               },
+                                                       "unique":  true,
+                                                       "weights":  null
+                                                   },
+                                                   {
+                                                       "name":  "slug_1",
+                                                       "key":  {
+                                                                   "slug":  1
+                                                               },
+                                                       "unique":  true,
+                                                       "weights":  null
+                                                   },
+                                                   {
+                                                       "name":  "published_at_-1",
+                                                       "key":  {
+                                                                   "published_at":  -1
+                                                               },
+                                                       "unique":  false,
+                                                       "weights":  null
+                                                   }
+                                               ]
+                                 },
+                     "explain":  {
+                                     "filter":  {
+                                                    "code":  "PVN297"
+                                                },
+                                     "executionTimeMillis":  0,
+                                     "totalKeysExamined":  1,
+                                     "totalDocsExamined":  1,
+                                     "nReturned":  1,
+                                     "winningPlan":  {
+                                                         "isCached":  false,
+                                                         "stage":  "EXPRESS_IXSCAN",
+                                                         "keyPattern":  "{ code: 1 }",
+                                                         "indexName":  "code_1"
+                                                     }
+                                 }
+                 },
+    "interpretation":  "Exact code query examines at most one document. This is a plan sanity check, not a performance benchmark; no latency SLA is defined."
+}

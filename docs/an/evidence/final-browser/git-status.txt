@@ -1,0 +1,27 @@
+## feat/an-laravel-mongodb...origin/dev
+ M .env.example
+ M app/Models/Category.php
+ M app/Models/Product.php
+ M bootstrap/app.php
+ M composer.json
+ M composer.lock
+ M config/database.php
+ M database/seeders/DatabaseSeeder.php
+ M resources/views/layouts/app.blade.php
+ M routes/web.php
+?? app/Exceptions/
+?? app/Http/Controllers/Admin/
+?? app/Http/Controllers/ProductController.php
+?? app/Http/Requests/ProductBrowseRequest.php
+?? app/Http/Requests/ProductRequest.php
+?? database/migrations/mongodb/
+?? database/seeders/ProductDemoSeeder.php
+?? docs/an/
+?? phpunit.products.xml
+?? public/js/
+?? resources/views/admin/
+?? resources/views/errors/
+?? resources/views/products/
+?? routes/products.php
+?? tests/Feature/Products/
+?? tests/JavaScript/

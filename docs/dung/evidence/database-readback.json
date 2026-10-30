@@ -1,0 +1,66 @@
+{
+    "database": "shop_hoatuoi_test_dung_13624_9a2627278ffc",
+    "method": "Laravel Feature HTTP requests + real MongoDB; no browser\/catalog test",
+    "counts": {
+        "products": 80,
+        "orders": 2,
+        "users": 3
+    },
+    "stock": {
+        "initial": 10,
+        "after_completed_and_cancelled": 7
+    },
+    "order_statuses": [
+        "Cancelled",
+        "Completed"
+    ],
+    "before_reimport_sha256": {
+        "users": "642bfe6291b5778423035e3d796cc5919469622e7931a9e2e9f049a3ce53bd64",
+        "products": "be864a2d49151efd8211a81fcc3d2f99877b48451d539a0bdbba7d5cd2e87930",
+        "categories": "f8144b1439b3cc8197b31cbc679dd5243b6de96d9f8115816a31291b42574b4b",
+        "posts": "1569a2158c07a1ad5516c3cca5c26d01bb7be19d717c2c4cc771c4d00f396611",
+        "orders": "9a0c08135c20deb7fb9fc0d132c6b72d379a31df6248625c4b840d4ddd1d9c9d",
+        "carts": "682b7cc678c5aef6f287b00edf273a77b636dc6dc65d148a79bde33b2822d61f"
+    },
+    "after_reimport_sha256": {
+        "users": "642bfe6291b5778423035e3d796cc5919469622e7931a9e2e9f049a3ce53bd64",
+        "products": "be864a2d49151efd8211a81fcc3d2f99877b48451d539a0bdbba7d5cd2e87930",
+        "categories": "f8144b1439b3cc8197b31cbc679dd5243b6de96d9f8115816a31291b42574b4b",
+        "posts": "1569a2158c07a1ad5516c3cca5c26d01bb7be19d717c2c4cc771c4d00f396611",
+        "orders": "9a0c08135c20deb7fb9fc0d132c6b72d379a31df6248625c4b840d4ddd1d9c9d",
+        "carts": "682b7cc678c5aef6f287b00edf273a77b636dc6dc65d148a79bde33b2822d61f"
+    },
+    "unchanged": true,
+    "reimport": {
+        "status": "PASS",
+        "database": "shop_hoatuoi_test_dung_13624_9a2627278ffc",
+        "mode": "apply",
+        "source_sha256_lf": "fbdc44b7d5fc8f3976494d998a777b51c0022ec65e804599c791fbb589c590d1",
+        "collections": {
+            "categories": {
+                "inserted": 0,
+                "skipped": 5,
+                "updated": 0,
+                "would_insert": 0
+            },
+            "products": {
+                "inserted": 0,
+                "skipped": 80,
+                "updated": 0,
+                "would_insert": 0
+            },
+            "posts": {
+                "inserted": 0,
+                "skipped": 3,
+                "updated": 0,
+                "would_insert": 0
+            },
+            "users": {
+                "inserted": 0,
+                "skipped": 2,
+                "updated": 0,
+                "would_insert": 0
+            }
+        }
+    }
+}

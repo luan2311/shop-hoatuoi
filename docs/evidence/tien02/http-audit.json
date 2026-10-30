@@ -1,0 +1,101 @@
+{
+    "database": "shop_hoatuoi_test_tien02_20261026140353",
+    "base_url": "http:\/\/127.0.0.1:8001",
+    "checks": [
+        {
+            "check": "Guest requires login",
+            "result": "PASS"
+        },
+        {
+            "check": "CSRF blocks missing token",
+            "result": "PASS"
+        },
+        {
+            "check": "other login",
+            "result": "PASS"
+        },
+        {
+            "check": "Add quantity 2",
+            "result": "PASS"
+        },
+        {
+            "check": "Add quantity 1",
+            "result": "PASS"
+        },
+        {
+            "check": "Repeated add accumulates in MongoDB",
+            "result": "PASS"
+        },
+        {
+            "check": "Stock overflow rejected",
+            "result": "PASS"
+        },
+        {
+            "check": "Valid checkout redirects",
+            "result": "PASS"
+        },
+        {
+            "check": "Server price and owner snapshot",
+            "result": "PASS"
+        },
+        {
+            "check": "Immediate retry returns existing order",
+            "result": "PASS"
+        },
+        {
+            "check": "Retry after refill preserves new cart",
+            "result": "PASS"
+        },
+        {
+            "check": "Cannot read another users order",
+            "result": "PASS"
+        },
+        {
+            "check": "User cannot manage admin orders",
+            "result": "PASS"
+        },
+        {
+            "check": "admin login",
+            "result": "PASS"
+        },
+        {
+            "check": "Admin filter and search work",
+            "result": "PASS"
+        },
+        {
+            "check": "Skipped transition rejected",
+            "result": "PASS"
+        },
+        {
+            "check": "Cancel restores stock",
+            "result": "PASS"
+        },
+        {
+            "check": "Second cancel rejected without restock",
+            "result": "PASS"
+        },
+        {
+            "check": "Completed order cannot be cancelled",
+            "result": "PASS"
+        },
+        {
+            "check": "Clear cart via HTTP",
+            "result": "PASS"
+        },
+        {
+            "check": "Direct MongoDB readback",
+            "result": "PASS"
+        }
+    ],
+    "readback": {
+        "browser_order": "HD-01M5VGMSHW6W11CST1XKG64TV5",
+        "browser_status": "Completed",
+        "browser_total": 1050000,
+        "http_order": "HD-01M5VH0439VG3X66PDFXQMMEGT",
+        "http_status": "Cancelled",
+        "http_total": 1050000,
+        "stock_before_http": 27,
+        "stock_after_http": 27,
+        "remaining_http_cart_items": 0
+    }
+}

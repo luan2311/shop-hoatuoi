@@ -1,0 +1,142 @@
+[
+  {
+    "file": "listing-1440.png",
+    "url": "http://127.0.0.1:8009/admin/products",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "capturedAt": "2026-10-30T17:22:07.792Z",
+    "source": "feat/an-product-sales-lifecycle, uncommitted Admin UI diff"
+  },
+  {
+    "file": "actions-1440.png",
+    "url": "http://127.0.0.1:8009/admin/products",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "capturedAt": "2026-10-30T17:22:08.342Z",
+    "source": "feat/an-product-sales-lifecycle, uncommitted Admin UI diff"
+  },
+  {
+    "file": "preview-1440.png",
+    "url": "http://127.0.0.1:8009/admin/products",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "capturedAt": "2026-10-30T17:22:09.665Z",
+    "source": "feat/an-product-sales-lifecycle, uncommitted Admin UI diff"
+  },
+  {
+    "file": "listing-768.png",
+    "url": "http://127.0.0.1:8009/admin/products",
+    "viewport": {
+      "width": 768,
+      "height": 1000
+    },
+    "capturedAt": "2026-10-30T17:22:10.752Z",
+    "source": "feat/an-product-sales-lifecycle, uncommitted Admin UI diff"
+  },
+  {
+    "file": "actions-768.png",
+    "url": "http://127.0.0.1:8009/admin/products",
+    "viewport": {
+      "width": 768,
+      "height": 1000
+    },
+    "capturedAt": "2026-10-30T17:22:11.239Z",
+    "source": "feat/an-product-sales-lifecycle, uncommitted Admin UI diff"
+  },
+  {
+    "file": "preview-768.png",
+    "url": "http://127.0.0.1:8009/admin/products",
+    "viewport": {
+      "width": 768,
+      "height": 1000
+    },
+    "capturedAt": "2026-10-30T17:22:12.543Z",
+    "source": "feat/an-product-sales-lifecycle, uncommitted Admin UI diff"
+  },
+  {
+    "file": "listing-375.png",
+    "url": "http://127.0.0.1:8009/admin/products",
+    "viewport": {
+      "width": 375,
+      "height": 1000
+    },
+    "capturedAt": "2026-10-30T17:22:13.591Z",
+    "source": "feat/an-product-sales-lifecycle, uncommitted Admin UI diff"
+  },
+  {
+    "file": "actions-375.png",
+    "url": "http://127.0.0.1:8009/admin/products",
+    "viewport": {
+      "width": 375,
+      "height": 1000
+    },
+    "capturedAt": "2026-10-30T17:22:14.027Z",
+    "source": "feat/an-product-sales-lifecycle, uncommitted Admin UI diff"
+  },
+  {
+    "file": "preview-375.png",
+    "url": "http://127.0.0.1:8009/admin/products",
+    "viewport": {
+      "width": 375,
+      "height": 1000
+    },
+    "capturedAt": "2026-10-30T17:22:15.210Z",
+    "source": "feat/an-product-sales-lifecycle, uncommitted Admin UI diff"
+  },
+  {
+    "file": "reason-keyboard.png",
+    "url": "http://127.0.0.1:8009/admin/products",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "capturedAt": "2026-10-30T17:22:17.544Z",
+    "source": "feat/an-product-sales-lifecycle, uncommitted Admin UI diff"
+  },
+  {
+    "file": "search-code.png",
+    "url": "http://127.0.0.1:8009/admin/products?q=sp001&category_id=&sale_state=&sort=newest",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "capturedAt": "2026-10-30T17:22:18.913Z",
+    "source": "feat/an-product-sales-lifecycle, uncommitted Admin UI diff"
+  },
+  {
+    "file": "combined-filters.png",
+    "url": "http://127.0.0.1:8009/admin/products?q=hoa&category_id=9945b52e26670310bd5cc90c&sale_state=selling&sort=price-asc",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "capturedAt": "2026-10-30T17:22:30.233Z",
+    "source": "feat/an-product-sales-lifecycle, uncommitted Admin UI diff"
+  },
+  {
+    "file": "empty-stopped.png",
+    "url": "http://127.0.0.1:8009/admin/products?q=&category_id=&sale_state=stopped&sort=newest",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "capturedAt": "2026-10-30T17:22:33.538Z",
+    "source": "feat/an-product-sales-lifecycle, uncommitted Admin UI diff"
+  },
+  {
+    "file": "empty-mobile.png",
+    "url": "http://127.0.0.1:8009/admin/products?q=&category_id=&sale_state=stopped&sort=newest",
+    "viewport": {
+      "width": 375,
+      "height": 1000
+    },
+    "capturedAt": "2026-10-30T17:22:33.970Z",
+    "source": "feat/an-product-sales-lifecycle, uncommitted Admin UI diff"
+  }
+]

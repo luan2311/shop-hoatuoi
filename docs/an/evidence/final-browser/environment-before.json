@@ -1,0 +1,42 @@
+{
+    "ping": [
+        {
+            "ok": 1
+        }
+    ],
+    "products": 22,
+    "categories": [
+        {
+            "code": "LH001",
+            "name": "Bó Hoa Tươi",
+            "slug": "bo-hoa-tuoi"
+        },
+        {
+            "code": "LH002",
+            "name": "Kệ Chúc Mừng",
+            "slug": "ke-chuc-mung"
+        },
+        {
+            "code": "LH003",
+            "name": "Giỏ Hoa Chúc Mừng",
+            "slug": "gio-hoa-chuc-mung"
+        },
+        {
+            "code": "LH004",
+            "name": "Hoa Cưới",
+            "slug": "hoa-cuoi"
+        },
+        {
+            "code": "LH005",
+            "name": "Hoa Sáp",
+            "slug": "hoa-sap"
+        }
+    ],
+    "users": 2,
+    "roles": [
+        "Admin",
+        "User"
+    ],
+    "fixtures": [],
+    "catalog_hash": "6c974b8f2191b6eded634d28950bb3bbdfc6748901b140ba07eb6978d7e9d64b"
+}

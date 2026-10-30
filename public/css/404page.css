@@ -1,0 +1,55 @@
+﻿.a-center {
+    text-align: center
+}
+
+.layout-404 img {
+    max-width: 100%;
+    margin-top: -40px
+}
+
+.layout-404 h1 {
+    margin: 20px 0 10px 0;
+    font-size: 2rem;
+    font-weight: bold
+}
+
+.btn-home {
+    display: inline-block;
+    height: 40px;
+    line-height: 39px;
+    padding: 0 20px;
+    text-align: center;
+    white-space: nowrap;
+    outline: none !important;
+    cursor: pointer;
+    border: none;
+    font-weight: 400;
+    border-radius: 0;
+    letter-spacing: 0;
+    box-shadow: none !important;
+    color: #fff;
+    background-color: #537453;
+    border: 1px solid #537453;
+    background: #537453;
+    border-radius: 4px;
+    text-transform: uppercase
+}
+
+    .btn-home:hover {
+        border-color: #ea8725;
+        background: #ea8725;
+        color: #fff
+    }
+
+    .btn-home.btn[disabled] {
+        margin-top: 5px;
+        opacity: 0.6
+    }
+
+.padding-top-15 {
+    padding-top: 15px
+}
+
+.margin-bottom-40 {
+    margin-bottom: 40px
+}

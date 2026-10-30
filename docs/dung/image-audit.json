@@ -1,0 +1,1535 @@
+{
+    "files": [
+        {
+            "path": "products/kt2a5767-1748932933010.jpg",
+            "codes": [
+                "PVN297"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/kt2a5725-1748932784453.jpg",
+            "codes": [
+                "PVN295"
+            ],
+            "role": "illustration",
+            "runtime_state": "present",
+            "provenance": {
+                "author": "PattayaPatrol",
+                "verified_product_codes": [],
+                "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_url": "https://commons.wikimedia.org/wiki/File:DFC_0794_Bright_bouquet_of_pink_roses_and_a_cheerful_sunflower_arranged_with_greenery_on_a_golden_surface.jpg",
+                "attribution": "PattayaPatrol, Wikimedia Commons, CC BY-SA 4.0; resized and marked as an illustration.",
+                "role": "illustration",
+                "license": "CC-BY-SA-4.0",
+                "expected_codes": [
+                    "PVN295"
+                ],
+                "sha256": "d8ea6797edad95cf67b67ee815a97cc7a08cf2994a87920d610c24d7a258aff2",
+                "asset_sha256": "d8ea6797edad95cf67b67ee815a97cc7a08cf2994a87920d610c24d7a258aff2"
+            },
+            "asset": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 74099,
+                "sha256": "d8ea6797edad95cf67b67ee815a97cc7a08cf2994a87920d610c24d7a258aff2"
+            },
+            "image": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 74099,
+                "sha256": "d8ea6797edad95cf67b67ee815a97cc7a08cf2994a87920d610c24d7a258aff2"
+            }
+        },
+        {
+            "path": "products/kt2a5763-1748932797773.jpg",
+            "codes": [
+                "PVN296"
+            ],
+            "role": "illustration",
+            "runtime_state": "present",
+            "provenance": {
+                "author": "Ninix8",
+                "verified_product_codes": [],
+                "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Bouquet_of_Red_Roses.jpg",
+                "attribution": "Ninix8, Wikimedia Commons, CC BY 4.0; resized and marked as an illustration.",
+                "role": "illustration",
+                "license": "CC-BY-4.0",
+                "expected_codes": [
+                    "PVN296"
+                ],
+                "sha256": "367f99f67a45e8dada06ba61cd0cdb01f489b19e9027459e253af43acdfd1b87",
+                "asset_sha256": "367f99f67a45e8dada06ba61cd0cdb01f489b19e9027459e253af43acdfd1b87"
+            },
+            "asset": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 97344,
+                "sha256": "367f99f67a45e8dada06ba61cd0cdb01f489b19e9027459e253af43acdfd1b87"
+            },
+            "image": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 97344,
+                "sha256": "367f99f67a45e8dada06ba61cd0cdb01f489b19e9027459e253af43acdfd1b87"
+            }
+        },
+        {
+            "path": "products/gochoaxinh-com-564-1747907308008.jpg",
+            "codes": [
+                "PVN294"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/gochoaxinh-com-290-1747907186021.jpg",
+            "codes": [
+                "PVN293"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/gochoaxinh-com-064-1747906819351.jpg",
+            "codes": [
+                "PVN292"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/z6627827948270-77c577f191bca0887273fd45355e5fd5-1747906523997.jpg",
+            "codes": [
+                "PVN291"
+            ],
+            "role": "illustration",
+            "runtime_state": "present",
+            "provenance": {
+                "author": "Missvain (Sarah Stierch)",
+                "verified_product_codes": [],
+                "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Birthday_flower_bouquet_-_2021-08-26_-_Sarah_Stierch.jpg",
+                "attribution": "Sarah Stierch (Missvain), Wikimedia Commons, CC BY 4.0; resized and marked as an illustration.",
+                "role": "illustration",
+                "license": "CC-BY-4.0",
+                "expected_codes": [
+                    "PVN291"
+                ],
+                "sha256": "eb2b54a18a013f0e541c0affbcf91d87a7505642d611438de1122b4043e341b4",
+                "asset_sha256": "eb2b54a18a013f0e541c0affbcf91d87a7505642d611438de1122b4043e341b4"
+            },
+            "asset": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 127183,
+                "sha256": "eb2b54a18a013f0e541c0affbcf91d87a7505642d611438de1122b4043e341b4"
+            },
+            "image": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 127183,
+                "sha256": "eb2b54a18a013f0e541c0affbcf91d87a7505642d611438de1122b4043e341b4"
+            }
+        },
+        {
+            "path": "products/dsc05510-1747888898698.jpg",
+            "codes": [
+                "PVN290"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/dsc06024-1747888666528.jpg",
+            "codes": [
+                "PVN289"
+            ],
+            "role": "illustration",
+            "runtime_state": "present",
+            "provenance": {
+                "author": "WikipediaNeko",
+                "verified_product_codes": [],
+                "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Picture_of_a_Peony.jpg",
+                "attribution": "WikipediaNeko, Wikimedia Commons, CC BY-SA 4.0; resized and marked as an illustration.",
+                "role": "illustration",
+                "license": "CC-BY-SA-4.0",
+                "expected_codes": [
+                    "PVN289"
+                ],
+                "sha256": "41bb77d59f1e0e9048decae05ef5e01af36eaae0034038850c6d7871d7f7f0ac",
+                "asset_sha256": "41bb77d59f1e0e9048decae05ef5e01af36eaae0034038850c6d7871d7f7f0ac"
+            },
+            "asset": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 58137,
+                "sha256": "41bb77d59f1e0e9048decae05ef5e01af36eaae0034038850c6d7871d7f7f0ac"
+            },
+            "image": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 58137,
+                "sha256": "41bb77d59f1e0e9048decae05ef5e01af36eaae0034038850c6d7871d7f7f0ac"
+            }
+        },
+        {
+            "path": "products/intagram11.jpg",
+            "codes": [
+                "H7182",
+                "PVN283"
+            ],
+            "role": "illustration",
+            "runtime_state": "present",
+            "provenance": {
+                "author": "Salicyna",
+                "verified_product_codes": [],
+                "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Tulipa_2019-02-09_5461.jpg",
+                "attribution": "Salicyna, Wikimedia Commons, CC BY-SA 4.0; resized and marked as an illustration.",
+                "role": "illustration",
+                "license": "CC-BY-SA-4.0",
+                "expected_codes": [
+                    "H7182",
+                    "PVN283"
+                ],
+                "sha256": "c2bcd4fe4c4de19db1c8862dbf50fea0210130b0ddd1e61a7e879a9a2559bbd3",
+                "asset_sha256": "c2bcd4fe4c4de19db1c8862dbf50fea0210130b0ddd1e61a7e879a9a2559bbd3"
+            },
+            "asset": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 59888,
+                "sha256": "c2bcd4fe4c4de19db1c8862dbf50fea0210130b0ddd1e61a7e879a9a2559bbd3"
+            },
+            "image": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 59888,
+                "sha256": "c2bcd4fe4c4de19db1c8862dbf50fea0210130b0ddd1e61a7e879a9a2559bbd3"
+            }
+        },
+        {
+            "path": "products/fb1-1747886608385.jpg",
+            "codes": [
+                "PVN284"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/dsc06013-1747886590835.jpg",
+            "codes": [
+                "PVN281"
+            ],
+            "role": "illustration",
+            "runtime_state": "present",
+            "provenance": {
+                "author": "Astari28",
+                "verified_product_codes": [],
+                "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Buket_bunga_mawar_pink_1.jpg",
+                "attribution": "Astari28, Wikimedia Commons, CC BY 4.0; resized and marked as an illustration.",
+                "role": "illustration",
+                "license": "CC-BY-4.0",
+                "expected_codes": [
+                    "PVN281"
+                ],
+                "sha256": "43a7b5d84c75b15b8977b756f5fbcc0915be806cd06981950a296bbb7dd838d4",
+                "asset_sha256": "43a7b5d84c75b15b8977b756f5fbcc0915be806cd06981950a296bbb7dd838d4"
+            },
+            "asset": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 85771,
+                "sha256": "43a7b5d84c75b15b8977b756f5fbcc0915be806cd06981950a296bbb7dd838d4"
+            },
+            "image": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 85771,
+                "sha256": "43a7b5d84c75b15b8977b756f5fbcc0915be806cd06981950a296bbb7dd838d4"
+            }
+        },
+        {
+            "path": "products/dsc06003-1747886582937.jpg",
+            "codes": [
+                "PVN280"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/dsc05950-1747886536759.jpg",
+            "codes": [
+                "PVN276",
+                "PVN244"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/9f919d1b-c620-44eb-8a81-9ede8e0ece25-d158250d-fb63-4621-9dfa-3f935779ad36.jpg",
+            "codes": [
+                "H63"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/1800-2-1722653563019.jpg",
+            "codes": [
+                "H53"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/1800-1722653849972.jpg",
+            "codes": [
+                "H49"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/2000-4-1722653843954.jpg",
+            "codes": [
+                "H45"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/ea3d5ac32f1f48929e21de1702ffe5-jpeg-1722654141569.jpg",
+            "codes": [
+                "H194"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/74f67376-3ef8-4846-8b7d-6645cede93cc-bce2fad8-7ad4-4d5e-b3a5-77b5e409b459.jpg",
+            "codes": [
+                "PVN209",
+                "H129"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/kt2a5650-1747887004846.jpg",
+            "codes": [
+                "PVN285"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/74286e4d90904bac802010454bc6aa-1722654044948.jpg",
+            "codes": [
+                "H130"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/0545951168fa4ff79b779abbc65e74-jpeg-1722654059820.jpg",
+            "codes": [
+                "H143"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/318c355a-9602-499d-8a1d-df5ca6b419e2-6c459fe6-7e15-45ad-ba7b-feaa00621f1f.jpg",
+            "codes": [
+                "PVN207",
+                "H86"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/41fb9b0c-94c4-448b-9934-0550c78e818a-c0598f5b-22f8-4316-8da5-9243db90f0ea.jpg",
+            "codes": [
+                "PVN188"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/66268d10bd3748599235ea425d9059-1722653592009.jpg",
+            "codes": [
+                "H71",
+                "H101"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/1100-1722653577560.jpg",
+            "codes": [
+                "H61",
+                "H58"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/1800-5-1722653851361.jpg",
+            "codes": [
+                "H50"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/dsc05924-1747883847164.jpg",
+            "codes": [
+                "PVN275"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/d81ff475-f43e-4410-8d94-67dfa42eed26.jpg",
+            "codes": [
+                "H246"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/bbd87433-2175-413f-bc06-9f9f0d69a1f4-0769bbe2-5681-4978-af04-54803a4cb567.jpg",
+            "codes": [
+                "PVN222"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/506fec83-7c0c-4c95-934c-380b7c3fe0ff-25ffd02a-9702-46a4-9df9-8539b0fb8268.jpg",
+            "codes": [
+                "PVN205"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/17e29066-6ba1-46c8-aa2f-7d8902971f88-cb06fb46-a261-46c7-b5e5-fba5f3f90535.jpg",
+            "codes": [
+                "PVN203"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/93b2da08-4c24-4af1-80b2-1469b8fbebad-2988918b-9fb3-4d7e-82e4-1ac979d8db6c.jpg",
+            "codes": [
+                "PVN196"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/5844d8a8-b333-4d61-a857-4d57b922292b-614db907-6248-40c8-89d4-d63d64d35dfe.jpg",
+            "codes": [
+                "PVN184"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/z5674686162213-eb1ab140741362a141e2c291f9c7fbe0-1722653232530-adc6ea3d-94cb-4223-b008-6f1392d5936e.jpg",
+            "codes": [
+                "H01"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/b6d8c5f2-6953-461c-9586-e4620db6920a-357cc108-cd54-4cdb-93e3-4fa5f9e9ded2.jpg",
+            "codes": [
+                "H03"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/5f956891d7cc47ad8b55520889bf75-1722653587944.jpg",
+            "codes": [
+                "H67"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/2d18e2cd34754ef9a0c4ac9a85b02e-1722653677419.jpg",
+            "codes": [
+                "H94"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/85b4538030374625842be6d944fb91-jpeg-1722654065530.jpg",
+            "codes": [
+                "H148"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/075264983fc24d8a83908f79bda4a8-jpeg-1722654096584.jpg",
+            "codes": [
+                "H155"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/1b8594947c8b4fec91d72681aa350a-jpeg-1722654110593.jpg",
+            "codes": [
+                "H167"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/dsc05989-1747886576924.jpg",
+            "codes": [
+                "PVN279"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/0f4259b7-0ca8-4281-9dde-4fc2d0d9021a-df3108d7-dac6-44ad-a854-34b0815bd0be.jpg",
+            "codes": [
+                "PVN210"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/60051864-4b91-41b3-a4f5-bfcc4336e869-172a385b-3c75-40cf-82cf-ae00160bb6c8.jpg",
+            "codes": [
+                "PVN201"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/f22755b7-3dc1-4675-8628-08e077ea524b-db327258-936b-487a-9dbe-781257cb5208.jpg",
+            "codes": [
+                "PVN200"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/a51d8e91-e013-4774-b9f4-660b4f098e78-30dae6c3-08ea-4df3-a893-76140e0bafde.jpg",
+            "codes": [
+                "PVN199"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/65f6c2a120134df2ace75655b6a4b7-1722653591040.jpg",
+            "codes": [
+                "H70"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/906f51f663204f91b3e9eb49162489-1722653593495.jpg",
+            "codes": [
+                "H72"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/9eeedfe0-f320-4ade-b798-d6f8a6420cf3-87094deb-18d5-4900-a1b2-4c3a1cdfc4b5.jpg",
+            "codes": [
+                "H78"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/433091b3480b44fe9a14366dd4c80f-1722653618377.jpg",
+            "codes": [
+                "H81"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/4ddb74ef20284b879bf639141e7bfe-1722653682470.jpg",
+            "codes": [
+                "H98"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/43c6ef7068f2467e9cc74c2dcb2eb8-1722653683116.jpg",
+            "codes": [
+                "H99"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/344e46dadb8545d5963bf538886c36-1722653684094.jpg",
+            "codes": [
+                "H100"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/db26e8f53bfa400eb65f55de9e5095-1722654026836.jpg",
+            "codes": [
+                "H110"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/74ecbbb888e0459e8e2551098b6ffb-1722654027924.jpg",
+            "codes": [
+                "H111"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/930b0ba7ba0e4314bad0ad58c624c0-1722654030131.jpg",
+            "codes": [
+                "H114"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/18daf2561f4e4786a69b02ea7acf90-1722654032459.jpg",
+            "codes": [
+                "H116"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/182c9b79-e156-4073-bea2-8d7e33be6e0b.jpg",
+            "codes": [
+                "H229"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/910bfaa5-64d4-4545-b039-dcafda3a3bde.jpg",
+            "codes": [
+                "H228"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/7d977015-f660-468e-aa92-6d1e55b2b6f6-8b98c7f4-cb5d-41a7-a080-a33a20c779d2.jpg",
+            "codes": [
+                "PVN227"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/baa89f99-77ee-4e14-93f3-b44c8ce4e239.jpg",
+            "codes": [
+                "H225"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/d08a4678-d17f-4282-b3ec-d49a89df7a6b-815ce74d-dafe-47f3-acdf-bcc347d4a3b8.jpg",
+            "codes": [
+                "PVN226"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/7fd0929e-bf94-41a9-bb82-650c9b33ba9f-acb9e454-4c9d-4829-a72d-0a9dbf6cd728.jpg",
+            "codes": [
+                "PVN217"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/a14f549b-3383-4cf2-b11d-9494f8a78588-e2279fa4-2996-4b49-a40d-9b81a5bfe86e.jpg",
+            "codes": [
+                "PVN215"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/2e19fd6b-d03c-4f86-b590-e50cd6999bce-75c718d3-cd05-476b-a135-ca73ac3c8167.jpg",
+            "codes": [
+                "PVN214"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/f57d07a4-2646-414a-803d-b156974e2603-97f4024c-bd67-491f-8a1e-e6207a9e2b30.jpg",
+            "codes": [
+                "PVN213"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/4fbabb86-9ff3-4abf-9671-3a9c449928dc-994fab37-c370-4307-bc0c-7d8deb42ca37.jpg",
+            "codes": [
+                "PVN212"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/f905f2b0-e982-4ad8-b463-392acda6ac1b-997fe73e-8e0e-4463-80ea-4c840a4c688f.jpg",
+            "codes": [
+                "H105"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/a8eeb848-6697-4162-a6e8-d3d8e3222338-d93f4830-a55b-4878-ba5b-8ee192a138ef.jpg",
+            "codes": [
+                "H106"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/ff575cda-55bd-4183-96dc-b896b7b763d8-57150620-e2b1-41ef-8e3b-535e0d85a80f.jpg",
+            "codes": [
+                "H119"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/41de3033-7340-4b5d-9bc7-347f9534fabb-e5821c08-239e-4277-ba39-1761943d284f.jpg",
+            "codes": [
+                "H142"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/e55e643a-4900-4b4c-bbbd-f66406162f32-e2865c77-224d-42fc-a4bf-eb3795c6a163.jpg",
+            "codes": [
+                "H169"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "products/0cca8e59-9a9c-4ab2-84ac-d6eb6e70e9a9-0b68cd02-0a34-4152-9b30-271bc2383a04.jpg",
+            "codes": [
+                "H170"
+            ],
+            "role": "missing",
+            "runtime_state": "missing",
+            "provenance": null,
+            "asset": {
+                "exists": false,
+                "valid": false
+            },
+            "image": {
+                "exists": false,
+                "valid": false
+            }
+        },
+        {
+            "path": "posts/z5968847074391-636bbcd57cd0cb2bdd1b62cb7039fec1.jpg",
+            "codes": [
+                "TT001"
+            ],
+            "role": "illustration",
+            "runtime_state": "present",
+            "provenance": {
+                "role": "illustration",
+                "author": "Missvain (Sarah Stierch)",
+                "license": "CC-BY-4.0",
+                "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Birthday_flower_bouquet_-_2021-08-26_-_Sarah_Stierch.jpg",
+                "attribution": "Sarah Stierch (Missvain), Wikimedia Commons, CC BY 4.0; resized and marked as an illustration. Reused unmodified as article thumbnail illustration.",
+                "verified_product_codes": [],
+                "expected_codes": [
+                    "TT001"
+                ],
+                "asset_sha256": "eb2b54a18a013f0e541c0affbcf91d87a7505642d611438de1122b4043e341b4",
+                "sha256": "eb2b54a18a013f0e541c0affbcf91d87a7505642d611438de1122b4043e341b4"
+            },
+            "asset": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 127183,
+                "sha256": "eb2b54a18a013f0e541c0affbcf91d87a7505642d611438de1122b4043e341b4"
+            },
+            "image": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 127183,
+                "sha256": "eb2b54a18a013f0e541c0affbcf91d87a7505642d611438de1122b4043e341b4"
+            }
+        },
+        {
+            "path": "posts/z5969155691986-ffc7f601f2164a817f993e795c4d78b3.jpg",
+            "codes": [
+                "TT002"
+            ],
+            "role": "illustration",
+            "runtime_state": "present",
+            "provenance": {
+                "role": "illustration",
+                "author": "Ninix8",
+                "license": "CC-BY-4.0",
+                "license_url": "https://creativecommons.org/licenses/by/4.0/",
+                "source_url": "https://commons.wikimedia.org/wiki/File:Bouquet_of_Red_Roses.jpg",
+                "attribution": "Ninix8, Wikimedia Commons, CC BY 4.0; resized and marked as an illustration. Reused unmodified as article thumbnail illustration.",
+                "verified_product_codes": [],
+                "expected_codes": [
+                    "TT002"
+                ],
+                "asset_sha256": "367f99f67a45e8dada06ba61cd0cdb01f489b19e9027459e253af43acdfd1b87",
+                "sha256": "367f99f67a45e8dada06ba61cd0cdb01f489b19e9027459e253af43acdfd1b87"
+            },
+            "asset": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 97344,
+                "sha256": "367f99f67a45e8dada06ba61cd0cdb01f489b19e9027459e253af43acdfd1b87"
+            },
+            "image": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 97344,
+                "sha256": "367f99f67a45e8dada06ba61cd0cdb01f489b19e9027459e253af43acdfd1b87"
+            }
+        },
+        {
+            "path": "posts/cach-bao-quan-hoa-goc-hoa-xinh.jpg",
+            "codes": [
+                "TT003"
+            ],
+            "role": "illustration",
+            "runtime_state": "present",
+            "provenance": {
+                "role": "illustration",
+                "author": "PattayaPatrol",
+                "license": "CC-BY-SA-4.0",
+                "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+                "source_url": "https://commons.wikimedia.org/wiki/File:DFC_0794_Bright_bouquet_of_pink_roses_and_a_cheerful_sunflower_arranged_with_greenery_on_a_golden_surface.jpg",
+                "attribution": "PattayaPatrol, Wikimedia Commons, CC BY-SA 4.0; resized and marked as an illustration. Reused unmodified as article thumbnail illustration.",
+                "verified_product_codes": [],
+                "expected_codes": [
+                    "TT003"
+                ],
+                "asset_sha256": "d8ea6797edad95cf67b67ee815a97cc7a08cf2994a87920d610c24d7a258aff2",
+                "sha256": "d8ea6797edad95cf67b67ee815a97cc7a08cf2994a87920d610c24d7a258aff2"
+            },
+            "asset": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 74099,
+                "sha256": "d8ea6797edad95cf67b67ee815a97cc7a08cf2994a87920d610c24d7a258aff2"
+            },
+            "image": {
+                "exists": true,
+                "valid": true,
+                "width": 800,
+                "height": 800,
+                "mime": "image/jpeg",
+                "bytes": 74099,
+                "sha256": "d8ea6797edad95cf67b67ee815a97cc7a08cf2994a87920d610c24d7a258aff2"
+            }
+        }
+    ],
+    "counts": {
+        "missing": 68,
+        "illustration": 9
+    },
+    "runtime_counts": {
+        "missing": 68,
+        "present": 9
+    }
+}

@@ -1,0 +1,549 @@
+[
+  {
+    "id": "E01",
+    "status": "PASS",
+    "detail": "12/22 products"
+  },
+  {
+    "id": "responsive-listing-1440",
+    "status": "PASS",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "overflow": false,
+    "images": [],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lọc",
+        "width": 58.359375,
+        "height": 42
+      }
+    ]
+  },
+  {
+    "id": "responsive-listing-768",
+    "status": "PASS",
+    "width": 768,
+    "scrollWidth": 768,
+    "overflow": false,
+    "images": [],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lọc",
+        "width": 58.359375,
+        "height": 42
+      }
+    ]
+  },
+  {
+    "id": "responsive-listing-375",
+    "status": "PASS",
+    "width": 375,
+    "scrollWidth": 375,
+    "overflow": false,
+    "images": [],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lọc",
+        "width": 58.359375,
+        "height": 42
+      }
+    ]
+  },
+  {
+    "id": "E02",
+    "status": "PASS",
+    "detail": "2 category products"
+  },
+  {
+    "id": "E03",
+    "status": "PASS",
+    "detail": "numeric asc/desc"
+  },
+  {
+    "id": "E04",
+    "status": "PASS",
+    "detail": "8/20 on page 2; filters retained"
+  },
+  {
+    "id": "responsive-pagination-1440",
+    "status": "PASS",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "overflow": false,
+    "images": [],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lọc",
+        "width": 58.359375,
+        "height": 42
+      }
+    ]
+  },
+  {
+    "id": "responsive-pagination-768",
+    "status": "PASS",
+    "width": 768,
+    "scrollWidth": 768,
+    "overflow": false,
+    "images": [],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lọc",
+        "width": 58.359375,
+        "height": 42
+      }
+    ]
+  },
+  {
+    "id": "responsive-pagination-375",
+    "status": "PASS",
+    "width": 375,
+    "scrollWidth": 375,
+    "overflow": false,
+    "images": [],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lọc",
+        "width": 58.359375,
+        "height": 42
+      }
+    ]
+  },
+  {
+    "id": "E05",
+    "status": "PASS",
+    "detail": "6 AJAX suggestions, URL unchanged"
+  },
+  {
+    "id": "responsive-dropdown-1440",
+    "status": "PASS",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "overflow": false,
+    "images": [],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lọc",
+        "width": 58.359375,
+        "height": 42
+      }
+    ]
+  },
+  {
+    "id": "responsive-dropdown-768",
+    "status": "PASS",
+    "width": 768,
+    "scrollWidth": 768,
+    "overflow": false,
+    "images": [],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lọc",
+        "width": 58.359375,
+        "height": 42
+      }
+    ]
+  },
+  {
+    "id": "responsive-dropdown-375",
+    "status": "PASS",
+    "width": 375,
+    "scrollWidth": 375,
+    "overflow": false,
+    "images": [],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lọc",
+        "width": 58.359375,
+        "height": 42
+      }
+    ]
+  },
+  {
+    "id": "E06",
+    "status": "PASS",
+    "detail": "detail + 4 related"
+  },
+  {
+    "id": "E07",
+    "status": "PASS",
+    "detail": "real SQL Admin login"
+  },
+  {
+    "id": "responsive-create-1440",
+    "status": "PASS",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "overflow": false,
+    "images": [],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lưu sản phẩm",
+        "width": 131.234375,
+        "height": 40
+      }
+    ]
+  },
+  {
+    "id": "responsive-create-768",
+    "status": "PASS",
+    "width": 768,
+    "scrollWidth": 768,
+    "overflow": false,
+    "images": [],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lưu sản phẩm",
+        "width": 131.234375,
+        "height": 40
+      }
+    ]
+  },
+  {
+    "id": "responsive-create-375",
+    "status": "PASS",
+    "width": 375,
+    "scrollWidth": 375,
+    "overflow": false,
+    "images": [],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lưu sản phẩm",
+        "width": 131.234375,
+        "height": 40
+      }
+    ]
+  },
+  {
+    "id": "E08",
+    "status": "PASS",
+    "detail": "JPEG create, BSON float/int"
+  },
+  {
+    "id": "E09",
+    "status": "PASS",
+    "detail": "name/price/stock updated; image retained"
+  },
+  {
+    "id": "E10",
+    "status": "PASS",
+    "detail": "PNG replaces JPEG; old file removed"
+  },
+  {
+    "id": "responsive-edit-preview-1440",
+    "status": "PASS",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "overflow": false,
+    "images": [
+      {
+        "loaded": true,
+        "w": 128,
+        "h": 96,
+        "nw": 640,
+        "nh": 480
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lưu sản phẩm",
+        "width": 131.234375,
+        "height": 40
+      }
+    ]
+  },
+  {
+    "id": "responsive-edit-preview-768",
+    "status": "PASS",
+    "width": 768,
+    "scrollWidth": 768,
+    "overflow": false,
+    "images": [
+      {
+        "loaded": true,
+        "w": 128,
+        "h": 96,
+        "nw": 640,
+        "nh": 480
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lưu sản phẩm",
+        "width": 131.234375,
+        "height": 40
+      }
+    ]
+  },
+  {
+    "id": "responsive-edit-preview-375",
+    "status": "PASS",
+    "width": 375,
+    "scrollWidth": 375,
+    "overflow": false,
+    "images": [
+      {
+        "loaded": true,
+        "w": 128,
+        "h": 96,
+        "nw": 640,
+        "nh": 480
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lưu sản phẩm",
+        "width": 131.234375,
+        "height": 40
+      }
+    ]
+  },
+  {
+    "id": "responsive-detail-long-name-1440",
+    "status": "PASS",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "overflow": false,
+    "images": [
+      {
+        "loaded": true,
+        "w": 604,
+        "h": 453,
+        "nw": 640,
+        "nh": 480
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      }
+    ]
+  },
+  {
+    "id": "responsive-detail-long-name-768",
+    "status": "PASS",
+    "width": 768,
+    "scrollWidth": 768,
+    "overflow": false,
+    "images": [
+      {
+        "loaded": true,
+        "w": 348,
+        "h": 261,
+        "nw": 640,
+        "nh": 480
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      }
+    ]
+  },
+  {
+    "id": "responsive-detail-long-name-375",
+    "status": "PASS",
+    "width": 375,
+    "scrollWidth": 375,
+    "overflow": false,
+    "images": [
+      {
+        "loaded": true,
+        "w": 343,
+        "h": 257,
+        "nw": 640,
+        "nh": 480
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      }
+    ]
+  },
+  {
+    "id": "E14",
+    "status": "PASS",
+    "detail": "server validation displayed for invalid code"
+  },
+  {
+    "id": "responsive-validation-1440",
+    "status": "PASS",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "overflow": false,
+    "images": [
+      {
+        "loaded": true,
+        "w": 128,
+        "h": 96,
+        "nw": 640,
+        "nh": 480
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lưu sản phẩm",
+        "width": 131.234375,
+        "height": 40
+      }
+    ]
+  },
+  {
+    "id": "responsive-validation-768",
+    "status": "PASS",
+    "width": 768,
+    "scrollWidth": 768,
+    "overflow": false,
+    "images": [
+      {
+        "loaded": true,
+        "w": 128,
+        "h": 96,
+        "nw": 640,
+        "nh": 480
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lưu sản phẩm",
+        "width": 131.234375,
+        "height": 40
+      }
+    ]
+  },
+  {
+    "id": "responsive-validation-375",
+    "status": "PASS",
+    "width": 375,
+    "scrollWidth": 375,
+    "overflow": false,
+    "images": [
+      {
+        "loaded": true,
+        "w": 128,
+        "h": 96,
+        "nw": 640,
+        "nh": 480
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Tìm kiếm",
+        "width": 95.578125,
+        "height": 40
+      },
+      {
+        "text": "Lưu sản phẩm",
+        "width": 131.234375,
+        "height": 40
+      }
+    ]
+  },
+  {
+    "id": "E11",
+    "status": "PASS",
+    "detail": "fixture deleted"
+  },
+  {
+    "id": "E12",
+    "status": "PASS",
+    "detail": "22 baseline documents unchanged; storage inventory restored"
+  },
+  {
+    "id": "E13",
+    "status": "PASS",
+    "detail": "User login; index/create/edit 403 (write methods covered by PHP suite)"
+  }
+]

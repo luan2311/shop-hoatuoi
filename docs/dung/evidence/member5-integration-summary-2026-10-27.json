@@ -1,0 +1,72 @@
+{
+    "schemaVersion":  1,
+    "runType":  "selected-integration",
+    "capturedAtUtc":  "2026-10-27T05:37:57.0378824Z",
+    "branch":  "feature/testing-docs-seeder",
+    "head":  "d9239c741239ea73310ebebced8fd05e5a9b621d",
+    "command":  "scripts/test-dung-data.ps1 -Filter \u0027RegistrationTest|AuthenticationTest|ProfileTest|CartOperationsTest|OrderCheckoutTest|AdminOrderManagementTest|SalesConcurrencyTest|SalesFinalAuditTest|SalesSetupTest\u0027",
+    "target":  {
+                   "host":  "127.0.0.1:27028",
+                   "replicaSet":  "dungQA"
+               },
+    "result":  "PASS",
+    "tests":  37,
+    "assertions":  315,
+    "failures":  0,
+    "errors":  0,
+    "skipped":  0,
+    "durationSeconds":  74.169924,
+    "testClasses":  [
+                        {
+                            "class":  "Tests\\Feature\\AdminOrderManagementTest",
+                            "tests":  4,
+                            "assertions":  43
+                        },
+                        {
+                            "class":  "Tests\\Feature\\Auth\\AuthenticationTest",
+                            "tests":  4,
+                            "assertions":  12
+                        },
+                        {
+                            "class":  "Tests\\Feature\\Auth\\RegistrationTest",
+                            "tests":  2,
+                            "assertions":  6
+                        },
+                        {
+                            "class":  "Tests\\Feature\\CartOperationsTest",
+                            "tests":  4,
+                            "assertions":  62
+                        },
+                        {
+                            "class":  "Tests\\Feature\\OrderCheckoutTest",
+                            "tests":  7,
+                            "assertions":  75
+                        },
+                        {
+                            "class":  "Tests\\Feature\\ProfileTest",
+                            "tests":  5,
+                            "assertions":  26
+                        },
+                        {
+                            "class":  "Tests\\Feature\\SalesConcurrencyTest",
+                            "tests":  5,
+                            "assertions":  31
+                        },
+                        {
+                            "class":  "Tests\\Feature\\SalesFinalAuditTest",
+                            "tests":  5,
+                            "assertions":  51
+                        },
+                        {
+                            "class":  "Tests\\Feature\\SalesSetupTest",
+                            "tests":  1,
+                            "assertions":  9
+                        }
+                    ],
+    "qaDatabases":  {
+                        "before":  675,
+                        "after":  712,
+                        "createdByThisRun":  37,
+                        "cleanupPerformed":  false
+                    }
+}

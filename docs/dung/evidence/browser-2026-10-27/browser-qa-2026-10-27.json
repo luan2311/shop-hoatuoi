@@ -1,0 +1,1148 @@
+{
+  "result": "FAIL",
+  "tested_at": "2026-10-26T18:19:09.232Z",
+  "browser": "Chrome headless via Chrome DevTools Protocol",
+  "base_url": "http://127.0.0.1:28127",
+  "database_scope": "Isolated loopback QA database; generated credentials and checkout contact details are not included.",
+  "interactions": {
+    "guest_register": "PASS",
+    "add_seeded_product_with_csrf": {
+      "status": 200,
+      "url": "/cart"
+    },
+    "checkout_form_to_success": "PASS",
+    "seeded_product_code": "PVN297",
+    "quantity": 2
+  },
+  "screenshots": [
+    "browser-qa.json",
+    "cart-1366x768.png",
+    "cart-390x844.png",
+    "checkout-1366x768.png",
+    "checkout-390x844.png",
+    "home-1366x768.png",
+    "home-390x844.png",
+    "login-1366x768.png",
+    "login-390x844.png",
+    "register-1366x768.png",
+    "register-390x844.png",
+    "success-1366x768.png",
+    "success-375x812.png",
+    "success-390x844.png"
+  ],
+  "viewport_page_checks": [
+    {
+      "page": "home",
+      "name": "1366x768",
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "evidence": true,
+      "path": "/",
+      "title": "Laravel",
+      "viewport": {
+        "width": 1366,
+        "height": 768,
+        "screenWidth": 1366,
+        "screenHeight": 768,
+        "visualWidth": 1366
+      },
+      "documentWidth": 1366,
+      "bodyWidth": 1366,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [],
+      "navigationLinks": 2,
+      "images": [],
+      "textLength": 212
+    },
+    {
+      "page": "login",
+      "name": "1366x768",
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "evidence": true,
+      "path": "/login",
+      "title": "Laravel",
+      "viewport": {
+        "width": 1366,
+        "height": 768,
+        "screenWidth": 1366,
+        "screenHeight": 768,
+        "visualWidth": 1366
+      },
+      "documentWidth": 1366,
+      "bodyWidth": 1366,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [
+        {
+          "action": "/login",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "email",
+            "password",
+            "remember"
+          ]
+        }
+      ],
+      "navigationLinks": 0,
+      "images": [],
+      "textLength": 55
+    },
+    {
+      "page": "register",
+      "name": "1366x768",
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "evidence": true,
+      "path": "/register",
+      "title": "Laravel",
+      "viewport": {
+        "width": 1366,
+        "height": 768,
+        "screenWidth": 1366,
+        "screenHeight": 768,
+        "visualWidth": 1366
+      },
+      "documentWidth": 1366,
+      "bodyWidth": 1366,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [
+        {
+          "action": "/register",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "name",
+            "email",
+            "password",
+            "password_confirmation"
+          ]
+        }
+      ],
+      "navigationLinks": 0,
+      "images": [],
+      "textLength": 65
+    },
+    {
+      "page": "home",
+      "name": "1280x720",
+      "width": 1280,
+      "height": 720,
+      "mobile": false,
+      "evidence": false,
+      "path": "/",
+      "title": "Laravel",
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "screenWidth": 1280,
+        "screenHeight": 720,
+        "visualWidth": 1280
+      },
+      "documentWidth": 1280,
+      "bodyWidth": 1280,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [],
+      "navigationLinks": 2,
+      "images": [],
+      "textLength": 212
+    },
+    {
+      "page": "login",
+      "name": "1280x720",
+      "width": 1280,
+      "height": 720,
+      "mobile": false,
+      "evidence": false,
+      "path": "/login",
+      "title": "Laravel",
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "screenWidth": 1280,
+        "screenHeight": 720,
+        "visualWidth": 1280
+      },
+      "documentWidth": 1280,
+      "bodyWidth": 1280,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [
+        {
+          "action": "/login",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "email",
+            "password",
+            "remember"
+          ]
+        }
+      ],
+      "navigationLinks": 0,
+      "images": [],
+      "textLength": 55
+    },
+    {
+      "page": "register",
+      "name": "1280x720",
+      "width": 1280,
+      "height": 720,
+      "mobile": false,
+      "evidence": false,
+      "path": "/register",
+      "title": "Laravel",
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "screenWidth": 1280,
+        "screenHeight": 720,
+        "visualWidth": 1280
+      },
+      "documentWidth": 1280,
+      "bodyWidth": 1280,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [
+        {
+          "action": "/register",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "name",
+            "email",
+            "password",
+            "password_confirmation"
+          ]
+        }
+      ],
+      "navigationLinks": 0,
+      "images": [],
+      "textLength": 65
+    },
+    {
+      "page": "home",
+      "name": "390x844",
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "evidence": true,
+      "path": "/",
+      "title": "Laravel",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "screenWidth": 390,
+        "screenHeight": 844,
+        "visualWidth": 390
+      },
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [],
+      "navigationLinks": 2,
+      "images": [],
+      "textLength": 212
+    },
+    {
+      "page": "login",
+      "name": "390x844",
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "evidence": true,
+      "path": "/login",
+      "title": "Laravel",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "screenWidth": 390,
+        "screenHeight": 844,
+        "visualWidth": 390
+      },
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [
+        {
+          "action": "/login",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "email",
+            "password",
+            "remember"
+          ]
+        }
+      ],
+      "navigationLinks": 0,
+      "images": [],
+      "textLength": 55
+    },
+    {
+      "page": "register",
+      "name": "390x844",
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "evidence": true,
+      "path": "/register",
+      "title": "Laravel",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "screenWidth": 390,
+        "screenHeight": 844,
+        "visualWidth": 390
+      },
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [
+        {
+          "action": "/register",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "name",
+            "email",
+            "password",
+            "password_confirmation"
+          ]
+        }
+      ],
+      "navigationLinks": 0,
+      "images": [],
+      "textLength": 65
+    },
+    {
+      "page": "home",
+      "name": "375x812",
+      "width": 375,
+      "height": 812,
+      "mobile": true,
+      "evidence": false,
+      "path": "/",
+      "title": "Laravel",
+      "viewport": {
+        "width": 375,
+        "height": 812,
+        "screenWidth": 375,
+        "screenHeight": 812,
+        "visualWidth": 375
+      },
+      "documentWidth": 375,
+      "bodyWidth": 375,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [],
+      "navigationLinks": 2,
+      "images": [],
+      "textLength": 212
+    },
+    {
+      "page": "login",
+      "name": "375x812",
+      "width": 375,
+      "height": 812,
+      "mobile": true,
+      "evidence": false,
+      "path": "/login",
+      "title": "Laravel",
+      "viewport": {
+        "width": 375,
+        "height": 812,
+        "screenWidth": 375,
+        "screenHeight": 812,
+        "visualWidth": 375
+      },
+      "documentWidth": 375,
+      "bodyWidth": 375,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [
+        {
+          "action": "/login",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "email",
+            "password",
+            "remember"
+          ]
+        }
+      ],
+      "navigationLinks": 0,
+      "images": [],
+      "textLength": 55
+    },
+    {
+      "page": "register",
+      "name": "375x812",
+      "width": 375,
+      "height": 812,
+      "mobile": true,
+      "evidence": false,
+      "path": "/register",
+      "title": "Laravel",
+      "viewport": {
+        "width": 375,
+        "height": 812,
+        "screenWidth": 375,
+        "screenHeight": 812,
+        "visualWidth": 375
+      },
+      "documentWidth": 375,
+      "bodyWidth": 375,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [
+        {
+          "action": "/register",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "name",
+            "email",
+            "password",
+            "password_confirmation"
+          ]
+        }
+      ],
+      "navigationLinks": 0,
+      "images": [],
+      "textLength": 65
+    },
+    {
+      "page": "cart",
+      "name": "1366x768",
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "evidence": true,
+      "path": "/cart",
+      "title": "Laravel",
+      "viewport": {
+        "width": 1366,
+        "height": 768,
+        "screenWidth": 1366,
+        "screenHeight": 768,
+        "visualWidth": 1366
+      },
+      "documentWidth": 1366,
+      "bodyWidth": 1366,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/cart/items/PVN297",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "_method",
+            "quantity"
+          ]
+        },
+        {
+          "action": "/cart/items/PVN297",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "_method"
+          ]
+        },
+        {
+          "action": "/cart",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "_method"
+          ]
+        }
+      ],
+      "navigationLinks": 9,
+      "images": [
+        {
+          "alt": "",
+          "loaded": true
+        }
+      ],
+      "textLength": 292
+    },
+    {
+      "page": "cart",
+      "name": "1280x720",
+      "width": 1280,
+      "height": 720,
+      "mobile": false,
+      "evidence": false,
+      "path": "/cart",
+      "title": "Laravel",
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "screenWidth": 1280,
+        "screenHeight": 720,
+        "visualWidth": 1280
+      },
+      "documentWidth": 1280,
+      "bodyWidth": 1280,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/cart/items/PVN297",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "_method",
+            "quantity"
+          ]
+        },
+        {
+          "action": "/cart/items/PVN297",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "_method"
+          ]
+        },
+        {
+          "action": "/cart",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "_method"
+          ]
+        }
+      ],
+      "navigationLinks": 9,
+      "images": [
+        {
+          "alt": "",
+          "loaded": true
+        }
+      ],
+      "textLength": 292
+    },
+    {
+      "page": "cart",
+      "name": "390x844",
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "evidence": true,
+      "path": "/cart",
+      "title": "Laravel",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "screenWidth": 390,
+        "screenHeight": 844,
+        "visualWidth": 390
+      },
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "horizontalOverflow": false,
+      "overflowingText": [
+        {
+          "tag": "td",
+          "text": "Số lượng PVN297\n−\n+\nCập nhật"
+        },
+        {
+          "tag": "td",
+          "text": "1.300.000 đ"
+        },
+        {
+          "tag": "td",
+          "text": "Xóa"
+        }
+      ],
+      "forms": [
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/cart/items/PVN297",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "_method",
+            "quantity"
+          ]
+        },
+        {
+          "action": "/cart/items/PVN297",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "_method"
+          ]
+        },
+        {
+          "action": "/cart",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "_method"
+          ]
+        }
+      ],
+      "navigationLinks": 9,
+      "images": [
+        {
+          "alt": "",
+          "loaded": true
+        }
+      ],
+      "textLength": 265
+    },
+    {
+      "page": "cart",
+      "name": "375x812",
+      "width": 375,
+      "height": 812,
+      "mobile": true,
+      "evidence": false,
+      "path": "/cart",
+      "title": "Laravel",
+      "viewport": {
+        "width": 375,
+        "height": 812,
+        "screenWidth": 375,
+        "screenHeight": 812,
+        "visualWidth": 375
+      },
+      "documentWidth": 375,
+      "bodyWidth": 375,
+      "horizontalOverflow": false,
+      "overflowingText": [
+        {
+          "tag": "td",
+          "text": "650.000 đ"
+        },
+        {
+          "tag": "td",
+          "text": "Số lượng PVN297\n−\n+\nCập nhật"
+        },
+        {
+          "tag": "td",
+          "text": "1.300.000 đ"
+        },
+        {
+          "tag": "td",
+          "text": "Xóa"
+        }
+      ],
+      "forms": [
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/cart/items/PVN297",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "_method",
+            "quantity"
+          ]
+        },
+        {
+          "action": "/cart/items/PVN297",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "_method"
+          ]
+        },
+        {
+          "action": "/cart",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "_method"
+          ]
+        }
+      ],
+      "navigationLinks": 9,
+      "images": [
+        {
+          "alt": "",
+          "loaded": true
+        }
+      ],
+      "textLength": 265
+    },
+    {
+      "page": "checkout",
+      "name": "1366x768",
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "evidence": true,
+      "path": "/checkout",
+      "title": "Laravel",
+      "viewport": {
+        "width": 1366,
+        "height": 768,
+        "screenWidth": 1366,
+        "screenHeight": 768,
+        "visualWidth": 1351
+      },
+      "documentWidth": 1351,
+      "bodyWidth": 1351,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/checkout",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "checkout_token",
+            "receiver_name",
+            "receiver_phone",
+            "receiver_address",
+            "email",
+            "note",
+            "payment_method"
+          ]
+        }
+      ],
+      "navigationLinks": 9,
+      "images": [],
+      "textLength": 428
+    },
+    {
+      "page": "checkout",
+      "name": "1280x720",
+      "width": 1280,
+      "height": 720,
+      "mobile": false,
+      "evidence": false,
+      "path": "/checkout",
+      "title": "Laravel",
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "screenWidth": 1280,
+        "screenHeight": 720,
+        "visualWidth": 1265
+      },
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/checkout",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "checkout_token",
+            "receiver_name",
+            "receiver_phone",
+            "receiver_address",
+            "email",
+            "note",
+            "payment_method"
+          ]
+        }
+      ],
+      "navigationLinks": 9,
+      "images": [],
+      "textLength": 428
+    },
+    {
+      "page": "checkout",
+      "name": "390x844",
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "evidence": true,
+      "path": "/checkout",
+      "title": "Laravel",
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "screenWidth": 390,
+        "screenHeight": 844,
+        "visualWidth": 390
+      },
+      "documentWidth": 390,
+      "bodyWidth": 390,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/checkout",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "checkout_token",
+            "receiver_name",
+            "receiver_phone",
+            "receiver_address",
+            "email",
+            "note",
+            "payment_method"
+          ]
+        }
+      ],
+      "navigationLinks": 9,
+      "images": [],
+      "textLength": 401
+    },
+    {
+      "page": "checkout",
+      "name": "375x812",
+      "width": 375,
+      "height": 812,
+      "mobile": true,
+      "evidence": false,
+      "path": "/checkout",
+      "title": "Laravel",
+      "viewport": {
+        "width": 375,
+        "height": 812,
+        "screenWidth": 375,
+        "screenHeight": 812,
+        "visualWidth": 375
+      },
+      "documentWidth": 375,
+      "bodyWidth": 375,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/checkout",
+          "method": "POST",
+          "fields": [
+            "_token",
+            "checkout_token",
+            "receiver_name",
+            "receiver_phone",
+            "receiver_address",
+            "email",
+            "note",
+            "payment_method"
+          ]
+        }
+      ],
+      "navigationLinks": 9,
+      "images": [],
+      "textLength": 401
+    },
+    {
+      "page": "success",
+      "name": "1366x768",
+      "width": 1366,
+      "height": 768,
+      "mobile": false,
+      "evidence": true,
+      "path": "/orders/success",
+      "title": "Laravel",
+      "viewport": {
+        "width": 1366,
+        "height": 768,
+        "screenWidth": 1366,
+        "screenHeight": 768,
+        "visualWidth": 1366
+      },
+      "documentWidth": 1366,
+      "bodyWidth": 1366,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        }
+      ],
+      "navigationLinks": 9,
+      "images": [],
+      "textLength": 536
+    },
+    {
+      "page": "success",
+      "name": "1280x720",
+      "width": 1280,
+      "height": 720,
+      "mobile": false,
+      "evidence": false,
+      "path": "/orders/success",
+      "title": "Laravel",
+      "viewport": {
+        "width": 1280,
+        "height": 720,
+        "screenWidth": 1280,
+        "screenHeight": 720,
+        "visualWidth": 1265
+      },
+      "documentWidth": 1265,
+      "bodyWidth": 1265,
+      "horizontalOverflow": false,
+      "overflowingText": [],
+      "forms": [
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        }
+      ],
+      "navigationLinks": 9,
+      "images": [],
+      "textLength": 536
+    },
+    {
+      "page": "success",
+      "name": "390x844",
+      "width": 390,
+      "height": 844,
+      "mobile": true,
+      "evidence": true,
+      "path": "/orders/success",
+      "title": "Laravel",
+      "viewport": {
+        "width": 396,
+        "height": 857,
+        "screenWidth": 390,
+        "screenHeight": 844,
+        "visualWidth": 390
+      },
+      "documentWidth": 396,
+      "bodyWidth": 396,
+      "horizontalOverflow": true,
+      "overflowingText": [
+        {
+          "tag": "td",
+          "text": "Bó Hoa Hồng Pastel & PingpongThỏ Bông – Dễ Thương & Ngọt Ngào"
+        },
+        {
+          "tag": "td",
+          "text": "650.000 đ"
+        },
+        {
+          "tag": "td",
+          "text": "2"
+        },
+        {
+          "tag": "td",
+          "text": "1.300.000 đ"
+        }
+      ],
+      "forms": [
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        }
+      ],
+      "navigationLinks": 9,
+      "images": [],
+      "textLength": 509
+    },
+    {
+      "page": "success",
+      "name": "375x812",
+      "width": 375,
+      "height": 812,
+      "mobile": true,
+      "evidence": false,
+      "path": "/orders/success",
+      "title": "Laravel",
+      "viewport": {
+        "width": 396,
+        "height": 858,
+        "screenWidth": 375,
+        "screenHeight": 812,
+        "visualWidth": 375
+      },
+      "documentWidth": 396,
+      "bodyWidth": 396,
+      "horizontalOverflow": true,
+      "overflowingText": [
+        {
+          "tag": "td",
+          "text": "Bó Hoa Hồng Pastel & PingpongThỏ Bông – Dễ Thương & Ngọt Ngào"
+        },
+        {
+          "tag": "td",
+          "text": "650.000 đ"
+        },
+        {
+          "tag": "td",
+          "text": "2"
+        },
+        {
+          "tag": "td",
+          "text": "1.300.000 đ"
+        }
+      ],
+      "forms": [
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        },
+        {
+          "action": "/logout",
+          "method": "POST",
+          "fields": [
+            "_token"
+          ]
+        }
+      ],
+      "navigationLinks": 9,
+      "images": [],
+      "textLength": 509
+    }
+  ],
+  "horizontal_overflow_count": 2
+}

@@ -1,0 +1,27 @@
+--- a/resources/views/orders/partials/detail.blade.php
++++ b/resources/views/orders/partials/detail.blade.php
+@@ -3,10 +3,22 @@
+ <p>Ngày đặt (UTC+7): {{ $order->order_date?->timezone('Asia/Ho_Chi_Minh')->format('d/m/Y H:i') ?? '—' }}</p>
+ <p>Người nhận: {{ $order->customer['name'] ?? '—' }} — {{ $order->customer['phone'] ?? '—' }}</p>
+ <p>Địa chỉ: {{ $order->customer['address'] ?? '—' }}</p>
+-<p>Email: {{ $order->customer['email'] ?? '—' }}</p>
++<p>Email: <span class="break-all">{{ $order->customer['email'] ?? '—' }}</span></p>
+ <p>Ghi chú: {{ $order->customer['note'] ?? '—' }}</p>
+ <p>Thanh toán: {{ $order->payment_method }}</p>
+-<div class="overflow-x-auto">
++<div class="space-y-3 md:hidden">
++    @foreach($order->items ?? [] as $item)
++        <div class="rounded border p-3">
++            <p class="break-words font-semibold">{{ $item['product_name'] }}</p>
++            <dl class="mt-2 grid grid-cols-2 gap-x-3 gap-y-1 text-sm">
++                <dt>Đơn giá</dt><dd class="break-words text-right">{{ number_format((float) (string) $item['price'], 0, ',', '.') }} đ</dd>
++                <dt>Số lượng</dt><dd class="text-right">{{ $item['quantity'] }}</dd>
++                <dt>Thành tiền</dt><dd class="break-words text-right">{{ number_format((float) (string) $item['subtotal'], 0, ',', '.') }} đ</dd>
++            </dl>
++        </div>
++    @endforeach
++</div>
++<div class="hidden overflow-x-auto md:block">
+     <table class="w-full min-w-[640px] text-left">
+         <thead><tr><th>Sản phẩm</th><th>Đơn giá</th><th>Số lượng</th><th>Thành tiền</th></tr></thead>
+         <tbody>@foreach($order->items ?? [] as $item)
