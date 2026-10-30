@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -36,6 +35,7 @@ Route::group([], function () {
     // Route C# fallback: SanPham/chi_tiet_san_pham?id=... hoặc SanPham/chi_tiet_san_pham/{id}
     Route::get('/SanPham/chi_tiet_san_pham/{id?}', function (Request $request, ?string $id = null) {
         $target = $id ?: $request->query('id');
+
         return $target ? redirect()->route('products.show', $target) : redirect()->route('products.index');
     });
 

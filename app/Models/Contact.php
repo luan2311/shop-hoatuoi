@@ -26,6 +26,6 @@ class Contact extends Model
         $last = static::where('code', 'regex', '/^CT\d+$/')->orderBy('code', 'desc')->value('code');
         $number = $last ? (int) substr($last, 2) + 1 : 1;
 
-        return 'CT' . str_pad((string) $number, 3, '0', STR_PAD_LEFT);
+        return 'CT'.str_pad((string) $number, 3, '0', STR_PAD_LEFT);
     }
 }

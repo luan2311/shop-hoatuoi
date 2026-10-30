@@ -6,6 +6,7 @@ use App\Http\Requests\CartRequest;
 use App\Models\Product;
 use App\Models\Wishlist;
 use App\Services\SalesService;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
@@ -19,7 +20,7 @@ class CartController extends Controller
         return view('cart.index', $this->sales->summary($this->sales->cart($request->user())));
     }
 
-    public function add(CartRequest $request): \Illuminate\Http\JsonResponse|RedirectResponse
+    public function add(CartRequest $request): JsonResponse|RedirectResponse
     {
         $this->sales->change($request->user(), 'add', $request->validated('product_id'), (int) $request->validated('quantity'));
 
@@ -53,6 +54,7 @@ class CartController extends Controller
                 $data['wishlistCount'] = $wishlistCount;
                 $data['removedFromWishlist'] = true;
             }
+
             return response()->json($data);
         }
 
@@ -67,7 +69,7 @@ class CartController extends Controller
         return to_route('cart.index')->with('status', 'Đã thêm sản phẩm vào giỏ.');
     }
 
-    public function update(CartRequest $request, string $code): \Illuminate\Http\JsonResponse|RedirectResponse
+    public function update(CartRequest $request, string $code): JsonResponse|RedirectResponse
     {
         $this->sales->change($request->user(), 'update', $code, (int) $request->validated('quantity'));
 
@@ -78,10 +80,11 @@ class CartController extends Controller
                 return strcasecmp($item['code'], $code) === 0;
             });
             $itemSubtotal = $line['subtotal'] ?? 0;
+
             return response()->json([
                 'success' => true,
-                'itemTotalPrice' => number_format($itemSubtotal, 0, ',', '.') . ' đ',
-                'cartSubtotal' => number_format($summary['total'] ?? 0, 0, ',', '.') . ' đ',
+                'itemTotalPrice' => number_format($itemSubtotal, 0, ',', '.').' đ',
+                'cartSubtotal' => number_format($summary['total'] ?? 0, 0, ',', '.').' đ',
                 'cartCount' => array_sum(array_column($summary['lines'], 'quantity')),
             ]);
         }
@@ -89,7 +92,7 @@ class CartController extends Controller
         return to_route('cart.index')->with('status', 'Đã cập nhật giỏ hàng.');
     }
 
-    public function remove(Request $request, ?string $code = null): \Illuminate\Http\JsonResponse|RedirectResponse
+    public function remove(Request $request, ?string $code = null): JsonResponse|RedirectResponse
     {
         $productCode = $code ?: $request->input('code') ?: $request->input('MaSP');
         if (! $productCode) {
@@ -101,9 +104,10 @@ class CartController extends Controller
         if ($request->wantsJson() || $request->ajax()) {
             $cart = $this->sales->cart($request->user());
             $summary = $this->sales->summary($cart);
+
             return response()->json([
                 'success' => true,
-                'cartSubtotal' => number_format($summary['total'] ?? 0, 0, ',', '.') . ' đ',
+                'cartSubtotal' => number_format($summary['total'] ?? 0, 0, ',', '.').' đ',
                 'cartCount' => array_sum(array_column($summary['lines'], 'quantity')),
                 'isEmpty' => empty($summary['lines']),
             ]);
@@ -112,7 +116,7 @@ class CartController extends Controller
         return to_route('cart.index')->with('status', 'Đã xóa sản phẩm.');
     }
 
-    public function clear(Request $request): \Illuminate\Http\JsonResponse|RedirectResponse
+    public function clear(Request $request): JsonResponse|RedirectResponse
     {
         $this->sales->change($request->user(), 'clear');
 

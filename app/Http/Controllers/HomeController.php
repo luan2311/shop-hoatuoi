@@ -14,12 +14,12 @@ class HomeController extends Controller
         $byCategory = fn (string $slug) => Product::inCategory($slug)->take(8)->get();
 
         return view('home', [
-            'banChay'   => $this->banChay(8),
+            'banChay' => $this->banChay(8),
             'boHoaTuoi' => $byCategory('bo-hoa-tuoi'),
-            'keHoa'     => $byCategory('ke-chuc-mung'),
-            'gioHoa'    => $byCategory('gio-hoa-chuc-mung'),
-            'hoaSap'    => $byCategory('hoa-sap'),
-            'hoaCuoi'   => $byCategory('hoa-cuoi'),
+            'keHoa' => $byCategory('ke-chuc-mung'),
+            'gioHoa' => $byCategory('gio-hoa-chuc-mung'),
+            'hoaSap' => $byCategory('hoa-sap'),
+            'hoaCuoi' => $byCategory('hoa-cuoi'),
             'tinTucMoi' => Post::orderBy('published_at', 'desc')->orderBy('_id', 'desc')->take(3)->get(),
         ]);
     }
